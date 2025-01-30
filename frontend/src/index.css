@@ -1,0 +1,359 @@
+@import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+:root {
+  --black-font: black;
+  --blue-font: #1da1f2;
+  --light-font: #edf5fa;
+  --gray-font: #737373;
+  --white-bg: white;
+  --light-gray-font: lightgray;
+}
+
+.desktop-navbar {
+  display: block !important;
+}
+
+.mobile-navbar {
+  display: none !important;
+  background-color: var(--white-bg);
+}
+
+.navbar-expand-lg {
+  z-index: 11;
+  position: absolute !important;
+  width: 100%;
+}
+
+.navbar-toggler {
+  border: none !important;
+}
+
+.navbar-nav {
+  background-color: transparent;
+}
+
+.navbar-nav .nav-item {
+  padding: 10px 20px;
+}
+
+.offcanvas-body .navbar-nav .nav-item {
+  padding: 20px;
+}
+
+.navbar-nav .nav-item .nav-link {
+  font-family: "Public Sans", serif;
+  color: var(--white-bg);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1;
+  transition: color 0.8s ease;
+}
+
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link.active {
+  color: var(--blue-font);
+}
+
+.nav-item.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu {
+  box-shadow: inset 0 1px 4px #0000000f;
+  border: none !important;
+  border-radius: 0 !important;
+  display: none;
+}
+
+.dropdown-menu .dropdown-item {
+  font-size: 12px;
+  font-weight: 500;
+  font-family: "Public Sans", serif;
+  color: var(--black-font);
+  letter-spacing: 2px;
+  padding: 10px 20px;
+  border-bottom: 0.5px solid var(--light-gray-font);
+}
+
+.offcanvas-body .nav-item .nav-link {
+  color: var(--black-font);
+  transition: color 0.6s ease;
+}
+
+.offcanvas-body .nav-item:hover .nav-link {
+  color: var(--blue-font);
+}
+
+.home-banner {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.home-banner .video-banner {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.home-banner .video-banner video {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+
+.home-banner-content {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  z-index: 1;
+  /* padding: 40px 20px; */
+}
+
+.home-banner-content .section-title {
+  font-family: "Frank Ruhl Libre", serif;
+  color: var(--white-bg);
+  font-size: 70px;
+  line-height: 80px;
+  margin-bottom: 13%;
+}
+
+.im-a-content-div {
+  position: relative;
+  top: 0%;
+  width: 11%;
+}
+
+.im-a-content-div h5 {
+  background-color: var(--blue-font);
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-family: "Public Sans", serif;
+  color: var(--white-bg);
+  padding: 10px 20px;
+}
+
+.banner-contents .col-lg-4 {
+  padding: 0;
+}
+
+.banner-contents .content-div {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  background-color: #ffffff1a;
+  border: 1px solid var(--light-gray-font);
+  overflow: hidden;
+  transition: background-color 0.6s ease;
+  width: 100%;
+}
+
+.content-div h2 {
+  font-family: "Frank Ruhl Libre", serif;
+  color: var(--white-bg);
+  text-align: center;
+  letter-spacing: -0.3px;
+  justify-content: center;
+  align-items: center;
+  max-width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 22px;
+  line-height: 32px;
+  display: flex;
+  transition: display 0.6s ease;
+}
+
+.banner-contents .content-div:hover h2 {
+  display: none;
+}
+
+.banner-contents .col-lg-4:hover .content-div {
+  background-color: var(--white-bg);
+}
+
+.banner-contents .content-div .content-para {
+  display: none;
+  position: absolute;
+  bottom: -100%;
+  transition: bottom 0.3s ease;
+  padding: 20px;
+}
+
+.banner-contents .content-div:hover .content-para {
+  top: 10%;
+  display: block;
+  width: 100%;
+}
+
+.content-para .content-title {
+  display: flex;
+  align-items: self-start;
+  justify-content: space-between;
+}
+
+.content-para .content-title i {
+  color: var(--blue-font);
+  font-size: 18px;
+}
+
+.content-para h5 {
+  letter-spacing: -0.3px;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--blue-font);
+  font-family: "Frank Ruhl Libre", serif;
+}
+
+.content-para p {
+  color: var(--gray-font);
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Public Sans", serif;
+}
+
+.content-div-title i {
+  display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  .navbar-nav .nav-item {
+    padding: 10px 12px;
+  }
+
+  .im-a-content-div {
+    width: 15%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .desktop-navbar {
+    display: none !important;
+  }
+
+  .mobile-navbar {
+    display: block !important;
+  }
+
+  .nav-item.dropdown:hover .dropdown-menu {
+    display: block;
+  }
+
+  .home-banner-content .section-title {
+    font-size: 64px;
+    line-height: 64px;
+  }
+
+  .im-a-content-div {
+    width: 18%;
+  }
+
+  .content-div-title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+  }
+
+  .content-div-title i {
+    color: var(--white-bg);
+    font-size: 20px;
+    display: block;
+  }
+
+  .banner-contents .content-div {
+    height: 100px;
+  }
+
+  .content-div h2 {
+    margin: 0;
+    max-width: 50%;
+    text-align: left;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  .banner-contents .col-lg-4:hover .content-div {
+    background-color: transparent;
+  }
+
+  .im-a-content-div h5 {
+    font-size: 14px;
+    line-height: 14px;
+  }
+
+  .banner-contents .content-div:hover h2 {
+    display: block;
+  }
+
+  .banner-contents .content-div:hover .content-para {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .home-banner-content .section-title {
+    font-size: 45px;
+    line-height: 45px;
+  }
+
+  .banner-contents {
+    padding: 0 14px;
+  }
+
+  .im-a-content-div {
+    width: 25%;
+  }
+
+  .im-a-content-div h5 {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .home-banner-content {
+    bottom: 10%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .home-banner-content .section-title {
+    font-size: 35px;
+    line-height: 35px;
+  }
+
+  .im-a-content-div {
+    width: 30%;
+  }
+
+  .content-div h2 {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .home-banner-content {
+    bottom: 5%;
+  }
+}
