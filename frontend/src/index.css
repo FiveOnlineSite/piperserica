@@ -320,10 +320,6 @@ body {
   .banner-contents .content-div:hover .content-para {
     display: none;
   }
-
-  .home-banner {
-    overflow: scroll; /* Adjust overflow property for mobile */
-  }
 }
 
 @media screen and (max-width: 776px) {
