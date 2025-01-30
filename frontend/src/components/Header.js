@@ -24,7 +24,7 @@ const Header = () => {
                   About
                 </a>
               </li>
-              <li className="nav-item dropdown">
+              <li className="nav-item dropdown desktop-dropdown">
                 <a
                   className="nav-link dropdown-toggle"
                   href="#"
@@ -34,7 +34,7 @@ const Header = () => {
                 >
                   Our Services
                 </a>
-                <ul className="dropdown-menu desktop-dropdown">
+                <ul className="dropdown-menu desktop-dropdown-menu">
                   <li>
                     <a className="dropdown-item" href="#">
                       Public Market
