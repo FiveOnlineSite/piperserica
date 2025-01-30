@@ -27,7 +27,7 @@ body {
 
 .navbar-expand-lg {
   z-index: 11;
-  position: relative !important;
+  position: absolute !important;
   width: 100%;
   background-color: var(--white-bg);
 }
@@ -142,29 +142,30 @@ body {
 
 .home-banner {
   position: relative;
-  height: 86.5vh;
+  height: 100vh;
   width: 100%;
   overflow: hidden;
 }
 
 .home-banner .video-banner {
-  height: 86.5vh;
+  height: 100vh;
   width: 100%;
   position: relative;
 }
 
 .home-banner .video-banner video {
-  height: 86.5vh;
+  height: 100vh;
   width: 100%;
   object-fit: cover;
   filter: brightness(0.5);
+  position: absolute;
 }
 
 .home-banner-content {
   position: absolute;
   bottom: 0%;
   width: 100%;
-  height: 86.5vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
