@@ -391,6 +391,10 @@ body {
   .home-banner-content .section-title {
     padding-left: 2px;
   }
+
+  .home-banner-content .section-title {
+    margin-bottom: 14%;
+  }
 }
 
 @media screen and (max-width: 500px) {
