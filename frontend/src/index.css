@@ -36,7 +36,8 @@ body {
   border-radius: 0 !important;
 }
 
-.navbar-toggler:focus {
+.navbar-toggler:focus,
+.btn-close:focus {
   box-shadow: none !important;
 }
 
@@ -321,10 +322,23 @@ body {
   }
 }
 
+@media screen and (max-width: 776px) {
+  .home-banner,
+  .home-banner .video-banner,
+  .home-banner .video-banner video,
+  .home-banner-content {
+    height: 84vh;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .home-banner-content .section-title {
     font-size: 45px;
     line-height: 45px;
+  }
+
+  .content-div h2 {
+    max-width: 75%;
   }
 
   .home-banner-content {
