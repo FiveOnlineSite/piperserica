@@ -34,7 +34,7 @@ const Header = () => {
                 >
                   Our Services
                 </a>
-                <ul className="dropdown-menu">
+                <ul className="dropdown-menu desktop-dropdown">
                   <li>
                     <a className="dropdown-item" href="#">
                       Public Market
