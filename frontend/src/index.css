@@ -33,6 +33,11 @@ body {
 
 .navbar-toggler {
   border: none !important;
+  border-radius: 0 !important;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none !important;
 }
 
 .navbar-nav {
