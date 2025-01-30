@@ -315,6 +315,10 @@ body {
   .banner-contents .content-div:hover .content-para {
     display: none;
   }
+
+  .home-banner {
+    overflow: scroll; /* Adjust overflow property for mobile */
+  }
 }
 
 @media screen and (max-width: 600px) {
@@ -323,23 +327,39 @@ body {
     line-height: 45px;
   }
 
+  .home-banner-content {
+    margin: 0 auto;
+    padding-right: 20px;
+  }
+
   .banner-contents {
     padding: 0 14px;
   }
 
   .im-a-content-div {
     width: 25%;
+    padding-left: 2px;
   }
 
   .im-a-content-div h5 {
     font-size: 14px;
     line-height: 14px;
   }
+
+  .home-banner-content .section-title {
+    padding-left: 2px;
+  }
 }
 
 @media screen and (max-width: 500px) {
   .home-banner-content {
     bottom: 10%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .im-a-content-div {
+    width: 28%;
   }
 }
 
