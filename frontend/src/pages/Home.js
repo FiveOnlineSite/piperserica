@@ -6,7 +6,7 @@ const Home = () => {
       <div className="row">
         <div className="video-banner">
           <video
-            src="/videos/5726497-uhd_3840_2160_30fps.mp4"
+            src="/videos/5726501-uhd_3840_2160_30fps.mp4"
             loop
             muted
             autoPlay
