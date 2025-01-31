@@ -71,7 +71,7 @@ const Investor = () => {
                 cycles
               </h2>
             </div>
-            <div className="col-lg-7">
+            <div className="col-lg-7 offset-lg-1">
               <p className="para">
                 We invest on behalf of some of the world's largest institutional
                 investors, including pension funds, sovereign funds, and
