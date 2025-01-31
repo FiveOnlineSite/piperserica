@@ -38,7 +38,8 @@ body {
 }
 
 .navbar-toggler:focus,
-.btn-close:focus {
+.btn-close:focus,
+.select-div .form-select:focus {
   box-shadow: none !important;
 }
 
@@ -96,7 +97,8 @@ body {
   transform: rotate(180deg);
 }
 
-.dropdown-menu .dropdown-item {
+.dropdown-menu .dropdown-item,
+.select-div .form-select option {
   font-size: 12px;
   font-weight: 500;
   font-family: "Public Sans", serif;
@@ -285,6 +287,129 @@ body {
 
 .content-div-title i {
   display: none;
+}
+
+/* TOPBAR */
+
+.select-div {
+  display: flex;
+  align-items: center;
+}
+
+.select-div h6 {
+  margin-bottom: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: "Public Sans", serif;
+  color: var(--blue-font);
+}
+
+.select-div .form-select {
+  border: none !important;
+  width: auto;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-family: "Public Sans", serif;
+  font-weight: 700;
+  color: var(--blue-font);
+}
+
+/* INVESTOR */
+
+.investor-banner-img,
+.investor-banner-img img {
+  position: relative;
+}
+
+.investor-banner-section .slick-slide img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.investor-banner-content {
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  display: inline;
+  height: auto;
+  width: 100%;
+}
+
+.banner-subtitle {
+  color: var(--white-bg);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 28px;
+  font-size: 18px;
+  font-family: "Public Sans", serif;
+}
+
+.banner-title {
+  font-family: "Frank Ruhl Libre", serif;
+  color: var(--white-bg);
+  font-size: 50px;
+  font-weight: 400;
+  width: 50%;
+  line-height: 60px;
+}
+
+.banner-btn {
+  border: 1px solid var(--white-bg);
+  padding: 20px;
+  width: auto;
+  display: inline-block;
+  margin-top: 30px;
+}
+
+.banner-btn a {
+  font-size: 18px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: var(--white-bg);
+  font-weight: 700;
+  text-decoration: none;
+  font-family: "Public Sans", serif;
+  letter-spacing: 2px;
+}
+
+.banner-btn a i {
+  padding-left: 20px;
+}
+
+.section-subtitle {
+  color: var(--blue-font);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: "Public Sans", serif;
+}
+
+.section-title {
+  color: var(--black-font);
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 45px;
+  font-family: "Frank Ruhl Libre", serif;
+}
+
+.investor-banner-section {
+  padding-bottom: 50px;
+}
+
+.what-we-do-section {
+  padding: 50px 0;
+}
+
+.para {
+  color: var(--gray);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  font-family: "Public Sans", serif;
 }
 
 @media screen and (max-width: 1024px) {
