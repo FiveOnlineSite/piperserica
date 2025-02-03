@@ -59,7 +59,8 @@ body {
   padding: 20px;
 }
 
-.navbar-nav .nav-item .nav-link {
+.navbar-nav .nav-item .nav-link,
+.footer-links .nav-item .nav-link {
   font-family: "Public Sans", serif;
   color: var(--black-font);
   letter-spacing: 2px;
@@ -821,6 +822,24 @@ body {
   padding: 50px 0;
   display: inline-block;
   width: 100%;
+}
+
+.footer-links ul {
+  list-style: none;
+}
+
+.footer-links .nav-item {
+  padding-right: 20px;
+}
+
+.footer-links .nav-item:hover .nav-link {
+  color: var(--white-bg);
+}
+
+.privacy-policy-row {
+  margin-top: 50px !important;
+  padding-top: 20px;
+  border-top: 2px solid var(--white-bg);
 }
 
 @media screen and (max-width: 1024px) {
