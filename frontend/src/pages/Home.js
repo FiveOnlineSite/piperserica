@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "../components/Header";
+import { NavLink } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -29,7 +30,10 @@ const Home = () => {
                     <div className="col-lg-12">
                       <div className="row align-items-center">
                         <div className="col-lg-4">
-                          <a href="#" className="content-div">
+                          <NavLink
+                            to="/foreign-investor"
+                            className="content-div"
+                          >
                             <div className="content-div-title">
                               <h2>Foreign Investor</h2>
                               <i className="fa-solid fa-arrow-right"></i>
@@ -46,10 +50,10 @@ const Home = () => {
                                 legacies that have a collective global impact.
                               </p>
                             </div>
-                          </a>
+                          </NavLink>
                         </div>
                         <div className="col-lg-4">
-                          <a href="#" className="content-div">
+                          <NavLink to="/nri-investor" className="content-div">
                             <div className="content-div-title">
                               <h2>NRI Investor</h2>
                               <i className="fa-solid fa-arrow-right"></i>
@@ -65,10 +69,13 @@ const Home = () => {
                                 legacies that have a collective global impact.
                               </p>
                             </div>
-                          </a>
+                          </NavLink>
                         </div>
                         <div className="col-lg-4">
-                          <a href="#" className="content-div">
+                          <NavLink
+                            to="/startup-founder-entrepreneur"
+                            className="content-div"
+                          >
                             <div className="content-div-title">
                               <h2>Startup Founder & Entrepreneur</h2>
                               <i className="fa-solid fa-arrow-right"></i>
@@ -83,7 +90,7 @@ const Home = () => {
                                 resources to enhance entrepreneurial ecosystems.
                               </p>
                             </div>
-                          </a>
+                          </NavLink>
                         </div>
                       </div>
                     </div>

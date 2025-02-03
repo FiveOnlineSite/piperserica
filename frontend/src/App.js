@@ -10,7 +10,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/investor" element={<Investor />} />
+        <Route path="/foreign-investor" element={<Investor type="foreign" />} />
+        <Route path="/nri-investor" element={<Investor type="nri" />} />
+        <Route
+          path="/startup-founder-entrepreneur"
+          element={<Investor type="startup" />}
+        />
       </Routes>
     </Router>
   );
