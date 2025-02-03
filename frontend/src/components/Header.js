@@ -1,18 +1,20 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import TopBar from "./TopBar";
 
 const Header = () => {
   return (
     <div>
       <nav className="navbar navbar-expand-lg desktop-navbar">
         <div className="container">
-          <a className="navbar-brand" href="#">
+          <NavLink className="navbar-brand" to="/">
             <img
               src="/images/Piper-Serica-logo-1.png"
               alt="logo"
               width={"100px"}
               height="100%"
             />
-          </a>
+          </NavLink>
 
           <div
             className="collapse navbar-collapse justify-content-end"
@@ -20,57 +22,57 @@ const Header = () => {
           >
             <ul className="navbar-nav mb-2 mb-lg-0 ">
               <li className="nav-item">
-                <a className="nav-link" aria-current="page" href="#">
+                <NavLink className="nav-link" aria-current="page" to="/about">
                   About
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item dropdown desktop-dropdown">
-                <a
+                <NavLink
                   className="nav-link dropdown-toggle"
-                  href="#"
+                  to="/"
                   role="button"
                   data-bs-toggle="dropdown"
                   aria-expanded="false"
                 >
                   Our Services
-                </a>
+                </NavLink>
                 <ul className="dropdown-menu desktop-dropdown-menu">
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <NavLink className="dropdown-item" to="/public-market">
                       Public Market
-                    </a>
+                    </NavLink>
                   </li>
                   <li>
-                    <a className="dropdown-item" href="#">
+                    <NavLink className="dropdown-item" to="/private-market">
                       Private Market
-                    </a>
+                    </NavLink>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink className="nav-link" to="/our-impact">
                   Our Impact
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink className="nav-link" to="/insights">
                   Insights
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink className="nav-link" to="/careers">
                   Careers
-                </a>
+                </NavLink>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#">
+                <NavLink className="nav-link" to="/contact">
                   Contact
-                </a>
+                </NavLink>
               </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Login
-                </a>
+              <li className="nav-item login-btn">
+                <NavLink className="nav-link" to="/login">
+                  Login <i className="fa-solid fa-arrow-right"></i>
+                </NavLink>
               </li>
             </ul>
           </div>
@@ -79,14 +81,14 @@ const Header = () => {
 
       <nav className="navbar fixed-top mobile-navbar">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <NavLink className="navbar-brand" to="/">
             <img
               src="/images/Piper-Serica-logo-1.png"
               alt="logo"
               width={"100px"}
               height="100%"
             />
-          </a>
+          </NavLink>
           <button
             className="navbar-toggler"
             type="button"
@@ -104,14 +106,14 @@ const Header = () => {
             aria-labelledby="offcanvasNavbarLabel"
           >
             <div className="offcanvas-header">
-              <a className="navbar-brand" href="#">
+              <NavLink className="navbar-brand" to="/">
                 <img
                   src="/images/Piper-Serica-logo-1.png"
                   alt="logo"
                   width={"100px"}
                   height="100%"
                 />
-              </a>
+              </NavLink>
               <button
                 type="button"
                 className="btn-close"
@@ -120,59 +122,60 @@ const Header = () => {
               ></button>
             </div>
             <div className="offcanvas-body">
+              <TopBar />
               <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li className="nav-item">
-                  <a className="nav-link" aria-current="page" href="#">
+                  <NavLink className="nav-link" aria-current="page" to="/">
                     About
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item dropdown">
-                  <a
+                  <NavLink
                     className="nav-link dropdown-toggle"
-                    href="#"
+                    to="/"
                     role="button"
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
                     Our Services
-                  </a>
+                  </NavLink>
                   <ul className="dropdown-menu">
                     <li>
-                      <a className="dropdown-item" href="#">
+                      <NavLink className="dropdown-item" to="/">
                         Public Market
-                      </a>
+                      </NavLink>
                     </li>
                     <li>
-                      <a className="dropdown-item" href="#">
+                      <NavLink className="dropdown-item" to="/">
                         Private Market
-                      </a>
+                      </NavLink>
                     </li>
                   </ul>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <NavLink className="nav-link" to="/">
                     Our Impact
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <NavLink className="nav-link" to="/">
                     Insights
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <NavLink className="nav-link" to="/">
                     Careers
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <NavLink className="nav-link" to="/">
                     Contact
-                  </a>
+                  </NavLink>
                 </li>
-                <li className="nav-item">
-                  <a className="nav-link" href="#">
+                <li className="nav-item login-btn">
+                  <NavLink className="nav-link" to="/">
                     Login
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
             </div>
