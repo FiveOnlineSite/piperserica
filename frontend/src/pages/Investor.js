@@ -61,11 +61,11 @@ const Investor = () => {
 
   const offeringsItems = [
     {
-      strategy_title: "Ventrue Debt",
+      strategy_title: "Venture Debt",
       funds: "LC Venture Debt",
     },
     {
-      strategy_title: "Ventrue Capital",
+      strategy_title: "Venture Capital",
       funds: "LC Nueva AIF",
     },
     {
@@ -73,7 +73,7 @@ const Investor = () => {
       funds: "LC Venture Debt",
     },
     {
-      strategy_title: "Ventrue Debt",
+      strategy_title: "Venture Debt",
       funds: "LC Supply Chain",
     },
   ];
@@ -99,7 +99,7 @@ const Investor = () => {
   const newsItems = [
     {
       news_img: "/images/banners/news1.png",
-      news_type: "Ventrue Debt",
+      news_type: "Venture Debt",
       news_subtitle: "Investments Insights",
       news_title:
         "Equity Insight: Tech Titans at a Crossroads - The Growing Divide Between Meta and Microsoft",
@@ -107,7 +107,7 @@ const Investor = () => {
     },
     {
       news_img: "/images/banners/news2.png",
-      news_type: "Ventrue Debt",
+      news_type: "Venture Debt",
       news_subtitle: "Investments Insights",
       news_title:
         "Equity Insight: Tech Titans at a Crossroads - The Growing Divide Between Meta and Microsoft",
@@ -115,7 +115,7 @@ const Investor = () => {
     },
     {
       news_img: "/images/banners/news1.png",
-      news_type: "Ventrue Debt",
+      news_type: "Venture Debt",
       news_subtitle: "Investments Insights",
       news_title:
         "Equity Insight: Tech Titans at a Crossroads - The Growing Divide Between Meta and Microsoft",
@@ -123,7 +123,7 @@ const Investor = () => {
     },
     {
       news_img: "/images/banners/news2.png",
-      news_type: "Ventrue Debt",
+      news_type: "Venture Debt",
       news_subtitle: "Investments Insights",
       news_title:
         "Equity Insight: Tech Titans at a Crossroads - The Growing Divide Between Meta and Microsoft",
@@ -131,7 +131,7 @@ const Investor = () => {
     },
     {
       news_img: "/images/banners/news1.png",
-      news_type: "Ventrue Debt",
+      news_type: "Venture Debt",
       news_subtitle: "Investments Insights",
       news_title:
         "Equity Insight: Tech Titans at a Crossroads - The Growing Divide Between Meta and Microsoft",
@@ -211,13 +211,13 @@ const Investor = () => {
                     </h6>
                   </div>
                 </div>
-                <div className="col-lg-4">
+                <div className="col-lg-4 mt-lg-0 mt-4">
                   <div className="facts-div">
                     <h2 className="facts-title">160+</h2>
                     <h6 className="para">Committed Professionals</h6>
                   </div>
                 </div>
-                <div className="col-lg-4">
+                <div className="col-lg-4 mt-lg-0 mt-4">
                   <div className="facts-div">
                     <h2 className="facts-title">07</h2>
                     <h6 className="para">Global Offices</h6>
@@ -543,7 +543,7 @@ const Investor = () => {
               </div>
               <div className="col-lg-6">
                 <div className="banner-btn blue-btn mt-0">
-                  <NavLink>All funds</NavLink>
+                  <NavLink>View all</NavLink>
                 </div>
               </div>
             </div>
