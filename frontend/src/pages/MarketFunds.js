@@ -78,35 +78,37 @@ const MarketFunds = () => {
 
         <div className="row">
           <div className="col-lg-5">
-            <div className="tab-links">
-              <a
-                href="#asset"
-                onClick={() => handleTabClick("asset")}
-                className={activeTab === "asset" ? "active" : ""}
-              >
-                <h4>Asset Allocation</h4>
-              </a>
-              <a
-                href="#treasury"
-                onClick={() => handleTabClick("treasury")}
-                className={activeTab === "treasury" ? "active" : ""}
-              >
-                <h4>Treasury Solutions</h4>
-              </a>
-              <a
-                href="#global"
-                onClick={() => handleTabClick("global")}
-                className={activeTab === "global" ? "active" : ""}
-              >
-                <h4>Global Investment Platform</h4>
-              </a>
-              <a
-                href="#alternative"
-                onClick={() => handleTabClick("alternative")}
-                className={activeTab === "alternative" ? "active" : ""}
-              >
-                <h4>Alternative Investments</h4>
-              </a>
+            <div className="container">
+              <div className="tab-links">
+                <a
+                  href="#asset"
+                  onClick={() => handleTabClick("asset")}
+                  className={activeTab === "asset" ? "active" : ""}
+                >
+                  <h4>Asset Allocation</h4>
+                </a>
+                <a
+                  href="#treasury"
+                  onClick={() => handleTabClick("treasury")}
+                  className={activeTab === "treasury" ? "active" : ""}
+                >
+                  <h4>Treasury Solutions</h4>
+                </a>
+                <a
+                  href="#global"
+                  onClick={() => handleTabClick("global")}
+                  className={activeTab === "global" ? "active" : ""}
+                >
+                  <h4>Global Investment Platform</h4>
+                </a>
+                <a
+                  href="#alternative"
+                  onClick={() => handleTabClick("alternative")}
+                  className={activeTab === "alternative" ? "active" : ""}
+                >
+                  <h4>Alternative Investments</h4>
+                </a>
+              </div>
             </div>
           </div>
           <div className="col-lg-7">
@@ -156,7 +158,7 @@ const MarketFunds = () => {
                       risk-adjusted returns through the modern portfolio theory
                       approach.
                     </p>
-                    <div className="banner-btn blue-btn mt-0">
+                    <div className="banner-btn blue-btn tabs-btn mt-0">
                       <NavLink>
                         contact us
                         <i className="fa-solid fa-arrow-right"></i>
@@ -185,7 +187,7 @@ const MarketFunds = () => {
                       approach.
                     </p>
 
-                    <div className="banner-btn blue-btn mt-0">
+                    <div className="banner-btn blue-btn tabs-btn mt-0">
                       <NavLink>
                         contact us
                         <i className="fa-solid fa-arrow-right"></i>
@@ -214,7 +216,7 @@ const MarketFunds = () => {
                       approach.
                     </p>
 
-                    <div className="banner-btn blue-btn mt-0">
+                    <div className="banner-btn blue-btn tabs-btn mt-0">
                       <NavLink>
                         contact us
                         <i className="fa-solid fa-arrow-right"></i>
