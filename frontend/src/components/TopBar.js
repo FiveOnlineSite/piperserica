@@ -19,7 +19,7 @@ const TopBar = () => {
   const handleInvestorChange = (e) => {
     const value = e.target.value;
     const investorToPathMap = {
-      foreign: "foreign-investor",
+      foreign: "/foreign-investor",
       nri: "/nri-investor",
       startup: "/startup-founder-entrepreneur",
     };
@@ -34,10 +34,10 @@ const TopBar = () => {
           <h6>I am a: </h6>
           <select
             class="form-select"
-            value={selectedInvestor || "foreign"}
+            value={selectedInvestor || ""}
             onChange={handleInvestorChange}
           >
-            <option value="fireign" selected>
+            <option value="foreign" selected>
               Foreign Investor
             </option>
             <option value="nri">NRI Investor</option>

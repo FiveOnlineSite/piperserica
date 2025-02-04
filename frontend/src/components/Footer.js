@@ -10,7 +10,7 @@ const Footer = () => {
             <div>
               <NavLink className="navbar-brand" to="/">
                 <img
-                  src="/images/Piper-Serica-logo-1.png"
+                  src="/images/footer-logo.png"
                   alt="logo"
                   width={"100px"}
                   height="100%"
