@@ -872,8 +872,12 @@ body {
   padding-right: 20px;
 }
 
-.footer-links .nav-item:hover .nav-link {
+.footer-links .nav-item .nav-link {
   color: var(--white-bg);
+}
+
+.footer-links .nav-item:hover .nav-link {
+  color: var(--black-font);
 }
 
 .privacy-policy-row {

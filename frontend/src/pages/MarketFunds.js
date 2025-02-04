@@ -37,7 +37,7 @@ const MarketFunds = () => {
         </div>
       </section>
 
-      <section className=""></section>
+      <section className="investment-solution-section"></section>
     </Layout>
   );
 };
