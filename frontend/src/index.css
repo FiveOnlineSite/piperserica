@@ -18,6 +18,7 @@ body {
   --white-bg: white;
   --light-gray-font: lightgray;
   --lighter-gray-bg: #f6f5f399;
+  --tabs-font: #727272;
 }
 
 .desktop-navbar {
@@ -411,8 +412,9 @@ body {
   color: var(--blue-font);
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
   font-family: "Public Sans", serif;
 }
 
@@ -424,7 +426,8 @@ body {
   font-family: "Frank Ruhl Libre", serif;
 }
 
-.investor-banner-section {
+.investor-banner-section,
+.banner-section {
   padding-bottom: 50px;
 }
 
@@ -432,7 +435,8 @@ body {
 .facts-section,
 .our-offerings-section,
 .news-insights-section,
-.newsletter-section {
+.newsletter-section,
+.investment-solution-section {
   padding: 50px 0;
 }
 
@@ -827,7 +831,7 @@ body {
   color: var(--white-bg);
 }
 
-/* BANNER */
+/* MARKET FUND */
 
 .banner-img-div,
 .banner-img-div img {
@@ -854,7 +858,69 @@ body {
   line-height: 26px;
   color: var(--white-bg);
   width: 60%;
+  margin-top: 30px;
+  text-align: left;
 }
+
+.small-section-title {
+  font-size: 33px;
+  line-height: 43px;
+}
+
+.investment-solution-content {
+  padding-left: 20%;
+  padding-top: 10%;
+}
+
+.investment-solution-img,
+.investment-tab-content {
+  background-color: var(--lighter-gray-bg);
+  height: 100%;
+}
+
+.investment-solution-img img {
+  padding-top: 5%;
+  height: 340px;
+  object-fit: cover;
+}
+
+.tab-links {
+  padding-left: 20%;
+}
+
+.tab-links a {
+  text-decoration: none;
+}
+
+.tab-links a h4 {
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 24px;
+  line-height: 34px;
+  color: var(--tabs-font);
+  font-weight: 400;
+  border-bottom: 1px solid var(--light-gray-font);
+  padding: 15px 0;
+}
+
+.investment-tab-content {
+  padding-top: 3%;
+  padding-right: 20%;
+  padding-left: 5%;
+}
+
+.tabs-content-div h3 {
+  color: var(--dim-grey-2);
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 30px;
+}
+
+.tabs-btn {
+  float: left;
+}
+
 /* FOOTER */
 
 .footer {
@@ -995,6 +1061,11 @@ body {
   .blue-btn {
     float: left;
   }
+
+  .footer-links .nav-item {
+    padding-right: 0;
+    padding-left: 10px;
+  }
 }
 
 @media screen and (max-width: 776px) {
@@ -1008,6 +1079,14 @@ body {
   .our-offerings-section .slick-initialized .slick-slide,
   .news-insights-section .slick-initialized .slick-slide {
     padding-right: 0;
+  }
+
+  .investor-banner-section .slick-slide img {
+    height: 95vh;
+  }
+
+  .banner-para {
+    width: 100%;
   }
 }
 
@@ -1055,6 +1134,10 @@ body {
   .slick-next {
     right: 65% !important;
   }
+
+  .banner-content-div {
+    padding: 0 10px;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -1093,7 +1176,8 @@ body {
     bottom: 3%;
   }
 
-  .investor-banner-content {
+  .investor-banner-content,
+  .banner-content-div {
     top: 15%;
   }
 }
