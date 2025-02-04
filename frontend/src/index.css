@@ -167,6 +167,8 @@ body {
   color: var(--blue-font);
 }
 
+/* HOME */
+
 .home-banner {
   position: relative;
   height: 100vh;
@@ -184,7 +186,7 @@ body {
   height: 100vh;
   width: 100%;
   object-fit: cover;
-  filter: brightness(0.5);
+  filter: brightness(0.8);
   position: absolute;
 }
 
@@ -444,6 +446,11 @@ body {
 
 /* FATCS */
 
+.facts-div {
+  border-left: 1px solid var(--light-gray-font);
+  padding-left: 20px;
+}
+
 .facts-title {
   font-family: "Frank Ruhl Libre", serif;
   font-size: 50px;
@@ -572,10 +579,6 @@ body {
   border-radius: 0 !important;
 }
 
-.accordion-button::after {
-  margin-left: 2px !important;
-}
-
 .accordion-button:not(.collapsed) {
   background-color: transparent !important;
   box-shadow: none !important;
@@ -583,14 +586,22 @@ body {
   padding: 0 20px 20px 30px !important;
 }
 
+.accordion-button::after {
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  background-position: center;
+  width: 16px;
+  height: 16px;
+  content: "" !important; /* Always leave content set for pseudo-elements */
+  margin-left: 2px !important;
+}
+
 .accordion-button.collapsed::after {
-  content: "\2212"; /* Minus symbol */
-  background-image: none !important;
+  background-image: url("https://cdn.prod.website-files.com/61a74a0b89162dfadb5acf21/61e3f38c1207771cb26e4491_Plus.svg") !important;
 }
 
 .accordion-button:not(.collapsed)::after {
-  background-image: none !important;
-  content: "\002B" !important; /* Plus symbol */
+  background-image: url("https://cdn.prod.website-files.com/61a74a0b89162dfadb5acf21/61e3fded982332b1924b3436_Minus.svg") !important;
 }
 
 .accordion-item.bordered {
@@ -815,6 +826,35 @@ body {
   line-height: 26px;
   color: var(--white-bg);
 }
+
+/* BANNER */
+
+.banner-img-div,
+.banner-img-div img {
+  position: relative;
+}
+
+.banner-img-div img {
+  height: 100vh;
+  width: 100%;
+  object-fit: cover;
+  filter: brightness(0.8);
+}
+
+.banner-content-div {
+  position: absolute;
+  top: 30%;
+  left: 0%;
+  width: 100%;
+}
+
+.banner-para {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 26px;
+  color: var(--white-bg);
+  width: 60%;
+}
 /* FOOTER */
 
 .footer {
@@ -862,7 +902,7 @@ body {
   }
 
   .select-div .form-select {
-    width: 80%;
+    width: 85%;
     padding: 20px;
   }
 
