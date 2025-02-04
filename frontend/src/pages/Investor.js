@@ -241,7 +241,7 @@ const Investor = () => {
                         All-weather strategies
                       </h2>
                       <h6 className="read-more para">
-                        Read More <i class="fa-solid fa-plus"></i>
+                        Read More <i className="fa-solid fa-plus"></i>
                       </h6>
                     </div>
 
@@ -273,7 +273,7 @@ const Investor = () => {
                         Purposeful investing
                       </h2>
                       <h6 className="read-more para">
-                        Read More <i class="fa-solid fa-plus"></i>
+                        Read More <i className="fa-solid fa-plus"></i>
                       </h6>
                     </div>
 
@@ -305,7 +305,7 @@ const Investor = () => {
                         Our people, our pride
                       </h2>
                       <h6 className="read-more para">
-                        Read More <i class="fa-solid fa-plus"></i>
+                        Read More <i className="fa-solid fa-plus"></i>
                       </h6>
                     </div>
 
@@ -568,16 +568,16 @@ const Investor = () => {
                 <form>
                   <div className="row">
                     <div className="col-lg-6">
-                      <div class="mb-4">
+                      <div className="mb-4">
                         <label
                           for="first-name"
-                          class="form-label section-subtitle"
+                          className="form-label section-subtitle"
                         >
                           First name
                         </label>
                         <input
                           type="text"
-                          class="form-control"
+                          className="form-control"
                           id="first-name"
                           placeholder="first name"
                         />
@@ -585,16 +585,16 @@ const Investor = () => {
                     </div>
 
                     <div className="col-lg-6">
-                      <div class="mb-4">
+                      <div className="mb-4">
                         <label
                           for="last-name"
-                          class="form-label section-subtitle"
+                          className="form-label section-subtitle"
                         >
                           Last name
                         </label>
                         <input
                           type="text"
-                          class="form-control"
+                          className="form-control"
                           id="last-name"
                           placeholder="last name"
                         />
@@ -602,13 +602,16 @@ const Investor = () => {
                     </div>
 
                     <div className="col-lg-12">
-                      <div class="mb-4">
-                        <label for="email" class="form-label section-subtitle">
+                      <div className="mb-4">
+                        <label
+                          for="email"
+                          className="form-label section-subtitle"
+                        >
                           Email
                         </label>
                         <input
                           type="email"
-                          class="form-control"
+                          className="form-control"
                           id="email"
                           placeholder="email"
                         />

@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="footer">
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-lg-3">
+          <div className="col-lg-3 col-md-2 col-12">
             <div>
               <NavLink className="navbar-brand" to="/">
                 <img
@@ -18,38 +18,37 @@ const Footer = () => {
               </NavLink>
             </div>
           </div>
-          <div className="col-lg-9 d-flex justify-content-lg-end justify-content-start mt-lg-0 mt-5">
+          <div className="col-lg-9 col-md-10 col-12 d-flex justify-content-lg-end justify-content-md-end justify-content-start mt-lg-0 mt-5">
             <div className="footer-links">
-              <ul className="d-flex ps-0">
+              <ul className="d-lg-flex d-md-flex d-block ps-0">
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/">
                     About
                   </NavLink>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item mt-lg-0 mt-md-0 mt-3">
                   {" "}
                   <NavLink className="nav-link" to="/">
                     Our Services
                   </NavLink>
                 </li>
-                <li className="nav-item">
-                  {" "}
+                <li className="nav-item mt-lg-0 mt-md-0 mt-3">
                   <NavLink className="nav-link" to="/">
                     Our Impact
                   </NavLink>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item mt-lg-0 mt-md-0 mt-3">
                   <NavLink className="nav-link" to="/">
                     Insights
                   </NavLink>
                 </li>
-                <li className="nav-item">
+                <li className="nav-item mt-lg-0 mt-md-0 mt-3">
                   <NavLink className="nav-link" to="/">
                     Careers
                   </NavLink>
                 </li>
 
-                <li className="nav-item">
+                <li className="nav-item mt-lg-0 mt-md-0 mt-3">
                   <NavLink className="nav-link" to="/">
                     Contact
                   </NavLink>
@@ -62,7 +61,7 @@ const Footer = () => {
         <div className="row">
           <div className="privacy-policy-row">
             <div className="footer-links ">
-              <ul className="d-flex justify-content-end">
+              <ul className="d-flex justify-content-lg-end justify-content-md-end justify-content-start ps-0">
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/">
                     Privacy Policy
