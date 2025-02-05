@@ -6,14 +6,13 @@ const InvestorLetter = () => {
   const letters = [
     {
       date: "January 2025",
-
       filepath: "/docs/Piper-Serica-Investor-Letter-January-2025.pdf",
     },
 
     {
       date: "January 2024",
-
-      filepath: "/",
+      filepath:
+        "/docs/2024-1-piper-serica-investor-letter-january-2024-min/pdf",
     },
 
     {
