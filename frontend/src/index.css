@@ -1040,7 +1040,7 @@ body {
 }
 
 .sticky-contact-section {
-  z-index: 9999;
+  z-index: 999;
   position: sticky;
   inset: auto 0% 0%;
   background-color: var(--lighter-gray-bg);
