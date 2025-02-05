@@ -5,6 +5,7 @@ import About from "./pages/About";
 import Investor from "./pages/Investor";
 import MarketFunds from "./pages/MarketFunds";
 import Funds from "./pages/Funds";
+import InvestorLetter from "./pages/InvestorLetter";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
         <Route path="/public-market" element={<MarketFunds />}></Route>
         <Route path="/private-market" element={<MarketFunds />}></Route>
         <Route path="/funds" element={<Funds />}></Route>
+        <Route path="/investor-letters" element={<InvestorLetter />}></Route>
       </Routes>
     </Router>
   );
