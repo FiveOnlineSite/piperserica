@@ -327,7 +327,7 @@ const Funds = () => {
               </h4>
             </div>
 
-            <div className="col-lg-6">
+            <div className="col-lg-6 mt-lg-0 mt-3">
               <div className="banner-btn blue-btn mt-0">
                 <NavLink>
                   Contact us
