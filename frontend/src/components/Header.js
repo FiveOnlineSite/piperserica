@@ -141,12 +141,12 @@ const Header = () => {
                   </NavLink>
                   <ul className="dropdown-menu">
                     <li>
-                      <NavLink className="dropdown-item" to="/">
+                      <NavLink className="dropdown-item" to="/public-market">
                         Public Market
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink className="dropdown-item" to="/">
+                      <NavLink className="dropdown-item" to="/private-market">
                         Private Market
                       </NavLink>
                     </li>
