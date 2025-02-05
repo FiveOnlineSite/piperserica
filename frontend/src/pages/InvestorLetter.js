@@ -281,9 +281,9 @@ const InvestorLetter = () => {
                     <NavLink to={letter.filepath} target="_blank">
                       <i class="fa-solid fa-eye"></i>
                     </NavLink>
-                    <NavLink to={letter.filepath} download>
-                      <i class="fa-solid fa-cloud-arrow-down"></i>
-                    </NavLink>
+                    <a href={letter.filepath} download>
+                      <i className="fa-solid fa-cloud-arrow-down"></i>
+                    </a>
                   </div>
                 </div>
               </div>
