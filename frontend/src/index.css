@@ -165,7 +165,7 @@ body {
 }
 
 .login-btn:hover .nav-link {
-  color: var(--blue-font);
+  color: var(--blue-font) !important;
 }
 
 /* HOME */
