@@ -1009,6 +1009,7 @@ body {
 .fund-title-div {
   position: sticky;
   top: 0;
+  padding: 10px;
 }
 
 .features-section .row .col-lg-5,
@@ -1327,6 +1328,10 @@ body {
 
   .investment-tab-content {
     padding: 4% 3%;
+  }
+
+  .industries-filter-div .form-select {
+    width: 100% !important;
   }
 }
 
