@@ -45,13 +45,10 @@ const MarketFunds = () => {
                   and infrastructure, resulting in a broader progressive impact
                   within Asia.
                 </p>
-
-                <div className="banner-btn">
-                  <NavLink>
-                    Investor Letter
-                    <i className="fa-solid fa-arrow-right"></i>
-                  </NavLink>
-                </div>
+                <NavLink to="/investor-letters" className="banner-btn">
+                  Investor Letter
+                  <i className="fa-solid fa-arrow-right"></i>
+                </NavLink>
               </div>
             </div>
           </div>
@@ -145,12 +142,13 @@ const MarketFunds = () => {
                       approach.
                     </p>
 
-                    <div className="banner-btn blue-btn tabs-btn mt-0">
-                      <NavLink>
-                        contact us
-                        <i className="fa-solid fa-arrow-right"></i>
-                      </NavLink>
-                    </div>
+                    <NavLink
+                      to="/"
+                      className="banner-btn blue-btn tabs-btn mt-0"
+                    >
+                      contact us
+                      <i className="fa-solid fa-arrow-right"></i>
+                    </NavLink>
                   </div>
                 </div>
 
@@ -171,12 +169,14 @@ const MarketFunds = () => {
                       risk-adjusted returns through the modern portfolio theory
                       approach.
                     </p>
-                    <div className="banner-btn blue-btn tabs-btn mt-0">
-                      <NavLink>
-                        contact us
-                        <i className="fa-solid fa-arrow-right"></i>
-                      </NavLink>
-                    </div>
+
+                    <NavLink
+                      to="/"
+                      className="banner-btn blue-btn tabs-btn mt-0"
+                    >
+                      contact us
+                      <i className="fa-solid fa-arrow-right"></i>
+                    </NavLink>
                   </div>
                 </div>
 
@@ -200,12 +200,13 @@ const MarketFunds = () => {
                       approach.
                     </p>
 
-                    <div className="banner-btn blue-btn tabs-btn mt-0">
-                      <NavLink>
-                        contact us
-                        <i className="fa-solid fa-arrow-right"></i>
-                      </NavLink>
-                    </div>
+                    <NavLink
+                      to="/"
+                      className="banner-btn blue-btn tabs-btn mt-0"
+                    >
+                      contact us
+                      <i className="fa-solid fa-arrow-right"></i>
+                    </NavLink>
                   </div>
                 </div>
 
@@ -229,12 +230,13 @@ const MarketFunds = () => {
                       approach.
                     </p>
 
-                    <div className="banner-btn blue-btn tabs-btn mt-0">
-                      <NavLink>
-                        contact us
-                        <i className="fa-solid fa-arrow-right"></i>
-                      </NavLink>
-                    </div>
+                    <NavLink
+                      to="/"
+                      className="banner-btn blue-btn tabs-btn mt-0"
+                    >
+                      contact us
+                      <i className="fa-solid fa-arrow-right"></i>
+                    </NavLink>
                   </div>
                 </div>
               </div>
@@ -308,12 +310,13 @@ const MarketFunds = () => {
                       with bespoke solutions that meet your unique requirements.
                     </p>
 
-                    <div className="banner-btn blue-btn tabs-btn mt-0">
-                      <NavLink>
-                        contact us
-                        <i className="fa-solid fa-arrow-right"></i>
-                      </NavLink>
-                    </div>
+                    <NavLink
+                      to="/"
+                      className="banner-btn blue-btn tabs-btn mt-0"
+                    >
+                      contact us
+                      <i className="fa-solid fa-arrow-right"></i>
+                    </NavLink>
                   </div>
                 </div>
               </div>

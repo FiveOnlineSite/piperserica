@@ -154,12 +154,11 @@ const Investor = () => {
                       <h6 className="banner-subtitle">{item.subtitle}</h6>
                     )}
                     <h1 className="banner-title">{item.title}</h1>
-                    <div className="banner-btn">
-                      <NavLink>
-                        {item.text}
-                        <i className="fa-solid fa-arrow-right"></i>
-                      </NavLink>
-                    </div>
+
+                    <NavLink to="/" className="banner-btn">
+                      {item.text}
+                      <i className="fa-solid fa-arrow-right"></i>
+                    </NavLink>
                   </div>
                 </div>
               </div>
@@ -518,12 +517,10 @@ const Investor = () => {
                 </p>
               </div>
               <div className="col-lg-3">
-                <div className="banner-btn blue-btn mt-0">
-                  <NavLink>
-                    All funds
-                    <i className="fa-solid fa-arrow-right"></i>
-                  </NavLink>
-                </div>
+                <NavLink to="/" className="banner-btn blue-btn mt-0">
+                  All funds
+                  <i className="fa-solid fa-arrow-right"></i>
+                </NavLink>
               </div>
             </div>
 
@@ -532,6 +529,31 @@ const Investor = () => {
                 settings={offeringsSettings}
                 item={offeringsItems}
               />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="investor-letter-section">
+        <div className="container">
+          <div className="row align-items-center">
+            <h5 className="section-subtitle">Outlook</h5>
+            <div className="row align-items-center">
+              <div className="col-lg-6">
+                <h2 className="banner-title offerings-title mt-3">
+                  Investor Letters
+                </h2>
+              </div>
+              <div className="col-lg-6">
+                <div>
+                  <NavLink
+                    to="/investor-letters"
+                    className="banner-btn blue-btn mt-0"
+                  >
+                    Discover all
+                  </NavLink>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -548,9 +570,9 @@ const Investor = () => {
                 </h2>
               </div>
               <div className="col-lg-6">
-                <div className="banner-btn blue-btn mt-0">
-                  <NavLink>View all</NavLink>
-                </div>
+                <NavLink to="/" className="banner-btn blue-btn mt-0">
+                  View all
+                </NavLink>
               </div>
             </div>
 
@@ -626,19 +648,19 @@ const Investor = () => {
                     <div className="col-lg-12">
                       <div className="row">
                         <div className="col-lg-4 d-flex justify-content-start">
-                          <div className="banner-btn blue-btn mt-0 mb-3">
-                            <NavLink>Subscribe</NavLink>
-                          </div>
+                          <NavLink
+                            to="/"
+                            className="banner-btn blue-btn mt-0 mb-3"
+                          >
+                            Subscribe
+                          </NavLink>
                         </div>
                         <div className="col-lg-8">
                           <p className="para subscribe-para mb-0">
                             <i>
                               *By submitting the contact form, you consent to
                               all data in the form being used in accordance with
-                              <a href="#">
-                                {" "}
-                                Piper Serics's data privacy policy
-                              </a>
+                              <a href="#">Piper Serics's data privacy policy</a>
                             </i>
                           </p>
                         </div>
@@ -667,12 +689,10 @@ const Investor = () => {
                   be in touch.
                 </p>
 
-                <div className="banner-btn">
-                  <NavLink>
-                    contact us
-                    <i className="fa-solid fa-arrow-right"></i>
-                  </NavLink>
-                </div>
+                <NavLink to="/" className="banner-btn">
+                  contact us
+                  <i className="fa-solid fa-arrow-right"></i>
+                </NavLink>
               </div>
             </div>
           </div>

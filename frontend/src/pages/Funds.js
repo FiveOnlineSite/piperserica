@@ -328,12 +328,10 @@ const Funds = () => {
             </div>
 
             <div className="col-lg-6 mt-lg-0 mt-3">
-              <div className="banner-btn blue-btn mt-0">
-                <NavLink>
-                  Contact us
-                  <i className="fa-solid fa-arrow-right"></i>
-                </NavLink>
-              </div>
+              <NavLink to="/" className="banner-btn blue-btn mt-0">
+                Contact us
+                <i className="fa-solid fa-arrow-right"></i>
+              </NavLink>
             </div>
           </div>
         </div>

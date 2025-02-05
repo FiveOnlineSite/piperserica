@@ -51,6 +51,7 @@ body {
 
 .navbar-nav {
   background-color: transparent;
+  align-items: center;
 }
 
 .navbar-nav .nav-item {
@@ -149,24 +150,21 @@ body {
 }
 
 .login-btn {
-  border: 1px solid var(--blue-font);
-  background-color: var(--blue-font);
-  padding: 20px;
-  transition: all 0.6s ease;
   width: auto;
   display: block !important;
 }
 
 .login-btn .nav-link {
   color: var(--white-bg) !important;
+  border: 1px solid var(--blue-font);
+  background-color: var(--blue-font);
+  padding: 20px !important;
+  transition: all 0.6s ease;
 }
 
-.login-btn:hover {
-  background-color: transparent;
-}
-
-.login-btn:hover .nav-link {
+.login-btn .nav-link:hover {
   color: var(--blue-font) !important;
+  background-color: transparent;
 }
 
 /* HOME */
@@ -392,9 +390,6 @@ body {
   width: auto;
   display: inline-block;
   margin-top: 30px;
-}
-
-.banner-btn a {
   font-size: 18px;
   line-height: 28px;
   text-transform: uppercase;
@@ -403,9 +398,10 @@ body {
   text-decoration: none;
   font-family: "Public Sans", serif;
   letter-spacing: 2px;
+  text-decoration: none;
 }
 
-.banner-btn a i {
+.banner-btn i {
   padding-left: 20px;
 }
 
@@ -638,11 +634,9 @@ body {
   border-color: var(--blue-font);
   width: auto;
   float: right;
-}
-
-.blue-btn a {
   color: var(--blue-font);
   font-size: 14px;
+  text-decoration: none;
 }
 
 .offerings-div {
@@ -718,6 +712,35 @@ body {
   transform: translate(-50%, -50%);
 }
 
+/* INVESTOR LETTER */
+
+.investor-letter-section {
+  padding: 100px 0 50px 0;
+}
+
+.investor-letters-section {
+  padding: 50px 0;
+  background-color: var(--lighter-gray-bg);
+}
+
+.letter-div {
+  background-color: var(--white-bg);
+  padding: 20px;
+  border-left: 2px solid var(--blue-font);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.letter-options i {
+  font-size: 22px;
+  color: var(--blue-font);
+  padding-right: 20px;
+  transition: color 0.6s ease;
+}
+
+.letter-options i:hover {
+  color: var(--black-font);
+}
+
 /* NEWS & INSIGHTS */
 
 .news-insights-section,
@@ -726,10 +749,6 @@ body {
   background-color: var(--lighter-gray-bg);
   margin-top: 50px;
   padding: 50px 0;
-}
-
-.news-insights-section {
-  margin-top: 100px;
 }
 
 .news-img-div,
@@ -868,6 +887,10 @@ body {
   top: 30%;
   left: 0%;
   width: 100%;
+}
+
+.banner-content-div a {
+  text-decoration: none;
 }
 
 .banner-para {
@@ -1048,10 +1071,12 @@ body {
   padding: 20px 0;
 }
 
-.sticky-contact-section h4 {
+.sticky-contact-section h4,
+.letter-div h3 {
   font-size: 25px;
   font-weight: 400;
   line-height: 35px;
+  font-family: "Frank Ruhl Libre", serif;
 }
 /* FOOTER */
 
