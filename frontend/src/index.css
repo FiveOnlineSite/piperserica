@@ -17,7 +17,8 @@ body {
   --gray-font: #737373;
   --white-bg: white;
   --light-gray-font: lightgray;
-  --lighter-gray-bg: #f6f5f399;
+  --transparent-gray: #f6f5f399;
+  --lighter-gray-bg: #f6f5f3;
   --tabs-font: #727272;
 }
 
@@ -437,6 +438,7 @@ body {
 .news-insights-section,
 .newsletter-section,
 .about-fund-section,
+.industries-portfolio-section,
 .industries-portfolio-section {
   padding: 50px 0;
 }
@@ -509,6 +511,12 @@ body {
   text-transform: uppercase;
   color: var(--light-gray-font);
   margin-top: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.read-more i {
+  font-size: 15px;
 }
 
 .why-content-para {
@@ -562,14 +570,14 @@ body {
   --bs-accordion-bg: transparent !important;
 }
 
-.accordion-body {
+/* .accordion-body {
   -webkit-backdrop-filter: blur(20px) !important;
   backdrop-filter: blur(20px) !important;
-}
+} */
 
 .accordion-button {
   color: var(--light-gray-font) !important;
-  padding: 0 20px 20px 20px !important;
+  padding: 0 20px 20px 14px !important;
   align-items: flex-end !important;
 }
 
@@ -638,7 +646,7 @@ body {
 }
 
 .offerings-div {
-  background-color: var(--lighter-gray-bg);
+  background-color: var(--transparent-gray);
   padding: 50px 30px;
 }
 
@@ -712,10 +720,16 @@ body {
 
 /* NEWS & INSIGHTS */
 
-.news-insights-section {
+.news-insights-section,
+.features-section,
+.fund-info-section {
   background-color: var(--lighter-gray-bg);
   margin-top: 50px;
   padding: 50px 0;
+}
+
+.news-insights-section {
+  margin-top: 100px;
 }
 
 .news-img-div,
@@ -776,6 +790,7 @@ body {
 .newsletter-section {
   background-color: var(--lighter-gray-bg);
   margin-bottom: 50px;
+  padding-top: 100px;
 }
 
 .newsletter-div .form-control {
@@ -823,7 +838,7 @@ body {
   background-position: 0 0, 50%;
   background-repeat: no-repeat;
   height: 90vh;
-  object-fit: cover;
+  display: inline-block;
   width: 100%;
   background-size: auto, cover;
 }
@@ -964,21 +979,79 @@ body {
   overflow: hidden;
   height: 150px;
   display: flex;
-  object-fit: cover;
-  align-items: center;
+  align-items: start;
   justify-content: center;
+  margin: 20px 0;
 }
 
 .industries-content {
   position: absolute;
   bottom: -150%;
   transition: bottom 0.6s ease;
+  height: 150px;
 }
 
 .industires-logo-div:hover .industries-content {
   bottom: 0;
 }
 
+.features-section,
+.fund-info-section {
+  margin: 50px 0;
+}
+
+.features-section .row,
+.fund-info-section .row {
+  position: relative;
+}
+
+.feature-title-div,
+.fund-title-div {
+  position: sticky;
+  top: 0;
+}
+
+.features-section .row .col-lg-5,
+.fund-info-section .row .col-lg-5 {
+  position: sticky;
+  top: 9%;
+  background-color: var(--lighter-gray-bg);
+  padding: 20px 0;
+  z-index: 1;
+}
+
+.features-content-div .single-feature,
+.fund-content-div .single-fund {
+  display: flex;
+  align-items: baseline;
+  justify-content: start;
+  border-bottom: 1px solid var(--light-gray-font);
+  margin-bottom: 20px;
+}
+
+.single-feature span,
+.single-fund span {
+  background-color: var(--blue-font, blue);
+  height: 10px;
+  width: 10px;
+  display: inline-block;
+  margin-right: 20px;
+  transform: rotate(45deg);
+}
+
+.sticky-contact-section {
+  z-index: 9999;
+  position: sticky;
+  inset: auto 0% 0%;
+  background-color: var(--lighter-gray-bg);
+  padding: 20px 0;
+}
+
+.sticky-contact-section h4 {
+  font-size: 25px;
+  font-weight: 400;
+  line-height: 35px;
+}
 /* FOOTER */
 
 .footer {
@@ -1151,6 +1224,23 @@ body {
 
   .industries-filter-div .form-select {
     width: 40% !important;
+  }
+
+  .industries-content {
+    position: relative;
+    height: auto;
+  }
+
+  .industires-logo-div {
+    display: block;
+    height: auto;
+  }
+
+  .industries-content .small-para {
+    font-size: 14px;
+    line-height: 24px;
+    padding-top: 10px;
+    text-align: left;
   }
 }
 

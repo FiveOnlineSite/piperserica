@@ -240,7 +240,7 @@ const Investor = () => {
                       <h2 className="banner-title why-content-main-title">
                         All-weather strategies
                       </h2>
-                      <h6 className="read-more para">
+                      <h6 className="read-more">
                         Read More <i className="fa-solid fa-plus"></i>
                       </h6>
                     </div>
@@ -272,7 +272,7 @@ const Investor = () => {
                       <h2 className="banner-title why-content-main-title">
                         Purposeful investing
                       </h2>
-                      <h6 className="read-more para">
+                      <h6 className="read-more">
                         Read More <i className="fa-solid fa-plus"></i>
                       </h6>
                     </div>
@@ -304,7 +304,7 @@ const Investor = () => {
                       <h2 className="banner-title why-content-main-title">
                         Our people, our pride
                       </h2>
-                      <h6 className="read-more para">
+                      <h6 className="read-more">
                         Read More <i className="fa-solid fa-plus"></i>
                       </h6>
                     </div>
@@ -373,7 +373,9 @@ const Investor = () => {
                   </div>
                 </div>
                 <button
-                  className="accordion-button"
+                  className={`accordion-button ${
+                    openAccordion === 0 ? "" : "collapsed"
+                  }`}
                   type="button"
                   onClick={() => toggleAccordion(0)}
                   aria-expanded={openAccordion === 0 ? "true" : "false"}
@@ -423,7 +425,9 @@ const Investor = () => {
                   </div>
                 </div>
                 <button
-                  className="accordion-button"
+                  className={`accordion-button ${
+                    openAccordion === 1 ? "" : "collapsed"
+                  }`}
                   type="button"
                   onClick={() => toggleAccordion(1)}
                   aria-expanded={openAccordion === 1 ? "true" : "false"}
@@ -473,7 +477,9 @@ const Investor = () => {
                   </div>
                 </div>
                 <button
-                  className="accordion-button"
+                  className={`accordion-button ${
+                    openAccordion === 2 ? "" : "collapsed"
+                  }`}
                   type="button"
                   onClick={() => toggleAccordion(2)}
                   aria-expanded={openAccordion === 2 ? "true" : "false"}
