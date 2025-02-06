@@ -828,8 +828,8 @@ const About = () => {
         <div className="container">
           <h6 className="section-subtitle">Meet the team</h6>
           <h2 className="section-title">The Driving Force</h2>
-          <div className="row">
-            <div className="col-lg-4 col-lg-6">
+          <div className="row mt-5">
+            <div className="col-lg-4 col-md-6">
               <div className="team-div">
                 <img
                   src="/images/team/abhay-agarwal-560x560.jpeg"
@@ -843,7 +843,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className="col-lg-4 col-lg-6 mt-lg-0 mt-5">
+            <div className="col-lg-4 col-md-6 mt-lg-0 mt-5">
               <div className="team-div">
                 <img
                   src="/images/team/rajni-560x560.jpeg"
@@ -857,7 +857,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className="col-lg-4 col-lg-6 mt-lg-0 mt-5">
+            <div className="col-lg-4 col-md-6 mt-lg-0 mt-5">
               <div className="team-div">
                 <img
                   src="/images/team/Ajay-modi-560x560.jpeg"
