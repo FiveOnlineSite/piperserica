@@ -827,7 +827,7 @@ const About = () => {
       <section className="teams-section">
         <div className="container">
           <h6 className="section-subtitle">Meet the team</h6>
-          <h2 className="section-title">The Driving Force</h2>
+          <h2 className="section-title mt-lg-3 mt-4">The Driving Force</h2>
           <div className="row mt-5">
             <div className="col-lg-4 col-md-6">
               <div className="team-div">
