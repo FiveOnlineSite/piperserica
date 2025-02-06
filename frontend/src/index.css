@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300..900&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  -webkit-font-smoothing: antialiased;
+}
 
 html {
   overflow-x: hidden !important;
@@ -435,7 +438,11 @@ body {
 .newsletter-section,
 .about-fund-section,
 .industries-portfolio-section,
-.industries-portfolio-section {
+.industries-portfolio-section,
+.founders-note-section,
+.teams-bg-section,
+.teams-section,
+.philosophy-section {
   padding: 50px 0;
 }
 
@@ -477,6 +484,12 @@ body {
   background-size: auto, cover;
 }
 
+.vision-mission-section {
+  background-image: linear-gradient(#00000059, #00000059),
+    url("../public/images/banners/why-us-banner.jpg");
+  margin-top: 0;
+}
+
 .why-us-div a {
   text-decoration: none;
 }
@@ -491,7 +504,8 @@ body {
   margin: 100px 0 50px 0;
 }
 
-.why-us-section .col-lg-4:hover .why-us-div {
+.why-us-section .col-lg-4:hover .why-us-div,
+.why-us-section .col-lg-6:hover .why-us-div {
   border: 1px solid var(--white-bg);
   -webkit-backdrop-filter: blur(20px);
   backdrop-filter: blur(20px);
@@ -523,6 +537,10 @@ body {
   transition: all 0.6s ease-in-out;
 }
 
+.vision-mission-para {
+  bottom: -100%;
+}
+
 .why-content-main-title {
   width: 100%;
 }
@@ -531,7 +549,12 @@ body {
   bottom: 0%;
 }
 
-.why-us-section .col-lg-4:hover .why-us-content {
+.why-us-section .col-lg-6:hover .vision-mission-para {
+  bottom: 20%;
+}
+
+.why-us-section .col-lg-4:hover .why-us-content,
+.why-us-section .col-lg-6:hover .why-us-content {
   display: none;
 }
 
@@ -792,7 +815,8 @@ body {
   color: var(--blue-font);
 }
 
-.news-content-div h3 {
+.news-content-div h3,
+.team-content .team-name {
   font-size: 26px;
   line-height: 36px;
 }
@@ -1053,7 +1077,9 @@ body {
 }
 
 .single-feature span,
-.single-fund span {
+.single-fund span,
+.single-history span,
+.year-tab-links a span {
   background-color: var(--blue-font, blue);
   height: 10px;
   width: 10px;
@@ -1071,7 +1097,8 @@ body {
 }
 
 .sticky-contact-section h4,
-.letter-div h3 {
+.letter-div h3,
+.philosophy-section .section-title {
   font-size: 25px;
   font-weight: 400;
   line-height: 35px;
@@ -1084,9 +1111,58 @@ body {
   padding: 50px 0;
 }
 
-.investment-journey-section .section-title i {
+.investment-journey-section .section-title i,
+.founders-note-section .banner-title i {
   color: var(--blue-font);
   font-size: 40px;
+}
+
+.journey-text,
+.founders-text {
+  position: relative;
+}
+
+.journey-text .journey-left-quote {
+  position: absolute;
+  top: -13%;
+  left: 0;
+}
+
+.journey-text .journey-right-quote {
+  position: absolute;
+  bottom: -10%;
+  right: 0;
+}
+
+.founders-text .founders-left-quote {
+  position: absolute;
+  left: 0;
+  top: -15%;
+}
+
+.founders-text .founders-right-quote {
+  position: absolute;
+  right: 15%;
+  bottom: 0%;
+}
+
+.founders-name {
+  color: var(--gray-font);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  font-family: "Public Sans", sans-serif;
+  margin-top: 30px;
+}
+
+.history-section {
+  margin-top: 50px;
+  margin-bottom: 0;
+}
+
+.history-row {
+  position: relative;
+  padding-bottom: 30px;
 }
 
 .year-tab-links {
@@ -1109,6 +1185,11 @@ body {
   display: flex;
   position: relative;
   overflow: auto;
+  margin-top: 40px;
+}
+
+.year-tab-links::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 
 .year-tab-links a {
@@ -1119,14 +1200,99 @@ body {
   text-decoration: none;
   display: inline-block;
   position: relative;
+}
+
+.year-tab-links a h4 {
   color: var(--gray-font);
   font-family: "Public Sans", sans-serif;
   font-size: 20px;
 }
 
-.year-tab-links a:active {
+.year-tab-links a.active h4 {
+  font-family: "Frank Ruhl Libre", serif;
+  color: var(--blue-font);
+  background-position: 0%;
+  background-repeat: no-repeat;
+  background-size: 12px 12px;
+  font-family: Frank Ruhl Libre, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.year-tab-links a span {
+  display: none;
+}
+
+.year-tab-links a.active span {
+  display: block;
+}
+
+.history-content-div .history-title {
+  color: #0000001a;
+  font-size: 3.75rem;
+  font-weight: 400;
+  line-height: 1.68333;
   font-family: "Frank Ruhl Libre", serif;
 }
+
+.history-content {
+  width: 80%;
+}
+
+.history-content .single-history {
+  display: flex;
+  align-items: baseline;
+}
+
+.single-history .history-para {
+  color: var(--black-font);
+}
+
+.teams-bg-section img {
+  height: 60vh;
+  object-fit: cover;
+}
+
+.team-div {
+  padding: 20px;
+  position: relative;
+  height: 430px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.team-div img {
+  position: relative;
+  filter: grayscale(1);
+  transition: filter 0.6s ease;
+}
+
+.team-content {
+  position: absolute;
+  bottom: 4%;
+  padding: 10px 20px;
+  width: 85%;
+  background-color: var(--lighter-gray-bg);
+  transition: all 0.6s ease;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.team-div:hover .team-content {
+  bottom: 10%;
+}
+
+.team-div:hover img {
+  filter: grayscale(0);
+}
+
+.philosophy-section img {
+  height: 200px;
+  object-fit: cover;
+}
+
 /* FOOTER */
 
 .footer {
@@ -1317,6 +1483,25 @@ body {
     padding-top: 10px;
     text-align: left;
   }
+
+  .year-tab-links {
+    flex-direction: row;
+    height: auto;
+    align-items: center;
+  }
+
+  .year-tab-links a {
+    padding: 15px;
+  }
+
+  .history-content {
+    width: 100%;
+  }
+
+  .year-tab-links {
+    margin-top: 0;
+    margin-bottom: 30px;
+  }
 }
 
 @media screen and (max-width: 776px) {
@@ -1388,6 +1573,24 @@ body {
 
   .banner-content-div {
     padding: 0 10px;
+  }
+
+  .journey-text,
+  .founders-text {
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  .journey-text .journey-left-quote {
+    top: -20%;
+  }
+
+  .founders-text .founders-right-quote {
+    right: 0;
+  }
+
+  .team-div {
+    height: 500px;
   }
 }
 
