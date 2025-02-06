@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "../components/Header";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Home = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const pathToInvestorMap = {
+      "/foreign-investor": "foreign",
+      "/nri-investor": "nri",
+      "/startup-founder-entrepreneur": "startup",
+    };
+
+    const currentInvestor = pathToInvestorMap[location.pathname];
+    if (currentInvestor) {
+      localStorage.setItem("selectedInvestor", currentInvestor); // Update localStorage based on URL
+    }
+  }, [location.pathname]); // Run whenever the location changes (i.e., user navigates)
+
   return (
     <>
       <Header />
@@ -38,7 +53,6 @@ const Home = () => {
                               <h2>Foreign Investor</h2>
                               <i className="fa-solid fa-arrow-right"></i>
                             </div>
-
                             <div className="content-para">
                               <div className="content-title">
                                 <h5>Foreign Investor</h5>

@@ -68,7 +68,7 @@ body {
   color: var(--black-font);
   letter-spacing: 2px;
   text-transform: uppercase;
-  padding: 0;
+  padding: 10px 15px;
   font-size: 12px;
   font-weight: 500;
   line-height: 1;
@@ -718,7 +718,8 @@ body {
   padding: 100px 0 50px 0;
 }
 
-.investor-letters-section {
+.investor-letters-section,
+.history-section {
   padding: 50px 0;
   background-color: var(--lighter-gray-bg);
 }
@@ -808,8 +809,7 @@ body {
 
 .newsletter-section {
   background-color: var(--lighter-gray-bg);
-  margin-bottom: 50px;
-  padding-top: 100px;
+  padding: 100px 0;
 }
 
 .newsletter-div .form-control {
@@ -850,7 +850,6 @@ body {
 /* CONTACT US */
 
 .contact-us-section {
-  margin-top: 50px;
   padding: 100px 0;
   background-image: linear-gradient(#00000059, #00000059),
     url("../public/images/banners/contact-us-banner.webp");
@@ -1076,6 +1075,56 @@ body {
   font-size: 25px;
   font-weight: 400;
   line-height: 35px;
+  font-family: "Frank Ruhl Libre", serif;
+}
+
+/* ABOUT */
+
+.investment-journey-section {
+  padding: 50px 0;
+}
+
+.investment-journey-section .section-title i {
+  color: var(--blue-font);
+  font-size: 40px;
+}
+
+.year-tab-links {
+  display: flex;
+  flex-direction: column;
+  mask-image: linear-gradient(
+    transparent,
+    black 20%,
+    black 80%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    transparent,
+    black 20%,
+    black 80%,
+    transparent 100%
+  );
+  flex-direction: column;
+  height: 300px;
+  display: flex;
+  position: relative;
+  overflow: auto;
+}
+
+.year-tab-links a {
+  vertical-align: top;
+  text-align: left;
+  cursor: pointer;
+  padding: 15px 30px;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+  color: var(--gray-font);
+  font-family: "Public Sans", sans-serif;
+  font-size: 20px;
+}
+
+.year-tab-links a:active {
   font-family: "Frank Ruhl Libre", serif;
 }
 /* FOOTER */
