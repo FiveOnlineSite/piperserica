@@ -843,7 +843,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className="col-lg-4 col-md-6 mt-lg-0 mt-5">
+            <div className="col-lg-4 col-md-6 mt-lg-0 mt-md-0 mt-4">
               <div className="team-div">
                 <img
                   src="/images/team/rajni-560x560.jpeg"
@@ -857,7 +857,7 @@ const About = () => {
               </div>
             </div>
 
-            <div className="col-lg-4 col-md-6 mt-lg-0 mt-5">
+            <div className="col-lg-4 col-md-6 mt-lg-0 mt-md-3 mt-4">
               <div className="team-div">
                 <img
                   src="/images/team/Ajay-modi-560x560.jpeg"

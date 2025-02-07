@@ -6,6 +6,8 @@ import Investor from "./pages/Investor";
 import MarketFunds from "./pages/MarketFunds";
 import Funds from "./pages/Funds";
 import InvestorLetter from "./pages/InvestorLetter";
+import OurImpact from "./pages/OurImpact";
+import Insights from "./pages/Insights";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
         <Route path="/private-market" element={<MarketFunds />}></Route>
         <Route path="/funds" element={<Funds />}></Route>
         <Route path="/investor-letters" element={<InvestorLetter />}></Route>
+        <Route path="/our-impact" element={<OurImpact />}></Route>
+        <Route path="/Insights" element={<Insights />}></Route>
       </Routes>
     </Router>
   );
