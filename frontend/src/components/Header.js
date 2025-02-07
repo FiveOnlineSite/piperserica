@@ -125,7 +125,7 @@ const Header = () => {
               <TopBar />
               <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li className="nav-item">
-                  <NavLink className="nav-link" aria-current="page" to="/">
+                  <NavLink className="nav-link" aria-current="page" to="/about">
                     About
                   </NavLink>
                 </li>
@@ -153,12 +153,12 @@ const Header = () => {
                   </ul>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/">
+                  <NavLink className="nav-link" to="/our-impact">
                     Our Impact
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/">
+                  <NavLink className="nav-link" to="/insights">
                     Insights
                   </NavLink>
                 </li>
