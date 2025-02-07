@@ -265,18 +265,22 @@ const InvestorLetter = () => {
           <div className="row">
             {sortedLetters.map((letter) => (
               <div className="col-lg-4 col-md-6 col-12">
-                <div className="letter-div mb-5">
-                  <h5 className="section-subtitle">{letter.date}</h5>
-                  <h3>Piper Serica Leader Portfolio Strategy {letter.date}</h3>
-                  <div className="letter-options py-3 pt-5">
-                    <NavLink to={letter.filepath} target="_blank">
+                <NavLink to={letter.filepath} target="_blank">
+                  <div className="letter-div mb-5">
+                    <h5 className="section-subtitle">{letter.date}</h5>
+                    <h3>
+                      Piper Serica Leader Portfolio Strategy {letter.date}
+                    </h3>
+                    {/* <div className="letter-options py-3 pt-5">
+                    
                       <i class="fa-solid fa-eye"></i>
-                    </NavLink>
+                   
                     <a href={letter.filepath} download>
                       <i className="fa-solid fa-cloud-arrow-down"></i>
                     </a>
+                  </div> */}
                   </div>
-                </div>
+                </NavLink>
               </div>
             ))}
           </div>

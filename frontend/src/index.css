@@ -58,7 +58,7 @@ body {
 }
 
 .navbar-nav .nav-item {
-  padding: 10px 20px;
+  padding: 10px;
 }
 
 .offcanvas-body .navbar-nav .nav-item {
@@ -447,7 +447,9 @@ body {
 .our-commitment-section,
 .empowering-growth-section,
 .insights-section,
-.investor-letter-section {
+.investor-letter-section,
+.investment-philosophy-section,
+.factsheet-section {
   padding: 50px 0;
 }
 
@@ -766,11 +768,19 @@ body {
   background-color: var(--lighter-gray-bg);
 }
 
+.investor-letters-section a {
+  text-decoration: none;
+}
+
+.investor-letters-section a h3 {
+  color: var(--black-font);
+}
+
 .letter-div {
   background-color: var(--white-bg);
   padding: 20px;
   border-left: 2px solid var(--blue-font);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
 .letter-options i {
@@ -1092,14 +1102,16 @@ body {
 .features-section .row,
 .fund-info-section .row,
 .our-commitment-section .row,
-.empowering-growth-section .row {
+.empowering-growth-section .row,
+.investment-philosophy-section .row {
   position: relative;
 }
 
 .feature-title-div,
 .fund-title-div,
 .commitment-title-div,
-.empowering-title-div {
+.empowering-title-div,
+.investment-philosophy-title-div {
   position: sticky;
   top: 0;
   padding: 10px;
@@ -1108,7 +1120,8 @@ body {
 .features-section .row .col-lg-5,
 .fund-info-section .row .col-lg-5,
 .our-commitment-section .row .col-lg-4,
-.empowering-growth-section .row .col-lg-4 {
+.empowering-growth-section .row .col-lg-4,
+.investment-philosophy-section .row .col-lg-5 {
   position: sticky;
   top: 9%;
   background-color: var(--lighter-gray-bg);
@@ -1117,7 +1130,8 @@ body {
 }
 
 .our-commitment-section .row .col-lg-4,
-.empowering-growth-section .row .col-lg-4 {
+.empowering-growth-section .row .col-lg-4,
+.investment-philosophy-section .row .col-lg-5 {
   background-color: var(--white-bg);
 }
 
@@ -1144,7 +1158,7 @@ body {
 
 .sticky-contact-section {
   z-index: 999;
-  position: sticky;
+  /* position: sticky; */
   inset: auto 0% 0%;
   background-color: var(--lighter-gray-bg);
   padding: 20px 0;
@@ -1157,6 +1171,11 @@ body {
   font-weight: 400;
   line-height: 35px;
   font-family: "Frank Ruhl Libre", serif;
+}
+
+.factsheet-content-div h2 {
+  font-size: 30px;
+  line-height: 40px;
 }
 
 /* ABOUT */
@@ -1350,16 +1369,17 @@ body {
 /* OUR IMPACT */
 
 .our-commitment-tabs {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   border-bottom: 1px solid var(--gray-font);
   margin: 20px 0;
+  overflow: auto;
+  white-space: nowrap;
 }
 
 .our-commitment-tabs a {
   padding-right: 20px;
   text-decoration: none;
+  display: inline-flex;
+  text-align: center;
 }
 
 .our-commitment-tabs a h4 {

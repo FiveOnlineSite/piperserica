@@ -497,7 +497,7 @@ const Investor = () => {
                   Investor Letters
                 </h2>
               </div>
-              <div className="col-lg-6">
+              <div className="col-lg-6 mt-lg-0 mt-4">
                 <div>
                   <NavLink
                     to="/investor-letters"
