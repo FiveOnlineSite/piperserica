@@ -8,6 +8,8 @@ import Funds from "./pages/Funds";
 import InvestorLetter from "./pages/InvestorLetter";
 import OurImpact from "./pages/OurImpact";
 import Insights from "./pages/Insights";
+import PublicFund from "./pages/PublicFund";
+import NewsArticle from "./pages/NewsArticle";
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
         <Route path="/investor-letters" element={<InvestorLetter />}></Route>
         <Route path="/our-impact" element={<OurImpact />}></Route>
         <Route path="/Insights" element={<Insights />}></Route>
+        <Route path="/public-funds" element={<PublicFund />}></Route>
+        <Route path="/news-article" element={<NewsArticle />}></Route>
       </Routes>
     </Router>
   );
