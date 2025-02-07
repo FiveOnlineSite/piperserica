@@ -3,7 +3,7 @@ import Layout from "../components/Layout";
 import Slider from "react-slick";
 import { NavLink } from "react-router-dom";
 import OfferingsSlider from "../components/OfferingsSlider";
-import NewsSlider from "../components/NewsSlider";
+import NewsSection from "../components/NewsSection";
 
 const Investor = () => {
   const investorItem = [
@@ -61,82 +61,21 @@ const Investor = () => {
 
   const offeringsItems = [
     {
-      strategy_title: "Venture Debt",
-      funds: "LC Venture Debt",
+      strategy_title: "Private Market Funds",
+      funds: "Piper Serica Numera Uno India Fund",
     },
     {
-      strategy_title: "Venture Capital",
-      funds: "LC Nueva AIF",
+      strategy_title: "Private Market Funds",
+      funds: "Piper Serica Leader Portfolio",
     },
-    {
-      strategy_title: "Private Credit",
-      funds: "LC Venture Debt",
-    },
-    {
-      strategy_title: "Venture Debt",
-      funds: "LC Supply Chain",
-    },
-  ];
-
-  const newsSettings = {
-    centerMode: false, // Enable center mode
-    slidesToShow: 2, // Number of slides to show
-    autoplay: false, // Enable autoplay
-    autoplaySpeed: 2000, // Autoplay speed in milliseconds
-    infinite: true,
-    arrows: true,
-    responsive: [
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
-  const newsItems = [
-    {
-      news_img: "/images/banners/news1.png",
-      news_type: "Venture Debt",
-      news_subtitle: "Investments Insights",
-      news_title:
-        "Equity Insight: Tech Titans at a Crossroads - The Growing Divide Between Meta and Microsoft",
-      date: "January 30, 2025",
-    },
-    {
-      news_img: "/images/banners/news2.png",
-      news_type: "Venture Debt",
-      news_subtitle: "Investments Insights",
-      news_title:
-        "Equity Insight: Tech Titans at a Crossroads - The Growing Divide Between Meta and Microsoft",
-      date: "January 30, 2025",
-    },
-    {
-      news_img: "/images/banners/news1.png",
-      news_type: "Venture Debt",
-      news_subtitle: "Investments Insights",
-      news_title:
-        "Equity Insight: Tech Titans at a Crossroads - The Growing Divide Between Meta and Microsoft",
-      date: "January 30, 2025",
-    },
-    {
-      news_img: "/images/banners/news2.png",
-      news_type: "Venture Debt",
-      news_subtitle: "Investments Insights",
-      news_title:
-        "Equity Insight: Tech Titans at a Crossroads - The Growing Divide Between Meta and Microsoft",
-      date: "January 30, 2025",
-    },
-    {
-      news_img: "/images/banners/news1.png",
-      news_type: "Venture Debt",
-      news_subtitle: "Investments Insights",
-      news_title:
-        "Equity Insight: Tech Titans at a Crossroads - The Growing Divide Between Meta and Microsoft",
-      date: "January 30, 2025",
-    },
+    // {
+    //   strategy_title: "Private Credit",
+    //   funds: "LC Venture Debt",
+    // },
+    // {
+    //   strategy_title: "Venture Debt",
+    //   funds: "LC Supply Chain",
+    // },
   ];
 
   return (
@@ -500,10 +439,10 @@ const Investor = () => {
               Innovative. Sustainable. Rewarding.
             </h2>
 
-            <h3 className="section-title my-lg-3 my-4">
+            {/* <h3 className="section-title my-lg-3 my-4">
               Private Markets Funds
-            </h3>
-            <div className="row align-items-center">
+            </h3> */}
+            <div className="row align-items-center my-lg-3 my-4">
               <div className="col-lg-9">
                 <p className="para small-para">
                   We provide investors access to unique investment opportunities
@@ -516,19 +455,33 @@ const Investor = () => {
                   within the region.
                 </p>
               </div>
-              <div className="col-lg-3">
+              {/* <div className="col-lg-3">
                 <NavLink to="/" className="banner-btn blue-btn mt-0">
                   All funds
                   <i className="fa-solid fa-arrow-right"></i>
                 </NavLink>
-              </div>
+              </div> */}
             </div>
 
             <div className="row mt-5">
-              <OfferingsSlider
-                settings={offeringsSettings}
-                item={offeringsItems}
-              />
+              {offeringsItems.map((item, index) => (
+                <div className="col-lg-6">
+                  <div key={index} className="offerings-div">
+                    <h6 className="section-subtitle">Investment Strategy</h6>
+                    <div className="strategy-title-div">
+                      <h5>{item.strategy_title}</h5>{" "}
+                      <i className="fa-solid fa-arrow-right"></i>
+                    </div>
+                    <div className="strategy-funds-div">
+                      {/* <h6 className="section-subtitle mt-5">funds</h6> */}
+                      <a href="#" className="funds-div mt-5">
+                        <h5>{item.funds}</h5>
+                        <i className="fa-solid fa-arrow-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
@@ -559,29 +512,7 @@ const Investor = () => {
         </div>
       </section>
 
-      <section className="news-insights-section">
-        <div className="container">
-          <div className="row align-items-center">
-            <h5 className="section-subtitle">News & Insights</h5>
-            <div className="row align-items-center">
-              <div className="col-lg-6">
-                <h2 className="banner-title offerings-title mt-3">
-                  Get all the latest updates
-                </h2>
-              </div>
-              <div className="col-lg-6">
-                <NavLink to="/" className="banner-btn blue-btn mt-0">
-                  View all
-                </NavLink>
-              </div>
-            </div>
-
-            <div className="row mt-5">
-              <NewsSlider settings={newsSettings} item={newsItems} />
-            </div>
-          </div>
-        </div>
-      </section>
+      <NewsSection />
 
       <section className="newsletter-section">
         <div className="container">

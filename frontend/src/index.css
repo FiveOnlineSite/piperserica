@@ -106,7 +106,8 @@ body {
 .dropdown-menu .dropdown-item,
 .select-div .form-select option {
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 600;
+  line-height: 22px;
   font-family: "Public Sans", serif;
   color: var(--black-font);
   letter-spacing: 2px;
@@ -442,7 +443,11 @@ body {
 .founders-note-section,
 .teams-bg-section,
 .teams-section,
-.philosophy-section {
+.philosophy-section,
+.our-commitment-section,
+.empowering-growth-section,
+.insights-section,
+.investor-letter-section {
   padding: 50px 0;
 }
 
@@ -665,6 +670,7 @@ body {
 .offerings-div {
   background-color: var(--transparent-gray);
   padding: 50px 30px;
+  margin-bottom: 30px;
 }
 
 .our-offerings-section .slick-initialized .slick-slide,
@@ -683,10 +689,10 @@ body {
 }
 
 .strategy-title-div h5 {
-  font-size: 23px;
+  font-size: 30px;
   font-weight: 700;
   line-height: 33px;
-  font-family: "Public Sans", serif;
+  font-family: "Frank Ruhl Libre", serif;
 }
 
 .funds-div {
@@ -695,6 +701,9 @@ body {
   justify-content: space-between;
   border-bottom: 1px solid var(--light-gray-font);
   padding: 20px 0;
+  text-decoration: none;
+  color: var(--gray-font);
+  transition: all 0.6s ease;
 }
 
 .funds-div h5 {
@@ -702,8 +711,22 @@ body {
   font-weight: 400;
   line-height: 28px;
   font-family: "Public Sans", serif;
+  transition: all 0.6s ease;
 }
 
+.funds-div:hover {
+  border-bottom: 1px solid var(--blue-font);
+}
+
+.funds-div i {
+  color: var(--gray-font);
+  transition: all 0.6s ease;
+}
+
+.funds-div:hover h5,
+.funds-div:hover i {
+  color: var(--blue-font);
+}
 .slick-prev,
 .slick-next {
   top: 100% !important;
@@ -736,10 +759,6 @@ body {
 }
 
 /* INVESTOR LETTER */
-
-.investor-letter-section {
-  padding: 100px 0 50px 0;
-}
 
 .investor-letters-section,
 .history-section {
@@ -854,7 +873,7 @@ body {
 
 .newsletter-div .form-control:focus {
   box-shadow: none !important;
-  border: 1px solid var(--blue-font);
+  border: 1px solid var(--blue-font) !important;
 }
 
 .blue-title {
@@ -992,7 +1011,8 @@ body {
 
 /* FUNDS */
 
-.industries-filter-div .form-select {
+.industries-filter-div .form-select,
+.industries-filter-div .search-div {
   width: 100% !important;
   border-radius: 0 !important;
   padding: 20px 40px 20px 20px !important;
@@ -1003,8 +1023,31 @@ body {
   letter-spacing: 1px;
 }
 
-.industries-filter-div .form-select:focus {
+.industries-filter-div .search-div {
+  border: 1px solid #dee2e6;
+  padding: 20px !important;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.industries-filter-div .form-control {
+  border: none;
+  padding: 0;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--blue-font);
+}
+
+.industries-filter-div .form-select:focus,
+.industries-filter-div .form-control:focus {
   box-shadow: none !important;
+  color: var(--blue-font);
+}
+
+.industries-filter-div .form-control::placeholder {
+  color: var(--gray-font);
 }
 
 .industires-logo-div,
@@ -1047,24 +1090,35 @@ body {
 }
 
 .features-section .row,
-.fund-info-section .row {
+.fund-info-section .row,
+.our-commitment-section .row,
+.empowering-growth-section .row {
   position: relative;
 }
 
 .feature-title-div,
-.fund-title-div {
+.fund-title-div,
+.commitment-title-div,
+.empowering-title-div {
   position: sticky;
   top: 0;
   padding: 10px;
 }
 
 .features-section .row .col-lg-5,
-.fund-info-section .row .col-lg-5 {
+.fund-info-section .row .col-lg-5,
+.our-commitment-section .row .col-lg-4,
+.empowering-growth-section .row .col-lg-4 {
   position: sticky;
   top: 9%;
   background-color: var(--lighter-gray-bg);
   padding: 20px 0;
   z-index: 1;
+}
+
+.our-commitment-section .row .col-lg-4,
+.empowering-growth-section .row .col-lg-4 {
+  background-color: var(--white-bg);
 }
 
 .features-content-div .single-feature,
@@ -1293,6 +1347,87 @@ body {
   object-fit: cover;
 }
 
+/* OUR IMPACT */
+
+.our-commitment-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--gray-font);
+  margin: 20px 0;
+}
+
+.our-commitment-tabs a {
+  padding-right: 20px;
+  text-decoration: none;
+}
+
+.our-commitment-tabs a h4 {
+  color: var(--gray-font);
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 300;
+  text-align: center;
+  padding-bottom: 20px;
+  margin-bottom: 0;
+  border-bottom: 3px solid transparent;
+  transition: all 0.6s ease;
+}
+
+.our-commitment-tabs a.active h4 {
+  border-bottom: 3px solid var(--blue-font);
+  color: var(--blue-font);
+}
+
+.commitment-content-div .commitment-title {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400;
+  color: var(--gray-font);
+  font-family: "Public Sans", serif;
+}
+
+.commitment-content-div {
+  width: 70%;
+}
+
+.commitment-para {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.empowering-point {
+  padding: 0 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  border-left: 2px solid var(--blue-font);
+  justify-content: start;
+  margin: 20px 0;
+}
+
+.empowering-point-title {
+  color: var(--blue-font);
+}
+
+/* INSIGHTS */
+
+.items-available-text,
+.clear-filters-text {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.clear-filters-text {
+  color: var(--gray-font);
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--gray-font);
+  padding: 0;
+}
 /* FOOTER */
 
 .footer {
@@ -1347,6 +1482,9 @@ body {
     display: block !important;
   }
 
+  .navbar-nav {
+    align-items: start;
+  }
   .select-div .form-select {
     width: 85%;
     padding: 20px;
@@ -1463,7 +1601,8 @@ body {
     padding: 6%;
   }
 
-  .industries-filter-div .form-select {
+  .industries-filter-div .form-select,
+  .industries-filter-div .search-div {
     width: 40% !important;
   }
 
@@ -1510,11 +1649,6 @@ body {
   .home-banner .video-banner video,
   .home-banner-content {
     height: 95vh;
-  }
-
-  .our-offerings-section .slick-initialized .slick-slide,
-  .news-insights-section .slick-initialized .slick-slide {
-    padding-right: 0;
   }
 
   .investor-banner-section .slick-slide img {
@@ -1592,6 +1726,11 @@ body {
   .team-div {
     height: 450px;
   }
+
+  .our-offerings-section .slick-initialized .slick-slide,
+  .news-insights-section .slick-initialized .slick-slide {
+    padding-right: 0;
+  }
 }
 
 @media screen and (max-width: 500px) {
@@ -1607,7 +1746,8 @@ body {
     padding: 4% 3%;
   }
 
-  .industries-filter-div .form-select {
+  .industries-filter-div .form-select,
+  .industries-filter-div .search-div {
     width: 100% !important;
   }
 }
