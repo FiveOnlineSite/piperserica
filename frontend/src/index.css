@@ -730,6 +730,7 @@ body {
 .funds-div:hover i {
   color: var(--blue-font);
 }
+
 .slick-prev,
 .slick-next {
   top: 100% !important;
@@ -764,7 +765,8 @@ body {
 /* INVESTOR LETTER */
 
 .investor-letters-section,
-.history-section {
+.history-section,
+.contact-form-section {
   padding: 50px 0;
   background-color: var(--lighter-gray-bg);
 }
@@ -1490,6 +1492,54 @@ body {
   border-bottom: 1px solid var(--gray-font);
   padding: 0;
 }
+
+/* CONTACT */
+
+.contact-form-section {
+  margin-bottom: 50px;
+}
+
+form .form-label {
+  color: var(--gray-font);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+form .form-control {
+  padding: 15px 20px;
+  background-color: transparent;
+  border: 1px solid var(--light-gray-font);
+  border-radius: 0;
+  transition: all 0.6s ease;
+}
+
+form .form-control:focus {
+  border: 1px solid var(--blue-font);
+  box-shadow: none !important;
+  background-color: var(--lighter-gray-bg) !important;
+}
+
+form .form-control::placeholder {
+  font-style: italic;
+  color: var(--light-gray-font);
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+form .form-label span {
+  font-style: italic;
+  color: var(--light-gray-font);
+}
+
+.location-section {
+  padding: 50px 0;
+}
+
 /* FOOTER */
 
 .footer {
