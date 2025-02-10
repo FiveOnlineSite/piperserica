@@ -16,6 +16,99 @@ const About = () => {
   const toggleAccordion = (index) => {
     setOpenAccordion((prevIndex) => (prevIndex === index ? null : index));
   };
+
+  const teamContent = [
+    {
+      image: "/images/team/Ajay-modi-560x560.jpeg",
+      name: "Ajay Modi",
+      linkedin_url: "/",
+      designation: "Team member",
+    },
+    {
+      image: "/images/team/Ajay-modi-560x560.jpeg",
+      name: "Ajay Modi",
+      linkedin_url: "/",
+      designation: "Team member",
+    },
+    {
+      image: "/images/team/Ajay-modi-560x560.jpeg",
+      name: "Ajay Modi",
+      linkedin_url: "/",
+      designation: "Team member",
+    },
+    {
+      image: "/images/team/Ajay-modi-560x560.jpeg",
+      name: "Ajay Modi",
+      linkedin_url: "/",
+      designation: "Team member",
+    },
+    {
+      image: "/images/team/Ajay-modi-560x560.jpeg",
+      name: "Ajay Modi",
+      linkedin_url: "/",
+      designation: "Team member",
+    },
+    {
+      image: "/images/team/Ajay-modi-560x560.jpeg",
+      name: "Ajay Modi",
+      linkedin_url: "/",
+      designation: "Team member",
+    },
+    {
+      image: "/images/team/Ajay-modi-560x560.jpeg",
+      name: "Ajay Modi",
+      linkedin_url: "/",
+      designation: "Team member",
+    },
+    {
+      image: "/images/team/Ajay-modi-560x560.jpeg",
+      name: "Ajay Modi",
+      linkedin_url: "/",
+      designation: "Team member",
+    },
+    {
+      image: "/images/team/Ajay-modi-560x560.jpeg",
+      name: "Ajay Modi",
+      linkedin_url: "/",
+      designation: "Team member",
+    },
+    {
+      image: "/images/team/Ajay-modi-560x560.jpeg",
+      name: "Ajay Modi",
+      linkedin_url: "/",
+      designation: "Team member",
+    },
+    {
+      image: "/images/team/Ajay-modi-560x560.jpeg",
+      name: "Ajay Modi",
+      linkedin_url: "/",
+      designation: "Team member",
+    },
+    {
+      image: "/images/team/Ajay-modi-560x560.jpeg",
+      name: "Ajay Modi",
+      linkedin_url: "/",
+      designation: "Team member",
+    },
+    {
+      image: "/images/team/Ajay-modi-560x560.jpeg",
+      name: "Ajay Modi",
+      linkedin_url: "/",
+      designation: "Team member",
+    },
+    {
+      image: "/images/team/Ajay-modi-560x560.jpeg",
+      name: "Ajay Modi",
+      linkedin_url: "/",
+      designation: "Team member",
+    },
+    {
+      image: "/images/team/Ajay-modi-560x560.jpeg",
+      name: "Ajay Modi",
+      linkedin_url: "/",
+      designation: "Team member",
+    },
+  ];
   return (
     <Layout>
       <section className="banner-section">
@@ -837,7 +930,13 @@ const About = () => {
                   className="w-100"
                 />
                 <div className="team-content">
-                  <h3 className="section-title team-name">Abhay Agarwal</h3>
+                  <div className="team-title-div">
+                    <h3 className="section-title team-name">Abhay Agarwal</h3>
+                    <NavLink to="/">
+                      <i class="fa-brands fa-linkedin-in"></i>
+                    </NavLink>
+                  </div>
+
                   <h5 className="section-subtitle">Managing Director, CIO</h5>
                 </div>
               </div>
@@ -851,7 +950,12 @@ const About = () => {
                   className="w-100"
                 />
                 <div className="team-content">
-                  <h3 className="section-title team-name">Rajni Agarwal</h3>
+                  <div className="team-title-div">
+                    <h3 className="section-title team-name">Rajni Agarwal</h3>
+                    <NavLink to="/">
+                      <i class="fa-brands fa-linkedin-in"></i>
+                    </NavLink>
+                  </div>
                   <h5 className="section-subtitle">Director, Research</h5>
                 </div>
               </div>
@@ -865,11 +969,36 @@ const About = () => {
                   className="w-100"
                 />
                 <div className="team-content">
-                  <h3 className="section-title team-name">Ajay Modi</h3>
+                  <div className="team-title-div">
+                    <h3 className="section-title team-name">Ajay Modi</h3>
+                    <NavLink to="/">
+                      <i class="fa-brands fa-linkedin-in"></i>
+                    </NavLink>
+                  </div>
                   <h5 className="section-subtitle">Director, Investments</h5>
                 </div>
               </div>
             </div>
+          </div>
+
+          <div className="row mb-5">
+            {teamContent.map((team, index) => (
+              <div className="col-lg-3 col-md-6 col-12" key={index}>
+                <div className="team-div small-team-div">
+                  <img src={team.image} alt="team-img" className="w-100" />
+                  <div className="team-content small-team-content">
+                    <div className="team-title-div">
+                      <h3 className="section-title team-name">{team.name}</h3>
+                      <NavLink to={team.linkedin_url}>
+                        <i class="fa-brands fa-linkedin-in"></i>
+                      </NavLink>
+                    </div>
+
+                    <h5 className="section-subtitle">{team.designation}</h5>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
