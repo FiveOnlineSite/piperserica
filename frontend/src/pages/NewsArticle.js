@@ -60,7 +60,7 @@ const NewsArticle = () => {
           {/* News Items */}
           <div className="row mt-5">
             {newsItems.map((item, index) => (
-              <div className="col-lg-4" key={index}>
+              <div className="col-lg-4 col-md-6 col-12" key={index}>
                 <div className="news-div">
                   <div className="news-img-div">
                     <img
