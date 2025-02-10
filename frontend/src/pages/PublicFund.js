@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
 import { NavLink } from "react-router-dom";
+import StickyContact from "../components/StickyContact";
 
 const PublicFund = () => {
   const handleFilterChange = (e) => {
@@ -101,7 +102,7 @@ const PublicFund = () => {
           <div className="row align-items-center">
             <div className="about-fund-div">
               <h6 className="section-subtitle mb-4">
-                about lc venture debt fund
+                about piper serica angel fund
               </h6>
               <p className="para">
                 The Fund seeks to empower early and growth stage companies in
@@ -124,20 +125,20 @@ const PublicFund = () => {
               <div className="row">
                 <div className="col-lg-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">35</h2>
-                    <h6 className="para">Companies</h6>
+                    <h2 className="facts-title">840+</h2>
+                    <h6 className="para">Investors</h6>
                   </div>
                 </div>
                 <div className="col-lg-4 mt-lg-0 mt-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">₹350 Cr</h2>
-                    <h6 className="para">Fund Size</h6>
+                    <h2 className="facts-title">INR 1250+</h2>
+                    <h6 className="para">Crore Asset Under Management</h6>
                   </div>
                 </div>
                 <div className="col-lg-4 mt-lg-0 mt-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">₹344.75 Cr</h2>
-                    <h6 className="para">Called in Capital</h6>
+                    <h2 className="facts-title">20%+</h2>
+                    <h6 className="para">CAGR over more than 9 years</h6>
                   </div>
                 </div>
               </div>
@@ -264,55 +265,6 @@ const PublicFund = () => {
         </div>
       </section>
 
-      <section className="industries-portfolio-section">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-9">
-              <h6 className="section-subtitle">Industries</h6>
-              <h3 className="section-title mb-lg-3 mb-4">
-                Portfolio Companies
-              </h3>
-            </div>
-            <div className="col-lg-3">
-              <div className="industries-filter-div">
-                <select
-                  class="form-select"
-                  onChange={handleFilterChange}
-                  aria-label="Default select example"
-                >
-                  <option selected>Industry</option>
-                  <option value="B2B">B2B</option>
-                  <option value="Consumer">Consumer</option>
-                  <option value="Creator Economy">Creator Economy</option>
-                </select>
-              </div>
-            </div>
-          </div>
-
-          <div className="row mt-lg-4 mt-5">
-            <div className="industries-div">
-              <div className="row">
-                {getFilteredImages().map((images) => (
-                  <div key={images.id} className="col-lg-3 col-md-6 col-6">
-                    <div className="industires-logo-div">
-                      <img src={images.src} alt="industry" className="w-100" />
-                      <div className="industries-content">
-                        <p className="para small-para">
-                          The Fund seeks to empower early and growth stage
-                          companies in India and Southeast Asia, providing them
-                          capital to scale without significantly diluting
-                          equity.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="investor-letter-section">
         <div className="container">
           <div className="row align-items-center">
@@ -338,24 +290,7 @@ const PublicFund = () => {
         </div>
       </section>
 
-      <section className="sticky-contact-section">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-lg-6">
-              <h4 className="section-title">
-                Want to know more about LC Nueva AIF?
-              </h4>
-            </div>
-
-            <div className="col-lg-6 mt-lg-0 mt-3">
-              <NavLink to="/" className="banner-btn blue-btn mt-0">
-                Contact us
-                <i className="fa-solid fa-arrow-right"></i>
-              </NavLink>
-            </div>
-          </div>
-        </div>
-      </section>
+      <StickyContact />
     </Layout>
   );
 };

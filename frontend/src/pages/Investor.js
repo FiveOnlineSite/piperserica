@@ -470,7 +470,7 @@ const Investor = () => {
                     <h6 className="section-subtitle">Investment Strategy</h6>
                     <div className="strategy-title-div">
                       <h5>{item.strategy_title}</h5>{" "}
-                      <i className="fa-solid fa-arrow-right"></i>
+                      {/* <i className="fa-solid fa-arrow-right"></i> */}
                     </div>
                     <div className="strategy-funds-div">
                       {/* <h6 className="section-subtitle mt-5">funds</h6> */}

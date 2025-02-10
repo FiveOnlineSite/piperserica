@@ -3,14 +3,12 @@
   -webkit-font-smoothing: antialiased;
 }
 
-html {
-  overflow-x: hidden !important;
-}
-
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  overflow-y: scroll !important;
+  overflow-x: hidden !important;
 }
 
 :root {
@@ -355,18 +353,19 @@ body {
 
 .investor-banner-section .slick-slide img {
   width: 100%;
-  height: 100vh;
+  height: 70vh;
   object-fit: cover;
   filter: brightness(0.5);
 }
 
 .investor-banner-content {
   position: absolute;
-  top: 30%;
+  top: 80%;
   left: 0%;
   display: inline;
-  height: auto;
+  height: 70vh;
   width: 100%;
+  transform: translate(0, -50%);
 }
 
 .banner-subtitle {
@@ -374,18 +373,18 @@ body {
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: 600;
-  line-height: 28px;
-  font-size: 18px;
+  line-height: 25px;
+  font-size: 15px;
   font-family: "Public Sans", serif;
 }
 
 .banner-title {
   font-family: "Frank Ruhl Libre", serif;
   color: var(--white-bg);
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 400;
   width: 50%;
-  line-height: 60px;
+  line-height: 50px;
 }
 
 .banner-btn {
@@ -394,8 +393,8 @@ body {
   width: auto;
   display: inline-block;
   margin-top: 30px;
-  font-size: 18px;
-  line-height: 28px;
+  font-size: 15px;
+  line-height: 25px;
   text-transform: uppercase;
   color: var(--white-bg);
   font-weight: 700;
@@ -449,8 +448,10 @@ body {
 .insights-section,
 .investor-letter-section,
 .investment-philosophy-section,
-.factsheet-section {
+.factsheet-section,
+.investor-thesis-section {
   padding: 50px 0;
+  background-color: var(--white-bg);
 }
 
 .para {
@@ -928,7 +929,7 @@ body {
 }
 
 .banner-img-div img {
-  height: 100vh;
+  height: 70vh;
   width: 100%;
   object-fit: cover;
   filter: brightness(0.8);
@@ -936,9 +937,10 @@ body {
 
 .banner-content-div {
   position: absolute;
-  top: 30%;
+  top: 60%;
   left: 0%;
   width: 100%;
+  transform: translate(0, -50%);
 }
 
 .banner-content-div a {
@@ -1064,7 +1066,7 @@ body {
 .industires-logo-div img {
   position: relative;
 }
-
+/* 
 .industires-logo-div img {
   top: 0;
   transition: top 0.6s ease;
@@ -1072,7 +1074,7 @@ body {
 
 .industires-logo-div:hover img {
   top: -100%;
-}
+} */
 
 .industires-logo-div {
   overflow: hidden;
@@ -1092,6 +1094,21 @@ body {
 
 .industires-logo-div:hover .industries-content {
   bottom: 0;
+}
+
+.modal-body img {
+  width: 50%;
+}
+
+.modal-title {
+  font-family: "Frank Ruhl Libre", serif;
+  font-size: 30px !important;
+  line-height: 40px;
+}
+
+.modal-open {
+  overflow: hidden !important;
+  height: 100% !important;
 }
 
 .features-section,
@@ -1439,6 +1456,7 @@ body {
   letter-spacing: 2px;
   font-size: 14px;
   line-height: 24px;
+  margin-bottom: 0;
 }
 
 .clear-filters-text {
@@ -1668,24 +1686,96 @@ body {
   .home-banner .video-banner,
   .home-banner .video-banner video,
   .home-banner-content {
-    height: 95vh;
+    height: 50vh;
   }
 
-  .investor-banner-section .slick-slide img {
-    height: 95vh;
-  }
-
-  .banner-para {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 600px) {
   .home-banner-content .section-title {
     font-size: 45px;
     line-height: 45px;
   }
 
+  .banner-title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .banner-para {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .investor-banner-section .slick-slide img {
+    height: 50vh;
+  }
+
+  .banner-para {
+    width: 100%;
+  }
+
+  .para,
+  .small-para {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .what-we-do-section,
+  .facts-section,
+  .our-offerings-section,
+  .news-insights-section,
+  .newsletter-section,
+  .about-fund-section,
+  .industries-portfolio-section,
+  .industries-portfolio-section,
+  .founders-note-section,
+  .teams-bg-section,
+  .teams-section,
+  .philosophy-section,
+  .our-commitment-section,
+  .empowering-growth-section,
+  .insights-section,
+  .investor-letter-section,
+  .investment-philosophy-section,
+  .factsheet-section,
+  .investor-thesis-section,
+  .investor-banner-section,
+  .banner-section,
+  .investment-journey-section,
+  .why-us-section {
+    padding: 30px 0;
+  }
+
+  .why-us-section {
+    margin: 30px 0;
+  }
+
+  .investment-solution-section {
+    padding-top: 30px;
+  }
+
+  .history-section {
+    margin-top: 30px;
+  }
+
+  .industries-filter-div .form-select,
+  .industries-filter-div .search-div {
+    width: 100% !important;
+  }
+
+  .banner-content-div {
+    top: 50%;
+  }
+
+  .banner-img-div img {
+    height: 50vh;
+  }
+
+  .investor-banner-content {
+    height: 50vh;
+    top: 60%;
+  }
+}
+
+@media screen and (max-width: 600px) {
   .content-div h2 {
     max-width: 75%;
   }
@@ -1765,11 +1855,6 @@ body {
   .investment-tab-content {
     padding: 4% 3%;
   }
-
-  .industries-filter-div .form-select,
-  .industries-filter-div .search-div {
-    width: 100% !important;
-  }
 }
 
 @media screen and (max-width: 400px) {
@@ -1798,8 +1883,8 @@ body {
     bottom: 3%;
   }
 
-  .investor-banner-content,
+  /* .investor-banner-content,
   .banner-content-div {
     top: 15%;
-  }
+  } */
 }

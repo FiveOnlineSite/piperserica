@@ -91,7 +91,7 @@ const Insights = () => {
         <div className="container">
           {/* Filter Dropdowns */}
           <div className="row mb-4">
-            <div className="col-lg-3">
+            <div className="col-lg-3 col-md-6 mt-lg-0 mt-0">
               <div className="industries-filter-div">
                 <select
                   className="form-select"
@@ -105,7 +105,7 @@ const Insights = () => {
                 </select>
               </div>
             </div>
-            <div className="col-lg-3">
+            <div className="col-lg-3 col-md-6 mt-lg-0 mt-md-0 mt-3">
               <div className="industries-filter-div">
                 <select
                   className="form-select"
@@ -119,7 +119,7 @@ const Insights = () => {
                 </select>
               </div>
             </div>
-            <div className="col-lg-3">
+            <div className="col-lg-3 col-md-6 mt-lg-0 mt-md-4 mt-3">
               <div className="industries-filter-div">
                 <select
                   className="form-select"
@@ -131,7 +131,7 @@ const Insights = () => {
                 </select>
               </div>
             </div>
-            <div className="col-lg-3">
+            <div className="col-lg-3 col-md-6 mt-lg-0 mt-md-4 mt-3">
               <div className="industries-filter-div">
                 <form className="search-div d-flex p-0" role="search">
                   <input
@@ -149,12 +149,12 @@ const Insights = () => {
 
           {/* Items Available and Clear Filters */}
           <div className="row mt-5 align-items-center">
-            <div className="col-lg-6">
+            <div className="col-lg-6 col-md-6 col-6">
               <h6 className="para items-available-text">
                 {filteredNewsItems.length} items available
               </h6>
             </div>
-            <div className="col-lg-6 d-flex justify-content-lg-end justify-content-start">
+            <div className="col-lg-6 col-md-6 col-6 d-flex justify-content-lg-end justify-content-md-end justify-content-end">
               <button
                 className="para clear-filters-text"
                 onClick={handleClearFilters}
@@ -167,7 +167,7 @@ const Insights = () => {
           {/* News Items */}
           <div className="row mt-5">
             {filteredNewsItems.map((item, index) => (
-              <div className="col-lg-4" key={index}>
+              <div className="col-lg-4 col-md-6 col-12" key={index}>
                 <div className="news-div">
                   <div className="news-img-div">
                     <img
