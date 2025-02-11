@@ -11,6 +11,7 @@ import Insights from "./pages/Insights";
 import PublicFund from "./pages/PublicFund";
 import NewsArticle from "./pages/NewsArticle";
 import Contact from "./pages/Contact";
+import BlogDetails from "./pages/BlogDetails";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
         <Route path="/public-funds" element={<PublicFund />}></Route>
         <Route path="/news-article" element={<NewsArticle />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
+        <Route path="/blog-details" element={<BlogDetails />}></Route>
       </Routes>
     </Router>
   );
