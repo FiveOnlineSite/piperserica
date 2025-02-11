@@ -449,7 +449,8 @@ body {
 .investor-letter-section,
 .investment-philosophy-section,
 .factsheet-section,
-.investor-thesis-section {
+.investor-thesis-section,
+.blog-detail-para {
   padding: 50px 0;
   background-color: var(--white-bg);
 }
@@ -766,7 +767,8 @@ body {
 
 .investor-letters-section,
 .history-section,
-.contact-form-section {
+.contact-form-section,
+.blog-detail-section {
   padding: 50px 0;
   background-color: var(--lighter-gray-bg);
 }
@@ -1171,7 +1173,8 @@ body {
 .single-feature span,
 .single-fund span,
 .single-history span,
-.year-tab-links a span {
+.year-tab-links a span,
+.blog-para-div span {
   background-color: var(--blue-font, blue);
   height: 10px;
   width: 10px;
@@ -1563,6 +1566,61 @@ form .form-label span {
   transition: all 0.6s ease;
 }
 
+/* BLOG DETAIL */
+
+.back-div {
+  text-decoration: none;
+}
+
+.back-div i {
+  color: var(--gray-font);
+}
+
+.blog-detail-section .news-content-div {
+  background-color: transparent;
+}
+
+.news-blog {
+  font-size: 20px;
+}
+
+.news-content-div h6 {
+  font-size: 20px;
+  font-style: italic;
+}
+
+.blog-detail-title {
+  font-size: 50px;
+  line-height: 60px;
+}
+
+.blog-para {
+  color: var(--black-font);
+  text-align: justify;
+}
+
+.key-takeaways {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.social-media-blog .fa-brands {
+  margin-right: 20px !important;
+  color: var(--light-gray-font) !important;
+  font-size: 40px !important;
+  border-radius: 0 !important;
+}
+
+.subscribe-text {
+  font-size: 25px;
+  line-height: 35px;
+  margin-top: 20px;
+  color: var(--blue-font);
+}
+
+.subscribe-blog-btn {
+  float: left;
+}
 /* FOOTER */
 
 .footer {
@@ -1837,7 +1895,8 @@ form .form-label span {
   .investor-banner-section,
   .banner-section,
   .investment-journey-section,
-  .why-us-section {
+  .why-us-section,
+  .blog-detail-para {
     padding: 30px 0;
   }
 
