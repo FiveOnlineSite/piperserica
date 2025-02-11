@@ -450,7 +450,8 @@ body {
 .investment-philosophy-section,
 .factsheet-section,
 .investor-thesis-section,
-.blog-detail-para {
+.blog-detail-para,
+.disclaimer-para-div {
   padding: 50px 0;
   background-color: var(--white-bg);
 }
@@ -928,15 +929,26 @@ body {
 /* MARKET FUND */
 
 .banner-img-div,
-.banner-img-div img {
+.other-banner-div .banner-img-div img {
   position: relative;
 }
 
-.banner-img-div img {
+.banner-img-div img,
+.other-banner-div {
   height: 70vh;
   width: 100%;
   object-fit: cover;
   filter: brightness(0.8);
+}
+
+.other-banner-div {
+  background-color: var(--lighter-gray-bg);
+  filter: brightness(1);
+  margin-bottom: 50px;
+}
+
+.other-banner-content-div .banner-title {
+  color: var(--black-font);
 }
 
 .banner-content-div {

@@ -12,6 +12,7 @@ import PublicFund from "./pages/PublicFund";
 import NewsArticle from "./pages/NewsArticle";
 import Contact from "./pages/Contact";
 import BlogDetails from "./pages/BlogDetails";
+import Disclaimer from "./pages/Disclaimer";
 
 function App() {
   return (
@@ -36,6 +37,7 @@ function App() {
         <Route path="/news-article" element={<NewsArticle />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/blog-details" element={<BlogDetails />}></Route>
+        <Route path="/disclaimer" element={<Disclaimer />}></Route>
       </Routes>
     </Router>
   );
