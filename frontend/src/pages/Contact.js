@@ -139,7 +139,7 @@ const Contact = () => {
               <h2 className="section-title mt-lg-3 mt-4">India</h2>
 
               <div className="location-div mt-5">
-                <h6 className="section-subtitle">
+                <h6 className="section-subtitle mb-4">
                   Piper Serica Advisors Pvt. Ltd.
                 </h6>
 
@@ -172,16 +172,34 @@ const Contact = () => {
                   Park, Lower Parel, Mumbai – 400013
                 </p>
 
-                <div className="social-media-div">
-                  <div className="single-social-media">
+                <div className="social-media-div mt-4">
+                  <a href="tel:022-66545370" className="single-social-media">
                     <i class="fa-solid fa-phone"></i>
                     <p className="para small-para">022-66545370</p>
-                  </div>
+                  </a>
+                  <a
+                    href="mailto:contact@piperserica.com"
+                    className="single-social-media"
+                  >
+                    <i class="fa-solid fa-envelope"></i>
+                    <p className="para small-para">contact@piperserica.com</p>
+                  </a>
+                  <a
+                    href="https://maps.app.goo.gl/YAxpnG7w3bVksVMf7"
+                    className="single-social-media"
+                  >
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p className="para small-para">
+                      A Wing, 905/906, Marathon Innova Nextgen, Ganpatrao Kadam
+                      Marg, Opp-Peninsula Corporate Park, Lower Parel, Mumbai –
+                      400013
+                    </p>
+                  </a>
                 </div>
               </div>
             </div>
 
-            <div className="col-lg-6 offset-lg-1">
+            <div className="col-lg-6 offset-lg-1 mt-lg-0 mt-4">
               <div className="location-map">
                 <iframe
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.514609850698!2d72.82210332424965!3d18.99703235444872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce8dab12be6f%3A0x67f160f4c004525d!2sMarathon%20NextGen%20Entry%20Point!5e0!3m2!1sen!2sin!4v1739192478469!5m2!1sen!2sin"
