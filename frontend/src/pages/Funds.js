@@ -3,6 +3,7 @@ import Layout from "../components/Layout";
 import { NavLink } from "react-router-dom";
 import StickyContact from "../components/StickyContact";
 import CompanyPortfolio from "../components/CompanyPortfolio";
+import ArticleSection from "../components/ArticleSection";
 
 const Funds = () => {
   return (
@@ -207,6 +208,8 @@ const Funds = () => {
       </section>
 
       <CompanyPortfolio />
+
+      <ArticleSection />
 
       <section className="fund-info-section mb-0">
         <div className="container">

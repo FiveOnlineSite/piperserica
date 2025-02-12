@@ -266,7 +266,7 @@ const InvestorLetter = () => {
             {sortedLetters.map((letter) => (
               <div className="col-lg-4 col-md-6 col-12">
                 <NavLink to={letter.filepath} target="_blank">
-                  <div className="letter-div mb-5">
+                  <div className="letter-div mb-4">
                     <h5 className="section-subtitle">{letter.date}</h5>
                     <h3>
                       Piper Serica Leader Portfolio Strategy {letter.date}

@@ -1,8 +1,14 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React, { useEffect } from "react";
+import { NavLink, useLocation } from "react-router-dom";
 import TopBar from "./TopBar";
 
 const Header = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0); // Scroll to top on route change
+  }, [location]); // Dependency on location ensures it runs whenever the route changes
+
   return (
     <div>
       <nav className="navbar navbar-expand-lg desktop-navbar">
@@ -75,7 +81,11 @@ const Header = () => {
                 </NavLink>
               </li>
               <li className="nav-item login-btn">
-                <NavLink className="nav-link" to="/login">
+                <NavLink
+                  className="nav-link"
+                  to="https://piperserica.com/"
+                  target="_blank"
+                >
                   Login <i className="fa-solid fa-arrow-right"></i>
                 </NavLink>
               </li>
@@ -178,12 +188,16 @@ const Header = () => {
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/">
+                  <NavLink className="nav-link" to="/contact">
                     Contact
                   </NavLink>
                 </li>
                 <li className="nav-item login-btn">
-                  <NavLink className="nav-link" to="/">
+                  <NavLink
+                    className="nav-link"
+                    to="https://piperserica.com/"
+                    target="_blank"
+                  >
                     Login
                   </NavLink>
                 </li>

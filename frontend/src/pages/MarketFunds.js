@@ -17,12 +17,12 @@ const MarketFunds = () => {
     setActiveTab2(tab);
   };
 
-  const location = useLocation();
+  // const location = useLocation();
 
-  // Determine banner text based on the URL
-  const bannerTitle = location.pathname.includes("private")
-    ? "Private Market Funds"
-    : "Public Market Funds";
+  // // Determine banner text based on the URL
+  // const bannerTitle = location.pathname.includes("private")
+  //   ? "Private Market Funds"
+  //   : "Public Market Funds";
 
   return (
     <Layout>
@@ -37,7 +37,7 @@ const MarketFunds = () => {
             <div className="banner-content-div">
               <div className="container">
                 <h6 className="banner-subtitle">Our Businesses</h6>
-                <h1 className="banner-title">{bannerTitle}</h1>
+                <h1 className="banner-title">Public Market Fund</h1>
                 <p className="banner-para">
                   We provide investors access to unique investment opportunities
                   that deliver superior risk-adjusted returns in today's
@@ -94,7 +94,7 @@ const MarketFunds = () => {
                 </p>
 
                 <NavLink
-                  to="/funds"
+                  to="/public-funds"
                   className="banner-btn blue-btn tabs-btn mt-0"
                 >
                   View Fund

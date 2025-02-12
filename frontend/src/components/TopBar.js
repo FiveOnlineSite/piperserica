@@ -39,6 +39,19 @@ const TopBar = () => {
     updateSelectedInvestor(location.pathname);
   }, [location.pathname]);
 
+  // const handleInvestorChange = (e) => {
+  //   const value = e.target.value;
+  //   const investorToPathMap = {
+  //     foreign: "/foreign-investor",
+  //     nri: "/nri-investor",
+  //     startup: "/startup-founder-entrepreneur",
+  //   };
+
+  //   setSelectedInvestor(value); // Update state
+  //   localStorage.setItem("selectedInvestor", value); // Update localStorage
+  //   navigate(investorToPathMap[value]); // Navigate to the appropriate path
+  // };
+
   const handleInvestorChange = (e) => {
     const value = e.target.value;
     const investorToPathMap = {
@@ -47,9 +60,17 @@ const TopBar = () => {
       startup: "/startup-founder-entrepreneur",
     };
 
-    setSelectedInvestor(value); // Update state
-    localStorage.setItem("selectedInvestor", value); // Update localStorage
-    navigate(investorToPathMap[value]); // Navigate to the appropriate path
+    const targetPath = investorToPathMap[value];
+
+    if (location.pathname !== targetPath) {
+      setSelectedInvestor(value);
+      localStorage.setItem("selectedInvestor", value);
+      navigate(targetPath);
+    } else {
+      // Force re-navigation even if already on the same page
+      navigate("/dummy-route"); // Navigate to a temporary route
+      setTimeout(() => navigate(targetPath), 10); // Navigate back immediately
+    }
   };
 
   return (

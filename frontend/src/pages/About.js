@@ -169,8 +169,15 @@ const About = () => {
               </p>
 
               <NavLink
-                to="/"
+                to="#history-div"
                 className="banner-btn blue-btn tabs-btn mt-lg-3 mt-5"
+                onClick={(e) => {
+                  e.preventDefault(); // Prevent default link behavior
+                  const element = document.querySelector("#history-div");
+                  if (element) {
+                    element.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
               >
                 our history
                 <i className="fa-solid fa-arrow-right"></i>
@@ -180,7 +187,7 @@ const About = () => {
         </div>
       </section>
 
-      <section className="history-section">
+      <section className="history-section" id="history-div">
         <div className="container">
           <h6 className="section-subtitle">History</h6>
           <div className="row align-items-start">

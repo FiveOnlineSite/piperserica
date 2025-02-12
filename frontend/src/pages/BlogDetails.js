@@ -159,7 +159,7 @@ const BlogDetails = () => {
               </div>
             </div>
 
-            <div className="col-lg-4 offset-lg-1">
+            <div className="col-lg-4 offset-lg-1 mt-lg-0 mt-5">
               <div className="social-media-blog">
                 <a href="#">
                   <i class="fa-brands fa-linkedin"></i>
