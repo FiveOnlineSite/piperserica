@@ -451,7 +451,8 @@ body {
 .factsheet-section,
 .investor-thesis-section,
 .blog-detail-para,
-.disclaimer-para-div {
+.disclaimer-para-div,
+.privacy-policy-section {
   padding: 50px 0;
   background-color: var(--white-bg);
 }
@@ -1582,6 +1583,10 @@ form .form-label span {
   transition: all 0.6s ease;
 }
 
+.location-map {
+  display: inline-flex;
+  width: 100%;
+}
 /* BLOG DETAIL */
 
 .back-div {
@@ -2023,7 +2028,8 @@ form .form-label span {
   .investment-journey-section,
   .why-us-section,
   .blog-detail-para,
-  .history-section {
+  .history-section,
+  .investor-letters-section {
     padding: 30px 15px;
   }
 
@@ -2032,7 +2038,8 @@ form .form-label span {
   }
 
   .contact-form-section,
-  .location-section {
+  .location-section,
+  .sticky-contact-section {
     padding-left: 15px;
     padding-right: 15px;
   }

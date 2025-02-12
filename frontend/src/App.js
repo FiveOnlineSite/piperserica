@@ -14,6 +14,8 @@ import Contact from "./pages/Contact";
 import BlogDetails from "./pages/BlogDetails";
 import Disclaimer from "./pages/Disclaimer";
 import PrivateMarket from "./pages/PrivateMarket";
+import Disclosure from "./pages/Disclosure";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function App() {
   return (
@@ -40,6 +42,8 @@ function App() {
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/blog-details" element={<BlogDetails />}></Route>
         <Route path="/disclaimer" element={<Disclaimer />}></Route>
+        <Route path="/disclosure" element={<Disclosure />}></Route>
+        <Route path="/privacy-policy" element={<PrivacyPolicy />}></Route>
       </Routes>
     </Router>
   );

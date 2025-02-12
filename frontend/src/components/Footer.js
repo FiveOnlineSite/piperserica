@@ -69,12 +69,12 @@ const Footer = () => {
             <div className="footer-links ">
               <ul className="d-flex justify-content-lg-end justify-content-md-end justify-content-start ps-0">
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/">
+                  <NavLink className="nav-link" to="/privacy-policy">
                     Privacy Policy
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/">
+                  <NavLink className="nav-link" to="/disclaimer">
                     Disclaimer
                   </NavLink>
                 </li>
