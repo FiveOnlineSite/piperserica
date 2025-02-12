@@ -6,7 +6,8 @@ const OurImpact = () => {
   const [activeTab, setActiveTab] = useState("life");
 
   // Handle tab click
-  const handleTabClick = (tab) => {
+  const handleTabClick = (tab, event) => {
+    event.preventDefault(); // Prevent the default anchor link behavior
     setActiveTab(tab);
   };
 
@@ -66,22 +67,22 @@ const OurImpact = () => {
 
               <div className="our-commitment-tabs">
                 <a
-                  href="#life"
-                  onClick={() => handleTabClick("life")}
+                  href="#"
+                  onClick={(event) => handleTabClick("life", event)}
                   className={activeTab === "life" ? "active" : ""}
                 >
                   <h4>Life Sciences Real Estate</h4>
                 </a>
                 <a
-                  href="#smes"
-                  onClick={() => handleTabClick("smes")}
+                  href="#"
+                  onClick={(event) => handleTabClick("smes", event)}
                   className={activeTab === "smes" ? "active" : ""}
                 >
                   <h4>SMEs across Asia</h4>
                 </a>
                 <a
-                  href="#early"
-                  onClick={() => handleTabClick("early")}
+                  href="#"
+                  onClick={(event) => handleTabClick("early", event)}
                   className={activeTab === "early" ? "active" : ""}
                 >
                   <h4>Early Stage and Growth Companies</h4>
@@ -103,7 +104,7 @@ const OurImpact = () => {
                       of sustainable spaces.
                     </h6>
                     <div className="commitment-content">
-                      <p className="para commitment-para">
+                      <p className="para small-para">
                         Responsible Investing is a critical part of our
                         objective to ensure that our life science infrastructure
                         is energy efficient and withstands the tests of time and
@@ -132,7 +133,7 @@ const OurImpact = () => {
                       facilities.
                     </h6>
                     <div className="commitment-content">
-                      <p className="para commitment-para">
+                      <p className="para small-para">
                         SMEs are the backbone of the Asian economy, accounting
                         for a significant portion of the region's GDP and
                         providing employment opportunities for a large number of
@@ -160,7 +161,7 @@ const OurImpact = () => {
                       investments
                     </h6>
                     <div className="commitment-content">
-                      <p className="para commitment-para">
+                      <p className="para small-para">
                         By providing innovative startups and technology
                         companies with the capital and resources they need to
                         grow and expand, our strategies are helping to drive

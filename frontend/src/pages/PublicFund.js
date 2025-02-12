@@ -238,7 +238,7 @@ const PublicFund = () => {
             </div>
             <div className="col-lg-7 mt-lg-0 mt-4">
               <div className="factsheet-content-div d-flex align-items-center justify-content-between">
-                <h2>Download Latest Factsheet</h2>
+                <h4>Download Latest Factsheet</h4>
                 <div>
                   <NavLink
                     to="/investor-letters"
@@ -250,7 +250,7 @@ const PublicFund = () => {
               </div>
 
               <div className="factsheet-content-div d-flex align-items-center justify-content-between mt-5">
-                <h2>Download Presentation</h2>
+                <h4>Download Presentation</h4>
                 <div>
                   <NavLink
                     to="/investor-letters"
@@ -265,24 +265,62 @@ const PublicFund = () => {
         </div>
       </section>
 
-      <section className="investor-letter-section">
+      <section className="investor-letters-section investor-letter-section">
         <div className="container">
           <div className="row align-items-center">
             <h5 className="section-subtitle">Download</h5>
             <div className="row align-items-center">
-              <div className="col-lg-6">
+              <div className="col-lg-4">
                 <h2 className="banner-title offerings-title mt-3">
                   Disclosures
                 </h2>
               </div>
-              <div className="col-lg-6 mt-lg-0 mt-4">
-                <div>
+              <div className="col-lg-8 mt-lg-0 mt-4 d-flex justify-conten-lg-end justify-content-start">
+                {/* <div>
                   <NavLink
                     to="/investor-letters"
                     className="banner-btn blue-btn mt-0"
                   >
                     Explore
                   </NavLink>
+                </div> */}
+                <div className="row">
+                  <div className="col-lg-6">
+                    <NavLink to="/" target="_blank">
+                      <div className="letter-div mb-5">
+                        <h5 className="section-subtitle">January 2025</h5>
+                        <h3>
+                          Piper Serica Leader Portfolio Strategy January 2025
+                        </h3>
+                        {/* <div className="letter-options py-3 pt-5">
+                    
+                      <i class="fa-solid fa-eye"></i>
+                   
+                    <a href={letter.filepath} download>
+                      <i className="fa-solid fa-cloud-arrow-down"></i>
+                    </a>
+                  </div> */}
+                      </div>
+                    </NavLink>
+                  </div>
+                  <div className="col-lg-6">
+                    <NavLink to="/" target="_blank">
+                      <div className="letter-div mb-5">
+                        <h5 className="section-subtitle">January 2025</h5>
+                        <h3>
+                          Piper Serica Leader Portfolio Strategy January 2025
+                        </h3>
+                        {/* <div className="letter-options py-3 pt-5">
+                    
+                      <i class="fa-solid fa-eye"></i>
+                   
+                    <a href={letter.filepath} download>
+                      <i className="fa-solid fa-cloud-arrow-down"></i>
+                    </a>
+                  </div> */}
+                      </div>
+                    </NavLink>
+                  </div>
                 </div>
               </div>
             </div>

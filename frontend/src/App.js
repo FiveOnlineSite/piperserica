@@ -13,6 +13,7 @@ import NewsArticle from "./pages/NewsArticle";
 import Contact from "./pages/Contact";
 import BlogDetails from "./pages/BlogDetails";
 import Disclaimer from "./pages/Disclaimer";
+import PrivateMarket from "./pages/PrivateMarket";
 
 function App() {
   return (
@@ -28,7 +29,8 @@ function App() {
         />
 
         <Route path="/public-market" element={<MarketFunds />}></Route>
-        <Route path="/private-market" element={<MarketFunds />}></Route>
+        <Route path="/private-market" element={<PrivateMarket />}></Route>
+        {/* <Route path="/private-market" element={<MarketFunds />}></Route> */}
         <Route path="/funds" element={<Funds />}></Route>
         <Route path="/investor-letters" element={<InvestorLetter />}></Route>
         <Route path="/our-impact" element={<OurImpact />}></Route>

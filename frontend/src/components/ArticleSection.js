@@ -2,8 +2,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import NewsSlider from "./NewsSlider";
 
-const NewsSection = () => {
-  const newsSettings = {
+const ArticleSection = () => {
+  const articleSettings = {
     centerMode: false, // Enable center mode
     slidesToShow: 2, // Number of slides to show
     autoplay: false, // Enable autoplay
@@ -21,7 +21,7 @@ const NewsSection = () => {
     ],
   };
 
-  const newsItems = [
+  const articleItems = [
     {
       news_img: "/images/banners/news1.png",
       news_type: "Venture Debt",
@@ -65,25 +65,25 @@ const NewsSection = () => {
   ];
 
   return (
-    <section className="news-insights-section pb-5">
+    <section className="news-insights-section">
       <div className="container">
         <div className="row align-items-center">
-          <h5 className="section-subtitle">News & Insights</h5>
-          <div className="row align-items-center mb-5">
+          <h5 className="section-subtitle">News & Articles</h5>
+          <div className="row align-items-center">
             <div className="col-lg-6">
               <h2 className="banner-title offerings-title mt-3">
                 Get all the latest updates
               </h2>
             </div>
             <div className="col-lg-6">
-              <NavLink to="/insights" className="banner-btn blue-btn mt-0">
+              <NavLink to="/news-article" className="banner-btn blue-btn mt-0">
                 View all
               </NavLink>
             </div>
           </div>
 
           <div className="row mt-5">
-            <NewsSlider settings={newsSettings} item={newsItems} />
+            <NewsSlider settings={articleSettings} item={articleItems} />
           </div>
         </div>
       </div>
@@ -91,4 +91,4 @@ const NewsSection = () => {
   );
 };
 
-export default NewsSection;
+export default ArticleSection;

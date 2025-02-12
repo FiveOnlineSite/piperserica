@@ -60,7 +60,7 @@ body {
 }
 
 .offcanvas-body .navbar-nav .nav-item {
-  padding: 20px;
+  padding: 10px;
 }
 
 .navbar-nav .nav-item .nav-link,
@@ -663,6 +663,11 @@ body {
   line-height: 26px;
 }
 
+.medium-para {
+  font-size: 18px;
+  line-height: 28px;
+}
+
 .blue-btn {
   border-color: var(--blue-font);
   width: auto;
@@ -1186,7 +1191,8 @@ body {
 .single-fund span,
 .single-history span,
 .year-tab-links a span,
-.blog-para-div span {
+.blog-para-div span,
+.single-disclaimer-para span {
   background-color: var(--blue-font, blue);
   height: 10px;
   width: 10px;
@@ -1212,9 +1218,13 @@ body {
   font-family: "Frank Ruhl Libre", serif;
 }
 
-.factsheet-content-div h2 {
-  font-size: 30px;
-  line-height: 40px;
+.factsheet-content-div h4 {
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.disclosure-letter-div {
+  background-color: var(--lighter-gray-bg);
 }
 
 /* ABOUT */
@@ -1382,8 +1392,6 @@ body {
 
 .team-div img {
   position: relative;
-  filter: grayscale(1);
-  transition: filter 0.6s ease;
 }
 
 .team-title-div {
@@ -1413,10 +1421,6 @@ body {
 
 .small-team-content {
   width: 80%;
-}
-
-.team-div:hover img {
-  filter: grayscale(0);
 }
 
 .philosophy-section img {
@@ -1633,6 +1637,14 @@ form .form-label span {
 .subscribe-blog-btn {
   float: left;
 }
+
+/* DISCLAIMER */
+
+.single-disclaimer-para {
+  display: flex;
+  align-items: baseline;
+}
+
 /* FOOTER */
 
 .footer {
@@ -1948,6 +1960,11 @@ form .form-label span {
     max-width: 75%;
   }
 
+  .section-title {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
   .home-banner-content {
     margin: 0 auto;
     padding-right: 20px;
@@ -1983,8 +2000,52 @@ form .form-label span {
     right: 65% !important;
   }
 
-  .banner-content-div {
+  .what-we-do-section,
+  .facts-section,
+  .our-offerings-section,
+  .news-insights-section,
+  .newsletter-section,
+  .about-fund-section,
+  .industries-portfolio-section,
+  .industries-portfolio-section,
+  .founders-note-section,
+  .teams-bg-section,
+  .teams-section,
+  .philosophy-section,
+  .our-commitment-section,
+  .empowering-growth-section,
+  .insights-section,
+  .investor-letter-section,
+  .investment-philosophy-section,
+  .factsheet-section,
+  .investor-thesis-section,
+  .investor-banner-section,
+  .investment-journey-section,
+  .why-us-section,
+  .blog-detail-para,
+  .history-section {
+    padding: 30px 15px;
+  }
+
+  .investment-solution-content {
     padding: 0 10px;
+  }
+
+  .contact-form-section,
+  .location-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .tabs-content-div {
+    padding: 0 20px;
+  }
+  /* .investment-solution-section {
+    padding: 0 20px;
+  } */
+
+  .banner-content-div {
+    padding: 0 20px;
   }
 
   .journey-text,
@@ -2008,6 +2069,11 @@ form .form-label span {
   .our-offerings-section .slick-initialized .slick-slide,
   .news-insights-section .slick-initialized .slick-slide {
     padding-right: 0;
+  }
+
+  .factsheet-content-div h4 {
+    font-size: 18px;
+    line-height: 28px;
   }
 }
 
@@ -2033,8 +2099,6 @@ form .form-label span {
 
 @media screen and (max-width: 380px) {
   .home-banner-content .section-title {
-    font-size: 35px;
-    line-height: 35px;
     margin-bottom: 10%;
   }
 
