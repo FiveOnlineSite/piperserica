@@ -16,6 +16,7 @@ import Disclaimer from "./pages/Disclaimer";
 import PrivateMarket from "./pages/PrivateMarket";
 import Disclosure from "./pages/Disclosure";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Career from "./pages/Career";
 
 function App() {
   return (
@@ -29,7 +30,7 @@ function App() {
           path="/startup-founder-entrepreneur"
           element={<Investor type="startup" />}
         />
-
+        <Route path="/careers" element={<Career />}></Route>
         <Route path="/public-market" element={<MarketFunds />}></Route>
         <Route path="/private-market" element={<PrivateMarket />}></Route>
         {/* <Route path="/private-market" element={<MarketFunds />}></Route> */}

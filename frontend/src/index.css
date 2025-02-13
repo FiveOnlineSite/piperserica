@@ -452,7 +452,9 @@ body {
 .investor-thesis-section,
 .blog-detail-para,
 .disclaimer-para-div,
-.privacy-policy-section {
+.privacy-policy-section,
+.testimonial-section,
+.openings-section {
   padding: 50px 0;
   background-color: var(--white-bg);
 }
@@ -1402,12 +1404,13 @@ body {
 }
 
 .team-title-div i {
-  color: var(--black-font);
+  color: var(--blue-font);
   transition: all 0.6s ease;
+  font-size: 25px;
 }
 
 .team-title-div i:hover {
-  color: var(--blue-font);
+  color: var(--black-font);
 }
 
 .team-content {
@@ -1650,6 +1653,179 @@ form .form-label span {
   align-items: baseline;
 }
 
+/* CAREER */
+
+.life-section .col-lg-5 {
+  position: relative;
+}
+
+.top-bottom-shadow {
+  position: absolute;
+  z-index: 5;
+  background-image: linear-gradient(#fff0 70%, #fff),
+    linear-gradient(#fff, #fff0 30%);
+  inset: 0%;
+}
+
+.verticle-slider {
+  position: absolute;
+}
+
+.employee-speak-section {
+  mix-blend-mode: multiply;
+  background-image: linear-gradient(#00000059, #00000059),
+    url("../public/images/banners/621d7caf5e74f101837f2a9a_Employees\ Speak\ 2.webp");
+  background-position: 0 0, 0 0;
+  background-size: auto, cover;
+  background-attachment: scroll, scroll;
+  position: relative;
+  padding: 50px 0;
+  margin-bottom: 50px;
+  height: 90vh;
+}
+
+.employee-speak-section .container {
+  position: absolute;
+  display: block;
+  left: 90%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+}
+
+.employee-speak-div {
+  border: 1px solid var(--white-bg);
+  width: 50%;
+  display: inline-block;
+  padding: 40px 20px;
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+
+.employee-speak-div .banner-title {
+  width: 100%;
+}
+
+.employee-speak-div .banner-para {
+  font-size: 16px;
+  width: 100%;
+  font-weight: 400;
+}
+
+.life-section .slick-slide {
+  padding-right: 20px;
+}
+
+.testimonial-div {
+  background-color: var(--lighter-gray-bg);
+}
+
+.testimonial-img-div {
+  display: flex;
+  padding: 20px;
+  align-items: center;
+}
+
+.testimonial-img-div img {
+  height: 150px;
+  width: 180px;
+  object-fit: cover;
+}
+
+.testimonial-data {
+  padding: 20px;
+}
+
+.testimonial-data .section-title {
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.testimonial-section .slick-slide {
+  padding-right: 30px;
+  padding-bottom: 100px;
+}
+
+.testimonial-content-div {
+  height: 280px;
+  overflow: auto;
+  mask-image: linear-gradient(black 80%, transparent 100%);
+  -webkit-mask-image: linear-gradient(black 80%, transparent 100%);
+}
+
+.testimonial-content-div::-webkit-scrollbar {
+  width: 2px; /* Adjust width */
+}
+
+.testimonial-content-div::-webkit-scrollbar-thumb {
+  background: var(--light-gray-font); /* Scrollbar color */
+  border-radius: 10px; /* Rounded edges */
+}
+
+.testimonial-content-div::-webkit-scrollbar-thumb:hover {
+  background: var(--gray-font); /* Darker on hover */
+}
+
+.culture-values-section {
+  background-color: var(--light-gray-font);
+  padding: 50px 0;
+  margin: 50px 0;
+}
+
+.values-para {
+  color: var(--black-font);
+}
+
+.values-row img {
+  width: 60px;
+}
+
+.values-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.values-div h6 {
+  font-size: 18px;
+  color: var(--black-font);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 20px 0;
+}
+
+.values-div span {
+  width: 15px;
+  background-color: var(--black-font);
+  height: 1px;
+}
+
+.send-cv-div .cv-title {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.cv-contact-btn {
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Public Sans", serif;
+  text-decoration: none;
+  color: var(--gray-font);
+  padding-bottom: 10%;
+  border-bottom: 1px solid var(--black-font);
+  display: block;
+  transition: all 0.6s ease;
+}
+
+.cv-contact-btn:hover {
+  color: var(--blue-font);
+  border-bottom: 1px solid var(--blue-font);
+}
 /* FOOTER */
 
 .footer {
@@ -1863,6 +2039,24 @@ form .form-label span {
     margin-top: 0;
     margin-bottom: 30px;
   }
+
+  .life-section {
+    margin-bottom: 50px;
+  }
+
+  .employee-speak-section {
+    height: 50vh;
+  }
+  .employee-speak-section .container {
+    left: 50%;
+  }
+  .employee-speak-div {
+    width: 100%;
+  }
+
+  .values-div {
+    margin: 20px 0;
+  }
 }
 
 @media screen and (max-width: 776px) {
@@ -1925,11 +2119,17 @@ form .form-label span {
   .banner-section,
   .investment-journey-section,
   .why-us-section,
-  .blog-detail-para {
+  .blog-detail-para,
+  .employee-speak-section,
+  .life-section,
+  .testimonial-section,
+  .culture-values-section,
+  .openings-section {
     padding: 30px 0;
   }
 
-  .why-us-section {
+  .why-us-section,
+  .culture-values-section {
     margin: 30px 0;
   }
 
@@ -2029,7 +2229,11 @@ form .form-label span {
   .why-us-section,
   .blog-detail-para,
   .history-section,
-  .investor-letters-section {
+  .investor-letters-section,
+  .life-section,
+  .testimonial-section,
+  .culture-values-section,
+  .openings-section {
     padding: 30px 15px;
   }
 
@@ -2039,7 +2243,8 @@ form .form-label span {
 
   .contact-form-section,
   .location-section,
-  .sticky-contact-section {
+  .sticky-contact-section,
+  .openings-section {
     padding-left: 15px;
     padding-right: 15px;
   }
@@ -2074,13 +2279,28 @@ form .form-label span {
   }
 
   .our-offerings-section .slick-initialized .slick-slide,
-  .news-insights-section .slick-initialized .slick-slide {
+  .news-insights-section .slick-initialized .slick-slide,
+  .testimonial-section .slick-slide {
     padding-right: 0;
   }
 
   .factsheet-content-div h4 {
     font-size: 18px;
     line-height: 28px;
+  }
+
+  .testimonial-img-div {
+    display: block;
+    padding: 20px 0 0 0;
+  }
+
+  .testimonial-data {
+    padding: 5px 10px;
+  }
+
+  .testimonial-img-div img {
+    width: 100%;
+    height: 100%;
   }
 }
 

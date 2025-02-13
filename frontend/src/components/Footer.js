@@ -28,34 +28,33 @@ const Footer = () => {
             <div className="footer-links">
               <ul className="d-lg-flex d-md-flex d-block ps-0">
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/">
+                  <NavLink className="nav-link" to="/about">
                     About
                   </NavLink>
                 </li>
                 <li className="nav-item mt-lg-0 mt-md-0 mt-3">
-                  {" "}
-                  <NavLink className="nav-link" to="/">
+                  <NavLink className="nav-link" to="/public-market">
                     Our Services
                   </NavLink>
                 </li>
                 <li className="nav-item mt-lg-0 mt-md-0 mt-3">
-                  <NavLink className="nav-link" to="/">
+                  <NavLink className="nav-link" to="/our-impact">
                     Our Impact
                   </NavLink>
                 </li>
                 <li className="nav-item mt-lg-0 mt-md-0 mt-3">
-                  <NavLink className="nav-link" to="/">
+                  <NavLink className="nav-link" to="/insights">
                     Insights
                   </NavLink>
                 </li>
                 <li className="nav-item mt-lg-0 mt-md-0 mt-3">
-                  <NavLink className="nav-link" to="/">
+                  <NavLink className="nav-link" to="/careers">
                     Careers
                   </NavLink>
                 </li>
 
                 <li className="nav-item mt-lg-0 mt-md-0 mt-3">
-                  <NavLink className="nav-link" to="/">
+                  <NavLink className="nav-link" to="/contact">
                     Contact
                   </NavLink>
                 </li>
@@ -76,6 +75,11 @@ const Footer = () => {
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/disclaimer">
                     Disclaimer
+                  </NavLink>
+                </li>
+                <li className="nav-item">
+                  <NavLink className="nav-link" to="/disclosure">
+                    Disclosure
                   </NavLink>
                 </li>
               </ul>
