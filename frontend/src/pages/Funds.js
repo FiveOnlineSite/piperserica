@@ -19,7 +19,7 @@ const Funds = () => {
             <div className="banner-content-div">
               <div className="container">
                 <h6 className="banner-subtitle">Private market funds</h6>
-                <h1 className="banner-title">LC Venture Debt Fund</h1>
+                <h1 className="banner-title"> Piper Serica Angel Fund</h1>
                 <p className="banner-para">Capital to scale</p>
               </div>
             </div>
@@ -32,7 +32,7 @@ const Funds = () => {
           <div className="row align-items-center">
             <div className="about-fund-div">
               <h6 className="section-subtitle mb-4">
-                about lc venture debt fund
+                about Piper Serica Angel Fund
               </h6>
               <p className="para">
                 The Fund seeks to empower early and growth stage companies in

@@ -940,7 +940,7 @@ const About = () => {
                   <div className="team-title-div">
                     <h3 className="section-title team-name">Abhay Agarwal</h3>
                     <NavLink to="/">
-                      <i class="fa-brands fa-linkedin-in"></i>
+                      <i class="fa-brands fa-linkedin"></i>
                     </NavLink>
                   </div>
 
@@ -960,7 +960,7 @@ const About = () => {
                   <div className="team-title-div">
                     <h3 className="section-title team-name">Rajni Agarwal</h3>
                     <NavLink to="/">
-                      <i class="fa-brands fa-linkedin-in"></i>
+                      <i class="fa-brands fa-linkedin"></i>
                     </NavLink>
                   </div>
                   <h5 className="section-subtitle">Director, Research</h5>
@@ -979,7 +979,7 @@ const About = () => {
                   <div className="team-title-div">
                     <h3 className="section-title team-name">Ajay Modi</h3>
                     <NavLink to="/">
-                      <i class="fa-brands fa-linkedin-in"></i>
+                      <i class="fa-brands fa-linkedin"></i>
                     </NavLink>
                   </div>
                   <h5 className="section-subtitle">Director, Investments</h5>
@@ -997,7 +997,7 @@ const About = () => {
                     <div className="team-title-div">
                       <h3 className="section-title team-name">{team.name}</h3>
                       <NavLink to={team.linkedin_url}>
-                        <i class="fa-brands fa-linkedin-in"></i>
+                        <i class="fa-brands fa-linkedin"></i>
                       </NavLink>
                     </div>
 

@@ -7,30 +7,29 @@ const TopBar = () => {
 
   const [selectedInvestor, setSelectedInvestor] = useState("");
 
-  // This function updates the state and localStorage whenever the path changes
-  const updateSelectedInvestor = (currentPath) => {
-    const pathToInvestorMap = {
-      "/foreign-investor": "foreign",
-      "/nri-investor": "nri",
-      "/startup-founder-entrepreneur": "startup",
-    };
+  const pathToInvestorMap = {
+    "/foreign-investor": "foreign",
+    "/nri-investor": "nri",
+    "/startup-founder-entrepreneur": "startup",
+  };
 
-    const currentInvestor = pathToInvestorMap[currentPath];
+  // This function sets selectedInvestor based on the current pathname
+  const updateSelectedInvestor = (currentPath) => {
+    const currentInvestor = Object.keys(pathToInvestorMap).find(
+      (path) => path === currentPath
+    );
     if (currentInvestor) {
-      localStorage.setItem("selectedInvestor", currentInvestor); // Update localStorage
-      setSelectedInvestor(currentInvestor); // Update local state
+      setSelectedInvestor(pathToInvestorMap[currentInvestor]);
     }
   };
 
   // Handle initial state when the component is mounted or path changes
   useEffect(() => {
-    // Check if there's already a value in localStorage
     const storedInvestor = localStorage.getItem("selectedInvestor");
-
     if (storedInvestor) {
       setSelectedInvestor(storedInvestor);
     } else {
-      updateSelectedInvestor(location.pathname); // Set based on current pathname
+      updateSelectedInvestor(location.pathname);
     }
   }, []); // This ensures this runs only once on mount
 
@@ -38,19 +37,6 @@ const TopBar = () => {
   useEffect(() => {
     updateSelectedInvestor(location.pathname);
   }, [location.pathname]);
-
-  // const handleInvestorChange = (e) => {
-  //   const value = e.target.value;
-  //   const investorToPathMap = {
-  //     foreign: "/foreign-investor",
-  //     nri: "/nri-investor",
-  //     startup: "/startup-founder-entrepreneur",
-  //   };
-
-  //   setSelectedInvestor(value); // Update state
-  //   localStorage.setItem("selectedInvestor", value); // Update localStorage
-  //   navigate(investorToPathMap[value]); // Navigate to the appropriate path
-  // };
 
   const handleInvestorChange = (e) => {
     const value = e.target.value;
@@ -62,15 +48,19 @@ const TopBar = () => {
 
     const targetPath = investorToPathMap[value];
 
+    // Log current and target paths
+    console.log("Current URL:", location.pathname);
+    console.log("Target URL:", targetPath);
+
+    // Check if the selected value corresponds to a path different from the current one, even if the option is already selected
     if (location.pathname !== targetPath) {
-      setSelectedInvestor(value);
-      localStorage.setItem("selectedInvestor", value);
+      // If the URL is not the same as the selected path, navigate to the target path
       navigate(targetPath);
-    } else {
-      // Force re-navigation even if already on the same page
-      navigate("/dummy-route"); // Navigate to a temporary route
-      setTimeout(() => navigate(targetPath), 10); // Navigate back immediately
     }
+
+    // Update the selected investor state and store the selection in localStorage
+    setSelectedInvestor(value);
+    localStorage.setItem("selectedInvestor", value);
   };
 
   return (
