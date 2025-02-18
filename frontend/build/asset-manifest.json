@@ -1,0 +1,29 @@
+{
+  "files": {
+    "main.css": "/static/css/main.ffaf34ca.css",
+    "main.js": "/static/js/main.f61a2fde.js",
+    "static/media/fa-solid-900.ttf": "/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
+    "static/media/why-us-banner.jpg": "/static/media/why-us-banner.8653169ae0258ce85cf0.jpg",
+    "static/media/why-us-banner1.webp": "/static/media/why-us-banner1.86a5770aeb7c2be29fba.webp",
+    "static/media/fa-brands-400.ttf": "/static/media/fa-brands-400.1815e00441357e01619e.ttf",
+    "static/media/fa-solid-900.woff2": "/static/media/fa-solid-900.2463b90d9a316e4e5294.woff2",
+    "static/media/contact-us-banner.webp": "/static/media/contact-us-banner.d9cbd10a32126c730c87.webp",
+    "static/media/fa-brands-400.woff2": "/static/media/fa-brands-400.c210719e60948b211a12.woff2",
+    "static/media/fa-regular-400.ttf": "/static/media/fa-regular-400.914997e1bdfc990d0897.ttf",
+    "static/media/_Employees Speak 2.webp": "/static/media/621d7caf5e74f101837f2a9a_Employees Speak 2.ad3cfbc5fbd11fe9bdf7.webp",
+    "static/media/fa-regular-400.woff2": "/static/media/fa-regular-400.89999bdf5d835c012025.woff2",
+    "static/media/fa-v4compatibility.ttf": "/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
+    "static/media/fa-v4compatibility.woff2": "/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
+    "static/media/slick.svg": "/static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "index.html": "/index.html",
+    "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
+    "main.ffaf34ca.css.map": "/static/css/main.ffaf34ca.css.map",
+    "main.f61a2fde.js.map": "/static/js/main.f61a2fde.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ffaf34ca.css",
+    "static/js/main.f61a2fde.js"
+  ]
+}
