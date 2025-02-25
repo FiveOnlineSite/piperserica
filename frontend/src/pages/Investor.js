@@ -61,12 +61,14 @@ const Investor = () => {
 
   const offeringsItems = [
     {
-      strategy_title: "Private Market Funds",
-      funds: "Piper Serica Numera Uno India Fund",
+      strategy_title: "Public Market",
+      funds: "Piper Serica Numero Uno Fund",
+      fund_type: "Foreign Investor",
     },
     {
-      strategy_title: "Private Market Funds",
-      funds: "Piper Serica Leader Portfolio",
+      strategy_title: "Public Market",
+      funds: "Piper Serica Numero Uno Fund",
+      fund_type: "NRI Investor",
     },
     // {
     //   strategy_title: "Private Credit",
@@ -85,7 +87,10 @@ const Investor = () => {
           <Slider {...investorSettings}>
             {investorItem.map((item, index) => (
               <div key={index} className="investor-banner-img">
-                <img src={item.image} alt={`banner-img-${index}`} />
+                <img
+                  src={`${process.env.PUBLIC_URL}${item.image}`}
+                  alt={`banner-img-${index}`}
+                />
 
                 <div className="investor-banner-content">
                   <div className="container">
@@ -467,7 +472,7 @@ const Investor = () => {
               {offeringsItems.map((item, index) => (
                 <div className="col-lg-6">
                   <div key={index} className="offerings-div">
-                    <h6 className="section-subtitle">Investment Strategy</h6>
+                    {/* <h6 className="section-subtitle">Investment Strategy</h6> */}
                     <div className="strategy-title-div">
                       <h5>{item.strategy_title}</h5>{" "}
                       {/* <i className="fa-solid fa-arrow-right"></i> */}
@@ -487,7 +492,7 @@ const Investor = () => {
         </div>
       </section>
 
-      <section className="investor-letter-section">
+      <section className="investor-letters-section">
         <div className="container">
           <div className="row align-items-center">
             <h5 className="section-subtitle">Outlook</h5>
@@ -512,7 +517,9 @@ const Investor = () => {
         </div>
       </section>
 
-      <NewsSection />
+      <section className="investor-news-section">
+        <NewsSection />
+      </section>
 
       <section className="newsletter-section">
         <div className="container">
@@ -538,7 +545,7 @@ const Investor = () => {
                           type="text"
                           className="form-control"
                           id="first-name"
-                          placeholder="first name"
+                          // placeholder="first name"
                         />
                       </div>
                     </div>
@@ -555,7 +562,7 @@ const Investor = () => {
                           type="text"
                           className="form-control"
                           id="last-name"
-                          placeholder="last name"
+                          // placeholder="last name"
                         />
                       </div>
                     </div>
@@ -572,7 +579,7 @@ const Investor = () => {
                           type="email"
                           className="form-control"
                           id="email"
-                          placeholder="email"
+                          // placeholder="email"
                         />
                       </div>
                     </div>

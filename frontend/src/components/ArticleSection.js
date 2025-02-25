@@ -65,7 +65,7 @@ const ArticleSection = () => {
   ];
 
   return (
-    <section className="news-insights-section">
+    <div className="news-insights-section">
       <div className="container">
         <div className="row align-items-center">
           <h5 className="section-subtitle">News & Articles</h5>
@@ -87,7 +87,7 @@ const ArticleSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

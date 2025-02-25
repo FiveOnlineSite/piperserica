@@ -27,6 +27,24 @@ body {
   display: block !important;
 }
 
+.absolute-navbar {
+  position: absolute !important;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: transparent; /* Optional: Make it transparent on home page */
+}
+
+.fixed-navbar {
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
 .mobile-navbar {
   display: none !important;
   background-color: var(--white-bg);
@@ -34,9 +52,13 @@ body {
 
 .navbar-expand-lg {
   z-index: 11;
-  position: absolute !important;
+  position: absolute;
   width: 100%;
   background-color: var(--white-bg);
+}
+
+.navbar-collapse {
+  justify-content: end;
 }
 
 .navbar-toggler {
@@ -92,12 +114,16 @@ body {
   /* display: none; */
 }
 
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+  padding: 5px 10px;
+}
+
 .navbar-nav .nav-link.dropdown-toggle::after {
   transition: transform 0.3s ease;
 }
 
-.navbar-nav .nav-link.dropdown-toggle[aria-expanded="true"]::after,
-.nav-item.dropdown:hover > .nav-link.dropdown-toggle::after {
+.navbar-nav .nav-link.dropdown-toggle[aria-expanded="true"]::after
+/* .nav-item.dropdown:hover > .nav-link.dropdown-toggle::after  */ {
   transform: rotate(180deg);
 }
 
@@ -111,8 +137,19 @@ body {
   letter-spacing: 2px;
   padding: 10px 20px;
   border-bottom: 0.5px solid var(--light-gray-font);
+  transition: all 0.6s ease;
 }
 
+.dropdown-menu .dropdown-item:hover,
+.select-div .form-select option:hover {
+  color: var(--blue-font);
+  border-bottom: 0.5px solid var(--blue-font);
+}
+
+.dropdown-item.active,
+.dropdown-item:active {
+  color: var(--black-font) !important;
+}
 .offcanvas-body .nav-item .nav-link {
   color: var(--black-font);
   transition: color 0.6s ease;
@@ -132,13 +169,8 @@ body {
   background-color: transparent !important;
 }
 
-.dropdown-item.active,
-.dropdown-item:active {
-  color: var(--blue-font) !important;
-}
-
 .dropdown .desktop-dropdown-menu {
-  display: none;
+  /* display: block; */
   box-shadow: inset 0 1px 4px #0000000f;
   padding-bottom: 0;
 }
@@ -147,9 +179,9 @@ body {
   display: block;
 }
 
-.dropdown:hover .desktop-dropdown-menu {
+/* .dropdown:hover .desktop-dropdown-menu {
   display: block;
-}
+} */
 
 .login-btn {
   width: auto;
@@ -360,7 +392,7 @@ body {
 
 .investor-banner-content {
   position: absolute;
-  top: 80%;
+  top: 50%;
   left: 0%;
   display: inline;
   height: 70vh;
@@ -368,6 +400,13 @@ body {
   transform: translate(0, -50%);
 }
 
+.investor-banner-content .container {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  width: 100%;
+  transform: translate(0, -50%);
+}
 .banner-subtitle {
   color: var(--white-bg);
   letter-spacing: 2px;
@@ -434,7 +473,6 @@ body {
 .what-we-do-section,
 .facts-section,
 .our-offerings-section,
-.news-insights-section,
 .newsletter-section,
 .about-fund-section,
 .industries-portfolio-section,
@@ -446,17 +484,22 @@ body {
 .our-commitment-section,
 .empowering-growth-section,
 .insights-section,
-.investor-letter-section,
-.investment-philosophy-section,
-.factsheet-section,
 .investor-thesis-section,
 .blog-detail-para,
 .disclaimer-para-div,
 .privacy-policy-section,
 .testimonial-section,
-.openings-section {
+.openings-section,
+.resume-form-section,
+.investor-news-section,
+.features-section,
+.investor-letter-section {
   padding: 50px 0;
   background-color: var(--white-bg);
+}
+
+.investor-news-section {
+  padding-bottom: 100px;
 }
 
 .para {
@@ -602,10 +645,22 @@ body {
   --bs-accordion-bg: transparent !important;
 }
 
-/* .accordion-body {
+/* .accordion-body,
+.accordion-button:not(.collapsed) {
   -webkit-backdrop-filter: blur(20px) !important;
   backdrop-filter: blur(20px) !important;
 } */
+
+/* .accordion-item {
+  -webkit-backdrop-filter: blur(20px) !important;
+  backdrop-filter: blur(20px) !important;
+} */
+
+.accordion-item:has(.accordion-collapse.show) {
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  transition: all 0.3s ease-in-out;
+}
 
 .accordion-button {
   color: var(--light-gray-font) !important;
@@ -697,8 +752,6 @@ body {
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--black-font);
-  margin-top: 30px;
-  padding: 20px 0 10px 0;
 }
 
 .strategy-title-div h5 {
@@ -754,7 +807,7 @@ body {
 }
 
 .slick-next {
-  right: 80% !important;
+  right: 82% !important;
 }
 
 .slick-prev:before {
@@ -774,18 +827,40 @@ body {
 
 /* INVESTOR LETTER */
 
-.investor-letters-section,
 .history-section,
 .contact-form-section,
-.blog-detail-section {
+.blog-detail-section,
+/* .investor-letter-section, */
+.startup-news-section,
+.funds-article-section,
+.investment-philosophy-section,
+.factsheet-section {
   padding: 50px 0;
   background-color: var(--lighter-gray-bg);
 }
 
+.funds-features-section {
+  background-color: var(--lighter-gray-bg);
+}
+
+.funds-article-section {
+  padding-bottom: 100px;
+}
+
+.startup-news-section,
+.funds-article-section,
+.investment-philosophy-section,
+.factsheet-section,
+.investor-letters-section {
+  margin: 50px 0;
+}
+
+.investor-letter-section a,
 .investor-letters-section a {
   text-decoration: none;
 }
 
+.investor-letter-section a h3,
 .investor-letters-section a h3 {
   color: var(--black-font);
 }
@@ -794,6 +869,9 @@ body {
   background-color: var(--white-bg);
   padding: 20px;
   border-left: 2px solid var(--blue-font);
+  border-top: 1px solid var(--lighter-gray-bg);
+  border-right: 1px solid var(--lighter-gray-bg);
+  border-bottom: 1px solid var(--lighter-gray-bg);
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
 }
 
@@ -810,8 +888,6 @@ body {
 
 /* NEWS & INSIGHTS */
 
-.news-insights-section,
-.features-section,
 .fund-info-section {
   background-color: var(--lighter-gray-bg);
   margin-top: 50px;
@@ -844,6 +920,8 @@ body {
 .news-content-div {
   background-color: var(--white-bg);
   padding: 30px;
+  border: 1px solid var(--light-gray-font);
+  transition: all 0.6s ease;
 }
 
 .news-content-div h5 {
@@ -862,6 +940,17 @@ body {
 .team-content .team-name {
   font-size: 26px;
   line-height: 36px;
+  color: var(--black-font);
+  transition: all 0.6s ease;
+}
+
+.team-content .team-name {
+  font-size: 22px;
+  line-height: 32px;
+}
+
+.news-content-div h3 {
+  min-height: 180px;
 }
 
 .news-content-div h6 {
@@ -870,6 +959,17 @@ body {
   font-size: 12px;
   font-family: "Public Sans", serif;
   line-height: 22px;
+  color: var(--black-font);
+  transition: all 0.6s ease;
+}
+
+.news-div:hover .news-content-div {
+  border: 1px solid var(--blue-font);
+}
+
+.news-div:hover .news-content-div h3,
+.news-div:hover .news-content-div h6 {
+  color: var(--blue-font);
 }
 
 /* NEWSLETTER */
@@ -961,7 +1061,7 @@ body {
 
 .banner-content-div {
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 0%;
   width: 100%;
   transform: translate(0, -50%);
@@ -1087,6 +1187,14 @@ body {
   color: var(--blue-font);
 }
 
+.industries-filter-div .search-div .form-control {
+  border: none;
+  background-color: transparent;
+}
+
+.industries-filter-div .search-div .form-control:focus {
+  background-color: transparent !important;
+}
 .industries-filter-div .form-control::placeholder {
   color: var(--gray-font);
 }
@@ -1149,7 +1257,8 @@ body {
 .fund-info-section .row,
 .our-commitment-section .row,
 .empowering-growth-section .row,
-.investment-philosophy-section .row {
+.investment-philosophy-section .row,
+.funds-features-section .row {
   position: relative;
 }
 
@@ -1157,9 +1266,10 @@ body {
 .fund-title-div,
 .commitment-title-div,
 .empowering-title-div,
-.investment-philosophy-title-div {
+.investment-philosophy-title-div,
+.investor-thesis-section .feature-title-div {
   position: sticky;
-  top: 0;
+  top: 20%;
   padding: 10px;
 }
 
@@ -1167,7 +1277,9 @@ body {
 .fund-info-section .row .col-lg-5,
 .our-commitment-section .row .col-lg-4,
 .empowering-growth-section .row .col-lg-4,
-.investment-philosophy-section .row .col-lg-5 {
+.investment-philosophy-section .row .col-lg-5,
+.funds-features-section .row .col-lg-4,
+.investor-thesis-section .row .col-lg-5 {
   position: sticky;
   top: 9%;
   background-color: var(--lighter-gray-bg);
@@ -1175,10 +1287,19 @@ body {
   z-index: 1;
 }
 
+.features-section .row .col-lg-5,
 .our-commitment-section .row .col-lg-4,
 .empowering-growth-section .row .col-lg-4,
-.investment-philosophy-section .row .col-lg-5 {
+.investor-thesis-section .row .col-lg-5 {
   background-color: var(--white-bg);
+}
+
+.funds-features-section .row .col-lg-5 {
+  background-color: var(--lighter-gray-bg);
+}
+
+.investment-philosophy-section .row .col-lg-5 {
+  background-color: var(--lighter-gray-bg);
 }
 
 .features-content-div .single-feature,
@@ -1380,9 +1501,9 @@ body {
 }
 
 .team-div {
-  padding: 20px;
+  /* padding: 20px; */
   position: relative;
-  height: 430px;
+  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1409,18 +1530,33 @@ body {
   font-size: 25px;
 }
 
+.company-link {
+  color: var(--blue-font);
+  text-decoration: none;
+  transition: all 0.6s ease;
+}
+
+.company-link:hover {
+  text-decoration: underline;
+}
+
 .team-title-div i:hover {
   color: var(--black-font);
 }
 
 .team-content {
   position: absolute;
-  bottom: 4%;
+  bottom: 0;
   padding: 10px 20px;
   width: 85%;
   background-color: var(--lighter-gray-bg);
   transition: all 0.6s ease;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  border: 0.5px solid var(--light-gray-font);
+}
+
+.team-content .section-subtitle {
+  font-size: 14px;
 }
 
 .small-team-content {
@@ -1608,10 +1744,10 @@ form .form-label span {
   font-size: 20px;
 }
 
-.news-content-div h6 {
+/* .news-content-div h6 {
   font-size: 20px;
   font-style: italic;
-}
+} */
 
 .blog-detail-title {
   font-size: 50px;
@@ -1953,6 +2089,10 @@ form .form-label span {
     padding: 10px;
   }
 
+  .why-para {
+    color: var(--white-bg);
+  }
+
   .desktop-row {
     display: none !important;
   }
@@ -2099,8 +2239,7 @@ form .form-label span {
   .what-we-do-section,
   .facts-section,
   .our-offerings-section,
-  .news-insights-section,
-  .newsletter-section,
+  .startup-news-section .newsletter-section,
   .about-fund-section,
   .industries-portfolio-section,
   .industries-portfolio-section,
@@ -2124,12 +2263,14 @@ form .form-label span {
   .life-section,
   .testimonial-section,
   .culture-values-section,
-  .openings-section {
+  .openings-section,
+  .resume-form-section {
     padding: 30px 0;
   }
 
   .why-us-section,
-  .culture-values-section {
+  .culture-values-section,
+  .startup-news-section {
     margin: 30px 0;
   }
 
@@ -2156,7 +2297,11 @@ form .form-label span {
 
   .investor-banner-content {
     height: 50vh;
-    top: 60%;
+    top: 50%;
+  }
+
+  .why-us-section {
+    margin-top: 0;
   }
 }
 
@@ -2208,13 +2353,12 @@ form .form-label span {
   .what-we-do-section,
   .facts-section,
   .our-offerings-section,
-  .news-insights-section,
+  .startup-news-section,
   .newsletter-section,
   .about-fund-section,
   .industries-portfolio-section,
   .industries-portfolio-section,
   .founders-note-section,
-  .teams-bg-section,
   .teams-section,
   .philosophy-section,
   .our-commitment-section,
@@ -2224,7 +2368,6 @@ form .form-label span {
   .investment-philosophy-section,
   .factsheet-section,
   .investor-thesis-section,
-  .investor-banner-section,
   .investment-journey-section,
   .why-us-section,
   .blog-detail-para,
@@ -2233,8 +2376,13 @@ form .form-label span {
   .life-section,
   .testimonial-section,
   .culture-values-section,
-  .openings-section {
+  .openings-section,
+  .resume-form-section {
     padding: 30px 15px;
+  }
+
+  .investor-banner-content {
+    padding: 0 15px;
   }
 
   .investment-solution-content {
@@ -2274,6 +2422,10 @@ form .form-label span {
     right: 0;
   }
 
+  .news-content-div h3 {
+    min-height: 0;
+  }
+
   .team-div {
     height: 450px;
   }
@@ -2310,7 +2462,7 @@ form .form-label span {
   }
 
   .slick-next {
-    right: 55% !important;
+    right: 50% !important;
   }
 
   .investment-tab-content {

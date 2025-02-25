@@ -123,7 +123,7 @@ const Career = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src="/images/banners/market-fund-banner.webp"
+              src={`${process.env.PUBLIC_URL}/images/banners/market-fund-banner.webp`}
               alt="banner-img"
             />
 
@@ -154,7 +154,11 @@ const Career = () => {
               <Slider {...settings} className="vertical-slider">
                 {careerSlide.map((slide, index) => (
                   <div key={index} className="career-slide-container">
-                    <img src={slide.image} alt={index} className="w-100" />
+                    <img
+                      src={`${process.env.PUBLIC_URL}${slide.image}`}
+                      alt={index}
+                      className="w-100"
+                    />
                   </div>
                 ))}
               </Slider>
@@ -188,7 +192,7 @@ const Career = () => {
         </div>
       </section>
 
-      <section className="employee-speak-section">
+      {/* <section className="employee-speak-section">
         <div className="container">
           <div className="employee-speak-div">
             <h3 className="banner-title">Employees speak</h3>
@@ -234,7 +238,7 @@ const Career = () => {
             <div className="col-lg col-md-4 col-12">
               <div className="values-div">
                 <img
-                  src="/images/values/621488deae0f89f7ef0f9d57_Excellence.png"
+                  src={`${process.env.PUBLIC_URL}/images/values/621488deae0f89f7ef0f9d57_Excellence.png`}
                   alt="values"
                 />
                 <h6>Excellence</h6>
@@ -247,7 +251,7 @@ const Career = () => {
             <div className="col-lg col-md-4 col-12">
               <div className="values-div">
                 <img
-                  src="/images/values/621488deae0f89f7ef0f9d57_Excellence.png"
+                  src={`${process.env.PUBLIC_URL}/images/values/621488deae0f89f7ef0f9d57_Excellence.png`}
                   alt="values"
                 />
                 <h6>Excellence</h6>
@@ -260,7 +264,7 @@ const Career = () => {
             <div className="col-lg col-md-4 col-12">
               <div className="values-div">
                 <img
-                  src="/images/values/621488deae0f89f7ef0f9d57_Excellence.png"
+                  src={`${process.env.PUBLIC_URL}/images/values/621488deae0f89f7ef0f9d57_Excellence.png`}
                   alt="values"
                 />
                 <h6>Excellence</h6>
@@ -273,7 +277,7 @@ const Career = () => {
             <div className="col-lg col-md-4 col-12">
               <div className="values-div">
                 <img
-                  src="/images/values/621488deae0f89f7ef0f9d57_Excellence.png"
+                  src={`${process.env.PUBLIC_URL}/images/values/621488deae0f89f7ef0f9d57_Excellence.png`}
                   alt="values"
                 />
                 <h6>Excellence</h6>
@@ -286,7 +290,7 @@ const Career = () => {
             <div className="col-lg col-md-4 col-12">
               <div className="values-div">
                 <img
-                  src="/images/values/621488deae0f89f7ef0f9d57_Excellence.png"
+                  src={`${process.env.PUBLIC_URL}/images/values/621488deae0f89f7ef0f9d57_Excellence.png`}
                   alt="values"
                 />
                 <h6>Excellence</h6>
@@ -322,6 +326,117 @@ const Career = () => {
                   Contact us <i className="fa-solid fa-arrow-right"></i>
                 </NavLink>
               </div>
+            </div>
+          </div>
+        </div>
+      </section> */}
+
+      <section className="resume-form-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-10">
+              <h6 className="section-subtitle">Get in touch</h6>
+              <h2 className="section-title mt-lg-3 mt-4">Let's Talk</h2>
+              <p className="para small-para">
+                Our global team of specialists is available to help with your
+                enquiry. Please provide us more details of what we can help with
+                and a member of the team will be in touch.
+              </p>
+              <form>
+                <div className="row mt-5">
+                  <div className="col-lg-6">
+                    <div class="mb-3">
+                      <label for="name" class="form-label">
+                        Name*
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        placeholder="eg: john"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div className="col-lg-6">
+                    <div class="mb-3">
+                      <label for="phone" class="form-label">
+                        Phone Number*
+                      </label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="phone"
+                        placeholder="0000000000"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div className="col-lg-6">
+                    <div class="mb-3">
+                      <label for="email" class="form-label">
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="email"
+                        placeholder="eg: johndoe@xyz.com"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-lg-6">
+                    <div class="mb-3">
+                      <label for="resume" class="form-label">
+                        Resume
+                      </label>
+                      <input
+                        type="file"
+                        sx
+                        class="form-control"
+                        id="resume"
+                        accept=".pdf, .docx"
+                      />
+                    </div>
+                  </div>
+                  <div className="col-lg-12">
+                    <div class="mb-3">
+                      <label for="message" class="form-label">
+                        Message <span>(optional)</span>
+                      </label>
+                      <textarea
+                        type="text"
+                        class="form-control"
+                        id="message"
+                        rows={"4"}
+                        placeholder="start typing....."
+                      ></textarea>
+                    </div>
+                  </div>
+
+                  <div className="col-lg-12">
+                    <div className="row">
+                      <div className="col-lg-3 d-flex justify-content-start">
+                        <NavLink
+                          to="/"
+                          className="banner-btn blue-btn mt-0 mb-3"
+                        >
+                          Send Enquiry
+                        </NavLink>
+                      </div>
+                      <div className="col-lg-9">
+                        <p className="para subscribe-para mb-0">
+                          <i>
+                            *By submitting the contact form, you consent to all
+                            data in the form being used in accordance with
+                            <a href="#"> Piper Serics's data privacy policy</a>
+                          </i>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>

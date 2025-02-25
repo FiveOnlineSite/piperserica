@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../components/Layout";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const About = () => {
   const [activeTab, setActiveTab] = useState("fourteen");
 
-  // Handle tab click
-  const handleTabClick = (tab) => {
+  const handleTabClick = (tab, event) => {
+    event.preventDefault(); // Prevent the default anchor link behavior
     setActiveTab(tab);
   };
 
@@ -109,13 +109,33 @@ const About = () => {
       designation: "Team member",
     },
   ];
+
+  const { hash, pathname } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      // Wait for the DOM to update before trying to scroll
+      setTimeout(() => {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100); // Small delay ensures the element is rendered
+    }
+  }, [hash, pathname]); // Re-run when pathname or hash changes
+
+  const handleNavClick = (event, targetHash) => {
+    if (hash === targetHash) {
+      event.preventDefault(); // Prevent scrolling when already at the target section
+    }
+  };
   return (
     <Layout>
       <section className="banner-section">
         <div className="row">
           <div className="banner-img-div">
             <img
-              src="/images/banners/market-fund-banner.webp"
+              src={`${process.env.PUBLIC_URL}/images/banners/market-fund-banner.webp`}
               alt="banner-img"
             />
 
@@ -137,7 +157,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
       <section className="investment-journey-section">
         <div className="container">
           <h6 className="section-subtitle">
@@ -168,7 +187,7 @@ const About = () => {
                 achieve sustainable goals.
               </p>
 
-              <NavLink
+              {/* <NavLink
                 to="#history-div"
                 className="banner-btn blue-btn tabs-btn mt-lg-3 mt-5"
                 onClick={(e) => {
@@ -181,13 +200,13 @@ const About = () => {
               >
                 our history
                 <i className="fa-solid fa-arrow-right"></i>
-              </NavLink>
+              </NavLink> */}
             </div>
           </div>
         </div>
       </section>
-
-      <section className="history-section" id="history-div">
+      <div id="history-section"></div>
+      <section className="history-section">
         <div className="container">
           <h6 className="section-subtitle">History</h6>
           <div className="row align-items-start">
@@ -211,8 +230,8 @@ const About = () => {
             <div className="col-lg-2">
               <div className="year-tab-links">
                 <a
-                  href="#fourteen"
-                  onClick={() => handleTabClick("fourteen")}
+                  href="#"
+                  onClick={(event) => handleTabClick("fourteen", event)}
                   className={activeTab === "fourteen" ? "active" : ""}
                 >
                   <div>
@@ -223,8 +242,8 @@ const About = () => {
                   </div>
                 </a>
                 <a
-                  href="#fifteen"
-                  onClick={() => handleTabClick("fifteen")}
+                  href="#"
+                  onClick={(event) => handleTabClick("fifteen", event)}
                   className={activeTab === "fifteen" ? "active" : ""}
                 >
                   <div>
@@ -235,8 +254,8 @@ const About = () => {
                   </div>
                 </a>
                 <a
-                  href="#sixteen"
-                  onClick={() => handleTabClick("sixteen")}
+                  href="#"
+                  onClick={(event) => handleTabClick("sixteen", event)}
                   className={activeTab === "sixteen" ? "active" : ""}
                 >
                   <div>
@@ -247,8 +266,8 @@ const About = () => {
                   </div>
                 </a>
                 <a
-                  href="#seventeen"
-                  onClick={() => handleTabClick("seventeen")}
+                  href="#"
+                  onClick={(event) => handleTabClick("seventeen", event)}
                   className={activeTab === "seventeen" ? "active" : ""}
                 >
                   <div>
@@ -259,8 +278,8 @@ const About = () => {
                   </div>
                 </a>
                 <a
-                  href="#eighteen"
-                  onClick={() => handleTabClick("eighteen")}
+                  href="#"
+                  onClick={(event) => handleTabClick("eighteen", event)}
                   className={activeTab === "eighteen" ? "active" : ""}
                 >
                   <div>
@@ -271,8 +290,8 @@ const About = () => {
                   </div>
                 </a>
                 <a
-                  href="#nineteen"
-                  onClick={() => handleTabClick("nineteen")}
+                  href="#"
+                  onClick={(event) => handleTabClick("nineteen", event)}
                   className={activeTab === "nineteen" ? "active" : ""}
                 >
                   <div>
@@ -617,7 +636,7 @@ const About = () => {
           </div>
         </div>
       </section>
-
+      <div id="purpose-section"></div>
       <section className="why-us-section vision-mission-section">
         <div className="container">
           <div className="desktop-row">
@@ -637,6 +656,9 @@ const About = () => {
                         </div>
 
                         <div className="why-content-para vision-mission-para">
+                          <h2 className="banner-title why-content-main-title">
+                            Our Vision
+                          </h2>
                           <p className="para why-para">
                             Our investment strategies offer our investors
                             exposure to differentiated opportunities which have
@@ -663,6 +685,9 @@ const About = () => {
                         </div>
 
                         <div className="why-content-para vision-mission-para">
+                          <h2 className="banner-title why-content-main-title">
+                            Our Mission
+                          </h2>
                           <p className="para why-para">
                             Our investment strategies offer our investors
                             exposure to differentiated opportunities which have
@@ -778,14 +803,14 @@ const About = () => {
           </div>
         </div>
       </section>
-
+      <div id="philosophy-div"></div>
       <section className="philosophy-section">
         <div className="container">
           <h5 className="section-subtitle mb-5">our philosophy</h5>
           <div className="row image-row align-items-center">
             <div className="col-lg-6">
               <img
-                src="/images/banners/market-fund1.webp"
+                src={`${process.env.PUBLIC_URL}/images/banners/market-fund1.webp`}
                 alt="philosophy-img"
                 className="w-100"
               />
@@ -842,7 +867,7 @@ const About = () => {
 
             <div className="col-lg-6 d-lg-block d-none">
               <img
-                src="/images/banners/market-fund2.webp"
+                src={`${process.env.PUBLIC_URL}/images/banners/market-fund2.webp`}
                 alt="philosophy-img"
                 className="w-100"
               />
@@ -850,7 +875,7 @@ const About = () => {
           </div>
         </div>
       </section>
-
+      <div id="note-section"></div>
       <section className="founders-note-section">
         <div className="container">
           <div className="row">
@@ -869,7 +894,7 @@ const About = () => {
             <div className="col-lg-5">
               <div className="founders-img-div pe-lg-5 pe-auto">
                 <img
-                  src="/images/team/abhay-agarwal-560x560.jpeg"
+                  src={`${process.env.PUBLIC_URL}/images/team/abhay-agarwal-560x560.jpeg`}
                   className="w-100"
                   alt="founders-img"
                 />
@@ -915,24 +940,23 @@ const About = () => {
           </div>
         </div>
       </section>
-
       <section className="teams-bg-section">
         <img
-          src="/images/banners/team-bg.jpg"
+          src={`${process.env.PUBLIC_URL}/images/banners/team-bg.jpg`}
           alt="team-bg"
           className="w-100"
         />
       </section>
-
+      <div id="team-section"></div>
       <section className="teams-section">
         <div className="container">
           <h6 className="section-subtitle">Meet the team</h6>
           <h2 className="section-title mt-lg-3 mt-4">The Driving Force</h2>
-          <div className="row mt-5">
+          <div className="row mt-3">
             <div className="col-lg-4 col-md-6">
               <div className="team-div">
                 <img
-                  src="/images/team/abhay-agarwal-560x560.jpeg"
+                  src={`${process.env.PUBLIC_URL}/images/team/abhay-agarwal-560x560.jpeg`}
                   alt="team-img"
                   className="w-100"
                 />
@@ -952,7 +976,7 @@ const About = () => {
             <div className="col-lg-4 col-md-6 mt-lg-0 mt-md-0 mt-4">
               <div className="team-div">
                 <img
-                  src="/images/team/rajni-560x560.jpeg"
+                  src={`${process.env.PUBLIC_URL}/images/team/rajni-560x560.jpeg`}
                   alt="team-img"
                   className="w-100"
                 />
@@ -971,7 +995,7 @@ const About = () => {
             <div className="col-lg-4 col-md-6 mt-lg-0 mt-md-3 mt-4">
               <div className="team-div">
                 <img
-                  src="/images/team/Ajay-modi-560x560.jpeg"
+                  src={`${process.env.PUBLIC_URL}/images/team/Ajay-modi-560x560.jpeg`}
                   alt="team-img"
                   className="w-100"
                 />
@@ -992,7 +1016,11 @@ const About = () => {
             {teamContent.map((team, index) => (
               <div className="col-lg-3 col-md-6 col-12" key={index}>
                 <div className="team-div small-team-div">
-                  <img src={team.image} alt="team-img" className="w-100" />
+                  <img
+                    src={`${process.env.PUBLIC_URL}${team.image}`}
+                    alt="team-img"
+                    className="w-100"
+                  />
                   <div className="team-content small-team-content">
                     <div className="team-title-div">
                       <h3 className="section-title team-name">{team.name}</h3>

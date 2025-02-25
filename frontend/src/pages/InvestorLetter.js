@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Layout from "../components/Layout";
 import { NavLink } from "react-router-dom";
 
@@ -229,11 +229,40 @@ const InvestorLetter = () => {
     },
   ];
 
-  const sortedLetters = letters.sort((a, b) => {
-    const dateA = new Date(a.date + " 1"); // Adding day to avoid invalid dates
-    const dateB = new Date(b.date + " 1");
-    return dateB - dateA;
+  // Function to parse dates properly for sorting
+  const parseDate = (dateStr) => {
+    const [month, year] = dateStr.split(" ");
+    return new Date(`${month} 1, ${year}`);
+  };
+
+  // Sort letters by date (latest first)
+  const sortedLetters = [...letters].sort(
+    (a, b) => parseDate(b.date) - parseDate(a.date)
+  );
+
+  const [selectedFilter, setSelectedFilter] = useState("");
+
+  // Function to filter by Financial Year (April–March)
+  const filteredLetters = sortedLetters.filter((letter) => {
+    if (!selectedFilter) return true; // Show all if no filter is selected
+
+    // Extract financial year start and end
+    const [startYear, endYear] = selectedFilter.split("-").map(Number);
+
+    // Define financial year start (April YYYY) and end (March YYYY+1)
+    const financialYearStart = new Date(`April 1, ${startYear}`);
+    const financialYearEnd = new Date(`March 31, ${endYear}`);
+
+    // Get letter date
+    const letterDate = parseDate(letter.date);
+
+    // Check if the letter falls within the financial year range
+    return letterDate >= financialYearStart && letterDate <= financialYearEnd;
   });
+
+  const handleClearFilters = () => {
+    setSelectedFilter("");
+  };
 
   return (
     <Layout>
@@ -241,7 +270,7 @@ const InvestorLetter = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src="/images/banners/market-fund-banner.webp"
+              src={`${process.env.PUBLIC_URL}/images/banners/market-fund-banner.webp`}
               alt="banner-img"
             />
 
@@ -262,9 +291,38 @@ const InvestorLetter = () => {
 
       <section className="investor-letters-section">
         <div className="container">
+          <div className="row mb-5 align-items-center">
+            <div className="col-lg-6 col-md-6 col-6 mt-lg-0 mt-0 ">
+              <div className="industries-filter-div">
+                <select
+                  className="form-select"
+                  value={selectedFilter}
+                  onChange={(e) => setSelectedFilter(e.target.value)}
+                >
+                  <option value="">All Years</option>
+                  <option value="2024-2025">2024-2025</option>
+                  <option value="2023-2024">2023-2024</option>
+                  <option value="2022-2023">2022-2023</option>
+                  <option value="2021-2022">2021-2022</option>
+                  <option value="2020-2021">2020-2021</option>
+                  <option value="2019-2020">2019-2020</option>
+                  <option value="2018-2019">2018-2019</option>
+                </select>
+              </div>
+            </div>
+
+            <div className="col-lg-6 col-md-6 col-6 d-flex justify-content-lg-end justify-content-md-end justify-content-end">
+              <button
+                className="para clear-filters-text"
+                onClick={handleClearFilters}
+              >
+                Clear Filters
+              </button>
+            </div>
+          </div>
           <div className="row">
-            {sortedLetters.map((letter) => (
-              <div className="col-lg-4 col-md-6 col-12">
+            {filteredLetters.map((letter, index) => (
+              <div className="col-lg-4 col-md-6 col-12" key={index}>
                 <NavLink to={letter.filepath} target="_blank">
                   <div className="letter-div mb-4">
                     <h5 className="section-subtitle">{letter.date}</h5>

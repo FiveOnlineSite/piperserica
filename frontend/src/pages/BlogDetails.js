@@ -9,7 +9,10 @@ const BlogDetails = () => {
       <section className="banner-section pb-0">
         <div className="row">
           <div className="banner-img-div">
-            <img src="/images/banners/blogdetail-banner.jpg" alt="banner-img" />
+            <img
+              src={`${process.env.PUBLIC_URL}/images/banners/blogdetail-banner.jpg`}
+              alt="banner-img"
+            />
 
             {/* <div className="banner-content-div">
               <div className="container">
@@ -40,7 +43,7 @@ const BlogDetails = () => {
               <i class="fa-solid fa-arrow-left pe-3"></i>
               <p className="para small-para">BACK</p>
             </NavLink>
-            <div className="news-content-div">
+            <div className="news-content-div border-0">
               <h5>Investment Insights</h5>
 
               <h6 className="para mt-4">30.01.2025</h6>
@@ -101,7 +104,7 @@ const BlogDetails = () => {
               </h6>
 
               <img
-                src="/images/blog-detail.jpeg"
+                src={`${process.env.PUBLIC_URL}/images/blog-detail.jpeg`}
                 alt="key-takeaway"
                 className="w-100"
               />
@@ -250,7 +253,7 @@ const BlogDetails = () => {
                         <i>
                           *By submitting the contact form, you consent to all
                           data in the form being used in accordance with
-                          <a href="#">Piper Serics's data privacy policy</a>
+                          <a href="#"> Piper Serics's data privacy policy</a>
                         </i>
                       </p>
                     </div>

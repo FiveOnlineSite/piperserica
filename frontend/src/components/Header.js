@@ -1,36 +1,599 @@
-import React, { useEffect } from "react";
-import { NavLink, useLocation } from "react-router-dom";
-import TopBar from "./TopBar";
+// import React, { useState, useEffect } from "react";
+// import { Link, NavLink, useLocation } from "react-router-dom";
+// import TopBar from "../components/TopBar";
+
+// const Header = () => {
+//   const [isFixed, setIsFixed] = useState(false);
+//   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+//   const location = useLocation(); // Get current route
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       if (location.pathname === "/") {
+//         setIsFixed(false); // Keep absolute on home page
+//       } else {
+//         setIsFixed(window.scrollY > 50);
+//       }
+//     };
+//     window.addEventListener("scroll", handleScroll);
+//     return () => window.removeEventListener("scroll", handleScroll);
+//   }, [location.pathname]);
+
+//   const { hash } = useLocation();
+
+//   useEffect(() => {
+//     if (hash) {
+//       const sectionId = hash.replace("#", ""); // Remove '#' from hash
+//       setTimeout(() => {
+//         // Delay ensures React renders the section first
+//         const element = document.getElementById(sectionId);
+//         if (element) {
+//           element.scrollIntoView({ behavior: "smooth", block: "start" });
+//         }
+//       }, 100);
+//     }
+//   }, [hash]); // Runs whenever hash changes
+
+//   const handleScrollToSection = (event, sectionId) => {
+//     event.preventDefault(); // Prevent default anchor behavior
+
+//     if (window.location.pathname === "/about") {
+//       // If already on the about page, update hash manually
+//       window.history.pushState(null, "", `/about#${sectionId}`);
+
+//       // Scroll smoothly
+//       const section = document.getElementById(sectionId);
+//       if (section) {
+//         section.scrollIntoView({ behavior: "smooth", block: "start" });
+//       }
+//     } else {
+//       // Navigate to About page with hash
+//       window.location.href = `/about#${sectionId}`;
+//     }
+//   };
+
+//   return (
+//     <div>
+//       {/* Desktop Navbar */}
+//       <nav
+//         className={`navbar navbar-expand-lg desktop-navbar ${
+//           location.pathname === "/"
+//             ? "absolute-navbar"
+//             : isFixed
+//             ? "fixed-navbar"
+//             : ""
+//         }`}
+//       >
+//         <div className="container">
+//           <Link className="navbar-brand" to="/">
+//             <img
+//               src={`${process.env.PUBLIC_URL}/images/Piper-Serica-logo-1.png`}
+//               alt="logo"
+//               width={"100px"}
+//               height="100%"
+//             />
+//           </Link>
+//           <button
+//             className="navbar-toggler"
+//             type="button"
+//             data-bs-toggle="offcanvas"
+//             data-bs-target="#offcanvasNavbar"
+//             aria-controls="offcanvasNavbar"
+//           >
+//             <span className="navbar-toggler-icon"></span>
+//           </button>
+//           <div className="collapse navbar-collapse">
+//             <ul className="navbar-nav mb-2 mb-lg-0 ">
+//               <li className="nav-item dropdown desktop-dropdown">
+//                 <NavLink
+//                   className="nav-link dropdown-toggle"
+//                   to="/"
+//                   role="button"
+//                   data-bs-toggle="dropdown"
+//                   aria-expanded="false"
+//                 >
+//                   About
+//                 </NavLink>
+//                 <ul className="dropdown-menu desktop-dropdown-menu">
+//                   <li>
+//                     <NavLink className="dropdown-item" to="/about">
+//                       About Us
+//                     </NavLink>
+//                   </li>
+//                   <li>
+//                     <NavLink
+//                       className="dropdown-item"
+//                       to="/about#history-section"
+//                       onClick={(e) =>
+//                         handleScrollToSection(e, "history-section")
+//                       }
+//                     >
+//                       History
+//                     </NavLink>
+//                   </li>
+//                   <li>
+//                     <NavLink
+//                       className="dropdown-item"
+//                       to="/about#purpose-section"
+//                       onClick={(e) =>
+//                         handleScrollToSection(e, "purpose-section")
+//                       }
+//                     >
+//                       Purpose
+//                     </NavLink>
+//                   </li>
+//                   <li>
+//                     <NavLink
+//                       className="dropdown-item"
+//                       to="/about#philosophy-div"
+//                       onClick={(e) =>
+//                         handleScrollToSection(e, "philosophy-div")
+//                       }
+//                     >
+//                       Philosophy
+//                     </NavLink>
+//                   </li>
+//                   <li>
+//                     <NavLink
+//                       className="dropdown-item"
+//                       to="/about#note-section"
+//                       onClick={(e) => handleScrollToSection(e, "note-section")}
+//                     >
+//                       Founder's Note
+//                     </NavLink>
+//                   </li>
+//                   <li>
+//                     <NavLink
+//                       className="dropdown-item"
+//                       to="/about#team-section"
+//                       onClick={(e) => handleScrollToSection(e, "team-section")}
+//                     >
+//                       Team
+//                     </NavLink>
+//                   </li>
+//                 </ul>
+//               </li>
+//               <li className="nav-item dropdown desktop-dropdown">
+//                 <NavLink
+//                   className="nav-link dropdown-toggle"
+//                   to="/"
+//                   role="button"
+//                   data-bs-toggle="dropdown"
+//                   aria-expanded="false"
+//                 >
+//                   Our Services
+//                 </NavLink>
+//                 <ul className="dropdown-menu desktop-dropdown-menu">
+//                   <li>
+//                     <NavLink className="dropdown-item" to="/public-market">
+//                       Public Market
+//                     </NavLink>
+//                   </li>
+//                   <li>
+//                     <NavLink className="dropdown-item" to="/private-market">
+//                       Private Market
+//                     </NavLink>
+//                   </li>
+//                 </ul>
+//               </li>
+//               <li className="nav-item">
+//                 <NavLink className="nav-link" to="/our-impact">
+//                   Our Impact
+//                 </NavLink>
+//               </li>
+
+//               <li className="nav-item dropdown desktop-dropdown">
+//                 <NavLink
+//                   className="nav-link dropdown-toggle"
+//                   to="/"
+//                   role="button"
+//                   data-bs-toggle="dropdown"
+//                   aria-expanded="false"
+//                 >
+//                   Insights
+//                 </NavLink>
+//                 <ul className="dropdown-menu desktop-dropdown-menu">
+//                   <li>
+//                     <NavLink className="dropdown-item" to="/insights">
+//                       Blogs
+//                     </NavLink>
+//                   </li>
+//                   <li>
+//                     <NavLink className="dropdown-item" to="/news-article">
+//                       News Articles
+//                     </NavLink>
+//                   </li>
+//                   <li>
+//                     <NavLink className="dropdown-item" to="/">
+//                       Videos
+//                     </NavLink>
+//                   </li>
+//                 </ul>
+//               </li>
+
+//               <li className="nav-item">
+//                 <NavLink className="nav-link" to="/careers">
+//                   Careers
+//                 </NavLink>
+//               </li>
+//               <li className="nav-item">
+//                 <NavLink className="nav-link" to="/contact">
+//                   Contact
+//                 </NavLink>
+//               </li>
+//               <li className="nav-item login-btn">
+//                 <NavLink
+//                   className="nav-link"
+//                   to="https://piperserica.com/"
+//                   target="_blank"
+//                 >
+//                   Login <i className="fa-solid fa-arrow-right"></i>
+//                 </NavLink>
+//               </li>
+//             </ul>
+//           </div>
+//         </div>
+//       </nav>
+
+//       <nav className="navbar fixed-top mobile-navbar">
+//         <div className="container-fluid">
+//           <NavLink className="navbar-brand" to="/">
+//             <img
+//               src={`${process.env.PUBLIC_URL}/images/Piper-Serica-logo-1.png`}
+//               alt="logo"
+//               width={"100px"}
+//               height="100%"
+//             />
+//           </NavLink>
+//           <button
+//             className="navbar-toggler"
+//             type="button"
+//             data-bs-toggle="offcanvas"
+//             data-bs-target="#offcanvasNavbar"
+//             aria-controls="offcanvasNavbar"
+//             aria-label="Toggle navigation"
+//           >
+//             <span className="navbar-toggler-icon"></span>
+//           </button>
+//           <div
+//             className="offcanvas offcanvas-end"
+//             tabindex="-1"
+//             id="offcanvasNavbar"
+//             aria-labelledby="offcanvasNavbarLabel"
+//           >
+//             <div className="offcanvas-header">
+//               <NavLink className="navbar-brand" to="/">
+//                 <img
+//                   src={`${process.env.PUBLIC_URL}/images/Piper-Serica-logo-1.png`}
+//                   alt="logo"
+//                   width={"100px"}
+//                   height="100%"
+//                 />
+//               </NavLink>
+//               <button
+//                 type="button"
+//                 className="btn-close"
+//                 data-bs-dismiss="offcanvas"
+//                 aria-label="Close"
+//               ></button>
+//             </div>
+//             <div className="offcanvas-body">
+//               <TopBar />
+//               <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
+//                 <li className="nav-item dropdown">
+//                   <NavLink
+//                     className="nav-link dropdown-toggle"
+//                     to="/"
+//                     role="button"
+//                     data-bs-toggle="dropdown"
+//                     aria-expanded="false"
+//                   >
+//                     About
+//                   </NavLink>
+//                   <ul className="dropdown-menu">
+//                     <li>
+//                       <NavLink className="dropdown-item" to="/about">
+//                         About Us
+//                       </NavLink>
+//                     </li>
+//                     <li>
+//                       <NavLink
+//                         className="dropdown-item"
+//                         to="/about#history-section"
+//                       >
+//                         History
+//                       </NavLink>
+//                     </li>
+//                     <li>
+//                       <NavLink
+//                         className="dropdown-item"
+//                         to="/about#purpose-section"
+//                       >
+//                         Purpose
+//                       </NavLink>
+//                     </li>
+//                     <li>
+//                       <NavLink
+//                         className="dropdown-item"
+//                         to="/about#philosophy-div"
+//                       >
+//                         Philosophy
+//                       </NavLink>
+//                     </li>
+//                     <li>
+//                       <NavLink
+//                         className="dropdown-item"
+//                         to="/about#note-section"
+//                       >
+//                         Founder’s Note
+//                       </NavLink>
+//                     </li>
+//                     <li>
+//                       <NavLink
+//                         className="dropdown-item"
+//                         to="/about#team-section"
+//                       >
+//                         Team
+//                       </NavLink>
+//                     </li>
+//                   </ul>
+//                 </li>
+//                 <li className="nav-item dropdown">
+//                   <NavLink
+//                     className="nav-link dropdown-toggle"
+//                     to="/"
+//                     role="button"
+//                     data-bs-toggle="dropdown"
+//                     aria-expanded="false"
+//                   >
+//                     Our Services
+//                   </NavLink>
+//                   <ul className="dropdown-menu">
+//                     <li>
+//                       <NavLink className="dropdown-item" to="/public-market">
+//                         Public Market
+//                       </NavLink>
+//                     </li>
+//                     <li>
+//                       <NavLink className="dropdown-item" to="/private-market">
+//                         Private Market
+//                       </NavLink>
+//                     </li>
+//                   </ul>
+//                 </li>
+//                 <li className="nav-item">
+//                   <NavLink
+//                     className="nav-link"
+//                     to="/our-impact"
+//                     // onClick={closeOffcanvas}
+//                   >
+//                     Our Impact
+//                   </NavLink>
+//                 </li>
+
+//                 <li className="nav-item dropdown">
+//                   <NavLink
+//                     className="nav-link dropdown-toggle"
+//                     to="/"
+//                     role="button"
+//                     data-bs-toggle="dropdown"
+//                     aria-expanded="false"
+//                   >
+//                     Insights
+//                   </NavLink>
+//                   <ul className="dropdown-menu">
+//                     <li>
+//                       <NavLink className="dropdown-item" to="/insights">
+//                         Blogs
+//                       </NavLink>
+//                     </li>
+//                     <li>
+//                       <NavLink className="dropdown-item" to="/news-article">
+//                         News Article
+//                       </NavLink>
+//                     </li>
+//                     <li>
+//                       <NavLink className="dropdown-item" to="/">
+//                         Videos
+//                       </NavLink>
+//                     </li>
+//                   </ul>
+//                 </li>
+
+//                 <li className="nav-item">
+//                   <NavLink className="nav-link" to="/careers">
+//                     Careers
+//                   </NavLink>
+//                 </li>
+//                 <li className="nav-item">
+//                   <NavLink className="nav-link" to="/contact">
+//                     Contact
+//                   </NavLink>
+//                 </li>
+//                 <li className="nav-item login-btn">
+//                   <NavLink
+//                     className="nav-link"
+//                     to="https://piperserica.com/"
+//                     target="_blank"
+//                   >
+//                     Login
+//                   </NavLink>
+//                 </li>
+//               </ul>
+//             </div>
+//           </div>
+//         </div>
+//       </nav>
+//     </div>
+//   );
+// };
+
+// export default Header;
+
+import React, { useState, useEffect } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import TopBar from "../components/TopBar";
 
 const Header = () => {
-  const location = useLocation();
+  const [isFixed, setIsFixed] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation(); // Get current route
 
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to top on route change
-  }, [location]); // Dependency on location ensures it runs whenever the route changes
+    const handleScroll = () => {
+      if (location.pathname === "/") {
+        setIsFixed(false); // Keep absolute on home page
+      } else {
+        setIsFixed(window.scrollY > 50);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [location.pathname]);
+
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const sectionId = hash.replace("#", ""); // Remove '#' from hash
+      setTimeout(() => {
+        // Delay ensures React renders the section first
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      }, 100);
+    }
+  }, [hash]); // Runs whenever hash changes
+
+  const handleScrollToSection = (event, sectionId) => {
+    event.preventDefault(); // Prevent default anchor behavior
+
+    if (window.location.pathname === "/about") {
+      // If already on the about page, update hash manually
+      window.history.pushState(null, "", `/about#${sectionId}`);
+
+      // Scroll smoothly
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+      // Close the offcanvas menu
+      setIsMenuOpen(false);
+    } else {
+      // Navigate to About page with hash
+      window.location.href = `/about#${sectionId}`;
+    }
+  };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <div>
-      <nav className="navbar navbar-expand-lg desktop-navbar">
+      {/* Desktop Navbar */}
+      <nav
+        className={`navbar navbar-expand-lg desktop-navbar ${
+          location.pathname === "/"
+            ? "absolute-navbar"
+            : isFixed
+            ? "fixed-navbar"
+            : ""
+        }`}
+      >
         <div className="container">
-          <NavLink className="navbar-brand" to="/">
+          <Link className="navbar-brand" to="/">
             <img
-              src="/images/Piper-Serica-logo-1.png"
+              src={`${process.env.PUBLIC_URL}/images/Piper-Serica-logo-1.png`}
               alt="logo"
               width={"100px"}
               height="100%"
             />
-          </NavLink>
-
+          </Link>
+          <button
+            className="navbar-toggler"
+            type="button"
+            onClick={toggleMenu}
+            aria-controls="offcanvasNavbar"
+          >
+            <span className="navbar-toggler-icon"></span>
+          </button>
           <div
-            className="collapse navbar-collapse justify-content-end"
-            id="navbarSupportedContent"
+            className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`}
           >
             <ul className="navbar-nav mb-2 mb-lg-0 ">
-              <li className="nav-item">
-                <NavLink className="nav-link" aria-current="page" to="/about">
+              <li className="nav-item dropdown desktop-dropdown">
+                <NavLink
+                  className="nav-link dropdown-toggle"
+                  to="/"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
                   About
                 </NavLink>
+                <ul className="dropdown-menu desktop-dropdown-menu">
+                  <li>
+                    <NavLink
+                      className="dropdown-item"
+                      to={`${process.env.PUBLIC_URL}/about`}
+                    >
+                      About Us
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      className="dropdown-item"
+                      to={`${process.env.PUBLIC_URL}/about#history-section`}
+                      onClick={(e) =>
+                        handleScrollToSection(e, "history-section")
+                      }
+                    >
+                      History
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      className="dropdown-item"
+                      to={`${process.env.PUBLIC_URL}/about#purpose-section`}
+                      onClick={(e) =>
+                        handleScrollToSection(e, "purpose-section")
+                      }
+                    >
+                      Purpose
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      className="dropdown-item"
+                      to={`${process.env.PUBLIC_URL}/about#philosophy-div`}
+                      onClick={(e) =>
+                        handleScrollToSection(e, "philosophy-div")
+                      }
+                    >
+                      Philosophy
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      className="dropdown-item"
+                      to={`${process.env.PUBLIC_URL}/about#note-section`}
+                      onClick={(e) => handleScrollToSection(e, "note-section")}
+                    >
+                      Founder's Note
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      className="dropdown-item"
+                      to={`${process.env.PUBLIC_URL}/about#team-section`}
+                      onClick={(e) => handleScrollToSection(e, "team-section")}
+                    >
+                      Team
+                    </NavLink>
+                  </li>
+                </ul>
               </li>
               <li className="nav-item dropdown desktop-dropdown">
                 <NavLink
@@ -57,22 +620,40 @@ const Header = () => {
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/our-impact">
-                  Our Impact
+                  Our impact
                 </NavLink>
               </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/insights">
+              <li className="nav-item dropdown desktop-dropdown">
+                <NavLink
+                  className="nav-link dropdown-toggle"
+                  to="/"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
                   Insights
                 </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink className="nav-link" to="/news-article">
-                  News Article
-                </NavLink>
+                <ul className="dropdown-menu desktop-dropdown-menu">
+                  <li>
+                    <NavLink className="dropdown-item" to="/insights">
+                      Blogs
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink className="dropdown-item" to="/news-article">
+                      News Article
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink className="dropdown-item" to="/">
+                      Videos
+                    </NavLink>
+                  </li>
+                </ul>
               </li>
               <li className="nav-item">
                 <NavLink className="nav-link" to="/careers">
-                  Careers
+                  Career
                 </NavLink>
               </li>
               <li className="nav-item">
@@ -86,7 +667,7 @@ const Header = () => {
                   to="https://piperserica.com/"
                   target="_blank"
                 >
-                  Login <i className="fa-solid fa-arrow-right"></i>
+                  Login
                 </NavLink>
               </li>
             </ul>
@@ -98,7 +679,7 @@ const Header = () => {
         <div className="container-fluid">
           <NavLink className="navbar-brand" to="/">
             <img
-              src="/images/Piper-Serica-logo-1.png"
+              src={`${process.env.PUBLIC_URL}/images/Piper-Serica-logo-1.png`}
               alt="logo"
               width={"100px"}
               height="100%"
@@ -107,23 +688,22 @@ const Header = () => {
           <button
             className="navbar-toggler"
             type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasNavbar"
+            onClick={toggleMenu}
             aria-controls="offcanvasNavbar"
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
           </button>
           <div
-            className="offcanvas offcanvas-end"
-            tabindex="-1"
+            className={`offcanvas offcanvas-end ${isMenuOpen ? "show" : ""}`}
+            tabIndex="-1"
             id="offcanvasNavbar"
             aria-labelledby="offcanvasNavbarLabel"
           >
             <div className="offcanvas-header">
               <NavLink className="navbar-brand" to="/">
                 <img
-                  src="/images/Piper-Serica-logo-1.png"
+                  src={`${process.env.PUBLIC_URL}/images/Piper-Serica-logo-1.png`}
                   alt="logo"
                   width={"100px"}
                   height="100%"
@@ -132,17 +712,88 @@ const Header = () => {
               <button
                 type="button"
                 className="btn-close"
-                data-bs-dismiss="offcanvas"
+                onClick={() => setIsMenuOpen(false)}
                 aria-label="Close"
               ></button>
             </div>
             <div className="offcanvas-body">
               <TopBar />
               <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
-                <li className="nav-item">
-                  <NavLink className="nav-link" aria-current="page" to="/about">
+                <li className="nav-item dropdown">
+                  <NavLink
+                    className="nav-link dropdown-toggle"
+                    to="/"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
                     About
                   </NavLink>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <NavLink
+                        className="dropdown-item"
+                        to={`${process.env.PUBLIC_URL}/about`}
+                      >
+                        About Us
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        className="dropdown-item"
+                        to={`${process.env.PUBLIC_URL}/about#history-section`}
+                        onClick={(e) =>
+                          handleScrollToSection(e, "history-section")
+                        }
+                      >
+                        History
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        className="dropdown-item"
+                        to={`${process.env.PUBLIC_URL}/about#purpose-section`}
+                        onClick={(e) =>
+                          handleScrollToSection(e, "purpose-section")
+                        }
+                      >
+                        Purpose
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        className="dropdown-item"
+                        to={`${process.env.PUBLIC_URL}/about#philosophy-div`}
+                        onClick={(e) =>
+                          handleScrollToSection(e, "philosophy-div")
+                        }
+                      >
+                        Philosophy
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        className="dropdown-item"
+                        to={`${process.env.PUBLIC_URL}/about#note-section`}
+                        onClick={(e) =>
+                          handleScrollToSection(e, "note-section")
+                        }
+                      >
+                        Founder’s Note
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        className="dropdown-item"
+                        to={`${process.env.PUBLIC_URL}/about#team-section`}
+                        onClick={(e) =>
+                          handleScrollToSection(e, "team-section")
+                        }
+                      >
+                        Team
+                      </NavLink>
+                    </li>
+                  </ul>
                 </li>
                 <li className="nav-item dropdown">
                   <NavLink
@@ -168,27 +819,57 @@ const Header = () => {
                   </ul>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/our-impact">
+                  <NavLink
+                    className="nav-link"
+                    to="/our-impact"
+                    // onClick={closeOffcanvas}
+                  >
                     Our Impact
                   </NavLink>
                 </li>
-                <li className="nav-item">
-                  <NavLink className="nav-link" to="/insights">
+                <li className="nav-item dropdown">
+                  <NavLink
+                    className="nav-link dropdown-toggle"
+                    to="/"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
                     Insights
                   </NavLink>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <NavLink className="dropdown-item" to="/insights">
+                        Blogs
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink className="dropdown-item" to="/news-article">
+                        News Article
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink className="dropdown-item" to="/">
+                        Videos
+                      </NavLink>
+                    </li>
+                  </ul>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/news-article">
-                    News Article
+                  <NavLink
+                    className="nav-link"
+                    to="/careers"
+                    // onClick={closeOffcanvas}
+                  >
+                    Career
                   </NavLink>
                 </li>
                 <li className="nav-item">
-                  <NavLink className="nav-link" to="/careers">
-                    Careers
-                  </NavLink>
-                </li>
-                <li className="nav-item">
-                  <NavLink className="nav-link" to="/contact">
+                  <NavLink
+                    className="nav-link"
+                    to="/contact"
+                    // onClick={closeOffcanvas}
+                  >
                     Contact
                   </NavLink>
                 </li>

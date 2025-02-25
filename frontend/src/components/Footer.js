@@ -16,7 +16,7 @@ const Footer = () => {
             <div>
               <NavLink className="navbar-brand" to="/">
                 <img
-                  src="/images/footer-logo.png"
+                  src={`${process.env.PUBLIC_URL}/images/footer-logo.png`}
                   alt="logo"
                   width={"100px"}
                   height="100%"
@@ -72,11 +72,11 @@ const Footer = () => {
                     Privacy Policy
                   </NavLink>
                 </li>
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <NavLink className="nav-link" to="/disclaimer">
                     Disclaimer
                   </NavLink>
-                </li>
+                </li> */}
                 <li className="nav-item">
                   <NavLink className="nav-link" to="/disclosure">
                     Disclosure
