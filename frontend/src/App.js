@@ -23,7 +23,7 @@ import NRIInvestor from "./pages/NRIInvestor";
 function App() {
   return (
     // <Router basename="/piperserica-frontend">
-    <Router basename="/">
+    <Router>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
