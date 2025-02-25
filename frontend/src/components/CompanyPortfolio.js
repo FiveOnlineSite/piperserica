@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Modal } from "react-bootstrap";
+import { NavLink } from "react-router-dom";
 
 const CompanyPortfolio = () => {
   const [selectedIndustry, setSelectedIndustry] = useState("Industry");
@@ -13,6 +14,7 @@ const CompanyPortfolio = () => {
       label: "B2B",
       description:
         "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+      link: "pumpumpum.com",
     },
     {
       id: 2,
@@ -20,6 +22,7 @@ const CompanyPortfolio = () => {
       label: "B2B",
       description:
         "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+      link: "pumpumpum.com",
     },
     {
       id: 3,
@@ -27,6 +30,7 @@ const CompanyPortfolio = () => {
       label: "Consumer",
       description:
         "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+      link: "pumpumpum.com",
     },
     {
       id: 4,
@@ -34,6 +38,7 @@ const CompanyPortfolio = () => {
       label: "Consumer",
       description:
         "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+      link: "pumpumpum.com",
     },
     {
       id: 5,
@@ -41,6 +46,7 @@ const CompanyPortfolio = () => {
       label: "Creator Economy",
       description:
         "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+      link: "pumpumpum.com",
     },
     {
       id: 6,
@@ -48,6 +54,7 @@ const CompanyPortfolio = () => {
       label: "Creator Economy",
       description:
         "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+      link: "pumpumpum.com",
     },
     {
       id: 7,
@@ -55,6 +62,7 @@ const CompanyPortfolio = () => {
       label: "B2B",
       description:
         "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+      link: "pumpumpum.com",
     },
     {
       id: 8,
@@ -62,6 +70,7 @@ const CompanyPortfolio = () => {
       label: "Consumer",
       description:
         "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+      link: "pumpumpum.com",
     },
   ];
 
@@ -131,7 +140,11 @@ const CompanyPortfolio = () => {
                       onClick={() => openModal(images)}
                       style={{ cursor: "pointer" }}
                     >
-                      <img src={images.src} alt="industry" className="w-100" />
+                      <img
+                        src={`${process.env.PUBLIC_URL}${images.src}`}
+                        alt="industry"
+                        className="w-100"
+                      />
                       {/* <div className="industries-content">
                         <p className="para small-para">
                           The Fund seeks to empower early and growth stage
@@ -151,20 +164,23 @@ const CompanyPortfolio = () => {
 
       {/* Modal Component */}
       {selectedImage && (
-        <Modal show={showModal} onHide={closeModal}>
+        <Modal show={showModal} onHide={closeModal} centered>
           <Modal.Header closeButton>
             <Modal.Title>{selectedImage.label}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <div>
               <img
-                src={selectedImage.src}
+                src={`${process.env.PUBLIC_URL}${selectedImage.src}`}
                 alt="Selected Industry"
                 className="mb-3"
               />
             </div>
 
             <p className="para small-para">{selectedImage.description}</p>
+            <NavLink className="company-link" target="_blank">
+              {selectedImage.link}
+            </NavLink>
           </Modal.Body>
         </Modal>
       )}

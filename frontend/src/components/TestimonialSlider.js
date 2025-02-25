@@ -8,7 +8,7 @@ const TestimonialSlider = ({ item, settings }) => {
         {item.map((item, index) => (
           <div key={index} className="testimonial-div">
             <div className="testimonial-img-div">
-              <img src={item.image} alt="news" />
+              <img src={`${process.env.PUBLIC_URL}${item.image}`} alt="news" />
               <div className="testimonial-data">
                 <h6 className="section-title">{item.name}</h6>
                 <p className="para small-para">{item.designation}</p>
