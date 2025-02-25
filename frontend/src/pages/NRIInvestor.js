@@ -63,11 +63,11 @@ const NRIInvestor = () => {
     {
       strategy_title: "Public Market",
       funds: "Piper Serica Numero Uno Fund",
-      fund_type: "Foreign Investor",
+      fund_type: "NRI Investor",
     },
     {
       strategy_title: "Public Market",
-      funds: "Piper Serica Numero Uno Fund",
+      funds: "Piper Serica Leader Portfolio Fund",
       fund_type: "NRI Investor",
     },
     // {

@@ -431,61 +431,126 @@
 // export default Header;
 
 import React, { useState, useEffect } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink, useLocation, useNavigate } from "react-router-dom";
 import TopBar from "../components/TopBar";
 
 const Header = () => {
   const [isFixed, setIsFixed] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation(); // Get current route
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
+  const [hash, setHash] = useState("");
 
   useEffect(() => {
-    const handleScroll = () => {
-      if (location.pathname === "/") {
-        setIsFixed(false); // Keep absolute on home page
-      } else {
-        setIsFixed(window.scrollY > 50);
-      }
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [location.pathname]);
-
-  const { hash } = useLocation();
+    if (location.hash) {
+      setHash(location.hash);
+    }
+  }, [location]);
 
   useEffect(() => {
     if (hash) {
-      const sectionId = hash.replace("#", ""); // Remove '#' from hash
-      setTimeout(() => {
-        // Delay ensures React renders the section first
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: "smooth", block: "start" });
+      const sectionId = hash.replace("#", "");
+
+      const adjustScroll = () => {
+        const section = document.getElementById(sectionId);
+        const headerHeight =
+          document.querySelector(".fixed-navbar")?.offsetHeight || 80; // Adjust header height dynamically
+
+        if (section) {
+          const sectionPosition =
+            section.getBoundingClientRect().top +
+            window.scrollY -
+            headerHeight -
+            20;
+
+          window.scrollTo({ top: sectionPosition, behavior: "smooth" });
         }
-      }, 100);
+      };
+
+      if (location.state?.prevPath !== "/about") {
+        setTimeout(adjustScroll, 300); // Delay to allow page load
+      } else {
+        adjustScroll();
+      }
     }
-  }, [hash]); // Runs whenever hash changes
+  }, [hash, location]);
 
   const handleScrollToSection = (event, sectionId) => {
-    event.preventDefault(); // Prevent default anchor behavior
+    event.preventDefault();
 
-    if (window.location.pathname === "/about") {
-      // If already on the about page, update hash manually
-      window.history.pushState(null, "", `/about#${sectionId}`);
+    // Close the menu immediately when a link is clicked
+    setIsMenuOpen(false);
 
-      // Scroll smoothly
-      const section = document.getElementById(sectionId);
-      if (section) {
-        section.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-      // Close the offcanvas menu
-      setIsMenuOpen(false);
+    if (location.pathname !== "/about") {
+      navigate(`/about#${sectionId}`, {
+        state: { prevPath: location.pathname },
+      });
     } else {
-      // Navigate to About page with hash
-      window.location.href = `/about#${sectionId}`;
+      window.history.pushState(null, "", `/about#${sectionId}`);
+      const section = document.getElementById(sectionId);
+      const headerHeight =
+        document.querySelector(".fixed-navbar")?.offsetHeight || 80;
+
+      if (section) {
+        const sectionPosition =
+          section.getBoundingClientRect().top +
+          window.scrollY -
+          headerHeight -
+          20;
+
+        window.scrollTo({ top: sectionPosition, behavior: "smooth" });
+      }
     }
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsFixed(pathname !== "/" && window.scrollY > 50);
+    };
+
+    if (pathname !== "/") {
+      window.addEventListener("scroll", handleScroll);
+    }
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [pathname]);
+
+  // useEffect(() => {
+  //   if (hash) {
+  //     const sectionId = hash.replace("#", "");
+  //     setTimeout(() => {
+  //       const element = document.getElementById(sectionId);
+  //       if (element) {
+  //         element.scrollIntoView({ behavior: "smooth", block: "start" });
+  //       }
+  //     }, 100);
+  //   }
+  // }, [hash]);
+
+  // const handleScrollToSection = (event, sectionId) => {
+  //   event.preventDefault();
+  //   setIsMenuOpen(false);
+
+  //   if (pathname === "/about") {
+  //     window.history.pushState(null, "", `/about#${sectionId}`);
+
+  //     const section = document.getElementById(sectionId);
+  //     const headerHeight =
+  //       document.querySelector(".fixed-navbar")?.offsetHeight || 80;
+
+  //     if (section) {
+  //       const sectionPosition =
+  //         section.getBoundingClientRect().top +
+  //         window.scrollY -
+  //         headerHeight -
+  //         20;
+  //       window.scrollTo({ top: sectionPosition, behavior: "smooth" });
+  //     }
+  //   } else {
+  //     window.location.href = `/about#${sectionId}`;
+  //   }
+  // };
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
