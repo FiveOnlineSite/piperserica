@@ -34,23 +34,22 @@ const TopBar = ({ closeOffcanvas }) => {
   const handleInvestorChange = (e) => {
     const newSelection = e.target.value;
 
-    if (newSelection !== selectedInvestor) {
-      // Selecting a new option
-      setSelectedInvestor(newSelection);
-      localStorage.setItem("selectedInvestor", newSelection);
-      navigate(investorToPathMap[newSelection], { replace: true });
+    // Always navigate to the selected option's page
+    setSelectedInvestor(newSelection);
+    localStorage.setItem("selectedInvestor", newSelection);
+    navigate(investorToPathMap[newSelection], { replace: true });
 
-      if (typeof closeOffcanvas === "function") {
-        closeOffcanvas();
-      }
+    if (typeof closeOffcanvas === "function") {
+      closeOffcanvas();
     }
   };
 
   const handleDropdownClick = (e) => {
-    // If the dropdown is clicked and the same value is selected again
-    if (selectedInvestor && e.target.value === selectedInvestor) {
-      navigate(investorToPathMap[selectedInvestor], { replace: true });
+    const newSelection = e.target.value;
 
+    // Check if the same option is clicked again
+    if (newSelection === selectedInvestor) {
+      navigate(investorToPathMap[newSelection], { replace: true });
       if (typeof closeOffcanvas === "function") {
         closeOffcanvas();
       }
@@ -70,7 +69,7 @@ const TopBar = ({ closeOffcanvas }) => {
               // Prevent navigation when opening dropdown
               e.stopPropagation();
             }}
-            onClick={handleDropdownClick}
+            onClick={handleDropdownClick} // Add this line
           >
             <option value="foreign">Foreign Investor</option>
             <option value="nri">NRI Investor</option>

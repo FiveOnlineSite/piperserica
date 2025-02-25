@@ -65,11 +65,6 @@ const Investor = () => {
       funds: "Piper Serica Numero Uno Fund",
       fund_type: "Foreign Investor",
     },
-    {
-      strategy_title: "Public Market",
-      funds: "Piper Serica Numero Uno Fund",
-      fund_type: "NRI Investor",
-    },
     // {
     //   strategy_title: "Private Credit",
     //   funds: "LC Venture Debt",
