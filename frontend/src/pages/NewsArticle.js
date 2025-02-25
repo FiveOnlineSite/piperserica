@@ -35,7 +35,7 @@ const NewsArticle = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src="/images/banners/market-fund-banner.webp"
+              src={`${process.env.PUBLIC_URL}/images/banners/market-fund-banner.webp`}
               alt="banner-img"
             />
             <div className="banner-content-div">
@@ -58,13 +58,16 @@ const NewsArticle = () => {
       <section className="insights-section">
         <div className="container">
           {/* News Items */}
-          <div className="row mt-5">
+          <div className="row">
             {newsItems.map((item, index) => (
-              <div className="col-lg-4 col-md-6 col-12" key={index}>
+              <div
+                className="col-lg-4 col-md-6 col-12 mt-lg-0 mt-md-3 mt-5"
+                key={index}
+              >
                 <div className="news-div">
                   <div className="news-img-div">
                     <img
-                      src={item.news_img}
+                      src={`${process.env.PUBLIC_URL}${item.news_img}`}
                       alt="news"
                       className="news-img w-100"
                     />

@@ -82,7 +82,7 @@ const PublicFund = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src="/images/banners/market-fund-banner.webp"
+              src={`${process.env.PUBLIC_URL}/images/banners/market-fund-banner.webp`}
               alt="banner-img"
             />
 
@@ -265,7 +265,7 @@ const PublicFund = () => {
         </div>
       </section>
 
-      <section className="investor-letters-section investor-letter-section">
+      <section className="investor-letter-section">
         <div className="container">
           <div className="row align-items-center">
             <h5 className="section-subtitle">Download</h5>

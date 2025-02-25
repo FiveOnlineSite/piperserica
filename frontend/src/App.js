@@ -17,19 +17,19 @@ import PrivateMarket from "./pages/PrivateMarket";
 import Disclosure from "./pages/Disclosure";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Career from "./pages/Career";
+import Startup from "./pages/Startup";
+import NRIInvestor from "./pages/NRIInvestor";
 
 function App() {
   return (
-    <Router>
+    // <Router basename="/piperserica-frontend">
+    <Router basename="/">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/foreign-investor" element={<Investor type="foreign" />} />
-        <Route path="/nri-investor" element={<Investor type="nri" />} />
-        <Route
-          path="/startup-founder-entrepreneur"
-          element={<Investor type="startup" />}
-        />
+        <Route path="/foreign-investor" element={<Investor />} />
+        <Route path="/nri-investor" element={<NRIInvestor />} />
+        <Route path="/startup-founder-entrepreneur" element={<Startup />} />
         <Route path="/careers" element={<Career />}></Route>
         <Route path="/public-market" element={<MarketFunds />}></Route>
         <Route path="/private-market" element={<PrivateMarket />}></Route>

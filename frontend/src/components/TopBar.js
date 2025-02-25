@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
-const TopBar = () => {
+const TopBar = ({ closeOffcanvas }) => {
   const location = useLocation();
   const navigate = useNavigate();
-
   const [selectedInvestor, setSelectedInvestor] = useState("");
 
   const pathToInvestorMap = {
@@ -13,54 +12,49 @@ const TopBar = () => {
     "/startup-founder-entrepreneur": "startup",
   };
 
-  // This function sets selectedInvestor based on the current pathname
-  const updateSelectedInvestor = (currentPath) => {
-    const currentInvestor = Object.keys(pathToInvestorMap).find(
-      (path) => path === currentPath
-    );
-    if (currentInvestor) {
-      setSelectedInvestor(pathToInvestorMap[currentInvestor]);
-    }
+  const investorToPathMap = {
+    foreign: "/foreign-investor",
+    nri: "/nri-investor",
+    startup: "/startup-founder-entrepreneur",
   };
 
-  // Handle initial state when the component is mounted or path changes
   useEffect(() => {
     const storedInvestor = localStorage.getItem("selectedInvestor");
     if (storedInvestor) {
       setSelectedInvestor(storedInvestor);
-    } else {
-      updateSelectedInvestor(location.pathname);
     }
-  }, []); // This ensures this runs only once on mount
 
-  // Re-run logic when the pathname changes (URL changes)
-  useEffect(() => {
-    updateSelectedInvestor(location.pathname);
+    const currentInvestor = pathToInvestorMap[location.pathname];
+    if (currentInvestor) {
+      setSelectedInvestor(currentInvestor);
+      localStorage.setItem("selectedInvestor", currentInvestor);
+    }
   }, [location.pathname]);
 
   const handleInvestorChange = (e) => {
-    const value = e.target.value;
-    const investorToPathMap = {
-      foreign: "/foreign-investor",
-      nri: "/nri-investor",
-      startup: "/startup-founder-entrepreneur",
-    };
+    const newSelection = e.target.value;
 
-    const targetPath = investorToPathMap[value];
+    if (newSelection !== selectedInvestor) {
+      // Selecting a new option
+      setSelectedInvestor(newSelection);
+      localStorage.setItem("selectedInvestor", newSelection);
+      navigate(investorToPathMap[newSelection], { replace: true });
 
-    // Log current and target paths
-    console.log("Current URL:", location.pathname);
-    console.log("Target URL:", targetPath);
-
-    // Check if the selected value corresponds to a path different from the current one, even if the option is already selected
-    if (location.pathname !== targetPath) {
-      // If the URL is not the same as the selected path, navigate to the target path
-      navigate(targetPath);
+      if (typeof closeOffcanvas === "function") {
+        closeOffcanvas();
+      }
     }
+  };
 
-    // Update the selected investor state and store the selection in localStorage
-    setSelectedInvestor(value);
-    localStorage.setItem("selectedInvestor", value);
+  const handleDropdownClick = (e) => {
+    // If the dropdown is clicked and the same value is selected again
+    if (selectedInvestor && e.target.value === selectedInvestor) {
+      navigate(investorToPathMap[selectedInvestor], { replace: true });
+
+      if (typeof closeOffcanvas === "function") {
+        closeOffcanvas();
+      }
+    }
   };
 
   return (
@@ -72,6 +66,11 @@ const TopBar = () => {
             className="form-select"
             value={selectedInvestor || ""}
             onChange={handleInvestorChange}
+            onMouseDown={(e) => {
+              // Prevent navigation when opening dropdown
+              e.stopPropagation();
+            }}
+            onClick={handleDropdownClick}
           >
             <option value="foreign">Foreign Investor</option>
             <option value="nri">NRI Investor</option>

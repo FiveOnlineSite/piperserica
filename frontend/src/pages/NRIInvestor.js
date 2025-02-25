@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 import OfferingsSlider from "../components/OfferingsSlider";
 import NewsSection from "../components/NewsSection";
 
-const Investor = () => {
+const NRIInvestor = () => {
   const investorItem = [
     {
       image:
@@ -545,7 +545,7 @@ const Investor = () => {
                           type="text"
                           className="form-control"
                           id="first-name"
-                          // placeholder="first name"
+                          //   placeholder="first name"
                         />
                       </div>
                     </div>
@@ -562,7 +562,7 @@ const Investor = () => {
                           type="text"
                           className="form-control"
                           id="last-name"
-                          // placeholder="last name"
+                          //   placeholder="last name"
                         />
                       </div>
                     </div>
@@ -579,7 +579,7 @@ const Investor = () => {
                           type="email"
                           className="form-control"
                           id="email"
-                          // placeholder="email"
+                          //   placeholder="email"
                         />
                       </div>
                     </div>
@@ -640,4 +640,4 @@ const Investor = () => {
   );
 };
 
-export default Investor;
+export default NRIInvestor;

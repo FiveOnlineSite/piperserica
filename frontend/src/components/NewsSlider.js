@@ -8,7 +8,11 @@ const NewsSlider = ({ settings, item }) => {
         {item.map((item, index) => (
           <div key={index} className="news-div">
             <div className="news-img-div">
-              <img src={item.news_img} alt="news" className="news-img w-100" />
+              <img
+                src={`${process.env.PUBLIC_URL}${item.news_img}`}
+                alt="news"
+                className="news-img w-100"
+              />
               <div className="news-type">
                 <h6 className="section-subtitle">{item.news_type}</h6>
               </div>

@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Modal } from "react-bootstrap";
+import Slider from "react-slick";
 import { NavLink } from "react-router-dom";
+import { Modal } from "react-bootstrap";
 
-const CompanyPortfolio = () => {
-  const [selectedIndustry, setSelectedIndustry] = useState("Industry");
+const CompanySlider = () => {
   const [selectedImage, setSelectedImage] = useState(null);
-  const [showModal, setShowModal] = useState(false);
 
   const images = [
     {
@@ -74,6 +73,8 @@ const CompanyPortfolio = () => {
     },
   ];
 
+  const [showModal, setShowModal] = useState(false);
+
   useEffect(() => {
     if (showModal) {
       document.body.classList.add("modal-open");
@@ -81,17 +82,6 @@ const CompanyPortfolio = () => {
       document.body.classList.remove("modal-open");
     }
   }, [showModal]);
-
-  const handleFilterChange = (e) => {
-    setSelectedIndustry(e.target.value);
-  };
-
-  const getFilteredImages = () => {
-    if (selectedIndustry === "Industry" || selectedIndustry === "") {
-      return images; // Show all images if no specific industry is selected
-    }
-    return images.filter((image) => image.label === selectedIndustry);
-  };
 
   const openModal = (image) => {
     setSelectedImage(image);
@@ -101,6 +91,38 @@ const CompanyPortfolio = () => {
   const closeModal = () => {
     setShowModal(false);
     setSelectedImage(null);
+  };
+
+  const settings = {
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 0, // Eliminates delay
+    speed: 8000, // Controls scroll speed (increase for slower scrolling)
+    cssEase: "linear", // Ensures continuous smooth motion
+    slidesToShow: 4, // 4 columns
+    slidesToScroll: 1, // Scroll one item at a time for smooth effect
+    rows: 2, // 2 rows
+    slidesPerRow: 1, // Each slide takes 1 column
+    arrows: false, // Hides arrows for auto-scroll
+    dots: false, // Hides dots for cleaner UI
+    responsive: [
+      {
+        breakpoint: 900,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          rows: 2,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          rows: 2,
+        },
+      },
+    ],
   };
 
   return (
@@ -114,48 +136,50 @@ const CompanyPortfolio = () => {
                 Portfolio Companies
               </h3>
             </div>
-            <div className="col-lg-3">
-              <div className="industries-filter-div">
-                <select
-                  class="form-select"
-                  onChange={handleFilterChange}
-                  aria-label="Default select example"
-                >
-                  <option selected>Industry</option>
-                  <option value="B2B">B2B</option>
-                  <option value="Consumer">Consumer</option>
-                  <option value="Creator Economy">Creator Economy</option>
-                </select>
-              </div>
-            </div>
+            {/* <div className="col-lg-3">
+        <div className="industries-filter-div">
+          <select
+            class="form-select"
+            onChange={handleFilterChange}
+            aria-label="Default select example"
+          >
+            <option selected>Industry</option>
+            <option value="B2B">B2B</option>
+            <option value="Consumer">Consumer</option>
+            <option value="Creator Economy">Creator Economy</option>
+          </select>
+        </div>
+      </div> */}
           </div>
 
           <div className="row mt-lg-4 mt-5">
             <div className="industries-div">
               <div className="row">
-                {getFilteredImages().map((images) => (
-                  <div key={images.id} className="col-lg-3 col-md-6 col-6">
-                    <div
-                      className="industires-logo-div"
-                      onClick={() => openModal(images)}
-                      style={{ cursor: "pointer" }}
-                    >
-                      <img
-                        src={`${process.env.PUBLIC_URL}${images.src}`}
-                        alt="industry"
-                        className="w-100"
-                      />
-                      {/* <div className="industries-content">
-                        <p className="para small-para">
-                          The Fund seeks to empower early and growth stage
-                          companies in India and Southeast Asia, providing them
-                          capital to scale without significantly diluting
-                          equity.
-                        </p>
-                      </div> */}
+                <Slider {...settings}>
+                  {images.map((images) => (
+                    <div key={images.id} className="col-lg-3 col-md-6 col-6">
+                      <div
+                        className="industires-logo-div"
+                        onClick={() => openModal(images)}
+                        style={{ cursor: "pointer" }}
+                      >
+                        <img
+                          src={`${process.env.PUBLIC_URL}${images.src}`}
+                          alt="industry"
+                          className="w-100"
+                        />
+                        {/* <div className="industries-content">
+                  <p className="para small-para">
+                    The Fund seeks to empower early and growth stage
+                    companies in India and Southeast Asia, providing them
+                    capital to scale without significantly diluting
+                    equity.
+                  </p>
+                </div> */}
+                      </div>
                     </div>
-                  </div>
-                ))}
+                  ))}
+                </Slider>
               </div>
             </div>
           </div>
@@ -188,4 +212,4 @@ const CompanyPortfolio = () => {
   );
 };
 
-export default CompanyPortfolio;
+export default CompanySlider;

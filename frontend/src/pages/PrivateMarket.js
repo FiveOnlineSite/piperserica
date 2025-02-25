@@ -9,7 +9,7 @@ const PrivateMarket = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src="/images/banners/market-fund-banner.webp"
+              src={`${process.env.PUBLIC_URL}/images/banners/market-fund-banner.webp`}
               alt="banner-img"
             />
 
@@ -57,7 +57,7 @@ const PrivateMarket = () => {
           <div className="col-lg-7 mt-lg-0 mt-5">
             <div className="investment-solution-img pb-5">
               <img
-                src="/images/banners/market-fund1.webp"
+                src={`${process.env.PUBLIC_URL}/images/banners/market-fund1.webp`}
                 alt="market-fund"
                 className="w-100"
               />
