@@ -493,7 +493,9 @@ body {
 .resume-form-section,
 .investor-news-section,
 .features-section,
-.investor-letter-section {
+.investor-letter-section,
+.contact-form-section,
+.blog-detail-news {
   padding: 50px 0;
   background-color: var(--white-bg);
 }
@@ -828,7 +830,7 @@ body {
 /* INVESTOR LETTER */
 
 .history-section,
-.contact-form-section,
+
 .blog-detail-section,
 /* .investor-letter-section, */
 .startup-news-section,
@@ -873,6 +875,13 @@ body {
   border-right: 1px solid var(--lighter-gray-bg);
   border-bottom: 1px solid var(--lighter-gray-bg);
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+  transition: all 0.6s ease;
+}
+
+.letter-div:hover {
+  border-top: 1px solid var(--blue-font);
+  border-right: 1px solid var(--blue-font);
+  border-bottom: 1px solid var(--blue-font);
 }
 
 .letter-options i {
@@ -1340,6 +1349,12 @@ body {
   font-weight: 400;
   line-height: 35px;
   font-family: "Frank Ruhl Libre", serif;
+  transition: all 0.6s ease;
+  color: var(--black-font);
+}
+
+.letter-div:hover h3 {
+  color: var(--blue-font);
 }
 
 .factsheet-content-div h4 {
@@ -2264,7 +2279,8 @@ form .form-label span {
   .testimonial-section,
   .culture-values-section,
   .openings-section,
-  .resume-form-section {
+  .resume-form-section,
+  .blog-detail-news {
     padding: 30px 0;
   }
 

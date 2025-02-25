@@ -602,7 +602,8 @@ const Header = () => {
                   <li>
                     <NavLink
                       className="dropdown-item"
-                      to={`${process.env.PUBLIC_URL}/about`}
+                      to={`${process.env.PUBLIC_URL}/about#banner-div`}
+                      onClick={(e) => handleScrollToSection(e, "banner-div")}
                     >
                       About Us
                     </NavLink>
@@ -798,7 +799,8 @@ const Header = () => {
                     <li>
                       <NavLink
                         className="dropdown-item"
-                        to={`${process.env.PUBLIC_URL}/about`}
+                        to={`${process.env.PUBLIC_URL}/about#banner-div`}
+                        onClick={(e) => handleScrollToSection(e, "banner-div")}
                       >
                         About Us
                       </NavLink>
