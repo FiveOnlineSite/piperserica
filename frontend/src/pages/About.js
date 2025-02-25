@@ -131,7 +131,7 @@ const About = () => {
   };
   return (
     <Layout>
-      <section className="banner-section">
+      <section className="banner-section" id="banner-div">
         <div className="row">
           <div className="banner-img-div">
             <img

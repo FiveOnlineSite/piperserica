@@ -5,6 +5,8 @@ const TopBar = ({ closeOffcanvas }) => {
   const location = useLocation();
   const navigate = useNavigate();
   const [selectedInvestor, setSelectedInvestor] = useState("");
+  const [prevInvestor, setPrevInvestor] = useState(""); // Track previous value
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // Track dropdown open state
 
   const pathToInvestorMap = {
     "/foreign-investor": "foreign",
@@ -22,38 +24,40 @@ const TopBar = ({ closeOffcanvas }) => {
     const storedInvestor = localStorage.getItem("selectedInvestor");
     if (storedInvestor) {
       setSelectedInvestor(storedInvestor);
+      setPrevInvestor(storedInvestor); // Save the initial value as previous value
     }
 
     const currentInvestor = pathToInvestorMap[location.pathname];
     if (currentInvestor) {
       setSelectedInvestor(currentInvestor);
+      setPrevInvestor(currentInvestor);
       localStorage.setItem("selectedInvestor", currentInvestor);
     }
   }, [location.pathname]);
 
   const handleInvestorChange = (e) => {
     const newSelection = e.target.value;
-
-    // Always navigate to the selected option's page
     setSelectedInvestor(newSelection);
+    setPrevInvestor(newSelection); // Update previous value
     localStorage.setItem("selectedInvestor", newSelection);
     navigate(investorToPathMap[newSelection], { replace: true });
 
     if (typeof closeOffcanvas === "function") {
       closeOffcanvas();
     }
+
+    setIsDropdownOpen(false); // Close dropdown after selection
   };
 
-  const handleDropdownClick = (e) => {
-    const newSelection = e.target.value;
+  const handleDropdownFocus = () => {
+    setIsDropdownOpen(true);
+  };
 
-    // Check if the same option is clicked again
-    if (newSelection === selectedInvestor) {
-      navigate(investorToPathMap[newSelection], { replace: true });
-      if (typeof closeOffcanvas === "function") {
-        closeOffcanvas();
-      }
-    }
+  const handleDropdownBlur = () => {
+    setIsDropdownOpen(false);
+    // Restore previous value if user does not select anything
+    setSelectedInvestor(prevInvestor);
+    localStorage.setItem("selectedInvestor", prevInvestor);
   };
 
   return (
@@ -63,14 +67,14 @@ const TopBar = ({ closeOffcanvas }) => {
           <h6>I am a: </h6>
           <select
             className="form-select"
-            value={selectedInvestor || ""}
+            value={isDropdownOpen ? "" : selectedInvestor} // Show empty when dropdown opens
             onChange={handleInvestorChange}
-            onMouseDown={(e) => {
-              // Prevent navigation when opening dropdown
-              e.stopPropagation();
-            }}
-            onClick={handleDropdownClick} // Add this line
+            onFocus={handleDropdownFocus} // Track when dropdown opens
+            onBlur={handleDropdownBlur} // Restore if not selected
           >
+            <option value="" disabled>
+              Select an option
+            </option>
             <option value="foreign">Foreign Investor</option>
             <option value="nri">NRI Investor</option>
             <option value="startup">Startup Founder & Entrepreneur</option>
