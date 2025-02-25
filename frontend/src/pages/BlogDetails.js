@@ -192,7 +192,7 @@ const BlogDetails = () => {
                           type="text"
                           class="form-control"
                           id="name"
-                          placeholder="eg: john"
+                          // placeholder="eg: john"
                           required
                         />
                       </div>
@@ -206,7 +206,7 @@ const BlogDetails = () => {
                           type="text"
                           class="form-control"
                           id="phone"
-                          placeholder="0000000000"
+                          // placeholder="0000000000"
                           required
                         />
                       </div>
@@ -220,7 +220,7 @@ const BlogDetails = () => {
                           type="email"
                           class="form-control"
                           id="email"
-                          placeholder="eg: johndoe@xyz.com"
+                          // placeholder="eg: johndoe@xyz.com"
                         />
                       </div>
                     </div>
@@ -234,7 +234,7 @@ const BlogDetails = () => {
                           class="form-control"
                           id="message"
                           rows={"4"}
-                          placeholder="start typing....."
+                          // placeholder="start typing....."
                         ></textarea>
                       </div>
                     </div>
@@ -265,7 +265,9 @@ const BlogDetails = () => {
         </div>
       </section>
 
-      <NewsSection />
+      <section className="blog-detail-news">
+        <NewsSection />
+      </section>
     </Layout>
   );
 };
