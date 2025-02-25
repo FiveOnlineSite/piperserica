@@ -4,8 +4,9 @@ import Slider from "react-slick";
 import { NavLink } from "react-router-dom";
 import OfferingsSlider from "../components/OfferingsSlider";
 import NewsSection from "../components/NewsSection";
-
-const Investor = () => {
+import CompanyPortfolio from "../components/CompanyPortfolio";
+import CompanySlider from "../components/CompanySlider";
+const Startup = () => {
   const investorItem = [
     {
       image:
@@ -61,14 +62,8 @@ const Investor = () => {
 
   const offeringsItems = [
     {
-      strategy_title: "Public Market",
-      funds: "Piper Serica Numero Uno Fund",
-      fund_type: "Foreign Investor",
-    },
-    {
-      strategy_title: "Public Market",
-      funds: "Piper Serica Numero Uno Fund",
-      fund_type: "NRI Investor",
+      strategy_title: "Private Market",
+      funds: "Piper Serica Angel Fund",
     },
     // {
     //   strategy_title: "Private Credit",
@@ -445,8 +440,8 @@ const Investor = () => {
             </h2>
 
             {/* <h3 className="section-title my-lg-3 my-4">
-              Private Markets Funds
-            </h3> */}
+                  Private Markets Funds
+                </h3> */}
             <div className="row align-items-center my-lg-3 my-4">
               <div className="col-lg-9">
                 <p className="para small-para">
@@ -461,11 +456,11 @@ const Investor = () => {
                 </p>
               </div>
               {/* <div className="col-lg-3">
-                <NavLink to="/" className="banner-btn blue-btn mt-0">
-                  All funds
-                  <i className="fa-solid fa-arrow-right"></i>
-                </NavLink>
-              </div> */}
+                    <NavLink to="/" className="banner-btn blue-btn mt-0">
+                      All funds
+                      <i className="fa-solid fa-arrow-right"></i>
+                    </NavLink>
+                  </div> */}
             </div>
 
             <div className="row mt-5">
@@ -492,34 +487,11 @@ const Investor = () => {
         </div>
       </section>
 
-      <section className="investor-letters-section">
-        <div className="container">
-          <div className="row align-items-center">
-            <h5 className="section-subtitle">Outlook</h5>
-            <div className="row align-items-center">
-              <div className="col-lg-6">
-                <h2 className="banner-title offerings-title mt-3">
-                  Investor Letters
-                </h2>
-              </div>
-              <div className="col-lg-6 mt-lg-0 mt-4">
-                <div>
-                  <NavLink
-                    to="/investor-letters"
-                    className="banner-btn blue-btn mt-0"
-                  >
-                    Discover all
-                  </NavLink>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="investor-news-section">
+      <section className="startup-news-section">
         <NewsSection />
       </section>
+
+      <CompanySlider />
 
       <section className="newsletter-section">
         <div className="container">
@@ -640,4 +612,4 @@ const Investor = () => {
   );
 };
 
-export default Investor;
+export default Startup;

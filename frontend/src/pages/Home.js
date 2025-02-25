@@ -25,7 +25,7 @@ const Home = () => {
         <div className="row">
           <div className="video-banner">
             <video
-              src="/videos/5726501-uhd_3840_2160_30fps.mp4"
+              src={`${process.env.PUBLIC_URL}/videos/5726501-uhd_3840_2160_30fps.mp4`}
               loop
               muted
               autoPlay

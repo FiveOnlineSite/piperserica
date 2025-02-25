@@ -17,7 +17,7 @@ const OurImpact = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src="/images/banners/our-impact-banner.webp"
+              src={`${process.env.PUBLIC_URL}/images/banners/our-impact-banner.webp`}
               alt="banner-img"
             />
 

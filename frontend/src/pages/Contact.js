@@ -9,7 +9,7 @@ const Contact = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src="/images/banners/market-fund-banner.webp"
+              src={`${process.env.PUBLIC_URL}/images/banners/market-fund-banner.webp`}
               alt="banner-img"
             />
 
@@ -117,7 +117,10 @@ const Contact = () => {
                             <i>
                               *By submitting the contact form, you consent to
                               all data in the form being used in accordance with
-                              <a href="#">Piper Serics's data privacy policy</a>
+                              <a href="#">
+                                {" "}
+                                Piper Serics's data privacy policy
+                              </a>
                             </i>
                           </p>
                         </div>
@@ -142,7 +145,7 @@ const Contact = () => {
                 <h6 className="section-subtitle mb-4">
                   Piper Serica Advisors Pvt. Ltd.
                 </h6>
-
+                {/* 
                 <p className="para small-para">
                   Name of the fund: Piper Serica Angel Fund
                 </p>
@@ -170,7 +173,7 @@ const Contact = () => {
                   Address of the investment manager: A Wing, 905/906, Marathon
                   Innova Nextgen, Ganpatrao Kadam Marg, Opp-Peninsula Corporate
                   Park, Lower Parel, Mumbai – 400013
-                </p>
+                </p> */}
 
                 <div className="social-media-div mt-4">
                   <a href="tel:022-66545370" className="single-social-media">
@@ -202,10 +205,9 @@ const Contact = () => {
             <div className="col-lg-6 offset-lg-1 mt-lg-0 mt-4">
               <div className="location-map">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.514609850698!2d72.82210332424965!3d18.99703235444872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7ce8dab12be6f%3A0x67f160f4c004525d!2sMarathon%20NextGen%20Entry%20Point!5e0!3m2!1sen!2sin!4v1739192478469!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7544.782083117704!2d72.8177315!3d19.0024829!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf0da9017b63%3A0x3ffea97698ac957c!2sPiper%20Serica!5e0!3m2!1sen!2sin!4v1739949925552!5m2!1sen!2sin"
                   width="600"
-                  height="550"
-                  style={{ border: 0 }}
+                  height="450"
                   allowfullscreen=""
                   loading="lazy"
                   referrerpolicy="no-referrer-when-downgrade"

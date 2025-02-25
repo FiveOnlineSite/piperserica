@@ -12,7 +12,7 @@ const Funds = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src="/images/banners/market-fund-banner.webp"
+              src={`${process.env.PUBLIC_URL}/images/banners/market-fund-banner.webp`}
               alt="banner-img"
             />
 
@@ -77,7 +77,7 @@ const Funds = () => {
         </div>
       </section>
 
-      <section className="features-section">
+      <section className="features-section funds-features-section">
         <div className="container">
           <div className="row">
             <div className="col-lg-5">
@@ -207,9 +207,11 @@ const Funds = () => {
         </div>
       </section>
 
-      <CompanyPortfolio />
+      <section className="funds-article-section">
+        <ArticleSection />
+      </section>
 
-      <ArticleSection />
+      <CompanyPortfolio />
 
       <section className="fund-info-section mb-0">
         <div className="container">

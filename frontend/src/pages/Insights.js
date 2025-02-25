@@ -67,7 +67,7 @@ const Insights = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src="/images/banners/market-fund-banner.webp"
+              src={`${process.env.PUBLIC_URL}/images/banners/market-fund-banner.webp`}
               alt="banner-img"
             />
             <div className="banner-content-div">
@@ -91,7 +91,7 @@ const Insights = () => {
         <div className="container">
           {/* Filter Dropdowns */}
           <div className="row mb-4">
-            <div className="col-lg-3 col-md-6 mt-lg-0 mt-0">
+            <div className="col-lg-3 col-md-6 mt-lg-0 mt-0 order-lg-1 order-md-1 order-2">
               <div className="industries-filter-div">
                 <select
                   className="form-select"
@@ -105,7 +105,7 @@ const Insights = () => {
                 </select>
               </div>
             </div>
-            <div className="col-lg-3 col-md-6 mt-lg-0 mt-md-0 mt-3">
+            <div className="col-lg-3 col-md-6 mt-lg-0 mt-md-0 mt-3 order-lg-2 order-md-2 order-3">
               <div className="industries-filter-div">
                 <select
                   className="form-select"
@@ -119,7 +119,7 @@ const Insights = () => {
                 </select>
               </div>
             </div>
-            <div className="col-lg-3 col-md-6 mt-lg-0 mt-md-4 mt-3">
+            <div className="col-lg-3 col-md-6 mt-lg-0 mt-md-4 mt-3 order-lg-3 order-md-3 order-4">
               <div className="industries-filter-div">
                 <select
                   className="form-select"
@@ -131,7 +131,7 @@ const Insights = () => {
                 </select>
               </div>
             </div>
-            <div className="col-lg-3 col-md-6 mt-lg-0 mt-md-4 mt-3">
+            <div className="col-lg-3 col-md-6 mt-lg-0 mt-md-4 mb-3 order-lg-4 order-md-4 order-1">
               <div className="industries-filter-div">
                 <form className="search-div d-flex p-0" role="search">
                   <input
@@ -167,11 +167,14 @@ const Insights = () => {
           {/* News Items */}
           <div className="row mt-5">
             {filteredNewsItems.map((item, index) => (
-              <div className="col-lg-4 col-md-6 col-12" key={index}>
+              <div
+                className="col-lg-4 col-md-6 col-12 mt-lg-0 mt-md-3 mt-5"
+                key={index}
+              >
                 <div className="news-div">
                   <div className="news-img-div">
                     <img
-                      src={item.news_img}
+                      src={`${process.env.PUBLIC_URL}${item.news_img}`}
                       alt="news"
                       className="news-img w-100"
                     />
