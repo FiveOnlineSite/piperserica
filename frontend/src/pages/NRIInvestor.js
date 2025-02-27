@@ -479,10 +479,10 @@ const NRIInvestor = () => {
                     </div>
                     <div className="strategy-funds-div">
                       {/* <h6 className="section-subtitle mt-5">funds</h6> */}
-                      <a href="#" className="funds-div mt-5">
+                      <NavLink to="/public-funds" className="funds-div mt-2">
                         <h5>{item.funds}</h5>
                         <i className="fa-solid fa-arrow-right"></i>
-                      </a>
+                      </NavLink>
                     </div>
                   </div>
                 </div>
