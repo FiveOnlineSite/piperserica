@@ -474,18 +474,22 @@ const Investor = () => {
                     </div>
                     <div className="strategy-funds-div">
                       {/* <h6 className="section-subtitle mt-5">funds</h6> */}
-                      <NavLink to="/public-funds" className="funds-div mt-2">
-                        <h5>{item.funds}</h5>
-                        <i className="fa-solid fa-arrow-right"></i>
-                      </NavLink>
+                      <NavLink to="/public-funds" className="mt-2">
+                        <div className="funds-container">
+                          <div className="funds-div">
+                            <h5>{item.funds}</h5>
+                            <i className="fa-solid fa-arrow-right"></i>
+                          </div>
 
-                      <p className="para small-para mt-4">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud
-                        exercitation ullamco laboris nisi ut aliquip ex ea
-                        commodo consequat.
-                      </p>
+                          <p className="para small-para">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat.
+                          </p>
+                        </div>
+                      </NavLink>
                     </div>
                   </div>
                 </div>
