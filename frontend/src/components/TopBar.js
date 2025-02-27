@@ -73,7 +73,7 @@ const TopBar = ({ closeOffcanvas }) => {
             onBlur={handleDropdownBlur} // Restore if not selected
           >
             <option value="" disabled>
-              Select an option
+              Select a investor type
             </option>
             <option value="foreign">Foreign Investor</option>
             <option value="nri">NRI Investor</option>
