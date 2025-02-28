@@ -504,7 +504,7 @@ const NRIInvestor = () => {
         </div>
       </section>
 
-      <section className="investor-letters-section">
+      <section className="outlook-section">
         <div className="container">
           <div className="row align-items-center">
             <h5 className="section-subtitle">Outlook</h5>

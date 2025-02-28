@@ -60,8 +60,30 @@ const TopBar = ({ closeOffcanvas }) => {
     localStorage.setItem("selectedInvestor", prevInvestor);
   };
 
+  const [isFixed, setIsFixed] = useState(false);
+  const { pathname } = useLocation();
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsFixed(pathname !== "/" && window.scrollY > 30);
+    };
+
+    if (pathname !== "/") {
+      window.addEventListener("scroll", handleScroll);
+    }
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [pathname]);
+
   return (
-    <div className="topbar-section">
+    <div
+      className={`topbar-section ${
+        location.pathname === "/"
+          ? "absolute-topbar"
+          : isFixed
+          ? "fixed-topbar"
+          : ""
+      }`}
+    >
       <div className="container">
         <div className="select-div">
           <h6>I am a: </h6>

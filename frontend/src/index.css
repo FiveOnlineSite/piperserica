@@ -35,13 +35,30 @@ body {
   background: transparent; /* Optional: Make it transparent on home page */
 }
 
+.absolute-topbar {
+  position: absolute !important;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: var(--white-bg); /* Optional: Make it transparent on home page */
+}
+
 .fixed-navbar {
+  position: fixed !important;
+  top: 4%;
+  width: 100%;
+  z-index: 1000;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+
+.fixed-topbar {
   position: fixed !important;
   top: 0;
   width: 100%;
   z-index: 1000;
   background: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease-in-out;
 }
 
@@ -352,6 +369,10 @@ body {
 
 /* TOPBAR */
 
+.topbar-section {
+  background: var(--white-bg);
+}
+
 .select-div {
   display: flex;
   align-items: center;
@@ -493,7 +514,6 @@ body {
 .resume-form-section,
 .investor-news-section,
 .features-section,
-.investor-letter-section,
 .contact-form-section,
 .blog-detail-news {
   padding: 50px 0;
@@ -843,7 +863,7 @@ body {
 .startup-news-section,
 .funds-article-section,
 .investment-philosophy-section,
-.factsheet-section {
+.factsheet-section, .outlook-section ,.investor-letter-section {
   padding: 50px 0;
   background-color: var(--lighter-gray-bg);
 }
@@ -860,7 +880,8 @@ body {
 .funds-article-section,
 .investment-philosophy-section,
 .factsheet-section,
-.investor-letters-section {
+.investor-letters-section,
+.outlook-section {
   margin: 50px 0;
 }
 
@@ -2077,6 +2098,10 @@ form .form-label span {
     height: 100px;
   }
 
+  .banner-title {
+    width: 70%;
+  }
+
   .content-div h2 {
     margin: 0;
     max-width: 50%;
@@ -2216,8 +2241,16 @@ form .form-label span {
     width: 100%;
   }
 
+  .team-div {
+    padding: 20px;
+  }
+
   .values-div {
     margin: 20px 0;
+  }
+
+  .footer-links .nav-item {
+    padding: 0;
   }
 }
 
@@ -2287,14 +2320,23 @@ form .form-label span {
   .culture-values-section,
   .openings-section,
   .resume-form-section,
-  .blog-detail-news {
+  .blog-detail-news,
+  .outlook-section,
+  .investor-news-section,
+  .tabs-content-div {
     padding: 30px 0;
   }
 
   .why-us-section,
   .culture-values-section,
-  .startup-news-section {
+  .startup-news-section,
+  .outlook-section,
+  .why-us-section {
     margin: 30px 0;
+  }
+
+  .newsletter-section {
+    padding-bottom: 60px;
   }
 
   .investment-solution-section {
@@ -2321,10 +2363,6 @@ form .form-label span {
   .investor-banner-content {
     height: 50vh;
     top: 50%;
-  }
-
-  .why-us-section {
-    margin-top: 0;
   }
 }
 
@@ -2400,7 +2438,10 @@ form .form-label span {
   .testimonial-section,
   .culture-values-section,
   .openings-section,
-  .resume-form-section {
+  .resume-form-section,
+  .outlook-section,
+  .investor-news-section,
+  .tabs-content-div {
     padding: 30px 15px;
   }
 
@@ -2420,9 +2461,6 @@ form .form-label span {
     padding-right: 15px;
   }
 
-  .tabs-content-div {
-    padding: 0 20px;
-  }
   /* .investment-solution-section {
     padding: 0 20px;
   } */
@@ -2435,6 +2473,10 @@ form .form-label span {
   .founders-text {
     font-size: 25px;
     line-height: 35px;
+  }
+
+  .newsletter-section {
+    padding-bottom: 60px;
   }
 
   .journey-text .journey-left-quote {
