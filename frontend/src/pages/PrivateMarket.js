@@ -62,7 +62,7 @@ const PrivateMarket = () => {
                 className="w-100"
               />
 
-              <div className="tabs-content-div p-lg-5 p-3">
+              <div className="tabs-content-div p-lg-5 px-md-4">
                 <h3>Tailored and optimized portfolio allocation</h3>
                 <p className="para small-para">
                   We match your investment requirements with your needs,

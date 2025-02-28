@@ -113,6 +113,24 @@ const PublicFund = () => {
                 opportunity to participate in Southeast Asia and India's venture
                 debt story and a fast growing segment.
               </p>
+
+              <div>
+                <NavLink
+                  to="/investor-letters"
+                  className="banner-btn blue-btn tabs-btn mt-lg-4 mt-md-4 mt-4 me-lg-4 me-md-4 me-0 "
+                >
+                  Factsheet
+                </NavLink>
+              </div>
+
+              <div>
+                <NavLink
+                  to="/investor-letters"
+                  className="banner-btn blue-btn tabs-btn mt-lg-4 mt-md-4 mt-4"
+                >
+                  Presentation
+                </NavLink>
+              </div>
             </div>
           </div>
         </div>
@@ -227,7 +245,7 @@ const PublicFund = () => {
         </div>
       </section>
 
-      <section className="factsheet-section">
+      {/* <section className="factsheet-section">
         <div className="container">
           <div className="row">
             <div className="col-lg-5">
@@ -263,19 +281,19 @@ const PublicFund = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <section className="investor-letter-section">
         <div className="container">
           <div className="row align-items-center">
             <h5 className="section-subtitle">Download</h5>
             <div className="row align-items-center">
-              <div className="col-lg-4">
+              <div className="col-lg-5">
                 <h2 className="banner-title offerings-title mt-3">
                   Disclosures
                 </h2>
               </div>
-              <div className="col-lg-8 mt-lg-0 mt-4 d-flex justify-conten-lg-end justify-content-start">
+              <div className="col-lg-7 mt-lg-0 mt-4 d-flex justify-conten-lg-end justify-content-start">
                 {/* <div>
                   <NavLink
                     to="/investor-letters"
@@ -285,42 +303,21 @@ const PublicFund = () => {
                   </NavLink>
                 </div> */}
                 <div className="row">
-                  <div className="col-lg-6">
-                    <NavLink to="/" target="_blank">
-                      <div className="letter-div mb-5">
-                        <h5 className="section-subtitle">January 2025</h5>
-                        <h3>
-                          Piper Serica Leader Portfolio Strategy January 2025
-                        </h3>
-                        {/* <div className="letter-options py-3 pt-5">
-                    
-                      <i class="fa-solid fa-eye"></i>
-                   
-                    <a href={letter.filepath} download>
-                      <i className="fa-solid fa-cloud-arrow-down"></i>
-                    </a>
-                  </div> */}
-                      </div>
-                    </NavLink>
-                  </div>
-                  <div className="col-lg-6">
-                    <NavLink to="/" target="_blank">
-                      <div className="letter-div mb-5">
-                        <h5 className="section-subtitle">January 2025</h5>
-                        <h3>
-                          Piper Serica Leader Portfolio Strategy January 2025
-                        </h3>
-                        {/* <div className="letter-options py-3 pt-5">
-                    
-                      <i class="fa-solid fa-eye"></i>
-                   
-                    <a href={letter.filepath} download>
-                      <i className="fa-solid fa-cloud-arrow-down"></i>
-                    </a>
-                  </div> */}
-                      </div>
-                    </NavLink>
-                  </div>
+                  <NavLink to="/" target="_blank">
+                    <div className="letter-div mb-4">
+                      <h6>FPI Disclosure Document 1</h6>
+                    </div>
+                  </NavLink>
+                  <NavLink to="/" target="_blank">
+                    <div className="letter-div mb-4">
+                      <h6>FPI Management Fees Calculator</h6>
+                    </div>
+                  </NavLink>
+                  <NavLink to="/" target="_blank">
+                    <div className="letter-div mb-4">
+                      <h6>FPI Management Fees Calculator</h6>
+                    </div>
+                  </NavLink>
                 </div>
               </div>
             </div>
