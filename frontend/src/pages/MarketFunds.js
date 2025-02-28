@@ -83,7 +83,7 @@ const MarketFunds = () => {
                 className="w-100"
               />
 
-              <div className="tabs-content-div p-lg-5 p-3 pb-5">
+              <div className="tabs-content-div p-lg-5 px-md-4">
                 <h3>Tailored and optimized portfolio allocation</h3>
                 <p className="para small-para">
                   We match your investment requirements with your needs,
@@ -133,7 +133,7 @@ const MarketFunds = () => {
                 className="w-100"
               />
 
-              <div className="tabs-content-div p-lg-5 p-3">
+              <div className="tabs-content-div p-lg-5 px-md-4">
                 <h3>Finding the best fit for your requirements</h3>
                 <p className="para small-para">
                   We find innovative, personalized solutions that meet your
