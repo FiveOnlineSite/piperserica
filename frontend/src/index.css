@@ -2048,6 +2048,10 @@ form .form-label span {
   .why-us-section {
     height: auto;
   }
+
+  .fixed-navbar {
+    top: 2%;
+  }
 }
 
 @media screen and (max-width: 991px) {
