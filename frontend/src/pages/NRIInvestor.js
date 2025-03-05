@@ -271,12 +271,12 @@ const NRIInvestor = () => {
                         Investor Friendliness:
                       </h4>
                       <p className="para why-para">
-                        Our investment strategies offer our investors exposure
-                        to differentiated opportunities which have a low
-                        correlation to broader markets. Our unwavering focus on
-                        delivering attractive risk-adjusted returns with capital
-                        preservation drives us to minimize market cycle risks
-                        across our strategies.
+                      We love to communicate with our investors on a regular basis. 
+                      While the regulatory compliance requires us to send standard 
+                      portfolio and valuation reports to our investors we go beyond that. 
+                      Through monthly, quarterly and annual investor letters and regular 
+                      webinars we share our portfolio strategy and market outlook on a 
+                      regular basis with our investors.
                       </p>
                     </div>
                   </NavLink>
@@ -422,12 +422,12 @@ const NRIInvestor = () => {
                         Investor Friendliness:
                       </h4>
                       <p className="para why-para">
-                        Our investment strategies offer our investors exposure
-                        to differentiated opportunities which have a low
-                        correlation to broader markets. Our unwavering focus on
-                        delivering attractive risk-adjusted returns with capital
-                        preservation drives us to minimize market cycle risks
-                        across our strategies.
+                      We love to communicate with our investors on a regular basis. 
+                      While the regulatory compliance requires us to send standard 
+                      portfolio and valuation reports to our investors we go beyond that. 
+                      Through monthly, quarterly and annual investor letters and regular 
+                      webinars we share our portfolio strategy and market outlook on a 
+                      regular basis with our investors.
                       </p>
                     </div>
                   </div>
