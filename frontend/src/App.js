@@ -20,6 +20,7 @@ import Career from "./pages/Career";
 import Startup from "./pages/Startup";
 import NRIInvestor from "./pages/NRIInvestor";
 import FamilyOffice from "./pages/FamilyOffice";
+import LeaderPortfolio from "./pages/LeaderPortfolio";
 
 function App() {
   return (
@@ -43,13 +44,14 @@ function App() {
         <Route path="/investor-letters" element={<InvestorLetter />}></Route>
         <Route path="/our-impact" element={<OurImpact />}></Route>
         <Route path="/Insights" element={<Insights />}></Route>
-        <Route path="/public-funds" element={<PublicFund />}></Route>
+        <Route path="/public-market/piper-serica-nemero-uno-india-fund" element={<PublicFund />}></Route>
         <Route path="/news-article" element={<NewsArticle />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/blog-details" element={<BlogDetails />}></Route>
         <Route path="/disclaimer" element={<Disclaimer />}></Route>
         <Route path="/disclosure" element={<Disclosure />}></Route>
         <Route path="/privacy-policy" element={<PrivacyPolicy />}></Route>
+        <Route path="/public-market/piper-serica-leader-portfolio" element={<LeaderPortfolio/> }></Route>
       </Routes>
     </Router>
   );
