@@ -61,7 +61,7 @@ const MarketFunds = () => {
           <div className="col-lg-5">
             <div className="container">
               <div className="investment-solution-content">
-                <h6 className="section-subtitle ">Investment SOLUTIONS</h6>
+                <h6 className="section-subtitle ">Foreign Portfolio Investment (FPI)</h6>
                 <h2 className="section-title small-section-title mt-lg-3 mt-4">
                   Piper Serica Numero Uno India Fund
                 </h2>
@@ -110,10 +110,10 @@ const MarketFunds = () => {
             <div className="container pt-5">
               <div className="investment-solution-content">
                 <h6 className="section-subtitle">
-                  Partner Value-Added Services
+                Portfolio Management Services (PMS)
                 </h6>
                 <h2 className="section-title small-section-title mt-lg-3 mt-4">
-                  Piper Serica Leader Portfolio
+                Piper Serica Leader Portfolio
                 </h2>
                 {/* <p className="para small-para mt-lg-3 mt-4">
                   Our in-house experts provide solutions supported by a
