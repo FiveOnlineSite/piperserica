@@ -21,6 +21,7 @@ import Startup from "./pages/Startup";
 import NRIInvestor from "./pages/NRIInvestor";
 import FamilyOffice from "./pages/FamilyOffice";
 import LeaderPortfolio from "./pages/LeaderPortfolio";
+import AngelFund from "./pages/AngelFund";
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
         <Route path="/disclosure" element={<Disclosure />}></Route>
         <Route path="/privacy-policy" element={<PrivacyPolicy />}></Route>
         <Route path="/public-market/piper-serica-leader-portfolio" element={<LeaderPortfolio/> }></Route>
+        <Route path="/private-market/piper-serica-angel-fund" element={<AngelFund/> }></Route>
       </Routes>
     </Router>
   );
