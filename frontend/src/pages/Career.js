@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import Layout from "../components/Layout";
 import Slider from "react-slick";
 import { NavLink } from "react-router-dom";
 import TestimonialSlider from "../components/TestimonialSlider";
+import emailjs from "@emailjs/browser";
 
 const Career = () => {
   const settings = {
@@ -116,6 +117,84 @@ const Career = () => {
         "Empowering growth to me is the freedom and support to take ownership/charge of what I do. One of the core values at Lighthouse Canton is Entrepreneurship and I think this truly reflects the meaning of empowering growth within the organization. I have extremely supportive and nurturing leaders and colleagues who believe in me and constantly pushing me to take charge. They say, sky's the limit and I know these are the people who fuel me the confidence to take flight.",
     },
   ];
+
+  const formRef = useRef();
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+    file: null,
+  });
+
+  // Handle text inputs
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  // Handle file input
+  const handleFileChange = async (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const formData = new FormData();
+      formData.append("file", file);
+      formData.append("upload_preset", "piperserica"); // Get from Cloudinary settings
+      formData.append("resource_type", "auto");
+
+      try {
+        const response = await fetch(
+          "https://api.cloudinary.com/v1_1/dqpln4vod/raw/upload",
+          {
+            method: "POST",
+            body: formData,
+          }
+        );
+        const data = await response.json();
+        setFormData((prevData) => ({
+          ...prevData,
+          file: data.secure_url, // Store uploaded file URL
+        }));
+      } catch (error) {
+        console.error("File upload failed", error);
+      }
+    }
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Prepare data for EmailJS
+    const emailParams = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      message: formData.message,
+      attachment: formData.file, // Send base64 file
+    };
+
+    emailjs
+      .send(
+        "service_1fyftx8",
+        "template_jy27emd",
+        emailParams,
+        "hdyWkZtLGiur_O_Fb"
+      )
+      .then(
+        (response) => {
+          console.log(
+            "Email sent successfully!",
+            response.status,
+            response.text
+          );
+          alert("Message sent successfully!");
+        },
+        (err) => {
+          console.error("Failed to send email:", err);
+        }
+      );
+  };
 
   return (
     <Layout>
@@ -342,7 +421,7 @@ const Career = () => {
                 enquiry. Please provide us more details of what we can help with
                 and a member of the team will be in touch.
               </p>
-              <form>
+              <form ref={formRef} onSubmit={handleSubmit}>
                 <div className="row mt-5">
                   <div className="col-lg-6">
                     <div class="mb-3">
@@ -353,6 +432,8 @@ const Career = () => {
                         type="text"
                         class="form-control"
                         id="name"
+                        name="name"
+                        onChange={handleChange}
                         // placeholder="eg: john"
                         required
                       />
@@ -367,6 +448,8 @@ const Career = () => {
                         type="text"
                         class="form-control"
                         id="phone"
+                        name="phone"
+                        onChange={handleChange}
                         // placeholder="0000000000"
                         required
                       />
@@ -379,7 +462,9 @@ const Career = () => {
                       </label>
                       <input
                         type="email"
+                        name="email"
                         class="form-control"
+                        onChange={handleChange}
                         id="email"
                         // placeholder="eg: johndoe@xyz.com"
                       />
@@ -395,6 +480,8 @@ const Career = () => {
                         sx
                         class="form-control"
                         id="resume"
+                        name="resume"
+                        onChange={handleFileChange}
                         accept=".pdf, .docx"
                       />
                     </div>
@@ -408,6 +495,8 @@ const Career = () => {
                         type="text"
                         class="form-control"
                         id="message"
+                        name="message"
+                        onChange={handleChange}
                         rows={"4"}
                         // placeholder="start typing....."
                       ></textarea>
@@ -417,12 +506,12 @@ const Career = () => {
                   <div className="col-lg-12">
                     <div className="row">
                       <div className="col-lg-3 d-flex justify-content-start">
-                        <NavLink
-                          to="/"
+                        <button
                           className="banner-btn blue-btn mt-0 mb-3"
+                          type="submit"
                         >
                           Send Enquiry
-                        </NavLink>
+                        </button>
                       </div>
                       <div className="col-lg-9">
                         <p className="para subscribe-para mb-0">
