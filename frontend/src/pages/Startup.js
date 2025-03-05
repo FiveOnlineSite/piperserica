@@ -64,6 +64,7 @@ const Startup = () => {
     {
       strategy_title: "Private Market",
       funds: "Piper Serica Angel Fund",
+      link:"/private-market/piper-serica-angel-fund",
     },
     // {
     //   strategy_title: "Private Credit",
@@ -436,7 +437,7 @@ const Startup = () => {
                       {/* <h6 className="section-subtitle mt-5">funds</h6> */}
 
                       <div className="funds-container">
-                        <NavLink to="/public-funds" className="mt-2">
+                        <NavLink to={item.link} className="mt-2">
                           <div className="funds-div">
                             <h5>{item.funds}</h5>
                             <i className="fa-solid fa-arrow-right"></i>
