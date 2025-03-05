@@ -19,6 +19,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Career from "./pages/Career";
 import Startup from "./pages/Startup";
 import NRIInvestor from "./pages/NRIInvestor";
+import FamilyOffice from "./pages/FamilyOffice";
 
 function App() {
   return (
@@ -29,6 +30,10 @@ function App() {
         <Route path="/about" element={<About />} />
         <Route path="/foreign-investor" element={<Investor />} />
         <Route path="/nri-investor" element={<NRIInvestor />} />
+        <Route
+          path="/family-office-and-indian-investor"
+          element={<FamilyOffice />}
+        />
         <Route path="/startup-founder-entrepreneur" element={<Startup />} />
         <Route path="/careers" element={<Career />}></Route>
         <Route path="/public-market" element={<MarketFunds />}></Route>
