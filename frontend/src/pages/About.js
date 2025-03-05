@@ -174,17 +174,10 @@ const About = () => {
             </div>
             <div className="col-lg-7">
               <p className="para mt-5">
-                Piper Serica is a global investment institution offering wealth
-                and asset management services. Led by an experienced senior
-                management team, we work with clients across geographies from
-                our Singapore, Dubai, and India offices.
+              Piper Serica is a long-only active equity asset manager that traverses various strategies of equity investment in India. We manage multiple funds that invest in Indian listed companies for domestic and foreign individuals and institutions. We also manage a fund that invests in Indian startups that are building business models based on deep tech. We have been investing in Indian companies for over 30 years and have a very solid understanding of how to succeed while investing in India navigating through various risks, most of them unique to India as an emerging market.
               </p>
               <p className="para">
-                We provide our clients and investors with data-backed,
-                well-researched investment guidance, aided by our robust
-                institutional framework. No matter what a client's specific
-                need, we bring the same diligence and care, working together to
-                achieve sustainable goals.
+              The funds that we manage cater to different risk and return profiles and objectives of our investors. We have an edge over our peers due to our deep research and disciplined approach to investing. Our research team is extensively trained in our proprietary research processes that we have developed and mostly automated. To ensure full skin in the game our fund management team makes all their public and private investments through the funds managed by Piper Serica. We are a fund management company owned by its management team. Our management company is majority owned by women.
               </p>
 
               {/* <NavLink
@@ -237,7 +230,7 @@ const About = () => {
                   <div>
                     <div className="d-flex w-100 align-items-center">
                       <span></span>
-                      <h4>2014</h4>
+                      <h4>2004</h4>
                     </div>
                   </div>
                 </a>
@@ -253,7 +246,7 @@ const About = () => {
                     </div>
                   </div>
                 </a>
-                <a
+                {/* <a
                   href="#"
                   onClick={(event) => handleTabClick("sixteen", event)}
                   className={activeTab === "sixteen" ? "active" : ""}
@@ -264,8 +257,8 @@ const About = () => {
                       <h4>2016</h4>
                     </div>
                   </div>
-                </a>
-                <a
+                </a> */}
+                {/* <a
                   href="#"
                   onClick={(event) => handleTabClick("seventeen", event)}
                   className={activeTab === "seventeen" ? "active" : ""}
@@ -276,8 +269,8 @@ const About = () => {
                       <h4>2017</h4>
                     </div>
                   </div>
-                </a>
-                <a
+                </a> */}
+                {/* <a
                   href="#"
                   onClick={(event) => handleTabClick("eighteen", event)}
                   className={activeTab === "eighteen" ? "active" : ""}
@@ -288,7 +281,7 @@ const About = () => {
                       <h4>2018</h4>
                     </div>
                   </div>
-                </a>
+                </a> */}
                 <a
                   href="#"
                   onClick={(event) => handleTabClick("nineteen", event)}
@@ -298,6 +291,30 @@ const About = () => {
                     <div className="d-flex w-100 align-items-center">
                       <span></span>
                       <h4>2019</h4>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="#"
+                  onClick={(event) => handleTabClick("twenty", event)}
+                  className={activeTab === "twenty" ? "active" : ""}
+                >
+                  <div>
+                    <div className="d-flex w-100 align-items-center">
+                      <span></span>
+                      <h4>2020</h4>
+                    </div>
+                  </div>
+                </a>
+                <a
+                  href="#"
+                  onClick={(event) => handleTabClick("twenty-two", event)}
+                  className={activeTab === "twenty-two" ? "active" : ""}
+                >
+                  <div>
+                    <div className="d-flex w-100 align-items-center">
+                      <span></span>
+                      <h4>2022</h4>
                     </div>
                   </div>
                 </a>
@@ -315,16 +332,16 @@ const About = () => {
                     id="fourteen"
                   >
                     <div className="history-content-div">
-                      <h2 className="history-title">2014</h2>
+                      <h2 className="history-title">2004</h2>
                       <div className="history-content">
                         <div className="single-history">
                           <div>
                             <span></span>
                           </div>
                           <p className="para history-para">
-                            Incorporation of{" "}
+                          Piper Serica started{" "}
                             <strong>
-                              Lighthouse Canton Pte Ltd in Singapore
+                             operations in 2004
                             </strong>
                           </p>
                         </div>
@@ -347,15 +364,14 @@ const About = () => {
                             <span></span>
                           </div>
                           <p className="para history-para">
-                            Launch of{" "}
-                            <strong> SageOne India Growth Fund</strong> , an{" "}
+                          Piper Serica received its first registration from the{" "}
                             <strong>
                               {" "}
-                              ​​India dedicated long-only equities fund
+                              Securities and Exchange Board of India (SEBI) as a Registered Investment Advisor
                             </strong>
                           </p>
                         </div>
-                        <div className="single-history">
+                        {/* <div className="single-history">
                           <div>
                             <span></span>
                           </div>
@@ -363,209 +379,14 @@ const About = () => {
                             Exceeded
                             <strong> USD$100m</strong> of AUM & Advisory
                           </p>
-                        </div>
+                        </div> */}
                       </div>
                     </div>
                   </div>
+
+                
 
                   {/* Tab 3 */}
-                  <div
-                    className={`tab-pane fade ${
-                      activeTab === "sixteen" ? "show active" : ""
-                    }`}
-                    id="sixteen"
-                  >
-                    <div className="history-content-div">
-                      <h2 className="history-title">2016</h2>
-                      <div className="history-content">
-                        <div className="single-history">
-                          <div>
-                            <span></span>
-                          </div>
-                          <p className="para history-para">
-                            Named{" "}
-                            <strong>
-                              Best Independent Wealth Manager for Asia Pacific
-                            </strong>{" "}
-                            at the Asian Private Banker Awards for Distinction
-                            2022
-                          </p>
-                        </div>
-                        <div className="single-history">
-                          <div>
-                            <span></span>
-                          </div>
-                          <p className="para history-para">
-                            Named{" "}
-                            <strong>
-                              Best Independent Wealth Manager for Asia Pacific
-                            </strong>{" "}
-                            at the Asian Private Banker Awards for Distinction
-                            2022
-                          </p>
-                        </div>
-                        <div className="single-history">
-                          <div>
-                            <span></span>
-                          </div>
-                          <p className="para history-para">
-                            Named{" "}
-                            <strong>
-                              Best Independent Wealth Manager for Asia Pacific
-                            </strong>{" "}
-                            at the Asian Private Banker Awards for Distinction
-                            2022
-                          </p>
-                        </div>
-                        <div className="single-history">
-                          <div>
-                            <span></span>
-                          </div>
-                          <p className="para history-para">
-                            Named{" "}
-                            <strong>
-                              Best Independent Wealth Manager for Asia Pacific
-                            </strong>{" "}
-                            at the Asian Private Banker Awards for Distinction
-                            2022
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Tab 4 */}
-                  <div
-                    className={`tab-pane fade ${
-                      activeTab === "seventeen" ? "show active" : ""
-                    }`}
-                    id="seventeen"
-                  >
-                    <div className="history-content-div">
-                      <h2 className="history-title">2017</h2>
-                      <div className="history-content">
-                        <div className="single-history">
-                          <div>
-                            <span></span>
-                          </div>
-                          <p className="para history-para">
-                            Named{" "}
-                            <strong>
-                              Best Independent Wealth Manager for Asia Pacific
-                            </strong>{" "}
-                            at the Asian Private Banker Awards for Distinction
-                            2022
-                          </p>
-                        </div>
-                        <div className="single-history">
-                          <div>
-                            <span></span>
-                          </div>
-                          <p className="para history-para">
-                            Named{" "}
-                            <strong>
-                              Best Independent Wealth Manager for Asia Pacific
-                            </strong>{" "}
-                            at the Asian Private Banker Awards for Distinction
-                            2022
-                          </p>
-                        </div>
-                        <div className="single-history">
-                          <div>
-                            <span></span>
-                          </div>
-                          <p className="para history-para">
-                            Named{" "}
-                            <strong>
-                              Best Independent Wealth Manager for Asia Pacific
-                            </strong>{" "}
-                            at the Asian Private Banker Awards for Distinction
-                            2022
-                          </p>
-                        </div>
-                        <div className="single-history">
-                          <div>
-                            <span></span>
-                          </div>
-                          <p className="para history-para">
-                            Named{" "}
-                            <strong>
-                              Best Independent Wealth Manager for Asia Pacific
-                            </strong>{" "}
-                            at the Asian Private Banker Awards for Distinction
-                            2022
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Tab 4 */}
-                  <div
-                    className={`tab-pane fade ${
-                      activeTab === "eighteen" ? "show active" : ""
-                    }`}
-                    id="eighteen"
-                  >
-                    <div className="history-content-div">
-                      <h2 className="history-title">2018</h2>
-                      <div className="history-content">
-                        <div className="single-history">
-                          <div>
-                            <span></span>
-                          </div>
-                          <p className="para history-para">
-                            Named{" "}
-                            <strong>
-                              Best Independent Wealth Manager for Asia Pacific
-                            </strong>{" "}
-                            at the Asian Private Banker Awards for Distinction
-                            2022
-                          </p>
-                        </div>
-                        <div className="single-history">
-                          <div>
-                            <span></span>
-                          </div>
-                          <p className="para history-para">
-                            Named{" "}
-                            <strong>
-                              Best Independent Wealth Manager for Asia Pacific
-                            </strong>{" "}
-                            at the Asian Private Banker Awards for Distinction
-                            2022
-                          </p>
-                        </div>
-                        <div className="single-history">
-                          <div>
-                            <span></span>
-                          </div>
-                          <p className="para history-para">
-                            Named{" "}
-                            <strong>
-                              Best Independent Wealth Manager for Asia Pacific
-                            </strong>{" "}
-                            at the Asian Private Banker Awards for Distinction
-                            2022
-                          </p>
-                        </div>
-                        <div className="single-history">
-                          <div>
-                            <span></span>
-                          </div>
-                          <p className="para history-para">
-                            Named{" "}
-                            <strong>
-                              Best Independent Wealth Manager for Asia Pacific
-                            </strong>{" "}
-                            at the Asian Private Banker Awards for Distinction
-                            2022
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
                   <div
                     className={`tab-pane fade ${
                       activeTab === "nineteen" ? "show active" : ""
@@ -580,56 +401,83 @@ const About = () => {
                             <span></span>
                           </div>
                           <p className="para history-para">
-                            Named{" "}
+                          we received the registration from the{" "}
                             <strong>
-                              Best Independent Wealth Manager for Asia Pacific
-                            </strong>{" "}
-                            at the Asian Private Banker Awards for Distinction
-                            2022
+                             Securities and Exchange Board of India (SEBI) for launching Portfolio Management Service (PMS).
+                            </strong>
                           </p>
                         </div>
-                        <div className="single-history">
-                          <div>
-                            <span></span>
-                          </div>
-                          <p className="para history-para">
-                            Named{" "}
-                            <strong>
-                              Best Independent Wealth Manager for Asia Pacific
-                            </strong>{" "}
-                            at the Asian Private Banker Awards for Distinction
-                            2022
-                          </p>
-                        </div>
-                        <div className="single-history">
-                          <div>
-                            <span></span>
-                          </div>
-                          <p className="para history-para">
-                            Named{" "}
-                            <strong>
-                              Best Independent Wealth Manager for Asia Pacific
-                            </strong>{" "}
-                            at the Asian Private Banker Awards for Distinction
-                            2022
-                          </p>
-                        </div>
-                        <div className="single-history">
-                          <div>
-                            <span></span>
-                          </div>
-                          <p className="para history-para">
-                            Named{" "}
-                            <strong>
-                              Best Independent Wealth Manager for Asia Pacific
-                            </strong>{" "}
-                            at the Asian Private Banker Awards for Distinction
-                            2022
-                          </p>
-                        </div>
+                     
                       </div>
                     </div>
                   </div>
+          {/* tab 4 */}
+                  <div
+                    className={`tab-pane fade ${
+                      activeTab === "twenty" ? "show active" : ""
+                    }`}
+                    id="twenty"
+                  >
+                    <div className="history-content-div">
+                      <h2 className="history-title">2020</h2>
+                      <div className="history-content">
+                        <div className="single-history">
+                          <div>
+                            <span></span>
+                          </div>
+                          <p className="para history-para">
+                          Piper Serica launched its{" "}
+                            <strong>
+                            Foreign Portfolio Investor (FPI) Fund based in Mauritius.
+                            </strong>{" "}
+                            
+                          </p>
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* tab 5 */}
+                  <div
+                    className={`tab-pane fade ${
+                      activeTab === "twenty-two" ? "show active" : ""
+                    }`}
+                    id="twenty-two"
+                  >
+                    <div className="history-content-div">
+                      <h2 className="history-title">2020</h2>
+                      <div className="history-content">
+                        <div className="single-history">
+                          <div>
+                            <span></span>
+                          </div>
+                          <p className="para history-para">
+                          launched Piper{" "}
+                            <strong>
+                            Serica Angel Fund, an early-stage VC fund registered with SEBI as a Category 1 AIF.
+                            </strong>{" "}
+                           
+                          </p>
+                        </div>
+                        {/* <div className="single-history">
+                          <div>
+                            <span></span>
+                          </div>
+                          <p className="para history-para">
+                            Named{" "}
+                            <strong>
+                              Best Independent Wealth Manager for Asia Pacific
+                            </strong>{" "}
+                            at the Asian Private Banker Awards for Distinction
+                            2022
+                          </p>
+                        </div> */}
+                        
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
               </div>
             </div>
@@ -648,7 +496,7 @@ const About = () => {
                       <NavLink to="/">
                         <div className="why-us-content">
                           <h2 className="banner-title why-content-main-title">
-                            Our Vision
+                            Vision
                           </h2>
                           <h6 className="read-more">
                             Read More <i className="fa-solid fa-plus"></i>
@@ -657,15 +505,10 @@ const About = () => {
 
                         <div className="why-content-para vision-mission-para">
                           <h2 className="banner-title why-content-main-title">
-                            Our Vision
+                            Vision
                           </h2>
                           <p className="para why-para">
-                            Our investment strategies offer our investors
-                            exposure to differentiated opportunities which have
-                            a low correlation to broader markets. Our unwavering
-                            focus on delivering attractive risk-adjusted returns
-                            with capital preservation drives us to minimize
-                            market cycle risks across our strategies.
+                          To be a highly respected long-only equity asset management company, offering multiple strategies that cater to the diverse objectives of our investors.
                           </p>
                         </div>
                       </NavLink>
@@ -677,7 +520,7 @@ const About = () => {
                       <NavLink to="/">
                         <div className="why-us-content">
                           <h2 className="banner-title why-content-main-title">
-                            Our Mission
+                            Mission
                           </h2>
                           <h6 className="read-more">
                             Read More <i className="fa-solid fa-plus"></i>
@@ -686,15 +529,16 @@ const About = () => {
 
                         <div className="why-content-para vision-mission-para">
                           <h2 className="banner-title why-content-main-title">
-                            Our Mission
+                            Mission
                           </h2>
                           <p className="para why-para">
-                            Our investment strategies offer our investors
-                            exposure to differentiated opportunities which have
-                            a low correlation to broader markets. Our unwavering
-                            focus on delivering attractive risk-adjusted returns
-                            with capital preservation drives us to minimize
-                            market cycle risks across our strategies.
+                          At Piper Serica, we empower investors to achieve their financial goals through 
+                          a diverse portfolio of actively managed strategies. Committed to transparency, 
+                          rigorous analysis, and strategic asset allocation, we balance growth and risk 
+                          to deliver consistent returns. Our mission extends beyond wealth creation—we 
+                          strive to foster financial literacy, ensure long-term stability, and drive 
+                          sustainable economic progress. Through innovation and discipline, 
+                          we create enduring value for our investors and the broader ecosystem.
                           </p>
                         </div>
                       </NavLink>
@@ -717,7 +561,7 @@ const About = () => {
                     openAccordion === 0 ? "d-none" : ""
                   }`}
                 >
-                  Our Vision
+                  Vision
                 </h2>
                 <div
                   id="collapseOne"
@@ -728,14 +572,9 @@ const About = () => {
                 >
                   <div className="accordion-body">
                     <div className="why-content-para">
-                      <h4 className="why-content-title">Our Vision</h4>
+                      <h4 className="why-content-title">Vision</h4>
                       <p className="para why-para">
-                        Our investment strategies offer our investors exposure
-                        to differentiated opportunities which have a low
-                        correlation to broader markets. Our unwavering focus on
-                        delivering attractive risk-adjusted returns with capital
-                        preservation drives us to minimize market cycle risks
-                        across our strategies.
+                      To be a highly respected long-only equity asset management company, offering multiple strategies that cater to the diverse objectives of our investors.
                       </p>
                     </div>
                   </div>
@@ -764,7 +603,7 @@ const About = () => {
                     openAccordion === 1 ? "d-none" : ""
                   }`}
                 >
-                  Our Mission
+                  Mission
                 </h2>
                 <div
                   id="collapseTwo"
@@ -775,14 +614,9 @@ const About = () => {
                 >
                   <div className="accordion-body">
                     <div className="why-content-para">
-                      <h4 className="why-content-title">Our Mission</h4>
+                      <h4 className="why-content-title">Mission</h4>
                       <p className="para why-para">
-                        Our investment strategies offer our investors exposure
-                        to differentiated opportunities which have a low
-                        correlation to broader markets. Our unwavering focus on
-                        delivering attractive risk-adjusted returns with capital
-                        preservation drives us to minimize market cycle risks
-                        across our strategies.
+                      At Piper Serica, we empower investors to achieve their financial goals through a diverse portfolio of actively managed strategies. Committed to transparency, rigorous analysis, and strategic asset allocation, we balance growth and risk to deliver consistent returns. Our mission extends beyond wealth creation—we strive to foster financial literacy, ensure long-term stability, and drive sustainable economic progress. Through innovation and discipline, we create enduring value for our investors and the broader ecosystem.
                       </p>
                     </div>
                   </div>
@@ -817,17 +651,15 @@ const About = () => {
             </div>
 
             <div className="col-lg-6">
-              <h2 className="section-title mt-lg-0 mt-4">
-                At Lighthouse Canton, enhanced risk-adjusted returns, capital
-                preservation, and value creation for our stakeholders form the
-                core of our investment philosophy.
+              <h2 className="para mt-lg-0 mt-4">
+              Our core philosophy is to benefit from long term investment opportunities while ignoring market cycles. We like to identify and invest in companies that are leaders in emerging spaces led by a change in consumer behavior, technology changes and product innovations. Once we identify such companies we like to stay invested as they create shareholder value while moving from small cap to mid cap and ultimately large cap. We believe that companies like these, with great management, good corporate governance, financially disciplined and shareholder friendly are quite rare and should not be looked at the same valuation prism as the rest of the market.
               </h2>
             </div>
           </div>
 
-          <div className="row mt-5 image-row">
+          {/* <div className="row mt-5 image-row">
             <div className="col-lg-6">
-              <p className="para">
+              <p className="">
                 We manage and advise on a range of investment strategies and
                 products which touch the lives of investors, communities,
                 corporate borrowers, investee companies, and our people. We act
@@ -853,15 +685,12 @@ const About = () => {
                 without compromising returns.
               </p>
             </div>
-          </div>
+          </div> */}
 
           <div className="row mt-3 align-items-center">
             <div className="col-lg-6">
-              <h2 className="section-title mt-lg-0">
-                Our approach of staying true to our core has been the
-                cornerstone of our capital stewardship, with an unwavering focus
-                on high governance standards. We are the preferred partners of
-                our investors.
+              <h2 className="para mt-lg-0">
+              We like to interact with the management of our portfolio companies regularly to stay abreast of the trends shaping their industry and explore other investment opportunities. We believe that long term investing requires deep knowledge and good temperament. Our team members are always curious to learn more at the same time tune out noise. We see market volatility as an opportunity to increase our equity allocations rather than reduce them. We believe that conviction comes only from deep research and understanding of our portfolio companies.
               </h2>
             </div>
 
@@ -902,32 +731,18 @@ const About = () => {
             </div>
             <div className="col-lg-7 mt-lg-0 mt-4">
               <p className="para">
-                Since our inception in 2014, we have served a diverse range of
-                investors. We strive to deliver systematic, resilient, and
-                diversified strategies to help investors grow, manage and
-                protect their wealth. Our robust value system drives our
-                decision-making process to put your best interests forward. Our
-                culture, integrity, passion, and expertise have spearheaded our
-                fast growth as one of Asia's emerging financial institutions.
+              Our journey began with a simple yet powerful vision: to create an investment company that not only delivers superior financial performance but also fosters innovation and positive economic impact. With decades of combined experience in public equities, asset management, and financial markets, our team is uniquely positioned to identify high-potential opportunities and create lasting value for our investors.
               </p>
 
               <p className="para">
-                I have always wanted to create a sustainable global business
-                that celebrates people's investment dreams. It is humbling to
-                see our progress as an enterprising team that investors want to
-                work with. Our courage to go beyond conventions and constantly
-                explore new possibilities has been one of our core strengths. We
-                offer an institutional framework to every client of Lighthouse
-                Canton—one of our biggest differentiators.
+              Our approach is rooted in discipline, transparency, and alignment of interests. We deploy a research-driven methodology, leveraging data insights and industry expertise to make informed investment decisions. Our portfolio is curated to ensure diversification, resilience, and adaptability in a dynamic market landscape.
               </p>
 
               <p className="para">
-                We are a new-age global investment group with the ecosystem of a
-                technology start-up and the culture of a seasoned financial
-                institution. Our ability to anticipate and embrace change as we
-                focus on your needs in this ever-evolving world is paramount to
-                us. We remain committed to building a business that not only
-                serves you now but also for many generations to come.
+              At Piper Serica, we prioritize partnerships and long-term relationships. We work closely with industry experts to support strategic growth, risk management, and sustainable financial outcomes. Our commitment to responsible investing ensures that we not only seek financial returns but also contribute to broader societal and economic progress.
+              </p>
+              <p className="para">
+              We are excited about the opportunities ahead and deeply appreciate the trust and confidence that our investors place in us. Together, we build a legacy of success, innovation, and enduring value.
               </p>
 
               <h6 className="founders-name">
