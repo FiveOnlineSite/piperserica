@@ -11,12 +11,14 @@ const TopBar = ({ closeOffcanvas }) => {
   const pathToInvestorMap = {
     "/foreign-investor": "foreign",
     "/nri-investor": "nri",
+    "/family-office-and-indian-investor": "family",
     "/startup-founder-entrepreneur": "startup",
   };
 
   const investorToPathMap = {
     foreign: "/foreign-investor",
     nri: "/nri-investor",
+    family: "/family-office-and-indian-investor",
     startup: "/startup-founder-entrepreneur",
   };
 
@@ -99,6 +101,7 @@ const TopBar = ({ closeOffcanvas }) => {
             </option>
             <option value="foreign">Foreign Investor</option>
             <option value="nri">NRI Investor</option>
+            <option value="family">Family Office & Indian Investor</option>
             <option value="startup">Startup Founder & Entrepreneur</option>
           </select>
         </div>

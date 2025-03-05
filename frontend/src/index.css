@@ -280,7 +280,7 @@ body {
   padding: 0 12px;
 }
 
-.banner-contents .col-lg-4 {
+.banner-contents .col-lg-3 {
   padding: 0;
 }
 
@@ -319,7 +319,7 @@ body {
   display: none;
 }
 
-.banner-contents .col-lg-4:hover .content-div {
+.banner-contents .col-lg-3:hover .content-div {
   background-color: var(--white-bg);
 }
 
