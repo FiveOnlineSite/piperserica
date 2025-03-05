@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
 import Slider from "react-slick";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import OfferingsSlider from "../components/OfferingsSlider";
 import NewsSection from "../components/NewsSection";
 
@@ -62,13 +62,15 @@ const NRIInvestor = () => {
   const offeringsItems = [
     {
       strategy_title: "Public Market",
-      funds: "Piper Serica Numero Uno Fund",
+      funds: "Piper Serica Numero Uno India Fund",
       fund_type: "NRI Investor",
+      link:"/public-market/piper-serica-nemero-uno-india-fund",
     },
     {
       strategy_title: "Public Market",
-      funds: "Piper Serica Leader Portfolio Fund",
+      funds: "Piper Serica Leader Portfolio",
       fund_type: "NRI Investor",
+      link: "/public-market/piper-serica-leader-portfolio"
     },
     // {
     //   strategy_title: "Private Credit",
@@ -123,17 +125,22 @@ const NRIInvestor = () => {
             </div>
             <div className="col-lg-7 offset-lg-1 mt-lg-0 mt-5">
               <p className="para">
-                We invest on behalf of some of the world's largest institutional
-                investors, including pension funds, sovereign funds, and
-                insurance companies, to drive economic and sustainable impact.
-                Our responsible, diversified investment strategies allow our
-                investors to benefit from differentiated growth opportunities
-                across all market cycles, focusing on capital preservation and
-                attractive risk-adjusted returns. As a global investment
-                company, we have teams in Singapore, Dubai, and India. We drive
-                value creation by applying high-quality processes and superior
-                governance standards along with a robust risk management
-                framework.
+              Piper Serica is a long-only active equity asset manager that traverses various 
+              strategies of equity investment in India. We manage multiple funds that 
+              invest in Indian listed companies for domestic and foreign individuals 
+              and institutions. We also manage a fund that invests in Indian startups 
+              that are building business models based on deep tech. We have been investing 
+              in Indian companies for over 30 years and have a very solid understanding of 
+              how to succeed while investing in India navigating through various risks, 
+              most of them unique to India as an emerging market. The funds that we manage 
+              cater to different risk and return profiles and objectives of our investors. 
+              We have an edge over our peers due to our deep research and disciplined 
+              approach to investing. Our research team is extensively trained in our 
+              proprietary research processes that we have developed and mostly automated. 
+              To ensure full skin in the game our fund management team makes all their 
+              public and private investments through the funds managed by Piper Serica. 
+              We are a fund management company owned by its management team. 
+              Our management company is majority owned by women.
               </p>
             </div>
           </div>
@@ -181,7 +188,7 @@ const NRIInvestor = () => {
                   <NavLink to="/">
                     <div className="why-us-content">
                       <h2 className="banner-title why-content-main-title">
-                        All-weather strategies
+                        Focus on risk-adjusted returns:
                       </h2>
                       <h6 className="read-more">
                         Read More <i className="fa-solid fa-plus"></i>
@@ -194,15 +201,14 @@ const NRIInvestor = () => {
                       </h6>
 
                       <h4 className="why-content-title">
-                        All-weather strategies
+                        Focus on risk-adjusted returns:
                       </h4>
                       <p className="para why-para">
-                        Our investment strategies offer our investors exposure
-                        to differentiated opportunities which have a low
-                        correlation to broader markets. Our unwavering focus on
-                        delivering attractive risk-adjusted returns with capital
-                        preservation drives us to minimize market cycle risks
-                        across our strategies.
+                      We focus not only on returns but also the systemic and non-systemic risks 
+                      while building our model portfolio. We have built strict guard rails 
+                      of risk metrics that have helped us deliver steady long-term returns. 
+                      Our Portfolio Management Process is devoid of human biases due to highly 
+                      objective decision making processes that we have developed over three decades.
                       </p>
                     </div>
                   </NavLink>
@@ -213,7 +219,7 @@ const NRIInvestor = () => {
                   <NavLink to="/">
                     <div className="why-us-content">
                       <h2 className="banner-title why-content-main-title">
-                        Purposeful investing
+                        Research Process:
                       </h2>
                       <h6 className="read-more">
                         Read More <i className="fa-solid fa-plus"></i>
@@ -226,15 +232,19 @@ const NRIInvestor = () => {
                       </h6>
 
                       <h4 className="why-content-title">
-                        Purposeful investing
+                        Research Process:
                       </h4>
                       <p className="para why-para">
-                        Our investment strategies offer our investors exposure
-                        to differentiated opportunities which have a low
-                        correlation to broader markets. Our unwavering focus on
-                        delivering attractive risk-adjusted returns with capital
-                        preservation drives us to minimize market cycle risks
-                        across our strategies.
+                      We have a very strong on-ground research presence which is required to be 
+                      successful in an Emerging Market like India. Our research team understands 
+                      local nuances while engaging with investee company management and their 
+                      stakeholders. We have built deep and meaningful networks across industries 
+                      that allow us to assess investment opportunities in depth. This allows us 
+                      to understand long term trends as we build our investment thesis. We have 
+                      built a blue chip reputation as an asset manager over three decades that 
+                      provides us market access of the kind that is not available to new fund 
+                      managers. Our fund management team has a combined experience of almost
+                       100 years making it one of the most experienced teams in the country.
                       </p>
                     </div>
                   </NavLink>
@@ -245,7 +255,7 @@ const NRIInvestor = () => {
                   <NavLink to="/">
                     <div className="why-us-content">
                       <h2 className="banner-title why-content-main-title">
-                        Our people, our pride
+                        Investor Friendliness:
                       </h2>
                       <h6 className="read-more">
                         Read More <i className="fa-solid fa-plus"></i>
@@ -258,7 +268,7 @@ const NRIInvestor = () => {
                       </h6>
 
                       <h4 className="why-content-title">
-                        Our people, our pride
+                        Investor Friendliness:
                       </h4>
                       <p className="para why-para">
                         Our investment strategies offer our investors exposure
@@ -287,7 +297,7 @@ const NRIInvestor = () => {
                     openAccordion === 0 ? "d-none" : ""
                   }`}
                 >
-                  All-weather strategies
+                  Focus on risk-adjusted returns:
                 </h2>
                 <div
                   id="collapseOne"
@@ -302,15 +312,14 @@ const NRIInvestor = () => {
                         Why us
                       </h6>
                       <h4 className="why-content-title">
-                        All-weather strategies
+                        Focus on risk-adjusted returns:
                       </h4>
                       <p className="para why-para">
-                        Our investment strategies offer our investors exposure
-                        to differentiated opportunities which have a low
-                        correlation to broader markets. Our unwavering focus on
-                        delivering attractive risk-adjusted returns with capital
-                        preservation drives us to minimize market cycle risks
-                        across our strategies.
+                      We focus not only on returns but also the systemic and non-systemic 
+                      risks while building our model portfolio. We have built strict guard 
+                      rails of risk metrics that have helped us deliver steady long-term returns. 
+                      Our Portfolio Management Process is devoid of human biases due to highly 
+                      objective decision making processes that we have developed over three decades.
                       </p>
                     </div>
                   </div>
@@ -339,7 +348,7 @@ const NRIInvestor = () => {
                     openAccordion === 1 ? "d-none" : ""
                   }`}
                 >
-                  Purposeful investing
+                  Research Process:
                 </h2>
                 <div
                   id="collapseTwo"
@@ -354,15 +363,19 @@ const NRIInvestor = () => {
                         Why us
                       </h6>
                       <h4 className="why-content-title">
-                        Purposeful investing
+                        Research Process:
                       </h4>
                       <p className="para why-para">
-                        Our investment strategies offer our investors exposure
-                        to differentiated opportunities which have a low
-                        correlation to broader markets. Our unwavering focus on
-                        delivering attractive risk-adjusted returns with capital
-                        preservation drives us to minimize market cycle risks
-                        across our strategies.
+                      We have a very strong on-ground research presence which is required to be 
+                      successful in an Emerging Market like India. Our research team understands 
+                      local nuances while engaging with investee company management and their 
+                      stakeholders. We have built deep and meaningful networks across industries 
+                      that allow us to assess investment opportunities in depth. This allows us 
+                      to understand long term trends as we build our investment thesis. We have 
+                      built a blue chip reputation as an asset manager over three decades that
+                       provides us market access of the kind that is not available to new fund
+                        managers. Our fund management team has a combined experience of almost 100
+                         years making it one of the most experienced teams in the country.
                       </p>
                     </div>
                   </div>
@@ -391,7 +404,7 @@ const NRIInvestor = () => {
                     openAccordion === 2 ? "d-none" : ""
                   }`}
                 >
-                  Our people, our pride
+                  Investor Friendliness:
                 </h2>
                 <div
                   id="collapseThree"
@@ -406,7 +419,7 @@ const NRIInvestor = () => {
                         Why us
                       </h6>
                       <h4 className="why-content-title">
-                        Our people, our pride
+                        Investor Friendliness:
                       </h4>
                       <p className="para why-para">
                         Our investment strategies offer our investors exposure
@@ -450,14 +463,11 @@ const NRIInvestor = () => {
             <div className="row align-items-center my-lg-3 my-4">
               <div className="col-lg-9">
                 <p className="para small-para">
-                  We provide investors access to unique investment opportunities
-                  that deliver superior risk-adjusted returns in today's
-                  challenging markets. We have developed expertise across
-                  alternative investment strategies with an eye on
-                  sustainability, focusing on resilient sectors within the Asian
-                  markets. Our investments provide growth capital and
-                  infrastructure, resulting in a broader progressive impact
-                  within the region.
+                Our NRI investors have the option to invest in our model portfolio strategy 
+                either through the FPI fund or through the onshore PMS. The FPI fund is 
+                denominated in USD while the PMS is denominated in INR. Our team will be 
+                happy to guide the NRI investor through both the options and help them 
+                choose the appropriate one.
                 </p>
               </div>
               {/* <div className="col-lg-3">
@@ -481,7 +491,7 @@ const NRIInvestor = () => {
                       {/* <h6 className="section-subtitle mt-5">funds</h6> */}
 
                       <div className="funds-container">
-                        <NavLink to="/public-funds" className="mt-2">
+                        <NavLink to={item.link}  className="mt-2">
                           <div className="funds-div">
                             <h5>{item.funds}</h5>
                             <i className="fa-solid fa-arrow-right"></i>
