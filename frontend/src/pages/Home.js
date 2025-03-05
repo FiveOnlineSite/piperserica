@@ -44,7 +44,7 @@ const Home = () => {
                   <div className="row">
                     <div className="col-lg-12">
                       <div className="row align-items-center">
-                        <div className="col-lg-4">
+                        <div className="col-lg-3">
                           <NavLink
                             to="/foreign-investor"
                             className="content-div"
@@ -66,7 +66,7 @@ const Home = () => {
                             </div>
                           </NavLink>
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-3">
                           <NavLink to="/nri-investor" className="content-div">
                             <div className="content-div-title">
                               <h2>NRI Investor</h2>
@@ -85,7 +85,29 @@ const Home = () => {
                             </div>
                           </NavLink>
                         </div>
-                        <div className="col-lg-4">
+                        <div className="col-lg-3">
+                          <NavLink
+                            to="/family-office-and-indian-investor"
+                            className="content-div"
+                          >
+                            <div className="content-div-title">
+                              <h2>Family Office & Indian Investor</h2>
+                              <i className="fa-solid fa-arrow-right"></i>
+                            </div>
+                            <div className="content-para">
+                              <div className="content-title">
+                                <h5>Family Office & Indian Investor</h5>
+                                <i className="fa-solid fa-arrow-right"></i>
+                              </div>
+                              <p>
+                                As a founder-led company, we foster innovative
+                                ideas to build scalable businesses and personal
+                                legacies that have a collective global impact.
+                              </p>
+                            </div>
+                          </NavLink>
+                        </div>
+                        <div className="col-lg-3">
                           <NavLink
                             to="/startup-founder-entrepreneur"
                             className="content-div"
