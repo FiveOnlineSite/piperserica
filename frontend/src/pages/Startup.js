@@ -118,17 +118,7 @@ const Startup = () => {
             </div>
             <div className="col-lg-7 offset-lg-1 mt-lg-0 mt-5">
               <p className="para">
-                We invest on behalf of some of the world's largest institutional
-                investors, including pension funds, sovereign funds, and
-                insurance companies, to drive economic and sustainable impact.
-                Our responsible, diversified investment strategies allow our
-                investors to benefit from differentiated growth opportunities
-                across all market cycles, focusing on capital preservation and
-                attractive risk-adjusted returns. As a global investment
-                company, we have teams in Singapore, Dubai, and India. We drive
-                value creation by applying high-quality processes and superior
-                governance standards along with a robust risk management
-                framework.
+              The Fund invests in early-stage companies that have developed a proprietary deep IP / deep tech and is in the early stage of commercialization. We are sector agnostic though our focus areas are Spacetech, AI, advanced electronics, semicon design and fintech. We like to invest in startups that are bringing a significant degree of value to their customers. We need to see some product market fit, even if early. Our ticket size is ₹10 crore. While we are happy to co-invest with another lead investor there are instances where we are the lead or the sole investor. Our decision-making process is fairly quick. We have a very collaborative approach to investing and prefer to work with multiple co-investors bringing different value to the startup.
               </p>
             </div>
           </div>
@@ -176,7 +166,7 @@ const Startup = () => {
                   <NavLink to="/">
                     <div className="why-us-content">
                       <h2 className="banner-title why-content-main-title">
-                        All-weather strategies
+                        Value added partners:
                       </h2>
                       <h6 className="read-more">
                         Read More <i className="fa-solid fa-plus"></i>
@@ -189,15 +179,10 @@ const Startup = () => {
                       </h6>
 
                       <h4 className="why-content-title">
-                        All-weather strategies
+                        Value added partners:
                       </h4>
                       <p className="para why-para">
-                        Our investment strategies offer our investors exposure
-                        to differentiated opportunities which have a low
-                        correlation to broader markets. Our unwavering focus on
-                        delivering attractive risk-adjusted returns with capital
-                        preservation drives us to minimize market cycle risks
-                        across our strategies.
+                      Our founders look at us as value added partners beyond the financial capital that we bring. We work with the founders to scale up the company by helping build the organization, acquire customers and help with further fund raises.
                       </p>
                     </div>
                   </NavLink>
@@ -208,7 +193,7 @@ const Startup = () => {
                   <NavLink to="/">
                     <div className="why-us-content">
                       <h2 className="banner-title why-content-main-title">
-                        Purposeful investing
+                        Network:
                       </h2>
                       <h6 className="read-more">
                         Read More <i className="fa-solid fa-plus"></i>
@@ -221,15 +206,10 @@ const Startup = () => {
                       </h6>
 
                       <h4 className="why-content-title">
-                        Purposeful investing
+                        Network:
                       </h4>
                       <p className="para why-para">
-                        Our investment strategies offer our investors exposure
-                        to differentiated opportunities which have a low
-                        correlation to broader markets. Our unwavering focus on
-                        delivering attractive risk-adjusted returns with capital
-                        preservation drives us to minimize market cycle risks
-                        across our strategies.
+                      We believe that the biggest help we bring to the founders is our extensive network that spans many industries and skill sets. We have a very varied set of LPs and through our public market funds we are connected with some of the largest companies in the country.
                       </p>
                     </div>
                   </NavLink>
@@ -240,7 +220,7 @@ const Startup = () => {
                   <NavLink to="/">
                     <div className="why-us-content">
                       <h2 className="banner-title why-content-main-title">
-                        Our people, our pride
+                       Founder first approach:
                       </h2>
                       <h6 className="read-more">
                         Read More <i className="fa-solid fa-plus"></i>
@@ -253,15 +233,10 @@ const Startup = () => {
                       </h6>
 
                       <h4 className="why-content-title">
-                        Our people, our pride
+                       Founder first approach:
                       </h4>
                       <p className="para why-para">
-                        Our investment strategies offer our investors exposure
-                        to differentiated opportunities which have a low
-                        correlation to broader markets. Our unwavering focus on
-                        delivering attractive risk-adjusted returns with capital
-                        preservation drives us to minimize market cycle risks
-                        across our strategies.
+                      We love to get in the trenches with the founders and help the founders ride through the tough times. Every start up faces tough challenges. Our Founders always find us by their side as they meet these challenges.
                       </p>
                     </div>
                   </NavLink>
@@ -282,7 +257,7 @@ const Startup = () => {
                     openAccordion === 0 ? "d-none" : ""
                   }`}
                 >
-                  All-weather strategies
+                  Value added partners:
                 </h2>
                 <div
                   id="collapseOne"
@@ -297,15 +272,10 @@ const Startup = () => {
                         Why us
                       </h6>
                       <h4 className="why-content-title">
-                        All-weather strategies
+                        Value added partners:
                       </h4>
                       <p className="para why-para">
-                        Our investment strategies offer our investors exposure
-                        to differentiated opportunities which have a low
-                        correlation to broader markets. Our unwavering focus on
-                        delivering attractive risk-adjusted returns with capital
-                        preservation drives us to minimize market cycle risks
-                        across our strategies.
+                      Our founders look at us as value added partners beyond the financial capital that we bring. We work with the founders to scale up the company by helping build the organization, acquire customers and help with further fund raises.
                       </p>
                     </div>
                   </div>
@@ -334,7 +304,7 @@ const Startup = () => {
                     openAccordion === 1 ? "d-none" : ""
                   }`}
                 >
-                  Purposeful investing
+                  Network:
                 </h2>
                 <div
                   id="collapseTwo"
@@ -349,15 +319,10 @@ const Startup = () => {
                         Why us
                       </h6>
                       <h4 className="why-content-title">
-                        Purposeful investing
+                        Network:
                       </h4>
                       <p className="para why-para">
-                        Our investment strategies offer our investors exposure
-                        to differentiated opportunities which have a low
-                        correlation to broader markets. Our unwavering focus on
-                        delivering attractive risk-adjusted returns with capital
-                        preservation drives us to minimize market cycle risks
-                        across our strategies.
+                      We believe that the biggest help we bring to the founders is our extensive network that spans many industries and skill sets. We have a very varied set of LPs and through our public market funds we are connected with some of the largest companies in the country.
                       </p>
                     </div>
                   </div>
@@ -386,7 +351,7 @@ const Startup = () => {
                     openAccordion === 2 ? "d-none" : ""
                   }`}
                 >
-                  Our people, our pride
+                 Founder first approach:
                 </h2>
                 <div
                   id="collapseThree"
@@ -401,15 +366,10 @@ const Startup = () => {
                         Why us
                       </h6>
                       <h4 className="why-content-title">
-                        Our people, our pride
+                       Founder first approach:
                       </h4>
                       <p className="para why-para">
-                        Our investment strategies offer our investors exposure
-                        to differentiated opportunities which have a low
-                        correlation to broader markets. Our unwavering focus on
-                        delivering attractive risk-adjusted returns with capital
-                        preservation drives us to minimize market cycle risks
-                        across our strategies.
+                      We love to get in the trenches with the founders and help the founders ride through the tough times. Every start up faces tough challenges. Our Founders always find us by their side as they meet these challenges.
                       </p>
                     </div>
                   </div>
