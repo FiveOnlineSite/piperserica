@@ -167,16 +167,11 @@ const Career = () => {
               <div className="life-content-div">
                 <h6 className="section-subtitle">Life at Piper Serica</h6>
                 <h3 className="section-title mt-3 mt-lg-3">
-                  Thrive in a culture of openness, partnership and excellence.
+                Grow in a culture of innovation, collaboration, and excellence
                 </h3>
 
                 <p className="para medium-para mt-lg-4 mt-4">
-                  At Lighthouse Canton, we’re committed to empowering and
-                  investing in our people. We believe in providing our people
-                  with purposeful careers that help them grow and learn in their
-                  journey with us. Our goal is to build a workplace that
-                  nurtures extraordinary and ambitious people, helping them
-                  reach their potential and make an impact.
+                At Piper Serica, we foster a dynamic and collaborative work environment where innovation, integrity, and passion drive our success. Our team thrives on intellectual curiosity, analytical rigor, and a shared commitment to creating lasting value for investors. We believe in continuous learning, empowering our people with opportunities to grow, lead, and make an impact. Whether it’s exploring new investment frontiers, engaging with visionary entrepreneurs, or shaping market-leading strategies, life at Piper Serica is both challenging and rewarding. We cultivate an inclusive culture that values diverse perspectives, teamwork, and work-life balance, ensuring that every team member feels inspired to contribute to our collective vision.
                 </p>
 
                 <NavLink
