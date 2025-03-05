@@ -40,9 +40,7 @@ const Contact = () => {
                 <h6 className="section-subtitle">Get in touch</h6>
                 <h2 className="section-title mt-lg-3 mt-4">Let's Talk</h2>
                 <p className="para small-para">
-                  Our global team of specialists is available to help with your
-                  enquiry. Please provide us more details of what we can help
-                  with and a member of the team will be in touch.
+                Our team of experts is here to assist you. Share your details with us, and we’ll connect you with the right specialist to address your needs.
                 </p>
                 <form>
                   <div className="row mt-5">
