@@ -700,11 +700,11 @@ const Header = () => {
                   Insights
                 </NavLink>
                 <ul className="dropdown-menu desktop-dropdown-menu">
-                  <li>
+                  {/* <li>
                     <NavLink className="dropdown-item" to="/insights">
                       Blogs
                     </NavLink>
-                  </li>
+                  </li> */}
                   <li>
                     <NavLink className="dropdown-item" to="/news-article">
                       News Article
@@ -905,11 +905,11 @@ const Header = () => {
                     Insights
                   </NavLink>
                   <ul className="dropdown-menu">
-                    <li>
+                    {/* <li>
                       <NavLink className="dropdown-item" to="/insights">
                         Blogs
                       </NavLink>
-                    </li>
+                    </li> */}
                     <li>
                       <NavLink className="dropdown-item" to="/news-article">
                         News Article
