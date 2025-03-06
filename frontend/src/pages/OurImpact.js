@@ -23,15 +23,15 @@ const OurImpact = () => {
 
             <div className="banner-content-div">
               <div className="container">
-                <h6 className="banner-subtitle">Creating Meaningful Change</h6>
+                {/* <h6 className="banner-subtitle">Creating Meaningful Change</h6> */}
                 <h1 className="banner-title">Our Impact</h1>
-                <p className="banner-para">
+                {/* <p className="banner-para">
                   Our commitment to making a positive impact drives everything
                   we do. Through innovative solutions, community engagement, and
                   sustainable initiatives, we strive to make a lasting
                   difference in the lives we touch and the environments we care
                   for.{" "}
-                </p>
+                </p> */}
               </div>
             </div>
           </div>
