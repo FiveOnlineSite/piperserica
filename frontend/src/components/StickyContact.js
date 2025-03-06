@@ -8,7 +8,7 @@ const StickyContact = () => {
         <div className="row align-items-center">
           <div className="col-lg-6">
             <h4 className="section-title">
-              Want to know more about LC Nueva AIF?
+            Want to know more about Piper Serica Numero Uno India Fund?
             </h4>
           </div>
 

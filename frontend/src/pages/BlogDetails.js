@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import NewsSection from "../components/NewsSection";
 
 const BlogDetails = () => {
@@ -164,15 +164,24 @@ const BlogDetails = () => {
 
             <div className="col-lg-4 offset-lg-1 mt-lg-0 mt-5">
               <div className="social-media-blog">
-                <a href="#">
+                <Link to="https://www.linkedin.com/company/piper-serica-advisors-pvt-ltd">
                   <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a href="#">
+                </Link>
+                <Link to="https://x.com/PiperSerica">
                   <i class="fa-brands fa-square-twitter"></i>
-                </a>
-                <a href="#">
-                  <i class="fa-brands fa-square-whatsapp"></i>
-                </a>
+                </Link>
+                <Link to="https://www.youtube.com/@piperserica">
+                  <i class="fa-brands fa-square-youtube"></i>
+                </Link>
+                <Link to="https://www.facebook.com/PiperSerica">
+                  <i class="fa-brands fa-square-facebook"></i>
+                </Link>
+                <Link to="https://www.instagram.com/pipersericaofficial/">
+                  <i class="fa-brands fa-square-instagram"></i>
+                </Link>
+                <Link to="https://open.spotify.com/show/5qtn5uSgGhxVVqbJmWKflq">
+                  <i class="fa-brands fa-spotify"></i>
+                </Link>
               </div>
 
               <div className="blog-form-div">

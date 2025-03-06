@@ -188,7 +188,7 @@ const Funds = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                    <strong>Name of Fund: </strong> Piper Serica Angel Fund
+                    <strong>Name of The Fund: </strong> Piper Serica Angel Fund
                   </p>
                 </div>
 
@@ -207,9 +207,7 @@ const Funds = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                    <strong>Address: </strong> 127, T.V. Industrial Estate,
-                    Sudam Kalu Marg, Opposite Glaxo Smith Kline, Worli Mumbai -
-                    400030
+                    <strong>Address: </strong> A Wing, 905/906, Marathon Innova Nextgen, Ganpatrao Kadam Marg, Opp-Peninsula Corporate Park, Lower Parel, Mumbai – 400013
                   </p>
                 </div>
                 <div className="single-fund">
@@ -217,7 +215,7 @@ const Funds = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                    <strong>Registration Number: </strong> IN/ AIF1/ 21-22/ 1028
+                    <strong>Registration Number: </strong> IN/AIF1/21-22/1028
                   </p>
                 </div>
                 <div className="single-fund">
@@ -225,7 +223,7 @@ const Funds = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                    <strong>Name of Fund Manager: </strong> Piper Serica
+                    <strong>Name of the investment manager: </strong> Piper Serica
                     Advisors Private Limited
                   </p>
                 </div>
@@ -234,9 +232,9 @@ const Funds = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                    <strong>Address of Fund Manager: </strong> No. 905 & 906, A
-                    Wing, 9th Floor, Marathon Innova Nextgen, Off K. K. Marg,
-                    Lower Parel, Mumbai - 400013
+                    <strong>Address of the investment manager: </strong> A Wing, 905/906, Marathon Innova Nextgen, 
+                    Ganpatrao Kadam Marg, Opp-Peninsula Corporate Park, 
+                    Lower Parel, Mumbai – 400013
                   </p>
                 </div>
               </div>
