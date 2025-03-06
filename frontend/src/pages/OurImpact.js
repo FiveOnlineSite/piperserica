@@ -43,7 +43,7 @@ const OurImpact = () => {
           <div className="row">
             <div className="col-lg-4">
               <div className="commitment-title-div">
-                <h6 className="section-subtitle">Our commitment</h6>
+                <h6 className="section-subtitle">Our Commitment to</h6>
                 <h2 className="section-title offerings-title mt-4">
                   Responsible Investments
                 </h2>
@@ -51,21 +51,24 @@ const OurImpact = () => {
             </div>
             <div className="col-lg-8">
               <p className="para">
-                Lighthouse Canton is a signatory of the UN supported Principles
-                of Responsible Investment. We have developed expertise across
-                alternative investment strategies incorporating responsible
-                investment considerations in our investment process and focusing
-                on resilient sectors within the Asian markets. Our investments
-                provide growth capital and infrastructure, resulting in a
-                broader progressive impact within the region.
+                At Piper Serica, we are deeply committed to responsible
+                investing across both listed companies and startups. We
+                integrate Environmental, Social, and Governance (ESG) criteria
+                into our investment process, ensuring that the businesses we
+                support align with sustainable and ethical practices.
               </p>
 
               <p className="para">
-                To learn more please access the Lighthouse Canton Responsible
-                Investment Policy.
+                Our approach goes beyond financial growth—we actively seek
+                innovative companies that drive positive social and
+                environmental impact while delivering strong returns. We engage
+                with our portfolio companies to foster responsible business
+                practices, ensuring that our investments contribute not only to
+                wealth creation but also to sustainable development within
+                India’s dynamic market.
               </p>
 
-              <div className="our-commitment-tabs">
+              {/* <div className="our-commitment-tabs">
                 <a
                   href="#"
                   onClick={(event) => handleTabClick("life", event)}
@@ -87,10 +90,10 @@ const OurImpact = () => {
                 >
                   <h4>Early Stage and Growth Companies</h4>
                 </a>
-              </div>
+              </div> */}
 
-              <div className="tab-content">
-                {/* Tab 1 */}
+              {/* <div className="tab-content">
+            
                 <div
                   className={`tab-pane fade ${
                     activeTab === "life" ? "show active" : ""
@@ -119,7 +122,7 @@ const OurImpact = () => {
                   </div>
                 </div>
 
-                {/* Tab 2 */}
+                
                 <div
                   className={`tab-pane fade ${
                     activeTab === "smes" ? "show active" : ""
@@ -147,7 +150,7 @@ const OurImpact = () => {
                   </div>
                 </div>
 
-                {/* Tab 3 */}
+             
                 <div
                   className={`tab-pane fade ${
                     activeTab === "early" ? "show active" : ""
@@ -172,7 +175,7 @@ const OurImpact = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -183,7 +186,7 @@ const OurImpact = () => {
           <div className="row">
             <div className="col-lg-4">
               <div className="empowering-title-div">
-                <h6 className="section-subtitle">Empowering growth</h6>
+                <h6 className="section-subtitle">Empowering Growth Through</h6>
                 <h2 className="section-title offerings-title mt-4">
                   Purposeful Investing
                 </h2>
@@ -191,17 +194,25 @@ const OurImpact = () => {
             </div>
             <div className="col-lg-8">
               <p className="para">
-                The PRI is the world’s leading proponent of responsible
-                investment with 5,100+ signatories globally and US$ 120+
-                trillion assets under management. By implementing the principles
-                of the PRI into our investment and management practices, our
-                Asset Management business will be part of the growing number of
-                Asian signatories that participate in the PRI’s global
-                collective action that contributes to developing a more
-                sustainable global financial system.
+                At Piper Serica Advisors, we believe in investing with
+                purpose—driving sustainable outcomes for our investors while
+                fostering positive societal impact. Our approach extends beyond
+                traditional financial metrics, identifying opportunities in
+                listed companies and startups that champion innovation,
+                sustainability, and inclusive economic development.
+              </p>
+              <p className="para mb-5">
+                By backing businesses that uphold strong governance,
+                environmental responsibility, and social impact, we empower
+                entrepreneurs to scale their ventures while contributing to
+                India’s long-term growth. This commitment to purposeful
+                investing allows us to create lasting value not just for our
+                investors but also for the communities and industries we
+                support, shaping a more resilient and responsible economic
+                future.
               </p>
 
-              <div className="empowering-points-div">
+              {/* <div className="empowering-points-div">
                 <div className="row">
                   <div className="col-lg-6 col-md-6 col-12">
                     <div className="empowering-point">
@@ -270,7 +281,7 @@ const OurImpact = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

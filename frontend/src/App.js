@@ -40,7 +40,6 @@ function App() {
         <Route path="/public-market" element={<MarketFunds />}></Route>
         <Route path="/private-market" element={<PrivateMarket />}></Route>
         {/* <Route path="/private-market" element={<MarketFunds />}></Route> */}
-        <Route path="/funds" element={<Funds />}></Route>
         <Route path="/investor-letters" element={<InvestorLetter />}></Route>
         <Route path="/our-impact" element={<OurImpact />}></Route>
         <Route path="/Insights" element={<Insights />}></Route>
@@ -57,6 +56,10 @@ function App() {
         <Route
           path="/public-market/piper-serica-leader-portfolio"
           element={<LeaderPortfolio />}
+        ></Route>
+        <Route
+          path="/private-market/piper-serica-angel-fund"
+          element={<Funds />}
         ></Route>
       </Routes>
     </Router>
