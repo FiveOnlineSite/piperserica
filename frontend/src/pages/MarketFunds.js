@@ -36,15 +36,15 @@ const MarketFunds = () => {
 
             <div className="banner-content-div">
               <div className="container">
-                <h6 className="banner-subtitle">Our Businesses</h6>
+                {/* <h6 className="banner-subtitle">Our Businesses</h6> */}
                 <h1 className="banner-title">Public Market Fund</h1>
-                <p className="banner-para">
+                {/* <p className="banner-para">
                   We provide investors access to unique investment opportunities
                   that deliver superior risk-adjusted returns in today's
                   challenging markets. Our investments provide growth capital
                   and infrastructure, resulting in a broader progressive impact
                   within Asia.
-                </p>
+                </p> */}
                 <NavLink to="/investor-letters" className="banner-btn">
                   Investor Letter
                   <i className="fa-solid fa-arrow-right"></i>
@@ -88,11 +88,11 @@ const MarketFunds = () => {
               <div className="tabs-content-div p-lg-5 px-md-4">
                 {/* <h3>Tailored and optimized portfolio allocation</h3> */}
                 <p className="para small-para">
-                  We match your investment requirements with your needs,
-                  preferences, risk appetite, and long-term goals and create an
-                  optimal global portfolio tailored for you. Our world-class
-                  institutional framework aims to maximize risk-adjusted returns
-                  through the modern portfolio theory approach.
+                Piper Serica Numero Uno India Fund is a Foreign Portfolio Investor (FPI) 
+                fund, offering global investors access to India’s high-growth equity 
+                markets. With a multi-cap strategy, disciplined risk management, and 
+                deep research, the fund aims to deliver consistent alpha and long-term 
+                wealth creation.
                 </p>
 
                 <NavLink
@@ -138,11 +138,11 @@ const MarketFunds = () => {
               <div className="tabs-content-div p-lg-5 px-md-4">
                 {/* <h3>Finding the best fit for your requirements</h3> */}
                 <p className="para small-para">
-                  We find innovative, personalized solutions that meet your
-                  sophisticated needs. From legacy governance guidance,
-                  traditional investments, and credit solutions to philanthropy,
-                  luxury assets, and art, we can provide you with bespoke
-                  solutions that meet your unique requirements.
+                Piper Serica Leader Portfolio is a multi-cap PMS strategy designed to 
+                capitalize on India’s growth story. With a blend of growth and value 
+                investing, rigorous research, and disciplined risk management, 
+                it aims to deliver consistent alpha and long-term wealth creation 
+                for investors.
                 </p>
 
                 <NavLink

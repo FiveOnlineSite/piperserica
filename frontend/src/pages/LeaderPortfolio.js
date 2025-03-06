@@ -88,9 +88,9 @@ const LeaderPortfolio = () => {
 
             <div className="banner-content-div">
               <div className="container">
-                <h6 className="banner-subtitle">Public market funds</h6>
+                {/* <h6 className="banner-subtitle">Public market funds</h6> */}
                 <h1 className="banner-title">Piper Serica Leader Portfolio</h1>
-                <p className="banner-para">Capital to scale</p>
+                {/* <p className="banner-para">Capital to scale</p> */}
               </div>
             </div>
           </div>
@@ -105,13 +105,16 @@ const LeaderPortfolio = () => {
                 about Piper Serica Numero Uno Fund
               </h6>
               <p className="para">
-                The Fund seeks to empower early and growth stage companies in
-                India and Southeast Asia, providing them capital to scale
-                without significantly diluting equity. The Southeast Asia and
-                India's venture debt market has the potential to scale up by 4 -
-                5x over the next few years. The Fund presents investors a unique
-                opportunity to participate in Southeast Asia and India's venture
-                debt story and a fast growing segment.
+                Piper Serica Leader Portfolio is a multi-cap Portfolio
+                Management Service (PMS) designed to harness India’s structural
+                growth opportunities. Managed by a seasoned team, it blends
+                growth and value investing, focusing on high-quality businesses
+                at fair valuations. A rigorous research-driven approach ensures
+                optimal stock selection, while disciplined risk management
+                safeguards capital. With a strong emphasis on long-term wealth
+                creation and consistent alpha generation, this strategy is ideal
+                for investors seeking superior risk-adjusted returns across
+                market cycles.
               </p>
 
               <div>
@@ -143,19 +146,19 @@ const LeaderPortfolio = () => {
               <div className="row">
                 <div className="col-lg-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">840+</h2>
+                    <h2 className="facts-title">25x P/E</h2>
                     <h6 className="para">Investors</h6>
                   </div>
                 </div>
                 <div className="col-lg-4 mt-lg-0 mt-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">INR 1250+</h2>
+                    <h2 className="facts-title">INR 760 cr+ AUM</h2>
                     <h6 className="para">Crore Asset Under Management</h6>
                   </div>
                 </div>
                 <div className="col-lg-4 mt-lg-0 mt-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">20%+</h2>
+                    <h2 className="facts-title">17% CAGR</h2>
                     <h6 className="para">CAGR over more than 9 years</h6>
                   </div>
                 </div>
@@ -175,21 +178,57 @@ const LeaderPortfolio = () => {
               </div>
             </div>
             <div className="col-lg-7 mt-lg-0 mt-4">
-              <p className="para">
-                Provide senior-secured loans, with an equity upside, to 35 - 40
-                companies in India and Southeast Asia at stages Series A and
-                above with a ticket size of US$1 to US$5 million. Managed by
-                experienced credit professionals with combined experience of
-                over 25 years in institutions such as IFC, GIC, Deutsche Bank
-                and with investment and asset management experience of over US$1
-                billion in Asia. Provide senior-secured loans, with an equity
-                upside, to 35 - 40 companies in India and Southeast Asia at
-                stages Series A and above with a ticket size of US$1 to US$5
-                million. Managed by experienced credit professionals with
-                combined experience of over 25 years in institutions such as
-                IFC, GIC, Deutsche Bank and with investment and asset management
-                experience of over US$1 billion in Asia.
-              </p>
+              <div className="single-feature">
+                <div>
+                  <span></span>
+                </div>
+                <p className="para">
+                  <strong>Capitalizing on India’s Growth Story</strong> We
+                  invest in businesses that benefit from India’s young
+                  population, rising middle class, digital transformation, and
+                  structural economic reforms.
+                </p>
+              </div>
+              <div className="single-feature">
+                <div>
+                  <span></span>
+                </div>
+                <p className="para">
+                  <strong>Expert-Led Strategy</strong> We have an experienced
+                  equity team with a proven track record of delivering superior
+                  returns.
+                </p>
+              </div>
+              <div className="single-feature">
+                <div>
+                  <span></span>
+                </div>
+                <p className="para">
+                  <strong>Balanced Growth and Value Investing</strong> Our
+                  strategy blends high-growth opportunities with fair valuations
+                  to maximize returns across market cycles.
+                </p>
+              </div>
+              <div className="single-feature">
+                <div>
+                  <span></span>
+                </div>
+                <p className="para">
+                  <strong>Rigorous Stock Selection</strong> Every stock
+                  undergoes meticulous research, combining qualitative and
+                  quantitative screening to identify future leaders.
+                </p>
+              </div>
+              <div className="single-feature">
+                <div>
+                  <span></span>
+                </div>
+                <p className="para">
+                  <strong>Consistent Alpha with Risk Management</strong> A
+                  disciplined framework ensures long-term wealth creation while
+                  protecting capital during market volatility.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -211,9 +250,10 @@ const LeaderPortfolio = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                    Provide senior-secured loans, with an equity upside, to 35 -
-                    40 companies in India and Southeast Asia at stages Series A
-                    and above with a ticket size of US$1 to US$5 million.
+                    Piper Serica Leader Portfolio follows a{" "}
+                    <strong>multi-cap investment strategy</strong>, identifying
+                    high-quality opportunities across different market
+                    capitalizations to deliver superior risk-adjusted returns.
                   </p>
                 </div>
 
@@ -222,10 +262,12 @@ const LeaderPortfolio = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                    Managed by experienced credit professionals with combined
-                    experience of over 25 years in institutions such as IFC,
-                    GIC, Deutsche Bank and with investment and asset management
-                    experience of over US$1 billion in Asia.
+                    The fund focuses on{" "}
+                    <strong>
+                      investing in businesses with strong fundamentals
+                    </strong>{" "}
+                    and sustainable growth potential while ensuring fair
+                    valuations through deep research.
                   </p>
                 </div>
 
@@ -234,9 +276,33 @@ const LeaderPortfolio = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                    Sector-agnostic mandate with focus on partnering with
-                    companies with strong business fundamentals and run by
-                    passionate founders.
+                    A{" "}
+                    <strong>rigorous research and due diligence process</strong>{" "}
+                    involves engaging with key stakeholders, analyzing
+                    financials, and assessing management quality and governance
+                    standards.
+                  </p>
+                </div>
+                <div className="single-feature">
+                  <div>
+                    <span></span>
+                  </div>
+                  <p className="para">
+                    A <strong>disciplined risk management framework</strong>{" "}
+                    ensures capital protection by maintaining a maximum
+                    allocation of 6% per stock, 25% per sector, and maintaining
+                    liquidity to exit holdings within seven trading days.
+                  </p>
+                </div>
+                <div className="single-feature">
+                  <div>
+                    <span></span>
+                  </div>
+                  <p className="para">
+                    Regular portfolio rebalancing and sectoral diversification
+                    help{" "}
+                    <strong>optimize returns while mitigating risks</strong>,
+                    ensuring long-term wealth creation for investors.
                   </p>
                 </div>
               </div>
@@ -325,7 +391,7 @@ const LeaderPortfolio = () => {
         </div>
       </section>
 
-      <StickyContact title="Want to know more about Piper Serica Leader Portfolio?" />
+      <StickyContact title="Want to know more about Piper Serica Leader Portfolio Fund?" />
     </Layout>
   );
 };

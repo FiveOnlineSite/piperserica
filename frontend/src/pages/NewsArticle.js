@@ -40,15 +40,15 @@ const NewsArticle = () => {
             />
             <div className="banner-content-div">
               <div className="container">
-                <h6 className="banner-subtitle">Press Release</h6>
+                {/* <h6 className="banner-subtitle">Press Release</h6> */}
                 <h1 className="banner-title">News Article</h1>
-                <p className="banner-para">
+                {/* <p className="banner-para">
                   Piper Serica is a distinguished investment management firm
                   committed to delivering long-term value through meticulous
                   research, strategic asset allocation, and a disciplined
                   investment approach, catering to investors seeking sustainable
                   growth and financial security.
-                </p>
+                </p> */}
               </div>
             </div>
           </div>
