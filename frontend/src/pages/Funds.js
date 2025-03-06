@@ -18,9 +18,9 @@ const Funds = () => {
 
             <div className="banner-content-div">
               <div className="container">
-                <h6 className="banner-subtitle">Private market funds</h6>
+                {/* <h6 className="banner-subtitle">Private market funds</h6> */}
                 <h1 className="banner-title"> Piper Serica Angel Fund</h1>
-                <p className="banner-para">Capital to scale</p>
+                {/* <p className="banner-para">Capital to scale</p> */}
               </div>
             </div>
           </div>
