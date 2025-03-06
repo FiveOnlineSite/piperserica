@@ -11,170 +11,178 @@ const CompanyPortfolio = () => {
     {
       id: 1,
       src: "/images/industries/comp-1.png",
-      label: "B2B",
+      label: "ELECTRIC VEHICLE",
       description:
-        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-      link: "pumpumpum.com",
+        "ALT Mobility is a full-stack EV leasing platform offering mobility as a service (MaaS) for commercial vehicle users. By acquiring affordable debt financing from both domestic and international financing institutions, the company seeks to provide a well-structured financial solution for the electrification of commercial fleets throughout India. With a full stack EV leasing solution, it enables asset light logistic enterprises to ramp up to tens of thousands of EV fleets in months.",
+      link: "https://alt-mobility.com/",
     },
     {
       id: 2,
       src: "/images/industries/comp-2.jpg",
-      label: "B2B",
+      label: "FINTECH",
       description:
-        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-      link: "pumpumpum.com",
+        "The company has created an information intelligence platform intended to offer financial organisations big data risk analysis. In order to generate insights from distributed and unstructured data sources, the company's platform combines computational techniques like machine learning, natural language processing, and data visualisation technologies. This facilitates financial institutions, institutional investors, and businesses to make quick decisions while realising market possibilities and minimizing capital risks.",
+      link: "https://www.crediwatch.com/home/",
     },
     {
       id: 3,
       src: "/images/industries/comp-3.jpg",
-      label: "Consumer",
+      label: "SUPPLY CHAIN TECH",
       description:
-        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-      link: "pumpumpum.com",
+        "ZFW is creating a physical network of micro warehouses (dark stores) along with a strong tech integration to let D2C brands and consumer brands to deliver products on the same day thereby improving customer delight.",
+      link: "https://www.zippee.delivery/",
     },
     {
       id: 4,
       src: "/images/industries/comp-4.png",
-      label: "Consumer",
+      label: "CONSUMER TECH",
       description:
-        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-      link: "pumpumpum.com",
+        "Founded in 2021, Driffle is a digital goods marketplace that connects gamers with sellers all over the world. The platform sells games, digital gift cards, and gaming points for gamers. The companys objective is to make online gaming accessible, affordable and safer for gamers worldwide.",
+      link: "https://driffle.com/",
     },
     {
       id: 5,
       src: "/images/industries/comp-5.png",
-      label: "Creator Economy",
+      label: "AI & SAAS",
       description:
-        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-      link: "pumpumpum.com",
+        "Founded in 2020, Oditly is an enterprise-scale SaaS application enabling businesses of all sizes to digitize and automate the entire lifecycle of quality, safety and compliance processes within minutes. The product offers to set up and manage inspection workflows seamlessly allowing users to schedule recurring inspections, assigning tasks and actions plans.",
+      link: "https://www.oditly.com/",
     },
     {
       id: 6,
       src: "/images/industries/comp-6.jpg",
-      label: "Creator Economy",
+      label: "SUPPLY CHAIN TECH",
       description:
-        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-      link: "pumpumpum.com",
+        "Founded in 2022, UnOrg is the first and only B2B managed Marketplace that is empowering street food vendors, Dhabas and sweets shops etc. The company operates a procurement platform intended to create a one-stop solution for street food vendors by offering a range of services including a large set of SKUs, timely slot delivery, discounts on all products, and other related services, enabling vendors to procure raw materials swiftly and systematically.",
+      link: "https://unorg.in/",
     },
     // {
     //   id: 7,
-    //   src: "/images/industries/industry7.png",
-    //   label: "B2B",
+    //   src: "/images/industries/comp-8.png",
+    //   label: "AI & SAAS",
     //   description:
-    //     "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-    //   link: "pumpumpum.com",
+    //     "DesignX helps manufacturing companies with process discovery, modelling, monitoring & automation through RPA & IIOT to improve MSQCD (Morale, Safety, Quality, Cost & Delivery) on the shop floor.",
+    //   link: "https://designx.in/",
     // },
     {
-      id: 8,
+      id: 7,
       src: "/images/industries/comp-8.png",
-      label: "Consumer",
+      label: "FINTECH",
       description:
-        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-      link: "pumpumpum.com",
+        "Castler is a Digital Escrow Platform which includes solutions for setup, administration, collections & payouts, approvals, processing and risk management.",
+      link: "https://castler.com/",
+    },
+    {
+      id: 8,
+      src: "/images/industries/comp-9 (2).png",
+      label: "AI & SAAS",
+      description:
+        "Floworks provides CRM/ERP type functionality on top of Whatsapp for businesses to better manage their operations, especially for their workforce on the field.",
+      link: "https://www.floworks.ai/",
     },
     {
       id: 9,
-      src: "/images/industries/comp-9 (2).png",
-      label: "Consumer",
+      src: "/images/industries/comp-10.jpg",
+      label: "",
       description:
-        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-      link: "pumpumpum.com",
+        "MyCaptain provides beginner to advanced Live & Online Cohort based courses in the fields of Business, Content, Design and Product. They help early professionals, young graduates and college students acquire skills and get jobs in New-age and aspirational careers.",
+      link: "https://mycaptain.in/",
     },
     {
       id: 10,
-      src: "/images/industries/comp-10.jpg",
-      label: "Consumer",
+      src: "/images/industries/comp-11.png",
+      label: "CONSUMER TECH",
       description:
-        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-      link: "pumpumpum.com",
+        "University Living is a global student housing marketplace. It helps students across the globe find suitable and secure accommodation near their university campuses.",
+      link: "https://www.universityliving.com/",
     },
     {
       id: 11,
-      src: "/images/industries/comp-11.png",
-      label: "Consumer",
+      src: "/images/industries/comp-12.png",
+      label: "FINTECH",
       description:
-        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-      link: "pumpumpum.com",
+        "KiVi provides digital financial solutions and a physical platform for the farmer to procure input, implement agronomy practices, process & market output. It employs a micro-entrepreneur-led (franchisee) model that combines the strength of the platform with the franchisee’s local expertise, social capital and last mile transaction capability.",
+      link: "https://agrosperity.com/#/home",
     },
     {
       id: 12,
-      src: "/images/industries/comp-12.png",
-      label: "Consumer",
+      src: "/images/industries/comp-13.png",
+      label: "CYBER SECURITY & CHIP DESIGN",
       description:
-        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-      link: "pumpumpum.com",
+        "Pantherun is a cyber security innovator with a patent pending approach to data protection, that transforms security by making encryption possible in real-time, while making breach of security 10X harder compared to existing global solutions, at better performance and price.",
+      link: "https://pantherun.com/",
     },
     {
       id: 13,
-      src: "/images/industries/comp-13.png",
-      label: "Consumer",
+      src: "/images/industries/comp-14-1.png",
+      label: "ELECTRIC VEHICLE",
       description:
-        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-      link: "pumpumpum.com",
+        "Evify is a fleet management company working to De-Carbonize the last-mile logistic sector by providing e-commerce, food delivery and 3PL companies with an electric vehicle Fleet across Tier I and Tier II cities.",
+      link: "https://www.evify.co.in/",
     },
     {
       id: 14,
-      src: "/images/industries/comp-14-1.png",
-      label: "Consumer",
+      src: "/images/industries/comp-15.png",
+      label: "CYBER SECURITY & CHIP DESIGN",
       description:
-        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-      link: "pumpumpum.com",
+        "ClearTrust offers a cybersecurity platform, which mitigates AdFraud for publishers, platforms and advertisers by handling Traffic and Ad Security in real-time by scanning millions of events per day.",
+      link: "https://www.cleartrust.cc/",
     },
     {
       id: 15,
-      src: "/images/industries/comp-15.png",
-      label: "Consumer",
+      src: "/images/industries/comp-16.jpg",
+      label: "FINTECH",
       description:
-        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-      link: "pumpumpum.com",
+        "Flashaid - is an Insuretech company that provides customized and affordable embedded health insurance products through open integrated API.",
+      link: "https://flashaid.in/",
     },
     {
       id: 16,
-      src: "/images/industries/comp-16.png",
-      label: "Consumer",
+      src: "/images/industries/comp-17.png",
+      label: "FINTECH",
       description:
-        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-      link: "pumpumpum.com",
+        "Freed - FREED is India’s 1st debt relief platform, empowering customers to regain their creditworthiness by resolving their overburdening and toxic debt.",
+      link: "https://freed.care/",
     },
     {
       id: 17,
-      src: "/images/industries/comp-17.png",
-      label: "Consumer",
+      src: "/images/industries/comp-18.jpg",
+      label: "CYBER SECURITY & CHIP DESIGN",
       description:
-        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-      link: "pumpumpum.com",
+        "OTPLess provides identity as a service by building an essential identity infrastructure for merchants to make customer and employee identity/authentication easy and secure.",
+      link: "https://otpless.com/",
     },
     {
       id: 18,
-      src: "/images/industries/comp-18.jpg",
-      label: "Consumer",
+      src: "/images/industries/comp-19.jpg",
+      label: "ADVANCE ELECTRONIC",
       description:
-        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-      link: "pumpumpum.com",
+        "Six Sense Mobility is a deep-tech mobility company that uses plug-and-play devices to transform regular vehicles into intelligent-connected vehicles.",
+      link: "https://www.sixsensemobility.com/home",
     },
     {
       id: 19,
-      src: "/images/industries/comp-19.jpg",
-      label: "Consumer",
+      src: "/images/industries/comp-20.png",
+      label: "FINTECH",
       description:
-        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-      link: "pumpumpum.com",
+        "Swara Fincare is an RBI-registered NBFC dedicated to providing tailored credit solutions to rural and semi-urban regions. The company specializes in offering business and agricultural loans, empowering individuals and communities with financial support to foster economic growth and development.",
+      link: "https://www.swarafincare.com/",
     },
     {
       id: 20,
-      src: "/images/industries/comp-20.png",
-      label: "Consumer",
+      src: "/images/industries/comp-21.jpg",
+      label: "SPACETECH",
       description:
-        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-      link: "pumpumpum.com",
+        "Astrogate Labs is a laser communication technology that simplifies and lowers the cost of data transmission across space, air, and terrestrial platforms.",
+      link: "https://astrogatelabs.com/",
     },
     {
-      id: 21,
-      src: "/images/industries/comp-21.jpg",
-      label: "Consumer",
+      id: 22,
+      src: "/images/industries/industry8.png",
+      label: "FINTECH",
       description:
-        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-      link: "pumpumpum.com",
+        "Rupeeflo is a fintech platform specifically designed for Non-Resident Indians (NRIs) to manage their financial needs seamlessly across borders through a comprehensive suite of banking and wealth management products.",
+      link: "https://www.rupeeflo.com/",
     },
   ];
 
@@ -226,9 +234,16 @@ const CompanyPortfolio = () => {
                   aria-label="Default select example"
                 >
                   <option selected>Industry</option>
-                  <option value="B2B">B2B</option>
-                  <option value="Consumer">Consumer</option>
-                  <option value="Creator Economy">Creator Economy</option>
+                  <option value="ELECTRIC VEHICLE">ELECTRIC VEHICLE</option>
+                  <option value="ADVANCE ELECTRONIC">ADVANCE ELECTRONIC</option>
+                  <option value="SUPPLY CHAIN TECH">SUPPLY CHAIN TECH</option>
+                  <option value="CONSUMER TECH">CONSUMER TECH</option>
+                  <option value="SPACETECH">SPACETECH</option>
+                  <option value="AI & SAAS">AI & SAAS</option>
+                  <option value="CYBER SECURITY & CHIP DESIGN">
+                    CYBER SECURITY & CHIP DESIGN
+                  </option>
+                  <option value="FINTECH">FINTECH</option>
                 </select>
               </div>
             </div>
@@ -247,7 +262,7 @@ const CompanyPortfolio = () => {
                       <img
                         src={`${process.env.PUBLIC_URL}${images.src}`}
                         alt="industry"
-                        className="w-100"
+                        className="w-100 portfolio-img"
                       />
                       {/* <div className="industries-content">
                         <p className="para small-para">
@@ -282,7 +297,11 @@ const CompanyPortfolio = () => {
             </div>
 
             <p className="para small-para">{selectedImage.description}</p>
-            <NavLink className="company-link" target="_blank">
+            <NavLink
+              className="company-link"
+              to={selectedImage.link}
+              target="_blank"
+            >
               {selectedImage.link}
             </NavLink>
           </Modal.Body>
