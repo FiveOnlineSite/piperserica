@@ -101,8 +101,8 @@ const CompanySlider = () => {
     cssEase: "linear", // Ensures continuous smooth motion
     slidesToShow: 4, // 4 columns
     slidesToScroll: 1, // Scroll one item at a time for smooth effect
-    rows: 2, // 2 rows
-    slidesPerRow: 1, // Each slide takes 1 column
+    // rows: 2, // 2 rows
+    // slidesPerRow: 1, // Each slide takes 1 column
     arrows: false, // Hides arrows for auto-scroll
     dots: false, // Hides dots for cleaner UI
     responsive: [
