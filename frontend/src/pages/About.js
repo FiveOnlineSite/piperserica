@@ -646,28 +646,38 @@ const About = () => {
         <div className="container">
           <h5 className="section-subtitle mb-5">our philosophy</h5>
           <div className="row image-row align-items-center">
+           
+
+            <div className="col-lg-6">
+              <h2 className="para mt-lg-0 mt-4">
+              Our core philosophy is to benefit from long term investment 
+              opportunities while ignoring market cycles. We like to identify
+               and invest in companies that are leaders in emerging spaces 
+               led by a change in consumer behavior, technology changes and 
+               product innovations. Once we identify such companies we like 
+               to stay invested as they create shareholder value while moving 
+               from small cap to mid cap and ultimately large cap. We believe 
+               that companies like these, with great management, good 
+               corporate governance, financially disciplined and shareholder 
+               friendly are quite rare and should not be looked at the same 
+               valuation prism as the rest of the market. We like to interact 
+               with the management of our portfolio companies regularly to 
+               stay abreast of the trends shaping their industry and explore 
+               other investment opportunities. We believe that long term 
+               investing requires deep knowledge and good temperament. 
+               Our team members are always curious to learn more at the same 
+               time tune out noise. We see market volatility as an 
+               opportunity to increase our equity allocations rather than 
+               reduce them. We believe that conviction comes only from deep 
+               research and understanding of our portfolio companies.
+              </h2>
+            </div>
             <div className="col-lg-6">
               <img
                 src={`${process.env.PUBLIC_URL}/images/banners/market-fund1.webp`}
                 alt="philosophy-img"
                 className="w-100"
               />
-            </div>
-
-            <div className="col-lg-6">
-              <h2 className="para mt-lg-0 mt-4">
-                Our core philosophy is to benefit from long term investment
-                opportunities while ignoring market cycles. We like to identify
-                and invest in companies that are leaders in emerging spaces led
-                by a change in consumer behavior, technology changes and product
-                innovations. Once we identify such companies we like to stay
-                invested as they create shareholder value while moving from
-                small cap to mid cap and ultimately large cap. We believe that
-                companies like these, with great management, good corporate
-                governance, financially disciplined and shareholder friendly are
-                quite rare and should not be looked at the same valuation prism
-                as the rest of the market.
-              </h2>
             </div>
           </div>
 
@@ -798,7 +808,7 @@ const About = () => {
       </section>
       <section className="teams-bg-section">
         <img
-          src={`${process.env.PUBLIC_URL}/images/banners/team-bg.jpg`}
+          src={`${process.env.PUBLIC_URL}/images/banners/team-bg.webp`}
           alt="team-bg"
           className="w-100"
         />
