@@ -462,6 +462,7 @@ body {
   font-family: "Public Sans", serif;
   letter-spacing: 2px;
   text-decoration: none;
+  background-color: transparent;
 }
 
 .banner-btn i {
@@ -1722,7 +1723,6 @@ form .form-control {
 form .form-control:focus {
   border: 1px solid var(--blue-font);
   box-shadow: none !important;
-  background-color: var(--lighter-gray-bg) !important;
 }
 
 form .form-control::placeholder {
@@ -2004,6 +2004,16 @@ form .form-label span {
 .cv-contact-btn:hover {
   color: var(--blue-font);
   border-bottom: 1px solid var(--blue-font);
+}
+
+.thankyou-msg {
+  letter-spacing: 0;
+}
+
+.text-danger {
+  font-family: "Public Sans", serif;
+  font-size: 12px;
+  text-transform: uppercase;
 }
 /* FOOTER */
 
