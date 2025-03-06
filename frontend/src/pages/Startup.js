@@ -6,6 +6,7 @@ import OfferingsSlider from "../components/OfferingsSlider";
 import NewsSection from "../components/NewsSection";
 import CompanyPortfolio from "../components/CompanyPortfolio";
 import CompanySlider from "../components/CompanySlider";
+import SubscribeLetter from "../components/SubscribeLetter";
 const Startup = () => {
   const investorItem = [
     {
@@ -63,16 +64,14 @@ const Startup = () => {
   const offeringsItems = [
     {
       strategy_title: "Private Market",
-      funds: "Piper Serica Angel Fund",
+      funds_list: [
+        //  Add a key for the array
+        {
+          funds: "Piper Serica Angel Fund",
+          link: "/private-market/piper-serica-angel-fund",
+        },
+      ],
     },
-    // {
-    //   strategy_title: "Private Credit",
-    //   funds: "LC Venture Debt",
-    // },
-    // {
-    //   strategy_title: "Venture Debt",
-    //   funds: "LC Supply Chain",
-    // },
   ];
 
   return (
@@ -118,17 +117,18 @@ const Startup = () => {
             </div>
             <div className="col-lg-7 offset-lg-1 mt-lg-0 mt-5">
               <p className="para">
-                We invest on behalf of some of the world's largest institutional
-                investors, including pension funds, sovereign funds, and
-                insurance companies, to drive economic and sustainable impact.
-                Our responsible, diversified investment strategies allow our
-                investors to benefit from differentiated growth opportunities
-                across all market cycles, focusing on capital preservation and
-                attractive risk-adjusted returns. As a global investment
-                company, we have teams in Singapore, Dubai, and India. We drive
-                value creation by applying high-quality processes and superior
-                governance standards along with a robust risk management
-                framework.
+                The Fund invests in early-stage companies that have developed a
+                proprietary deep IP / deep tech and is in the early stage of
+                commercialization. We are sector agnostic though our focus areas
+                are Spacetech, AI, advanced electronics, semicon design and
+                fintech. We like to invest in startups that are bringing a
+                significant degree of value to their customers. We need to see
+                some product market fit, even if early. Our ticket size is ₹10
+                crore. While we are happy to co-invest with another lead
+                investor there are instances where we are the lead or the sole
+                investor. Our decision-making process is fairly quick. We have a
+                very collaborative approach to investing and prefer to work with
+                multiple co-investors bringing different value to the startup.
               </p>
             </div>
           </div>
@@ -176,7 +176,7 @@ const Startup = () => {
                   <NavLink to="/">
                     <div className="why-us-content">
                       <h2 className="banner-title why-content-main-title">
-                        All-weather strategies
+                        Value added partners:
                       </h2>
                       <h6 className="read-more">
                         Read More <i className="fa-solid fa-plus"></i>
@@ -189,15 +189,14 @@ const Startup = () => {
                       </h6>
 
                       <h4 className="why-content-title">
-                        All-weather strategies
+                        Value added partners:
                       </h4>
                       <p className="para why-para">
-                        Our investment strategies offer our investors exposure
-                        to differentiated opportunities which have a low
-                        correlation to broader markets. Our unwavering focus on
-                        delivering attractive risk-adjusted returns with capital
-                        preservation drives us to minimize market cycle risks
-                        across our strategies.
+                        Our founders look at us as value added partners beyond
+                        the financial capital that we bring. We work with the
+                        founders to scale up the company by helping build the
+                        organization, acquire customers and help with further
+                        fund raises.
                       </p>
                     </div>
                   </NavLink>
@@ -208,7 +207,7 @@ const Startup = () => {
                   <NavLink to="/">
                     <div className="why-us-content">
                       <h2 className="banner-title why-content-main-title">
-                        Purposeful investing
+                        Network:
                       </h2>
                       <h6 className="read-more">
                         Read More <i className="fa-solid fa-plus"></i>
@@ -220,16 +219,13 @@ const Startup = () => {
                         Why us
                       </h6>
 
-                      <h4 className="why-content-title">
-                        Purposeful investing
-                      </h4>
+                      <h4 className="why-content-title">Network:</h4>
                       <p className="para why-para">
-                        Our investment strategies offer our investors exposure
-                        to differentiated opportunities which have a low
-                        correlation to broader markets. Our unwavering focus on
-                        delivering attractive risk-adjusted returns with capital
-                        preservation drives us to minimize market cycle risks
-                        across our strategies.
+                        We believe that the biggest help we bring to the
+                        founders is our extensive network that spans many
+                        industries and skill sets. We have a very varied set of
+                        LPs and through our public market funds we are connected
+                        with some of the largest companies in the country.
                       </p>
                     </div>
                   </NavLink>
@@ -240,7 +236,7 @@ const Startup = () => {
                   <NavLink to="/">
                     <div className="why-us-content">
                       <h2 className="banner-title why-content-main-title">
-                        Our people, our pride
+                        Founder first approach:
                       </h2>
                       <h6 className="read-more">
                         Read More <i className="fa-solid fa-plus"></i>
@@ -253,15 +249,13 @@ const Startup = () => {
                       </h6>
 
                       <h4 className="why-content-title">
-                        Our people, our pride
+                        Founder first approach:
                       </h4>
                       <p className="para why-para">
-                        Our investment strategies offer our investors exposure
-                        to differentiated opportunities which have a low
-                        correlation to broader markets. Our unwavering focus on
-                        delivering attractive risk-adjusted returns with capital
-                        preservation drives us to minimize market cycle risks
-                        across our strategies.
+                        We love to get in the trenches with the founders and
+                        help the founders ride through the tough times. Every
+                        start up faces tough challenges. Our Founders always
+                        find us by their side as they meet these challenges.
                       </p>
                     </div>
                   </NavLink>
@@ -282,7 +276,7 @@ const Startup = () => {
                     openAccordion === 0 ? "d-none" : ""
                   }`}
                 >
-                  All-weather strategies
+                  Value added partners:
                 </h2>
                 <div
                   id="collapseOne"
@@ -297,15 +291,14 @@ const Startup = () => {
                         Why us
                       </h6>
                       <h4 className="why-content-title">
-                        All-weather strategies
+                        Value added partners:
                       </h4>
                       <p className="para why-para">
-                        Our investment strategies offer our investors exposure
-                        to differentiated opportunities which have a low
-                        correlation to broader markets. Our unwavering focus on
-                        delivering attractive risk-adjusted returns with capital
-                        preservation drives us to minimize market cycle risks
-                        across our strategies.
+                        Our founders look at us as value added partners beyond
+                        the financial capital that we bring. We work with the
+                        founders to scale up the company by helping build the
+                        organization, acquire customers and help with further
+                        fund raises.
                       </p>
                     </div>
                   </div>
@@ -334,7 +327,7 @@ const Startup = () => {
                     openAccordion === 1 ? "d-none" : ""
                   }`}
                 >
-                  Purposeful investing
+                  Network:
                 </h2>
                 <div
                   id="collapseTwo"
@@ -348,16 +341,13 @@ const Startup = () => {
                       <h6 className="section-subtitle why-content-subtitle">
                         Why us
                       </h6>
-                      <h4 className="why-content-title">
-                        Purposeful investing
-                      </h4>
+                      <h4 className="why-content-title">Network:</h4>
                       <p className="para why-para">
-                        Our investment strategies offer our investors exposure
-                        to differentiated opportunities which have a low
-                        correlation to broader markets. Our unwavering focus on
-                        delivering attractive risk-adjusted returns with capital
-                        preservation drives us to minimize market cycle risks
-                        across our strategies.
+                        We believe that the biggest help we bring to the
+                        founders is our extensive network that spans many
+                        industries and skill sets. We have a very varied set of
+                        LPs and through our public market funds we are connected
+                        with some of the largest companies in the country.
                       </p>
                     </div>
                   </div>
@@ -386,7 +376,7 @@ const Startup = () => {
                     openAccordion === 2 ? "d-none" : ""
                   }`}
                 >
-                  Our people, our pride
+                  Founder first approach:
                 </h2>
                 <div
                   id="collapseThree"
@@ -401,15 +391,13 @@ const Startup = () => {
                         Why us
                       </h6>
                       <h4 className="why-content-title">
-                        Our people, our pride
+                        Founder first approach:
                       </h4>
                       <p className="para why-para">
-                        Our investment strategies offer our investors exposure
-                        to differentiated opportunities which have a low
-                        correlation to broader markets. Our unwavering focus on
-                        delivering attractive risk-adjusted returns with capital
-                        preservation drives us to minimize market cycle risks
-                        across our strategies.
+                        We love to get in the trenches with the founders and
+                        help the founders ride through the tough times. Every
+                        start up faces tough challenges. Our Founders always
+                        find us by their side as they meet these challenges.
                       </p>
                     </div>
                   </div>
@@ -464,36 +452,34 @@ const Startup = () => {
             </div>
 
             <div className="row mt-5">
-              {offeringsItems.map((item, index) => (
-                <div className="col-lg-6">
-                  <div key={index} className="offerings-div">
-                    {/* <h6 className="section-subtitle">Investment Strategy</h6> */}
-                    <div className="strategy-title-div">
-                      <h5>{item.strategy_title}</h5>{" "}
-                      {/* <i className="fa-solid fa-arrow-right"></i> */}
-                    </div>
-                    <div className="strategy-funds-div">
-                      {/* <h6 className="section-subtitle mt-5">funds</h6> */}
+              <div className="col-lg-6">
+                <div className="offerings-div">
+                  {/* <h6 className="section-subtitle">Investment Strategy</h6> */}
 
-                      <div className="funds-container">
-                        <NavLink to="/public-funds" className="mt-2">
-                          <div className="funds-div">
-                            <h5>{item.funds}</h5>
-                            <i className="fa-solid fa-arrow-right"></i>
+                  {offeringsItems.map((item, index) => (
+                    <div key={index}>
+                      {/* Add key to the outermost element */}
+                      <div className="strategy-title-div">
+                        <h5>{item.strategy_title}</h5>{" "}
+                      </div>
+                      <div className="strategy-funds-div">
+                        {/* Check if funds_list exists before mapping */}
+                        {item.funds_list?.map((fund, fundIndex) => (
+                          <div className="funds-container" key={fundIndex}>
+                            {/* Add key here */}
+                            <NavLink to={fund.link} className="mt-2">
+                              <div className="funds-div">
+                                <h5>{fund.funds}</h5>
+                                <i className="fa-solid fa-arrow-right"></i>
+                              </div>
+                            </NavLink>
                           </div>
-                        </NavLink>
-                        {/* <p className="para small-para">
-                                              Lorem ipsum dolor sit amet, consectetur adipiscing
-                                              elit, sed do eiusmod tempor incididunt ut labore et
-                                              dolore magna aliqua. Ut enim ad minim veniam, quis
-                                              nostrud exercitation ullamco laboris nisi ut aliquip
-                                              ex ea commodo consequat.
-                                            </p> */}
+                        ))}
                       </div>
                     </div>
-                  </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>
@@ -505,96 +491,7 @@ const Startup = () => {
 
       <CompanySlider />
 
-      <section className="newsletter-section">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-5">
-              <h2 className="banner-title blue-title mt-3">
-                Subscribe to our insights & updates
-              </h2>
-            </div>
-            <div className="col-lg-7 mt-5">
-              <div className="newsletter-div">
-                <form>
-                  <div className="row">
-                    <div className="col-lg-6">
-                      <div className="mb-4">
-                        <label
-                          for="first-name"
-                          className="form-label section-subtitle"
-                        >
-                          First name
-                        </label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          id="first-name"
-                          // placeholder="first name"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="col-lg-6">
-                      <div className="mb-4">
-                        <label
-                          for="last-name"
-                          className="form-label section-subtitle"
-                        >
-                          Last name
-                        </label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          id="last-name"
-                          // placeholder="last name"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="col-lg-12">
-                      <div className="mb-4">
-                        <label
-                          for="email"
-                          className="form-label section-subtitle"
-                        >
-                          Email
-                        </label>
-                        <input
-                          type="email"
-                          className="form-control"
-                          id="email"
-                          // placeholder="email"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-12">
-                      <div className="row">
-                        <div className="col-lg-4 d-flex justify-content-start">
-                          <NavLink
-                            to="/"
-                            className="banner-btn blue-btn mt-0 mb-3"
-                          >
-                            Subscribe
-                          </NavLink>
-                        </div>
-                        <div className="col-lg-8">
-                          <p className="para subscribe-para mb-0">
-                            <i>
-                              *By submitting the contact form, you consent to
-                              all data in the form being used in accordance with
-                              <a href="#">Piper Serics's data privacy policy</a>
-                            </i>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <SubscribeLetter />
 
       <section className="contact-us-section">
         <div className="container">
@@ -611,8 +508,8 @@ const Startup = () => {
                   be in touch.
                 </p>
 
-                <NavLink to="/" className="banner-btn">
-                  contact us
+                <NavLink to="/contact" className="banner-btn">
+                  contact
                   <i className="fa-solid fa-arrow-right"></i>
                 </NavLink>
               </div>

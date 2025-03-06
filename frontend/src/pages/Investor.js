@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import Slider from "react-slick";
 import Layout from "../components/Layout";
 import NewsSection from "../components/NewsSection";
+import SubscribeLetter from "../components/SubscribeLetter";
 
 const Investor = () => {
   const investorItem = [
@@ -61,17 +62,14 @@ const Investor = () => {
   const offeringsItems = [
     {
       strategy_title: "Public Market",
-      funds: "Piper Serica Numero Uno India Fund",
-      fund_type: "Foreign Investor",
+      funds_list: [
+        //  Add a key for the array
+        {
+          funds: "Piper Serica Numero Uno India Fund",
+          link: "/public-market/piper-serica-nemero-uno-india-fund",
+        },
+      ],
     },
-    // {
-    //   strategy_title: "Private Credit",
-    //   funds: "LC Venture Debt",
-    // },
-    // {
-    //   strategy_title: "Venture Debt",
-    //   funds: "LC Supply Chain",
-    // },
   ];
 
   return (
@@ -108,32 +106,40 @@ const Investor = () => {
       <section className="what-we-do-section">
         <div className="container">
           <div className="row">
-            <div className="col-lg-4">
-              <h5 className="section-subtitle">What we do</h5>
+            <h5 className="section-subtitle mb-4">What we do</h5>
+
+            <p className="para">
+              Piper Serica is a long-only active equity asset manager that
+              traverses various strategies of equity investment in India. We
+              manage multiple funds that invest in Indian listed companies for
+              domestic and foreign individuals and institutions. We also manage
+              a fund that invests in Indian startups that are building business
+              models based on deep tech. We have been investing in Indian
+              companies for over 30 years and have a very solid understanding of
+              how to succeed while investing in India navigating through various
+              risks, most of them unique to India as an emerging market. The
+              funds that we manage cater to different risk and return profiles
+              and objectives of our investors. We have an edge over our peers
+              due to our deep research and disciplined approach to investing.
+              Our research team is extensively trained in our proprietary
+              research processes that we have developed and mostly automated. To
+              ensure full skin in the game our fund management team makes all
+              their public and private investments through the funds managed by
+              Piper Serica. We are a fund management company owned by its
+              management team. Our management company is majority owned by
+              women.
+            </p>
+
+            {/* <div className="col-lg-4">
+            
               <h2 className="section-title mt-5">
                 Unlocking differentiated growth opportunities across market
                 cycles
               </h2>
             </div>
             <div className="col-lg-7 offset-lg-1 mt-lg-0 mt-5">
-              <p className="para">
-              Piper Serica is a long-only active equity asset manager that traverses 
-              various strategies of equity investment in India. We manage multiple funds 
-              that invest in Indian listed companies for domestic and foreign individuals 
-              and institutions. We also manage a fund that invests in Indian startups that are 
-              building business models based on deep tech. We have been investing in Indian companies 
-              for over 30 years and have a very solid understanding of how to succeed while investing 
-              in India navigating through various risks, most of them unique to India as an emerging 
-              market. The funds that we manage cater to different risk and return profiles and 
-              objectives of our investors. We have an edge over our peers due to our deep research 
-              and disciplined approach to investing. Our research team is extensively trained 
-              in our proprietary research processes that we have developed and mostly automated. 
-              To ensure full skin in the game our fund management team makes all their public 
-              and private investments through the funds managed by Piper Serica. We are a 
-              fund management company owned by its management team. Our management company 
-              is majority owned by women.
-              </p>
-            </div>
+            
+            </div> */}
           </div>
         </div>
       </section>
@@ -179,7 +185,7 @@ const Investor = () => {
                   <NavLink to="/">
                     <div className="why-us-content">
                       <h2 className="banner-title why-content-main-title">
-                      Focus on risk-adjusted returns:
+                        Focus on risk-adjusted returns:
                       </h2>
                       <h6 className="read-more">
                         Read More <i className="fa-solid fa-plus"></i>
@@ -192,14 +198,16 @@ const Investor = () => {
                       </h6>
 
                       <h4 className="why-content-title">
-                      Focus on risk-adjusted returns:
+                        Focus on risk-adjusted returns:
                       </h4>
                       <p className="para why-para">
-                      We focus not only on returns but also the systemic and non-systemic 
-                      risks while building our model portfolio. We have built strict guard rails 
-                      of risk metrics that have helped us deliver steady long-term returns. 
-                      Our Portfolio Management Process is devoid of human biases due to highly 
-                      objective decision making processes that we have developed over three decades.
+                        We focus not only on returns but also the systemic and
+                        non-systemic risks while building our model portfolio.
+                        We have built strict guard rails of risk metrics that
+                        have helped us deliver steady long-term returns. Our
+                        Portfolio Management Process is devoid of human biases
+                        due to highly objective decision making processes that
+                        we have developed over three decades.
                       </p>
                     </div>
                   </NavLink>
@@ -222,20 +230,22 @@ const Investor = () => {
                         Why us
                       </h6>
 
-                      <h4 className="why-content-title">
-                        Research Process
-                      </h4>
+                      <h4 className="why-content-title">Research Process</h4>
                       <p className="para why-para">
-                      We have a very strong on-ground research presence which is required 
-                      to be successful in an Emerging Market like India. Our research team 
-                      understands local nuances while engaging with investee company management 
-                      and their stakeholders. We have built deep and meaningful networks across 
-                      industries that allow us to assess investment opportunities in depth. This 
-                      allows us to understand long term trends as we build our investment thesis. 
-                      We have built a blue chip reputation as an asset manager over three decades 
-                      that provides us market access of the kind that is not available to new fund 
-                      managers. Our fund management team has a combined experience of almost 100
-                       years making it one of the most experienced teams in the country.
+                        We have a very strong on-ground research presence which
+                        is required to be successful in an Emerging Market like
+                        India. Our research team understands local nuances while
+                        engaging with investee company management and their
+                        stakeholders. We have built deep and meaningful networks
+                        across industries that allow us to assess investment
+                        opportunities in depth. This allows us to understand
+                        long term trends as we build our investment thesis. We
+                        have built a blue chip reputation as an asset manager
+                        over three decades that provides us market access of the
+                        kind that is not available to new fund managers. Our
+                        fund management team has a combined experience of almost
+                        100 years making it one of the most experienced teams in
+                        the country.
                       </p>
                     </div>
                   </NavLink>
@@ -262,12 +272,13 @@ const Investor = () => {
                         Investor Friendliness:
                       </h4>
                       <p className="para why-para">
-                      We love to communicate with our investors on a regular basis. 
-                      While the regulatory compliance requires us to send standard 
-                      portfolio and valuation reports to our investors we go beyond that. 
-                      Through monthly, quarterly and annual investor letters and regular 
-                      webinars we share our portfolio strategy and market outlook on a 
-                      regular basis with our investors.
+                        We love to communicate with our investors on a regular
+                        basis. While the regulatory compliance requires us to
+                        send standard portfolio and valuation reports to our
+                        investors we go beyond that. Through monthly, quarterly
+                        and annual investor letters and regular webinars we
+                        share our portfolio strategy and market outlook on a
+                        regular basis with our investors.
                       </p>
                     </div>
                   </NavLink>
@@ -306,12 +317,13 @@ const Investor = () => {
                         Focus on risk-adjusted returns:
                       </h4>
                       <p className="para why-para">
-                      We focus not only on returns but also the systemic and non-systemic 
-                      risks while building our model portfolio. We have built strict guard 
-                      rails of risk metrics that have helped us deliver steady long-term 
-                      returns. Our Portfolio Management Process is devoid of human biases 
-                      due to highly objective decision making processes that we have 
-                      developed over three decades.
+                        We focus not only on returns but also the systemic and
+                        non-systemic risks while building our model portfolio.
+                        We have built strict guard rails of risk metrics that
+                        have helped us deliver steady long-term returns. Our
+                        Portfolio Management Process is devoid of human biases
+                        due to highly objective decision making processes that
+                        we have developed over three decades.
                       </p>
                     </div>
                   </div>
@@ -354,21 +366,22 @@ const Investor = () => {
                       <h6 className="section-subtitle why-content-subtitle">
                         Why us
                       </h6>
-                      <h4 className="why-content-title">
-                        Research Process:
-                      </h4>
+                      <h4 className="why-content-title">Research Process:</h4>
                       <p className="para why-para">
-                      We have a very strong on-ground research presence which is required 
-                      to be successful in an Emerging Market like India. Our research team 
-                      understands local nuances while engaging with investee company 
-                      management and their stakeholders. We have built deep and meaningful 
-                      networks across industries that allow us to assess investment 
-                      opportunities in depth. This allows us to understand long term 
-                      trends as we build our investment thesis. We have built a blue 
-                      chip reputation as an asset manager over three decades that provides 
-                      us market access of the kind that is not available to new fund managers.
-                       Our fund management team has a combined experience of almost 100 years
-                        making it one of the most experienced teams in the country.
+                        We have a very strong on-ground research presence which
+                        is required to be successful in an Emerging Market like
+                        India. Our research team understands local nuances while
+                        engaging with investee company management and their
+                        stakeholders. We have built deep and meaningful networks
+                        across industries that allow us to assess investment
+                        opportunities in depth. This allows us to understand
+                        long term trends as we build our investment thesis. We
+                        have built a blue chip reputation as an asset manager
+                        over three decades that provides us market access of the
+                        kind that is not available to new fund managers. Our
+                        fund management team has a combined experience of almost
+                        100 years making it one of the most experienced teams in
+                        the country.
                       </p>
                     </div>
                   </div>
@@ -415,12 +428,13 @@ const Investor = () => {
                         Investor Friendliness:
                       </h4>
                       <p className="para why-para">
-                      We love to communicate with our investors on a regular basis. 
-                      While the regulatory compliance requires us to send standard 
-                      portfolio and valuation reports to our investors we go beyond that. 
-                      Through monthly, quarterly and annual investor letters and regular 
-                      webinars we share our portfolio strategy and market outlook on a 
-                      regular basis with our investors.
+                        We love to communicate with our investors on a regular
+                        basis. While the regulatory compliance requires us to
+                        send standard portfolio and valuation reports to our
+                        investors we go beyond that. Through monthly, quarterly
+                        and annual investor letters and regular webinars we
+                        share our portfolio strategy and market outlook on a
+                        regular basis with our investors.
                       </p>
                     </div>
                   </div>
@@ -456,16 +470,17 @@ const Investor = () => {
             <div className="row align-items-center my-lg-3 my-4">
               <div className="col-lg-9">
                 <p className="para small-para">
-                Piper Serica Numero Uno Fund is based in Mauritius and registered with FSC
-                 Mauritius and SEBI as a Foreign Portfolio Investor Fund. It is a 
-                 USD denominated fund. The fund was launched in 2020 and has 
-                 delivered a USD annual return of almost 15% per annum with minimal 
-                 volatility. The Fund follows the model portfolio strategy of Piper 
-                 Serica and is a multi cap fund with a judicious mix of small, mid 
-                 and large cap stocks. The fund focuses on generating long term alpha 
-                 returns and is a great way for global investors to allocate capital 
-                 to India. Eligible investors include Non Resident Indians (NRIs) and 
-                 Non Indian individuals, family offices and institutions.
+                  Piper Serica Numero Uno Fund is based in Mauritius and
+                  registered with FSC Mauritius and SEBI as a Foreign Portfolio
+                  Investor Fund. It is a USD denominated fund. The fund was
+                  launched in 2020 and has delivered a USD annual return of
+                  almost 15% per annum with minimal volatility. The Fund follows
+                  the model portfolio strategy of Piper Serica and is a multi
+                  cap fund with a judicious mix of small, mid and large cap
+                  stocks. The fund focuses on generating long term alpha returns
+                  and is a great way for global investors to allocate capital to
+                  India. Eligible investors include Non Resident Indians (NRIs)
+                  and Non Indian individuals, family offices and institutions.
                 </p>
               </div>
               {/* <div className="col-lg-3">
@@ -477,32 +492,34 @@ const Investor = () => {
             </div>
 
             <div className="row mt-5">
-              {offeringsItems.map((item, index) => (
-                <div className="col-lg-6">
-                  <div key={index} className="offerings-div">
-                    {/* <h6 className="section-subtitle">Investment Strategy</h6> */}
-                    <div className="strategy-title-div">
-                      <h5>{item.strategy_title}</h5>{" "}
-                      {/* <i className="fa-solid fa-arrow-right"></i> */}
-                    </div>
-                    <div className="strategy-funds-div">
-                      {/* <h6 className="section-subtitle mt-5">funds</h6> */}
+              <div className="col-lg-6">
+                <div className="offerings-div">
+                  {/* <h6 className="section-subtitle">Investment Strategy</h6> */}
 
-                      <div className="funds-container">
-                        <NavLink to="/public-funds" className="mt-2">
-                          <div className="funds-div">
-                            <h5>{item.funds}</h5>
-                            <i className="fa-solid fa-arrow-right"></i>
+                  {offeringsItems.map((item, index) => (
+                    <div key={index}>
+                      {/* Add key to the outermost element */}
+                      <div className="strategy-title-div">
+                        <h5>{item.strategy_title}</h5>{" "}
+                      </div>
+                      <div className="strategy-funds-div">
+                        {/* Check if funds_list exists before mapping */}
+                        {item.funds_list?.map((fund, fundIndex) => (
+                          <div className="funds-container" key={fundIndex}>
+                            {/* Add key here */}
+                            <NavLink to={fund.link} className="mt-2">
+                              <div className="funds-div">
+                                <h5>{fund.funds}</h5>
+                                <i className="fa-solid fa-arrow-right"></i>
+                              </div>
+                            </NavLink>
                           </div>
-                        </NavLink>
-                        {/* <p className="para small-para">
-                          
-                        </p> */}
+                        ))}
                       </div>
                     </div>
-                  </div>
+                  ))}
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>
@@ -537,96 +554,7 @@ const Investor = () => {
         <NewsSection />
       </section>
 
-      <section className="newsletter-section">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-5">
-              <h2 className="banner-title blue-title mt-3">
-                Subscribe to our insights & updates
-              </h2>
-            </div>
-            <div className="col-lg-7 mt-5">
-              <div className="newsletter-div">
-                <form>
-                  <div className="row">
-                    <div className="col-lg-6">
-                      <div className="mb-4">
-                        <label
-                          for="first-name"
-                          className="form-label section-subtitle"
-                        >
-                          First name
-                        </label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          id="first-name"
-                          // placeholder="first name"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="col-lg-6">
-                      <div className="mb-4">
-                        <label
-                          for="last-name"
-                          className="form-label section-subtitle"
-                        >
-                          Last name
-                        </label>
-                        <input
-                          type="text"
-                          className="form-control"
-                          id="last-name"
-                          // placeholder="last name"
-                        />
-                      </div>
-                    </div>
-
-                    <div className="col-lg-12">
-                      <div className="mb-4">
-                        <label
-                          for="email"
-                          className="form-label section-subtitle"
-                        >
-                          Email
-                        </label>
-                        <input
-                          type="email"
-                          className="form-control"
-                          id="email"
-                          // placeholder="email"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-lg-12">
-                      <div className="row">
-                        <div className="col-lg-4 d-flex justify-content-start">
-                          <NavLink
-                            to="/"
-                            className="banner-btn blue-btn mt-0 mb-3"
-                          >
-                            Subscribe
-                          </NavLink>
-                        </div>
-                        <div className="col-lg-8">
-                          <p className="para subscribe-para mb-0">
-                            <i>
-                              *By submitting the contact form, you consent to
-                              all data in the form being used in accordance with
-                              <a href="#">Piper Serics's data privacy policy</a>
-                            </i>
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <SubscribeLetter />
 
       <section className="contact-us-section">
         <div className="container">
@@ -643,8 +571,8 @@ const Investor = () => {
                   be in touch.
                 </p>
 
-                <NavLink to="/" className="banner-btn">
-                  contact us
+                <NavLink to="/contact" className="banner-btn">
+                  contact
                   <i className="fa-solid fa-arrow-right"></i>
                 </NavLink>
               </div>
