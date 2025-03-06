@@ -43,15 +43,24 @@ function App() {
         <Route path="/investor-letters" element={<InvestorLetter />}></Route>
         <Route path="/our-impact" element={<OurImpact />}></Route>
         <Route path="/Insights" element={<Insights />}></Route>
-        <Route path="/public-market/piper-serica-nemero-uno-india-fund" element={<PublicFund />}></Route>
+        <Route
+          path="/public-market/piper-serica-nemero-uno-india-fund"
+          element={<PublicFund />}
+        ></Route>
         <Route path="/news-article" element={<NewsArticle />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/blog-details" element={<BlogDetails />}></Route>
         <Route path="/disclaimer" element={<Disclaimer />}></Route>
         <Route path="/disclosure" element={<Disclosure />}></Route>
         <Route path="/privacy-policy" element={<PrivacyPolicy />}></Route>
-        <Route path="/public-market/piper-serica-leader-portfolio" element={<LeaderPortfolio/> }></Route>
-        <Route path="/private-market/piper-serica-angel-fund" element={<Funds/> }></Route>
+        <Route
+          path="/public-market/piper-serica-leader-portfolio"
+          element={<LeaderPortfolio />}
+        ></Route>
+        <Route
+          path="/private-market/piper-serica-angel-fund"
+          element={<Funds />}
+        ></Route>
       </Routes>
     </Router>
   );
