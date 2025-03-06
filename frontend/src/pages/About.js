@@ -159,11 +159,34 @@ const About = () => {
       </section>
       <section className="investment-journey-section">
         <div className="container">
-          <h6 className="section-subtitle">
+          <h6 className="section-subtitle mb-4">
             A BEACON OF SAFETY ON YOUR INVESTMENT JOURNEY
           </h6>
-          <div className="row align-items-start">
-            <div className="col-lg-5">
+
+          <p className="para">
+            Piper Serica is a long-only active equity asset manager that
+            traverses various strategies of equity investment in India. We
+            manage multiple funds that invest in Indian listed companies for
+            domestic and foreign individuals and institutions. We also manage a
+            fund that invests in Indian startups that are building business
+            models based on deep tech. We have been investing in Indian
+            companies for over 30 years and have a very solid understanding of
+            how to succeed while investing in India navigating through various
+            risks, most of them unique to India as an emerging market.
+          </p>
+          <p className="para">
+            The funds that we manage cater to different risk and return profiles
+            and objectives of our investors. We have an edge over our peers due
+            to our deep research and disciplined approach to investing. Our
+            research team is extensively trained in our proprietary research
+            processes that we have developed and mostly automated. To ensure
+            full skin in the game our fund management team makes all their
+            public and private investments through the funds managed by Piper
+            Serica. We are a fund management company owned by its management
+            team. Our management company is majority owned by women.
+          </p>
+          {/* <div className="row align-items-start"> */}
+          {/* <div className="col-lg-5">
               <h2 className="section-title mt-5 journey-text">
                 <i class="fa-solid fa-quote-left journey-left-quote"></i>
                 We commit to being the <strong>lighthouse</strong> for our
@@ -171,16 +194,9 @@ const About = () => {
                 management, and founder ecosystems.
                 <i class="fa-solid fa-quote-right journey-right-quote"></i>
               </h2>
-            </div>
-            <div className="col-lg-7">
-              <p className="para mt-5">
-              Piper Serica is a long-only active equity asset manager that traverses various strategies of equity investment in India. We manage multiple funds that invest in Indian listed companies for domestic and foreign individuals and institutions. We also manage a fund that invests in Indian startups that are building business models based on deep tech. We have been investing in Indian companies for over 30 years and have a very solid understanding of how to succeed while investing in India navigating through various risks, most of them unique to India as an emerging market.
-              </p>
-              <p className="para">
-              The funds that we manage cater to different risk and return profiles and objectives of our investors. We have an edge over our peers due to our deep research and disciplined approach to investing. Our research team is extensively trained in our proprietary research processes that we have developed and mostly automated. To ensure full skin in the game our fund management team makes all their public and private investments through the funds managed by Piper Serica. We are a fund management company owned by its management team. Our management company is majority owned by women.
-              </p>
-
-              {/* <NavLink
+            </div> */}
+          {/* <div className="col-lg-7"> */}
+          {/* <NavLink
                 to="#history-div"
                 className="banner-btn blue-btn tabs-btn mt-lg-3 mt-5"
                 onClick={(e) => {
@@ -194,8 +210,8 @@ const About = () => {
                 our history
                 <i className="fa-solid fa-arrow-right"></i>
               </NavLink> */}
-            </div>
-          </div>
+          {/* </div> */}
+          {/* </div> */}
         </div>
       </section>
       <div id="history-section"></div>
@@ -220,7 +236,7 @@ const About = () => {
           </div>
 
           <div className="row mt-5 history-row">
-            <div className="col-lg-2">
+            {/* <div className="col-lg-2">
               <div className="year-tab-links">
                 <a
                   href="#"
@@ -246,7 +262,7 @@ const About = () => {
                     </div>
                   </div>
                 </a>
-                {/* <a
+                <a
                   href="#"
                   onClick={(event) => handleTabClick("sixteen", event)}
                   className={activeTab === "sixteen" ? "active" : ""}
@@ -257,8 +273,8 @@ const About = () => {
                       <h4>2016</h4>
                     </div>
                   </div>
-                </a> */}
-                {/* <a
+                </a>
+                <a
                   href="#"
                   onClick={(event) => handleTabClick("seventeen", event)}
                   className={activeTab === "seventeen" ? "active" : ""}
@@ -269,8 +285,8 @@ const About = () => {
                       <h4>2017</h4>
                     </div>
                   </div>
-                </a> */}
-                {/* <a
+                </a>
+                <a
                   href="#"
                   onClick={(event) => handleTabClick("eighteen", event)}
                   className={activeTab === "eighteen" ? "active" : ""}
@@ -281,7 +297,7 @@ const About = () => {
                       <h4>2018</h4>
                     </div>
                   </div>
-                </a> */}
+                </a>
                 <a
                   href="#"
                   onClick={(event) => handleTabClick("nineteen", event)}
@@ -319,12 +335,11 @@ const About = () => {
                   </div>
                 </a>
               </div>
-            </div>
+            </div> */}
 
-            <div className="col-lg-10">
+            {/* <div className="col-lg-10">
               <div className="history-tab-content">
                 <div className="tab-content">
-                  {/* Tab 1 */}
                   <div
                     className={`tab-pane fade ${
                       activeTab === "fourteen" ? "show active" : ""
@@ -339,17 +354,14 @@ const About = () => {
                             <span></span>
                           </div>
                           <p className="para history-para">
-                          Piper Serica started{" "}
-                            <strong>
-                             operations in 2004
-                            </strong>
+                            Piper Serica started{" "}
+                            <strong>operations in 2004</strong>
                           </p>
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  {/* Tab 2 */}
                   <div
                     className={`tab-pane fade ${
                       activeTab === "fifteen" ? "show active" : ""
@@ -364,29 +376,19 @@ const About = () => {
                             <span></span>
                           </div>
                           <p className="para history-para">
-                          Piper Serica received its first registration from the{" "}
+                            Piper Serica received its first registration from
+                            the{" "}
                             <strong>
                               {" "}
-                              Securities and Exchange Board of India (SEBI) as a Registered Investment Advisor
+                              Securities and Exchange Board of India (SEBI) as a
+                              Registered Investment Advisor
                             </strong>
                           </p>
                         </div>
-                        {/* <div className="single-history">
-                          <div>
-                            <span></span>
-                          </div>
-                          <p className="para history-para">
-                            Exceeded
-                            <strong> USD$100m</strong> of AUM & Advisory
-                          </p>
-                        </div> */}
                       </div>
                     </div>
                   </div>
 
-                
-
-                  {/* Tab 3 */}
                   <div
                     className={`tab-pane fade ${
                       activeTab === "nineteen" ? "show active" : ""
@@ -401,17 +403,17 @@ const About = () => {
                             <span></span>
                           </div>
                           <p className="para history-para">
-                          we received the registration from the{" "}
+                            we received the registration from the{" "}
                             <strong>
-                             Securities and Exchange Board of India (SEBI) for launching Portfolio Management Service (PMS).
+                              Securities and Exchange Board of India (SEBI) for
+                              launching Portfolio Management Service (PMS).
                             </strong>
                           </p>
                         </div>
-                     
                       </div>
                     </div>
                   </div>
-          {/* tab 4 */}
+
                   <div
                     className={`tab-pane fade ${
                       activeTab === "twenty" ? "show active" : ""
@@ -426,19 +428,17 @@ const About = () => {
                             <span></span>
                           </div>
                           <p className="para history-para">
-                          Piper Serica launched its{" "}
+                            Piper Serica launched its{" "}
                             <strong>
-                            Foreign Portfolio Investor (FPI) Fund based in Mauritius.
+                              Foreign Portfolio Investor (FPI) Fund based in
+                              Mauritius.
                             </strong>{" "}
-                            
                           </p>
                         </div>
-                        
                       </div>
                     </div>
                   </div>
 
-                  {/* tab 5 */}
                   <div
                     className={`tab-pane fade ${
                       activeTab === "twenty-two" ? "show active" : ""
@@ -453,34 +453,20 @@ const About = () => {
                             <span></span>
                           </div>
                           <p className="para history-para">
-                          launched Piper{" "}
+                            launched Piper{" "}
                             <strong>
-                            Serica Angel Fund, an early-stage VC fund registered with SEBI as a Category 1 AIF.
+                              Serica Angel Fund, an early-stage VC fund
+                              registered with SEBI as a Category 1 AIF.
                             </strong>{" "}
-                           
                           </p>
                         </div>
-                        {/* <div className="single-history">
-                          <div>
-                            <span></span>
-                          </div>
-                          <p className="para history-para">
-                            Named{" "}
-                            <strong>
-                              Best Independent Wealth Manager for Asia Pacific
-                            </strong>{" "}
-                            at the Asian Private Banker Awards for Distinction
-                            2022
-                          </p>
-                        </div> */}
                         
                       </div>
                     </div>
                   </div>
-
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -492,7 +478,7 @@ const About = () => {
               <div className="col-lg-10">
                 <div className="row align-items-center">
                   <div className="col-lg-6">
-                    <div className="why-us-div ">
+                    <div className="why-us-div vision-mission-div">
                       <NavLink to="/">
                         <div className="why-us-content">
                           <h2 className="banner-title why-content-main-title">
@@ -508,7 +494,10 @@ const About = () => {
                             Vision
                           </h2>
                           <p className="para why-para">
-                          To be a highly respected long-only equity asset management company, offering multiple strategies that cater to the diverse objectives of our investors.
+                            To be a highly respected long-only equity asset
+                            management company, offering multiple strategies
+                            that cater to the diverse objectives of our
+                            investors.
                           </p>
                         </div>
                       </NavLink>
@@ -516,7 +505,7 @@ const About = () => {
                   </div>
 
                   <div className="col-lg-6">
-                    <div className="why-us-div">
+                    <div className="why-us-div vision-mission-div">
                       <NavLink to="/">
                         <div className="why-us-content">
                           <h2 className="banner-title why-content-main-title">
@@ -532,13 +521,17 @@ const About = () => {
                             Mission
                           </h2>
                           <p className="para why-para">
-                          At Piper Serica, we empower investors to achieve their financial goals through 
-                          a diverse portfolio of actively managed strategies. Committed to transparency, 
-                          rigorous analysis, and strategic asset allocation, we balance growth and risk 
-                          to deliver consistent returns. Our mission extends beyond wealth creation—we 
-                          strive to foster financial literacy, ensure long-term stability, and drive 
-                          sustainable economic progress. Through innovation and discipline, 
-                          we create enduring value for our investors and the broader ecosystem.
+                            At Piper Serica, we empower investors to achieve
+                            their financial goals through a diverse portfolio of
+                            actively managed strategies. Committed to
+                            transparency, rigorous analysis, and strategic asset
+                            allocation, we balance growth and risk to deliver
+                            consistent returns. Our mission extends beyond
+                            wealth creation—we strive to foster financial
+                            literacy, ensure long-term stability, and drive
+                            sustainable economic progress. Through innovation
+                            and discipline, we create enduring value for our
+                            investors and the broader ecosystem.
                           </p>
                         </div>
                       </NavLink>
@@ -574,7 +567,9 @@ const About = () => {
                     <div className="why-content-para">
                       <h4 className="why-content-title">Vision</h4>
                       <p className="para why-para">
-                      To be a highly respected long-only equity asset management company, offering multiple strategies that cater to the diverse objectives of our investors.
+                        To be a highly respected long-only equity asset
+                        management company, offering multiple strategies that
+                        cater to the diverse objectives of our investors.
                       </p>
                     </div>
                   </div>
@@ -616,7 +611,16 @@ const About = () => {
                     <div className="why-content-para">
                       <h4 className="why-content-title">Mission</h4>
                       <p className="para why-para">
-                      At Piper Serica, we empower investors to achieve their financial goals through a diverse portfolio of actively managed strategies. Committed to transparency, rigorous analysis, and strategic asset allocation, we balance growth and risk to deliver consistent returns. Our mission extends beyond wealth creation—we strive to foster financial literacy, ensure long-term stability, and drive sustainable economic progress. Through innovation and discipline, we create enduring value for our investors and the broader ecosystem.
+                        At Piper Serica, we empower investors to achieve their
+                        financial goals through a diverse portfolio of actively
+                        managed strategies. Committed to transparency, rigorous
+                        analysis, and strategic asset allocation, we balance
+                        growth and risk to deliver consistent returns. Our
+                        mission extends beyond wealth creation—we strive to
+                        foster financial literacy, ensure long-term stability,
+                        and drive sustainable economic progress. Through
+                        innovation and discipline, we create enduring value for
+                        our investors and the broader ecosystem.
                       </p>
                     </div>
                   </div>
@@ -652,10 +656,17 @@ const About = () => {
 
             <div className="col-lg-6">
               <h2 className="para mt-lg-0 mt-4">
-              Our core philosophy is to benefit from long term investment opportunities while ignoring market cycles. We like to identify and invest in companies that are leaders in emerging spaces led by a change in consumer behavior, technology changes and product innovations. Once we identify such companies we like to stay invested as they create shareholder value while moving from small cap to mid cap and ultimately large cap. We believe that companies like these, with great management, good corporate governance, financially disciplined and shareholder friendly are quite rare and should not be looked at the same valuation prism as the rest of the market.
-              </h2>
-              <h2 className="para mt-lg-0">
-              We like to interact with the management of our portfolio companies regularly to stay abreast of the trends shaping their industry and explore other investment opportunities. We believe that long term investing requires deep knowledge and good temperament. Our team members are always curious to learn more at the same time tune out noise. We see market volatility as an opportunity to increase our equity allocations rather than reduce them. We believe that conviction comes only from deep research and understanding of our portfolio companies.
+                Our core philosophy is to benefit from long term investment
+                opportunities while ignoring market cycles. We like to identify
+                and invest in companies that are leaders in emerging spaces led
+                by a change in consumer behavior, technology changes and product
+                innovations. Once we identify such companies we like to stay
+                invested as they create shareholder value while moving from
+                small cap to mid cap and ultimately large cap. We believe that
+                companies like these, with great management, good corporate
+                governance, financially disciplined and shareholder friendly are
+                quite rare and should not be looked at the same valuation prism
+                as the rest of the market.
               </h2>
             </div>
           </div>
@@ -692,7 +703,17 @@ const About = () => {
 
           {/* <div className="row mt-3 align-items-center">
             <div className="col-lg-6">
-             
+              <h2 className="para mt-lg-0">
+                We like to interact with the management of our portfolio
+                companies regularly to stay abreast of the trends shaping their
+                industry and explore other investment opportunities. We believe
+                that long term investing requires deep knowledge and good
+                temperament. Our team members are always curious to learn more
+                at the same time tune out noise. We see market volatility as an
+                opportunity to increase our equity allocations rather than
+                reduce them. We believe that conviction comes only from deep
+                research and understanding of our portfolio companies.
+              </h2>
             </div>
 
             <div className="col-lg-6 d-lg-block d-none">
@@ -709,18 +730,18 @@ const About = () => {
       <section className="founders-note-section">
         <div className="container">
           <div className="row">
+            <h6 className="section-subtitle pb-4">Founder’s note</h6>
             <div className="col-lg-11">
-              <h6 className="section-subtitle pb-5">Founder’s note</h6>
-              <h2 className="banner-title offerings-title founders-text px-5">
+              {/* <h2 className="banner-title offerings-title founders-text px-5">
                 <i class="fa-solid fa-quote-left founders-left-quote"></i>
                 Our courage to go beyond conventions and constantly explore new
                 possibilities has been one of our core strengths.
                 <i class="fa-solid fa-quote-right founders-right-quote"></i>
-              </h2>
+              </h2> */}
             </div>
           </div>
 
-          <div className="row align-items-center mt-5">
+          <div className="row align-items-center ">
             <div className="col-lg-5">
               <div className="founders-img-div pe-lg-5 pe-auto">
                 <img
@@ -732,18 +753,37 @@ const About = () => {
             </div>
             <div className="col-lg-7 mt-lg-0 mt-4">
               <p className="para">
-              Our journey began with a simple yet powerful vision: to create an investment company that not only delivers superior financial performance but also fosters innovation and positive economic impact. With decades of combined experience in public equities, asset management, and financial markets, our team is uniquely positioned to identify high-potential opportunities and create lasting value for our investors.
+                Our journey began with a simple yet powerful vision: to create
+                an investment company that not only delivers superior financial
+                performance but also fosters innovation and positive economic
+                impact. With decades of combined experience in public equities,
+                asset management, and financial markets, our team is uniquely
+                positioned to identify high-potential opportunities and create
+                lasting value for our investors.
               </p>
 
               <p className="para">
-              Our approach is rooted in discipline, transparency, and alignment of interests. We deploy a research-driven methodology, leveraging data insights and industry expertise to make informed investment decisions. Our portfolio is curated to ensure diversification, resilience, and adaptability in a dynamic market landscape.
+                Our approach is rooted in discipline, transparency, and
+                alignment of interests. We deploy a research-driven methodology,
+                leveraging data insights and industry expertise to make informed
+                investment decisions. Our portfolio is curated to ensure
+                diversification, resilience, and adaptability in a dynamic
+                market landscape.
               </p>
 
               <p className="para">
-              At Piper Serica, we prioritize partnerships and long-term relationships. We work closely with industry experts to support strategic growth, risk management, and sustainable financial outcomes. Our commitment to responsible investing ensures that we not only seek financial returns but also contribute to broader societal and economic progress.
+                At Piper Serica, we prioritize partnerships and long-term
+                relationships. We work closely with industry experts to support
+                strategic growth, risk management, and sustainable financial
+                outcomes. Our commitment to responsible investing ensures that
+                we not only seek financial returns but also contribute to
+                broader societal and economic progress.
               </p>
               <p className="para">
-              We are excited about the opportunities ahead and deeply appreciate the trust and confidence that our investors place in us. Together, we build a legacy of success, innovation, and enduring value.
+                We are excited about the opportunities ahead and deeply
+                appreciate the trust and confidence that our investors place in
+                us. Together, we build a legacy of success, innovation, and
+                enduring value.
               </p>
 
               <h6 className="founders-name">
@@ -768,7 +808,7 @@ const About = () => {
         <div className="container">
           <h6 className="section-subtitle">Meet the team</h6>
           <h2 className="section-title mt-lg-3 mt-4">The Driving Force</h2>
-          <div className="row mt-3">
+          <div className="row mt-3 mb-5">
             <div className="col-lg-4 col-md-6">
               <div className="team-div">
                 <img
@@ -828,7 +868,7 @@ const About = () => {
             </div>
           </div>
 
-          <div className="row mb-5">
+          {/* <div className="row mb-5">
             {teamContent.map((team, index) => (
               <div className="col-lg-3 col-md-6 col-12" key={index}>
                 <div className="team-div small-team-div">
@@ -850,7 +890,7 @@ const About = () => {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </section>
     </Layout>
