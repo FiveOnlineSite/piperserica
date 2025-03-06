@@ -1250,6 +1250,13 @@ body {
 .industires-logo-div img {
   position: relative;
 }
+
+.industires-logo-div img {
+  aspect-ratio: 4/2;
+  object-fit: contain;
+  margin: 0 20px;
+  mix-blend-mode: color-burn;
+}
 /* 
 .industires-logo-div img {
   top: 0;
@@ -1282,6 +1289,8 @@ body {
 
 .modal-body img {
   width: 50%;
+  height: 100px;
+  object-fit: contain;
 }
 
 .modal-title {

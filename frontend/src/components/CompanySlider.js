@@ -9,7 +9,7 @@ const CompanySlider = () => {
   const images = [
     {
       id: 1,
-      src: "/images/industries/industry1.png",
+      src: "/images/industries/comp-1.png",
       label: "B2B",
       description:
         "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
@@ -17,7 +17,7 @@ const CompanySlider = () => {
     },
     {
       id: 2,
-      src: "/images/industries/industry2.png",
+      src: "/images/industries/comp-2.jpg",
       label: "B2B",
       description:
         "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
@@ -25,7 +25,7 @@ const CompanySlider = () => {
     },
     {
       id: 3,
-      src: "/images/industries/industry3.png",
+      src: "/images/industries/comp-3.jpg",
       label: "Consumer",
       description:
         "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
@@ -33,7 +33,7 @@ const CompanySlider = () => {
     },
     {
       id: 4,
-      src: "/images/industries/industry4.png",
+      src: "/images/industries/comp-4.png",
       label: "Consumer",
       description:
         "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
@@ -41,7 +41,7 @@ const CompanySlider = () => {
     },
     {
       id: 5,
-      src: "/images/industries/industry5.png",
+      src: "/images/industries/comp-5.png",
       label: "Creator Economy",
       description:
         "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
@@ -49,23 +49,127 @@ const CompanySlider = () => {
     },
     {
       id: 6,
-      src: "/images/industries/industry6.png",
+      src: "/images/industries/comp-6.jpg",
       label: "Creator Economy",
       description:
         "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
       link: "pumpumpum.com",
     },
+    // {
+    //   id: 7,
+    //   src: "/images/industries/industry7.png",
+    //   label: "B2B",
+    //   description:
+    //     "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+    //   link: "pumpumpum.com",
+    // },
     {
-      id: 7,
-      src: "/images/industries/industry7.png",
-      label: "B2B",
+      id: 8,
+      src: "/images/industries/comp-8.png",
+      label: "Consumer",
       description:
         "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
       link: "pumpumpum.com",
     },
     {
-      id: 8,
-      src: "/images/industries/industry8.png",
+      id: 9,
+      src: "/images/industries/comp-9 (2).png",
+      label: "Consumer",
+      description:
+        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+      link: "pumpumpum.com",
+    },
+    {
+      id: 10,
+      src: "/images/industries/comp-10.jpg",
+      label: "Consumer",
+      description:
+        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+      link: "pumpumpum.com",
+    },
+    {
+      id: 11,
+      src: "/images/industries/comp-11.png",
+      label: "Consumer",
+      description:
+        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+      link: "pumpumpum.com",
+    },
+    {
+      id: 12,
+      src: "/images/industries/comp-12.png",
+      label: "Consumer",
+      description:
+        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+      link: "pumpumpum.com",
+    },
+    {
+      id: 13,
+      src: "/images/industries/comp-13.png",
+      label: "Consumer",
+      description:
+        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+      link: "pumpumpum.com",
+    },
+    {
+      id: 14,
+      src: "/images/industries/comp-14-1.png",
+      label: "Consumer",
+      description:
+        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+      link: "pumpumpum.com",
+    },
+    {
+      id: 15,
+      src: "/images/industries/comp-15.png",
+      label: "Consumer",
+      description:
+        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+      link: "pumpumpum.com",
+    },
+    {
+      id: 16,
+      src: "/images/industries/comp-16.png",
+      label: "Consumer",
+      description:
+        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+      link: "pumpumpum.com",
+    },
+    {
+      id: 17,
+      src: "/images/industries/comp-17.png",
+      label: "Consumer",
+      description:
+        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+      link: "pumpumpum.com",
+    },
+    {
+      id: 18,
+      src: "/images/industries/comp-18.jpg",
+      label: "Consumer",
+      description:
+        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+      link: "pumpumpum.com",
+    },
+    {
+      id: 19,
+      src: "/images/industries/comp-19.jpg",
+      label: "Consumer",
+      description:
+        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+      link: "pumpumpum.com",
+    },
+    {
+      id: 20,
+      src: "/images/industries/comp-20.png",
+      label: "Consumer",
+      description:
+        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+      link: "pumpumpum.com",
+    },
+    {
+      id: 21,
+      src: "/images/industries/comp-21.jpg",
       label: "Consumer",
       description:
         "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
@@ -111,7 +215,7 @@ const CompanySlider = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          rows: 2,
+          // rows: 2,
         },
       },
       {
@@ -119,7 +223,7 @@ const CompanySlider = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          rows: 2,
+          // rows: 2,
         },
       },
     ],
