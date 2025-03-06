@@ -24,7 +24,7 @@ const PrivateMarket = () => {
                   and infrastructure, resulting in a broader progressive impact
                   within Asia.
                 </p>
-                <NavLink to="/funds" className="banner-btn">
+                <NavLink to="/private-market/piper-serica-angel-fund" className="banner-btn">
                   AIF Fund
                   <i className="fa-solid fa-arrow-right"></i>
                 </NavLink>
@@ -69,7 +69,7 @@ const PrivateMarket = () => {
                 </p>
 
                 <NavLink
-                  to="/funds"
+                  to="/private-market/piper-serica-angel-fund"
                   className="banner-btn blue-btn tabs-btn mt-0"
                 >
                   View Fund
