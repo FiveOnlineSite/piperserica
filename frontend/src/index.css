@@ -1257,6 +1257,10 @@ body {
   margin: 0 20px;
   mix-blend-mode: color-burn;
 }
+
+.industires-logo-div .portfolio-img {
+  mix-blend-mode: normal;
+}
 /* 
 .industires-logo-div img {
   top: 0;
@@ -1359,6 +1363,7 @@ body {
 }
 
 .features-content-div .single-feature,
+.investment-philosophy-section .single-feature,
 .fund-content-div .single-fund {
   display: flex;
   align-items: baseline;
