@@ -15,15 +15,15 @@ const PrivateMarket = () => {
 
             <div className="banner-content-div">
               <div className="container">
-                <h6 className="banner-subtitle">Our Businesses</h6>
+                {/* <h6 className="banner-subtitle">Our Businesses</h6> */}
                 <h1 className="banner-title">Private Market Fund</h1>
-                <p className="banner-para">
+                {/* <p className="banner-para">
                   We provide investors access to unique investment opportunities
                   that deliver superior risk-adjusted returns in today's
                   challenging markets. Our investments provide growth capital
                   and infrastructure, resulting in a broader progressive impact
                   within Asia.
-                </p>
+                </p> */}
                 <NavLink
                   to="/private-market/piper-serica-angel-fund"
                   className="banner-btn"

@@ -88,9 +88,9 @@ const PublicFund = () => {
 
             <div className="banner-content-div">
               <div className="container">
-                <h6 className="banner-subtitle">Public market funds</h6>
+                {/* <h6 className="banner-subtitle">Public market funds</h6> */}
                 <h1 className="banner-title">Piper Serica Numero Uno Fund</h1>
-                <p className="banner-para">Capital to scale</p>
+                {/* <p className="banner-para">Capital to scale</p> */}
               </div>
             </div>
           </div>
@@ -105,13 +105,14 @@ const PublicFund = () => {
                 about Piper Serica Numero Uno Fund
               </h6>
               <p className="para">
-                The Fund seeks to empower early and growth stage companies in
-                India and Southeast Asia, providing them capital to scale
-                without significantly diluting equity. The Southeast Asia and
-                India's venture debt market has the potential to scale up by 4 -
-                5x over the next few years. The Fund presents investors a unique
-                opportunity to participate in Southeast Asia and India's venture
-                debt story and a fast growing segment.
+              Piper Serica Numero Uno India Fund is a Foreign Portfolio Investor (FPI) 
+              fund designed to provide global investors seamless access to India’s 
+              dynamic equity markets. Following the same strategy as our PMS, the 
+              fund combines growth and value investing, rigorous research, and 
+              disciplined risk management to identify high-quality businesses with 
+              strong fundamentals. With a multi-cap approach and a focus on fair 
+              valuations, the fund aims to generate consistent alpha, ensuring 
+              long-term wealth creation while mitigating market risks.
               </p>
 
               <div>
@@ -175,21 +176,47 @@ const PublicFund = () => {
               </div>
             </div>
             <div className="col-lg-7 mt-lg-0 mt-4">
-              <p className="para">
-                Provide senior-secured loans, with an equity upside, to 35 - 40
-                companies in India and Southeast Asia at stages Series A and
-                above with a ticket size of US$1 to US$5 million. Managed by
-                experienced credit professionals with combined experience of
-                over 25 years in institutions such as IFC, GIC, Deutsche Bank
-                and with investment and asset management experience of over US$1
-                billion in Asia. Provide senior-secured loans, with an equity
-                upside, to 35 - 40 companies in India and Southeast Asia at
-                stages Series A and above with a ticket size of US$1 to US$5
-                million. Managed by experienced credit professionals with
-                combined experience of over 25 years in institutions such as
-                IFC, GIC, Deutsche Bank and with investment and asset management
-                experience of over US$1 billion in Asia.
-              </p>
+              <div className="single-feature">
+                  <div>
+                    <span></span>
+                  </div>
+                  <p className="para">
+                  <strong>Unlocking the India Opportunity</strong> by investing in high-growth sectors benefiting from India’s economic transformation, rising consumption, and structural market shifts.
+                  </p>
+              </div>
+              <div className="single-feature">
+                  <div>
+                    <span></span>
+                  </div>
+                  <p className="para">
+                  <strong>Leveraging Expert-Led Strategy</strong> with a seasoned equity team that combines deep market insights and disciplined execution to drive sustainable returns.
+                  </p>
+              </div>
+              <div className="single-feature">
+                  <div>
+                    <span></span>
+                  </div>
+                  <p className="para">
+                  <strong>Balancing Growth and Value Investing</strong> through a flexible approach that optimizes performance across different market cycles.
+                  </p>
+              </div>
+              <div className="single-feature">
+                  <div>
+                    <span></span>
+                  </div>
+                  <p className="para">
+                  <strong>Conducting Meticulous Stock Selection</strong> using rigorous screening processes that blend qualitative and quantitative analysis to identify future market leaders.
+                  </p>
+              </div>
+              <div className="single-feature">
+                  <div>
+                    <span></span>
+                  </div>
+                  <p className="para">
+                  <strong>Ensuring a Resilient and Alpha-Driven Portfolio</strong> with a structured investment framework designed to outperform while mitigating risks in volatile market conditions.
+                  </p>
+              </div>
+              
             </div>
           </div>
         </div>
@@ -211,9 +238,7 @@ const PublicFund = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                    Provide senior-secured loans, with an equity upside, to 35 -
-                    40 companies in India and Southeast Asia at stages Series A
-                    and above with a ticket size of US$1 to US$5 million.
+                  <strong>Multi-Cap Investment Strategy</strong> that identifies high-quality opportunities across different market capitalizations, ensuring superior risk-adjusted returns.
                   </p>
                 </div>
 
@@ -222,10 +247,7 @@ const PublicFund = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                    Managed by experienced credit professionals with combined
-                    experience of over 25 years in institutions such as IFC,
-                    GIC, Deutsche Bank and with investment and asset management
-                    experience of over US$1 billion in Asia.
+                    <strong>Focus on Fair Valuations </strong>by investing in fundamentally strong businesses trading at attractive prices, leveraging deep research and a long-term perspective.
                   </p>
                 </div>
 
@@ -234,9 +256,23 @@ const PublicFund = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                    Sector-agnostic mandate with focus on partnering with
-                    companies with strong business fundamentals and run by
-                    passionate founders.
+                  <strong>Robust Research and Due Diligence</strong> involving engagement with key stakeholders, in-depth financial analysis, and assessment of management quality and governance standards.
+                  </p>
+                </div>
+                <div className="single-feature">
+                  <div>
+                    <span></span>
+                  </div>
+                  <p className="para">
+                  <strong>Strategic Risk Management Framework</strong> that limits exposure with a maximum of 6% allocation per stock, 25% per sector, and ensures liquidity to exit holdings within seven trading days.
+                  </p>
+                </div>
+                <div className="single-feature">
+                  <div>
+                    <span></span>
+                  </div>
+                  <p className="para">
+                  <strong>Consistent Portfolio Rebalancing and Sectoral Diversification</strong> to optimize returns while mitigating risks, ensuring long-term wealth creation for investors.
                   </p>
                 </div>
               </div>
