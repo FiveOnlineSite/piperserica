@@ -1,82 +1,81 @@
-
 import React, { useState } from "react";
 import Layout from "../components/Layout";
 import { NavLink } from "react-router-dom";
 import StickyContact from "../components/StickyContact";
 
 const LeaderPortfolio = () => {
-     const handleFilterChange = (e) => {
-        setSelectedIndustry(e.target.value);
-      };
-    
-      const getFilteredImages = () => {
-        if (selectedIndustry === "Industry" || selectedIndustry === "") {
-          return images; // Show all images if no specific industry is selected
-        }
-        return images.filter((image) => image.label === selectedIndustry);
-      };
-    
-      const [selectedIndustry, setSelectedIndustry] = useState("Industry");
-    
-      const images = [
-        {
-          id: 1,
-          src: "/images/industries/industry1.png",
-          label: "B2B",
-          description:
-            "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-        },
-        {
-          id: 2,
-          src: "/images/industries/industry2.png",
-          label: "B2B",
-          description:
-            "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-        },
-        {
-          id: 3,
-          src: "/images/industries/industry3.png",
-          label: "Consumer",
-          description:
-            "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-        },
-        {
-          id: 4,
-          src: "/images/industries/industry4.png",
-          label: "Consumer",
-          description:
-            "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-        },
-        {
-          id: 5,
-          src: "/images/industries/industry5.png",
-          label: "Creator Economy",
-          description:
-            "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-        },
-        {
-          id: 6,
-          src: "/images/industries/industry6.png",
-          label: "Creator Economy",
-          description:
-            "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-        },
-        {
-          id: 7,
-          src: "/images/industries/industry7.png",
-          label: "B2B",
-          description:
-            "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-        },
-        {
-          id: 8,
-          src: "/images/industries/industry8.png",
-          label: "Consumer",
-          description:
-            "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
-        },
-      ];
-    
+  const handleFilterChange = (e) => {
+    setSelectedIndustry(e.target.value);
+  };
+
+  const getFilteredImages = () => {
+    if (selectedIndustry === "Industry" || selectedIndustry === "") {
+      return images; // Show all images if no specific industry is selected
+    }
+    return images.filter((image) => image.label === selectedIndustry);
+  };
+
+  const [selectedIndustry, setSelectedIndustry] = useState("Industry");
+
+  const images = [
+    {
+      id: 1,
+      src: "/images/industries/industry1.png",
+      label: "B2B",
+      description:
+        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+    },
+    {
+      id: 2,
+      src: "/images/industries/industry2.png",
+      label: "B2B",
+      description:
+        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+    },
+    {
+      id: 3,
+      src: "/images/industries/industry3.png",
+      label: "Consumer",
+      description:
+        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+    },
+    {
+      id: 4,
+      src: "/images/industries/industry4.png",
+      label: "Consumer",
+      description:
+        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+    },
+    {
+      id: 5,
+      src: "/images/industries/industry5.png",
+      label: "Creator Economy",
+      description:
+        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+    },
+    {
+      id: 6,
+      src: "/images/industries/industry6.png",
+      label: "Creator Economy",
+      description:
+        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+    },
+    {
+      id: 7,
+      src: "/images/industries/industry7.png",
+      label: "B2B",
+      description:
+        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+    },
+    {
+      id: 8,
+      src: "/images/industries/industry8.png",
+      label: "Consumer",
+      description:
+        "The Fund seeks to empower early and growth stage companies in India and Southeast Asia, providing them capital to scale without significantly diluting equity. ",
+    },
+  ];
+
   return (
     <Layout>
       <section className="banner-section">
@@ -326,9 +325,9 @@ const LeaderPortfolio = () => {
         </div>
       </section>
 
-      <StickyContact />
+      <StickyContact title="Want to know more about Piper Serica Leader Portfolio?" />
     </Layout>
-  )
-}
+  );
+};
 
-export default LeaderPortfolio
+export default LeaderPortfolio;
