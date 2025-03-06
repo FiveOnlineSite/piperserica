@@ -23,15 +23,15 @@ const OurImpact = () => {
 
             <div className="banner-content-div">
               <div className="container">
-                {/* <h6 className="banner-subtitle">Creating Meaningful Change</h6> */}
+                <h6 className="banner-subtitle">Creating Meaningful Change</h6>
                 <h1 className="banner-title">Our Impact</h1>
-                {/* <p className="banner-para">
+                <p className="banner-para">
                   Our commitment to making a positive impact drives everything
                   we do. Through innovative solutions, community engagement, and
                   sustainable initiatives, we strive to make a lasting
                   difference in the lives we touch and the environments we care
                   for.{" "}
-                </p> */}
+                </p>
               </div>
             </div>
           </div>
@@ -51,14 +51,24 @@ const OurImpact = () => {
             </div>
             <div className="col-lg-8">
               <p className="para">
-              At Piper Serica, we are deeply committed to responsible investing across both listed companies and startups. We integrate Environmental, Social, and Governance (ESG) criteria into our investment process, ensuring that the businesses we support align with sustainable and ethical practices.
+                At Piper Serica, we are deeply committed to responsible
+                investing across both listed companies and startups. We
+                integrate Environmental, Social, and Governance (ESG) criteria
+                into our investment process, ensuring that the businesses we
+                support align with sustainable and ethical practices.
               </p>
 
               <p className="para">
-              Our approach goes beyond financial growth—we actively seek innovative companies that drive positive social and environmental impact while delivering strong returns. We engage with our portfolio companies to foster responsible business practices, ensuring that our investments contribute not only to wealth creation but also to sustainable development within India’s dynamic market.
+                Our approach goes beyond financial growth—we actively seek
+                innovative companies that drive positive social and
+                environmental impact while delivering strong returns. We engage
+                with our portfolio companies to foster responsible business
+                practices, ensuring that our investments contribute not only to
+                wealth creation but also to sustainable development within
+                India’s dynamic market.
               </p>
-{/* 
-              <div className="our-commitment-tabs">
+
+              {/* <div className="our-commitment-tabs">
                 <a
                   href="#"
                   onClick={(event) => handleTabClick("life", event)}
@@ -82,9 +92,9 @@ const OurImpact = () => {
                 </a>
               </div> */}
 
-              {/* <div className="tab-content"> */}
-                {/* Tab 1 */}
-                {/* <div
+              {/* <div className="tab-content">
+            
+                <div
                   className={`tab-pane fade ${
                     activeTab === "life" ? "show active" : ""
                   }`}
@@ -110,10 +120,10 @@ const OurImpact = () => {
                       </p>
                     </div>
                   </div>
-                </div> */}
+                </div>
 
-                {/* Tab 2 */}
-                {/* <div
+                
+                <div
                   className={`tab-pane fade ${
                     activeTab === "smes" ? "show active" : ""
                   }`}
@@ -138,10 +148,10 @@ const OurImpact = () => {
                       </p>
                     </div>
                   </div>
-                </div> */}
+                </div>
 
-                {/* Tab 3 */}
-                {/* <div
+             
+                <div
                   className={`tab-pane fade ${
                     activeTab === "early" ? "show active" : ""
                   }`}
@@ -164,8 +174,8 @@ const OurImpact = () => {
                       </p>
                     </div>
                   </div>
-                </div> */}
-              {/* </div> */}
+                </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -178,19 +188,31 @@ const OurImpact = () => {
               <div className="empowering-title-div">
                 <h6 className="section-subtitle">Empowering Growth Through</h6>
                 <h2 className="section-title offerings-title mt-4">
-                Purposeful Investing
+                  Purposeful Investing
                 </h2>
               </div>
             </div>
             <div className="col-lg-8">
               <p className="para">
-              At Piper Serica Advisors, we believe in investing with purpose—driving sustainable outcomes for our investors while fostering positive societal impact. Our approach extends beyond traditional financial metrics, identifying opportunities in listed companies and startups that champion innovation, sustainability, and inclusive economic development.
+                At Piper Serica Advisors, we believe in investing with
+                purpose—driving sustainable outcomes for our investors while
+                fostering positive societal impact. Our approach extends beyond
+                traditional financial metrics, identifying opportunities in
+                listed companies and startups that champion innovation,
+                sustainability, and inclusive economic development.
               </p>
-              <p className="para">
-              By backing businesses that uphold strong governance, environmental responsibility, and social impact, we empower entrepreneurs to scale their ventures while contributing to India’s long-term growth. This commitment to purposeful investing allows us to create lasting value not just for our investors but also for the communities and industries we support, shaping a more resilient and responsible economic future.
+              <p className="para mb-5">
+                By backing businesses that uphold strong governance,
+                environmental responsibility, and social impact, we empower
+                entrepreneurs to scale their ventures while contributing to
+                India’s long-term growth. This commitment to purposeful
+                investing allows us to create lasting value not just for our
+                investors but also for the communities and industries we
+                support, shaping a more resilient and responsible economic
+                future.
               </p>
 
-              <div className="empowering-points-div">
+              {/* <div className="empowering-points-div">
                 <div className="row">
                   <div className="col-lg-6 col-md-6 col-12">
                     <div className="empowering-point">
@@ -259,7 +281,7 @@ const OurImpact = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

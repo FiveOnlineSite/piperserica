@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import Layout from "../components/Layout";
 import Slider from "react-slick";
 import { NavLink } from "react-router-dom";
 import TestimonialSlider from "../components/TestimonialSlider";
+import emailjs from "@emailjs/browser";
+import { Modal } from "react-bootstrap";
 
 const Career = () => {
   const settings = {
@@ -117,6 +119,119 @@ const Career = () => {
     },
   ];
 
+  const formRef = useRef();
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+    resume: null,
+  });
+
+  const [phoneError, setPhoneError] = useState("");
+  const [successModal, setSuccessModal] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    if (name === "phone") {
+      if (value === "") {
+        setPhoneError(""); // Clear error when input is empty
+      } else {
+        const phoneRegex = /^\d{7,12}$/;
+        if (!phoneRegex.test(value)) {
+          setPhoneError("Phone number must be between 7 and 12 digits.");
+        } else {
+          setPhoneError("");
+        }
+      }
+    }
+
+    setFormData({ ...formData, [name]: value });
+  };
+
+  // Handle file input
+  const handleFileChange = async (e) => {
+    const resume = e.target.files[0];
+    if (resume) {
+      const fileData = new FormData();
+      fileData.append("file", resume);
+      fileData.append("upload_preset", "piperserica");
+      fileData.append("resource_type", "raw");
+
+      try {
+        const response = await fetch(
+          "https://api.cloudinary.com/v1_1/dqpln4vod/raw/upload",
+          {
+            method: "POST",
+            body: fileData,
+          }
+        );
+        const data = await response.json();
+        setFormData((prevData) => ({
+          ...prevData,
+          resume: data.secure_url, // Store uploaded file URL
+        }));
+      } catch (error) {
+        console.error("Resume upload failed", error);
+      }
+    }
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (phoneError) {
+      return;
+    }
+
+    const emailParams = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      message: formData.message,
+      resume: formData.resume,
+    };
+
+    emailjs
+      .send(
+        "service_1fyftx8",
+        "template_jy27emd",
+        emailParams,
+        "hdyWkZtLGiur_O_Fb"
+      )
+      .then(
+        (response) => {
+          console.log(
+            "Email sent successfully!",
+            response.status,
+            response.text
+          );
+          setSuccessModal(true);
+          console.log("Success modal should be set to true");
+
+          // Clear success message after 5 seconds
+          setTimeout(() => {
+            setSuccessModal(false);
+          }, 5000);
+
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            message: "",
+            resume: null,
+          });
+          formRef.current.reset();
+        },
+        (err) => {
+          console.error("Failed to send email:", err);
+        }
+      );
+  };
+
   return (
     <Layout>
       <section className="banner-section">
@@ -149,7 +264,27 @@ const Career = () => {
       <section className="life-section">
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-lg-5">
+            <h6 className="section-subtitle mb-4">Life at Piper Serica</h6>
+
+            <h3 className="section-title mt-3 mt-lg-3">
+              Grow in a culture of innovation, collaboration, and excellence
+            </h3>
+
+            <p className="para medium-para mt-lg-4 mt-4">
+              At Piper Serica, we foster a dynamic and collaborative work
+              environment where innovation, integrity, and passion drive our
+              success. Our team thrives on intellectual curiosity, analytical
+              rigor, and a shared commitment to creating lasting value for
+              investors. We believe in continuous learning, empowering our
+              people with opportunities to grow, lead, and make an impact.
+              Whether it’s exploring new investment frontiers, engaging with
+              visionary entrepreneurs, or shaping market-leading strategies,
+              life at Piper Serica is both challenging and rewarding. We
+              cultivate an inclusive culture that values diverse perspectives,
+              teamwork, and work-life balance, ensuring that every team member
+              feels inspired to contribute to our collective vision.
+            </p>
+            {/* <div className="col-lg-5">
               <div className="top-bottom-shadow"></div>
               <Slider {...settings} className="vertical-slider">
                 {careerSlide.map((slide, index) => (
@@ -162,16 +297,28 @@ const Career = () => {
                   </div>
                 ))}
               </Slider>
-            </div>
-            <div className="col-lg-6 offset-lg-1">
+            </div> */}
+            {/* <div className="col-lg-6 offset-lg-1">
               <div className="life-content-div">
                 <h6 className="section-subtitle">Life at Piper Serica</h6>
                 <h3 className="section-title mt-3 mt-lg-3">
-                Grow in a culture of innovation, collaboration, and excellence
+                  Grow in a culture of innovation, collaboration, and excellence
                 </h3>
 
                 <p className="para medium-para mt-lg-4 mt-4">
-                At Piper Serica, we foster a dynamic and collaborative work environment where innovation, integrity, and passion drive our success. Our team thrives on intellectual curiosity, analytical rigor, and a shared commitment to creating lasting value for investors. We believe in continuous learning, empowering our people with opportunities to grow, lead, and make an impact. Whether it’s exploring new investment frontiers, engaging with visionary entrepreneurs, or shaping market-leading strategies, life at Piper Serica is both challenging and rewarding. We cultivate an inclusive culture that values diverse perspectives, teamwork, and work-life balance, ensuring that every team member feels inspired to contribute to our collective vision.
+                  At Piper Serica, we foster a dynamic and collaborative work
+                  environment where innovation, integrity, and passion drive our
+                  success. Our team thrives on intellectual curiosity,
+                  analytical rigor, and a shared commitment to creating lasting
+                  value for investors. We believe in continuous learning,
+                  empowering our people with opportunities to grow, lead, and
+                  make an impact. Whether it’s exploring new investment
+                  frontiers, engaging with visionary entrepreneurs, or shaping
+                  market-leading strategies, life at Piper Serica is both
+                  challenging and rewarding. We cultivate an inclusive culture
+                  that values diverse perspectives, teamwork, and work-life
+                  balance, ensuring that every team member feels inspired to
+                  contribute to our collective vision.
                 </p>
 
                 <NavLink
@@ -182,7 +329,7 @@ const Career = () => {
                   <i className="fa-solid fa-arrow-right"></i>
                 </NavLink>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
@@ -337,74 +484,88 @@ const Career = () => {
                 enquiry. Please provide us more details of what we can help with
                 and a member of the team will be in touch.
               </p>
-              <form>
+              <form ref={formRef} onSubmit={handleSubmit}>
                 <div className="row mt-5">
                   <div className="col-lg-6">
-                    <div class="mb-3">
-                      <label for="name" class="form-label">
+                    <div className="mb-3">
+                      <label htmlFor="name" className="form-label">
                         Name*
                       </label>
                       <input
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         id="name"
-                        // placeholder="eg: john"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
                         required
                       />
                     </div>
                   </div>
                   <div className="col-lg-6">
-                    <div class="mb-3">
-                      <label for="phone" class="form-label">
+                    <div className="mb-3">
+                      <label htmlFor="phone" className="form-label">
                         Phone Number*
                       </label>
                       <input
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         id="phone"
-                        // placeholder="0000000000"
+                        name="phone"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        required
+                      />
+                      {phoneError && (
+                        <p className="text-danger">{phoneError}</p>
+                      )}
+                    </div>
+                  </div>
+                  <div className="col-lg-6">
+                    <div className="mb-3">
+                      <label htmlFor="email" className="form-label">
+                        Email*
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        className="form-control"
+                        value={formData.email}
+                        onChange={handleChange}
+                        id="email"
                         required
                       />
                     </div>
                   </div>
                   <div className="col-lg-6">
-                    <div class="mb-3">
-                      <label for="email" class="form-label">
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        class="form-control"
-                        id="email"
-                        // placeholder="eg: johndoe@xyz.com"
-                      />
-                    </div>
-                  </div>
-                  <div className="col-lg-6">
-                    <div class="mb-3">
-                      <label for="resume" class="form-label">
-                        Resume
+                    <div className="mb-3">
+                      <label htmlFor="resume" className="form-label">
+                        Resume*
                       </label>
                       <input
                         type="file"
-                        sx
-                        class="form-control"
+                        required
+                        className="form-control"
                         id="resume"
-                        accept=".pdf, .docx"
+                        name="resume"
+                        onChange={handleFileChange}
+                        accept=".pdf"
                       />
                     </div>
                   </div>
                   <div className="col-lg-12">
-                    <div class="mb-3">
-                      <label for="message" class="form-label">
+                    <div className="mb-3">
+                      <label htmlFor="message" className="form-label">
                         Message <span>(optional)</span>
                       </label>
                       <textarea
                         type="text"
-                        class="form-control"
+                        className="form-control"
                         id="message"
-                        rows={"4"}
-                        // placeholder="start typing....."
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        rows="4"
                       ></textarea>
                     </div>
                   </div>
@@ -412,12 +573,12 @@ const Career = () => {
                   <div className="col-lg-12">
                     <div className="row">
                       <div className="col-lg-3 d-flex justify-content-start">
-                        <NavLink
-                          to="/"
+                        <button
                           className="banner-btn blue-btn mt-0 mb-3"
+                          type="submit"
                         >
-                          Send Enquiry
-                        </NavLink>
+                          Submit
+                        </button>
                       </div>
                       <div className="col-lg-9">
                         <p className="para subscribe-para mb-0">
@@ -436,6 +597,31 @@ const Career = () => {
           </div>
         </div>
       </section>
+
+      {/* Success Modal */}
+
+      {successModal ? (
+        <Modal
+          centered
+          show={successModal}
+          onHide={() => setSuccessModal(false)}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>
+              <h4>Thank you!</h4>
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <div>
+              <p className="section-subtitle thankyou-msg">
+                The form has been submitted successfully! We’ll get back to you
+                shortly.
+              </p>
+              {/* <button onClick={() => setSuccessModal(false)}>Close</button> */}
+            </div>
+          </Modal.Body>
+        </Modal>
+      ) : null}
     </Layout>
   );
 };

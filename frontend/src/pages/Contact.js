@@ -1,8 +1,92 @@
-import React from "react";
+import React, { useState, useRef } from "react";
 import Layout from "../components/Layout";
 import { NavLink } from "react-router-dom";
+import emailjs from "@emailjs/browser";
+import { Modal } from "react-bootstrap";
 
 const Contact = () => {
+  const formRef = useRef();
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const [phoneError, setPhoneError] = useState("");
+  const [successModal, setSuccessModal] = useState(false);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+
+    if (name === "phone") {
+      if (value === "") {
+        setPhoneError(""); // Clear error when input is empty
+      } else {
+        const phoneRegex = /^\d{7,12}$/;
+        if (!phoneRegex.test(value)) {
+          setPhoneError("Phone number must be between 7 and 12 digits.");
+        } else {
+          setPhoneError("");
+        }
+      }
+    }
+
+    setFormData({ ...formData, [name]: value });
+  };
+
+  // Handle form submission
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (phoneError) {
+      return;
+    }
+
+    const emailParams = {
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      message: formData.message,
+    };
+
+    emailjs
+      .send(
+        "service_vkfw22e",
+        "template_xb0vdgm",
+        emailParams,
+        "hdyWkZtLGiur_O_Fb"
+      )
+      .then(
+        (response) => {
+          console.log(
+            "Email sent successfully!",
+            response.status,
+            response.text
+          );
+          setSuccessModal(true);
+          console.log("Success modal should be set to true");
+
+          // Clear success message after 5 seconds
+          setTimeout(() => {
+            setSuccessModal(false);
+          }, 5000);
+
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            message: "",
+          });
+          formRef.current.reset();
+        },
+        (err) => {
+          console.error("Failed to send email:", err);
+        }
+      );
+  };
+
   return (
     <Layout>
       <section className="banner-section">
@@ -42,59 +126,74 @@ const Contact = () => {
                 <p className="para small-para">
                 Our team of experts is here to assist you. Share your details with us, and we’ll connect you with the right specialist to address your needs.
                 </p>
-                <form>
+                <form ref={formRef} onSubmit={handleSubmit}>
                   <div className="row mt-5">
                     <div className="col-lg-6">
-                      <div class="mb-3">
-                        <label for="name" class="form-label">
+                      <div className="mb-3">
+                        <label for="name" className="form-label">
                           Name*
                         </label>
                         <input
                           type="text"
-                          class="form-control"
+                          className="form-control"
                           id="name"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleChange}
                           // placeholder="eg: john"
                           required
                         />
                       </div>
                     </div>
                     <div className="col-lg-6">
-                      <div class="mb-3">
-                        <label for="phone" class="form-label">
+                      <div className="mb-3">
+                        <label for="phone" className="form-label">
                           Phone Number*
                         </label>
                         <input
                           type="text"
-                          class="form-control"
+                          className="form-control"
                           id="phone"
+                          name="phone"
+                          value={formData.phone}
+                          onChange={handleChange}
                           // placeholder="0000000000"
                           required
                         />
+                        {phoneError && (
+                          <p className="text-danger">{phoneError}</p>
+                        )}
                       </div>
                     </div>
                     <div className="col-lg-12">
-                      <div class="mb-3">
-                        <label for="email" class="form-label">
+                      <div className="mb-3">
+                        <label for="email" className="form-label">
                           Email
                         </label>
                         <input
                           type="email"
-                          class="form-control"
+                          name="email"
+                          className="form-control"
+                          value={formData.email}
+                          onChange={handleChange}
                           id="email"
                           // placeholder="eg: johndoe@xyz.com"
                         />
                       </div>
                     </div>
                     <div className="col-lg-12">
-                      <div class="mb-3">
-                        <label for="message" class="form-label">
+                      <div className="mb-3">
+                        <label for="message" className="form-label">
                           Message <span>(optional)</span>
                         </label>
                         <textarea
                           type="text"
-                          class="form-control"
+                          className="form-control"
                           id="message"
-                          rows={"4"}
+                          name="message"
+                          value={formData.message}
+                          onChange={handleChange}
+                          rows="4"
                           // placeholder="start typing....."
                         ></textarea>
                       </div>
@@ -103,12 +202,12 @@ const Contact = () => {
                     <div className="col-lg-12">
                       <div className="row">
                         <div className="col-lg-3 d-flex justify-content-start">
-                          <NavLink
-                            to="/"
+                          <button
                             className="banner-btn blue-btn mt-0 mb-3"
+                            type="submit"
                           >
                             Send Enquiry
-                          </NavLink>
+                          </button>
                         </div>
                         <div className="col-lg-9">
                           <p className="para subscribe-para mb-0">
@@ -175,21 +274,21 @@ const Contact = () => {
 
                 <div className="social-media-div mt-4">
                   <a href="tel:022-66545370" className="single-social-media">
-                    <i class="fa-solid fa-phone"></i>
+                    <i className="fa-solid fa-phone"></i>
                     <p className="para small-para">022-66545370</p>
                   </a>
                   <a
                     href="mailto:contact@piperserica.com"
                     className="single-social-media"
                   >
-                    <i class="fa-solid fa-envelope"></i>
+                    <i className="fa-solid fa-envelope"></i>
                     <p className="para small-para">contact@piperserica.com</p>
                   </a>
                   <a
                     href="https://maps.app.goo.gl/YAxpnG7w3bVksVMf7"
                     className="single-social-media"
                   >
-                    <i class="fa-solid fa-location-dot"></i>
+                    <i className="fa-solid fa-location-dot"></i>
                     <p className="para small-para">
                       A Wing, 905/906, Marathon Innova Nextgen, Ganpatrao Kadam
                       Marg, Opp-Peninsula Corporate Park, Lower Parel, Mumbai –
@@ -215,6 +314,31 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+      {/* Success Modal */}
+
+      {successModal ? (
+        <Modal
+          centered
+          show={successModal}
+          onHide={() => setSuccessModal(false)}
+        >
+          <Modal.Header closeButton>
+            <Modal.Title>
+              <h4>Thank you!</h4>
+            </Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <div>
+              <p className="section-subtitle thankyou-msg">
+                The form has been submitted successfully! We’ll get back to you
+                shortly.
+              </p>
+              {/* <button onClick={() => setSuccessModal(false)}>Close</button> */}
+            </div>
+          </Modal.Body>
+        </Modal>
+      ) : null}
     </Layout>
   );
 };
