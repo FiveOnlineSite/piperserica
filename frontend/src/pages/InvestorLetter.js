@@ -276,13 +276,13 @@ const InvestorLetter = () => {
 
             <div className="banner-content-div">
               <div className="container">
-                <h6 className="banner-subtitle">Performance Review</h6>
+                {/* <h6 className="banner-subtitle">Performance Review</h6> */}
                 <h1 className="banner-title"> Investor Letters</h1>
-                <p className="banner-para">
+                {/* <p className="banner-para">
                   Investor letters are formal communications that provide
                   shareholders with insights into a company's financial
                   performance, strategic direction, and future outlook.
-                </p>
+                </p> */}
               </div>
             </div>
           </div>
