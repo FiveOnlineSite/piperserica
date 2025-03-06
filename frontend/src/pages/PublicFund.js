@@ -176,14 +176,6 @@ const PublicFund = () => {
               </div>
             </div>
             <div className="col-lg-7 mt-lg-0 mt-4">
-              <p className="para">
-              </p>
-              <p className="para">
-              </p>
-              <p className="para">
-              </p>
-              <p className="para">
-              </p>
               <div className="single-feature">
                   <div>
                     <span></span>
