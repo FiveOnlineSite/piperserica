@@ -26,7 +26,7 @@ const MarketFunds = () => {
 
   return (
     <Layout>
-      <section className="banner-section">
+      <section className="banner-section pb-0">
         <div className="row">
           <div className="banner-img-div">
             <img
@@ -61,7 +61,9 @@ const MarketFunds = () => {
           <div className="col-lg-5">
             <div className="container">
               <div className="investment-solution-content">
-                <h6 className="section-subtitle ">Investment SOLUTIONS</h6>
+                <h6 className="section-subtitle mt-5">
+                  Foreign Portfolio Investment (FPI)
+                </h6>
                 <h2 className="section-title small-section-title mt-lg-3 mt-4">
                   Piper Serica Numero Uno India Fund
                 </h2>
@@ -76,7 +78,7 @@ const MarketFunds = () => {
             </div>
           </div>
           <div className="col-lg-7 mt-lg-0 mt-5">
-            <div className="investment-solution-img">
+            <div className="investment-solution-img pt-5">
               <img
                 src={`${process.env.PUBLIC_URL}/images/banners/market-fund1.webp`}
                 alt="market-fund"
@@ -84,7 +86,7 @@ const MarketFunds = () => {
               />
 
               <div className="tabs-content-div p-lg-5 px-md-4">
-                <h3>Tailored and optimized portfolio allocation</h3>
+                {/* <h3>Tailored and optimized portfolio allocation</h3> */}
                 <p className="para small-para">
                   We match your investment requirements with your needs,
                   preferences, risk appetite, and long-term goals and create an
@@ -94,7 +96,7 @@ const MarketFunds = () => {
                 </p>
 
                 <NavLink
-                  to="/public-funds"
+                  to="/public-market/piper-serica-nemero-uno-india-fund"
                   className="banner-btn blue-btn tabs-btn mt-0"
                 >
                   View Fund
@@ -110,7 +112,7 @@ const MarketFunds = () => {
             <div className="container pt-5">
               <div className="investment-solution-content">
                 <h6 className="section-subtitle">
-                  Partner Value-Added Services
+                  Portfolio Management Services (PMS)
                 </h6>
                 <h2 className="section-title small-section-title mt-lg-3 mt-4">
                   Piper Serica Leader Portfolio
@@ -134,7 +136,7 @@ const MarketFunds = () => {
               />
 
               <div className="tabs-content-div p-lg-5 px-md-4">
-                <h3>Finding the best fit for your requirements</h3>
+                {/* <h3>Finding the best fit for your requirements</h3> */}
                 <p className="para small-para">
                   We find innovative, personalized solutions that meet your
                   sophisticated needs. From legacy governance guidance,
@@ -144,7 +146,7 @@ const MarketFunds = () => {
                 </p>
 
                 <NavLink
-                  to="/public-funds"
+                  to="/public-market/piper-serica-leader-portfolio"
                   className="banner-btn blue-btn tabs-btn mt-0"
                 >
                   View Fund
