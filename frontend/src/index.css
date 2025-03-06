@@ -587,12 +587,8 @@ body {
   min-height: 400px;
 }
 
-.why-us-section
-  .col-lg-6:hover
-  .vision-mission-para
-  .why-us-section
-  .col-lg-4:hover
-  .why-us-div,
+/* .why-us-section .col-lg-6:hover .vision-mission-para, */
+.why-us-section .col-lg-4:hover .why-us-div,
 .why-us-section .col-lg-6:hover .why-us-div {
   border: 1px solid var(--white-bg);
   -webkit-backdrop-filter: blur(20px);
@@ -2076,6 +2072,14 @@ form .form-label span {
     height: auto;
   }
 
+  .why-us-div {
+    min-height: 800px;
+  }
+
+  .vision-mission-div {
+    min-height: 500px;
+  }
+
   .fixed-navbar {
     top: 2%;
   }
@@ -2427,11 +2431,10 @@ form .form-label span {
   }
 
   .home-banner-content .section-title {
-    padding-left: 2px;
-  }
-
-  .home-banner-content .section-title {
     margin-bottom: 14%;
+    padding-left: 2px;
+    font-size: 30px;
+    line-height: 30px;
   }
 
   .banner-title {

@@ -325,7 +325,7 @@ const PublicFund = () => {
         </div>
       </section>
 
-      <StickyContact />
+      <StickyContact title="Want to know more about Piper Serica Numero Uno India Fund?" />
     </Layout>
   );
 };
