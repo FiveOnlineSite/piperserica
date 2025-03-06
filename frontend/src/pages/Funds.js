@@ -35,7 +35,12 @@ const Funds = () => {
                 about Piper Serica Angel Fund
               </h6>
               <p className="para">
-              Piper Serica Angel Fund was launched in 2022 as its first venture capital fund by Piper Serica. The fund has a corpus of Rs. 300 crore. It is registered with SEBI as a Category 1 AIF. The Fund has a life of 10 years extendable by another 2 years. It can invest in companies that follow the DPIT definition of a startup. The Fund is closed for new subscriptions.
+                Piper Serica Angel Fund was launched in 2022 as its first
+                venture capital fund by Piper Serica. The fund has a corpus of
+                Rs. 300 crore. It is registered with SEBI as a Category 1 AIF.
+                The Fund has a life of 10 years extendable by another 2 years.
+                It can invest in companies that follow the DPIT definition of a
+                startup. The Fund is closed for new subscriptions.
               </p>
             </div>
           </div>
@@ -87,7 +92,11 @@ const Funds = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                  <strong>Value added partners:</strong> Our founders look at us as value added partners beyond the financial capital that we bring. We work with the founders to scale up the company by helping build the organization, acquire customers and help with further fund raises.
+                    <strong>Value added partners:</strong> Our founders look at
+                    us as value added partners beyond the financial capital that
+                    we bring. We work with the founders to scale up the company
+                    by helping build the organization, acquire customers and
+                    help with further fund raises.
                   </p>
                 </div>
 
@@ -96,7 +105,11 @@ const Funds = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                  <strong>Network:</strong> We believe that the biggest help we bring to the founders is our extensive network that spans many industries and skill sets. We have a very varied set of LPs and through our public market funds we are connected with some of the largest companies in the country.
+                    <strong>Network:</strong> We believe that the biggest help
+                    we bring to the founders is our extensive network that spans
+                    many industries and skill sets. We have a very varied set of
+                    LPs and through our public market funds we are connected
+                    with some of the largest companies in the country.
                   </p>
                 </div>
 
@@ -105,7 +118,11 @@ const Funds = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                    <strong>Founder first approach:</strong> We love to get in the trenches with the founders and help the founders ride through the tough times. Every start up faces tough challenges. Our Founders always find us by their side as they meet these challenges.
+                    <strong>Founder first approach:</strong> We love to get in
+                    the trenches with the founders and help the founders ride
+                    through the tough times. Every start up faces tough
+                    challenges. Our Founders always find us by their side as
+                    they meet these challenges.
                   </p>
                 </div>
               </div>
@@ -130,7 +147,11 @@ const Funds = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                  The Fund invests in early-stage companies that have developed a proprietary deep IP / deep tech and are in the early stage of commercialization. We are sector agnostic though our focus areas are Spacetech, AI, advanced electronics, semicon design and fintech. 
+                    The Fund invests in early-stage companies that have
+                    developed a proprietary deep IP / deep tech and are in the
+                    early stage of commercialization. We are sector agnostic
+                    though our focus areas are Spacetech, AI, advanced
+                    electronics, semicon design and fintech.
                   </p>
                 </div>
 
@@ -139,7 +160,12 @@ const Funds = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                  We like to invest in startups that are bringing a significant degree of value to their customers. We need to see some product market fit, even if early. Our ticket size is Rs. 10 crore. While we are happy to co-invest with another lead investor there are instances where we are the lead or the sole investor.
+                    We like to invest in startups that are bringing a
+                    significant degree of value to their customers. We need to
+                    see some product market fit, even if early. Our ticket size
+                    is Rs. 10 crore. While we are happy to co-invest with
+                    another lead investor there are instances where we are the
+                    lead or the sole investor.
                   </p>
                 </div>
 
@@ -148,7 +174,9 @@ const Funds = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                  Our decision-making process is fairly quick. We use our proprietary AI tool yoda.ai to filter investment opportunities. 
+                    Our decision-making process is fairly quick. We use our
+                    proprietary AI tool yoda.ai to filter investment
+                    opportunities.
                   </p>
                 </div>
                 <div className="single-feature">
@@ -156,10 +184,11 @@ const Funds = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                  We have a very collaborative approach to investing and prefer to work with multiple co-investors bringing different value to the startup.
+                    We have a very collaborative approach to investing and
+                    prefer to work with multiple co-investors bringing different
+                    value to the startup.
                   </p>
                 </div>
-                
               </div>
             </div>
           </div>
@@ -207,7 +236,9 @@ const Funds = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                    <strong>Address: </strong> A Wing, 905/906, Marathon Innova Nextgen, Ganpatrao Kadam Marg, Opp-Peninsula Corporate Park, Lower Parel, Mumbai – 400013
+                    <strong>Address: </strong> A Wing, 905/906, Marathon Innova
+                    Nextgen, Ganpatrao Kadam Marg, Opp-Peninsula Corporate Park,
+                    Lower Parel, Mumbai – 400013
                   </p>
                 </div>
                 <div className="single-fund">
@@ -223,8 +254,8 @@ const Funds = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                    <strong>Name of the investment manager: </strong> Piper Serica
-                    Advisors Private Limited
+                    <strong>Name of the investment manager: </strong> Piper
+                    Serica Advisors Private Limited
                   </p>
                 </div>
                 <div className="single-fund">
@@ -232,9 +263,9 @@ const Funds = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                    <strong>Address of the investment manager: </strong> A Wing, 905/906, Marathon Innova Nextgen, 
-                    Ganpatrao Kadam Marg, Opp-Peninsula Corporate Park, 
-                    Lower Parel, Mumbai – 400013
+                    <strong>Address of the investment manager: </strong> A Wing,
+                    905/906, Marathon Innova Nextgen, Ganpatrao Kadam Marg,
+                    Opp-Peninsula Corporate Park, Lower Parel, Mumbai – 400013
                   </p>
                 </div>
               </div>
@@ -243,7 +274,7 @@ const Funds = () => {
         </div>
       </section>
 
-      <StickyContact />
+      <StickyContact title="Want to know more about Piper Serica Angel Fund?" />
     </Layout>
   );
 };
