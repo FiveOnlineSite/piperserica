@@ -76,6 +76,7 @@ const PrivateMarket = () => {
                   <i className="fa-solid fa-arrow-right"></i>
                 </NavLink>
               </div>
+              
             </div>
           </div>
         </div>
