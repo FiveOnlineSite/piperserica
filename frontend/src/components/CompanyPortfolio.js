@@ -12,6 +12,7 @@ const CompanyPortfolio = () => {
       id: 1,
       src: "/images/industries/comp-1.png",
       label: "ELECTRIC VEHICLE",
+      name: "AltMobility",
       description:
         "ALT Mobility is a full-stack EV leasing platform offering mobility as a service (MaaS) for commercial vehicle users. By acquiring affordable debt financing from both domestic and international financing institutions, the company seeks to provide a well-structured financial solution for the electrification of commercial fleets throughout India. With a full stack EV leasing solution, it enables asset light logistic enterprises to ramp up to tens of thousands of EV fleets in months.",
       link: "https://alt-mobility.com/",
@@ -20,6 +21,7 @@ const CompanyPortfolio = () => {
       id: 2,
       src: "/images/industries/comp-2.jpg",
       label: "FINTECH",
+      name: "Crediwatch",
       description:
         "The company has created an information intelligence platform intended to offer financial organisations big data risk analysis. In order to generate insights from distributed and unstructured data sources, the company's platform combines computational techniques like machine learning, natural language processing, and data visualisation technologies. This facilitates financial institutions, institutional investors, and businesses to make quick decisions while realising market possibilities and minimizing capital risks.",
       link: "https://www.crediwatch.com/home/",
@@ -28,6 +30,7 @@ const CompanyPortfolio = () => {
       id: 3,
       src: "/images/industries/comp-3.jpg",
       label: "SUPPLY CHAIN TECH",
+      name: "Zippee",
       description:
         "ZFW is creating a physical network of micro warehouses (dark stores) along with a strong tech integration to let D2C brands and consumer brands to deliver products on the same day thereby improving customer delight.",
       link: "https://www.zippee.delivery/",
@@ -36,6 +39,7 @@ const CompanyPortfolio = () => {
       id: 4,
       src: "/images/industries/comp-4.png",
       label: "CONSUMER TECH",
+      name: "Driffle",
       description:
         "Founded in 2021, Driffle is a digital goods marketplace that connects gamers with sellers all over the world. The platform sells games, digital gift cards, and gaming points for gamers. The companys objective is to make online gaming accessible, affordable and safer for gamers worldwide.",
       link: "https://driffle.com/",
@@ -44,6 +48,7 @@ const CompanyPortfolio = () => {
       id: 5,
       src: "/images/industries/comp-5.png",
       label: "AI & SAAS",
+      name: "Oditly",
       description:
         "Founded in 2020, Oditly is an enterprise-scale SaaS application enabling businesses of all sizes to digitize and automate the entire lifecycle of quality, safety and compliance processes within minutes. The product offers to set up and manage inspection workflows seamlessly allowing users to schedule recurring inspections, assigning tasks and actions plans.",
       link: "https://www.oditly.com/",
@@ -52,6 +57,7 @@ const CompanyPortfolio = () => {
       id: 6,
       src: "/images/industries/comp-6.jpg",
       label: "SUPPLY CHAIN TECH",
+      name: "UnOrg",
       description:
         "Founded in 2022, UnOrg is the first and only B2B managed Marketplace that is empowering street food vendors, Dhabas and sweets shops etc. The company operates a procurement platform intended to create a one-stop solution for street food vendors by offering a range of services including a large set of SKUs, timely slot delivery, discounts on all products, and other related services, enabling vendors to procure raw materials swiftly and systematically.",
       link: "https://unorg.in/",
@@ -60,6 +66,7 @@ const CompanyPortfolio = () => {
       id: 7,
       src: "/images/industries/comp-7.png",
       label: "AI & SAAS",
+      name: "DesignX",
       description:
         "DesignX helps manufacturing companies with process discovery, modelling, monitoring & automation through RPA & IIOT to improve MSQCD (Morale, Safety, Quality, Cost & Delivery) on the shop floor.",
       link: "https://designx.in/",
@@ -68,6 +75,7 @@ const CompanyPortfolio = () => {
       id: 8,
       src: "/images/industries/comp-8.png",
       label: "FINTECH",
+      name: "Castler",
       description:
         "Castler is a Digital Escrow Platform which includes solutions for setup, administration, collections & payouts, approvals, processing and risk management.",
       link: "https://castler.com/",
@@ -76,6 +84,7 @@ const CompanyPortfolio = () => {
       id: 9,
       src: "/images/industries/comp-9 (2).png",
       label: "AI & SAAS",
+      name: "FloWorks",
       description:
         "Floworks provides CRM/ERP type functionality on top of Whatsapp for businesses to better manage their operations, especially for their workforce on the field.",
       link: "https://www.floworks.ai/",
@@ -84,6 +93,7 @@ const CompanyPortfolio = () => {
       id: 10,
       src: "/images/industries/comp-10.jpg",
       label: "CONSUMER TECH",
+      name: "MyCaptain",
       description:
         "MyCaptain provides beginner to advanced Live & Online Cohort based courses in the fields of Business, Content, Design and Product. They help early professionals, young graduates and college students acquire skills and get jobs in New-age and aspirational careers.",
       link: "https://mycaptain.in/",
@@ -92,6 +102,7 @@ const CompanyPortfolio = () => {
       id: 11,
       src: "/images/industries/comp-11.png",
       label: "CONSUMER TECH",
+      name: "University Living",
       description:
         "University Living is a global student housing marketplace. It helps students across the globe find suitable and secure accommodation near their university campuses.",
       link: "https://www.universityliving.com/",
@@ -100,6 +111,7 @@ const CompanyPortfolio = () => {
       id: 12,
       src: "/images/industries/comp-12.png",
       label: "FINTECH",
+      name: "KiVi",
       description:
         "KiVi provides digital financial solutions and a physical platform for the farmer to procure input, implement agronomy practices, process & market output. It employs a micro-entrepreneur-led (franchisee) model that combines the strength of the platform with the franchisee’s local expertise, social capital and last mile transaction capability.",
       link: "https://agrosperity.com/#/home",
@@ -108,6 +120,7 @@ const CompanyPortfolio = () => {
       id: 13,
       src: "/images/industries/comp-13.png",
       label: "CYBER SECURITY & CHIP DESIGN",
+      name: "Pantherun",
       description:
         "Pantherun is a cyber security innovator with a patent pending approach to data protection, that transforms security by making encryption possible in real-time, while making breach of security 10X harder compared to existing global solutions, at better performance and price.",
       link: "https://pantherun.com/",
@@ -116,6 +129,7 @@ const CompanyPortfolio = () => {
       id: 14,
       src: "/images/industries/comp-14-1.png",
       label: "ELECTRIC VEHICLE",
+      name: "Evify",
       description:
         "Evify is a fleet management company working to De-Carbonize the last-mile logistic sector by providing e-commerce, food delivery and 3PL companies with an electric vehicle Fleet across Tier I and Tier II cities.",
       link: "https://www.evify.co.in/",
@@ -124,6 +138,7 @@ const CompanyPortfolio = () => {
       id: 15,
       src: "/images/industries/comp-15.png",
       label: "CYBER SECURITY & CHIP DESIGN",
+      name: "ClearTrust",
       description:
         "ClearTrust offers a cybersecurity platform, which mitigates AdFraud for publishers, platforms and advertisers by handling Traffic and Ad Security in real-time by scanning millions of events per day.",
       link: "https://www.cleartrust.cc/",
@@ -132,6 +147,7 @@ const CompanyPortfolio = () => {
       id: 16,
       src: "/images/industries/comp-22.png",
       label: "FINTECH",
+      name: "Flashaid",
       description:
         "Flashaid - is an Insuretech company that provides customized and affordable embedded health insurance products through open integrated API.",
       link: "https://flashaid.in/",
@@ -140,6 +156,7 @@ const CompanyPortfolio = () => {
       id: 17,
       src: "/images/industries/comp-16.jpg",
       label: "FINTECH",
+      name: "Freed",
       description:
         "Freed - FREED is India’s 1st debt relief platform, empowering customers to regain their creditworthiness by resolving their overburdening and toxic debt.",
       link: "https://freed.care/",
@@ -148,6 +165,7 @@ const CompanyPortfolio = () => {
       id: 18,
       src: "/images/industries/comp-17.png",
       label: "CYBER SECURITY & CHIP DESIGN",
+      name: "OTPLess",
       description:
         "OTPLess provides identity as a service by building an essential identity infrastructure for merchants to make customer and employee identity/authentication easy and secure.",
       link: "https://otpless.com/",
@@ -156,6 +174,7 @@ const CompanyPortfolio = () => {
       id: 19,
       src: "/images/industries/comp-18.jpg",
       label: "ADVANCE ELECTRONIC",
+      name: "Six Sense Mobility",
       description:
         "Six Sense Mobility is a deep-tech mobility company that uses plug-and-play devices to transform regular vehicles into intelligent-connected vehicles.",
       link: "https://www.sixsensemobility.com/home",
@@ -164,6 +183,7 @@ const CompanyPortfolio = () => {
       id: 20,
       src: "/images/industries/comp-19.jpg",
       label: "FINTECH",
+      name: "Swara Fincare",
       description:
         "Swara Fincare is an RBI-registered NBFC dedicated to providing tailored credit solutions to rural and semi-urban regions. The company specializes in offering business and agricultural loans, empowering individuals and communities with financial support to foster economic growth and development.",
       link: "https://www.swarafincare.com/",
@@ -172,6 +192,7 @@ const CompanyPortfolio = () => {
       id: 21,
       src: "/images/industries/comp-20.png",
       label: "SPACETECH",
+      name: "Astrogate Labs",
       description:
         "Astrogate Labs is a laser communication technology that simplifies and lowers the cost of data transmission across space, air, and terrestrial platforms.",
       link: "https://astrogatelabs.com/",
@@ -180,6 +201,7 @@ const CompanyPortfolio = () => {
       id: 22,
       src: "/images/industries/comp-21.jpg",
       label: "FINTECH",
+      name: "Rupeeflo",
       description:
         "Rupeeflo is a fintech platform specifically designed for Non-Resident Indians (NRIs) to manage their financial needs seamlessly across borders through a comprehensive suite of banking and wealth management products.",
       link: "https://www.rupeeflo.com/",
@@ -253,7 +275,7 @@ const CompanyPortfolio = () => {
             <div className="industries-div">
               <div className="row">
                 {getFilteredImages().map((images) => (
-                  <div key={images.id} className="col-lg-3 col-md-4 col-4">
+                  <div key={images.id} className="col-lg-3 col-md-6 col-6">
                     <div
                       className="industires-logo-div"
                       onClick={() => openModal(images)}
@@ -285,7 +307,7 @@ const CompanyPortfolio = () => {
       {selectedImage && (
         <Modal show={showModal} onHide={closeModal} centered>
           <Modal.Header closeButton>
-            <Modal.Title>{selectedImage.label}</Modal.Title>
+            <Modal.Title>{selectedImage.name}</Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <div>

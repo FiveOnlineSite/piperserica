@@ -120,7 +120,7 @@ const LeaderPortfolio = () => {
               <div>
                 <NavLink
                   to="/investor-letters"
-                  className="banner-btn blue-btn tabs-btn mt-lg-4 mt-md-4 mt-4 me-lg-4 me-md-4 me-0 "
+                  className="banner-btn blue-btn tabs-btn mt-lg-4 mt-md-4 mt-4 me-lg-4 me-md-4 me-4"
                 >
                   Factsheet
                 </NavLink>

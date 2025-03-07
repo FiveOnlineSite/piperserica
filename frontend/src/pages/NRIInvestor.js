@@ -79,7 +79,7 @@ const NRIInvestor = () => {
 
   return (
     <Layout>
-      <section className="investor-banner-section">
+      {/* <section className="investor-banner-section">
         <div className="row">
           <Slider {...investorSettings}>
             {investorItem.map((item, index) => (
@@ -105,6 +105,38 @@ const NRIInvestor = () => {
               </div>
             ))}
           </Slider>
+        </div>
+      </section> */}
+
+      <section className="banner-section">
+        <div className="row">
+          <div className="banner-img-div">
+            <img
+              src={`${process.env.PUBLIC_URL}/images/banners/62184b3cd78853ebf6106ba5_2560a237988ae07923f488781b91dfd7.webp`}
+              alt="banner-img"
+            />
+
+            <div className="banner-content-div">
+              <div className="container">
+                {/* <h6 className="banner-subtitle">Creating Meaningful Change</h6> */}
+                <h1 className="banner-title">
+                  All-weather, purposeful investment strategies
+                </h1>
+                {/* <p className="banner-para">
+                        Our commitment to making a positive impact drives everything
+                        we do. Through innovative solutions, community engagement, and
+                        sustainable initiatives, we strive to make a lasting
+                        difference in the lives we touch and the environments we care
+                        for.{" "}
+                      </p> */}
+
+                <NavLink to="#offerings" className="banner-btn">
+                  Read More
+                  <i className="fa-solid fa-arrow-right"></i>
+                </NavLink>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -461,7 +493,7 @@ const NRIInvestor = () => {
         </div>
       </section>
 
-      <section className="our-offerings-section">
+      <section className="our-offerings-section" id="offerings">
         <div className="container">
           <div className="row align-items-center">
             <h5 className="section-subtitle">Our Offerings</h5>
