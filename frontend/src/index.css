@@ -2306,7 +2306,8 @@ form .form-label span {
   }
 
   .tabs-content-div {
-    padding-top: 20px;
+    /* padding-top: 20px; */
+    padding: 20px 40px 0 40px;
   }
 }
 
@@ -2498,6 +2499,11 @@ form .form-label span {
   .investor-news-section,
   .tabs-content-div {
     padding: 30px 15px;
+  }
+
+  .tabs-content-div {
+    /* padding-top: 20px; */
+    padding: 20px 20px 0 20px;
   }
 
   .investor-banner-content {
