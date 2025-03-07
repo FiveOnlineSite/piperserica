@@ -175,14 +175,14 @@ const CompanySlider = () => {
         "Astrogate Labs is a laser communication technology that simplifies and lowers the cost of data transmission across space, air, and terrestrial platforms.",
       link: "https://astrogatelabs.com/",
     },
-    {
-      id: 22,
-      src: "/images/industries/industry8.png",
-      label: "FINTECH",
-      description:
-        "Rupeeflo is a fintech platform specifically designed for Non-Resident Indians (NRIs) to manage their financial needs seamlessly across borders through a comprehensive suite of banking and wealth management products.",
-      link: "https://www.rupeeflo.com/",
-    },
+    // {
+    //   id: 22,
+    //   src: "/images/industries/industry8.png",
+    //   label: "FINTECH",
+    //   description:
+    //     "Rupeeflo is a fintech platform specifically designed for Non-Resident Indians (NRIs) to manage their financial needs seamlessly across borders through a comprehensive suite of banking and wealth management products.",
+    //   link: "https://www.rupeeflo.com/",
+    // },
   ];
 
   const [showModal, setShowModal] = useState(false);
