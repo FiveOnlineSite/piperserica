@@ -1137,12 +1137,10 @@ body {
   line-height: 43px;
 }
 
-/* .investment-solution-section {
-  padding-top: 50px;
-} */
-/* padding-left: 20%;
-  padding-top: 10%;
-} */
+.investment-solution-section {
+  /* padding-top: 50px; */
+  padding-left: 6%;
+}
 
 .investment-solution-img,
 .investment-tab-content {
