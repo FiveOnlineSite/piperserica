@@ -105,15 +105,14 @@ const PublicFund = () => {
                 about Piper Serica Numero Uno Fund
               </h6>
               <p className="para">
-                Piper Serica Numero Uno India Fund is a Foreign Portfolio
-                Investor (FPI) fund designed to provide global investors
-                seamless access to India’s dynamic equity markets. Following the
-                same strategy as our PMS, the fund combines growth and value
-                investing, rigorous research, and disciplined risk management to
-                identify high-quality businesses with strong fundamentals. With
-                a multi-cap approach and a focus on fair valuations, the fund
-                aims to generate consistent alpha, ensuring long-term wealth
-                creation while mitigating market risks.
+              Piper Serica Numero Uno India Fund is a Foreign Portfolio Investor (FPI) 
+              fund designed to provide global investors seamless access to India’s 
+              dynamic equity markets. Following the same strategy as our PMS, the 
+              fund combines growth and value investing, rigorous research, and 
+              disciplined risk management to identify high-quality businesses with 
+              strong fundamentals. With a multi-cap approach and a focus on fair 
+              valuations, the fund aims to generate consistent alpha, ensuring 
+              long-term wealth creation while mitigating market risks.
               </p>
 
               <div>
@@ -264,10 +263,7 @@ const PublicFund = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                    <strong>Focus on Fair Valuations </strong>by investing in
-                    fundamentally strong businesses trading at attractive
-                    prices, leveraging deep research and a long-term
-                    perspective.
+                    <strong>Focus on Fair Valuations </strong>by investing in fundamentally strong businesses trading at attractive prices, leveraging deep research and a long-term perspective.
                   </p>
                 </div>
 
@@ -276,10 +272,7 @@ const PublicFund = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                    <strong>Robust Research and Due Diligence</strong> involving
-                    engagement with key stakeholders, in-depth financial
-                    analysis, and assessment of management quality and
-                    governance standards.
+                  <strong>Robust Research and Due Diligence</strong> involving engagement with key stakeholders, in-depth financial analysis, and assessment of management quality and governance standards.
                   </p>
                 </div>
                 <div className="single-feature">
@@ -287,10 +280,7 @@ const PublicFund = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                    <strong>Strategic Risk Management Framework</strong> that
-                    limits exposure with a maximum of 6% allocation per stock,
-                    25% per sector, and ensures liquidity to exit holdings
-                    within seven trading days.
+                  <strong>Strategic Risk Management Framework</strong> that limits exposure with a maximum of 6% allocation per stock, 25% per sector, and ensures liquidity to exit holdings within seven trading days.
                   </p>
                 </div>
                 <div className="single-feature">
@@ -298,12 +288,7 @@ const PublicFund = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                    <strong>
-                      Consistent Portfolio Rebalancing and Sectoral
-                      Diversification
-                    </strong>{" "}
-                    to optimize returns while mitigating risks, ensuring
-                    long-term wealth creation for investors.
+                  <strong>Consistent Portfolio Rebalancing and Sectoral Diversification</strong> to optimize returns while mitigating risks, ensuring long-term wealth creation for investors.
                   </p>
                 </div>
               </div>
