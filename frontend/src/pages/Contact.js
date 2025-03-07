@@ -93,7 +93,7 @@ const Contact = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src={`${process.env.PUBLIC_URL}/images/banners/market-fund-banner.webp`}
+              src={`${process.env.PUBLIC_URL}/images/banners/contact-final.png`}
               alt="banner-img"
             />
 
@@ -124,7 +124,9 @@ const Contact = () => {
                 <h6 className="section-subtitle">Get in touch</h6>
                 <h2 className="section-title mt-lg-3 mt-4">Let's Talk</h2>
                 <p className="para small-para">
-                Our team of experts is here to assist you. Share your details with us, and we’ll connect you with the right specialist to address your needs.
+                  Our team of experts is here to assist you. Share your details
+                  with us, and we’ll connect you with the right specialist to
+                  address your needs.
                 </p>
                 <form ref={formRef} onSubmit={handleSubmit}>
                   <div className="row mt-5">

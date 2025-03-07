@@ -105,20 +105,21 @@ const PublicFund = () => {
                 about Piper Serica Numero Uno Fund
               </h6>
               <p className="para">
-              Piper Serica Numero Uno India Fund is a Foreign Portfolio Investor (FPI) 
-              fund designed to provide global investors seamless access to India’s 
-              dynamic equity markets. Following the same strategy as our PMS, the 
-              fund combines growth and value investing, rigorous research, and 
-              disciplined risk management to identify high-quality businesses with 
-              strong fundamentals. With a multi-cap approach and a focus on fair 
-              valuations, the fund aims to generate consistent alpha, ensuring 
-              long-term wealth creation while mitigating market risks.
+                Piper Serica Numero Uno India Fund is a Foreign Portfolio
+                Investor (FPI) fund designed to provide global investors
+                seamless access to India’s dynamic equity markets. Following the
+                same strategy as our PMS, the fund combines growth and value
+                investing, rigorous research, and disciplined risk management to
+                identify high-quality businesses with strong fundamentals. With
+                a multi-cap approach and a focus on fair valuations, the fund
+                aims to generate consistent alpha, ensuring long-term wealth
+                creation while mitigating market risks.
               </p>
 
               <div>
                 <NavLink
                   to="/investor-letters"
-                  className="banner-btn blue-btn tabs-btn mt-lg-4 mt-md-4 mt-4 me-lg-4 me-md-4 me-0 "
+                  className="banner-btn blue-btn tabs-btn mt-lg-4 mt-md-4 mt-4 me-lg-4 me-md-4 me-4 "
                 >
                   Factsheet
                 </NavLink>
@@ -177,46 +178,58 @@ const PublicFund = () => {
             </div>
             <div className="col-lg-7 mt-lg-0 mt-4">
               <div className="single-feature">
-                  <div>
-                    <span></span>
-                  </div>
-                  <p className="para">
-                  <strong>Unlocking the India Opportunity</strong> by investing in high-growth sectors benefiting from India’s economic transformation, rising consumption, and structural market shifts.
-                  </p>
+                <div>
+                  <span></span>
+                </div>
+                <p className="para">
+                  <strong>Unlocking the India Opportunity</strong> by investing
+                  in high-growth sectors benefiting from India’s economic
+                  transformation, rising consumption, and structural market
+                  shifts.
+                </p>
               </div>
               <div className="single-feature">
-                  <div>
-                    <span></span>
-                  </div>
-                  <p className="para">
-                  <strong>Leveraging Expert-Led Strategy</strong> with a seasoned equity team that combines deep market insights and disciplined execution to drive sustainable returns.
-                  </p>
+                <div>
+                  <span></span>
+                </div>
+                <p className="para">
+                  <strong>Leveraging Expert-Led Strategy</strong> with a
+                  seasoned equity team that combines deep market insights and
+                  disciplined execution to drive sustainable returns.
+                </p>
               </div>
               <div className="single-feature">
-                  <div>
-                    <span></span>
-                  </div>
-                  <p className="para">
-                  <strong>Balancing Growth and Value Investing</strong> through a flexible approach that optimizes performance across different market cycles.
-                  </p>
+                <div>
+                  <span></span>
+                </div>
+                <p className="para">
+                  <strong>Balancing Growth and Value Investing</strong> through
+                  a flexible approach that optimizes performance across
+                  different market cycles.
+                </p>
               </div>
               <div className="single-feature">
-                  <div>
-                    <span></span>
-                  </div>
-                  <p className="para">
-                  <strong>Conducting Meticulous Stock Selection</strong> using rigorous screening processes that blend qualitative and quantitative analysis to identify future market leaders.
-                  </p>
+                <div>
+                  <span></span>
+                </div>
+                <p className="para">
+                  <strong>Conducting Meticulous Stock Selection</strong> using
+                  rigorous screening processes that blend qualitative and
+                  quantitative analysis to identify future market leaders.
+                </p>
               </div>
               <div className="single-feature">
-                  <div>
-                    <span></span>
-                  </div>
-                  <p className="para">
-                  <strong>Ensuring a Resilient and Alpha-Driven Portfolio</strong> with a structured investment framework designed to outperform while mitigating risks in volatile market conditions.
-                  </p>
+                <div>
+                  <span></span>
+                </div>
+                <p className="para">
+                  <strong>
+                    Ensuring a Resilient and Alpha-Driven Portfolio
+                  </strong>{" "}
+                  with a structured investment framework designed to outperform
+                  while mitigating risks in volatile market conditions.
+                </p>
               </div>
-              
             </div>
           </div>
         </div>
@@ -238,7 +251,10 @@ const PublicFund = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                  <strong>Multi-Cap Investment Strategy</strong> that identifies high-quality opportunities across different market capitalizations, ensuring superior risk-adjusted returns.
+                    <strong>Multi-Cap Investment Strategy</strong> that
+                    identifies high-quality opportunities across different
+                    market capitalizations, ensuring superior risk-adjusted
+                    returns.
                   </p>
                 </div>
 
@@ -247,7 +263,10 @@ const PublicFund = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                    <strong>Focus on Fair Valuations </strong>by investing in fundamentally strong businesses trading at attractive prices, leveraging deep research and a long-term perspective.
+                    <strong>Focus on Fair Valuations </strong>by investing in
+                    fundamentally strong businesses trading at attractive
+                    prices, leveraging deep research and a long-term
+                    perspective.
                   </p>
                 </div>
 
@@ -256,7 +275,10 @@ const PublicFund = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                  <strong>Robust Research and Due Diligence</strong> involving engagement with key stakeholders, in-depth financial analysis, and assessment of management quality and governance standards.
+                    <strong>Robust Research and Due Diligence</strong> involving
+                    engagement with key stakeholders, in-depth financial
+                    analysis, and assessment of management quality and
+                    governance standards.
                   </p>
                 </div>
                 <div className="single-feature">
@@ -264,7 +286,10 @@ const PublicFund = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                  <strong>Strategic Risk Management Framework</strong> that limits exposure with a maximum of 6% allocation per stock, 25% per sector, and ensures liquidity to exit holdings within seven trading days.
+                    <strong>Strategic Risk Management Framework</strong> that
+                    limits exposure with a maximum of 6% allocation per stock,
+                    25% per sector, and ensures liquidity to exit holdings
+                    within seven trading days.
                   </p>
                 </div>
                 <div className="single-feature">
@@ -272,7 +297,12 @@ const PublicFund = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                  <strong>Consistent Portfolio Rebalancing and Sectoral Diversification</strong> to optimize returns while mitigating risks, ensuring long-term wealth creation for investors.
+                    <strong>
+                      Consistent Portfolio Rebalancing and Sectoral
+                      Diversification
+                    </strong>{" "}
+                    to optimize returns while mitigating risks, ensuring
+                    long-term wealth creation for investors.
                   </p>
                 </div>
               </div>

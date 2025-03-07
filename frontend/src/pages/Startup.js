@@ -76,7 +76,7 @@ const Startup = () => {
 
   return (
     <Layout>
-      <section className="investor-banner-section">
+      {/* <section className="investor-banner-section">
         <div className="row">
           <Slider {...investorSettings}>
             {investorItem.map((item, index) => (
@@ -103,6 +103,38 @@ const Startup = () => {
             ))}
           </Slider>
         </div>
+      </section> */}
+
+      <section className="banner-section">
+        <div className="row">
+          <div className="banner-img-div">
+            <img
+              src={`${process.env.PUBLIC_URL}/images/banners/62184b3cd78853ebf6106ba5_2560a237988ae07923f488781b91dfd7.webp`}
+              alt="banner-img"
+            />
+
+            <div className="banner-content-div">
+              <div className="container">
+                {/* <h6 className="banner-subtitle">Creating Meaningful Change</h6> */}
+                <h1 className="banner-title">
+                  All-weather, purposeful investment strategies
+                </h1>
+                {/* <p className="banner-para">
+                              Our commitment to making a positive impact drives everything
+                              we do. Through innovative solutions, community engagement, and
+                              sustainable initiatives, we strive to make a lasting
+                              difference in the lives we touch and the environments we care
+                              for.{" "}
+                            </p> */}
+
+                <NavLink to="#offerings" className="banner-btn">
+                  Read More
+                  <i className="fa-solid fa-arrow-right"></i>
+                </NavLink>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section className="what-we-do-section">
@@ -111,25 +143,18 @@ const Startup = () => {
             <h5 className="section-subtitle mb-4">What we do</h5>
 
             <p className="para">
-              Piper Serica is a long-only active equity asset manager that
-              traverses various strategies of equity investment in India. We
-              manage multiple funds that invest in Indian listed companies for
-              domestic and foreign individuals and institutions. We also manage
-              a fund that invests in Indian startups that are building business
-              models based on deep tech. We have been investing in Indian
-              companies for over 30 years and have a very solid understanding of
-              how to succeed while investing in India navigating through various
-              risks, most of them unique to India as an emerging market. The
-              funds that we manage cater to different risk and return profiles
-              and objectives of our investors. We have an edge over our peers
-              due to our deep research and disciplined approach to investing.
-              Our research team is extensively trained in our proprietary
-              research processes that we have developed and mostly automated. To
-              ensure full skin in the game our fund management team makes all
-              their public and private investments through the funds managed by
-              Piper Serica. We are a fund management company owned by its
-              management team. Our management company is majority owned by
-              women.
+              The Fund invests in early-stage companies that have developed a
+              proprietary deep IP / deep tech and is in the early stage of
+              commercialization. We are sector agnostic though our focus areas
+              are Spacetech, AI, advanced electronics, semicon design and
+              fintech. We like to invest in startups that are bringing a
+              significant degree of value to their customers. We need to see
+              some product market fit, even if early. Our ticket size is ₹10
+              crore. While we are happy to co-invest with another lead investor
+              there are instances where we are the lead or the sole investor.
+              Our decision-making process is fairly quick. We have a very
+              collaborative approach to investing and prefer to work with
+              multiple co-investors bringing different value to the startup.
             </p>
 
             {/* <div className="col-lg-4">
@@ -430,7 +455,7 @@ const Startup = () => {
         </div>
       </section>
 
-      <section className="our-offerings-section">
+      <section className="our-offerings-section" id="offerings">
         <div className="container">
           <div className="row align-items-center">
             <h5 className="section-subtitle">Our Offerings</h5>
