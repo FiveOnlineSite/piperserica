@@ -144,22 +144,22 @@ const LeaderPortfolio = () => {
           <div className="row justify-content-center">
             <div className="col-lg-12">
               <div className="row">
+                <div className="col-lg-4 mt-lg-0 mt-4">
+                  <div className="facts-div">
+                    <h2 className="facts-title">INR 760 cr+ </h2>
+                    <h6 className="para">AUM</h6>
+                  </div>
+                </div>
+                <div className="col-lg-4 mt-lg-0 mt-4">
+                  <div className="facts-div">
+                    <h2 className="facts-title">17%</h2>
+                    <h6 className="para">CAGR</h6>
+                  </div>
+                </div>
                 <div className="col-lg-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">25x P/E</h2>
-                    <h6 className="para">Investors</h6>
-                  </div>
-                </div>
-                <div className="col-lg-4 mt-lg-0 mt-4">
-                  <div className="facts-div">
-                    <h2 className="facts-title">INR 760 cr+ AUM</h2>
-                    <h6 className="para">Crore Asset Under Management</h6>
-                  </div>
-                </div>
-                <div className="col-lg-4 mt-lg-0 mt-4">
-                  <div className="facts-div">
-                    <h2 className="facts-title">17% CAGR</h2>
-                    <h6 className="para">CAGR over more than 9 years</h6>
+                    <h2 className="facts-title">&lt;25x</h2>
+                    <h6 className="para">P/E</h6>
                   </div>
                 </div>
               </div>
