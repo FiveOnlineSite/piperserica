@@ -584,7 +584,9 @@ const Header = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div className={` navbar-collapse ${isMenuOpen ? "show" : ""}`}>
+          <div
+            className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`}
+          >
             <ul className="navbar-nav mb-2 mb-lg-0 ">
               <li className="nav-item dropdown desktop-dropdown">
                 <NavLink
