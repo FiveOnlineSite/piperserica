@@ -53,10 +53,10 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_vkfw22e",
-        "template_xb0vdgm",
+        process.env.REACT_APP_CONTACT_SERVICE_ID,
+        process.env.REACT_APP_CONTACT_TEMPLATE_ID,
         emailParams,
-        "hdyWkZtLGiur_O_Fb"
+        process.env.REACT_APP_EMAILJS_ID
       )
       .then(
         (response) => {
