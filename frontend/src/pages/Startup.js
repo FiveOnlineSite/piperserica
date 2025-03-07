@@ -108,29 +108,40 @@ const Startup = () => {
       <section className="what-we-do-section">
         <div className="container">
           <div className="row">
-            <div className="col-lg-4">
-              <h5 className="section-subtitle">What we do</h5>
+            <h5 className="section-subtitle mb-4">What we do</h5>
+
+            <p className="para">
+              Piper Serica is a long-only active equity asset manager that
+              traverses various strategies of equity investment in India. We
+              manage multiple funds that invest in Indian listed companies for
+              domestic and foreign individuals and institutions. We also manage
+              a fund that invests in Indian startups that are building business
+              models based on deep tech. We have been investing in Indian
+              companies for over 30 years and have a very solid understanding of
+              how to succeed while investing in India navigating through various
+              risks, most of them unique to India as an emerging market. The
+              funds that we manage cater to different risk and return profiles
+              and objectives of our investors. We have an edge over our peers
+              due to our deep research and disciplined approach to investing.
+              Our research team is extensively trained in our proprietary
+              research processes that we have developed and mostly automated. To
+              ensure full skin in the game our fund management team makes all
+              their public and private investments through the funds managed by
+              Piper Serica. We are a fund management company owned by its
+              management team. Our management company is majority owned by
+              women.
+            </p>
+
+            {/* <div className="col-lg-4">
+            
               <h2 className="section-title mt-5">
                 Unlocking differentiated growth opportunities across market
                 cycles
               </h2>
             </div>
             <div className="col-lg-7 offset-lg-1 mt-lg-0 mt-5">
-              <p className="para">
-                The Fund invests in early-stage companies that have developed a
-                proprietary deep IP / deep tech and is in the early stage of
-                commercialization. We are sector agnostic though our focus areas
-                are Spacetech, AI, advanced electronics, semicon design and
-                fintech. We like to invest in startups that are bringing a
-                significant degree of value to their customers. We need to see
-                some product market fit, even if early. Our ticket size is ₹10
-                crore. While we are happy to co-invest with another lead
-                investor there are instances where we are the lead or the sole
-                investor. Our decision-making process is fairly quick. We have a
-                very collaborative approach to investing and prefer to work with
-                multiple co-investors bringing different value to the startup.
-              </p>
-            </div>
+            
+            </div> */}
           </div>
         </div>
       </section>

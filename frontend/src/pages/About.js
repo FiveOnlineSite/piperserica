@@ -222,16 +222,57 @@ const About = () => {
             <div className="col-lg-3">
               <h2 className="section-title mt-lg-3 mt-4">We've come so far!</h2>
             </div>
-            <div className="col-lg-9 mt-lg-0 mt-5">
-              <p className="para">
-                Piper Serica has been built block by block with the vision of
-                being your guide in making informed investment decisions. Our
-                ability to cater to a diverse array of investors reflects our
-                design-thinking capability to create innovative client
-                experiences held together by an institutional framework. Your
-                investment journey in the 21st Century promises to be smooth
-                sailing and rewarding with us as your beacon of growth.
-              </p>
+            <div className="col-lg-8 offset-lg-1 offset-0 mt-lg-0 mt-5">
+              <div className="fund-content-div">
+                <div className="single-fund">
+                  <div>
+                    <span></span>
+                  </div>
+                  <p className="para">
+                    Piper Serica started operations in 2004.
+                  </p>
+                </div>
+
+                <div className="single-fund">
+                  <div>
+                    <span></span>
+                  </div>
+                  <p className="para">
+                    In 2015, Piper Serica received its first registration from
+                    the Securities and Exchange Board of India (SEBI) as a
+                    Registered Investment Advisor.
+                  </p>
+                </div>
+
+                <div className="single-fund">
+                  <div>
+                    <span></span>
+                  </div>
+                  <p className="para">
+                    In 2019, we received the registration from the Securities
+                    and Exchange Board of India (SEBI) for launching Portfolio
+                    Management Service (PMS).
+                  </p>
+                </div>
+                <div className="single-fund">
+                  <div>
+                    <span></span>
+                  </div>
+                  <p className="para">
+                    In 2020, Piper Serica launched its Foreign Portfolio
+                    Investor (FPI) Fund based in Mauritius.
+                  </p>
+                </div>
+                <div className="single-fund">
+                  <div>
+                    <span></span>
+                  </div>
+                  <p className="para">
+                    In 2022, launched Piper Serica Angel Fund, an early-stage VC
+                    fund registered with SEBI as a Category 1 AIF.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 

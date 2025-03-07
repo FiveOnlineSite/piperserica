@@ -56,16 +56,16 @@ const CompanyPortfolio = () => {
         "Founded in 2022, UnOrg is the first and only B2B managed Marketplace that is empowering street food vendors, Dhabas and sweets shops etc. The company operates a procurement platform intended to create a one-stop solution for street food vendors by offering a range of services including a large set of SKUs, timely slot delivery, discounts on all products, and other related services, enabling vendors to procure raw materials swiftly and systematically.",
       link: "https://unorg.in/",
     },
-    // {
-    //   id: 7,
-    //   src: "/images/industries/comp-8.png",
-    //   label: "AI & SAAS",
-    //   description:
-    //     "DesignX helps manufacturing companies with process discovery, modelling, monitoring & automation through RPA & IIOT to improve MSQCD (Morale, Safety, Quality, Cost & Delivery) on the shop floor.",
-    //   link: "https://designx.in/",
-    // },
     {
       id: 7,
+      src: "/images/industries/comp-7.png",
+      label: "AI & SAAS",
+      description:
+        "DesignX helps manufacturing companies with process discovery, modelling, monitoring & automation through RPA & IIOT to improve MSQCD (Morale, Safety, Quality, Cost & Delivery) on the shop floor.",
+      link: "https://designx.in/",
+    },
+    {
+      id: 8,
       src: "/images/industries/comp-8.png",
       label: "FINTECH",
       description:
@@ -73,7 +73,7 @@ const CompanyPortfolio = () => {
       link: "https://castler.com/",
     },
     {
-      id: 8,
+      id: 9,
       src: "/images/industries/comp-9 (2).png",
       label: "AI & SAAS",
       description:
@@ -81,15 +81,15 @@ const CompanyPortfolio = () => {
       link: "https://www.floworks.ai/",
     },
     {
-      id: 9,
+      id: 10,
       src: "/images/industries/comp-10.jpg",
-      label: "",
+      label: "CONSUMER TECH",
       description:
         "MyCaptain provides beginner to advanced Live & Online Cohort based courses in the fields of Business, Content, Design and Product. They help early professionals, young graduates and college students acquire skills and get jobs in New-age and aspirational careers.",
       link: "https://mycaptain.in/",
     },
     {
-      id: 10,
+      id: 11,
       src: "/images/industries/comp-11.png",
       label: "CONSUMER TECH",
       description:
@@ -97,7 +97,7 @@ const CompanyPortfolio = () => {
       link: "https://www.universityliving.com/",
     },
     {
-      id: 11,
+      id: 12,
       src: "/images/industries/comp-12.png",
       label: "FINTECH",
       description:
@@ -105,7 +105,7 @@ const CompanyPortfolio = () => {
       link: "https://agrosperity.com/#/home",
     },
     {
-      id: 12,
+      id: 13,
       src: "/images/industries/comp-13.png",
       label: "CYBER SECURITY & CHIP DESIGN",
       description:
@@ -113,7 +113,7 @@ const CompanyPortfolio = () => {
       link: "https://pantherun.com/",
     },
     {
-      id: 13,
+      id: 14,
       src: "/images/industries/comp-14-1.png",
       label: "ELECTRIC VEHICLE",
       description:
@@ -121,7 +121,7 @@ const CompanyPortfolio = () => {
       link: "https://www.evify.co.in/",
     },
     {
-      id: 14,
+      id: 15,
       src: "/images/industries/comp-15.png",
       label: "CYBER SECURITY & CHIP DESIGN",
       description:
@@ -129,48 +129,48 @@ const CompanyPortfolio = () => {
       link: "https://www.cleartrust.cc/",
     },
     {
-      id: 15,
-      src: "/images/industries/comp-16.jpg",
+      id: 16,
+      src: "/images/industries/comp-22.png",
       label: "FINTECH",
       description:
         "Flashaid - is an Insuretech company that provides customized and affordable embedded health insurance products through open integrated API.",
       link: "https://flashaid.in/",
     },
     {
-      id: 16,
-      src: "/images/industries/comp-17.png",
+      id: 17,
+      src: "/images/industries/comp-16.jpg",
       label: "FINTECH",
       description:
         "Freed - FREED is India’s 1st debt relief platform, empowering customers to regain their creditworthiness by resolving their overburdening and toxic debt.",
       link: "https://freed.care/",
     },
     {
-      id: 17,
-      src: "/images/industries/comp-18.jpg",
+      id: 18,
+      src: "/images/industries/comp-17.png",
       label: "CYBER SECURITY & CHIP DESIGN",
       description:
         "OTPLess provides identity as a service by building an essential identity infrastructure for merchants to make customer and employee identity/authentication easy and secure.",
       link: "https://otpless.com/",
     },
     {
-      id: 18,
-      src: "/images/industries/comp-19.jpg",
+      id: 19,
+      src: "/images/industries/comp-18.jpg",
       label: "ADVANCE ELECTRONIC",
       description:
         "Six Sense Mobility is a deep-tech mobility company that uses plug-and-play devices to transform regular vehicles into intelligent-connected vehicles.",
       link: "https://www.sixsensemobility.com/home",
     },
     {
-      id: 19,
-      src: "/images/industries/comp-20.png",
+      id: 20,
+      src: "/images/industries/comp-19.jpg",
       label: "FINTECH",
       description:
         "Swara Fincare is an RBI-registered NBFC dedicated to providing tailored credit solutions to rural and semi-urban regions. The company specializes in offering business and agricultural loans, empowering individuals and communities with financial support to foster economic growth and development.",
       link: "https://www.swarafincare.com/",
     },
     {
-      id: 20,
-      src: "/images/industries/comp-21.jpg",
+      id: 21,
+      src: "/images/industries/comp-20.png",
       label: "SPACETECH",
       description:
         "Astrogate Labs is a laser communication technology that simplifies and lowers the cost of data transmission across space, air, and terrestrial platforms.",
@@ -178,7 +178,7 @@ const CompanyPortfolio = () => {
     },
     {
       id: 22,
-      src: "/images/industries/industry8.png",
+      src: "/images/industries/comp-21.jpg",
       label: "FINTECH",
       description:
         "Rupeeflo is a fintech platform specifically designed for Non-Resident Indians (NRIs) to manage their financial needs seamlessly across borders through a comprehensive suite of banking and wealth management products.",
@@ -253,7 +253,7 @@ const CompanyPortfolio = () => {
             <div className="industries-div">
               <div className="row">
                 {getFilteredImages().map((images) => (
-                  <div key={images.id} className="col-lg-3 col-md-6 col-6">
+                  <div key={images.id} className="col-lg-3 col-md-4 col-4">
                     <div
                       className="industires-logo-div"
                       onClick={() => openModal(images)}

@@ -521,6 +521,10 @@ body {
   background-color: var(--white-bg);
 }
 
+.insights-section {
+  padding-bottom: 100px;
+}
+
 .investor-news-section {
   padding-bottom: 100px;
 }
@@ -1133,9 +1137,9 @@ body {
   line-height: 43px;
 }
 
-.investment-solution-section {
+/* .investment-solution-section {
   padding-top: 50px;
-}
+} */
 
 .investment-solution-content {
   padding-left: 20%;
@@ -1260,6 +1264,8 @@ body {
 
 .industires-logo-div .portfolio-img {
   mix-blend-mode: normal;
+  margin: 0;
+  padding: 0 20px;
 }
 /* 
 .industires-logo-div img {
