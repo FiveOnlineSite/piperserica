@@ -93,7 +93,7 @@ const Contact = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src={`${process.env.PUBLIC_URL}/images/banners/market-fund-banner.webp`}
+              src={`${process.env.PUBLIC_URL}/images/banners/contact-final.png`}
               alt="banner-img"
             />
 
