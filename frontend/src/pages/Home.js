@@ -100,9 +100,9 @@ const Home = () => {
                                 <i className="fa-solid fa-arrow-right"></i>
                               </div>
                               <p>
-                                As a founder-led company, we foster innovative
-                                ideas to build scalable businesses and personal
-                                legacies that have a collective global impact.
+                                Piper Serica is a long-only active equity asset
+                                manager that traverses various strategies of
+                                equity investment in India.
                               </p>
                             </div>
                           </NavLink>
@@ -122,8 +122,9 @@ const Home = () => {
                                 <i className="fa-solid fa-arrow-right"></i>
                               </div>
                               <p>
-                                We leverage our intellectual capital and
-                                resources to enhance entrepreneurial ecosystems.
+                                The Fund invests in early-stage companies that
+                                have developed a proprietary deep IP / deep tech
+                                and is in the early stage of commercialization.
                               </p>
                             </div>
                           </NavLink>
