@@ -2110,7 +2110,7 @@ form .form-label span {
     display: block !important;
   }
 
-  .offcanvas-header {
+  /* .offcanvas-header {
     position: relative;
     top: 0;
   }
@@ -2118,7 +2118,7 @@ form .form-label span {
   .offcanvas-body {
     position: relative;
     top: 2%;
-  }
+  } */
 
   .navbar-nav {
     align-items: start;

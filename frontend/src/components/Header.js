@@ -584,9 +584,7 @@ const Header = () => {
           >
             <span className="navbar-toggler-icon"></span>
           </button>
-          <div
-            className={`collapse navbar-collapse ${isMenuOpen ? "show" : ""}`}
-          >
+          <div className={` navbar-collapse ${isMenuOpen ? "show" : ""}`}>
             <ul className="navbar-nav mb-2 mb-lg-0 ">
               <li className="nav-item dropdown desktop-dropdown">
                 <NavLink
@@ -783,8 +781,14 @@ const Header = () => {
               ></button>
             </div>
             <div className="offcanvas-body">
-              <TopBar />
-              <ul className="navbar-nav justify-content-end flex-grow-1 pe-3 pt-5">
+              <div
+                className={`mobile-top-bar 
+               ${location.pathname === "/" ? "d-none" : "d-block"}`}
+              >
+                <TopBar />
+              </div>
+
+              <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li className="nav-item dropdown">
                   <NavLink
                     className="nav-link dropdown-toggle"
