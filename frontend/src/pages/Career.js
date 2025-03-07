@@ -197,7 +197,7 @@ const Career = () => {
         process.env.REACT_APP_CAREER_SERVICE_ID,
         process.env.REACT_APP_CAREER_TEMPLATE_ID,
         emailParams,
-        process.env.REACT_APP_EMAILJS_ID
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
         (response) => {

@@ -56,7 +56,7 @@ const Contact = () => {
         process.env.REACT_APP_CONTACT_SERVICE_ID,
         process.env.REACT_APP_CONTACT_TEMPLATE_ID,
         emailParams,
-        process.env.REACT_APP_EMAILJS_ID
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       )
       .then(
         (response) => {
