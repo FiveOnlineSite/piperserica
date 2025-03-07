@@ -9,7 +9,7 @@ const SubscribeLetter = () => {
   const [lastname, setLastname] = useState("");
   const [successModal, setSuccessModal] = useState(false);
 
-  console.log("Brevo API Key:", process.env.REACT_APP_BREVO_API_KEY);
+  // console.log("Brevo API Key:", process.env.REACT_APP_BREVO_API_KEY);
   const handleSubscribe = async (e) => {
     e.preventDefault();
 
