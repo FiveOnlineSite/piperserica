@@ -493,7 +493,11 @@ const NRIInvestor = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       <section className="our-offerings-section" id="offerings">
+=======
+      <section className="our-offerings-section">
+>>>>>>> 7ffb6283c90f11a5cf28906801d9509eed0cc99b
         <div className="container">
           <div className="row align-items-center">
             <h5 className="section-subtitle">Our Offerings</h5>
