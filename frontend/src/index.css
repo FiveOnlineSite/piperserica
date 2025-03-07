@@ -2218,7 +2218,8 @@ form .form-label span {
   }
 
   .investment-solution-content,
-  .tab-links {
+  .tab-links,
+  .investment-solution-section {
     padding-left: 0;
   }
 
@@ -2302,6 +2303,10 @@ form .form-label span {
 
   .footer-links .nav-item {
     padding: 0;
+  }
+
+  .tabs-content-div {
+    padding-top: 20px;
   }
 }
 
