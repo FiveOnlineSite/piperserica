@@ -143,21 +143,22 @@ const PublicFund = () => {
             <div className="col-lg-12">
               <div className="row">
                 <div className="col-lg-4">
-                  <div className="facts-div">
-                    <h2 className="facts-title">840+</h2>
-                    <h6 className="para">Investors</h6>
+                <div className="facts-div">
+                    <h2 className="facts-title">INR 400cr+</h2>
+                    <h6 className="para">AUM</h6>
                   </div>
                 </div>
                 <div className="col-lg-4 mt-lg-0 mt-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">INR 1250+</h2>
-                    <h6 className="para">Crore Asset Under Management</h6>
+                    <h2 className="facts-title">15%+</h2>
+                    <h6 className="para">CAGR</h6>
                   </div>
                 </div>
                 <div className="col-lg-4 mt-lg-0 mt-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">20%+</h2>
-                    <h6 className="para">CAGR over more than 9 years</h6>
+                    <h2 className="facts-title">20-22</h2>
+                    <h6 className="para">stocks</h6>
+                    {/* <p className="para">Figures as of 30th June 2024.</p> */}
                   </div>
                 </div>
               </div>
