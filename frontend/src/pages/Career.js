@@ -157,17 +157,14 @@ const Career = () => {
     if (resume) {
       const fileData = new FormData();
       fileData.append("file", resume);
-      fileData.append("upload_preset", "piperserica");
+      fileData.append("upload_preset", process.env.REACT_APP_PRESET_NAME);
       fileData.append("resource_type", "raw");
 
       try {
-        const response = await fetch(
-          "https://api.cloudinary.com/v1_1/dqpln4vod/raw/upload",
-          {
-            method: "POST",
-            body: fileData,
-          }
-        );
+        const response = await fetch(process.env.REACT_APP_CLOUDINARY_URL, {
+          method: "POST",
+          body: fileData,
+        });
         const data = await response.json();
         setFormData((prevData) => ({
           ...prevData,
@@ -197,10 +194,10 @@ const Career = () => {
 
     emailjs
       .send(
-        "service_1fyftx8",
-        "template_jy27emd",
+        process.env.REACT_APP_CAREER_SERVICE_ID,
+        process.env.REACT_APP_CAREER_TEMPLATE_ID,
         emailParams,
-        "hdyWkZtLGiur_O_Fb"
+        process.env.REACT_APP_EMAILJS_ID
       )
       .then(
         (response) => {
