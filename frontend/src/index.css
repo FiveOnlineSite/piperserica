@@ -521,10 +521,13 @@ body {
   background-color: var(--white-bg);
 }
 
+<<<<<<< HEAD
 .insights-section {
   padding-bottom: 100px;
 }
 
+=======
+>>>>>>> 7ffb6283c90f11a5cf28906801d9509eed0cc99b
 .investor-news-section {
   padding-bottom: 100px;
 }
@@ -1137,9 +1140,15 @@ body {
   line-height: 43px;
 }
 
+<<<<<<< HEAD
 /* .investment-solution-section {
   padding-top: 50px;
 } */
+=======
+.investment-solution-section {
+  padding-top: 50px;
+}
+>>>>>>> 7ffb6283c90f11a5cf28906801d9509eed0cc99b
 
 .investment-solution-content {
   padding-left: 20%;
@@ -1264,8 +1273,11 @@ body {
 
 .industires-logo-div .portfolio-img {
   mix-blend-mode: normal;
+<<<<<<< HEAD
   margin: 0;
   padding: 0 20px;
+=======
+>>>>>>> 7ffb6283c90f11a5cf28906801d9509eed0cc99b
 }
 /* 
 .industires-logo-div img {
