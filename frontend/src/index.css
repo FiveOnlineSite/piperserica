@@ -2110,6 +2110,16 @@ form .form-label span {
     display: block !important;
   }
 
+  .offcanvas-header {
+    position: relative;
+    top: 0;
+  }
+
+  .offcanvas-body {
+    position: relative;
+    top: 2%;
+  }
+
   .navbar-nav {
     align-items: start;
   }
@@ -2420,6 +2430,10 @@ form .form-label span {
   .investor-banner-content {
     height: 50vh;
     top: 50%;
+  }
+
+  .why-us-section {
+    margin-top: 0;
   }
 }
 
