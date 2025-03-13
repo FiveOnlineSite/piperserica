@@ -323,7 +323,10 @@ const InvestorLetter = () => {
           <div className="row">
             {filteredLetters.map((letter, index) => (
               <div className="col-lg-4 col-md-6 col-12" key={index}>
-                <NavLink to={letter.filepath} target="_blank">
+                <NavLink
+                  to={`${process.env.PUBLIC_URL}${letter.filepath}`}
+                  target="_blank"
+                >
                   <div className="letter-div mb-4">
                     <h5 className="section-subtitle">{letter.date}</h5>
                     <h3>

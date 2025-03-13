@@ -706,12 +706,17 @@ const Header = () => {
                     </NavLink>
                   </li> */}
                   <li>
+                    <NavLink className="dropdown-item" to="/investor-letters">
+                      Investor Letters
+                    </NavLink>
+                  </li>
+                  <li>
                     <NavLink className="dropdown-item" to="/news-article">
                       News Article
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink className="dropdown-item" to="/">
+                    <NavLink className="dropdown-item" to="/videos">
                       Videos
                     </NavLink>
                   </li>
@@ -922,7 +927,7 @@ const Header = () => {
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink className="dropdown-item" to="/">
+                      <NavLink className="dropdown-item" to="/videos">
                         Videos
                       </NavLink>
                     </li>

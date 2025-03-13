@@ -235,7 +235,7 @@ const Career = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src={`${process.env.PUBLIC_URL}/images/banners/career-final.png`}
+              src={`${process.env.PUBLIC_URL}/images/banners/Career.jpg`}
               alt="banner-img"
             />
 

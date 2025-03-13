@@ -93,7 +93,7 @@ const Contact = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src={`${process.env.PUBLIC_URL}/images/banners/contact-final.png`}
+              src={`${process.env.PUBLIC_URL}/images/banners/Contact.jpg`}
               alt="banner-img"
             />
 
@@ -216,10 +216,10 @@ const Contact = () => {
                             <i>
                               *By submitting the contact form, you consent to
                               all data in the form being used in accordance with
-                              <a href="#">
+                              <NavLink to="/privacy-policy">
                                 {" "}
                                 Piper Serics's data privacy policy
-                              </a>
+                              </NavLink>
                             </i>
                           </p>
                         </div>

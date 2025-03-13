@@ -9,7 +9,7 @@ const PrivateMarket = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src={`${process.env.PUBLIC_URL}/images/banners/market-fund-banner.webp`}
+              src={`${process.env.PUBLIC_URL}/images/banners/Private-Market.jpg`}
               alt="banner-img"
             />
 
@@ -62,12 +62,11 @@ const PrivateMarket = () => {
               <div className="tabs-content-div p-lg-5 p-md-5 p-4">
                 {/* <h3>Piper Serica Angel Fund</h3> */}
                 <p className="para small-para">
-                  Piper Serica Angel Fund, launched in 2022 with a ₹300 crore
-                  corpus, is a SEBI-registered Category 1 AIF. Focused on deep
-                  tech and IP-driven startups in Spacetech, AI, fintech, and
-                  semiconductors, it invests ₹10 crore per company, fostering
-                  innovation through a collaborative, fast-moving investment
-                  approach.
+                  We invest in early-stage deep tech startups with proprietary
+                  IP in Spacetech, AI, electronics, semiconductors, and fintech.
+                  We require early product-market fit, offer ₹10 crore tickets,
+                  and can lead or co-invest with fast decisions and
+                  collaborative partnerships.
                 </p>
 
                 <NavLink

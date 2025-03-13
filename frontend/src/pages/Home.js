@@ -25,7 +25,7 @@ const Home = () => {
         <div className="row">
           <div className="video-banner">
             <video
-              src={`${process.env.PUBLIC_URL}/videos/5726501-uhd_3840_2160_30fps.mp4`}
+              src={`${process.env.PUBLIC_URL}/videos/HomePageVideo3.1.mp4`}
               loop
               muted
               autoPlay
@@ -58,11 +58,11 @@ const Home = () => {
                                 <h5>Foreign Investor</h5>
                                 <i className="fa-solid fa-arrow-right"></i>
                               </div>
-                              <p>
+                              {/* <p>
                                 Piper Serica is a long-only active equity asset
                                 manager that traverses various strategies of
                                 equity investment in India.
-                              </p>
+                              </p> */}
                             </div>
                           </NavLink>
                         </div>
@@ -77,11 +77,11 @@ const Home = () => {
                                 <h5>NRI Investor</h5>
                                 <i className="fa-solid fa-arrow-right"></i>
                               </div>
-                              <p>
+                              {/* <p>
                                 Piper Serica is a long-only active equity asset
                                 manager that traverses various strategies of
                                 equity investment in India.
-                              </p>
+                              </p> */}
                             </div>
                           </NavLink>
                         </div>
@@ -99,11 +99,11 @@ const Home = () => {
                                 <h5>Family Office & Indian Investor</h5>
                                 <i className="fa-solid fa-arrow-right"></i>
                               </div>
-                              <p>
+                              {/* <p>
                                 Piper Serica is a long-only active equity asset
                                 manager that traverses various strategies of
                                 equity investment in India.
-                              </p>
+                              </p> */}
                             </div>
                           </NavLink>
                         </div>
@@ -121,11 +121,11 @@ const Home = () => {
                                 <h5>Startup Founder & Entrepreneur</h5>
                                 <i className="fa-solid fa-arrow-right"></i>
                               </div>
-                              <p>
+                              {/* <p>
                                 The Fund invests in early-stage companies that
                                 have developed a proprietary deep IP / deep tech
                                 and is in the early stage of commercialization.
-                              </p>
+                              </p> */}
                             </div>
                           </NavLink>
                         </div>

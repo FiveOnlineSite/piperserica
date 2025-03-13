@@ -17,7 +17,7 @@ const OurImpact = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src={`${process.env.PUBLIC_URL}/images/banners/our-impact-banner.webp`}
+              src={`${process.env.PUBLIC_URL}/images/banners/Our-Impact.jpg`}
               alt="banner-img"
             />
 
@@ -282,6 +282,139 @@ const OurImpact = () => {
                   </div>
                 </div>
               </div> */}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="investor-thesis-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-5">
+              <div className="feature-title-div">
+                {/* <h6 className="section-subtitle mb-4">Growth Strategy</h6> */}
+                <h3 className="section-title mb-lg-3 mb-4">
+                  Building Wealth & Bettering Lives
+                </h3>
+              </div>
+            </div>
+            <div className="col-lg-7 mt-lg-0 mt-4">
+              <div className="features-content-div">
+                <div className="single-feature">
+                  <div>
+                    <span></span>
+                  </div>
+                  <p className="para">
+                    {/* The Fund invests in early-stage companies that have
+                    developed a proprietary deep IP / deep tech and are in the
+                    early stage of commercialization. We are sector agnostic
+                    though our focus areas are Spacetech, AI, advanced
+                    electronics, semicon design and fintech. */}
+                    <strong>The Piper Serica Impact: </strong>
+                    At Piper Serica Advisors, our investment philosophy centers
+                    on creating sustainable value through companies that drive
+                    positive societal change. Our approach delivers measurable
+                    impact across multiple dimensions:
+                  </p>
+                </div>
+
+                <div className="single-feature">
+                  <div>
+                    <span></span>
+                  </div>
+                  <p className="para">
+                    {/* We like to invest in startups that are bringing a
+                    significant degree of value to their customers. We need to
+                    see some product market fit, even if early. Our ticket size
+                    is Rs. 10 crore. While we are happy to co-invest with
+                    another lead investor there are instances where we are the
+                    lead or the sole investor. */}
+                    <strong>Economic Impact: </strong>Our portfolio companies
+                    employed 277,000+ individuals in FY24, generating
+                    significant economic value through job creation, skill
+                    development, and improved livelihoods across diverse sectors
+                    and geographies.
+                  </p>
+                </div>
+                <div className="single-feature">
+                  <div>
+                    <span></span>
+                  </div>
+                  <p className="para">
+                    {/* We have a very collaborative approach to investing and
+                    prefer to work with multiple co-investors bringing different
+                    value to the startup. */}
+                    <strong>Social Responsibility:</strong> With CSR
+                    contributions exceeding ₹320 crore annually, our portfolio
+                    actively addresses critical societal needs through strategic
+                    initiatives in:
+                    <div className="single-feature single-subfeature mt-3 mb-0">
+                      <div>
+                        <span className="small-pointer"></span>
+                      </div>
+                      <p className="para small-para">
+                        Educational advancement programs
+                      </p>
+                    </div>
+                    <div className="single-feature single-subfeature mt-2 mb-0">
+                      <div>
+                        <span className="small-pointer"></span>
+                      </div>
+                      <p className="para small-para">
+                        Healthcare accessibility improvements
+                      </p>
+                    </div>
+                    <div className="single-feature single-subfeature mt-2 mb-0">
+                      <div>
+                        <span className="small-pointer"></span>
+                      </div>
+                      <p className="para small-para">
+                        Community infrastructure development
+                      </p>
+                    </div>
+                    <div className="single-feature single-subfeature mt-2 mb-0">
+                      <div>
+                        <span className="small-pointer"></span>
+                      </div>
+                      <p className="para small-para">
+                        Environmental sustainability projects
+                      </p>
+                    </div>
+                  </p>
+                </div>
+                <div className="single-feature">
+                  <div>
+                    <span></span>
+                  </div>
+                  <p className="para">
+                    <strong>Integrated Performance Framework:</strong>We
+                    rigorously evaluate potential investments through a dual
+                    lens of financial performance and social impact. This
+                    methodology ensures we build portfolios that deliver
+                    competitive returns while advancing meaningful progress on
+                    pressing societal challenges.
+                  </p>
+                </div>
+                <div className="single-feature">
+                  <div>
+                    <span></span>
+                  </div>
+                  <p className="para">
+                    <strong>Long-Term Vision:</strong> By partnering with
+                    businesses that balance profit with purpose, we are helping
+                    construct a financial ecosystem that supports inclusive
+                    growth, environmental stewardship, and shared prosperity for
+                    future generations.
+                  </p>
+                </div>
+                <div className="single-feature">
+                  <p className="para">
+                    At Piper Serica, we don't just manage investments—we
+                    catalyze transformation that benefits investors,
+                    communities, and society at large.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

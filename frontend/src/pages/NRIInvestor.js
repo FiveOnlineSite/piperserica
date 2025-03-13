@@ -112,7 +112,7 @@ const NRIInvestor = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src={`${process.env.PUBLIC_URL}/images/banners/62184b3cd78853ebf6106ba5_2560a237988ae07923f488781b91dfd7.webp`}
+              src={`${process.env.PUBLIC_URL}/images/banners/NRI-Investor.jpg`}
               alt="banner-img"
             />
 
@@ -498,7 +498,7 @@ const NRIInvestor = () => {
           <div className="row align-items-center">
             <h5 className="section-subtitle">Our Offerings</h5>
             <h2 className="banner-title offerings-title mt-3">
-              Innovative. Sustainable. Rewarding.
+              Knowledge. Wisdom. Wealth.
             </h2>
 
             {/* <h3 className="section-title my-lg-3 my-4">

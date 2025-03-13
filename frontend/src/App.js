@@ -21,6 +21,7 @@ import Startup from "./pages/Startup";
 import NRIInvestor from "./pages/NRIInvestor";
 import FamilyOffice from "./pages/FamilyOffice";
 import LeaderPortfolio from "./pages/LeaderPortfolio";
+import Videos from "./pages/Videos";
 
 function App() {
   return (
@@ -48,6 +49,8 @@ function App() {
           element={<PublicFund />}
         ></Route>
         <Route path="/news-article" element={<NewsArticle />}></Route>
+
+        <Route path="/videos" element={<Videos />}></Route>
         <Route path="/contact" element={<Contact />}></Route>
         <Route path="/blog-details" element={<BlogDetails />}></Route>
         <Route path="/disclaimer" element={<Disclaimer />}></Route>

@@ -135,7 +135,7 @@ const About = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src={`${process.env.PUBLIC_URL}/images/banners/market-fund-banner.webp`}
+              src={`${process.env.PUBLIC_URL}/images/banners/About.jpg`}
               alt="banner-img"
             />
 
@@ -836,10 +836,7 @@ const About = () => {
               </p>
 
               <h6 className="founders-name">
-                <em>
-                  - Shilpi Chowdhary, Group Chief Executive Officer, Lighthouse
-                  Canton
-                </em>
+                <em>- Abhay Agarwal, Founder & Fund Manager, Piper Serica</em>
               </h6>
             </div>
           </div>

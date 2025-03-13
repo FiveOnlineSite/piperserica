@@ -12,7 +12,7 @@ const Funds = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src={`${process.env.PUBLIC_URL}/images/banners/market-fund-banner.webp`}
+              src={`${process.env.PUBLIC_URL}/images/banners/angel-fund.jpeg`}
               alt="banner-img"
             />
 
@@ -32,15 +32,18 @@ const Funds = () => {
           <div className="row align-items-center">
             <div className="about-fund-div">
               <h6 className="section-subtitle mb-4">
-                about Piper Serica Angel Fund
+                About Piper Serica Angel Fund
               </h6>
               <p className="para">
-                Piper Serica Angel Fund was launched in 2022 as its first
-                venture capital fund by Piper Serica. The fund has a corpus of
-                Rs. 300 crore. It is registered with SEBI as a Category 1 AIF.
-                The Fund has a life of 10 years extendable by another 2 years.
-                It can invest in companies that follow the DPIT definition of a
-                startup. The Fund is closed for new subscriptions.
+                Piper Serica Angel Fund, launched in 2022 with a ₹300 crore
+                corpus, is a SEBI-registered Category 1 AIF. It invests in
+                early-stage startups with proprietary deep tech or IP, focusing
+                on Spacetech, AI, advanced electronics, semiconductor design,
+                and fintech. The fund seeks startups with early product-market
+                fit and significant customer value. The fund’s ticket size is up
+                to ₹10 crore, with flexibility to co-invest or co-lead. With
+                swift decision making, the fund follows a collaborative
+                investment approach.
               </p>
             </div>
           </div>
@@ -54,25 +57,26 @@ const Funds = () => {
               <div className="row">
                 <div className="col-lg-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">35</h2>
+                    <h2 className="facts-title">22</h2>
                     <h6 className="para">Companies</h6>
                   </div>
                 </div>
                 <div className="col-lg-4 mt-lg-0 mt-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">₹350 Cr</h2>
+                    <h2 className="facts-title">INR 300 Cr</h2>
                     <h6 className="para">Fund Size</h6>
                   </div>
                 </div>
                 <div className="col-lg-4 mt-lg-0 mt-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">₹344.75 Cr</h2>
-                    <h6 className="para">Called in Capital</h6>
+                    <h2 className="facts-title">000</h2>
+                    <h6 className="para">MOIC</h6>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <h5>Figures as of 28 Feb 2025.</h5>
         </div>
       </section>
 
@@ -81,7 +85,7 @@ const Funds = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="feature-title-div">
-                <h6 className="section-subtitle mb-4">features</h6>
+                {/* <h6 className="section-subtitle mb-4">features</h6> */}
                 <h3 className="section-title mb-lg-3 mb-4">Why This Fund</h3>
               </div>
             </div>
@@ -136,8 +140,10 @@ const Funds = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="feature-title-div">
-                <h6 className="section-subtitle mb-4">Growth Strategy</h6>
-                <h3 className="section-title mb-lg-3 mb-4">Investor Thesis</h3>
+                {/* <h6 className="section-subtitle mb-4">Growth Strategy</h6> */}
+                <h3 className="section-title mb-lg-3 mb-4">
+                  Investment Thesis and Approach
+                </h3>
               </div>
             </div>
             <div className="col-lg-7 mt-lg-0 mt-4">
@@ -147,11 +153,30 @@ const Funds = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                    The Fund invests in early-stage companies that have
+                    {/* The Fund invests in early-stage companies that have
                     developed a proprietary deep IP / deep tech and are in the
                     early stage of commercialization. We are sector agnostic
                     though our focus areas are Spacetech, AI, advanced
-                    electronics, semicon design and fintech.
+                    electronics, semicon design and fintech. */}
+                    <strong>Focus on Early-Stage Startups</strong>
+                    <div className="single-feature single-subfeature mt-3 mb-0">
+                      <div>
+                        <span className="small-pointer"></span>
+                      </div>
+                      <p className="para small-para">
+                        Invests in startups with proprietary deep tech or
+                        intellectual property (IP).
+                      </p>
+                    </div>
+                    <div className="single-feature single-subfeature mt-2 mb-0">
+                      <div>
+                        <span className="small-pointer"></span>
+                      </div>
+                      <p className="para small-para">
+                        Target companies in the early stages of
+                        commercialization.
+                      </p>
+                    </div>
                   </p>
                 </div>
 
@@ -160,12 +185,50 @@ const Funds = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                    We like to invest in startups that are bringing a
+                    {/* We like to invest in startups that are bringing a
                     significant degree of value to their customers. We need to
                     see some product market fit, even if early. Our ticket size
                     is Rs. 10 crore. While we are happy to co-invest with
                     another lead investor there are instances where we are the
-                    lead or the sole investor.
+                    lead or the sole investor. */}
+                    <strong>Sector-Agnostic with Key Focus Areas: </strong>{" "}
+                    While open to various industries, the fund prioritizes
+                    <div className="single-feature single-subfeature mt-3 mb-0">
+                      <div>
+                        <span className="small-pointer"></span>
+                      </div>
+                      <p className="para small-para">Fintech</p>
+                    </div>
+                    <div className="single-feature single-subfeature mt-2 mb-0">
+                      <div>
+                        <span className="small-pointer"></span>
+                      </div>
+                      <p className="para small-para">Spacetech</p>
+                    </div>
+                    <div className="single-feature single-subfeature mt-2 mb-0">
+                      <div>
+                        <span className="small-pointer"></span>
+                      </div>
+                      <p className="para small-para">Advanced Electronics</p>
+                    </div>
+                    <div className="single-feature single-subfeature mt-2 mb-0">
+                      <div>
+                        <span className="small-pointer"></span>
+                      </div>
+                      <p className="para small-para">Cybersecurity</p>
+                    </div>
+                    <div className="single-feature single-subfeature mt-2 mb-0">
+                      <div>
+                        <span className="small-pointer"></span>
+                      </div>
+                      <p className="para small-para">EV</p>
+                    </div>
+                    <div className="single-feature single-subfeature mt-2 mb-0">
+                      <div>
+                        <span className="small-pointer"></span>
+                      </div>
+                      <p className="para small-para">Semiconductor Design</p>
+                    </div>
                   </p>
                 </div>
 
@@ -184,9 +247,119 @@ const Funds = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                    We have a very collaborative approach to investing and
+                    {/* We have a very collaborative approach to investing and
                     prefer to work with multiple co-investors bringing different
-                    value to the startup.
+                    value to the startup. */}
+                    <strong>Investment Criteria: </strong>Startups delivering
+                    significant value to customers.
+                    <div className="single-feature single-subfeature mt-3 mb-0">
+                      <div>
+                        <span className="small-pointer"></span>
+                      </div>
+                      <p className="para small-para">
+                        Right product-market fit, even at an early stage.
+                      </p>
+                    </div>
+                    <div className="single-feature single-subfeature mt-2 mb-0">
+                      <div>
+                        <span className="small-pointer"></span>
+                      </div>
+                      <p className="para small-para">
+                        Typical investment ticket size is INR 6-10 crore.
+                      </p>
+                    </div>
+                  </p>
+                </div>
+                <div className="single-feature">
+                  <div>
+                    <span></span>
+                  </div>
+                  <p className="para">
+                    {/* We have a very collaborative approach to investing and
+                    prefer to work with multiple co-investors bringing different
+                    value to the startup. */}
+                    <strong>Flexible Investment Strategy: </strong>
+                    <div className="single-feature single-subfeature mt-3 mb-0">
+                      <div>
+                        <span className="small-pointer"></span>
+                      </div>
+                      <p className="para small-para">
+                        Open to co-investing with other lead investors.
+                      </p>
+                    </div>
+                    <div className="single-feature single-subfeature mt-2 mb-0">
+                      <div>
+                        <span className="small-pointer"></span>
+                      </div>
+                      <p className="para small-para">
+                        Can also act as the lead based on the thesis and founder
+                        fit.
+                      </p>
+                    </div>
+                  </p>
+                </div>
+                <div className="single-feature">
+                  <div>
+                    <span></span>
+                  </div>
+                  <p className="para">
+                    {/* We have a very collaborative approach to investing and
+                    prefer to work with multiple co-investors bringing different
+                    value to the startup. */}
+                    <strong>Swift and Data-Driven Decision-Making: </strong>
+                    <div className="single-feature single-subfeature mt-3 mb-0">
+                      <div>
+                        <span className="small-pointer"></span>
+                      </div>
+                      <p className="para small-para">
+                        Investment decisions are made efficiently and quickly.
+                      </p>
+                    </div>
+                    <div className="single-feature single-subfeature mt-2 mb-0">
+                      <div>
+                        <span className="small-pointer"></span>
+                      </div>
+                      <p className="para small-para">
+                        Utilizes proprietary AI tool Yoda.ai to filter and
+                        evaluate investment opportunities.
+                      </p>
+                    </div>
+                  </p>
+                </div>
+                <div className="single-feature">
+                  <div>
+                    <span></span>
+                  </div>
+                  <p className="para">
+                    {/* We have a very collaborative approach to investing and
+                    prefer to work with multiple co-investors bringing different
+                    value to the startup. */}
+                    <strong>Collaborative Investment Philosophy: </strong>
+                    <div className="single-feature single-subfeature mt-3 mb-0">
+                      <div>
+                        <span className="small-pointer"></span>
+                      </div>
+                      <p className="para small-para">
+                        Prefers a partnership-driven approach, working with
+                        multiple co-investors.
+                      </p>
+                    </div>
+                    <div className="single-feature single-subfeature mt-2 mb-0">
+                      <div>
+                        <span className="small-pointer"></span>
+                      </div>
+                      <p className="para small-para">
+                        Encourages co-investors who bring diverse value to the
+                        startup ecosystem.
+                      </p>
+                    </div>
+                  </p>
+                </div>
+                <div className="single-feature">
+                  <p className="para">
+                    This structured approach ensures exceptional investments in
+                    high-potential startups while fostering innovation and
+                    growth across key industries.
                   </p>
                 </div>
               </div>

@@ -332,7 +332,7 @@ body {
 }
 
 .banner-contents .content-div:hover .content-para {
-  top: 10%;
+  top: 30%;
   display: block;
   width: 100%;
 }
@@ -550,6 +550,21 @@ body {
   font-weight: 500;
   line-height: 60px;
   color: var(--blue-font);
+}
+
+.facts-small {
+  font-size: 12px;
+  line-height: 22px;
+  font-family: "Public Sans", serif;
+  color: var(--gray-font);
+}
+
+.facts-section h5 {
+  font-size: 15px;
+  line-height: 25px;
+  font-family: "Public Sans", serif;
+  margin-top: 20px;
+  color: var(--gray-font);
 }
 
 /* WHY US */
@@ -1104,6 +1119,7 @@ body {
   background-color: var(--lighter-gray-bg);
   filter: brightness(1);
   margin-bottom: 50px;
+  height: 50vh;
 }
 
 .other-banner-content-div .banner-title {
@@ -1386,6 +1402,16 @@ body {
   display: inline-block;
   margin-right: 20px;
   transform: rotate(45deg);
+}
+
+.single-feature.single-subfeature:last-child {
+  border-bottom: none;
+}
+
+.single-feature.single-subfeature .small-pointer {
+  height: 8px;
+  width: 8px;
+  transform: rotate(0);
 }
 
 .sticky-contact-section {
@@ -1721,6 +1747,9 @@ body {
   padding: 0;
 }
 
+.insights-section a {
+  text-decoration: none;
+}
 /* CONTACT */
 
 .contact-form-section {
@@ -2318,6 +2347,11 @@ form .form-label span {
   .tabs-content-div {
     /* padding-top: 20px; */
     padding: 20px 40px 0 40px;
+  }
+
+  .col-lg-3:hover .content-div-title h2,
+  .col-lg-3:hover .content-div-title i {
+    color: var(--blue-font);
   }
 }
 

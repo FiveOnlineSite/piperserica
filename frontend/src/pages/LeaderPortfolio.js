@@ -82,7 +82,7 @@ const LeaderPortfolio = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src={`${process.env.PUBLIC_URL}/images/banners/market-fund-banner.webp`}
+              src={`${process.env.PUBLIC_URL}/images/banners/Leader-Portfolio-(PMS).jpg`}
               alt="banner-img"
             />
 
@@ -102,24 +102,33 @@ const LeaderPortfolio = () => {
           <div className="row align-items-center">
             <div className="about-fund-div">
               <h6 className="section-subtitle mb-4">
-                about Piper Serica Numero Uno Fund
+                About Piper Serica Leader Portfolio
               </h6>
               <p className="para">
-                Piper Serica Leader Portfolio is a multi-cap Portfolio
-                Management Service (PMS) designed to harness India’s structural
-                growth opportunities. Managed by a seasoned team, it blends
-                growth and value investing, focusing on high-quality businesses
-                at fair valuations. A rigorous research-driven approach ensures
-                optimal stock selection, while disciplined risk management
-                safeguards capital. With a strong emphasis on long-term wealth
-                creation and consistent alpha generation, this strategy is ideal
-                for investors seeking superior risk-adjusted returns across
-                market cycles.
+                A multi-cap portfolio capturing India's structural growth
+                opportunities through on-ground, fundamental research across
+                market capitalizations. Our approach synthesizes growth and
+                value principles, utilizing proprietary frameworks to identify
+                quality businesses at rational valuations.
+              </p>
+              <p className="para">
+                Our investment framework integrates comprehensive financial
+                analysis, management quality assessment, and competitive
+                positioning evaluation. The portfolio employs sophisticated risk
+                management through position sizing and sector allocation
+                parameters, preserving capital while positioning for
+                appreciation.
+              </p>
+              <p className="para">
+                Designed for sophisticated investors seeking superior
+                risk-adjusted returns across market cycles through disciplined
+                execution and consistent alpha generation.
               </p>
 
               <div>
                 <NavLink
-                  to="/investor-letters"
+                  to={`${process.env.PUBLIC_URL}/docs/PMS-Factsheet-Feb-2025.pdf`}
+                  target="_blank"
                   className="banner-btn blue-btn tabs-btn mt-lg-4 mt-md-4 mt-4 me-lg-4 me-md-4 me-4"
                 >
                   Factsheet
@@ -128,7 +137,8 @@ const LeaderPortfolio = () => {
 
               <div>
                 <NavLink
-                  to="/investor-letters"
+                  to={`${process.env.PUBLIC_URL}/docs/PMS-PPT-Mar-2025.pdf`}
+                  target="_blank"
                   className="banner-btn blue-btn tabs-btn mt-lg-4 mt-md-4 mt-4"
                 >
                   Presentation
@@ -146,23 +156,25 @@ const LeaderPortfolio = () => {
               <div className="row">
                 <div className="col-lg-4 mt-lg-0 mt-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">INR 760 cr+ </h2>
-                    <h6 className="para">AUM</h6>
+                    <h2 className="facts-title">INR 800 Cr+ </h2>
+                    <h6 className="para">Assets </h6>
                   </div>
                 </div>
                 <div className="col-lg-4 mt-lg-0 mt-4">
                   <div className="facts-div">
                     <h2 className="facts-title">17%</h2>
                     <h6 className="para">CAGR</h6>
+                    <p className="facts-small">(Since Inception May 2020)</p>
                   </div>
                 </div>
                 <div className="col-lg-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">&lt;25x</h2>
-                    <h6 className="para">P/E</h6>
+                    <h2 className="facts-title">20-22 </h2>
+                    <h6 className="para">Stocks</h6>
                   </div>
                 </div>
               </div>
+              <h5>Figures as of Feb 2025.</h5>
             </div>
           </div>
         </div>
@@ -173,8 +185,10 @@ const LeaderPortfolio = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="investment-philosophy-title-div">
-                <h6 className="section-subtitle mb-4">Investment philosophy</h6>
-                <h3 className="section-title mb-lg-3 mb-4">Our Approach</h3>
+                {/* <h6 className="section-subtitle mb-4">Investment philosophy</h6> */}
+                <h3 className="section-title mb-lg-3 mb-4">
+                  Investment Framework
+                </h3>
               </div>
             </div>
             <div className="col-lg-7 mt-lg-0 mt-4">
@@ -183,10 +197,12 @@ const LeaderPortfolio = () => {
                   <span></span>
                 </div>
                 <p className="para">
-                  <strong>Capitalizing on India’s Growth Story</strong> We
-                  invest in businesses that benefit from India’s young
-                  population, rising middle class, digital transformation, and
-                  structural economic reforms.
+                  <strong>Multi-Cap Investment Approach: </strong> Our multi-cap
+                  strategy targets quality businesses across market
+                  capitalizations, balancing established large-caps with
+                  high-potential mid and small-caps. We prioritize companies
+                  with strong fundamentals, sustainable competitive advantages,
+                  and clear growth pathways.
                 </p>
               </div>
               <div className="single-feature">
@@ -194,9 +210,12 @@ const LeaderPortfolio = () => {
                   <span></span>
                 </div>
                 <p className="para">
-                  <strong>Expert-Led Strategy</strong> We have an experienced
-                  equity team with a proven track record of delivering superior
-                  returns.
+                  <strong>Valuation Discipline: </strong> We employ a rigorous
+                  valuation methodology identifying fundamentally sound
+                  enterprises at attractive valuations relative to intrinsic
+                  worth. Our approach combines DCF analysis with comparative
+                  metrics to identify value opportunities while preserving
+                  capital.
                 </p>
               </div>
               <div className="single-feature">
@@ -204,9 +223,11 @@ const LeaderPortfolio = () => {
                   <span></span>
                 </div>
                 <p className="para">
-                  <strong>Balanced Growth and Value Investing</strong> Our
-                  strategy blends high-growth opportunities with fair valuations
-                  to maximize returns across market cycles.
+                  <strong>Proprietary Research Process: </strong> Our investment
+                  decisions are supported by comprehensive research including
+                  management engagement, financial analysis focused on cash flow
+                  and capital efficiency, governance assessment, and competitive
+                  positioning evaluation.
                 </p>
               </div>
               <div className="single-feature">
@@ -214,9 +235,10 @@ const LeaderPortfolio = () => {
                   <span></span>
                 </div>
                 <p className="para">
-                  <strong>Rigorous Stock Selection</strong> Every stock
-                  undergoes meticulous research, combining qualitative and
-                  quantitative screening to identify future leaders.
+                  <strong>Risk Management Framework: </strong> Our disciplined
+                  risk controls include 6% maximum per security allocation, 25%
+                  sector concentration limits, seven-day liquidity requirements,
+                  and continuous risk monitoring through proprietary models.
                 </p>
               </div>
               <div className="single-feature">
@@ -224,9 +246,11 @@ const LeaderPortfolio = () => {
                   <span></span>
                 </div>
                 <p className="para">
-                  <strong>Consistent Alpha with Risk Management</strong> A
-                  disciplined framework ensures long-term wealth creation while
-                  protecting capital during market volatility.
+                  <strong>Dynamic Portfolio Rebalancing: </strong> We implement
+                  systematic rebalancing based on valuation parameters and
+                  evolving risk profiles, enabling tactical adjustments while
+                  maintaining sectoral diversification aligned with India's
+                  economic landscape.
                 </p>
               </div>
             </div>
@@ -239,13 +263,27 @@ const LeaderPortfolio = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="feature-title-div">
-                <h6 className="section-subtitle mb-4">features</h6>
-                <h3 className="section-title mb-lg-3 mb-4">Why This Fund</h3>
+                {/* <h6 className="section-subtitle mb-4">features</h6> */}
+                <h3 className="section-title mb-lg-3 mb-4">
+                  Value Proposition
+                </h3>
               </div>
             </div>
             <div className="col-lg-7 mt-lg-0 mt-4">
               <div className="features-content-div">
-                <div className="single-feature">
+                <p className="para">
+                  We focus on generating consistent returns by capitalizing on
+                  India's structural growth opportunities while maintaining
+                  prudent risk parameters. This balanced approach provides
+                  investors with the potential for substantial wealth
+                  accumulation over long time horizons, effectively navigating
+                  market volatility while capturing the momentum of India's
+                  economic expansion. Our disciplined execution enables
+                  investors to participate in India's compelling growth
+                  narrative through a professionally managed investment vehicle
+                  with institutional-grade oversight and compliance.
+                </p>
+                {/* <div className="single-feature">
                   <div>
                     <span></span>
                   </div>
@@ -304,7 +342,7 @@ const LeaderPortfolio = () => {
                     <strong>optimize returns while mitigating risks</strong>,
                     ensuring long-term wealth creation for investors.
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

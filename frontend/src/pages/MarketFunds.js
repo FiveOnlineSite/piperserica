@@ -30,7 +30,7 @@ const MarketFunds = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src={`${process.env.PUBLIC_URL}/images/banners/market-fund-banner.webp`}
+              src={`${process.env.PUBLIC_URL}/images/banners/Public-Market.jpg`}
               alt="banner-img"
             />
 
@@ -61,9 +61,7 @@ const MarketFunds = () => {
           <div className="col-lg-5">
             <div className="container">
               <div className="investment-solution-content">
-                <h6 className="section-subtitle mt-5">
-                  Foreign Portfolio Investment (FPI)
-                </h6>
+                <h6 className="section-subtitle mt-5">Offshore Fund</h6>
                 <h2 className="section-title small-section-title mt-lg-3 mt-4">
                   Piper Serica Numero Uno India Fund
                 </h2>
@@ -88,11 +86,11 @@ const MarketFunds = () => {
               <div className="tabs-content-div p-lg-5 p-md-5 p-4 pb-5">
                 {/* <h3>Tailored and optimized portfolio allocation</h3> */}
                 <p className="para small-para">
-                  Piper Serica Numero Uno India Fund is a Foreign Portfolio
-                  Investor (FPI) fund, offering global investors access to
-                  India’s high-growth equity markets. With a multi-cap strategy,
-                  disciplined risk management, and deep research, the fund aims
-                  to deliver consistent alpha and long-term wealth creation.
+                  Piper Serica Numero Uno India Fund is an offshore fund,
+                  offering global investors access to India’s high-growth equity
+                  markets. With a multi-cap strategy, disciplined risk
+                  management, and deep research, the fund aims to deliver
+                  consistent alpha and long-term wealth creation.
                 </p>
 
                 <NavLink
@@ -139,8 +137,8 @@ const MarketFunds = () => {
                 {/* <h3>Finding the best fit for your requirements</h3> */}
                 <p className="para small-para">
                   Piper Serica Leader Portfolio is a multi-cap PMS strategy
-                  designed to capitalize on India’s growth story. With a blend
-                  of growth and value investing, rigorous research, and
+                  designed to capitalize on India’s growth story. With a focus
+                  on growth at reasonable price, rigorous research, and
                   disciplined risk management, it aims to deliver consistent
                   alpha and long-term wealth creation for investors.
                 </p>

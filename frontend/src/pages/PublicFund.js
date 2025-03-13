@@ -82,7 +82,7 @@ const PublicFund = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src={`${process.env.PUBLIC_URL}/images/banners/market-fund-banner.webp`}
+              src={`${process.env.PUBLIC_URL}/images/banners/Nemero-Uno-(FPI).jpg`}
               alt="banner-img"
             />
 
@@ -102,22 +102,21 @@ const PublicFund = () => {
           <div className="row align-items-center">
             <div className="about-fund-div">
               <h6 className="section-subtitle mb-4">
-                about Piper Serica Numero Uno Fund
+                Investment Gateway to India's High-Growth Market
               </h6>
               <p className="para">
-              Piper Serica Numero Uno India Fund is a Foreign Portfolio Investor (FPI) 
-              fund designed to provide global investors seamless access to India’s 
-              dynamic equity markets. Following the same strategy as our PMS, the 
-              fund combines growth and value investing, rigorous research, and 
-              disciplined risk management to identify high-quality businesses with 
-              strong fundamentals. With a multi-cap approach and a focus on fair 
-              valuations, the fund aims to generate consistent alpha, ensuring 
-              long-term wealth creation while mitigating market risks.
+                Piper Serica Numero Uno India Fund offers global investors a
+                sophisticated platform to India's vibrant equity landscape
+                through an offshore fund structure. The fund maintains alignment
+                with our established Portfolio Management Service, delivering a
+                carefully calibrated investment approach focused on sustainable
+                performance.
               </p>
 
               <div>
                 <NavLink
-                  to="/investor-letters"
+                  to={`${process.env.PUBLIC_URL}/docs/FPI-Factsheet-February2025.pdf`}
+                  target="_blank"
                   className="banner-btn blue-btn tabs-btn mt-lg-4 mt-md-4 mt-4 me-lg-4 me-md-4 me-4 "
                 >
                   Factsheet
@@ -126,7 +125,8 @@ const PublicFund = () => {
 
               <div>
                 <NavLink
-                  to="/investor-letters"
+                  to={`${process.env.PUBLIC_URL}/docs/FPI-PPT-Mar-2025.pdf`}
+                  target="_blank"
                   className="banner-btn blue-btn tabs-btn mt-lg-4 mt-md-4 mt-4"
                 >
                   Presentation
@@ -143,25 +143,28 @@ const PublicFund = () => {
             <div className="col-lg-12">
               <div className="row">
                 <div className="col-lg-4">
-                <div className="facts-div">
-                    <h2 className="facts-title">INR 400cr+</h2>
-                    <h6 className="para">AUM</h6>
+                  <div className="facts-div">
+                    <h2 className="facts-title">USD 25 Million+</h2>
+                    <h6 className="para">Assets</h6>
                   </div>
                 </div>
                 <div className="col-lg-4 mt-lg-0 mt-4">
                   <div className="facts-div">
                     <h2 className="facts-title">15%+</h2>
                     <h6 className="para">CAGR</h6>
+                    <p className="facts-small">(Since Inception May 2020)</p>
                   </div>
                 </div>
                 <div className="col-lg-4 mt-lg-0 mt-4">
                   <div className="facts-div">
                     <h2 className="facts-title">20-22</h2>
-                    <h6 className="para">stocks</h6>
+                    <h6 className="para">Stocks</h6>
                     {/* <p className="para">Figures as of 30th June 2024.</p> */}
                   </div>
                 </div>
               </div>
+
+              <h5>Figures as of 28 Feb 2025.</h5>
             </div>
           </div>
         </div>
@@ -172,8 +175,10 @@ const PublicFund = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="investment-philosophy-title-div">
-                <h6 className="section-subtitle mb-4">Investment philosophy</h6>
-                <h3 className="section-title mb-lg-3 mb-4">Our Approach</h3>
+                {/* <h6 className="section-subtitle mb-4">Investment philosophy</h6> */}
+                <h3 className="section-title mb-lg-3 mb-4">
+                  Investment Framework
+                </h3>
               </div>
             </div>
             <div className="col-lg-7 mt-lg-0 mt-4">
@@ -182,10 +187,12 @@ const PublicFund = () => {
                   <span></span>
                 </div>
                 <p className="para">
-                  <strong>Unlocking the India Opportunity</strong> by investing
-                  in high-growth sectors benefiting from India’s economic
-                  transformation, rising consumption, and structural market
-                  shifts.
+                  <strong>Multi-Cap Investment Approach: </strong> Our multi-cap
+                  strategy targets quality businesses across market
+                  capitalizations, balancing established large-caps with
+                  high-potential mid and small-caps. We prioritize companies
+                  with strong fundamentals, sustainable competitive advantages,
+                  and clear growth pathways.
                 </p>
               </div>
               <div className="single-feature">
@@ -193,9 +200,12 @@ const PublicFund = () => {
                   <span></span>
                 </div>
                 <p className="para">
-                  <strong>Leveraging Expert-Led Strategy</strong> with a
-                  seasoned equity team that combines deep market insights and
-                  disciplined execution to drive sustainable returns.
+                  <strong>Valuation Discipline: </strong> We employ a rigorous
+                  valuation methodology identifying fundamentally sound
+                  enterprises at attractive valuations relative to intrinsic
+                  worth. Our approach combines DCF analysis with comparative
+                  metrics to identify value opportunities while preserving
+                  capital.
                 </p>
               </div>
               <div className="single-feature">
@@ -203,9 +213,11 @@ const PublicFund = () => {
                   <span></span>
                 </div>
                 <p className="para">
-                  <strong>Balancing Growth and Value Investing</strong> through
-                  a flexible approach that optimizes performance across
-                  different market cycles.
+                  <strong>Proprietary Research Process: </strong> Our investment
+                  decisions are supported by comprehensive research including
+                  management engagement, financial analysis focused on cash flow
+                  and capital efficiency, governance assessment, and competitive
+                  positioning evaluation.
                 </p>
               </div>
               <div className="single-feature">
@@ -213,9 +225,10 @@ const PublicFund = () => {
                   <span></span>
                 </div>
                 <p className="para">
-                  <strong>Conducting Meticulous Stock Selection</strong> using
-                  rigorous screening processes that blend qualitative and
-                  quantitative analysis to identify future market leaders.
+                  <strong>Risk Management Framework: </strong> Our disciplined
+                  risk controls include 6% maximum per security allocation, 25%
+                  sector concentration limits, seven-day liquidity requirements,
+                  and continuous risk monitoring through proprietary models.
                 </p>
               </div>
               <div className="single-feature">
@@ -223,11 +236,11 @@ const PublicFund = () => {
                   <span></span>
                 </div>
                 <p className="para">
-                  <strong>
-                    Ensuring a Resilient and Alpha-Driven Portfolio
-                  </strong>{" "}
-                  with a structured investment framework designed to outperform
-                  while mitigating risks in volatile market conditions.
+                  <strong>Dynamic Portfolio Rebalancing: </strong>We implement
+                  systematic rebalancing based on valuation parameters and
+                  evolving risk profiles, enabling tactical adjustments while
+                  maintaining sectoral diversification aligned with India's
+                  economic landscape.
                 </p>
               </div>
             </div>
@@ -240,13 +253,15 @@ const PublicFund = () => {
           <div className="row">
             <div className="col-lg-5">
               <div className="feature-title-div">
-                <h6 className="section-subtitle mb-4">features</h6>
-                <h3 className="section-title mb-lg-3 mb-4">Why This Fund</h3>
+                {/* <h6 className="section-subtitle mb-4">features</h6> */}
+                <h3 className="section-title mb-lg-3 mb-4">
+                  Value Proposition
+                </h3>
               </div>
             </div>
             <div className="col-lg-7 mt-lg-0 mt-4">
               <div className="features-content-div">
-                <div className="single-feature">
+                {/* <div className="single-feature">
                   <div>
                     <span></span>
                   </div>
@@ -263,7 +278,10 @@ const PublicFund = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                    <strong>Focus on Fair Valuations </strong>by investing in fundamentally strong businesses trading at attractive prices, leveraging deep research and a long-term perspective.
+                    <strong>Focus on Fair Valuations </strong>by investing in
+                    fundamentally strong businesses trading at attractive
+                    prices, leveraging deep research and a long-term
+                    perspective.
                   </p>
                 </div>
 
@@ -272,7 +290,10 @@ const PublicFund = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                  <strong>Robust Research and Due Diligence</strong> involving engagement with key stakeholders, in-depth financial analysis, and assessment of management quality and governance standards.
+                    <strong>Robust Research and Due Diligence</strong> involving
+                    engagement with key stakeholders, in-depth financial
+                    analysis, and assessment of management quality and
+                    governance standards.
                   </p>
                 </div>
                 <div className="single-feature">
@@ -280,7 +301,10 @@ const PublicFund = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                  <strong>Strategic Risk Management Framework</strong> that limits exposure with a maximum of 6% allocation per stock, 25% per sector, and ensures liquidity to exit holdings within seven trading days.
+                    <strong>Strategic Risk Management Framework</strong> that
+                    limits exposure with a maximum of 6% allocation per stock,
+                    25% per sector, and ensures liquidity to exit holdings
+                    within seven trading days.
                   </p>
                 </div>
                 <div className="single-feature">
@@ -288,9 +312,22 @@ const PublicFund = () => {
                     <span></span>
                   </div>
                   <p className="para">
-                  <strong>Consistent Portfolio Rebalancing and Sectoral Diversification</strong> to optimize returns while mitigating risks, ensuring long-term wealth creation for investors.
+                    <strong>
+                      Consistent Portfolio Rebalancing and Sectoral
+                      Diversification
+                    </strong>{" "}
+                    to optimize returns while mitigating risks, ensuring
+                    long-term wealth creation for investors.
                   </p>
-                </div>
+                </div> */}
+                <p className="para">
+                  Piper Serica Numero Uno India Fund offers global investors a
+                  sophisticated platform to India's vibrant equity landscape
+                  through an offshore fund structure. The fund maintains
+                  alignment with our established Portfolio Management Service,
+                  delivering a carefully calibrated investment approach focused
+                  on sustainable performance.
+                </p>
               </div>
             </div>
           </div>
