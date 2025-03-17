@@ -1,5 +1,6 @@
 import React from "react";
 import Layout from "../components/Layout";
+import { Link } from "react-router-dom";
 
 const PrivacyPolicy = () => {
   return (
@@ -22,102 +23,150 @@ const PrivacyPolicy = () => {
 
       <section className="privacy-policy-section">
         <div className="container">
-          <div className="col-lg-9 col-md-12 col-12">
-            <p className="para medium-para">
-              Lighthouse Canton Pte Ltd. ("LCPL"), a regulated organization
-              incorporated in the Republic of Singapore (Registration No:
-              201422117K).LCPL and its related/affiliate companies (including
-              Lighthouse Canton Capital (DIFC) Pte Ltd, LC Capital India)
-              constitute LC Group. LC Group recognizes the importance of
-              protecting Personal Data.
-            </p>
-
-            <p className="para medium-para">
-              Protection of your Personal Data is important to us. LC Group’s
-              Privacy Policy outlines how we manage the Personal Data we
-              collect, use and disclose. This Privacy Policy applies to all
-              departments and business units across LC Group. LC Group is
-              committed to complying with the Personal Data Protection Act 2012
-              (“PDPA”) and/ or applicable Data Protection laws. Please read this
-              Privacy Policy so that you know and understand the purposes for
-              which we collect, use and disclose your Personal Data.
-            </p>
-
-            <p className="para medium-para">
-              LC Group adopts a pragmatic approach in our business conduct.
-            </p>
-
-            <p className="para medium-para">
-              LC Group collects Personal Data only for what is required in
-              business or in activities conducted by our organization and will
-              properly destroy the Personal Data once there is no business or
-              legal purpose for retaining it. We do not collect Personal Data
-              randomly or indiscriminately without purpose.
-            </p>
-
-            <p className="para medium-para">
-              The viewer of the site is solely responsible for the means he /she
-              uses to access the Site and understand that the hardware,
-              software, the Internet, Internet Service Provider, and other third
-              parties involved in connecting him/ her to this Site may not
-              perform as intended or desired.
-            </p>
-
-            <p className="para medium-para">
-              LC Group does not disclose your Personal Data unless prior consent
-              has been obtained and we have administrative, physical and
-              Information Technology (IT) security measures in place to protect
-              your Personal Data. This does not affect any rights which LC Group
-              may have at law in connection with the collection, use or
-              disclosure of your Personal Data.
-            </p>
-
-            <h6 className="section-subtitle">1. Your Personal Data</h6>
-            <div className="single-disclaimer-para">
-              <div>
-                <span></span>
-              </div>
+         
+        <div className="row">
+            <div className="col-lg-12">
+              <h2 className="section-title offerings-title mt-4">Introduction</h2>
+            </div>
+            <div className="col-lg-12">
               <p className="para medium-para">
-                your name, NRIC number, passport number or other identification
-                number, telephone number(s), mailing address, email addresses
-                and any other information relating to you which you have
-                provided us in any form you may have submitted to us (i.e. job
-                application forms, etc.), or in our other forms of interaction
-                with you;
+              At Piper Serica Advisors Pvt. Ltd. ("Piper Serica," "we," "our," or "us"), we are committed to protecting your privacy and ensuring the security of your personal information. This Data Privacy Policy outlines how we collect, use, store, and protect your data when you visit our website or engage with our services.
               </p>
             </div>
-            <div className="single-disclaimer-para">
-              <div>
-                <span></span>
-              </div>
-              <p className="para medium-para">
-                information about your use of our websites and services,
-                including cookies, IP addresses, email subscription and
-                membership details (where applicable);
-              </p>
+        </div>
+            
+            
+          <div className="row">
+            <div className="col-12">
+              <h6 className="section-subtitle mt-4">Information We Collect</h6>
+              <p>We may collect the following types of information:</p>
             </div>
-            <div className="single-disclaimer-para">
-              <div>
-                <span></span>
+            <div className="col-12">
+              <div className="single-disclaimer-para">
+                <div>
+                  <span></span>
+                </div>
+                <p className="para medium-para">
+                  <strong>Personal Information: </strong>Name, email address, phone number, and any details you provide when filling out contact forms or subscribing to our communications.
+                </p>
               </div>
-              <p className="para medium-para">
-                your Curriculum Vitae, employment history, testimonials and
-                referrals, previous drawn income, education background, medical
-                history and disabilities and legal and bankruptcy history (if
-                applicable); and
-              </p>
+              <div className="single-disclaimer-para">
+                <div>
+                  <span></span>
+                </div>
+                <p className="para medium-para">
+                <strong>Financial Information:</strong> Investment-related details when you engage with our services.
+                </p>
+              </div>
+              <div className="single-disclaimer-para">
+                <div>
+                  <span></span>
+                </div>
+                <p className="para medium-para">
+                <strong>Technical Data:</strong> IP address, browser type, and usage data collected through cookies and analytics tools.
+                </p>
+              </div>
             </div>
+          </div>
 
-            <div className="single-disclaimer-para mb-5">
-              <div>
-                <span></span>
+          <div className="row">
+            <div className="col-12">
+              <h6 className="section-subtitle mt-4">How We Use Your Information</h6>
+              <p>We use the collected data to:</p>
+            </div>
+            <div className="col-12">
+              <div className="single-disclaimer-para">
+                <div>
+                  <span></span>
+                </div>
+                <p className="para medium-para">
+                Provide investment insights and services tailored to your interests.
+                </p>
               </div>
+              <div className="single-disclaimer-para">
+                <div>
+                  <span></span>
+                </div>
+                <p className="para medium-para">
+                Improve our website, services, and customer experience.
+                </p>
+              </div>
+              <div className="single-disclaimer-para">
+                <div>
+                  <span></span>
+                </div>
+                <p className="para medium-para">
+                Respond to inquiries and process investor-related queries.
+                </p>
+              </div>
+              <div className="single-disclaimer-para">
+                <div>
+                  <span></span>
+                </div>
+                <p className="para medium-para">
+                Comply with legal and regulatory obligations.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="row">
+            <div className="col-lg-12">
+              <h2 className="section-title offerings-title mt-4">Data Security</h2>
+            </div>
+            <div className="col-lg-12">
               <p className="para medium-para">
-                your payment related information, such as your bank account
-                details (where applicable).
+              We take appropriate technical and organizational measures to protect your data from unauthorized access, misuse, or disclosure. Our security protocols ensure the confidentiality and integrity of your personal information.
               </p>
             </div>
           </div>
+
+          <div className="row">
+            <div className="col-lg-12">
+              <h2 className="section-title offerings-title mt-4">Third-Party Sharing</h2>
+            </div>
+            <div className="col-lg-12">
+              <p className="para medium-para">
+              We do not sell, however, we may share your personal data with third parties 
+              for our marketing purposes to help manage the delivery of and enhance our 
+              products and services, including analysing current customer needs and 
+              identifying potential future needs. However, we may disclose your 
+              information to regulatory authorities, service providers, or legal 
+              entities when required by law.
+              </p>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-12">
+              <h2 className="section-title offerings-title mt-4">Cookies and Tracking Technologies</h2>
+            </div>
+            <div className="col-lg-12">
+              <p className="para medium-para">
+              Our website may use cookies to enhance user experience, track website performance, and analyze visitor behavior. You can manage your cookie preferences through your browser settings.
+              </p>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-12">
+              <h2 className="section-title offerings-title mt-4">Policy Updates</h2>
+            </div>
+            <div className="col-lg-12">
+              <p className="para medium-para">
+              We may update this Privacy Policy periodically. Any changes will be reflected on this page with a revised effective date.
+              </p>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-lg-12">
+              <h2 className="section-title offerings-title mt-4">Contact Us</h2>
+            </div>
+            <div className="col-lg-12">
+              <p className="para medium-para">
+              If you have any questions about our Data Privacy Policy or how we handle your data, please <Link to='/contact'>contact us</Link>
+              </p>
+            </div>
+          </div>
+
         </div>
       </section>
     </Layout>
