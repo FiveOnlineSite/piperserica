@@ -232,7 +232,7 @@ const Funds = () => {
                   </p>
                 </div>
 
-                <div className="single-feature">
+                {/* <div className="single-feature">
                   <div>
                     <span></span>
                   </div>
@@ -241,7 +241,7 @@ const Funds = () => {
                     proprietary AI tool yoda.ai to filter investment
                     opportunities.
                   </p>
-                </div>
+                </div> */}
                 <div className="single-feature">
                   <div>
                     <span></span>
