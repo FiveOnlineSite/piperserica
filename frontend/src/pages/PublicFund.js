@@ -321,12 +321,15 @@ const PublicFund = () => {
                   </p>
                 </div> */}
                 <p className="para">
-                  Piper Serica Numero Uno India Fund offers global investors a
-                  sophisticated platform to India's vibrant equity landscape
-                  through an offshore fund structure. The fund maintains
-                  alignment with our established Portfolio Management Service,
-                  delivering a carefully calibrated investment approach focused
-                  on sustainable performance.
+                We focus on generating consistent returns by capitalizing on India's
+                 structural growth opportunities while maintaining prudent risk parameters.
+                  This balanced approach provides investors with the potential for 
+                  substantial wealth accumulation over long time horizons, effectively
+                   navigating market volatility while capturing the momentum of India's
+                    economic expansion. Our disciplined execution enables investors to
+                     participate in India's compelling growth narrative through a 
+                     professionally managed investment vehicle with institutional-grade
+                      oversight and compliance.
                 </p>
               </div>
             </div>
