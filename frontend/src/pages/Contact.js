@@ -276,27 +276,31 @@ const Contact = () => {
                 </p> */}
 
                 <div className="social-media-div mt-4">
-                  <a href="tel:022-66545370" className="single-social-media">
+                  <NavLink
+                    to="tel:022-66545370"
+                    className="single-social-media"
+                  >
                     <i className="fa-solid fa-phone"></i>
                     <p className="para small-para">022-66545370</p>
-                  </a>
-                  <a
-                    href="mailto:contact@piperserica.com"
+                  </NavLink>
+                  <NavLink
+                    to="mailto:contact@piperserica.com"
                     className="single-social-media"
                   >
                     <i className="fa-solid fa-envelope"></i>
                     <p className="para small-para">contact@piperserica.com</p>
-                  </a>
-                  <a
-                    href="https://maps.app.goo.gl/2pP2WxzAcmueuKmG8"
+                  </NavLink>
+                  <NavLink
+                    to="https://maps.app.goo.gl/2pP2WxzAcmueuKmG8"
                     className="single-social-media"
+                    target="_blank"
                   >
                     <i className="fa-solid fa-location-dot"></i>
                     <p className="para small-para">
                       Marathon Innova Nextgen, A Wing, 905/906, Ganpatrao Kadam
                       Marg, Lower Parel, Mumbai, Maharashtra 400013
                     </p>
-                  </a>
+                  </NavLink>
                 </div>
               </div>
             </div>

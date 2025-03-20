@@ -19,7 +19,7 @@ const CompanyPortfolio = () => {
     },
     {
       id: 2,
-      src: "/images/industries/comp-2.jpg",
+      src: "/images/industries/Crediwatch 2.jpg",
       label: "FINTECH",
       name: "Crediwatch",
       description:
@@ -46,7 +46,7 @@ const CompanyPortfolio = () => {
     },
     {
       id: 5,
-      src: "/images/industries/comp-5.png",
+      src: "/images/industries/Oditly - New Logo.jpg",
       label: "AI & SAAS",
       name: "Oditly",
       description:
@@ -82,7 +82,7 @@ const CompanyPortfolio = () => {
     },
     {
       id: 9,
-      src: "/images/industries/comp-9 (2).png",
+      src: "/images/industries/Floworks.png",
       label: "AI & SAAS",
       name: "FloWorks",
       description:
@@ -145,7 +145,7 @@ const CompanyPortfolio = () => {
     },
     {
       id: 16,
-      src: "/images/industries/comp-22.png",
+      src: "/images/industries/Flashaid.png",
       label: "FINTECH",
       name: "Flashaid",
       description:
@@ -154,7 +154,7 @@ const CompanyPortfolio = () => {
     },
     {
       id: 17,
-      src: "/images/industries/freed-logo.png",
+      src: "/images/industries/Freed 2.jpg",
       label: "FINTECH",
       name: "Freed",
       description:
@@ -172,7 +172,7 @@ const CompanyPortfolio = () => {
     },
     {
       id: 19,
-      src: "/images/industries/comp-18.jpg",
+      src: "/images/industries/Six Sense Mobility 2.jpg",
       label: "ADVANCE ELECTRONIC",
       name: "Six Sense Mobility",
       description:
@@ -199,7 +199,7 @@ const CompanyPortfolio = () => {
     },
     {
       id: 22,
-      src: "/images/industries/comp-21.jpg",
+      src: "/images/industries/Rupeeflo 3.png",
       label: "FINTECH",
       name: "Rupeeflo",
       description:
