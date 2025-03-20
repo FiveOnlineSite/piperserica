@@ -65,19 +65,19 @@ const Disclosure = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src={`${process.env.PUBLIC_URL}/images/banners/Disclosure.jpg`}
+              src={`${process.env.PUBLIC_URL}/images/banners/Disclosures.jpg`}
               alt="banner-img"
             />
 
             <div className="banner-content-div">
               <div className="container">
-                <h6 className="banner-subtitle">Performance Review</h6>
-                <h1 className="banner-title"> Disclosure</h1>
-                <p className="banner-para">
+                {/* <h6 className="banner-subtitle">Performance Review</h6> */}
+                <h1 className="banner-title">Disclosures</h1>
+                {/* <p className="banner-para">
                   Investor letters are formal communications that provide
                   shareholders with insights into a company's financial
                   performance, strategic direction, and future outlook.
-                </p>
+                </p> */}
               </div>
             </div>
           </div>

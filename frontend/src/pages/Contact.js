@@ -170,7 +170,7 @@ const Contact = () => {
                     <div className="col-lg-12">
                       <div className="mb-3">
                         <label for="email" className="form-label">
-                          Email
+                          Email*
                         </label>
                         <input
                           type="email"
@@ -179,6 +179,7 @@ const Contact = () => {
                           value={formData.email}
                           onChange={handleChange}
                           id="email"
+                          required
                           // placeholder="eg: johndoe@xyz.com"
                         />
                       </div>
@@ -237,8 +238,8 @@ const Contact = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-5">
-              <h6 className="section-subtitle">our locations</h6>
-              <h2 className="section-title mt-lg-3 mt-4">India</h2>
+              {/* <h6 className="section-subtitle">our locations</h6> */}
+              <h2 className="section-title">India</h2>
 
               <div className="location-div mt-5">
                 <h6 className="section-subtitle mb-4">
@@ -287,14 +288,13 @@ const Contact = () => {
                     <p className="para small-para">contact@piperserica.com</p>
                   </a>
                   <a
-                    href="https://maps.app.goo.gl/YAxpnG7w3bVksVMf7"
+                    href="https://maps.app.goo.gl/2pP2WxzAcmueuKmG8"
                     className="single-social-media"
                   >
                     <i className="fa-solid fa-location-dot"></i>
                     <p className="para small-para">
-                      A Wing, 905/906, Marathon Innova Nextgen, Ganpatrao Kadam
-                      Marg, Opp-Peninsula Corporate Park, Lower Parel, Mumbai –
-                      400013
+                      Marathon Innova Nextgen, A Wing, 905/906, Ganpatrao Kadam
+                      Marg, Lower Parel, Mumbai, Maharashtra 400013
                     </p>
                   </a>
                 </div>
@@ -304,7 +304,7 @@ const Contact = () => {
             <div className="col-lg-6 offset-lg-1 mt-lg-0 mt-4">
               <div className="location-map">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7544.782083117704!2d72.8177315!3d19.0024829!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf0da9017b63%3A0x3ffea97698ac957c!2sPiper%20Serica!5e0!3m2!1sen!2sin!4v1739949925552!5m2!1sen!2sin"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.522508434842!2d72.824925!3d18.9966839!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cf0da9017b63%3A0x3ffea97698ac957c!2sPiper%20Serica!5e0!3m2!1sen!2sin!4v1742453967362!5m2!1sen!2sin"
                   width="600"
                   height="450"
                   allowfullscreen=""

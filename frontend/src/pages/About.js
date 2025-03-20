@@ -134,8 +134,11 @@ const About = () => {
       <section className="banner-section" id="banner-div">
         <div className="row">
           <div className="banner-img-div">
-            <img
-              src={`${process.env.PUBLIC_URL}/images/banners/About.jpg`}
+            <video
+              src={`${process.env.PUBLIC_URL}/videos/AboutPageVideo.mp4`}
+              muted
+              autoPlay
+              loop
               alt="banner-img"
             />
 
@@ -160,10 +163,10 @@ const About = () => {
       <section className="investment-journey-section">
         <div className="container">
           <h6 className="section-subtitle mb-4">
-            A BEACON OF SAFETY ON YOUR INVESTMENT JOURNEY
+            Investing in future. Backing emerging companies.
           </h6>
 
-          <p className="para">
+          <p className="para justify-para">
             Piper Serica is a long-only active equity asset manager that
             traverses various strategies of equity investment in India. We
             manage multiple funds that invest in Indian listed companies for
@@ -174,7 +177,7 @@ const About = () => {
             how to succeed while investing in India navigating through various
             risks, most of them unique to India as an emerging market.
           </p>
-          <p className="para">
+          <p className="para justify-para">
             The funds that we manage cater to different risk and return profiles
             and objectives of our investors. We have an edge over our peers due
             to our deep research and disciplined approach to investing. Our
@@ -219,10 +222,10 @@ const About = () => {
         <div className="container">
           <h6 className="section-subtitle">History</h6>
           <div className="row align-items-start">
-            <div className="col-lg-3">
-              <h2 className="section-title mt-lg-3 mt-4">We've come so far!</h2>
-            </div>
-            <div className="col-lg-8 offset-lg-1 offset-0 mt-lg-0 mt-5">
+            {/* <div className="col-lg-3"> */}
+            <h2 className="section-title mt-lg-3 mt-4">We've come so far!</h2>
+            {/* </div> */}
+            {/* <div className="col-lg-8 offset-lg-1 offset-0 mt-lg-0 mt-5">
               <div className="fund-content-div">
                 <div className="single-fund">
                   <div>
@@ -273,11 +276,11 @@ const About = () => {
                   </p>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           <div className="row mt-5 history-row">
-            {/* <div className="col-lg-2">
+            <div className="col-lg-2">
               <div className="year-tab-links">
                 <a
                   href="#"
@@ -303,42 +306,7 @@ const About = () => {
                     </div>
                   </div>
                 </a>
-                <a
-                  href="#"
-                  onClick={(event) => handleTabClick("sixteen", event)}
-                  className={activeTab === "sixteen" ? "active" : ""}
-                >
-                  <div>
-                    <div className="d-flex w-100 align-items-center">
-                      <span></span>
-                      <h4>2016</h4>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="#"
-                  onClick={(event) => handleTabClick("seventeen", event)}
-                  className={activeTab === "seventeen" ? "active" : ""}
-                >
-                  <div>
-                    <div className="d-flex w-100 align-items-center">
-                      <span></span>
-                      <h4>2017</h4>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="#"
-                  onClick={(event) => handleTabClick("eighteen", event)}
-                  className={activeTab === "eighteen" ? "active" : ""}
-                >
-                  <div>
-                    <div className="d-flex w-100 align-items-center">
-                      <span></span>
-                      <h4>2018</h4>
-                    </div>
-                  </div>
-                </a>
+
                 <a
                   href="#"
                   onClick={(event) => handleTabClick("nineteen", event)}
@@ -376,9 +344,9 @@ const About = () => {
                   </div>
                 </a>
               </div>
-            </div> */}
+            </div>
 
-            {/* <div className="col-lg-10">
+            <div className="col-lg-10">
               <div className="history-tab-content">
                 <div className="tab-content">
                   <div
@@ -399,6 +367,13 @@ const About = () => {
                             <strong>operations in 2004</strong>
                           </p>
                         </div>
+                      </div>
+                      <div className="history-line-chart">
+                        <img
+                          src="/images/history/1. Getway of India - 2004 - Blue.png"
+                          className="w-100"
+                          alt="history-img"
+                        />
                       </div>
                     </div>
                   </div>
@@ -427,6 +402,13 @@ const About = () => {
                           </p>
                         </div>
                       </div>
+                      <div className="history-line-chart">
+                        <img
+                          src="/images/history/2. Target - 2015 - Blue.png"
+                          className="w-100"
+                          alt="history-img"
+                        />
+                      </div>
                     </div>
                   </div>
 
@@ -444,13 +426,23 @@ const About = () => {
                             <span></span>
                           </div>
                           <p className="para history-para">
-                            we received the registration from the{" "}
+                            {" "}
+                            We received the registration from the S we received
+                            the registration from the
                             <strong>
+                              {" "}
                               Securities and Exchange Board of India (SEBI) for
                               launching Portfolio Management Service (PMS).
                             </strong>
                           </p>
                         </div>
+                      </div>
+                      <div className="history-line-chart">
+                        <img
+                          src="/images/history/3. Arrows - 2019 - Blue.png"
+                          className="w-100"
+                          alt="history-img"
+                        />
                       </div>
                     </div>
                   </div>
@@ -469,13 +461,21 @@ const About = () => {
                             <span></span>
                           </div>
                           <p className="para history-para">
-                            Piper Serica launched its{" "}
+                            Piper Serica launched its
                             <strong>
+                              {" "}
                               Foreign Portfolio Investor (FPI) Fund based in
                               Mauritius.
                             </strong>{" "}
                           </p>
                         </div>
+                      </div>
+                      <div className="history-line-chart">
+                        <img
+                          src="/images/history/4. Globe - 2020 - Blue.png"
+                          className="w-100"
+                          alt="history-img"
+                        />
                       </div>
                     </div>
                   </div>
@@ -487,27 +487,34 @@ const About = () => {
                     id="twenty-two"
                   >
                     <div className="history-content-div">
-                      <h2 className="history-title">2020</h2>
+                      <h2 className="history-title">2022</h2>
                       <div className="history-content">
                         <div className="single-history">
                           <div>
                             <span></span>
                           </div>
                           <p className="para history-para">
-                            launched Piper{" "}
+                            Launched
                             <strong>
-                              Serica Angel Fund, an early-stage VC fund
+                              {" "}
+                              Piper Serica Angel Fund, an early-stage VC fund
                               registered with SEBI as a Category 1 AIF.
                             </strong>{" "}
                           </p>
                         </div>
-                        
+                      </div>
+                      <div className="history-line-chart">
+                        <img
+                          src="/images/history/5. Rocket - 2022 - Blue.png"
+                          className="w-100"
+                          alt="history-img"
+                        />
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </section>
@@ -534,7 +541,7 @@ const About = () => {
                           <h2 className="banner-title why-content-main-title">
                             Vision
                           </h2>
-                          <p className="para why-para">
+                          <p className="para why-para justify-para">
                             To be a highly respected long-only equity asset
                             management company, offering multiple strategies
                             that cater to the diverse objectives of our
@@ -561,7 +568,7 @@ const About = () => {
                           <h2 className="banner-title why-content-main-title">
                             Mission
                           </h2>
-                          <p className="para why-para">
+                          <p className="para why-para justify-para">
                             At Piper Serica, we empower investors to achieve
                             their financial goals through a diverse portfolio of
                             actively managed strategies. Committed to
@@ -607,7 +614,7 @@ const About = () => {
                   <div className="accordion-body">
                     <div className="why-content-para">
                       <h4 className="why-content-title">Vision</h4>
-                      <p className="para why-para">
+                      <p className="para why-para justify-para">
                         To be a highly respected long-only equity asset
                         management company, offering multiple strategies that
                         cater to the diverse objectives of our investors.
@@ -651,7 +658,7 @@ const About = () => {
                   <div className="accordion-body">
                     <div className="why-content-para">
                       <h4 className="why-content-title">Mission</h4>
-                      <p className="para why-para">
+                      <p className="para why-para justify-para">
                         At Piper Serica, we empower investors to achieve their
                         financial goals through a diverse portfolio of actively
                         managed strategies. Committed to transparency, rigorous
@@ -687,8 +694,8 @@ const About = () => {
         <div className="container">
           <h5 className="section-subtitle mb-5">our philosophy</h5>
           <div className="row image-row align-items-center">
-            <div className="col-lg-6 order-lg-1 order-2">
-              <h2 className="para mt-lg-0 mt-4">
+            <div className="col-lg-12 order-lg-1 order-2">
+              <h2 className="para mt-lg-0 justify-para">
                 Our core philosophy is to benefit from long term investment
                 opportunities while ignoring market cycles. We like to identify
                 and invest in companies that are leaders in emerging spaces led
@@ -711,13 +718,13 @@ const About = () => {
                 our portfolio companies.
               </h2>
             </div>
-            <div className="col-lg-6 order-lg-2 order-1">
+            {/* <div className="col-lg-6 order-lg-2 order-1">
               <img
                 src={`${process.env.PUBLIC_URL}/images/banners/market-fund1.webp`}
                 alt="philosophy-img"
                 className="w-100"
               />
-            </div>
+            </div> */}
           </div>
 
           {/* <div className="row mt-5 image-row">
@@ -801,7 +808,7 @@ const About = () => {
               </div>
             </div>
             <div className="col-lg-7 mt-lg-0 mt-4">
-              <p className="para">
+              <p className="para justify-para">
                 Our journey began with a simple yet powerful vision: to create
                 an investment company that not only delivers superior financial
                 performance but also fosters innovation and positive economic
@@ -811,7 +818,7 @@ const About = () => {
                 lasting value for our investors.
               </p>
 
-              <p className="para">
+              <p className="para justify-para">
                 Our approach is rooted in discipline, transparency, and
                 alignment of interests. We deploy a research-driven methodology,
                 leveraging data insights and industry expertise to make informed
@@ -820,7 +827,7 @@ const About = () => {
                 market landscape.
               </p>
 
-              <p className="para">
+              <p className="para justify-para">
                 At Piper Serica, we prioritize partnerships and long-term
                 relationships. We work closely with industry experts to support
                 strategic growth, risk management, and sustainable financial
@@ -828,7 +835,7 @@ const About = () => {
                 we not only seek financial returns but also contribute to
                 broader societal and economic progress.
               </p>
-              <p className="para">
+              <p className="para justify-para">
                 We are excited about the opportunities ahead and deeply
                 appreciate the trust and confidence that our investors place in
                 us. Together, we build a legacy of success, innovation, and
@@ -844,7 +851,7 @@ const About = () => {
       </section>
       <section className="teams-bg-section">
         <img
-          src={`${process.env.PUBLIC_URL}/images/banners/team-bg.webp`}
+          src={`${process.env.PUBLIC_URL}/images/banners/Team.jpg`}
           alt="team-bg"
           className="w-100"
         />
@@ -853,15 +860,15 @@ const About = () => {
       <section className="teams-section">
         <div className="container">
           <h6 className="section-subtitle">Meet the team</h6>
-          <h2 className="section-title mt-lg-3 mt-4">The Driving Force</h2>
+          {/* <h2 className="section-title mt-lg-3 mt-4">The Driving Force</h2> */}
           <div className="row mt-3 mb-5">
             <div className="col-lg-4 col-md-6">
               <div className="team-div">
-                <img
+                {/* <img
                   src={`${process.env.PUBLIC_URL}/images/team/abhay-agarwal-560x560.jpeg`}
                   alt="team-img"
                   className="w-100"
-                />
+                /> */}
                 <div className="team-content">
                   <div className="team-title-div">
                     <h3 className="section-title team-name">Abhay Agarwal</h3>
@@ -870,18 +877,18 @@ const About = () => {
                     </NavLink>
                   </div>
 
-                  <h5 className="section-subtitle">Managing Director, CIO</h5>
+                  <h5 className="team-designation">Managing Director, CIO</h5>
                 </div>
               </div>
             </div>
 
             <div className="col-lg-4 col-md-6 mt-lg-0 mt-md-0 mt-4">
               <div className="team-div">
-                <img
+                {/* <img
                   src={`${process.env.PUBLIC_URL}/images/team/rajni-560x560.jpeg`}
                   alt="team-img"
                   className="w-100"
-                />
+                /> */}
                 <div className="team-content">
                   <div className="team-title-div">
                     <h3 className="section-title team-name">Rajni Agarwal</h3>
@@ -889,18 +896,18 @@ const About = () => {
                       <i class="fa-brands fa-linkedin"></i>
                     </NavLink>
                   </div>
-                  <h5 className="section-subtitle">Director, Research</h5>
+                  <h5 className="team-designation">Director, Research</h5>
                 </div>
               </div>
             </div>
 
             <div className="col-lg-4 col-md-6 mt-lg-0 mt-md-3 mt-4">
               <div className="team-div">
-                <img
+                {/* <img
                   src={`${process.env.PUBLIC_URL}/images/team/Ajay-modi-560x560.jpeg`}
                   alt="team-img"
                   className="w-100"
-                />
+                /> */}
                 <div className="team-content">
                   <div className="team-title-div">
                     <h3 className="section-title team-name">Ajay Modi</h3>
@@ -908,7 +915,7 @@ const About = () => {
                       <i class="fa-brands fa-linkedin"></i>
                     </NavLink>
                   </div>
-                  <h5 className="section-subtitle">Director, Investments</h5>
+                  <h5 className="team-designation">Director, Investments</h5>
                 </div>
               </div>
             </div>

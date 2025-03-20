@@ -66,7 +66,7 @@ const FamilyOffice = () => {
       funds_list: [
         //  Add a key for the array
         {
-          funds: "Piper Serica Leader Portfolio Fund",
+          funds: "Piper Serica Leader Portfolio Fund (PMS)",
           link: "/public-market/piper-serica-leader-portfolio",
         },
       ],
@@ -79,16 +79,14 @@ const FamilyOffice = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src={`${process.env.PUBLIC_URL}/images/banners/Indian-Investor.jpg`}
+              src={`${process.env.PUBLIC_URL}/images/banners/Indian Investor.jpg`}
               alt="banner-img"
             />
 
             <div className="banner-content-div">
               <div className="container">
                 {/* <h6 className="banner-subtitle">Creating Meaningful Change</h6> */}
-                <h1 className="banner-title">
-                  All-weather, purposeful investment strategies
-                </h1>
+                <h1 className="banner-title">Wisdom led wealth creation</h1>
                 {/* <p className="banner-para">
                         Our commitment to making a positive impact drives everything
                         we do. Through innovative solutions, community engagement, and
@@ -141,7 +139,7 @@ const FamilyOffice = () => {
           <div className="row">
             <h5 className="section-subtitle mb-4">What we do</h5>
 
-            <p className="para">
+            <p className="para justify-para">
               Piper Serica is a long-only active equity asset manager that
               traverses various strategies of equity investment in India. We
               manage multiple funds that invest in Indian listed companies for
@@ -209,7 +207,7 @@ const FamilyOffice = () => {
         </div>
       </section>
 
-      <section className="why-us-section">
+      <section className="why-us-section family-why-section">
         <div className="container">
           <div className="desktop-row">
             <div className="row">
@@ -218,7 +216,7 @@ const FamilyOffice = () => {
                   <NavLink to="/">
                     <div className="why-us-content">
                       <h2 className="banner-title why-content-main-title">
-                        Focus on risk-adjusted returns:
+                        Focus on risk-adjusted returns
                       </h2>
                       <h6 className="read-more">
                         Read More <i className="fa-solid fa-plus"></i>
@@ -231,9 +229,9 @@ const FamilyOffice = () => {
                       </h6>
 
                       <h4 className="why-content-title">
-                        Focus on risk-adjusted returns:
+                        Focus on risk-adjusted returns
                       </h4>
-                      <p className="para why-para">
+                      <p className="para why-para justify-para">
                         We focus not only on returns but also the systemic and
                         non-systemic risks while building our model portfolio.
                         We have built strict guard rails of risk metrics that
@@ -251,7 +249,7 @@ const FamilyOffice = () => {
                   <NavLink to="/">
                     <div className="why-us-content">
                       <h2 className="banner-title why-content-main-title">
-                        Research Process:
+                        Research Process
                       </h2>
                       <h6 className="read-more">
                         Read More <i className="fa-solid fa-plus"></i>
@@ -263,8 +261,8 @@ const FamilyOffice = () => {
                         Why us
                       </h6>
 
-                      <h4 className="why-content-title">Research Process:</h4>
-                      <p className="para why-para">
+                      <h4 className="why-content-title">Research Process</h4>
+                      <p className="para why-para justify-para">
                         We have a very strong on-ground research presence which
                         is required to be successful in an Emerging Market like
                         India. Our research team understands local nuances while
@@ -289,7 +287,7 @@ const FamilyOffice = () => {
                   <NavLink to="/">
                     <div className="why-us-content">
                       <h2 className="banner-title why-content-main-title">
-                        Investor Friendliness:
+                        Investor Friendliness
                       </h2>
                       <h6 className="read-more">
                         Read More <i className="fa-solid fa-plus"></i>
@@ -302,9 +300,9 @@ const FamilyOffice = () => {
                       </h6>
 
                       <h4 className="why-content-title">
-                        Investor Friendliness:
+                        Investor Friendliness
                       </h4>
-                      <p className="para why-para">
+                      <p className="para why-para justify-para">
                         We love to communicate with our investors on a regular
                         basis. While the regulatory compliance requires us to
                         send standard portfolio and valuation reports to our
@@ -332,7 +330,7 @@ const FamilyOffice = () => {
                     openAccordion === 0 ? "d-none" : ""
                   }`}
                 >
-                  Focus on risk-adjusted returns:
+                  Focus on risk-adjusted returns
                 </h2>
                 <div
                   id="collapseOne"
@@ -347,9 +345,9 @@ const FamilyOffice = () => {
                         Why us
                       </h6>
                       <h4 className="why-content-title">
-                        Focus on risk-adjusted returns:
+                        Focus on risk-adjusted returns
                       </h4>
-                      <p className="para why-para">
+                      <p className="para why-para justify-para">
                         We focus not only on returns but also the systemic and
                         non-systemic risks while building our model portfolio.
                         We have built strict guard rails of risk metrics that
@@ -385,7 +383,7 @@ const FamilyOffice = () => {
                     openAccordion === 1 ? "d-none" : ""
                   }`}
                 >
-                  Research Process:
+                  Research Process
                 </h2>
                 <div
                   id="collapseTwo"
@@ -399,8 +397,8 @@ const FamilyOffice = () => {
                       <h6 className="section-subtitle why-content-subtitle">
                         Why us
                       </h6>
-                      <h4 className="why-content-title">Research Process:</h4>
-                      <p className="para why-para">
+                      <h4 className="why-content-title">Research Process</h4>
+                      <p className="para why-para justify-para">
                         We have a very strong on-ground research presence which
                         is required to be successful in an Emerging Market like
                         India. Our research team understands local nuances while
@@ -443,7 +441,7 @@ const FamilyOffice = () => {
                     openAccordion === 2 ? "d-none" : ""
                   }`}
                 >
-                  Investor Friendliness:
+                  Investor Friendliness
                 </h2>
                 <div
                   id="collapseThree"
@@ -458,9 +456,9 @@ const FamilyOffice = () => {
                         Why us
                       </h6>
                       <h4 className="why-content-title">
-                        Investor Friendliness:
+                        Investor Friendliness
                       </h4>
-                      <p className="para why-para">
+                      <p className="para why-para justify-para">
                         We love to communicate with our investors on a regular
                         basis. While the regulatory compliance requires us to
                         send standard portfolio and valuation reports to our
@@ -502,7 +500,7 @@ const FamilyOffice = () => {
               </h3> */}
             <div className="row align-items-center my-lg-3 my-4">
               <div className="col-lg-9">
-                <p className="para small-para">
+                <p className="para small-para justify-para">
                   Our onshore PMS offers a structured investment approach for
                   both corporate and Indian investors seeking long-term wealth
                   creation. Designed for transparency and disciplined portfolio
@@ -556,7 +554,7 @@ const FamilyOffice = () => {
       <section className="outlook-section">
         <div className="container">
           <div className="row align-items-center">
-            <h5 className="section-subtitle">Outlook</h5>
+            <h5 className="section-subtitle">Updates</h5>
             <div className="row align-items-center">
               <div className="col-lg-6">
                 <h2 className="banner-title offerings-title mt-3">

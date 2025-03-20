@@ -66,11 +66,11 @@ const NRIInvestor = () => {
       funds_list: [
         //  Add a key for the array
         {
-          funds: "Piper Serica Numero Uno India Fund",
+          funds: "Piper Serica Numero Uno India Fund (Offshore Fund)",
           link: "/public-market/piper-serica-nemero-uno-india-fund",
         },
         {
-          funds: "Piper Serica Leader Portfolio",
+          funds: "Piper Serica Leader Portfolio (PMS)",
           link: "/public-market/piper-serica-leader-portfolio",
         },
       ],
@@ -112,7 +112,7 @@ const NRIInvestor = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src={`${process.env.PUBLIC_URL}/images/banners/NRI-Investor.jpg`}
+              src={`${process.env.PUBLIC_URL}/images/banners/NRI Investor.jpg`}
               alt="banner-img"
             />
 
@@ -120,7 +120,7 @@ const NRIInvestor = () => {
               <div className="container">
                 {/* <h6 className="banner-subtitle">Creating Meaningful Change</h6> */}
                 <h1 className="banner-title">
-                  All-weather, purposeful investment strategies
+                  Process drive, consistent performance
                 </h1>
                 {/* <p className="banner-para">
                         Our commitment to making a positive impact drives everything
@@ -213,7 +213,7 @@ const NRIInvestor = () => {
         </div>
       </section>
 
-      <section className="why-us-section">
+      <section className="why-us-section nri-why-section">
         <div className="container">
           <div className="desktop-row">
             <div className="row">
@@ -222,7 +222,7 @@ const NRIInvestor = () => {
                   <NavLink to="/">
                     <div className="why-us-content">
                       <h2 className="banner-title why-content-main-title">
-                        Focus on risk-adjusted returns:
+                        Focus on risk-adjusted returns
                       </h2>
                       <h6 className="read-more">
                         Read More <i className="fa-solid fa-plus"></i>
@@ -235,7 +235,7 @@ const NRIInvestor = () => {
                       </h6>
 
                       <h4 className="why-content-title">
-                        Focus on risk-adjusted returns:
+                        Focus on risk-adjusted returns
                       </h4>
                       <p className="para why-para">
                         We focus not only on returns but also the systemic and
@@ -255,7 +255,7 @@ const NRIInvestor = () => {
                   <NavLink to="/">
                     <div className="why-us-content">
                       <h2 className="banner-title why-content-main-title">
-                        Research Process:
+                        Research Process
                       </h2>
                       <h6 className="read-more">
                         Read More <i className="fa-solid fa-plus"></i>
@@ -267,7 +267,7 @@ const NRIInvestor = () => {
                         Why us
                       </h6>
 
-                      <h4 className="why-content-title">Research Process:</h4>
+                      <h4 className="why-content-title">Research Process</h4>
                       <p className="para why-para">
                         We have a very strong on-ground research presence which
                         is required to be successful in an Emerging Market like
@@ -293,7 +293,7 @@ const NRIInvestor = () => {
                   <NavLink to="/">
                     <div className="why-us-content">
                       <h2 className="banner-title why-content-main-title">
-                        Investor Friendliness:
+                        Investor Friendliness
                       </h2>
                       <h6 className="read-more">
                         Read More <i className="fa-solid fa-plus"></i>
@@ -306,7 +306,7 @@ const NRIInvestor = () => {
                       </h6>
 
                       <h4 className="why-content-title">
-                        Investor Friendliness:
+                        Investor Friendliness
                       </h4>
                       <p className="para why-para">
                         We love to communicate with our investors on a regular
@@ -336,7 +336,7 @@ const NRIInvestor = () => {
                     openAccordion === 0 ? "d-none" : ""
                   }`}
                 >
-                  Focus on risk-adjusted returns:
+                  Focus on risk-adjusted returns
                 </h2>
                 <div
                   id="collapseOne"
@@ -351,7 +351,7 @@ const NRIInvestor = () => {
                         Why us
                       </h6>
                       <h4 className="why-content-title">
-                        Focus on risk-adjusted returns:
+                        Focus on risk-adjusted returns
                       </h4>
                       <p className="para why-para">
                         We focus not only on returns but also the systemic and
@@ -389,7 +389,7 @@ const NRIInvestor = () => {
                     openAccordion === 1 ? "d-none" : ""
                   }`}
                 >
-                  Research Process:
+                  Research Process
                 </h2>
                 <div
                   id="collapseTwo"
@@ -403,7 +403,7 @@ const NRIInvestor = () => {
                       <h6 className="section-subtitle why-content-subtitle">
                         Why us
                       </h6>
-                      <h4 className="why-content-title">Research Process:</h4>
+                      <h4 className="why-content-title">Research Process</h4>
                       <p className="para why-para">
                         We have a very strong on-ground research presence which
                         is required to be successful in an Emerging Market like
@@ -447,7 +447,7 @@ const NRIInvestor = () => {
                     openAccordion === 2 ? "d-none" : ""
                   }`}
                 >
-                  Investor Friendliness:
+                  Investor Friendliness
                 </h2>
                 <div
                   id="collapseThree"
@@ -462,7 +462,7 @@ const NRIInvestor = () => {
                         Why us
                       </h6>
                       <h4 className="why-content-title">
-                        Investor Friendliness:
+                        Investor Friendliness
                       </h4>
                       <p className="para why-para">
                         We love to communicate with our investors on a regular
@@ -560,7 +560,7 @@ const NRIInvestor = () => {
       <section className="outlook-section">
         <div className="container">
           <div className="row align-items-center">
-            <h5 className="section-subtitle">Outlook</h5>
+            <h5 className="section-subtitle">Updates</h5>
             <div className="row align-items-center">
               <div className="col-lg-6">
                 <h2 className="banner-title offerings-title mt-3">

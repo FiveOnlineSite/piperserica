@@ -285,7 +285,7 @@ body {
 }
 
 .banner-contents .content-div {
-  height: 200px;
+  height: 230px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -332,7 +332,7 @@ body {
 }
 
 .banner-contents .content-div:hover .content-para {
-  top: 30%;
+  top: 0%;
   display: block;
   width: 100%;
 }
@@ -404,7 +404,8 @@ body {
   position: relative;
 }
 
-.investor-banner-section .slick-slide img {
+.investor-banner-section .slick-slide img,
+.banner-section video {
   width: 100%;
   height: 70vh;
   object-fit: cover;
@@ -463,6 +464,18 @@ body {
   letter-spacing: 2px;
   text-decoration: none;
   background-color: transparent;
+  transition: all 0.6s ease;
+}
+
+.banner-btn:hover {
+  background-color: var(--blue-font);
+  color: var(--white-bg);
+  border: 1px solid var(--blue-font);
+}
+
+.banner-btn.blue-btn:hover {
+  background-color: var(--blue-font);
+  color: var(--white-bg);
 }
 
 .banner-btn i {
@@ -571,7 +584,7 @@ body {
 
 .why-us-section {
   background-image: linear-gradient(#00000059, #00000059),
-    url("../public/images/banners/why-us-banner1.webp");
+    url("../public/images/banners/foriegn-why.jpg");
   background-repeat: no-repeat;
   background-position: center;
   padding: 50px 0;
@@ -582,9 +595,24 @@ body {
   background-size: auto, cover;
 }
 
+.family-why-section {
+  background-image: linear-gradient(#00000059, #00000059),
+    url("../public/images/banners/Indian\ Investor\ -\ Why\ Us.jpg");
+}
+
+.nri-why-section {
+  background-image: linear-gradient(#00000059, #00000059),
+    url("../public/images/banners/NRI\ Investor\ -\ Why\ Us\ 1.jpg");
+}
+
+.startup-why-section {
+  background-image: linear-gradient(#00000059, #00000059),
+    url("../public/images/banners/Startup\ Founder\ -\ Why\ Us.jpg") !important;
+}
+
 .vision-mission-section {
   background-image: linear-gradient(#00000059, #00000059),
-    url("../public/images/banners/why-us-banner.jpg");
+    url("../public/images/banners/Vision\ Mission.jpg");
   margin-top: 0;
 }
 
@@ -634,14 +662,14 @@ body {
 
 .why-content-para {
   position: absolute;
-  bottom: -110%;
+  top: -110%;
   left: 0;
   padding: 20px;
   transition: all 0.6s ease-in-out;
 }
 
 .vision-mission-para {
-  bottom: -100%;
+  top: -100%;
 }
 
 .why-content-main-title {
@@ -649,11 +677,11 @@ body {
 }
 
 .why-us-section .col-lg-4:hover .why-content-para {
-  bottom: 0%;
+  top: 0%;
 }
 
 .why-us-section .col-lg-6:hover .vision-mission-para {
-  bottom: 0%;
+  top: 0%;
 }
 
 .why-us-section .col-lg-4:hover .why-us-content,
@@ -1001,7 +1029,7 @@ body {
 .news-content-div h3,
 .team-content .team-name {
   font-size: 26px;
-  line-height: 36px;
+  line-height: 30px;
   color: var(--black-font);
   transition: all 0.6s ease;
 }
@@ -1009,6 +1037,14 @@ body {
 .team-content .team-name {
   font-size: 22px;
   line-height: 32px;
+}
+
+.team-content .team-designation {
+  font-family: "Public Sans", serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px;
+  color: var(--gray-font);
 }
 
 .news-content-div h3 {
@@ -1085,7 +1121,7 @@ body {
 .contact-us-section {
   padding: 100px 0;
   background-image: linear-gradient(#00000059, #00000059),
-    url("../public/images/banners/contact-us-banner.webp");
+    url("../public/images/banners/Get\ in\ Touch.jpg");
   background-position: 0 0, 50%;
   background-repeat: no-repeat;
   height: 90vh;
@@ -1598,7 +1634,6 @@ body {
 .team-div {
   /* padding: 20px; */
   position: relative;
-  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1640,10 +1675,8 @@ body {
 }
 
 .team-content {
-  position: absolute;
-  bottom: 0;
   padding: 10px 20px;
-  width: 85%;
+  width: 100%;
   background-color: var(--lighter-gray-bg);
   transition: all 0.6s ease;
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
@@ -2104,6 +2137,10 @@ form .form-label span {
   border-top: 2px solid var(--white-bg);
 }
 
+.justify-para {
+  text-align: justify;
+}
+
 @media screen and (max-width: 1024px) {
   .navbar-nav .nav-item {
     padding: 10px 12px;
@@ -2378,7 +2415,8 @@ form .form-label span {
     line-height: 22px;
   }
 
-  .investor-banner-section .slick-slide img {
+  .investor-banner-section .slick-slide img,
+  .banner-section video {
     height: 50vh;
   }
 

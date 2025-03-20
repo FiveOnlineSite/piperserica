@@ -9,7 +9,7 @@ const PrivateMarket = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src={`${process.env.PUBLIC_URL}/images/banners/Private-Market.jpg`}
+              src={`${process.env.PUBLIC_URL}/images/banners/Private Market.jpg`}
               alt="banner-img"
             />
 
@@ -24,13 +24,13 @@ const PrivateMarket = () => {
                   and infrastructure, resulting in a broader progressive impact
                   within Asia.
                 </p> */}
-                <NavLink
+                {/* <NavLink
                   to="/private-market/piper-serica-angel-fund"
                   className="banner-btn"
                 >
                   AIF Fund
                   <i className="fa-solid fa-arrow-right"></i>
-                </NavLink>
+                </NavLink> */}
               </div>
             </div>
           </div>
@@ -54,7 +54,7 @@ const PrivateMarket = () => {
           <div className="col-lg-7 mt-lg-0 mt-5">
             <div className="investment-solution-img pb-5 pt-lg-5 pt-0">
               <img
-                src={`${process.env.PUBLIC_URL}/images/banners/market-fund1.webp`}
+                src={`${process.env.PUBLIC_URL}/images/banners/Angel Fund (AIF).jpg`}
                 alt="market-fund"
                 className="w-100"
               />

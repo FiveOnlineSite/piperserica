@@ -109,7 +109,7 @@ const Startup = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src={`${process.env.PUBLIC_URL}/images/banners/Startup-Founder.jpg`}
+              src={`${process.env.PUBLIC_URL}/images/banners/Startup Founder.jpg`}
               alt="banner-img"
             />
 
@@ -117,7 +117,7 @@ const Startup = () => {
               <div className="container">
                 {/* <h6 className="banner-subtitle">Creating Meaningful Change</h6> */}
                 <h1 className="banner-title">
-                  All-weather, purposeful investment strategies
+                  Shaping the future. Empowering next-gen enterprises
                 </h1>
                 {/* <p className="banner-para">
                               Our commitment to making a positive impact drives everything
@@ -203,7 +203,7 @@ const Startup = () => {
         </div>
       </section>
 
-      <section className="why-us-section">
+      <section className="why-us-section startup-why-section">
         <div className="container">
           <div className="desktop-row">
             <div className="row">
@@ -212,7 +212,7 @@ const Startup = () => {
                   <NavLink to="/">
                     <div className="why-us-content">
                       <h2 className="banner-title why-content-main-title">
-                        Value added partners:
+                        Value added partners
                       </h2>
                       <h6 className="read-more">
                         Read More <i className="fa-solid fa-plus"></i>
@@ -225,7 +225,7 @@ const Startup = () => {
                       </h6>
 
                       <h4 className="why-content-title">
-                        Value added partners:
+                        Value added partners
                       </h4>
                       <p className="para why-para">
                         Our founders look at us as value added partners beyond
@@ -243,7 +243,7 @@ const Startup = () => {
                   <NavLink to="/">
                     <div className="why-us-content">
                       <h2 className="banner-title why-content-main-title">
-                        Network:
+                        Network
                       </h2>
                       <h6 className="read-more">
                         Read More <i className="fa-solid fa-plus"></i>
@@ -255,7 +255,7 @@ const Startup = () => {
                         Why us
                       </h6>
 
-                      <h4 className="why-content-title">Network:</h4>
+                      <h4 className="why-content-title">Network</h4>
                       <p className="para why-para">
                         We believe that the biggest help we bring to the
                         founders is our extensive network that spans many
@@ -272,7 +272,7 @@ const Startup = () => {
                   <NavLink to="/">
                     <div className="why-us-content">
                       <h2 className="banner-title why-content-main-title">
-                        Founder first approach:
+                        Founder first approach
                       </h2>
                       <h6 className="read-more">
                         Read More <i className="fa-solid fa-plus"></i>
@@ -285,7 +285,7 @@ const Startup = () => {
                       </h6>
 
                       <h4 className="why-content-title">
-                        Founder first approach:
+                        Founder first approach
                       </h4>
                       <p className="para why-para">
                         We love to get in the trenches with the founders and

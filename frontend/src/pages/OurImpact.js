@@ -17,7 +17,7 @@ const OurImpact = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src={`${process.env.PUBLIC_URL}/images/banners/Our-Impact.jpg`}
+              src={`${process.env.PUBLIC_URL}/images/banners/Our Impact.jpg`}
               alt="banner-img"
             />
 

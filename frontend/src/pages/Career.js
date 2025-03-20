@@ -267,7 +267,7 @@ const Career = () => {
               Grow in a culture of innovation, collaboration, and excellence
             </h3>
 
-            <p className="para medium-para mt-lg-4 mt-4">
+            <p className="para medium-para mt-lg-4 mt-4 justify-para">
               At Piper Serica, we foster a dynamic and collaborative work
               environment where innovation, integrity, and passion drive our
               success. Our team thrives on intellectual curiosity, analytical
@@ -474,13 +474,13 @@ const Career = () => {
         <div className="container">
           <div className="row">
             <div className="col-lg-10">
-              <h6 className="section-subtitle">Get in touch</h6>
-              <h2 className="section-title mt-lg-3 mt-4">Let's Talk</h2>
-              <p className="para small-para">
+              {/* <h6 className="section-subtitle">Get in touch</h6> */}
+              <h2 className="section-title mt-lg-3 mt-4">Join The Team</h2>
+              {/* <p className="para small-para">
                 Our global team of specialists is available to help with your
                 enquiry. Please provide us more details of what we can help with
                 and a member of the team will be in touch.
-              </p>
+              </p> */}
               <form ref={formRef} onSubmit={handleSubmit}>
                 <div className="row mt-5">
                   <div className="col-lg-6">
@@ -582,7 +582,10 @@ const Career = () => {
                           <i>
                             *By submitting the contact form, you consent to all
                             data in the form being used in accordance with
-                            <a href="#"> Piper Serics's data privacy policy</a>
+                            <NavLink to="/privacy-policy">
+                              {" "}
+                              Piper Serics's data privacy policy
+                            </NavLink>
                           </i>
                         </p>
                       </div>

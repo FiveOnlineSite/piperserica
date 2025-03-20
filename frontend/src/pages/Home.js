@@ -58,11 +58,13 @@ const Home = () => {
                                 <h5>Foreign Investor</h5>
                                 <i className="fa-solid fa-arrow-right"></i>
                               </div>
-                              {/* <p>
-                                Piper Serica is a long-only active equity asset
-                                manager that traverses various strategies of
-                                equity investment in India.
-                              </p> */}
+                              <p>
+                                Our offshore fund provides foreign investors
+                                access to high-growth Indian companies,
+                                leveraging on-ground expertise and a focused
+                                portfolio to capitalize on India’s emerging
+                                market potential.
+                              </p>
                             </div>
                           </NavLink>
                         </div>
@@ -77,11 +79,13 @@ const Home = () => {
                                 <h5>NRI Investor</h5>
                                 <i className="fa-solid fa-arrow-right"></i>
                               </div>
-                              {/* <p>
-                                Piper Serica is a long-only active equity asset
-                                manager that traverses various strategies of
-                                equity investment in India.
-                              </p> */}
+                              <p>
+                                Invest in India with an experienced on-ground
+                                manager delivering strong risk-adjusted returns.
+                                Choose INR or USD investments for strategic
+                                access to one of the world’s fastest-growing
+                                markets with expert guidance.
+                              </p>
                             </div>
                           </NavLink>
                         </div>
@@ -99,11 +103,14 @@ const Home = () => {
                                 <h5>Family Office & Indian Investor</h5>
                                 <i className="fa-solid fa-arrow-right"></i>
                               </div>
-                              {/* <p>
-                                Piper Serica is a long-only active equity asset
-                                manager that traverses various strategies of
-                                equity investment in India.
-                              </p> */}
+                              <p>
+                                Our onshore PMS provides corporate and Indian
+                                investors a transparent, disciplined strategy
+                                for sustainable wealth growth, maximizing
+                                returns through expert guidance and strategic
+                                portfolio allocation for long-term financial
+                                success.
+                              </p>
                             </div>
                           </NavLink>
                         </div>
@@ -121,11 +128,14 @@ const Home = () => {
                                 <h5>Startup Founder & Entrepreneur</h5>
                                 <i className="fa-solid fa-arrow-right"></i>
                               </div>
-                              {/* <p>
-                                The Fund invests in early-stage companies that
-                                have developed a proprietary deep IP / deep tech
-                                and is in the early stage of commercialization.
-                              </p> */}
+                              <p>
+                                As a founder-led company, we deeply understand
+                                innovation, scaling, and the challenges startups
+                                navigate today. Beyond capital, we provide
+                                hands-on support and strategic guidance to
+                                empower founders in building thriving,
+                                successful businesses.
+                              </p>
                             </div>
                           </NavLink>
                         </div>

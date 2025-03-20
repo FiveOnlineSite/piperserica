@@ -142,10 +142,10 @@ const SubscribeLetter = () => {
                             <i>
                               *By submitting the contact form, you consent to
                               all data in the form being used in accordance with
-                              <a href="#">
+                              <NavLink to="/privacy-policy">
                                 {" "}
                                 Piper Serics's data privacy policy
-                              </a>
+                              </NavLink>
                             </i>
                           </p>
                         </div>

@@ -153,7 +153,7 @@ const CompanySlider = () => {
     },
     {
       id: 17,
-      src: "/images/industries/comp-16.jgp",
+      src: "/images/industries/freed-logo.png",
       label: "FINTECH",
       name: "Freed",
       description:
@@ -205,6 +205,24 @@ const CompanySlider = () => {
         "Rupeeflo is a fintech platform specifically designed for Non-Resident Indians (NRIs) to manage their financial needs seamlessly across borders through a comprehensive suite of banking and wealth management products.",
       link: "https://www.rupeeflo.com/",
     },
+    {
+      id: 23,
+      src: "/images/industries/Xovian.png",
+      label: "SPACETECH",
+      name: "Xovian Aerospace",
+      description:
+        "Xovian Aerospace - specializing in deploying radio-based nanosatellite infrastructure to provide real-time geospatial (GEOINT) and signal intelligence (SIGINT) data empowering industries and governments with actionable insights for informed decision-making. ",
+      link: "https://www.xovian.co.in/",
+    },
+    {
+      id: 24,
+      src: "/images/industries/Contineu AI.jpg",
+      label: "FINTECH",
+      name: "ContineuAI",
+      description:
+        "ContineuAI has developed a next-generation solution designed specifically for the construction industry, with artificial intelligence at its core using Computer Vision and Large Language Models (LLMs) to automate data collection, consolidation, and analysis. ",
+      link: "https://contineu.ai/",
+    },
   ];
 
   const [showModal, setShowModal] = useState(false);
@@ -233,7 +251,7 @@ const CompanySlider = () => {
     autoplaySpeed: 0, // Eliminates delay
     speed: 8000, // Controls scroll speed (increase for slower scrolling)
     cssEase: "linear", // Ensures continuous smooth motion
-    slidesToShow: 4, // 4 columns
+    slidesToShow: 5, // 4 columns
     slidesToScroll: 1, // Scroll one item at a time for smooth effect
     // rows: 2, // 2 rows
     // slidesPerRow: 1, // Each slide takes 1 column
