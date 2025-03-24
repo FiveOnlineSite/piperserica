@@ -214,39 +214,6 @@ const Investor = () => {
           <div className="desktop-row">
             <div className="row">
               <div className="col-lg-4">
-                <div className="why-us-div ">
-                  <NavLink to="/">
-                    <div className="why-us-content">
-                      <h2 className="banner-title why-content-main-title">
-                        Focus on risk-adjusted returns:
-                      </h2>
-                      <h6 className="read-more">
-                        Read More <i className="fa-solid fa-plus"></i>
-                      </h6>
-                    </div>
-
-                    <div className="why-content-para">
-                      <h6 className="section-subtitle why-content-subtitle">
-                        Why us
-                      </h6>
-
-                      <h4 className="why-content-title">
-                        Focus on risk-adjusted returns:
-                      </h4>
-                      <p className="para why-para">
-                        We focus not only on returns but also the systemic and
-                        non-systemic risks while building our model portfolio.
-                        We have built strict guard rails of risk metrics that
-                        have helped us deliver steady long-term returns. Our
-                        Portfolio Management Process is devoid of human biases
-                        due to highly objective decision making processes that
-                        we have developed over three decades.
-                      </p>
-                    </div>
-                  </NavLink>
-                </div>
-              </div>
-              <div className="col-lg-4">
                 <div className="why-us-div">
                   <NavLink to="/">
                     <div className="why-us-content">
