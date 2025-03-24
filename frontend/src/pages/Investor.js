@@ -65,7 +65,7 @@ const Investor = () => {
       funds_list: [
         //  Add a key for the array
         {
-          funds: "Piper Serica Numero Uno India Fund",
+          funds: "Piper Serica Numero Uno India Fund (Offshore Fund)",
           link: "/public-market/piper-serica-nemero-uno-india-fund",
         },
       ],
@@ -78,7 +78,7 @@ const Investor = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src={`${process.env.PUBLIC_URL}/images/banners/Foreign-Investor.jpg`}
+              src={`${process.env.PUBLIC_URL}/images/banners/Foreign Investor.jpg`}
               alt="banner-img"
             />
 
@@ -86,7 +86,8 @@ const Investor = () => {
               <div className="container">
                 {/* <h6 className="banner-subtitle">Creating Meaningful Change</h6> */}
                 <h1 className="banner-title">
-                  All-weather, purposeful investment strategies
+                  Depth, discipline, and patience — the pillars of lasting
+                  wealth.
                 </h1>
                 {/* <p className="banner-para">
                   Our commitment to making a positive impact drives everything
@@ -208,11 +209,43 @@ const Investor = () => {
         </div>
       </section>
 
-      <section className="why-us-section">
+      <section className="why-us-section foreign-why-section">
         <div className="container">
           <div className="desktop-row">
             <div className="row">
-            
+              <div className="col-lg-4">
+                <div className="why-us-div ">
+                  <NavLink to="/">
+                    <div className="why-us-content">
+                      <h2 className="banner-title why-content-main-title">
+                        Focus on risk-adjusted returns:
+                      </h2>
+                      <h6 className="read-more">
+                        Read More <i className="fa-solid fa-plus"></i>
+                      </h6>
+                    </div>
+
+                    <div className="why-content-para">
+                      <h6 className="section-subtitle why-content-subtitle">
+                        Why us
+                      </h6>
+
+                      <h4 className="why-content-title">
+                        Focus on risk-adjusted returns:
+                      </h4>
+                      <p className="para why-para">
+                        We focus not only on returns but also the systemic and
+                        non-systemic risks while building our model portfolio.
+                        We have built strict guard rails of risk metrics that
+                        have helped us deliver steady long-term returns. Our
+                        Portfolio Management Process is devoid of human biases
+                        due to highly objective decision making processes that
+                        we have developed over three decades.
+                      </p>
+                    </div>
+                  </NavLink>
+                </div>
+              </div>
               <div className="col-lg-4">
                 <div className="why-us-div">
                   <NavLink to="/">
@@ -291,7 +324,7 @@ const Investor = () => {
                   <NavLink to="/">
                     <div className="why-us-content">
                       <h2 className="banner-title why-content-main-title">
-                        Investor Friendliness:
+                        Investor Friendliness
                       </h2>
                       <h6 className="read-more">
                         Read More <i className="fa-solid fa-plus"></i>
@@ -304,7 +337,7 @@ const Investor = () => {
                       </h6>
 
                       <h4 className="why-content-title">
-                        Investor Friendliness:
+                        Investor Friendliness
                       </h4>
                       <p className="para why-para">
                         We love to communicate with our investors on a regular
@@ -326,6 +359,59 @@ const Investor = () => {
               {/* Accordion Item 1 */}
               <div
                 className={`accordion-item ${
+                  openAccordion === 0 ? "bordered" : ""
+                }`} // Conditionally apply the 'bordered' class
+              >
+                <h2
+                  className={`accordion-header ${
+                    openAccordion === 0 ? "d-none" : ""
+                  }`}
+                >
+                  Focus on risk-adjusted returns:
+                </h2>
+                <div
+                  id="collapseOne"
+                  className={`accordion-collapse collapse ${
+                    openAccordion === 0 ? "show" : ""
+                  }`}
+                  data-bs-parent="#accordionExample"
+                >
+                  <div className="accordion-body">
+                    <div className="why-content-para">
+                      <h6 className="section-subtitle why-content-subtitle">
+                        Why us
+                      </h6>
+                      <h4 className="why-content-title">
+                        Focus on risk-adjusted returns:
+                      </h4>
+                      <p className="para why-para">
+                        We focus not only on returns but also the systemic and
+                        non-systemic risks while building our model portfolio.
+                        We have built strict guard rails of risk metrics that
+                        have helped us deliver steady long-term returns. Our
+                        Portfolio Management Process is devoid of human biases
+                        due to highly objective decision making processes that
+                        we have developed over three decades.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  className={`accordion-button ${
+                    openAccordion === 0 ? "" : "collapsed"
+                  }`}
+                  type="button"
+                  onClick={() => toggleAccordion(0)}
+                  aria-expanded={openAccordion === 0 ? "true" : "false"}
+                  aria-controls="collapseOne"
+                >
+                  {openAccordion === 0 ? "Read Less" : "Read More"}
+                </button>
+              </div>
+
+              {/* Accordion Item 2 */}
+              <div
+                className={`accordion-item ${
                   openAccordion === 1 ? "bordered" : ""
                 }`} // Conditionally apply the 'bordered' class
               >
@@ -334,7 +420,7 @@ const Investor = () => {
                     openAccordion === 1 ? "d-none" : ""
                   }`}
                 >
-                  Research Process:
+                  Research Process
                 </h2>
                 <div
                   id="collapseTwo"
@@ -348,7 +434,7 @@ const Investor = () => {
                       <h6 className="section-subtitle why-content-subtitle">
                         Why us
                       </h6>
-                      <h4 className="why-content-title">Research Process:</h4>
+                      <h4 className="why-content-title">Research Process</h4>
                       <p className="para why-para">
                         We have a very strong on-ground research presence which
                         is required to be successful in an Emerging Market like
@@ -446,7 +532,7 @@ const Investor = () => {
                     openAccordion === 2 ? "d-none" : ""
                   }`}
                 >
-                  Investor Friendliness:
+                  Investor Friendliness
                 </h2>
                 <div
                   id="collapseThree"
@@ -461,7 +547,7 @@ const Investor = () => {
                         Why us
                       </h6>
                       <h4 className="why-content-title">
-                        Investor Friendliness:
+                        Investor Friendliness
                       </h4>
                       <p className="para why-para">
                         We love to communicate with our investors on a regular
@@ -564,7 +650,7 @@ const Investor = () => {
       <section className="outlook-section">
         <div className="container">
           <div className="row align-items-center">
-            <h5 className="section-subtitle">Outlook</h5>
+            <h5 className="section-subtitle">Updates</h5>
             <div className="row align-items-center">
               <div className="col-lg-6">
                 <h2 className="banner-title offerings-title mt-3">

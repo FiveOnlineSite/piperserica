@@ -93,7 +93,7 @@ const NewsArticle = () => {
           <div className="row">
             {newsItems.map((item, index) => (
               <div
-                className="col-lg-4 col-md-6 col-12 mt-lg-0 mt-md-3 mt-5"
+                className="col-lg-3 col-md-6 col-12 mt-lg-0 mt-md-3 mt-5"
                 key={index}
               >
                 <NavLink to={item.link} target="_blank">

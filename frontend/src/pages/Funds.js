@@ -12,14 +12,14 @@ const Funds = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src={`${process.env.PUBLIC_URL}/images/banners/angel-fund.jpeg`}
+              src={`${process.env.PUBLIC_URL}/images/banners/Angel Fund (AIF).jpg`}
               alt="banner-img"
             />
 
             <div className="banner-content-div">
               <div className="container">
-                {/* <h6 className="banner-subtitle">Private market funds</h6> */}
-                <h1 className="banner-title"> Piper Serica Angel Fund</h1>
+                <h6 className="banner-subtitle">CAT-1 AIF</h6>
+                <h1 className="banner-title">Piper Serica Angel Fund</h1>
                 {/* <p className="banner-para">Capital to scale</p> */}
               </div>
             </div>
@@ -55,7 +55,7 @@ const Funds = () => {
           <div className="row justify-content-center">
             <div className="col-lg-12">
               <div className="row">
-                <div className="col-lg-4">
+                {/* <div className="col-lg-4">
                   <div className="facts-div">
                     <h2 className="facts-title">22</h2>
                     <h6 className="para">Companies</h6>
@@ -66,10 +66,10 @@ const Funds = () => {
                     <h2 className="facts-title">INR 300 Cr</h2>
                     <h6 className="para">Fund Size</h6>
                   </div>
-                </div>
+                </div> */}
                 <div className="col-lg-4 mt-lg-0 mt-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">000</h2>
+                    <h2 className="facts-title">1.8x</h2>
                     <h6 className="para">MOIC</h6>
                   </div>
                 </div>
@@ -374,7 +374,7 @@ const Funds = () => {
 
       <CompanyPortfolio />
 
-      <section className="fund-info-section mb-0">
+      {/* <section className="fund-info-section mb-0">
         <div className="container">
           <div className="row">
             <div className="col-lg-5">
@@ -445,7 +445,7 @@ const Funds = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <StickyContact title="Want to know more about Piper Serica Angel Fund?" />
     </Layout>

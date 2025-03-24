@@ -82,13 +82,13 @@ const PublicFund = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src={`${process.env.PUBLIC_URL}/images/banners/Nemero-Uno-(FPI).jpg`}
+              src={`${process.env.PUBLIC_URL}/images/banners/Nemero Uno (FPI).jpg`}
               alt="banner-img"
             />
 
             <div className="banner-content-div">
               <div className="container">
-                {/* <h6 className="banner-subtitle">Public market funds</h6> */}
+                <h6 className="banner-subtitle">Offshore Fund</h6>
                 <h1 className="banner-title">Piper Serica Numero Uno Fund</h1>
                 {/* <p className="banner-para">Capital to scale</p> */}
               </div>
@@ -375,7 +375,7 @@ const PublicFund = () => {
         </div>
       </section> */}
 
-      <section className="investor-letter-section">
+      {/* <section className="investor-letter-section">
         <div className="container">
           <div className="row align-items-center">
             <h5 className="section-subtitle">Download</h5>
@@ -394,7 +394,7 @@ const PublicFund = () => {
                     Explore
                   </NavLink>
                 </div> */}
-                <div className="row">
+      {/* <div className="row">
                   <NavLink to="/" target="_blank">
                     <div className="letter-div mb-4">
                       <h6>FPI Disclosure Document 1</h6>
@@ -415,7 +415,7 @@ const PublicFund = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <StickyContact title="Want to know more about Piper Serica Numero Uno India Fund?" />
     </Layout>

@@ -270,7 +270,7 @@ const InvestorLetter = () => {
         <div className="row">
           <div className="banner-img-div">
             <img
-              src={`${process.env.PUBLIC_URL}/images/banners/market-fund-banner.webp`}
+              src={`${process.env.PUBLIC_URL}/images/banners/Investor Letters.jpg`}
               alt="banner-img"
             />
 
@@ -322,7 +322,7 @@ const InvestorLetter = () => {
           </div>
           <div className="row">
             {filteredLetters.map((letter, index) => (
-              <div className="col-lg-4 col-md-6 col-12" key={index}>
+              <div className="col-lg-3 col-md-6 col-12" key={index}>
                 <NavLink
                   to={`${process.env.PUBLIC_URL}${letter.filepath}`}
                   target="_blank"

@@ -3,7 +3,7 @@ import { Modal } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
 const CompanyPortfolio = () => {
-  const [selectedIndustry, setSelectedIndustry] = useState("Industry");
+  const [selectedIndustry, setSelectedIndustry] = useState("All");
   const [selectedImage, setSelectedImage] = useState(null);
   const [showModal, setShowModal] = useState(false);
 
@@ -19,7 +19,7 @@ const CompanyPortfolio = () => {
     },
     {
       id: 2,
-      src: "/images/industries/comp-2.jpg",
+      src: "/images/industries/Crediwatch 2.jpg",
       label: "FINTECH",
       name: "Crediwatch",
       description:
@@ -46,7 +46,7 @@ const CompanyPortfolio = () => {
     },
     {
       id: 5,
-      src: "/images/industries/comp-5.png",
+      src: "/images/industries/Oditly - New Logo.jpg",
       label: "AI & SAAS",
       name: "Oditly",
       description:
@@ -82,7 +82,7 @@ const CompanyPortfolio = () => {
     },
     {
       id: 9,
-      src: "/images/industries/comp-9 (2).png",
+      src: "/images/industries/Floworks.png",
       label: "AI & SAAS",
       name: "FloWorks",
       description:
@@ -145,7 +145,7 @@ const CompanyPortfolio = () => {
     },
     {
       id: 16,
-      src: "/images/industries/comp-22.png",
+      src: "/images/industries/Flashaid.png",
       label: "FINTECH",
       name: "Flashaid",
       description:
@@ -154,7 +154,7 @@ const CompanyPortfolio = () => {
     },
     {
       id: 17,
-      src: "/images/industries/comp-16.jpg",
+      src: "/images/industries/Freed 2.jpg",
       label: "FINTECH",
       name: "Freed",
       description:
@@ -172,7 +172,7 @@ const CompanyPortfolio = () => {
     },
     {
       id: 19,
-      src: "/images/industries/comp-18.jpg",
+      src: "/images/industries/Six Sense Mobility 2.jpg",
       label: "ADVANCE ELECTRONIC",
       name: "Six Sense Mobility",
       description:
@@ -199,12 +199,30 @@ const CompanyPortfolio = () => {
     },
     {
       id: 22,
-      src: "/images/industries/comp-21.jpg",
+      src: "/images/industries/Rupeeflo 3.png",
       label: "FINTECH",
       name: "Rupeeflo",
       description:
         "Rupeeflo is a fintech platform specifically designed for Non-Resident Indians (NRIs) to manage their financial needs seamlessly across borders through a comprehensive suite of banking and wealth management products.",
       link: "https://www.rupeeflo.com/",
+    },
+    {
+      id: 23,
+      src: "/images/industries/Xovian.png",
+      label: "SPACETECH",
+      name: "Xovian Aerospace",
+      description:
+        "Xovian Aerospace - specializing in deploying radio-based nanosatellite infrastructure to provide real-time geospatial (GEOINT) and signal intelligence (SIGINT) data empowering industries and governments with actionable insights for informed decision-making. ",
+      link: "https://www.xovian.co.in/",
+    },
+    {
+      id: 24,
+      src: "/images/industries/Contineu AI.jpg",
+      label: "FINTECH",
+      name: "ContineuAI",
+      description:
+        "ContineuAI has developed a next-generation solution designed specifically for the construction industry, with artificial intelligence at its core using Computer Vision and Large Language Models (LLMs) to automate data collection, consolidation, and analysis. ",
+      link: "https://contineu.ai/",
     },
   ];
 
@@ -221,7 +239,7 @@ const CompanyPortfolio = () => {
   };
 
   const getFilteredImages = () => {
-    if (selectedIndustry === "Industry" || selectedIndustry === "") {
+    if (selectedIndustry === "All" || selectedIndustry === "") {
       return images; // Show all images if no specific industry is selected
     }
     return images.filter((image) => image.label === selectedIndustry);
@@ -255,17 +273,17 @@ const CompanyPortfolio = () => {
                   onChange={handleFilterChange}
                   aria-label="Default select example"
                 >
-                  <option selected>Industry</option>
-                  <option value="ELECTRIC VEHICLE">ELECTRIC VEHICLE</option>
+                  <option selected>All</option>
                   <option value="ADVANCE ELECTRONIC">ADVANCE ELECTRONIC</option>
-                  <option value="SUPPLY CHAIN TECH">SUPPLY CHAIN TECH</option>
-                  <option value="CONSUMER TECH">CONSUMER TECH</option>
-                  <option value="SPACETECH">SPACETECH</option>
                   <option value="AI & SAAS">AI & SAAS</option>
+                  <option value="CONSUMER TECH">CONSUMER TECH</option>
                   <option value="CYBER SECURITY & CHIP DESIGN">
                     CYBER SECURITY & CHIP DESIGN
                   </option>
+                  <option value="ELECTRIC VEHICLE">ELECTRIC VEHICLE</option>
                   <option value="FINTECH">FINTECH</option>
+                  <option value="SPACETECH">SPACETECH</option>
+                  <option value="SUPPLY CHAIN TECH">SUPPLY CHAIN TECH</option>
                 </select>
               </div>
             </div>

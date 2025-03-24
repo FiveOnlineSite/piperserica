@@ -18,7 +18,7 @@ const CompanySlider = () => {
     },
     {
       id: 2,
-      src: "/images/industries/comp-2.jpg",
+      src: "/images/industries/Crediwatch 2.jpg",
       label: "FINTECH",
       name: "Crediwatch",
       description:
@@ -45,7 +45,7 @@ const CompanySlider = () => {
     },
     {
       id: 5,
-      src: "/images/industries/comp-5.png",
+      src: "/images/industries/Oditly - New Logo.jpg",
       label: "AI & SAAS",
       name: "Oditly",
       description:
@@ -81,7 +81,7 @@ const CompanySlider = () => {
     },
     {
       id: 9,
-      src: "/images/industries/comp-9 (2).png",
+      src: "/images/industries/Floworks.png",
       label: "AI & SAAS",
       name: "FloWorks",
       description:
@@ -144,7 +144,7 @@ const CompanySlider = () => {
     },
     {
       id: 16,
-      src: "/images/industries/comp-22.png",
+      src: "/images/industries/Flashaid.png",
       label: "FINTECH",
       name: "Flashaid",
       description:
@@ -153,7 +153,7 @@ const CompanySlider = () => {
     },
     {
       id: 17,
-      src: "/images/industries/comp-16.jgp",
+      src: "/images/industries/Freed 2.jpg",
       label: "FINTECH",
       name: "Freed",
       description:
@@ -171,7 +171,7 @@ const CompanySlider = () => {
     },
     {
       id: 19,
-      src: "/images/industries/comp-18.jpg",
+      src: "/images/industries/Six Sense Mobility 2.jpg",
       label: "ADVANCE ELECTRONIC",
       name: "Six Sense Mobility",
       description:
@@ -198,12 +198,30 @@ const CompanySlider = () => {
     },
     {
       id: 22,
-      src: "/images/industries/comp-21.jpg",
+      src: "/images/industries/Rupeeflo 3.png",
       label: "FINTECH",
       name: "Rupeeflo",
       description:
         "Rupeeflo is a fintech platform specifically designed for Non-Resident Indians (NRIs) to manage their financial needs seamlessly across borders through a comprehensive suite of banking and wealth management products.",
       link: "https://www.rupeeflo.com/",
+    },
+    {
+      id: 23,
+      src: "/images/industries/Xovian.png",
+      label: "SPACETECH",
+      name: "Xovian Aerospace",
+      description:
+        "Xovian Aerospace - specializing in deploying radio-based nanosatellite infrastructure to provide real-time geospatial (GEOINT) and signal intelligence (SIGINT) data empowering industries and governments with actionable insights for informed decision-making. ",
+      link: "https://www.xovian.co.in/",
+    },
+    {
+      id: 24,
+      src: "/images/industries/Contineu AI.jpg",
+      label: "FINTECH",
+      name: "ContineuAI",
+      description:
+        "ContineuAI has developed a next-generation solution designed specifically for the construction industry, with artificial intelligence at its core using Computer Vision and Large Language Models (LLMs) to automate data collection, consolidation, and analysis. ",
+      link: "https://contineu.ai/",
     },
   ];
 
@@ -233,7 +251,7 @@ const CompanySlider = () => {
     autoplaySpeed: 0, // Eliminates delay
     speed: 8000, // Controls scroll speed (increase for slower scrolling)
     cssEase: "linear", // Ensures continuous smooth motion
-    slidesToShow: 4, // 4 columns
+    slidesToShow: 5, // 4 columns
     slidesToScroll: 1, // Scroll one item at a time for smooth effect
     // rows: 2, // 2 rows
     // slidesPerRow: 1, // Each slide takes 1 column
