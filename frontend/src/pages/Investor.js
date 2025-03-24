@@ -359,59 +359,6 @@ const Investor = () => {
               {/* Accordion Item 1 */}
               <div
                 className={`accordion-item ${
-                  openAccordion === 0 ? "bordered" : ""
-                }`} // Conditionally apply the 'bordered' class
-              >
-                <h2
-                  className={`accordion-header ${
-                    openAccordion === 0 ? "d-none" : ""
-                  }`}
-                >
-                  Focus on risk-adjusted returns:
-                </h2>
-                <div
-                  id="collapseOne"
-                  className={`accordion-collapse collapse ${
-                    openAccordion === 0 ? "show" : ""
-                  }`}
-                  data-bs-parent="#accordionExample"
-                >
-                  <div className="accordion-body">
-                    <div className="why-content-para">
-                      <h6 className="section-subtitle why-content-subtitle">
-                        Why us
-                      </h6>
-                      <h4 className="why-content-title">
-                        Focus on risk-adjusted returns:
-                      </h4>
-                      <p className="para why-para">
-                        We focus not only on returns but also the systemic and
-                        non-systemic risks while building our model portfolio.
-                        We have built strict guard rails of risk metrics that
-                        have helped us deliver steady long-term returns. Our
-                        Portfolio Management Process is devoid of human biases
-                        due to highly objective decision making processes that
-                        we have developed over three decades.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <button
-                  className={`accordion-button ${
-                    openAccordion === 0 ? "" : "collapsed"
-                  }`}
-                  type="button"
-                  onClick={() => toggleAccordion(0)}
-                  aria-expanded={openAccordion === 0 ? "true" : "false"}
-                  aria-controls="collapseOne"
-                >
-                  {openAccordion === 0 ? "Read Less" : "Read More"}
-                </button>
-              </div>
-
-              {/* Accordion Item 2 */}
-              <div
-                className={`accordion-item ${
                   openAccordion === 1 ? "bordered" : ""
                 }`} // Conditionally apply the 'bordered' class
               >
@@ -466,9 +413,9 @@ const Investor = () => {
                   {openAccordion === 1 ? "Read Less" : "Read More"}
                 </button>
               </div>
-              
 
               {/* Accordion Item 2 */}
+             
               <div
                 className={`accordion-item ${
                   openAccordion === 0 ? "bordered" : ""
