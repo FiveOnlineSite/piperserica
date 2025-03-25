@@ -3,13 +3,6 @@ import Layout from "../components/Layout";
 import { NavLink, useLocation } from "react-router-dom";
 
 const About = () => {
-  const [activeTab, setActiveTab] = useState("fourteen");
-
-  const handleTabClick = (tab, event) => {
-    event.preventDefault(); // Prevent the default anchor link behavior
-    setActiveTab(tab);
-  };
-
   const [openAccordion, setOpenAccordion] = useState(0);
 
   // Toggle function for each accordion item
@@ -129,6 +122,30 @@ const About = () => {
       event.preventDefault(); // Prevent scrolling when already at the target section
     }
   };
+
+  const [activeTab, setActiveTab] = useState("fourteen");
+  const [gifSources, setGifSources] = useState({
+    fourteen: "/images/history/Getway-of-India-2004-GIF.gif",
+    fifteen: "/images/history/Target-2015-GIF.gif",
+    nineteen: "/images/history/UpArrow-2019-GIF.gif",
+    twenty: "/images/history/Globe-2020-GIF.gif",
+    "twenty-two": "/images/history/Rocket-2024-GIF.gif",
+  });
+
+  const handleTabClick = (tab, event) => {
+    event.preventDefault();
+    setActiveTab(tab);
+
+    // Reload all GIFs by appending a timestamp
+    setGifSources((prevSources) => {
+      const updatedSources = {};
+      Object.keys(prevSources).forEach((key) => {
+        updatedSources[key] = `${prevSources[key]}?t=${Date.now()}`;
+      });
+      return updatedSources;
+    });
+  };
+
   return (
     <Layout>
       <section className="banner-section" id="banner-div">
@@ -370,7 +387,7 @@ const About = () => {
                       </div>
                       <div className="history-line-chart">
                         <img
-                          src="/images/history/1. Getway of India - 2004 - Blue.png"
+                          src={gifSources.fourteen}
                           className="w-100"
                           alt="history-img"
                         />
@@ -404,7 +421,7 @@ const About = () => {
                       </div>
                       <div className="history-line-chart">
                         <img
-                          src="/images/history/2. Target - 2015 - Blue.png"
+                          src={gifSources.fifteen}
                           className="w-100"
                           alt="history-img"
                         />
@@ -439,7 +456,7 @@ const About = () => {
                       </div>
                       <div className="history-line-chart">
                         <img
-                          src="/images/history/3. Arrows - 2019 - Blue.png"
+                          src={gifSources.nineteen}
                           className="w-100"
                           alt="history-img"
                         />
@@ -472,7 +489,7 @@ const About = () => {
                       </div>
                       <div className="history-line-chart">
                         <img
-                          src="/images/history/4. Globe - 2020 - Blue.png"
+                          src={gifSources.twenty}
                           className="w-100"
                           alt="history-img"
                         />
@@ -505,7 +522,7 @@ const About = () => {
                       </div>
                       <div className="history-line-chart">
                         <img
-                          src="/images/history/5. Rocket - 2022 - Blue.png"
+                          src={gifSources["twenty-two"]}
                           className="w-100"
                           alt="history-img"
                         />
