@@ -297,8 +297,7 @@ const Contact = () => {
                   >
                     <i className="fa-solid fa-location-dot"></i>
                     <p className="para small-para">
-                      Marathon Innova Nextgen, A Wing, 905/906, Ganpatrao Kadam
-                      Marg, Lower Parel, Mumbai, Maharashtra 400013
+                    Office No. 905 & 906, A Wing, Marathon Innova Nextgen, Ganpatrao Kadam Marg, Lower Parel, Mumbai – 400013
                     </p>
                   </NavLink>
                 </div>

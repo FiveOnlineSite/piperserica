@@ -240,7 +240,7 @@ const About = () => {
           <h6 className="section-subtitle">History</h6>
           <div className="row align-items-start">
             {/* <div className="col-lg-3"> */}
-            <h2 className="section-title mt-lg-3 mt-4">We've come so far!</h2>
+            {/* <h2 className="section-title mt-lg-3 mt-4">We've come so far!</h2> */}
             {/* </div> */}
             {/* <div className="col-lg-8 offset-lg-1 offset-0 mt-lg-0 mt-5">
               <div className="fund-content-div">
@@ -296,7 +296,7 @@ const About = () => {
             </div> */}
           </div>
 
-          <div className="row mt-5 history-row">
+          <div className="row mt-4 history-row">
             <div className="col-lg-2">
               <div className="year-tab-links">
                 <a
@@ -444,12 +444,10 @@ const About = () => {
                           </div>
                           <p className="para history-para">
                             {" "}
-                            We received the registration from the S we received
-                            the registration from the
+                            We received the registration from the 
                             <strong>
                               {" "}
-                              Securities and Exchange Board of India (SEBI) for
-                              launching Portfolio Management Service (PMS).
+                              Securities and Exchange Board of India (SEBI) for launching Portfolio Management Service (PMS).
                             </strong>
                           </p>
                         </div>

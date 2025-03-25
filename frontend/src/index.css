@@ -1035,13 +1035,13 @@ body {
 }
 
 .team-content .team-name {
-  font-size: 22px;
+  font-size: 24px;
   line-height: 32px;
 }
 
 .team-content .team-designation {
   font-family: "Public Sans", serif;
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 400;
   line-height: 25px;
   color: var(--gray-font);
@@ -1677,10 +1677,11 @@ body {
 .team-content {
   padding: 10px 20px;
   width: 100%;
-  background-color: var(--lighter-gray-bg);
+  /* background-color: var(--lighter-gray-bg); */
+  border-bottom: 1px solid var(--black-font);
   transition: all 0.6s ease;
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
-  border: 0.5px solid var(--light-gray-font);
+  /* border: 0.5px solid var(--light-gray-font); */
 }
 
 .team-content .section-subtitle {

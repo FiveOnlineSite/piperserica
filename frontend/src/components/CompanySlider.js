@@ -255,6 +255,7 @@ const CompanySlider = () => {
     slidesToScroll: 1, // Scroll one item at a time for smooth effect
     // rows: 2, // 2 rows
     // slidesPerRow: 1, // Each slide takes 1 column
+    centerPadding: '20px', 
     arrows: false, // Hides arrows for auto-scroll
     dots: false, // Hides dots for cleaner UI
     responsive: [

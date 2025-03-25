@@ -25,6 +25,18 @@ const Disclosure = () => {
     },
 
     {
+      date: "January 2024",
+      filepath: "/docs/",
+      filter_type: "Annual Return",
+    },
+
+    {
+      date: "January 2023",
+      filepath: "/docs/",
+      filter_type: "Annual Return",
+    },
+
+    {
       date: "January 2022",
       filepath: "/docs/2022-1-piper-serica-investor-letter-jan-2022-min.pdf",
       filter_type: "Annual Return",
