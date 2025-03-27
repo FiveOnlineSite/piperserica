@@ -77,7 +77,7 @@ const FamilyOffice = () => {
     <Layout>
       <section className="banner-section">
         <div className="row">
-          <div className="banner-img-div">
+          <div className="banner-img-div bann-img-height">
             <img
               src={`${process.env.PUBLIC_URL}/images/banners/Indian Investor.jpg`}
               alt="banner-img"
@@ -86,7 +86,7 @@ const FamilyOffice = () => {
             <div className="banner-content-div">
               <div className="container">
                 {/* <h6 className="banner-subtitle">Creating Meaningful Change</h6> */}
-                <h1 className="banner-title">Wisdom led wealth creation</h1>
+                <h1 className="banner-title ">Wisdom led wealth creation</h1>
                 {/* <p className="banner-para">
                         Our commitment to making a positive impact drives everything
                         we do. Through innovative solutions, community engagement, and
@@ -182,24 +182,27 @@ const FamilyOffice = () => {
               <div className="row">
                 <div className="col-lg-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">USD $3.7bn+</h2>
+                    <h2 className="facts-title">INR 1500 Cr+</h2>
                     <h6 className="para">
-                      Assets Under Management & Advisory
-                      <i> (as of 30 June 2024)</i>
+                    AUM
+                      {/* <i> (as of 30 June 2024)</i> */}
                     </h6>
                   </div>
                 </div>
                 <div className="col-lg-4 mt-lg-0 mt-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">160+</h2>
-                    <h6 className="para">Committed Professionals</h6>
+                    <h2 className="facts-title">1200+</h2>
+                    <h6 className="para">Investor Families</h6>
                   </div>
                 </div>
                 <div className="col-lg-4 mt-lg-0 mt-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">07</h2>
-                    <h6 className="para">Global Offices</h6>
+                    <h2 className="facts-title">19%+</h2>
+                    <h6 className="para">CAGR</h6>
                   </div>
+                </div>
+                <div className="col-12">
+                <p className="para-txt mt-2">Since Feb 2025</p>
                 </div>
               </div>
             </div>

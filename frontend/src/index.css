@@ -442,9 +442,9 @@ body {
 .banner-title {
   font-family: "Frank Ruhl Libre", serif;
   color: var(--white-bg);
-  font-size: 40px;
+  font-size: 50px;
   font-weight: 400;
-  width: 50%;
+  width: 60%;
   line-height: 50px;
 }
 
@@ -1048,7 +1048,7 @@ body {
 }
 
 .news-content-div h3 {
-  min-height: 180px;
+  min-height: 150px;
 }
 
 .news-content-div h6 {
@@ -1149,6 +1149,10 @@ body {
   width: 100%;
   object-fit: cover;
   filter: brightness(0.8);
+}
+
+.bann-img-height img{
+  height: 100vh;
 }
 
 .other-banner-div {
@@ -1642,10 +1646,15 @@ body {
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  border-bottom: 1px solid #000000;
 }
 
 .small-team-div {
   height: 350px;
+}
+.img-team-one{
+  height: 130px;
+ margin: 10px 0px;
 }
 
 .team-div img {
@@ -1682,7 +1691,7 @@ body {
   padding: 10px 20px;
   width: 100%;
   /* background-color: var(--lighter-gray-bg); */
-  border-bottom: 1px solid var(--black-font);
+  /* border-bottom: 1px solid var(--black-font); */
   transition: all 0.6s ease;
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   /* border: 0.5px solid var(--light-gray-font); */
@@ -1718,11 +1727,11 @@ body {
 }
 
 .our-commitment-tabs a h4 {
-  color: var(--gray-font);
+  color: #000000;
   font-family: "Frank Ruhl Libre", serif;
-  font-size: 20px;
+  font-size: 28px;
   line-height: 30px;
-  font-weight: 300;
+  font-weight: 400;
   text-align: center;
   padding-bottom: 20px;
   margin-bottom: 0;
@@ -2177,6 +2186,63 @@ form .form-label span {
   color: var(--black-font);
 }
 
+.para-txt {
+  color: gray;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 30px;
+  font-family: "Public Sans", serif;
+}
+
+/* accordin */
+.accordion .accordion-button::after {
+  display: none !important;
+}
+
+/* Custom accordion button */
+.accordion .accordion-item {
+  margin: 20px 0;
+  border-bottom: 1px solid #000000!important;
+}
+.accordion .custom-accordion-button {
+  background: none;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+.accordion .accord-title-one{
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--blue-font);
+}
+
+.accordion .accordion-button:not(.collapsed) {
+  padding: 0px!important;
+}
+.accordion .accordion-header {
+  padding-bottom:30px;
+}
+/* Custom Arrow */
+.accordion .custom-arrow {
+  transition: transform 0.3s ease;
+  color: var(--gray-font);
+}
+
+.accordion .rotate {
+  transform: rotate(180deg);
+}
+.accordion .accordion-body{
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--gray-font);
+}
+.sim-bg-ch{
+  background-color: #ffff;
+}
+
 @media screen and (max-width: 1024px) {
   .navbar-nav .nav-item {
     padding: 10px 12px;
@@ -2442,7 +2508,7 @@ form .form-label span {
   }
 
   .banner-title {
-    font-size: 30px;
+    font-size: 36px;
     line-height: 40px;
   }
 
@@ -2534,6 +2600,9 @@ form .form-label span {
   .banner-img-div img {
     height: 50vh;
   }
+  .bann-img-height img{
+    height: 100vh;
+  }
 
   .investor-banner-content {
     height: 50vh;
@@ -2542,6 +2611,15 @@ form .form-label span {
 
   .why-us-section {
     margin-top: 0;
+  }
+  .our-commitment-tabs {
+    border-bottom: none;
+  }
+  .our-commitment-tabs a{
+    display: block;
+  }
+  .our-commitment-tabs a h4{
+    margin-top: 15px;
   }
 }
 

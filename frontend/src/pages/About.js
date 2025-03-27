@@ -12,94 +12,94 @@ const About = () => {
 
   const teamContent = [
     {
-      image: "/images/team/Ajay-modi-560x560.jpeg",
-      name: "Ajay Modi",
-      linkedin_url: "/",
-      designation: "Team member",
+      image: "/images/team/abhay-agarwal-560x560.jpeg",
+      name: "Abhay Agarwal",
+      linkedin_url: "https://www.linkedin.com/in/abhay-agarwal-piper/",
+      designation: "Founder & Fund Manager",
+    },
+    {
+      image: "/images/team/rajni-560x560.jpeg",
+      name: "Rajni Agarwal",
+      linkedin_url: "https://www.linkedin.com/in/rajni-agarwal-99352218b/",
+      designation: "Director, Research",
     },
     {
       image: "/images/team/Ajay-modi-560x560.jpeg",
       name: "Ajay Modi",
-      linkedin_url: "/",
-      designation: "Team member",
+      linkedin_url: "https://www.linkedin.com/in/ajmodi/",
+      designation: "Director, Investments",
     },
     {
       image: "/images/team/Ajay-modi-560x560.jpeg",
-      name: "Ajay Modi",
-      linkedin_url: "/",
-      designation: "Team member",
+      name: "Rahul Chaudhari",
+      linkedin_url: "https://www.linkedin.com/in/rahulchaudhari73/",
+      designation: "Head - Finance & Operations",
     },
     {
       image: "/images/team/Ajay-modi-560x560.jpeg",
-      name: "Ajay Modi",
-      linkedin_url: "/",
-      designation: "Team member",
+      name: "Hardik Dua",
+      linkedin_url: "https://www.linkedin.com/in/hardik-dua/",
+      designation: "Associate",
     },
     {
       image: "/images/team/Ajay-modi-560x560.jpeg",
-      name: "Ajay Modi",
-      linkedin_url: "/",
-      designation: "Team member",
+      name: "Satyadeep Singh",
+      linkedin_url: "https://www.linkedin.com/in/thesatyadeepsingh/",
+      designation: "Associate",
     },
     {
       image: "/images/team/Ajay-modi-560x560.jpeg",
-      name: "Ajay Modi",
-      linkedin_url: "/",
-      designation: "Team member",
+      name: "Preet Malde",
+      linkedin_url: "https://www.linkedin.com/in/preet-malde-4a37991ba/",
+      designation: "Analyst",
     },
     {
       image: "/images/team/Ajay-modi-560x560.jpeg",
-      name: "Ajay Modi",
-      linkedin_url: "/",
-      designation: "Team member",
+      name: "Mukund Agarwal",
+      linkedin_url: "https://www.linkedin.com/in/mukundagarwal3/",
+      designation: "Analyst",
     },
     {
       image: "/images/team/Ajay-modi-560x560.jpeg",
-      name: "Ajay Modi",
-      linkedin_url: "/",
-      designation: "Team member",
+      name: "Akshay Kadam",
+      linkedin_url: "https://www.linkedin.com/in/akshay-kadam-98363525b/",
+      designation: "Senior Manager - Investor Relations",
     },
     {
       image: "/images/team/Ajay-modi-560x560.jpeg",
-      name: "Ajay Modi",
-      linkedin_url: "/",
-      designation: "Team member",
+      name: "Anuja Mohare",
+      linkedin_url: "https://www.linkedin.com/in/anuja-mohare-8a5150147/",
+      designation: "Senior Manager - Operations",
     },
     {
       image: "/images/team/Ajay-modi-560x560.jpeg",
-      name: "Ajay Modi",
-      linkedin_url: "/",
-      designation: "Team member",
+      name: "Yash Gandhi",
+      linkedin_url: "https://www.linkedin.com/in/yash-gandhi-28576a357/",
+      designation: "Manager - Finance & Operations",
     },
     {
       image: "/images/team/Ajay-modi-560x560.jpeg",
-      name: "Ajay Modi",
-      linkedin_url: "/",
-      designation: "Team member",
+      name: "Rahul Mishra",
+      linkedin_url: "https://www.linkedin.com/in/rahul-mishra02/",
+      designation: "Manager - Operations & Client Servicing",
     },
     {
       image: "/images/team/Ajay-modi-560x560.jpeg",
-      name: "Ajay Modi",
-      linkedin_url: "/",
-      designation: "Team member",
+      name: "Vishal Kudtarkar",
+      linkedin_url: "https://www.linkedin.com/in/vishal-kudtarkar-262273246/",
+      designation: "Assistant Manager - Finance",
     },
     {
       image: "/images/team/Ajay-modi-560x560.jpeg",
-      name: "Ajay Modi",
-      linkedin_url: "/",
-      designation: "Team member",
+      name: "Shubham Kumbhar",
+      linkedin_url: "https://www.linkedin.com/in/11shubhamk/",
+      designation: "Manager - Marketing",
     },
     {
       image: "/images/team/Ajay-modi-560x560.jpeg",
-      name: "Ajay Modi",
-      linkedin_url: "/",
-      designation: "Team member",
-    },
-    {
-      image: "/images/team/Ajay-modi-560x560.jpeg",
-      name: "Ajay Modi",
-      linkedin_url: "/",
-      designation: "Team member",
+      name: "Abhijit Gaonkar",
+      linkedin_url: "https://www.linkedin.com/in/abhijeet-gaonkar-446315339/",
+      designation: "Senior Manager - Administration",
     },
   ];
 
@@ -876,15 +876,15 @@ const About = () => {
         <div className="container">
           <h6 className="section-subtitle">Meet the team</h6>
           {/* <h2 className="section-title mt-lg-3 mt-4">The Driving Force</h2> */}
-          <div className="row mt-3 mb-5">
+          {/* <div className="row mt-3 mb-5">
             <div className="col-lg-4 col-md-6">
-              <div className="team-div">
+              <div className="team-div"> */}
                 {/* <img
                   src={`${process.env.PUBLIC_URL}/images/team/abhay-agarwal-560x560.jpeg`}
                   alt="team-img"
                   className="w-100"
                 /> */}
-                <div className="team-content">
+                {/* <div className="team-content">
                   <div className="team-title-div">
                     <h3 className="section-title team-name">Abhay Agarwal</h3>
                     <NavLink to="https://www.linkedin.com/in/abhay-agarwal-piper/">
@@ -898,13 +898,13 @@ const About = () => {
             </div>
 
             <div className="col-lg-4 col-md-6 mt-lg-0 mt-md-0 mt-4">
-              <div className="team-div">
+              <div className="team-div"> */}
                 {/* <img
                   src={`${process.env.PUBLIC_URL}/images/team/rajni-560x560.jpeg`}
                   alt="team-img"
                   className="w-100"
                 /> */}
-                <div className="team-content">
+                {/* <div className="team-content">
                   <div className="team-title-div">
                     <h3 className="section-title team-name">Rajni Agarwal</h3>
                     <NavLink to="https://www.linkedin.com/in/rajni-agarwal-99352218b/">
@@ -914,16 +914,16 @@ const About = () => {
                   <h5 className="team-designation">Director, Research</h5>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <div className="col-lg-4 col-md-6 mt-lg-0 mt-md-3 mt-4">
-              <div className="team-div">
+            {/* <div className="col-lg-4 col-md-6 mt-lg-0 mt-md-3 mt-4">
+              <div className="team-div"> */}
                 {/* <img
                   src={`${process.env.PUBLIC_URL}/images/team/Ajay-modi-560x560.jpeg`}
                   alt="team-img"
                   className="w-100"
                 /> */}
-                <div className="team-content">
+                {/* <div className="team-content">
                   <div className="team-title-div">
                     <h3 className="section-title team-name">Ajay Modi</h3>
                     <NavLink to="https://www.linkedin.com/in/ajmodi/">
@@ -934,18 +934,18 @@ const About = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
 
-          {/* <div className="row mb-5">
+          <div className="row mb-5">
             {teamContent.map((team, index) => (
               <div className="col-lg-3 col-md-6 col-12" key={index}>
-                <div className="team-div small-team-div">
-                  <img
+                <div className="team-div img-team-one">
+                  {/* <img
                     src={`${process.env.PUBLIC_URL}${team.image}`}
                     alt="team-img"
                     className="w-100"
-                  />
-                  <div className="team-content small-team-content">
+                  /> */}
+                  <div className="team-content">
                     <div className="team-title-div">
                       <h3 className="section-title team-name">{team.name}</h3>
                       <NavLink to={team.linkedin_url}>
@@ -953,12 +953,12 @@ const About = () => {
                       </NavLink>
                     </div>
 
-                    <h5 className="section-subtitle">{team.designation}</h5>
+                    <h5 className="section-subtitle small-txt">{team.designation}</h5>
                   </div>
                 </div>
               </div>
             ))}
-          </div> */}
+          </div>
         </div>
       </section>
     </Layout>

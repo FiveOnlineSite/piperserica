@@ -1,61 +1,66 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Disclosure = () => {
+    const [activeTab, setActiveTab] = useState("life");
+  
+    // Handle tab click
+    const handleTabClick = (tab, event) => {
+      event.preventDefault(); // Prevent the default anchor link behavior
+      setActiveTab(tab);
+    };
   const letters = [
+
     {
-      date: "January 2025",
-      filepath: "/docs/Piper-Serica-Investor-Letter-January-2025.pdf",
+      date: "January 2023-24",
+      filepath:"https://drive.google.com/file/d/16R9qiAgRj_BMRQphkocJI6mk97rsLsZf/view?usp=sharing",
       filter_type: "Annual Return",
+       title: "Annual Report 2023-24"
     },
 
     {
-      date: "January 2024",
-      filepath:
-        "/docs/2024-1-piper-serica-investor-letter-january-2024-min/pdf",
-      filter_type: "PMS Disclosure",
-    },
-
-    {
-      date: "January 2023",
-      filepath:
-        "/docs/2023-1-piper-serica-investor-letter-january-2023-min.pdf",
-      filter_type: "FPI Disclosure",
-    },
-
-    {
-      date: "January 2024",
-      filepath: "/docs/",
-      filter_type: "Annual Return",
-    },
-
-    {
-      date: "January 2023",
-      filepath: "https://drive.google.com/file/d/16R9qiAgRj_BMRQphkocJI6mk97rsLsZf/view?usp=sharing",
-      filter_type: "Annual Return",
-    },
-
-    {
-      date: "January 2022",
+      date: "January 2022-23",
       filepath: "https://drive.google.com/file/d/15zpNfoWsuCc1wbBppoom1I_69IZPHKPN/view?usp=sharing",
       filter_type: "Annual Return",
+       title: "Annual Report 2022-23"
     },
     {
-      date: "January 2021",
+      date: "January 2021-22",
       filepath: "https://drive.google.com/file/d/1dhGqX7vImHu4Y4SeCo-c44Zf5d7Bphio/view?usp=sharing",
       filter_type: "Annual Return",
+       title: "Annual Report 2021-22"
     },
 
     {
-      date: "January 2021",
-      filepath: "/docs/2021-1-piper-serica-investor-letter-jan-min.pdf",
+      date: "January 2025",
+      filepath: "/docs/pms-disclosure-document.pdf",
       filter_type: "PMS Disclosure",
+       title: "PMS Disclosure Document"
+    },
+    // {
+    //   date: "January 2023",
+    //   filepath: "/docs/2021-1-piper-serica-investor-letter-jan-min.pdf",
+    //   filter_type: "PMS Disclosure",
+    //    title: "PMS Disclosure Document"
+    // },
+    // {
+    //   date: "January 2023",
+    //   filepath: "/docs/2021-1-piper-serica-investor-letter-jan-min.pdf",
+    //   filter_type: "FPI Disclosure",
+    //    title: "PMS Disclosure Document"
+    // },
+    {
+      date: "January 2025",
+      filepath: "/docs/management-fee-tool-piper-serica-final.xlsx",
+      filter_type: "PMS Disclosure",
+       title: "Management Fee Tool"
     },
     {
-      date: "January 2023",
-      filepath: "/docs/2021-1-piper-serica-investor-letter-jan-min.pdf",
-      filter_type: "FPI Disclosure",
+      date: "January 2025",
+      filepath: "https://docs.google.com/spreadsheets/d/1KIUfrHnsPYNmeHY24egrHyK2bavtDonn9Jfz932sMa4/edit?usp=sharing",
+      filter_type: "PMS Disclosure",
+       title: "Investor Complaint Report"
     },
   ];
 
@@ -101,6 +106,113 @@ const Disclosure = () => {
         </div>
       </section>
 
+      <section className="our-commitment-section">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-lg-8">
+
+
+              <div className="our-commitment-tabs">
+                <Link
+                  href="#"
+                  onClick={(event) => handleTabClick("life", event)}
+                  className={activeTab === "life" ? "active" : ""}
+                >
+                  <h4>Piper Serica PMS</h4>
+                </Link>
+                <Link
+                  href="#"
+                  onClick={(event) => handleTabClick("smes", event)}
+                  className={activeTab === "smes" ? "active" : ""}
+                >
+                  <h4>Piper Serica Angel Fund</h4>
+                </Link>
+                {/* <Link
+                  href="#"
+                  onClick={(event) => handleTabClick("early", event)}
+                  className={activeTab === "early" ? "active" : ""}
+                >
+                  <h4>Early Stage and Growth Companies</h4>
+                </Link> */}
+              </div>
+
+              <div className="tab-content">
+            
+                <div
+                  className={`tab-pane fade ${
+                    activeTab === "life" ? "show active" : ""
+                  }`}
+                  id="life"
+                >
+                  <div className="commitment-content-div">
+                    {" "}
+                    {/* <h6 className="commitment-title">
+                      Supporting innovation through the leasing and management
+                      of sustainable spaces.
+                    </h6> */}
+                    <div className="commitment-content">
+                      <p className="para small-para">
+                      SEBI Registration No: INP000006749
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                
+                <div
+                  className={`tab-pane fade ${
+                    activeTab === "smes" ? "show active" : ""
+                  }`}
+                  id="smes"
+                >
+                  <div className="commitment-content-div">
+                    {" "}
+                    {/* <h6 className="commitment-title">
+                      Bridging Capital through supply chain financing and credit
+                      facilities.
+                    </h6> */}
+                    <div className="commitment-content">
+                      <p className="para small-para">Name of The Fund: Piper Serica Angel Fund</p>
+                      <p className="para small-para">Category: Category I AIF - Venture Capital Fund - Angel Fund</p>
+                      <p className="para small-para">Address: A Wing, 905/906, Marathon Innova Nextgen, Ganpatrao Kadam Marg, Opp-Peninsula Corporate Park, Lower Parel, Mumbai – 400013</p>
+                      <p className="para small-para">Registration Number: IN/AIF1/21-22/1028</p>
+                      <p className="para small-para">Name of the investment manager: Piper Serica Advisors Private Limited</p>
+                      <p className="para small-para">Address of the investment manager: A Wing, 905/906, Marathon Innova Nextgen, Ganpatrao Kadam Marg, Opp-Peninsula Corporate Park, Lower Parel, Mumbai – 400013</p>
+                    </div>
+                  </div>
+                </div>
+
+             
+                {/* <div
+                  className={`tab-pane fade ${
+                    activeTab === "early" ? "show active" : ""
+                  }`}
+                  id="early"
+                >
+                  <div className="commitment-content-div">
+                    {" "}
+                    <h6 className="commitment-title">
+                      Empowering growth through venture capital and venture debt
+                      investments
+                    </h6>
+                    <div className="commitment-content">
+                      <p className="para small-para">
+                        By providing innovative startups and technology
+                        companies with the capital and resources they need to
+                        grow and expand, our strategies are helping to drive
+                        innovation and technological progress across the region
+                        with the potential to disrupt traditional industries and
+                        create new markets.
+                      </p>
+                    </div>
+                  </div>
+                </div> */}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="investor-letters-section">
         <div className="container">
           <div className="row mb-5 align-items-center">
@@ -117,7 +229,7 @@ const Disclosure = () => {
                   </option>
                   <option value="Annual Return">Annual Return</option>
                   <option value="PMS Disclosure">PMS Disclosure</option>
-                  <option value="FPI Disclosure">FPI Disclosure</option>
+                  {/* <option value="FPI Disclosure">FPI Disclosure</option> */}
                 </select>
               </div>
             </div>
@@ -139,7 +251,7 @@ const Disclosure = () => {
                   <div className="letter-div mb-4">
                     <h5 className="section-subtitle">{letter.date}</h5>
                     <h3>
-                      Piper Serica Leader Portfolio Strategy {letter.date}
+                      {letter.title} {""} {letter.date}
                     </h3>
                     {/* <div className="letter-options py-3 pt-5">
                     

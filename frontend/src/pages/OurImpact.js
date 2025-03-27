@@ -15,7 +15,7 @@ const OurImpact = () => {
     <Layout>
       <section className="banner-section">
         <div className="row">
-          <div className="banner-img-div">
+          <div className="banner-img-div bann-img-height">
             <img
               src={`${process.env.PUBLIC_URL}/images/banners/Our Impact.jpg`}
               alt="banner-img"

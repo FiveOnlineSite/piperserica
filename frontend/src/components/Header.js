@@ -712,14 +712,14 @@ const Header = () => {
                   </li>
                   <li>
                     <NavLink className="dropdown-item" to="/news-article">
-                      News Article
+                      News Articles & Videos
                     </NavLink>
                   </li>
-                  <li>
+                  {/* <li>
                     <NavLink className="dropdown-item" to="/videos">
                       Videos
                     </NavLink>
-                  </li>
+                  </li> */}
                 </ul>
               </li>
               <li className="nav-item">
@@ -735,7 +735,7 @@ const Header = () => {
               <li className="nav-item login-btn">
                 <NavLink
                   className="nav-link"
-                  to="https://piperserica.com/"
+                  to="https://portal.piperserica.vc/"
                   target="_blank"
                 >
                   Login
