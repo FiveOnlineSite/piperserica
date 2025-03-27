@@ -1306,8 +1306,12 @@ body {
 .industires-logo-div img {
   aspect-ratio: 4/2;
   object-fit: contain;
-  margin: 0 20px;
+  margin: 0 15px;
   mix-blend-mode: color-burn;
+}
+
+.industires-logo-div .entre-img-one{
+  max-width: 85%;
 }
 
 .industires-logo-div .portfolio-img {

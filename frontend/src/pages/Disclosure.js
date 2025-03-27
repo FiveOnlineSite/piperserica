@@ -32,13 +32,18 @@ const Disclosure = () => {
 
     {
       date: "January 2023",
-      filepath: "/docs/",
+      filepath: "https://drive.google.com/file/d/16R9qiAgRj_BMRQphkocJI6mk97rsLsZf/view?usp=sharing",
       filter_type: "Annual Return",
     },
 
     {
       date: "January 2022",
-      filepath: "/docs/2022-1-piper-serica-investor-letter-jan-2022-min.pdf",
+      filepath: "https://drive.google.com/file/d/15zpNfoWsuCc1wbBppoom1I_69IZPHKPN/view?usp=sharing",
+      filter_type: "Annual Return",
+    },
+    {
+      date: "January 2021",
+      filepath: "https://drive.google.com/file/d/1dhGqX7vImHu4Y4SeCo-c44Zf5d7Bphio/view?usp=sharing",
       filter_type: "Annual Return",
     },
 

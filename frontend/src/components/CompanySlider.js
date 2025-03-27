@@ -319,7 +319,7 @@ const CompanySlider = () => {
                         <img
                           src={`${process.env.PUBLIC_URL}${images.src}`}
                           alt="industry"
-                          className="w-100"
+                          className="w-100 entre-img-one"
                         />
                         {/* <div className="industries-content">
                   <p className="para small-para">
