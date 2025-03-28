@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
 import NewsSection from "../components/NewsSection";
+import { Link } from "react-router-dom";
 
 const OurImpact = () => {
   const [activeTab, setActiveTab] = useState("life");
@@ -290,7 +291,7 @@ const OurImpact = () => {
       <section className="investor-thesis-section">
         <div className="container">
           <div className="row">
-            <div className="col-lg-5">
+            <div className="col-lg-4">
               <div className="feature-title-div">
                 {/* <h6 className="section-subtitle mb-4">Growth Strategy</h6> */}
                 <h3 className="section-title mb-lg-3 mb-4">
@@ -298,38 +299,38 @@ const OurImpact = () => {
                 </h3>
               </div>
             </div>
-            <div className="col-lg-7 mt-lg-0 mt-4">
-              <div className="features-content-div">
+            <div className="col-lg-8 mt-lg-0 mt-4">
+              {/* <div className="features-content-div">
                 <div className="single-feature">
                   <div>
                     <span></span>
                   </div>
-                  <p className="para">
+                  <p className="para"> */}
                     {/* The Fund invests in early-stage companies that have
                     developed a proprietary deep IP / deep tech and are in the
                     early stage of commercialization. We are sector agnostic
                     though our focus areas are Spacetech, AI, advanced
                     electronics, semicon design and fintech. */}
-                    <strong>The Piper Serica Impact: </strong>
+                    {/* <strong>The Piper Serica Impact: </strong>
                     At Piper Serica Advisors, our investment philosophy centers
                     on creating sustainable value through companies that drive
                     positive societal change. Our approach delivers measurable
                     impact across multiple dimensions:
                   </p>
-                </div>
+                </div> */}
 
-                <div className="single-feature">
+                {/* <div className="single-feature">
                   <div>
                     <span></span>
                   </div>
-                  <p className="para">
+                  <p className="para"> */}
                     {/* We like to invest in startups that are bringing a
                     significant degree of value to their customers. We need to
                     see some product market fit, even if early. Our ticket size
                     is Rs. 10 crore. While we are happy to co-invest with
                     another lead investor there are instances where we are the
                     lead or the sole investor. */}
-                    <strong>Economic Impact: </strong>Our portfolio companies
+                    {/* <strong>Economic Impact: </strong>Our portfolio companies
                     employed 277,000+ individuals in FY24, generating
                     significant economic value through job creation, skill
                     development, and improved livelihoods across diverse sectors
@@ -340,11 +341,11 @@ const OurImpact = () => {
                   <div>
                     <span></span>
                   </div>
-                  <p className="para">
+                  <p className="para"> */}
                     {/* We have a very collaborative approach to investing and
                     prefer to work with multiple co-investors bringing different
                     value to the startup. */}
-                    <strong>Social Responsibility:</strong> With CSR
+                    {/* <strong>Social Responsibility:</strong> With CSR
                     contributions exceeding ₹320 crore annually, our portfolio
                     actively addresses critical societal needs through strategic
                     initiatives in:
@@ -413,6 +414,142 @@ const OurImpact = () => {
                     catalyze transformation that benefits investors,
                     communities, and society at large.
                   </p>
+                </div>
+              </div> */}
+                  
+              <p className="para">
+              At Piper Serica Advisors, our investment philosophy centers on creating sustainable value through companies that drive positive societal change. Our approach delivers measurable impact across multiple dimensions:
+              </p>
+
+              <div className="our-commitment-tabs">
+                <Link
+                  to="#"
+                  onClick={(event) => handleTabClick("life", event)}
+                  className={activeTab === "life" ? "active" : ""}
+                >
+                  <h4>Economic Impact</h4>
+                </Link>
+                <Link
+                  href="#"
+                  onClick={(event) => handleTabClick("smes", event)}
+                  className={activeTab === "smes" ? "active" : ""}
+                >
+                  <h4>Social Responsibility</h4>
+                </Link>
+                <Link
+                  href="#"
+                  onClick={(event) => handleTabClick("early", event)}
+                  className={activeTab === "early" ? "active" : ""}
+                >
+                  <h4>Long Term Vision</h4>
+                </Link>
+              </div>
+
+              <div className="tab-content">
+            
+                <div
+                  className={`tab-pane fade ${
+                    activeTab === "life" ? "show active" : ""
+                  }`}
+                  id="life"
+                >
+                  <div className="commitment-content-div">
+                    {" "}
+                    {/* <h6 className="commitment-title">
+                      Supporting innovation through the leasing and management
+                      of sustainable spaces.
+                    </h6> */}
+                    <div className="commitment-content">
+                      <p className="para small-para">
+                      Our portfolio companies employed 277,000+ individuals in FY24, generating significant economic value through job creation, skill development, and improved livelihoods across diverse sectors and geographies.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                
+                <div
+                  className={`tab-pane fade ${
+                    activeTab === "smes" ? "show active" : ""
+                  }`}
+                  id="smes"
+                >
+                  <div className="commitment-content-div">
+                    {" "}
+                    {/* <h6 className="commitment-title">
+                      Bridging Capital through supply chain financing and credit
+                      facilities.
+                    </h6> */}
+                    <div className="commitment-content">
+                      <div className="features-content-div">
+                        <div className="single-feature">
+                          <p className="para small-para">
+                            {/* We have a very collaborative approach to investing and
+                            prefer to work with multiple co-investors bringing different
+                            value to the startup. */}
+                            Social Responsibility With CSR
+                            contributions exceeding ₹320 crore annually, our portfolio
+                            actively addresses critical societal needs through strategic
+                            initiatives in:
+                            <div className="single-feature single-subfeature mt-3 mb-0">
+                                <div>
+                                  <span className="small-pointer"></span>
+                                </div>
+                                <p className="para small-para">
+                                  Educational advancement programs
+                                </p>
+                            </div>
+                            <div className="single-feature single-subfeature mt-2 mb-0">
+                              <div>
+                                <span className="small-pointer"></span>
+                              </div>
+                              <p className="para small-para">
+                                Healthcare accessibility improvements
+                              </p>
+                            </div>
+                            <div className="single-feature single-subfeature mt-2 mb-0">
+                              <div>
+                                <span className="small-pointer"></span>
+                              </div>
+                              <p className="para small-para">
+                                Community infrastructure development
+                              </p>
+                            </div>
+                            <div className="single-feature single-subfeature mt-2 mb-0">
+                              <div>
+                                <span className="small-pointer"></span>
+                              </div>
+                              <p className="para small-para">
+                                Environmental sustainability projects
+                              </p>
+                            </div>
+                          </p>
+                        </div>
+                      </div>
+                    
+                    </div>
+                  </div>
+                </div>
+
+             
+                <div
+                  className={`tab-pane fade ${
+                    activeTab === "early" ? "show active" : ""
+                  }`}
+                  id="early"
+                >
+                  <div className="commitment-content-div">
+                    {" "}
+                    {/* <h6 className="commitment-title">
+                      Empowering growth through venture capital and venture debt
+                      investments
+                    </h6> */}
+                    <div className="commitment-content">
+                      <p className="para small-para">
+                      Piper Serica Angel Fund evaluates investments through a comprehensive framework that measures both financial returns and societal value. The fund screens potential portfolio companies for their ability to generate sustainable profits while addressing critical challenges in technology, environment, and social development. By prioritizing startups that demonstrate a clear balance between economic performance and meaningful impact, the fund supports businesses that create value beyond traditional financial metrics. This approach aims to drive systemic change through strategic capital allocation that promotes innovation, sustainability, and long-term social progress.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

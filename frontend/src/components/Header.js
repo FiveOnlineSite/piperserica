@@ -711,8 +711,8 @@ const Header = () => {
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink className="dropdown-item" to="/news-article">
-                      News Articles & Videos
+                    <NavLink className="dropdown-item" to="/news-and-more">
+                      News & More
                     </NavLink>
                   </li>
                   {/* <li>
@@ -922,7 +922,7 @@ const Header = () => {
                       </NavLink>
                     </li> */}
                     <li>
-                      <NavLink className="dropdown-item" to="/news-article">
+                      <NavLink className="dropdown-item" to="/news-article-and-videos">
                         News Article
                       </NavLink>
                     </li>

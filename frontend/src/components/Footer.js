@@ -44,8 +44,8 @@ const Footer = () => {
                     </NavLink>
                   </li>
                   <li className="nav-item mt-lg-0 mt-md-0 mt-3">
-                    <NavLink className="nav-link" to="/news-article">
-                      News & Article
+                    <NavLink className="nav-link" to="/news-and-more">
+                      News & More
                     </NavLink>
                   </li>
                   <li className="nav-item mt-lg-0 mt-md-0 mt-3">

@@ -169,13 +169,13 @@ const SubscribeLetter = () => {
         >
           <Modal.Header closeButton>
             <Modal.Title>
-              <h4>Thank you!</h4>
+              <h4>Thank you for subscribing!</h4>
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
             <div>
-              <p className="section-subtitle thankyou-msg">
-                Subscription successful! Check your email.
+              <p className="section-subtitle pop-msg-one thankyou-msg">
+              Stay tuned for exclusive insights and updates delivered to your inbox.
               </p>
               {/* <button onClick={() => setSuccessModal(false)}>Close</button> */}
             </div>

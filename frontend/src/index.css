@@ -491,6 +491,9 @@ body {
   line-height: 26px;
   font-family: "Public Sans", serif;
 }
+.pop-msg-one{
+  text-transform: capitalize;
+}
 
 .section-title {
   color: var(--black-font);

@@ -335,9 +335,8 @@ const Contact = () => {
           </Modal.Header>
           <Modal.Body>
             <div>
-              <p className="section-subtitle thankyou-msg">
-                The form has been submitted successfully! We’ll get back to you
-                shortly.
+              <p className="section-subtitle pop-msg-one thankyou-msg">
+              Thank you for reaching out! We have received your message and will get back to you soon.
               </p>
               {/* <button onClick={() => setSuccessModal(false)}>Close</button> */}
             </div>
