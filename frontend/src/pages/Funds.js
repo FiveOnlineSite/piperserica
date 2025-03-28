@@ -450,7 +450,7 @@ const Funds = () => {
 
       <CompanyPortfolio />
       
-      <section className="funds-article-section">
+      <section className="funds-article-section mb-0">
         <ArticleSection />
       </section>
 

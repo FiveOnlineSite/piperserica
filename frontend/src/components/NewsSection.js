@@ -71,7 +71,7 @@ const NewsSection = () => {
       news_img: "/images/news/1630600049443.webp",
       content_type: "Angel Fund",
       news_title:"Space-tech firm Astrogate Labs raises $1.3 million in pre-series round led by Piper Serica",
-      date: "January 30, 2025",
+      date: "april 1, 2025",
       link: "https://economictimes.indiatimes.com/tech/funding/space-tech-firm-astrogate-labs-raises-1-3-million-in-pre-series-round-led-by-piper-serica/articleshow/118601900.cms",
     },
     {
@@ -88,7 +88,7 @@ const NewsSection = () => {
       content_type: "Angel Fund",
       news_title:
         "Spacetech Startup Astrogate Bags Funding To Develop Laser Communication Terminals",
-      date: "January 30, 2025",
+      date: "april 4, 2025",
       link: "https://inc42.com/buzz/spacetech-startup-astrogate-bags-funding-to-develop-laser-communication-terminals",
     },
     {
@@ -125,7 +125,7 @@ const NewsSection = () => {
       content_type: "Videos",
       news_title:
         "Piper Serica x Astrogate Labs: The Next Big Leap in Space Tech",
-      date: "January 30, 2025",
+      date: "January 10, 2025",
       link: "https://youtu.be/XykqfFfr67c",
     },
     {
@@ -133,7 +133,7 @@ const NewsSection = () => {
       // insight_type: "News and More",
       content_type: "Videos",
       news_title: "Piper Serica x Rupeeflo: Fintech Revolution Unlocked!",
-      date: "January 30, 2025",
+      date: "January 20, 2025",
       link: "https://youtu.be/h5ys474Z460",
     },
     {
@@ -142,7 +142,7 @@ const NewsSection = () => {
       content_type: "Videos",
       news_title:
         "The Next 10 Years of India: A Roadmap for Long-Term Investors",
-      date: "January 30, 2025",
+      date: "January 3, 2025",
       link: "https://youtu.be/V5DCqNsUIO8",
     },
     {
@@ -150,7 +150,7 @@ const NewsSection = () => {
       news_img: "/images/news/maxresdefault (2).jpg",
       content_type: "Videos",
       news_title: "Auto Industry Shake-Up: Opportunities Before Budget 2025",
-      date: "January 30, 2025",
+      date: "January 22, 2025",
       link: "https://youtu.be/05Crr5bFAlM",
     },
     {
@@ -159,11 +159,16 @@ const NewsSection = () => {
       content_type: "Videos",
       news_title:
         "US Fed Rate Cuts: Impact on Indian Economy & Emerging Sectors to Watch!",
-      date: "January 30, 2025",
+      date: "January 24, 2025",
       link: "https://youtu.be/lOfL087qO_E",
     },
   ];
+  // Sort the newsItems by date in descending order (latest first)
+  const sortedNewsItems = [...newsItems].sort((a, b) => new Date(b.date) - new Date(a.date));
 
+  // Slice to get the top 6 latest news
+  const newsItemsOne = sortedNewsItems.slice(0, 6);
+  
   return (
     <div className="news-insights-section pb-5">
       <div className="container">
@@ -183,7 +188,7 @@ const NewsSection = () => {
           </div>
 
           <div className="row mt-5">
-            <NewsSlider settings={newsSettings} item={newsItems} />
+            <NewsSlider settings={newsSettings} item={newsItemsOne} />
           </div>
         </div>
       </div>
