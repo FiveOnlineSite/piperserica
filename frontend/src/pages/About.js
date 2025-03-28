@@ -444,10 +444,11 @@ const About = () => {
                           </div>
                           <p className="para history-para">
                             {" "}
-                            We received the registration from the 
+                            We received the registration from the
                             <strong>
                               {" "}
-                              Securities and Exchange Board of India (SEBI) for launching Portfolio Management Service (PMS).
+                              Securities and Exchange Board of India (SEBI) for
+                              launching Portfolio Management Service (PMS).
                             </strong>
                           </p>
                         </div>
