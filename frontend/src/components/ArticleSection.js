@@ -99,25 +99,25 @@ const ArticleSection = () => {
       date: "January 30, 2025",
       link: "https://www.bwdisrupt.com/article/rupeeflo-raises-1-mn-from-piper-serica-angel-fund-547569",
     },
-    // {
-    //   news_img:
-    //     "/images/news/Rupeeflow_founders_20250210224601_original_image_24.webp",
-    //   // insight_type: "Angel Fund",
-    //   content_type: "Angel Fund",
-    //   news_title: "Rupeeflo raises $1 Mn from Piper Serica",
-    //   date: "January 30, 2025",
-    //   link: "https://entrackr.com/snippets/rupeeflo-raises-1-mn-from-piper-serica-8706125",
-    // },
-    // {
-    //   news_img:
-    //     "/images/news/rupeeflo-raised-1-million-in-pre-seed-round-led-by-piper-serica-angel-fund.webp",
-    //   // insight_type: "Company Updates",
-    //   content_type: "Angel Fund",
-    //   news_title:
-    //     "Rupeeflo raised $1 million in pre-seed round led by Piper Serica Angel Fund",
-    //   date: "January 30, 2025",
-    //   link: "https://economictimes.indiatimes.com/tech/funding/rupeeflo-raised-1-million-in-pre-seed-round-led-by-piper-serica-angel-fund/articleshow/118119714.cms",
-    // },
+    {
+      news_img:
+        "/images/news/Rupeeflow_founders_20250210224601_original_image_24.webp",
+      // insight_type: "Angel Fund",
+      content_type: "Angel Fund",
+      news_title: "Rupeeflo raises $1 Mn from Piper Serica",
+      date: "January 30, 2025",
+      link: "https://entrackr.com/snippets/rupeeflo-raises-1-mn-from-piper-serica-8706125",
+    },
+    {
+      news_img:
+        "/images/news/rupeeflo-raised-1-million-in-pre-seed-round-led-by-piper-serica-angel-fund.webp",
+      // insight_type: "Company Updates",
+      content_type: "Angel Fund",
+      news_title:
+        "Rupeeflo raised $1 million in pre-seed round led by Piper Serica Angel Fund",
+      date: "January 30, 2025",
+      link: "https://economictimes.indiatimes.com/tech/funding/rupeeflo-raised-1-million-in-pre-seed-round-led-by-piper-serica-angel-fund/articleshow/118119714.cms",
+    },
     {
       // insight_type: "Investments Insights",
       news_img: "/images/news/maxresdefault (1).jpg",
