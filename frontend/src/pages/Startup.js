@@ -8,6 +8,7 @@ import CompanyPortfolio from "../components/CompanyPortfolio";
 import CompanySlider from "../components/CompanySlider";
 import SubscribeLetter from "../components/SubscribeLetter";
 const Startup = () => {
+  
   const investorItem = [
     {
       image:
@@ -37,11 +38,50 @@ const Startup = () => {
   };
 
   const [openAccordion, setOpenAccordion] = useState(0);
+  const [openIndex, setOpenIndex] = useState(null);
 
   // Toggle function for each accordion item
   const toggleAccordion = (index) => {
     setOpenAccordion((prevIndex) => (prevIndex === index ? null : index));
   };
+  
+  
+    const toggleAccordionOne = (index) => {
+      setOpenIndex(openIndex === index ? null : index);
+    };
+  
+    const accordionData = [
+      { 
+        title: "Focus on Early-Stage Startups",
+        content: "Piper Serica Angel Fund is a strategic investment partner dedicated to empowering early-stage startups with proprietary deep technologies and robust intellectual property. The fund focuses on ventures that have advanced beyond pure research, targeting companies with demonstrated commercial potential through initial revenue or sophisticated product development. By identifying startups at the critical intersection of innovation and market viability, Piper Serica supports entrepreneurs transforming groundbreaking scientific advances into scalable business models. The fund's approach bridges the complex gap between technological breakthrough and market success, carefully selecting ventures with the potential to convert innovative concepts into tangible, market-ready solutions." ,
+        extrapara:"",
+      },
+      { 
+        title: "Sector-Agnostic with Key Focus Areas",
+        content: "The Fund strategically navigates the technological frontier by concentrating investments in sectors at the forefront of global innovation. While maintaining flexibility across industries, the fund deliberately targets high-impact domains that are fundamentally transforming technological landscapes: fintech - revolutionary financial technologies, spacetech – from upstream to downstream, advanced electronics, next-generation computational solutions, cybersecurity's critical infrastructures, electric vehicles' sustainable transportation technologies, and semiconductor design.",
+        extrapara:"",    
+      },
+      { 
+        title: "Investment Criteria", 
+        content: "Piper Serica Angel Fund meticulously identifies startups that transcend traditional early-stage limitations by demonstrating exceptional product-market alignment and clear customer value propositions. The fund prioritizes ventures that exhibit not just innovative potential, but tangible market validation through robust customer engagement, repeatable sales models, and a demonstrable ability to solve critical industry challenges. With investment tickets ranging from INR 6-10 crore, Piper Serica provides capital that enables portfolio companies to accelerate product development, expand market reach, and drive meaningful organizational growth." ,
+        extrapara:"",
+      },
+      { 
+        title: "Flexible Investment Strategy", 
+        content: "The Fund demonstrates investment flexibility, positioning itself as both a collaborative partner and a potential lead investor. The fund's approach is deeply rooted in alignment with founders' strategic visions, allowing for nuanced investment structures that best serve each unique startup's growth trajectory. Whether joining forces with established lead investors or taking a lead role, Piper Serica evaluates opportunities through a comprehensive lens that prioritizes technological potential, market impact, and entrepreneurial excellence.",
+        extrapara:"",
+      },
+      { 
+        title: "Swift and Data-Driven Decision-Making", 
+        content: "Piper Serica Angel Fund employs Yoda.ai, a proprietary AI-driven screening platform, to accelerate and optimize investment decisions. The tool systematically filters potential investments by analyzing key performance metrics, market data, and startup fundamentals. This technology enables the fund to quickly assess opportunities, reducing decision-making time from weeks to days while maintaining rigorous evaluation standards. By combining machine learning insights with expert human judgment, the fund identifies and validates high-potential startups with unprecedented speed and precision.",
+        extrapara:"",
+      },
+      { 
+        title: "Collaborative Investment Philosophy", 
+        content: "Piper Serica Angel Fund adopts a partnership-driven model, collaborating with co-investors while making investments. By aligning with other venture capitalists, corporate investors, and domain experts, the fund ensures startups gain not just capital but also strategic support. This network provides access to industry insights, market opportunities, and operational guidance, accelerating commercialization. The approach minimizes risk through diversified expertise while maximizing growth potential for early-stage deep-tech ventures.",
+        extrapara:"This structured and disciplined approach enables Piper Serica Angel Fund to invest in exceptional early-stage startups, driving innovation and growth across key industries.",
+      },
+    ];
 
   const offeringsSettings = {
     centerMode: false, // Enable center mode
@@ -107,7 +147,7 @@ const Startup = () => {
 
       <section className="banner-section">
         <div className="row">
-          <div className="banner-img-div">
+          <div className="banner-img-div bann-img-height">
             <img
               src={`${process.env.PUBLIC_URL}/images/banners/Startup Founder.jpg`}
               alt="banner-img"
@@ -116,7 +156,7 @@ const Startup = () => {
             <div className="banner-content-div">
               <div className="container">
                 {/* <h6 className="banner-subtitle">Creating Meaningful Change</h6> */}
-                <h1 className="banner-title">
+                <h1 className="banner-title ">
                   Shaping the future. Empowering next-gen enterprises
                 </h1>
                 {/* <p className="banner-para">
@@ -178,24 +218,27 @@ const Startup = () => {
               <div className="row">
                 <div className="col-lg-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">USD $3.7bn+</h2>
+                    <h2 className="facts-title">INR 1500 Cr+</h2>
                     <h6 className="para">
-                      Assets Under Management & Advisory
-                      <i> (as of 30 June 2024)</i>
+                    AUM
+                      {/* <i> (as of 30 June 2024)</i> */}
                     </h6>
                   </div>
                 </div>
                 <div className="col-lg-4 mt-lg-0 mt-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">160+</h2>
-                    <h6 className="para">Committed Professionals</h6>
+                    <h2 className="facts-title">1200+</h2>
+                    <h6 className="para">Investor Families</h6>
                   </div>
                 </div>
                 <div className="col-lg-4 mt-lg-0 mt-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">07</h2>
-                    <h6 className="para">Global Offices</h6>
+                    <h2 className="facts-title">19%+</h2>
+                    <h6 className="para">CAGR</h6>
                   </div>
+                </div>
+                <div className="col-12">
+                <p className="para-txt mt-2">Since Feb 2025</p>
                 </div>
               </div>
             </div>
@@ -455,18 +498,64 @@ const Startup = () => {
         </div>
       </section>
 
-      <section className="our-offerings-section" id="offerings">
+      <section className="investor-thesis-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-5">
+              <div className="feature-title-div">
+                {/* <h6 className="section-subtitle mb-4">Growth Strategy</h6> */}
+                <h3 className="section-title mb-lg-3 mb-4">
+                  Investment Thesis and Approach
+                </h3>
+              </div>
+            </div>
+            <div className="col-lg-7 mt-lg-0 mt-4">
+             
+              <div className="accordion" id="accordionExample">
+            {accordionData.map((item, index) => (
+              <div className="accordion-item" key={index}>
+                <h2 className="accordion-header">
+                  <button
+                    className="accordion-button custom-accordion-button"
+                    type="button"
+                    onClick={() => toggleAccordionOne(index)}
+                  >
+                    <span className="accord-title-one">
+                      <i className="fas fa-diamond me-2"></i> {item.title}
+                    </span>
+                    <i
+                      className={`custom-arrow fas fa-arrow-down ms-auto ${
+                        openIndex === index ? "rotate" : ""
+                      }`}
+                    ></i>
+                  </button>
+                </h2>
+                <div className={`accordion-collapse collapse ${openIndex === index ? "show" : ""}`}>
+                  <div className="accordion-body">
+                    {item.content}
+                    <p className="mt-2">{item.extrapara}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+            </div> 
+          </div>
+        </div>
+      </section>
+
+      {/* <section className="our-offerings-section" id="offerings">
         <div className="container">
           <div className="row align-items-center">
             <h5 className="section-subtitle">Our Offerings</h5>
             <h2 className="banner-title offerings-title mt-3">
               Knowledge. Wisdom. Wealth.
-            </h2>
+            </h2> */}
 
             {/* <h3 className="section-title my-lg-3 my-4">
                   Private Markets Funds
                 </h3> */}
-            <div className="row align-items-center my-lg-3 my-4">
+            {/* <div className="row align-items-center my-lg-3 my-4">
               <div className="col-lg-9">
                 <p className="para small-para">
                   We provide investors access to unique investment opportunities
@@ -478,32 +567,32 @@ const Startup = () => {
                   infrastructure, resulting in a broader progressive impact
                   within the region.
                 </p>
-              </div>
+              </div> */}
               {/* <div className="col-lg-3">
                     <NavLink to="/" className="banner-btn blue-btn mt-0">
                       All funds
                       <i className="fa-solid fa-arrow-right"></i>
                     </NavLink>
                   </div> */}
-            </div>
+            {/* </div>
 
             <div className="row mt-5">
               <div className="col-lg-6">
-                <div className="offerings-div">
+                <div className="offerings-div"> */}
                   {/* <h6 className="section-subtitle">Investment Strategy</h6> */}
 
-                  {offeringsItems.map((item, index) => (
-                    <div key={index}>
+                  {/* {offeringsItems.map((item, index) => (
+                    <div key={index}> */}
                       {/* Add key to the outermost element */}
-                      <div className="strategy-title-div">
+                      {/* <div className="strategy-title-div">
                         <h5>{item.strategy_title}</h5>{" "}
                       </div>
-                      <div className="strategy-funds-div">
+                      <div className="strategy-funds-div"> */}
                         {/* Check if funds_list exists before mapping */}
-                        {item.funds_list?.map((fund, fundIndex) => (
-                          <div className="funds-container" key={fundIndex}>
+                        {/* {item.funds_list?.map((fund, fundIndex) => (
+                          <div className="funds-container" key={fundIndex}> */}
                             {/* Add key here */}
-                            <NavLink to={fund.link} className="mt-2">
+                            {/* <NavLink to={fund.link} className="mt-2">
                               <div className="funds-div">
                                 <h5>{fund.funds}</h5>
                                 <i className="fa-solid fa-arrow-right"></i>
@@ -519,7 +608,24 @@ const Startup = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+
+<section className="sticky-contact-section sim-bg-ch">
+      <div className="container">
+        <div className="row align-items-center">
+          <div className="col-lg-8">
+            <h4 className="section-title">Understand more about Piper Serica Angel Fund</h4>
+          </div>
+
+          <div className="col-lg-4 mt-lg-0 mt-3">
+            <NavLink to="/private-market/piper-serica-angel-fund" className="banner-btn blue-btn mt-0">
+            View Fund
+              <i className="fa-solid fa-arrow-right"></i>
+            </NavLink>
+          </div>
+        </div>
+      </div>
+    </section>
 
       <section className="startup-news-section">
         <NewsSection />
@@ -539,9 +645,7 @@ const Startup = () => {
                   Get in touch
                 </h2>
                 <p className="para contact-para">
-                  To discuss investment opportunities and funds, or for more
-                  information, please contact us and a member of the team will
-                  be in touch.
+                If you are a founder or entrepreneur seeking funding, we would love to hear about your vision. Reach out to us to explore investment opportunities, and our team will connect with you soon.
                 </p>
 
                 <NavLink to="/contact" className="banner-btn">

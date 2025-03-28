@@ -48,7 +48,7 @@ function App() {
           path="/public-market/piper-serica-nemero-uno-india-fund"
           element={<PublicFund />}
         ></Route>
-        <Route path="/news-article" element={<NewsArticle />}></Route>
+        <Route path="/news-and-more" element={<NewsArticle />}></Route>
 
         <Route path="/videos" element={<Videos />}></Route>
         <Route path="/contact" element={<Contact />}></Route>

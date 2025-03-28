@@ -711,15 +711,15 @@ const Header = () => {
                     </NavLink>
                   </li>
                   <li>
-                    <NavLink className="dropdown-item" to="/news-article">
-                      News Article
+                    <NavLink className="dropdown-item" to="/news-and-more">
+                      News & More
                     </NavLink>
                   </li>
-                  <li>
+                  {/* <li>
                     <NavLink className="dropdown-item" to="/videos">
                       Videos
                     </NavLink>
-                  </li>
+                  </li> */}
                 </ul>
               </li>
               <li className="nav-item">
@@ -735,7 +735,7 @@ const Header = () => {
               <li className="nav-item login-btn">
                 <NavLink
                   className="nav-link"
-                  to="https://piperserica.com/"
+                  to="https://portal.piperserica.vc/"
                   target="_blank"
                 >
                   Login
@@ -922,7 +922,7 @@ const Header = () => {
                       </NavLink>
                     </li> */}
                     <li>
-                      <NavLink className="dropdown-item" to="/news-article">
+                      <NavLink className="dropdown-item" to="/news-article-and-videos">
                         News Article
                       </NavLink>
                     </li>
