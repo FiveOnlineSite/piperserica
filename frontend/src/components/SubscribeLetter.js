@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import axios from "axios";
 import { Modal } from "react-bootstrap";
@@ -8,49 +8,72 @@ const SubscribeLetter = () => {
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [successModal, setSuccessModal] = useState(false);
+  const [errorModal, setErrorModal] = useState(false);
 
-  // console.log("Brevo API Key:", process.env.REACT_APP_BREVO_API_KEY);
   const handleSubscribe = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(
-        "https://api.brevo.com/v3/contacts",
-        {
-          email: email,
-          attributes: {
-            FIRSTNAME: firstname,
-            LASTNAME: lastname,
-          },
-          listIds: [Number(process.env.REACT_APP_BREVO_LIST_ID)], // Convert to Number
-          updateEnabled: true,
-        },
+      // Step 1: Check if the email already exists in Brevo
+      const checkResponse = await axios.get(
+        `https://api.brevo.com/v3/contacts/${email}`,
         {
           headers: {
             "Content-Type": "application/json",
-            "api-key": process.env.REACT_APP_BREVO_API_KEY, // Replace with your Brevo API key
+            "api-key": process.env.REACT_APP_BREVO_API_KEY,
           },
         }
       );
 
-      if (response.status === 201) {
-        setSuccessModal(true);
-        console.log("Success modal should be set to true");
-
-        // Clear success message after 5 seconds
-        setTimeout(() => {
-          setSuccessModal(false);
-        }, 5000);
-
+      // If the contact exists, show "Already Subscribed" modal
+      if (checkResponse.status === 200) {
+        console.log("Email already exists in Brevo.");
+        setErrorModal(true);
+        // Clear form fields
         setFirstname("");
         setLastname("");
         setEmail("");
-      } else {
-        console.error("Failed to send email:");
+        return; // Stop further execution
       }
     } catch (error) {
-      console.error("Failed to send email:", error);
-      console.error(error);
+      if (error.response && error.response.status === 404) {
+        // Step 2: Email does not exist, proceed with subscription
+        try {
+          const response = await axios.post(
+            "https://api.brevo.com/v3/contacts",
+            {
+              email: email,
+              attributes: {
+                FIRSTNAME: firstname,
+                LASTNAME: lastname,
+              },
+              listIds: [Number(process.env.REACT_APP_BREVO_LIST_ID)],
+              updateEnabled: true,
+            },
+            {
+              headers: {
+                "Content-Type": "application/json",
+                "api-key": process.env.REACT_APP_BREVO_API_KEY,
+              },
+            }
+          );
+
+          if (response.status === 201) {
+            setSuccessModal(true);
+            setTimeout(() => {
+              setSuccessModal(false);
+            }, 5000);
+
+            setFirstname("");
+            setLastname("");
+            setEmail("");
+          }
+        } catch (subscribeError) {
+          console.error("Subscription Error:", subscribeError);
+        }
+      } else {
+        console.error("Error checking email in Brevo:", error);
+      }
     }
   };
 
@@ -71,7 +94,7 @@ const SubscribeLetter = () => {
                     <div className="col-lg-6">
                       <div className="mb-4">
                         <label
-                          for="firstname"
+                          htmlFor="firstname"
                           className="form-label section-subtitle"
                         >
                           First name
@@ -83,7 +106,6 @@ const SubscribeLetter = () => {
                           value={firstname}
                           onChange={(e) => setFirstname(e.target.value)}
                           required
-                          // placeholder="first name"
                         />
                       </div>
                     </div>
@@ -91,7 +113,7 @@ const SubscribeLetter = () => {
                     <div className="col-lg-6">
                       <div className="mb-4">
                         <label
-                          for="last-name"
+                          htmlFor="last-name"
                           className="form-label section-subtitle"
                         >
                           Last name
@@ -103,7 +125,6 @@ const SubscribeLetter = () => {
                           value={lastname}
                           onChange={(e) => setLastname(e.target.value)}
                           required
-                          // placeholder="last name"
                         />
                       </div>
                     </div>
@@ -111,7 +132,7 @@ const SubscribeLetter = () => {
                     <div className="col-lg-12">
                       <div className="mb-4">
                         <label
-                          for="email"
+                          htmlFor="email"
                           className="form-label section-subtitle"
                         >
                           Email
@@ -123,10 +144,10 @@ const SubscribeLetter = () => {
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
                           required
-                          // placeholder="email"
                         />
                       </div>
                     </div>
+
                     <div className="col-lg-12">
                       <div className="row">
                         <div className="col-lg-4 d-flex justify-content-start">
@@ -160,28 +181,31 @@ const SubscribeLetter = () => {
       </section>
 
       {/* Success Modal */}
+      <Modal centered show={successModal} onHide={() => setSuccessModal(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>
+            <h4>Thank you!</h4>
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p className="section-subtitle thankyou-msg">
+            Subscription successful! Check your email.
+          </p>
+        </Modal.Body>
+      </Modal>
 
-      {successModal ? (
-        <Modal
-          centered
-          show={successModal}
-          onHide={() => setSuccessModal(false)}
-        >
-          <Modal.Header closeButton>
-            <Modal.Title>
-              <h4>Thank you!</h4>
-            </Modal.Title>
-          </Modal.Header>
-          <Modal.Body>
-            <div>
-              <p className="section-subtitle thankyou-msg">
-                Subscription successful! Check your email.
-              </p>
-              {/* <button onClick={() => setSuccessModal(false)}>Close</button> */}
-            </div>
-          </Modal.Body>
-        </Modal>
-      ) : null}
+      <Modal centered show={errorModal} onHide={() => setErrorModal(false)}>
+        <Modal.Header closeButton>
+          <Modal.Title>
+            <h4>Already Subscribed</h4>
+          </Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+          <p className="section-subtitle thankyou-msg">
+            This email is already subscribed.
+          </p>
+        </Modal.Body>
+      </Modal>
     </>
   );
 };
