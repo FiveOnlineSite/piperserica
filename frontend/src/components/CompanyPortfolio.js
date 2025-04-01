@@ -269,7 +269,7 @@ const CompanyPortfolio = () => {
             <div className="col-lg-3">
               <div className="industries-filter-div">
                 <select
-                  class="form-select"
+                  className="form-select"
                   onChange={handleFilterChange}
                   aria-label="Default select example"
                 >

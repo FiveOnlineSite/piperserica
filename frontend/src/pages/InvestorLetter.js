@@ -12,7 +12,7 @@ const InvestorLetter = () => {
     {
       date: "January 2024",
       filepath:
-        "/docs/2024-1-piper-serica-investor-letter-january-2024-min/pdf",
+        "/docs/2024-1-piper-serica-investor-letter-january-2024-min.pdf",
     },
 
     {
@@ -144,7 +144,7 @@ const InvestorLetter = () => {
     {
       date: "September 2023",
 
-      filepath: "/docs/2023-9-investor-letter-min.pdf",
+      filepath: "/docs/investor-letter-min.pdf",
     },
     {
       date: "September 2022",
@@ -225,7 +225,47 @@ const InvestorLetter = () => {
     {
       date: "December 2019",
 
-      filepath: "/docs/2019-12-dec2020-min.pdf",
+      filepath: "/docs/Piper-Serica-PMS-December-2019-Letter.pdf",
+    },
+    {
+      date: "December 2016",
+
+      filepath: "/docs/Piper-Serica-Investor-Letter-December-2016.pdf",
+    },
+    {
+      date: "November 2018",
+
+      filepath: "/docs/Piper-Serica-Investor-Letter-November-2018.pdf",
+    },
+    {
+      date: "July 2019",
+
+      filepath: "/docs/Piper-Serica-Investor-Letter-July2019.pdf",
+    },
+    {
+      date: "June 2020",
+
+      filepath: "/docs/Piper-Serica-PMS-Monthly-Letter-June-2020.pdf",
+    },
+    {
+      date: "July 2020",
+
+      filepath: "/docs/Piper-Serica-Investor Letter-July-2020.pdf",
+    },
+    {
+      date: "September 2020",
+
+      filepath: "/docs/Piper-Serica-PMS-Monthly-Letter-September-2020.pdf",
+    },
+    {
+      date: "April 2024",
+
+      filepath: "/docs/Piper-Serica-Investor-Letter-April-2024.pdf",
+    },
+    {
+      date: "July 2024",
+
+      filepath: "/docs/PiperSerica-Investor-Letter-July2024.pdf",
     },
   ];
 
@@ -307,6 +347,8 @@ const InvestorLetter = () => {
                   <option value="2020-2021">2020-2021</option>
                   <option value="2019-2020">2019-2020</option>
                   <option value="2018-2019">2018-2019</option>
+                  <option value="2017-2018">2017-2018</option>
+                  <option value="2016-2017">2016-2017</option>
                 </select>
               </div>
             </div>

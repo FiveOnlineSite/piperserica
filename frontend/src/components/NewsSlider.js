@@ -1,11 +1,14 @@
 import React from "react";
 import Slider from "react-slick";
+import { NavLink } from "react-router-dom";
 
 const NewsSlider = ({ settings, item }) => {
   return (
     <div>
       <Slider {...settings}>
         {item.map((item, index) => (
+          
+          <NavLink to={item.link} target="_blank" className="text-decoration-none">
           <div key={index} className="news-div">
             <div className="news-img-div">
               <img
@@ -13,9 +16,9 @@ const NewsSlider = ({ settings, item }) => {
                 alt="news"
                 className="news-img w-100"
               />
-              <div className="news-type">
+              {/* <div className="news-type">
                 <h6 className="section-subtitle">{item.insight_type}</h6>
-              </div>
+              </div> */}
             </div>
             <div className="news-content-div">
               <h5>{item.content_type}</h5>
@@ -23,6 +26,7 @@ const NewsSlider = ({ settings, item }) => {
               <h6 className="mt-5">{item.date}</h6>
             </div>
           </div>
+          </NavLink>
         ))}
       </Slider>
     </div>

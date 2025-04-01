@@ -161,7 +161,7 @@ const NewsArticle = () => {
       content_type: "Videos",
       news_title:
         "Piper Serica x Astrogate Labs: The Next Big Leap in Space Tech",
-      date: "January 30, 2025",
+      date: "February 28, 2025",
       link: "https://youtu.be/XykqfFfr67c",
     },
     {
@@ -169,7 +169,7 @@ const NewsArticle = () => {
       // insight_type: "News and More",
       content_type: "Videos",
       news_title: "Piper Serica x Rupeeflo: Fintech Revolution Unlocked!",
-      date: "January 30, 2025",
+      date: "February 12, 2025",
       link: "https://youtu.be/h5ys474Z460",
     },
     {
@@ -178,7 +178,7 @@ const NewsArticle = () => {
       content_type: "Videos",
       news_title:
         "The Next 10 Years of India: A Roadmap for Long-Term Investors",
-      date: "march 30, 2025",
+      date: "January 24, 2025",
       link: "https://youtu.be/V5DCqNsUIO8",
     },
     {
@@ -186,7 +186,7 @@ const NewsArticle = () => {
       news_img: "/images/news/maxresdefault (2).jpg",
       content_type: "Videos",
       news_title: "Auto Industry Shake-Up: Opportunities Before Budget 2025",
-      date: "april 30, 2025",
+      date: "January 17, 2025",
       link: "https://youtu.be/05Crr5bFAlM",
     },
     {
@@ -195,7 +195,7 @@ const NewsArticle = () => {
       content_type: "Videos",
       news_title:
         "US Fed Rate Cuts: Impact on Indian Economy & Emerging Sectors to Watch!",
-      date: "January 10, 2025",
+      date: "December 20, 2024",
       link: "https://youtu.be/lOfL087qO_E",
     },
   ];
@@ -270,7 +270,7 @@ const NewsArticle = () => {
           {/* News Items Section */}
           <div className="row">
             {filteredNews.map((item, index) => (
-              <div className="col-lg-4 col-md-6 col-12 mt-lg-0 mt-md-3 mt-5" key={index}>
+              <div className="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-12 mt-lg-0 mt-md-3 mt-5" key={index}>
                 <NavLink to={item.link} target="_blank">
                   <div className="news-div mt-4">
                     <div className="news-img-div">

@@ -193,7 +193,7 @@ const ArticleSection = () => {
         "/images/news/Rupeeflow_founders_20250210224601_original_image_24.webp",
       content_type: "Angel Fund",
       news_title: "Rupeeflo Raises $1 Mn From Piper Serica Angel Fund",
-      date: "January 1, 2025",
+      date: "January 30, 2025",
       link: "https://www.bwdisrupt.com/article/rupeeflo-raises-1-mn-from-piper-serica-angel-fund-547569",
     },
     {
@@ -202,7 +202,7 @@ const ArticleSection = () => {
       // insight_type: "Angel Fund",
       content_type: "Angel Fund",
       news_title: "Rupeeflo raises $1 Mn from Piper Serica",
-      date: "January 2, 2025",
+      date: "January 30, 2025",
       link: "https://entrackr.com/snippets/rupeeflo-raises-1-mn-from-piper-serica-8706125",
     },
     {
@@ -212,7 +212,7 @@ const ArticleSection = () => {
       content_type: "Angel Fund",
       news_title:
         "Rupeeflo raised $1 million in pre-seed round led by Piper Serica Angel Fund",
-      date: "January 3, 2025",
+      date: "January 30, 2025",
       link: "https://economictimes.indiatimes.com/tech/funding/rupeeflo-raised-1-million-in-pre-seed-round-led-by-piper-serica-angel-fund/articleshow/118119714.cms",
     },
     {
@@ -221,7 +221,7 @@ const ArticleSection = () => {
       content_type: "Videos",
       news_title:
         "Piper Serica x Astrogate Labs: The Next Big Leap in Space Tech",
-      date: "January 4, 2025",
+      date: "February 28, 2025",
       link: "https://youtu.be/XykqfFfr67c",
     },
     {
@@ -229,7 +229,7 @@ const ArticleSection = () => {
       // insight_type: "News and More",
       content_type: "Videos",
       news_title: "Piper Serica x Rupeeflo: Fintech Revolution Unlocked!",
-      date: "January 5, 2025",
+      date: "February 12, 2025",
       link: "https://youtu.be/h5ys474Z460",
     },
     {
@@ -238,7 +238,7 @@ const ArticleSection = () => {
       content_type: "Videos",
       news_title:
         "The Next 10 Years of India: A Roadmap for Long-Term Investors",
-      date: "march 6, 2025",
+      date: "January 24, 2025",
       link: "https://youtu.be/V5DCqNsUIO8",
     },
     {
@@ -246,7 +246,7 @@ const ArticleSection = () => {
       news_img: "/images/news/maxresdefault (2).jpg",
       content_type: "Videos",
       news_title: "Auto Industry Shake-Up: Opportunities Before Budget 2025",
-      date: "april 7, 2025",
+      date: "January 17, 2025",
       link: "https://youtu.be/05Crr5bFAlM",
     },
     {
@@ -255,7 +255,7 @@ const ArticleSection = () => {
       content_type: "Videos",
       news_title:
         "US Fed Rate Cuts: Impact on Indian Economy & Emerging Sectors to Watch!",
-      date: "January 8, 2025",
+      date: "December 20, 2024",
       link: "https://youtu.be/lOfL087qO_E",
     },
     // {
