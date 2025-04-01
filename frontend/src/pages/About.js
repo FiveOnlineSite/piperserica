@@ -33,7 +33,7 @@ const About = () => {
       image: "/images/team/Ajay-modi-560x560.jpeg",
       name: "Rahul Chaudhari",
       linkedin_url: "https://www.linkedin.com/in/rahulchaudhari73/",
-      designation: "Head - Finance & Operations",
+      designation: "Head - Ops & Compliance",
     },
     {
       image: "/images/team/Ajay-modi-560x560.jpeg",
@@ -123,7 +123,7 @@ const About = () => {
     }
   };
 
-  const [activeTab, setActiveTab] = useState("fourteen");
+  const [activeTab, setActiveTab] = useState("twenty-two");
   const [gifSources, setGifSources] = useState({
     fourteen: "/images/history/Getway-of-India-2004-GIF.gif",
     fifteen: "/images/history/Target-2015-GIF.gif",
@@ -444,7 +444,7 @@ const About = () => {
                           </div>
                           <p className="para history-para">
                             {" "}
-                            We received the registration from the
+                            Piper Serica received the registration from the
                             <strong>
                               {" "}
                               Securities and Exchange Board of India (SEBI) for
@@ -510,7 +510,7 @@ const About = () => {
                             <span></span>
                           </div>
                           <p className="para history-para">
-                            Launched
+                          Piper Serica Launched
                             <strong>
                               {" "}
                               Piper Serica Angel Fund, an early-stage VC fund

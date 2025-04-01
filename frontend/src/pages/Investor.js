@@ -201,11 +201,12 @@ const Investor = () => {
                   <div className="facts-div">
                     <h2 className="facts-title">19%+</h2>
                     <h6 className="para">CAGR</h6>
+                    <p className="facts-small">(Since Feb 2025)</p>
                   </div>
                 </div>
-                <div className="col-12">
+                {/* <div className="col-12">
                 <p className="para-txt mt-2">Since Feb 2025</p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

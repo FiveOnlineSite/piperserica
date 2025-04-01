@@ -167,7 +167,21 @@ const Contact = () => {
                         )}
                       </div>
                     </div>
-                    <div className="col-lg-12">
+                    <div className="col-lg-6">
+                    <div className="mb-3">
+                        <label for="select" className="form-label">
+                          Invester Type*
+                        </label>
+                    <select className="form-select" aria-label="Default select example">
+                        <option selected>Open this select</option>
+                        <option value="1">I am an investor</option>
+                        <option value="2">I am a distributor</option>
+                        <option value="3">I am a start-up founder</option>
+                        <option value="3">Other</option>
+                      </select>
+                      </div>
+                      </div>
+                    <div className="col-lg-6">
                       <div className="mb-3">
                         <label for="email" className="form-label">
                           Email*

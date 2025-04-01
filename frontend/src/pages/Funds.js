@@ -109,7 +109,7 @@ const Funds = () => {
                 </div> */}
                 <div className="col-lg-4 mt-lg-0 mt-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">22</h2>
+                    <h2 className="facts-title">24</h2>
                     <h6 className="para">companies</h6>
                   </div>
                 </div>

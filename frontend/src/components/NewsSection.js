@@ -278,7 +278,7 @@ const NewsSection = () => {
               </h2>
             </div>
             <div className="col-lg-6">
-              <NavLink to="/insights" className="banner-btn blue-btn mt-0">
+              <NavLink to="/news-and-more" className="banner-btn blue-btn mt-0">
                 View all
               </NavLink>
             </div>

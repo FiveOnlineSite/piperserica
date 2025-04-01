@@ -218,27 +218,27 @@ const Startup = () => {
               <div className="row">
                 <div className="col-lg-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">INR 1500 Cr+</h2>
+                    <h2 className="facts-title">26</h2>
                     <h6 className="para">
-                    AUM
+                    companies
                       {/* <i> (as of 30 June 2024)</i> */}
                     </h6>
                   </div>
                 </div>
                 <div className="col-lg-4 mt-lg-0 mt-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">1200+</h2>
-                    <h6 className="para">Investor Families</h6>
+                    <h2 className="facts-title">INR 300 Cr</h2>
+                    <h6 className="para">Fund Size</h6>
                   </div>
                 </div>
                 <div className="col-lg-4 mt-lg-0 mt-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">19%+</h2>
-                    <h6 className="para">CAGR</h6>
+                    <h2 className="facts-title">1.8x</h2>
+                    <h6 className="para">MOIC</h6>
                   </div>
                 </div>
                 <div className="col-12">
-                <p className="para-txt mt-2">Since Feb 2025</p>
+                <p className="para-txt mt-2 facts-small">Figures as of 28 Feb 2025</p>
                 </div>
               </div>
             </div>

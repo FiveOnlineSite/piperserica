@@ -674,12 +674,12 @@ const Header = () => {
                 <ul className="dropdown-menu desktop-dropdown-menu">
                   <li>
                     <NavLink className="dropdown-item" to="/public-market">
-                      Public Market
+                    Public Market Funds
                     </NavLink>
                   </li>
                   <li>
                     <NavLink className="dropdown-item" to="/private-market">
-                      Private Market
+                    Private Market Funds
                     </NavLink>
                   </li>
                 </ul>

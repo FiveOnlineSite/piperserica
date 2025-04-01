@@ -88,7 +88,7 @@ const TopBar = ({ closeOffcanvas }) => {
     >
       <div className="container">
         <div className="select-div">
-          <h6>I am a: </h6>
+          <h6>I am: </h6>
           <select
             className="form-select"
             value={isDropdownOpen ? "" : selectedInvestor} // Show empty when dropdown opens
