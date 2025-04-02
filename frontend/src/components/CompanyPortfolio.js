@@ -3,7 +3,7 @@ import { Modal } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
 const CompanyPortfolio = () => {
-  const [selectedIndustry, setSelectedIndustry] = useState("All");
+  const [selectedIndustry, setSelectedIndustry] = useState("INDUSTRIES");
   const [selectedImage, setSelectedImage] = useState(null);
   const [showModal, setShowModal] = useState(false);
 
@@ -239,7 +239,7 @@ const CompanyPortfolio = () => {
   };
 
   const getFilteredImages = () => {
-    if (selectedIndustry === "All" || selectedIndustry === "") {
+    if (selectedIndustry === "INDUSTRIES" || selectedIndustry === "") {
       return images; // Show all images if no specific industry is selected
     }
     return images.filter((image) => image.label === selectedIndustry);
