@@ -173,7 +173,7 @@ const Contact = () => {
                           Invester Type*
                         </label>
                     <select className="form-select" aria-label="Default select example">
-                        <option selected>Open this select</option>
+                        <option selected>Select Invester Type</option>
                         <option value="1">I am an investor</option>
                         <option value="2">I am a distributor</option>
                         <option value="3">I am a start-up founder</option>

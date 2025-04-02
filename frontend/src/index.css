@@ -632,6 +632,9 @@ body {
   overflow: hidden;
   margin: 100px 0 50px 0;
 }
+.why-us-div-one {
+  min-height: 400px;
+}
 
 .vision-mission-div {
   min-height: 400px;

@@ -253,7 +253,7 @@ const Startup = () => {
               <div className="col-lg-4">
                 <div className="why-us-div ">
                   <NavLink to="/">
-                    <div className="why-us-content">
+                    <div className="why-us-content why-us-div-one">
                       <h2 className="banner-title why-content-main-title">
                         Value added partners
                       </h2>
@@ -284,7 +284,7 @@ const Startup = () => {
               <div className="col-lg-4">
                 <div className="why-us-div">
                   <NavLink to="/">
-                    <div className="why-us-content">
+                    <div className="why-us-content why-us-div-one" >
                       <h2 className="banner-title why-content-main-title">
                         Network
                       </h2>
@@ -313,7 +313,7 @@ const Startup = () => {
               <div className="col-lg-4">
                 <div className="why-us-div">
                   <NavLink to="/">
-                    <div className="why-us-content">
+                    <div className="why-us-content why-us-div-one">
                       <h2 className="banner-title why-content-main-title">
                         Founder first approach
                       </h2>
