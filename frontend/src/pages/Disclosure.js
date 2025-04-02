@@ -16,20 +16,20 @@ const Disclosure = () => {
       date: "January 2023-24",
       filepath:"https://drive.google.com/file/d/16R9qiAgRj_BMRQphkocJI6mk97rsLsZf/view?usp=sharing",
       filter_type: "Annual Return",
-       title: "Annual Report January 2023-24"
+       title: "Annual Report 2023-24"
     },
 
     {
       date: "January 2022-23",
       filepath: "https://drive.google.com/file/d/15zpNfoWsuCc1wbBppoom1I_69IZPHKPN/view?usp=sharing",
       filter_type: "Annual Return",
-       title: "Annual Report January 2022-23"
+       title: "Annual Report 2022-23"
     },
     {
       date: "January 2021-22",
       filepath: "https://drive.google.com/file/d/1dhGqX7vImHu4Y4SeCo-c44Zf5d7Bphio/view?usp=sharing",
       filter_type: "Annual Return",
-       title: "Annual Report January 2021-22"
+       title: "Annual Report 2021-22"
     },
 
     {

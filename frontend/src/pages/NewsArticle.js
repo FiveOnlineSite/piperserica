@@ -82,7 +82,7 @@ const NewsArticle = () => {
       news_img: "/images/news/Castler_Founders.jpg",
       content_type: "Angel Fund",
       news_title:"Capital 2B, IIFL Fintech Fund Lead $5 M Round For Zerodha-backed Castler",
-      date: "March 28, 2025",
+      date: "May 10, 2023",
       link: "https://www.bwdisrupt.com/article/capital-2b-iifl-fintech-fund-lead-5-m-round-for-zerodha-backed-castler-476051",
     },
     {
@@ -98,7 +98,7 @@ const NewsArticle = () => {
       news_img: "/images/news/ev.webp",
       content_type: "Angel Fund",
       news_title:"EV leasing firm Alt Mobility raises $6 million to scale up operations",
-      date: "March 28, 2025",
+      date: "April 02, 2025",
       link: "https://www.business-standard.com/industry/news/ev-leasing-firm-alt-mobility-raises-6-million-to-scale-up-operations-124011800160_1.html",
     },
     {
@@ -107,7 +107,7 @@ const NewsArticle = () => {
       content_type: "Angel Fund",
       news_title:
         "Space-tech firm Astrogate Labs raises $1.3 million in pre-series round led by Piper Serica",
-      date: "January 30, 2025",
+      date: "February 27, 2025",
       link: "https://economictimes.indiatimes.com/tech/funding/space-tech-firm-astrogate-labs-raises-1-3-million-in-pre-series-round-led-by-piper-serica/articleshow/118601900.cms",
     },
     {
@@ -115,7 +115,7 @@ const NewsArticle = () => {
       // insight_type: "News and More",
       content_type: "Angel Fund",
       news_title: "Astrogate Labs raises $1.3 Mn led by Piper Serica",
-      date: "January 30, 2025",
+      date: "February 27, 2025",
       link: "https://entrackr.com/snippets/astrogate-labs-raises-13-mn-led-by-piper-serica-8760743",
     },
     {
@@ -124,7 +124,7 @@ const NewsArticle = () => {
       content_type: "Angel Fund",
       news_title:
         "Spacetech Startup Astrogate Bags Funding To Develop Laser Communication Terminals",
-      date: "January 30, 2025",
+      date: "February 27, 2025",
       link: "https://inc42.com/buzz/spacetech-startup-astrogate-bags-funding-to-develop-laser-communication-terminals",
     },
     {
@@ -133,7 +133,7 @@ const NewsArticle = () => {
         "/images/news/Rupeeflow_founders_20250210224601_original_image_24.webp",
       content_type: "Angel Fund",
       news_title: "Rupeeflo Raises $1 Mn From Piper Serica Angel Fund",
-      date: "January 30, 2025",
+      date: "February 10, 2025",
       link: "https://www.bwdisrupt.com/article/rupeeflo-raises-1-mn-from-piper-serica-angel-fund-547569",
     },
     {
@@ -142,7 +142,7 @@ const NewsArticle = () => {
       // insight_type: "Angel Fund",
       content_type: "Angel Fund",
       news_title: "Rupeeflo raises $1 Mn from Piper Serica",
-      date: "January 30, 2025",
+      date: "February 10, 2025",
       link: "https://entrackr.com/snippets/rupeeflo-raises-1-mn-from-piper-serica-8706125",
     },
     {
