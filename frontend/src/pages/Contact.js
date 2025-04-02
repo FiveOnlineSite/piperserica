@@ -201,7 +201,7 @@ const Contact = () => {
                     <div className="col-lg-12">
                       <div className="mb-3">
                         <label for="message" className="form-label">
-                          Message <span>(optional)</span>
+                          Message* <span>(optional)</span>
                         </label>
                         <textarea
                           type="text"
