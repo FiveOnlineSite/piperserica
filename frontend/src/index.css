@@ -2230,12 +2230,12 @@ form .form-label span {
   color: var(--blue-font);
 }
 
-.accordion .accordion-button:not(.collapsed) {
+/* .accordion .accordion-button:not(.collapsed) {
   padding: 0px!important;
 }
 #btn-one{
   padding: 0px 20px 20px 15px!important;
-}
+} */
 .accordion .accordion-header {
   padding-bottom:30px;
 }
