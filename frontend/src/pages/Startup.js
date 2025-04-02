@@ -218,7 +218,7 @@ const Startup = () => {
               <div className="row">
                 <div className="col-lg-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">26</h2>
+                    <h2 className="facts-title">24</h2>
                     <h6 className="para">
                     companies
                       {/* <i> (as of 30 June 2024)</i> */}

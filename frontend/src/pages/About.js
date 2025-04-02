@@ -97,7 +97,7 @@ const About = () => {
     },
     {
       image: "/images/team/Ajay-modi-560x560.jpeg",
-      name: "Abhijit Gaonkar",
+      name: "Abhijeet Gaonkar",
       linkedin_url: "https://www.linkedin.com/in/abhijeet-gaonkar-446315339/",
       designation: "Senior Manager - Administration",
     },
