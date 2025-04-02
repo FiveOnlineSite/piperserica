@@ -201,11 +201,11 @@ const InvestorLetter = () => {
 
       filepath: "/docs/2019-11-nov2019-min.pdf",
     },
-    {
-      date: "November 2018",
+    // {
+    //   date: "November 2018",
 
-      filepath: "/docs/2018-11-nov2018-min.pdf",
-    },
+    //   filepath: "/docs/2018-11-nov2018-min.pdf",
+    // },
     {
       date: "December 2022",
 
