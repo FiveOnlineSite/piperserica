@@ -6,13 +6,13 @@ const InvestorLetter = () => {
   const letters = [
     {
       date: "January 2025",
-      filepath: "/docs/Piper-Serica-Investor-Letter-January-2025.pdf",
+      filepath: "/docs/Piper-Serica-Investor-Letter-January-2025-new.pdf",
     },
 
     {
       date: "January 2024",
       filepath:
-        "/docs/2024-1-piper-serica-investor-letter-january-2024-min/pdf",
+        "/docs/2024-1-piper-serica-investor-letter-january-2024-min.pdf",
     },
 
     {
@@ -51,10 +51,10 @@ const InvestorLetter = () => {
       filepath: "/docs/2020-2-feb2020-min.pdf",
     },
 
-    {
-      date: "March 2024",
-      filepath: "/docs/Piper-Serica-Portfolio-Note-Mar-2024.pdf",
-    },
+    // {
+    //   date: "March 2024",
+    //   filepath: "/docs/Piper-Serica-Portfolio-Note-Mar-2024.pdf",
+    // },
 
     {
       date: "March 2022",
@@ -160,7 +160,7 @@ const InvestorLetter = () => {
     {
       date: "October 2024",
 
-      filepath: "/docs/Piper-Serica-Investor-Letter-October-2024.pdf",
+      filepath: "/docs/Piper-Serica-Investor-Letter-October-2024-new.pdf",
     },
     {
       date: "October 2022",
@@ -169,7 +169,7 @@ const InvestorLetter = () => {
     },
     {
       date: "October 2021",
-      filepath: "/docs/2018-11-nov2018-min.pdf",
+      filepath: "/docs/Piper-Serica-Investor-Letter-October-2021.pdf",
     },
     {
       date: "October 2020",
@@ -201,11 +201,11 @@ const InvestorLetter = () => {
 
       filepath: "/docs/2019-11-nov2019-min.pdf",
     },
-    {
-      date: "November 2018",
+    // {
+    //   date: "November 2018",
 
-      filepath: "/docs/2018-11-nov2018-min.pdf",
-    },
+    //   filepath: "/docs/2018-11-nov2018-min.pdf",
+    // },
     {
       date: "December 2022",
 
@@ -225,7 +225,47 @@ const InvestorLetter = () => {
     {
       date: "December 2019",
 
-      filepath: "/docs/2019-12-dec2020-min.pdf",
+      filepath: "/docs/Piper-Serica-PMS-December-2019-Letter.pdf",
+    },
+    {
+      date: "December 2016",
+
+      filepath: "/docs/Piper-Serica-Investor-Letter-December-2016.pdf",
+    },
+    {
+      date: "November 2018",
+
+      filepath: "/docs/Piper-Serica-Investor-Letter-November-2018.pdf",
+    },
+    {
+      date: "July 2019",
+
+      filepath: "/docs/Piper-Serica-Investor-Letter-July2019.pdf",
+    },
+    {
+      date: "June 2020",
+
+      filepath: "/docs/Piper-Serica-PMS-Monthly-Letter-June-2020.pdf",
+    },
+    {
+      date: "July 2020",
+
+      filepath: "/docs/Piper-Serica-Investor Letter-July-2020.pdf",
+    },
+    {
+      date: "September 2020",
+
+      filepath: "/docs/Piper-Serica-PMS-Monthly-Letter-September-2020.pdf",
+    },
+    {
+      date: "April 2024",
+
+      filepath: "/docs/Piper-Serica-Investor-Letter-April-2024.pdf",
+    },
+    {
+      date: "July 2024",
+
+      filepath: "/docs/Piper-Serica-Investor-Letter-July-2024-new.pdf",
     },
   ];
 
@@ -307,6 +347,8 @@ const InvestorLetter = () => {
                   <option value="2020-2021">2020-2021</option>
                   <option value="2019-2020">2019-2020</option>
                   <option value="2018-2019">2018-2019</option>
+                  <option value="2017-2018">2017-2018</option>
+                  <option value="2016-2017">2016-2017</option>
                 </select>
               </div>
             </div>

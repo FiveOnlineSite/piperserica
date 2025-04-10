@@ -33,7 +33,7 @@ const About = () => {
       image: "/images/team/Ajay-modi-560x560.jpeg",
       name: "Rahul Chaudhari",
       linkedin_url: "https://www.linkedin.com/in/rahulchaudhari73/",
-      designation: "Head - Finance & Operations",
+      designation: "Head - Ops & Compliance",
     },
     {
       image: "/images/team/Ajay-modi-560x560.jpeg",
@@ -97,7 +97,7 @@ const About = () => {
     },
     {
       image: "/images/team/Ajay-modi-560x560.jpeg",
-      name: "Abhijit Gaonkar",
+      name: "Abhijeet Gaonkar",
       linkedin_url: "https://www.linkedin.com/in/abhijeet-gaonkar-446315339/",
       designation: "Senior Manager - Administration",
     },
@@ -123,7 +123,7 @@ const About = () => {
     }
   };
 
-  const [activeTab, setActiveTab] = useState("fourteen");
+  const [activeTab, setActiveTab] = useState("twenty-two");
   const [gifSources, setGifSources] = useState({
     fourteen: "/images/history/Getway-of-India-2004-GIF.gif",
     fifteen: "/images/history/Target-2015-GIF.gif",
@@ -444,7 +444,7 @@ const About = () => {
                           </div>
                           <p className="para history-para">
                             {" "}
-                            We received the registration from the
+                            Piper Serica received the registration from the
                             <strong>
                               {" "}
                               Securities and Exchange Board of India (SEBI) for
@@ -510,7 +510,7 @@ const About = () => {
                             <span></span>
                           </div>
                           <p className="para history-para">
-                            Launched
+                          Piper Serica Launched
                             <strong>
                               {" "}
                               Piper Serica Angel Fund, an early-stage VC fund
@@ -542,18 +542,18 @@ const About = () => {
               <div className="col-lg-10">
                 <div className="row align-items-center">
                   <div className="col-lg-6">
-                    <div className="why-us-div vision-mission-div">
+                    <div className="why-us-div vision-mission-div vision-mission-div-one ">
                       <NavLink to="/">
-                        <div className="why-us-content">
+                        {/* <div className="why-us-content">
                           <h2 className="banner-title why-content-main-title">
                             Vision
                           </h2>
                           <h6 className="read-more">
                             Read More <i className="fa-solid fa-plus"></i>
                           </h6>
-                        </div>
+                        </div> */}
 
-                        <div className="why-content-para vision-mission-para">
+                        <div className="why-content-para vision-mission-para why-content-para-one">
                           <h2 className="banner-title why-content-main-title">
                             Vision
                           </h2>
@@ -569,18 +569,18 @@ const About = () => {
                   </div>
 
                   <div className="col-lg-6">
-                    <div className="why-us-div vision-mission-div">
+                    <div className="why-us-div vision-mission-div vision-mission-div-one">
                       <NavLink to="/">
-                        <div className="why-us-content">
+                        {/* <div className="why-us-content">
                           <h2 className="banner-title why-content-main-title">
                             Mission
                           </h2>
                           <h6 className="read-more">
                             Read More <i className="fa-solid fa-plus"></i>
                           </h6>
-                        </div>
+                        </div> */}
 
-                        <div className="why-content-para vision-mission-para">
+                        <div className="why-content-para vision-mission-para why-content-para-one">
                           <h2 className="banner-title why-content-main-title">
                             Mission
                           </h2>
@@ -638,7 +638,7 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-                <button
+                <button id="btn-one"
                   className={`accordion-button ${
                     openAccordion === 0 ? "" : "collapsed"
                   }`}
@@ -689,7 +689,7 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-                <button
+                <button id="btn-one"
                   className={`accordion-button ${
                     openAccordion === 1 ? "" : "collapsed"
                   }`}
@@ -939,7 +939,7 @@ const About = () => {
 
           <div className="row mb-5">
             {teamContent.map((team, index) => (
-              <div className="col-lg-3 col-md-6 col-12" key={index}>
+              <div className="col-xxl-3 col-xl-4 col-md-6 col-12" key={index}>
                 <div className="team-div img-team-one">
                   {/* <img
                     src={`${process.env.PUBLIC_URL}${team.image}`}
@@ -949,7 +949,7 @@ const About = () => {
                   <div className="team-content">
                     <div className="team-title-div">
                       <h3 className="section-title team-name">{team.name}</h3>
-                      <NavLink to={team.linkedin_url}>
+                      <NavLink to={team.linkedin_url} target="_blank">
                         <i class="fa-brands fa-linkedin"></i>
                       </NavLink>
                     </div>

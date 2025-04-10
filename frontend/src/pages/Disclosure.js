@@ -152,7 +152,11 @@ const Disclosure = () => {
                     </h6> */}
                     <div className="commitment-content">
                       <p className="para small-para">
-                      SEBI Registration No: INP000006749
+                      <p className="para small-para">Name of the PMS: Piper Serica Portfolio Management Service</p>
+<p className="para small-para">SEBI Registration No.: INP000006749</p>
+<p className="para small-para">Investment Manager: Piper Serica Advisor Private Limited</p>
+<p className="para small-para">Address: A Wing, 905/906, Marathon Innova Nextgen, Ganpatrao Kadam Marg, Opp-Peninsula Corporate Park, Lower Parel, Mumbai – 400013</p>
+
                       </p>
                     </div>
                   </div>
@@ -227,7 +231,7 @@ const Disclosure = () => {
                   <option selected disabled value="">
                     Select filter
                   </option>
-                  <option value="Annual Return">Annual Return</option>
+                  <option value="Annual Return">Annual Report</option>
                   <option value="PMS Disclosure">PMS Disclosure</option>
                   {/* <option value="FPI Disclosure">FPI Disclosure</option> */}
                 </select>
@@ -249,9 +253,9 @@ const Disclosure = () => {
               <div className="col-lg-4 col-md-6 col-12">
                 <NavLink to={letter.filepath} target="_blank">
                   <div className="letter-div mb-4">
-                    <h5 className="section-subtitle">{letter.date}</h5>
+                    {/* <h5 className="section-subtitle">{letter.date}</h5> */}
                     <h3>
-                      {letter.title} {""} {letter.date}
+                      {letter.title} {""}
                     </h3>
                     {/* <div className="letter-options py-3 pt-5">
                     
@@ -265,6 +269,12 @@ const Disclosure = () => {
                 </NavLink>
               </div>
             ))}
+            <div className="col-12 mt-3">
+<p>If you are not satisfied with the resolution provided, you can lodge your complaint online at:</p>
+<p>SCORES : <Link to='https://scores.sebi.gov.in/'>https://scores.sebi.gov.in/</Link></p>
+<p>SMART ODR : <Link to='https://smartodr.in/login'>https://smartodr.in/login</Link></p>
+
+            </div>
           </div>
         </div>
       </section>

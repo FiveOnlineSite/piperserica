@@ -167,7 +167,21 @@ const Contact = () => {
                         )}
                       </div>
                     </div>
-                    <div className="col-lg-12">
+                    <div className="col-lg-6">
+                    <div className="mb-3">
+                        <label for="select" className="form-label">
+                          Invester Type*
+                        </label>
+                    <select className="form-select" aria-label="Default select example">
+                        <option selected disabled>Select Invester Type</option>
+                        <option value="1">I am an investor</option>
+                        <option value="2">I am a distributor</option>
+                        <option value="3">I am a start-up founder</option>
+                        <option value="3">Other</option>
+                      </select>
+                      </div>
+                      </div>
+                    <div className="col-lg-6">
                       <div className="mb-3">
                         <label for="email" className="form-label">
                           Email*
@@ -187,7 +201,7 @@ const Contact = () => {
                     <div className="col-lg-12">
                       <div className="mb-3">
                         <label for="message" className="form-label">
-                          Message <span>(optional)</span>
+                          Message*
                         </label>
                         <textarea
                           type="text"
@@ -197,6 +211,7 @@ const Contact = () => {
                           value={formData.message}
                           onChange={handleChange}
                           rows="4"
+                          required
                           // placeholder="start typing....."
                         ></textarea>
                       </div>

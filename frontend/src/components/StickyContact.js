@@ -11,7 +11,7 @@ const StickyContact = ({ title }) => {
           </div>
 
           <div className="col-lg-4 mt-lg-0 mt-3">
-            <NavLink to="/contact-us" className="banner-btn blue-btn mt-0">
+            <NavLink to="/contact" className="banner-btn blue-btn mt-0">
               Contact us
               <i className="fa-solid fa-arrow-right"></i>
             </NavLink>

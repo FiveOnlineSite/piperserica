@@ -37,7 +37,7 @@ const MarketFunds = () => {
             <div className="banner-content-div">
               <div className="container">
                 {/* <h6 className="banner-subtitle">Our Businesses</h6> */}
-                <h1 className="banner-title">Public Market Fund</h1>
+                <h1 className="banner-title">Public Market Funds</h1>
                 {/* <p className="banner-para">
                   We provide investors access to unique investment opportunities
                   that deliver superior risk-adjusted returns in today's

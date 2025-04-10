@@ -3,7 +3,7 @@ import { Modal } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 
 const CompanyPortfolio = () => {
-  const [selectedIndustry, setSelectedIndustry] = useState("All");
+  const [selectedIndustry, setSelectedIndustry] = useState("INDUSTRIES");
   const [selectedImage, setSelectedImage] = useState(null);
   const [showModal, setShowModal] = useState(false);
 
@@ -239,7 +239,7 @@ const CompanyPortfolio = () => {
   };
 
   const getFilteredImages = () => {
-    if (selectedIndustry === "All" || selectedIndustry === "") {
+    if (selectedIndustry === "INDUSTRIES" || selectedIndustry === "") {
       return images; // Show all images if no specific industry is selected
     }
     return images.filter((image) => image.label === selectedIndustry);
@@ -260,61 +260,67 @@ const CompanyPortfolio = () => {
       <section className="industries-portfolio-section">
         <div className="container">
           <div className="row">
-            <div className="col-lg-9">
-              <h6 className="section-subtitle">Industries</h6>
-              <h3 className="section-title mb-lg-3 mb-4">
+            <div className="col-lg-5">
+              <div className="feature-title-div">
+                {/* <h6 className="section-subtitle mb-4">Growth Strategy</h6> */}
+                <h3 className="section-title mb-lg-3 mb-4">
                 Portfolio Companies
-              </h3>
-            </div>
-            <div className="col-lg-3">
-              <div className="industries-filter-div">
-                <select
-                  class="form-select"
-                  onChange={handleFilterChange}
-                  aria-label="Default select example"
-                >
-                  <option selected>All</option>
-                  <option value="ADVANCE ELECTRONIC">ADVANCE ELECTRONIC</option>
-                  <option value="AI & SAAS">AI & SAAS</option>
-                  <option value="CONSUMER TECH">CONSUMER TECH</option>
-                  <option value="CYBER SECURITY & CHIP DESIGN">
-                    CYBER SECURITY & CHIP DESIGN
-                  </option>
-                  <option value="ELECTRIC VEHICLE">ELECTRIC VEHICLE</option>
-                  <option value="FINTECH">FINTECH</option>
-                  <option value="SPACETECH">SPACETECH</option>
-                  <option value="SUPPLY CHAIN TECH">SUPPLY CHAIN TECH</option>
-                </select>
+                </h3>
               </div>
             </div>
-          </div>
-
-          <div className="row mt-lg-4 mt-5">
-            <div className="industries-div">
+            
+            <div className="col-lg-7  mt-lg-0 mt-4">
               <div className="row">
-                {getFilteredImages().map((images) => (
-                  <div key={images.id} className="col-lg-3 col-md-6 col-6">
-                    <div
-                      className="industires-logo-div"
-                      onClick={() => openModal(images)}
-                      style={{ cursor: "pointer" }}
+                <div className="col-lg-12">
+                    <div className="industries-filter-div">
+                    <select
+                      className="form-select"
+                      onChange={handleFilterChange}
+                      aria-label="Default select example"
                     >
-                      <img
-                        src={`${process.env.PUBLIC_URL}${images.src}`}
-                        alt="industry"
-                        className="w-100 portfolio-img"
-                      />
-                      {/* <div className="industries-content">
-                        <p className="para small-para">
-                          The Fund seeks to empower early and growth stage
-                          companies in India and Southeast Asia, providing them
-                          capital to scale without significantly diluting
-                          equity.
-                        </p>
-                      </div> */}
+                      <option selected>INDUSTRIES</option>
+                      <option value="ADVANCE ELECTRONIC">ADVANCE ELECTRONIC</option>
+                      <option value="AI & SAAS">AI & SAAS</option>
+                      <option value="CONSUMER TECH">CONSUMER TECH</option>
+                      <option value="CYBER SECURITY & CHIP DESIGN">
+                        CYBER SECURITY & CHIP DESIGN
+                      </option>
+                      <option value="ELECTRIC VEHICLE">ELECTRIC VEHICLE</option>
+                      <option value="FINTECH">FINTECH</option>
+                      <option value="SPACETECH">SPACETECH</option>
+                      <option value="SUPPLY CHAIN TECH">SUPPLY CHAIN TECH</option>
+                    </select>
+                  </div>
+                </div>
+                <div className="col-lg-12">
+                    <div className="industries-div">
+                    <div className="row">
+                      {getFilteredImages().map((images) => (
+                        <div key={images.id} className="col-lg-3 col-md-6 col-6">
+                          <div
+                            className="industires-logo-div"
+                            onClick={() => openModal(images)}
+                            style={{ cursor: "pointer" }}
+                          >
+                            <img
+                              src={`${process.env.PUBLIC_URL}${images.src}`}
+                              alt="industry"
+                              className="w-100 portfolio-img"
+                            />
+                            {/* <div className="industries-content">
+                              <p className="para small-para">
+                                The Fund seeks to empower early and growth stage
+                                companies in India and Southeast Asia, providing them
+                                capital to scale without significantly diluting
+                                equity.
+                              </p>
+                            </div> */}
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </div>
-                ))}
+                </div>
               </div>
             </div>
           </div>
