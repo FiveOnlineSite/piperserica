@@ -297,7 +297,8 @@ const Contact = () => {
                   >
                     <i className="fa-solid fa-location-dot"></i>
                     <p className="para small-para">
-                    Office No. 905 & 906, A Wing, Marathon Innova Nextgen, Ganpatrao Kadam Marg, Lower Parel, Mumbai – 400013
+                      Office No. 905 & 906, A Wing, Marathon Innova Nextgen,
+                      Ganpatrao Kadam Marg, Lower Parel, Mumbai – 400013
                     </p>
                   </NavLink>
                 </div>
@@ -336,7 +337,8 @@ const Contact = () => {
           <Modal.Body>
             <div>
               <p className="section-subtitle pop-msg-one thankyou-msg">
-              Thank you for reaching out! We have received your message and will get back to you soon.
+                Thank you for reaching out! We have received your message and
+                will get back to you soon.
               </p>
               {/* <button onClick={() => setSuccessModal(false)}>Close</button> */}
             </div>

@@ -491,7 +491,7 @@ body {
   line-height: 26px;
   font-family: "Public Sans", serif;
 }
-.pop-msg-one{
+.pop-msg-one {
   text-transform: capitalize;
 }
 
@@ -1154,7 +1154,7 @@ body {
   filter: brightness(0.8);
 }
 
-.bann-img-height img{
+.bann-img-height img {
   height: 100vh;
 }
 
@@ -1317,7 +1317,7 @@ body {
   mix-blend-mode: color-burn;
 }
 
-.industires-logo-div .entre-img-one{
+.industires-logo-div .entre-img-one {
   max-width: 85%;
 }
 
@@ -1655,9 +1655,9 @@ body {
 .small-team-div {
   height: 350px;
 }
-.img-team-one{
+.img-team-one {
   height: 130px;
- margin: 10px 0px;
+  margin: 10px 0px;
 }
 
 .team-div img {
@@ -2205,7 +2205,7 @@ form .form-label span {
 /* Custom accordion button */
 .accordion .accordion-item {
   margin: 20px 0;
-  border-bottom: 1px solid #000000!important;
+  border-bottom: 1px solid #000000 !important;
 }
 .accordion .custom-accordion-button {
   background: none;
@@ -2216,17 +2216,17 @@ form .form-label span {
   justify-content: space-between;
   cursor: pointer;
 }
-.accordion .accord-title-one{
+.accordion .accord-title-one {
   font-size: 18px;
   font-weight: 600;
   color: var(--blue-font);
 }
 
 .accordion .accordion-button:not(.collapsed) {
-  padding: 0px!important;
+  padding: 0px !important;
 }
 .accordion .accordion-header {
-  padding-bottom:30px;
+  padding-bottom: 30px;
 }
 /* Custom Arrow */
 .accordion .custom-arrow {
@@ -2237,12 +2237,12 @@ form .form-label span {
 .accordion .rotate {
   transform: rotate(180deg);
 }
-.accordion .accordion-body{
+.accordion .accordion-body {
   font-size: 18px;
   font-weight: 400;
   color: var(--gray-font);
 }
-.sim-bg-ch{
+.sim-bg-ch {
   background-color: #ffff;
 }
 
@@ -2603,7 +2603,7 @@ form .form-label span {
   .banner-img-div img {
     height: 50vh;
   }
-  .bann-img-height img{
+  .bann-img-height img {
     height: 100vh;
   }
 
@@ -2618,10 +2618,10 @@ form .form-label span {
   .our-commitment-tabs {
     border-bottom: none;
   }
-  .our-commitment-tabs a{
+  .our-commitment-tabs a {
     display: block;
   }
-  .our-commitment-tabs a h4{
+  .our-commitment-tabs a h4 {
     margin-top: 15px;
   }
 }
