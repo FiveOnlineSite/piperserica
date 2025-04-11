@@ -128,7 +128,7 @@ const About = () => {
     fourteen: "/images/history/Getway-of-India-2004-GIF.gif",
     fifteen: "/images/history/Target-2015-GIF.gif",
     nineteen: "/images/history/UpArrow-2019-GIF.gif",
-    twenty: "/images/history/Globe-2020-GIF.gif",
+    twenty: "/images/history/Dollar-2020-GIF.gif",
     "twenty-two": "/images/history/Rocket-2024-GIF.gif",
   });
 
@@ -510,7 +510,7 @@ const About = () => {
                             <span></span>
                           </div>
                           <p className="para history-para">
-                          Piper Serica Launched
+                            Piper Serica Launched
                             <strong>
                               {" "}
                               Piper Serica Angel Fund, an early-stage VC fund
@@ -638,7 +638,8 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-                <button id="btn-one"
+                <button
+                  id="btn-one"
                   className={`accordion-button ${
                     openAccordion === 0 ? "" : "collapsed"
                   }`}
@@ -689,7 +690,8 @@ const About = () => {
                     </div>
                   </div>
                 </div>
-                <button id="btn-one"
+                <button
+                  id="btn-one"
                   className={`accordion-button ${
                     openAccordion === 1 ? "" : "collapsed"
                   }`}
@@ -817,7 +819,7 @@ const About = () => {
             <div className="col-lg-5">
               <div className="founders-img-div pe-lg-5 pe-auto">
                 <img
-                  src={`${process.env.PUBLIC_URL}/images/team/abhay-agarwal-560x560.jpeg`}
+                  src={`${process.env.PUBLIC_URL}/images/team/abhay_agarwal_website_photo.jpg`}
                   className="w-100"
                   alt="founders-img"
                 />
@@ -880,12 +882,12 @@ const About = () => {
           {/* <div className="row mt-3 mb-5">
             <div className="col-lg-4 col-md-6">
               <div className="team-div"> */}
-                {/* <img
+          {/* <img
                   src={`${process.env.PUBLIC_URL}/images/team/abhay-agarwal-560x560.jpeg`}
                   alt="team-img"
                   className="w-100"
                 /> */}
-                {/* <div className="team-content">
+          {/* <div className="team-content">
                   <div className="team-title-div">
                     <h3 className="section-title team-name">Abhay Agarwal</h3>
                     <NavLink to="https://www.linkedin.com/in/abhay-agarwal-piper/">
@@ -900,12 +902,12 @@ const About = () => {
 
             <div className="col-lg-4 col-md-6 mt-lg-0 mt-md-0 mt-4">
               <div className="team-div"> */}
-                {/* <img
+          {/* <img
                   src={`${process.env.PUBLIC_URL}/images/team/rajni-560x560.jpeg`}
                   alt="team-img"
                   className="w-100"
                 /> */}
-                {/* <div className="team-content">
+          {/* <div className="team-content">
                   <div className="team-title-div">
                     <h3 className="section-title team-name">Rajni Agarwal</h3>
                     <NavLink to="https://www.linkedin.com/in/rajni-agarwal-99352218b/">
@@ -917,14 +919,14 @@ const About = () => {
               </div>
             </div> */}
 
-            {/* <div className="col-lg-4 col-md-6 mt-lg-0 mt-md-3 mt-4">
+          {/* <div className="col-lg-4 col-md-6 mt-lg-0 mt-md-3 mt-4">
               <div className="team-div"> */}
-                {/* <img
+          {/* <img
                   src={`${process.env.PUBLIC_URL}/images/team/Ajay-modi-560x560.jpeg`}
                   alt="team-img"
                   className="w-100"
                 /> */}
-                {/* <div className="team-content">
+          {/* <div className="team-content">
                   <div className="team-title-div">
                     <h3 className="section-title team-name">Ajay Modi</h3>
                     <NavLink to="https://www.linkedin.com/in/ajmodi/">
@@ -954,7 +956,9 @@ const About = () => {
                       </NavLink>
                     </div>
 
-                    <h5 className="section-subtitle small-txt">{team.designation}</h5>
+                    <h5 className="section-subtitle small-txt">
+                      {team.designation}
+                    </h5>
                   </div>
                 </div>
               </div>

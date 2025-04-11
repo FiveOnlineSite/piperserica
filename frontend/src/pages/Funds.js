@@ -6,6 +6,7 @@ import CompanyPortfolio from "../components/CompanyPortfolio";
 import ArticleSection from "../components/ArticleSection";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import TestimonialVideoSection from "../components/TestimonialVideo";
 
 const Funds = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -15,35 +16,42 @@ const Funds = () => {
   };
 
   const accordionData = [
-    { 
+    {
       title: "Focus on Early-Stage Startups",
-      content: "Piper Serica Angel Fund is a strategic investment partner dedicated to empowering early-stage startups with proprietary deep technologies and robust intellectual property. The fund focuses on ventures that have advanced beyond pure research, targeting companies with demonstrated commercial potential through initial revenue or sophisticated product development. By identifying startups at the critical intersection of innovation and market viability, Piper Serica supports entrepreneurs transforming groundbreaking scientific advances into scalable business models. The fund's approach bridges the complex gap between technological breakthrough and market success, carefully selecting ventures with the potential to convert innovative concepts into tangible, market-ready solutions." ,
-      extrapara:"",
+      content:
+        "Piper Serica Angel Fund is a strategic investment partner dedicated to empowering early-stage startups with proprietary deep technologies and robust intellectual property. The fund focuses on ventures that have advanced beyond pure research, targeting companies with demonstrated commercial potential through initial revenue or sophisticated product development. By identifying startups at the critical intersection of innovation and market viability, Piper Serica supports entrepreneurs transforming groundbreaking scientific advances into scalable business models. The fund's approach bridges the complex gap between technological breakthrough and market success, carefully selecting ventures with the potential to convert innovative concepts into tangible, market-ready solutions.",
+      extrapara: "",
     },
-    { 
+    {
       title: "Sector-Agnostic with Key Focus Areas",
-      content: "The Fund strategically navigates the technological frontier by concentrating investments in sectors at the forefront of global innovation. While maintaining flexibility across industries, the fund deliberately targets high-impact domains that are fundamentally transforming technological landscapes: fintech - revolutionary financial technologies, spacetech – from upstream to downstream, advanced electronics, next-generation computational solutions, cybersecurity's critical infrastructures, electric vehicles' sustainable transportation technologies, and semiconductor design.",
-      extrapara:"",    
+      content:
+        "The Fund strategically navigates the technological frontier by concentrating investments in sectors at the forefront of global innovation. While maintaining flexibility across industries, the fund deliberately targets high-impact domains that are fundamentally transforming technological landscapes: fintech - revolutionary financial technologies, spacetech – from upstream to downstream, advanced electronics, next-generation computational solutions, cybersecurity's critical infrastructures, electric vehicles' sustainable transportation technologies, and semiconductor design.",
+      extrapara: "",
     },
-    { 
-      title: "Investment Criteria", 
-      content: "Piper Serica Angel Fund meticulously identifies startups that transcend traditional early-stage limitations by demonstrating exceptional product-market alignment and clear customer value propositions. The fund prioritizes ventures that exhibit not just innovative potential, but tangible market validation through robust customer engagement, repeatable sales models, and a demonstrable ability to solve critical industry challenges. With investment tickets ranging from INR 6-10 crore, Piper Serica provides capital that enables portfolio companies to accelerate product development, expand market reach, and drive meaningful organizational growth." ,
-      extrapara:"",
+    {
+      title: "Investment Criteria",
+      content:
+        "Piper Serica Angel Fund meticulously identifies startups that transcend traditional early-stage limitations by demonstrating exceptional product-market alignment and clear customer value propositions. The fund prioritizes ventures that exhibit not just innovative potential, but tangible market validation through robust customer engagement, repeatable sales models, and a demonstrable ability to solve critical industry challenges. With investment tickets ranging from INR 6-10 crore, Piper Serica provides capital that enables portfolio companies to accelerate product development, expand market reach, and drive meaningful organizational growth.",
+      extrapara: "",
     },
-    { 
-      title: "Flexible Investment Strategy", 
-      content: "The Fund demonstrates investment flexibility, positioning itself as both a collaborative partner and a potential lead investor. The fund's approach is deeply rooted in alignment with founders' strategic visions, allowing for nuanced investment structures that best serve each unique startup's growth trajectory. Whether joining forces with established lead investors or taking a lead role, Piper Serica evaluates opportunities through a comprehensive lens that prioritizes technological potential, market impact, and entrepreneurial excellence.",
-      extrapara:"",
+    {
+      title: "Flexible Investment Strategy",
+      content:
+        "The Fund demonstrates investment flexibility, positioning itself as both a collaborative partner and a potential lead investor. The fund's approach is deeply rooted in alignment with founders' strategic visions, allowing for nuanced investment structures that best serve each unique startup's growth trajectory. Whether joining forces with established lead investors or taking a lead role, Piper Serica evaluates opportunities through a comprehensive lens that prioritizes technological potential, market impact, and entrepreneurial excellence.",
+      extrapara: "",
     },
-    { 
-      title: "Swift and Data-Driven Decision-Making", 
-      content: "Piper Serica Angel Fund employs Yoda.ai, a proprietary AI-driven screening platform, to accelerate and optimize investment decisions. The tool systematically filters potential investments by analyzing key performance metrics, market data, and startup fundamentals. This technology enables the fund to quickly assess opportunities, reducing decision-making time from weeks to days while maintaining rigorous evaluation standards. By combining machine learning insights with expert human judgment, the fund identifies and validates high-potential startups with unprecedented speed and precision.",
-      extrapara:"",
+    {
+      title: "Swift and Data-Driven Decision-Making",
+      content:
+        "Piper Serica Angel Fund employs Yoda.ai, a proprietary AI-driven screening platform, to accelerate and optimize investment decisions. The tool systematically filters potential investments by analyzing key performance metrics, market data, and startup fundamentals. This technology enables the fund to quickly assess opportunities, reducing decision-making time from weeks to days while maintaining rigorous evaluation standards. By combining machine learning insights with expert human judgment, the fund identifies and validates high-potential startups with unprecedented speed and precision.",
+      extrapara: "",
     },
-    { 
-      title: "Collaborative Investment Philosophy", 
-      content: "Piper Serica Angel Fund adopts a partnership-driven model, collaborating with co-investors while making investments. By aligning with other venture capitalists, corporate investors, and domain experts, the fund ensures startups gain not just capital but also strategic support. This network provides access to industry insights, market opportunities, and operational guidance, accelerating commercialization. The approach minimizes risk through diversified expertise while maximizing growth potential for early-stage deep-tech ventures.",
-      extrapara:"This structured and disciplined approach enables Piper Serica Angel Fund to invest in exceptional early-stage startups, driving innovation and growth across key industries.",
+    {
+      title: "Collaborative Investment Philosophy",
+      content:
+        "Piper Serica Angel Fund adopts a partnership-driven model, collaborating with co-investors while making investments. By aligning with other venture capitalists, corporate investors, and domain experts, the fund ensures startups gain not just capital but also strategic support. This network provides access to industry insights, market opportunities, and operational guidance, accelerating commercialization. The approach minimizes risk through diversified expertise while maximizing growth potential for early-stage deep-tech ventures.",
+      extrapara:
+        "This structured and disciplined approach enables Piper Serica Angel Fund to invest in exceptional early-stage startups, driving innovation and growth across key industries.",
     },
   ];
   return (
@@ -109,7 +117,7 @@ const Funds = () => {
                 </div> */}
                 <div className="col-lg-4 mt-lg-0 mt-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">24</h2>
+                    <h2 className="facts-title">26</h2>
                     <h6 className="para">companies</h6>
                   </div>
                 </div>
@@ -131,6 +139,8 @@ const Funds = () => {
           <p className="para-txt mt-2">Figures as of 28 Feb 2025.</p>
         </div>
       </section>
+
+      <TestimonialVideoSection />
 
       <section className="features-section funds-features-section">
         <div className="container">
@@ -205,12 +215,12 @@ const Funds = () => {
                     <span></span>
                   </div>
                   <p className="para"> */}
-                    {/* The Fund invests in early-stage companies that have
+              {/* The Fund invests in early-stage companies that have
                     developed a proprietary deep IP / deep tech and are in the
                     early stage of commercialization. We are sector agnostic
                     though our focus areas are Spacetech, AI, advanced
                     electronics, semicon design and fintech. */}
-                    {/* <strong>Focus on Early-Stage Startups</strong>
+              {/* <strong>Focus on Early-Stage Startups</strong>
                     <div className="single-feature single-subfeature mt-3 mb-0">
                       <div>
                         <span className="small-pointer"></span>
@@ -237,13 +247,13 @@ const Funds = () => {
                     <span></span>
                   </div>
                   <p className="para"> */}
-                    {/* We like to invest in startups that are bringing a
+              {/* We like to invest in startups that are bringing a
                     significant degree of value to their customers. We need to
                     see some product market fit, even if early. Our ticket size
                     is Rs. 10 crore. While we are happy to co-invest with
                     another lead investor there are instances where we are the
                     lead or the sole investor. */}
-                    {/* <strong>Sector-Agnostic with Key Focus Areas: </strong>{" "}
+              {/* <strong>Sector-Agnostic with Key Focus Areas: </strong>{" "}
                     While open to various industries, the fund prioritizes
                     <div className="single-feature single-subfeature mt-3 mb-0">
                       <div>
@@ -284,7 +294,7 @@ const Funds = () => {
                   </p>
                 </div> */}
 
-                {/* <div className="single-feature">
+              {/* <div className="single-feature">
                   <div>
                     <span></span>
                   </div>
@@ -294,15 +304,15 @@ const Funds = () => {
                     opportunities.
                   </p>
                 </div> */}
-                {/* <div className="single-feature">
+              {/* <div className="single-feature">
                   <div>
                     <span></span>
                   </div>
                   <p className="para"> */}
-                    {/* We have a very collaborative approach to investing and
+              {/* We have a very collaborative approach to investing and
                     prefer to work with multiple co-investors bringing different
                     value to the startup. */}
-                    {/* <strong>Investment Criteria: </strong>Startups delivering
+              {/* <strong>Investment Criteria: </strong>Startups delivering
                     significant value to customers.
                     <div className="single-feature single-subfeature mt-3 mb-0">
                       <div>
@@ -327,10 +337,10 @@ const Funds = () => {
                     <span></span>
                   </div>
                   <p className="para"> */}
-                    {/* We have a very collaborative approach to investing and
+              {/* We have a very collaborative approach to investing and
                     prefer to work with multiple co-investors bringing different
                     value to the startup. */}
-                    {/* <strong>Flexible Investment Strategy: </strong>
+              {/* <strong>Flexible Investment Strategy: </strong>
                     <div className="single-feature single-subfeature mt-3 mb-0">
                       <div>
                         <span className="small-pointer"></span>
@@ -355,10 +365,10 @@ const Funds = () => {
                     <span></span>
                   </div>
                   <p className="para"> */}
-                    {/* We have a very collaborative approach to investing and
+              {/* We have a very collaborative approach to investing and
                     prefer to work with multiple co-investors bringing different
                     value to the startup. */}
-                    {/* <strong>Swift and Data-Driven Decision-Making: </strong>
+              {/* <strong>Swift and Data-Driven Decision-Making: </strong>
                     <div className="single-feature single-subfeature mt-3 mb-0">
                       <div>
                         <span className="small-pointer"></span>
@@ -383,10 +393,10 @@ const Funds = () => {
                     <span></span>
                   </div>
                   <p className="para"> */}
-                    {/* We have a very collaborative approach to investing and
+              {/* We have a very collaborative approach to investing and
                     prefer to work with multiple co-investors bringing different
                     value to the startup. */}
-                    {/* <strong>Collaborative Investment Philosophy: </strong>
+              {/* <strong>Collaborative Investment Philosophy: </strong>
                     <div className="single-feature single-subfeature mt-3 mb-0">
                       <div>
                         <span className="small-pointer"></span>
@@ -416,45 +426,48 @@ const Funds = () => {
                 </div>
               </div>*/}
               <div className="accordion" id="accordionExample">
-            {accordionData.map((item, index) => (
-              <div className="accordion-item" key={index}>
-                <h2 className="accordion-header">
-                  <button
-                    className="accordion-button custom-accordion-button"
-                    type="button"
-                    onClick={() => toggleAccordion(index)}
-                  >
-                    <span className="accord-title-one">
-                      <i className="fas fa-diamond me-2"></i> {item.title}
-                    </span>
-                    <i
-                      className={`custom-arrow fas fa-arrow-down ms-auto ${
-                        openIndex === index ? "rotate" : ""
+                {accordionData.map((item, index) => (
+                  <div className="accordion-item" key={index}>
+                    <h2 className="accordion-header">
+                      <button
+                        className="accordion-button custom-accordion-button"
+                        type="button"
+                        onClick={() => toggleAccordion(index)}
+                      >
+                        <span className="accord-title-one">
+                          <i className="fas fa-diamond me-2"></i> {item.title}
+                        </span>
+                        <i
+                          className={`custom-arrow fas fa-arrow-down ms-auto ${
+                            openIndex === index ? "rotate" : ""
+                          }`}
+                        ></i>
+                      </button>
+                    </h2>
+                    <div
+                      className={`accordion-collapse collapse ${
+                        openIndex === index ? "show" : ""
                       }`}
-                    ></i>
-                  </button>
-                </h2>
-                <div className={`accordion-collapse collapse ${openIndex === index ? "show" : ""}`}>
-                  <div className="accordion-body">
-                    {item.content}
-                    <p className="mt-2">{item.extrapara}</p>
+                    >
+                      <div className="accordion-body">
+                        {item.content}
+                        <p className="mt-2">{item.extrapara}</p>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
-            ))}
-          </div>
-            </div> 
+            </div>
           </div>
         </div>
       </section>
-
-      <CompanyPortfolio />
-      
-      <section className="funds-article-section mb-0">
-        <ArticleSection />
+      <section className="startup-news-section">
+        <CompanyPortfolio />
       </section>
 
-      
+      <section className="py-5 mb-5">
+        <ArticleSection />
+      </section>
 
       {/* <section className="fund-info-section mb-0">
         <div className="container">

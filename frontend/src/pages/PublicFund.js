@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Layout from "../components/Layout";
 import { NavLink } from "react-router-dom";
 import StickyContact from "../components/StickyContact";
+import FactsheetModal from "../components/FactsheetModal";
 
 const PublicFund = () => {
   const handleFilterChange = (e) => {
@@ -113,25 +114,7 @@ const PublicFund = () => {
                 performance.
               </p>
 
-              <div>
-                <NavLink
-                  to={`${process.env.PUBLIC_URL}/docs/FPI-Factsheet-February2025.pdf`}
-                  target="_blank"
-                  className="banner-btn blue-btn tabs-btn mt-lg-4 mt-md-4 mt-4 me-lg-4 me-md-4 me-4 "
-                >
-                  Factsheet
-                </NavLink>
-              </div>
-
-              <div>
-                <NavLink
-                  to={`${process.env.PUBLIC_URL}/docs/FPI-PPT-Mar-2025.pdf`}
-                  target="_blank"
-                  className="banner-btn blue-btn tabs-btn mt-lg-4 mt-md-4 mt-4"
-                >
-                  Presentation
-                </NavLink>
-              </div>
+              <FactsheetModal />
             </div>
           </div>
         </div>
@@ -321,15 +304,16 @@ const PublicFund = () => {
                   </p>
                 </div> */}
                 <p className="para">
-                We focus on generating consistent returns by capitalizing on India's
-                 structural growth opportunities while maintaining prudent risk parameters.
-                  This balanced approach provides investors with the potential for 
-                  substantial wealth accumulation over long time horizons, effectively
-                   navigating market volatility while capturing the momentum of India's
-                    economic expansion. Our disciplined execution enables investors to
-                     participate in India's compelling growth narrative through a 
-                     professionally managed investment vehicle with institutional-grade
-                      oversight and compliance.
+                  We focus on generating consistent returns by capitalizing on
+                  India's structural growth opportunities while maintaining
+                  prudent risk parameters. This balanced approach provides
+                  investors with the potential for substantial wealth
+                  accumulation over long time horizons, effectively navigating
+                  market volatility while capturing the momentum of India's
+                  economic expansion. Our disciplined execution enables
+                  investors to participate in India's compelling growth
+                  narrative through a professionally managed investment vehicle
+                  with institutional-grade oversight and compliance.
                 </p>
               </div>
             </div>

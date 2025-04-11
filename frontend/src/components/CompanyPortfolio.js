@@ -264,22 +264,24 @@ const CompanyPortfolio = () => {
               <div className="feature-title-div">
                 {/* <h6 className="section-subtitle mb-4">Growth Strategy</h6> */}
                 <h3 className="section-title mb-lg-3 mb-4">
-                Portfolio Companies
+                  Portfolio Companies
                 </h3>
               </div>
             </div>
-            
+
             <div className="col-lg-7  mt-lg-0 mt-4">
               <div className="row">
                 <div className="col-lg-12">
-                    <div className="industries-filter-div">
+                  <div className="industries-filter-div">
                     <select
                       className="form-select"
                       onChange={handleFilterChange}
                       aria-label="Default select example"
                     >
                       <option selected>INDUSTRIES</option>
-                      <option value="ADVANCE ELECTRONIC">ADVANCE ELECTRONIC</option>
+                      <option value="ADVANCE ELECTRONIC">
+                        ADVANCE ELECTRONIC
+                      </option>
                       <option value="AI & SAAS">AI & SAAS</option>
                       <option value="CONSUMER TECH">CONSUMER TECH</option>
                       <option value="CYBER SECURITY & CHIP DESIGN">
@@ -288,15 +290,20 @@ const CompanyPortfolio = () => {
                       <option value="ELECTRIC VEHICLE">ELECTRIC VEHICLE</option>
                       <option value="FINTECH">FINTECH</option>
                       <option value="SPACETECH">SPACETECH</option>
-                      <option value="SUPPLY CHAIN TECH">SUPPLY CHAIN TECH</option>
+                      <option value="SUPPLY CHAIN TECH">
+                        SUPPLY CHAIN TECH
+                      </option>
                     </select>
                   </div>
                 </div>
                 <div className="col-lg-12">
-                    <div className="industries-div">
+                  <div className="industries-div">
                     <div className="row">
                       {getFilteredImages().map((images) => (
-                        <div key={images.id} className="col-lg-3 col-md-6 col-6">
+                        <div
+                          key={images.id}
+                          className="col-lg-3 col-md-6 col-6"
+                        >
                           <div
                             className="industires-logo-div"
                             onClick={() => openModal(images)}

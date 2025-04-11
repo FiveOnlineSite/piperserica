@@ -491,9 +491,6 @@ body {
   line-height: 26px;
   font-family: "Public Sans", serif;
 }
-.pop-msg-one {
-  text-transform: capitalize;
-}
 
 .section-title {
   color: var(--black-font);
@@ -513,8 +510,6 @@ body {
 .our-offerings-section,
 .newsletter-section,
 .about-fund-section,
-.industries-portfolio-section,
-.industries-portfolio-section,
 .founders-note-section,
 .teams-bg-section,
 .teams-section,
@@ -816,7 +811,7 @@ body {
 }
 
 .blue-btn {
-  border-color: var(--blue-font);
+  border-color: var(--blue-font) !important;
   width: auto;
   float: right;
   color: var(--blue-font);
@@ -2129,7 +2124,9 @@ form .form-label span {
 }
 
 .thankyou-msg {
-  letter-spacing: 0;
+  font-size: 18px;
+  line-height: 26px;
+  color: var(--blue-font);
 }
 
 .text-danger {
@@ -2261,6 +2258,10 @@ form .form-label span {
 }
 .sim-bg-ch {
   background-color: #ffff;
+}
+
+.testimonial-video-section {
+  padding: 50px 0 70px 0;
 }
 
 @media screen and (max-width: 1300px) {

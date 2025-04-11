@@ -12,6 +12,7 @@ const Contact = () => {
     email: "",
     phone: "",
     message: "",
+    investor: "",
   });
 
   const [phoneError, setPhoneError] = useState("");
@@ -49,6 +50,7 @@ const Contact = () => {
       email: formData.email,
       phone: formData.phone,
       message: formData.message,
+      investor: formData.investor,
     };
 
     emailjs
@@ -78,6 +80,7 @@ const Contact = () => {
             email: "",
             phone: "",
             message: "",
+            investor: "",
           });
           formRef.current.reset();
         },
@@ -168,19 +171,29 @@ const Contact = () => {
                       </div>
                     </div>
                     <div className="col-lg-6">
-                    <div className="mb-3">
+                      <div className="mb-3">
                         <label for="select" className="form-label">
-                          Invester Type*
+                          I am*
                         </label>
-                    <select className="form-select" aria-label="Default select example">
-                        <option selected disabled>Select Invester Type</option>
-                        <option value="1">I am an investor</option>
-                        <option value="2">I am a distributor</option>
-                        <option value="3">I am a start-up founder</option>
-                        <option value="3">Other</option>
-                      </select>
+                        <select
+                          className="form-select"
+                          aria-label="Default select example"
+                          name="investor"
+                          value={formData.investor}
+                          onChange={handleChange}
+                        >
+                          <option value="" disabled>
+                            Select option
+                          </option>
+                          <option value="Investor">Investor</option>
+                          <option value="Distributor">Distributor</option>
+                          <option value="Start-up Founder">
+                            Start-up Founder
+                          </option>
+                          <option value="Other">Other</option>
+                        </select>
                       </div>
-                      </div>
+                    </div>
                     <div className="col-lg-6">
                       <div className="mb-3">
                         <label for="email" className="form-label">
@@ -351,7 +364,7 @@ const Contact = () => {
           </Modal.Header>
           <Modal.Body>
             <div>
-              <p className="section-subtitle pop-msg-one thankyou-msg">
+              <p className="thankyou-msg">
                 Thank you for reaching out! We have received your message and
                 will get back to you soon.
               </p>

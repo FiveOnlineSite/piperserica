@@ -613,8 +613,11 @@ const Career = () => {
           </Modal.Header>
           <Modal.Body>
             <div>
-              <p className="section-subtitle pop-msg-one thankyou-msg">
-              We have received your details and will review your profile. Our team will reach out to you if there is a suitable opportunity. Stay connected, and we appreciate your interest in joining Piper Serica!
+              <p className="thankyou-msg">
+                We have received your details and will review your profile. Our
+                team will reach out to you if there is a suitable opportunity.
+                Stay connected, and we appreciate your interest in joining Piper
+                Serica!
               </p>
               {/* <button onClick={() => setSuccessModal(false)}>Close</button> */}
             </div>

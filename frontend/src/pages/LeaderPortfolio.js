@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
 import { NavLink } from "react-router-dom";
+import { Modal } from "react-bootstrap";
 import StickyContact from "../components/StickyContact";
+import FactsheetModal from "../components/FactsheetModal";
 
 const LeaderPortfolio = () => {
   const handleFilterChange = (e) => {
@@ -127,11 +129,12 @@ const LeaderPortfolio = () => {
                 execution and consistent alpha generation.
               </p>
 
-              <div>
+              {/* <div>
                 <NavLink
-                  to={`${process.env.PUBLIC_URL}/docs/PMS-Factsheet-Feb-2025.pdf`}
+                  to="/"
                   target="_blank"
                   className="banner-btn blue-btn tabs-btn mt-lg-4 mt-md-4 mt-4 me-lg-4 me-md-4 me-4"
+                  style={{ cursor: "pointer" }}
                 >
                   Factsheet
                 </NavLink>
@@ -145,7 +148,9 @@ const LeaderPortfolio = () => {
                 >
                   Presentation
                 </NavLink>
-              </div>
+              </div> */}
+
+              <FactsheetModal />
             </div>
           </div>
         </div>

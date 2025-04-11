@@ -189,7 +189,8 @@ const SubscribeLetter = () => {
         </Modal.Header>
         <Modal.Body>
           <p className="section-subtitle pop-msg-one thankyou-msg">
-          Stay tuned for exclusive insights and updates delivered to your inbox.
+            Stay tuned for exclusive insights and updates delivered to your
+            inbox.
           </p>
         </Modal.Body>
       </Modal>
@@ -201,9 +202,7 @@ const SubscribeLetter = () => {
           </Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          <p className="section-subtitle thankyou-msg">
-            This email is already subscribed.
-          </p>
+          <p className="thankyou-msg">This email is already subscribed.</p>
         </Modal.Body>
       </Modal>
     </>
