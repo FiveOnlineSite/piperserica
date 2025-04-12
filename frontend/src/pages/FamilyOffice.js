@@ -141,24 +141,23 @@ const FamilyOffice = () => {
 
             <p className="para justify-para">
               Piper Serica is a long-only active equity asset manager that
-              traverses various strategies of equity investment in India. We
-              manage multiple funds that invest in Indian listed companies for
-              domestic and foreign individuals and institutions. We also manage
-              a fund that invests in Indian startups that are building business
-              models based on deep tech. We have been investing in Indian
-              companies for over 30 years and have a very solid understanding of
-              how to succeed while investing in India navigating through various
-              risks, most of them unique to India as an emerging market. The
-              funds that we manage cater to different risk and return profiles
-              and objectives of our investors. We have an edge over our peers
-              due to our deep research and disciplined approach to investing.
-              Our research team is extensively trained in our proprietary
-              research processes that we have developed and mostly automated. To
-              ensure full skin in the game our fund management team makes all
-              their public and private investments through the funds managed by
-              Piper Serica. We are a fund management company owned by its
-              management team. Our management company is majority owned by
-              women.
+              employs various equity investment strategies in India. We manage
+              multiple funds that invest in Indian listed companies for domestic
+              and foreign individuals and institutions. We also manage a fund
+              that invests in Indian startups that are building business models
+              based on deep tech. We have been investing in Indian companies for
+              over 30 years and have a very solid understanding of how to
+              succeed while investing in India navigating through various risks,
+              most of them unique to India as an emerging market. The funds that
+              we manage cater to different risk-return profiles and objectives
+              of our investors. We have an edge over our peers due to our deep
+              research and disciplined approach to investing. Our research team
+              is extensively trained in our proprietary research processes which
+              we have developed and largely automated. To ensure skin in the
+              game, our fund management team makes all their public and private
+              investments through the funds managed by Piper Serica. We are a
+              fund management company owned by our management team, with a
+              majority stake held by women.
             </p>
 
             {/* <div className="col-lg-4">
@@ -184,7 +183,7 @@ const FamilyOffice = () => {
                   <div className="facts-div">
                     <h2 className="facts-title">INR 1500 Cr+</h2>
                     <h6 className="para">
-                    AUM
+                      AUM
                       {/* <i> (as of 30 June 2024)</i> */}
                     </h6>
                   </div>
@@ -199,7 +198,7 @@ const FamilyOffice = () => {
                   <div className="facts-div">
                     <h2 className="facts-title">19%+</h2>
                     <h6 className="para">CAGR</h6>
-                    <p className="facts-small">(Since Feb 2025)</p>
+                    <p className="facts-small">(Since Feb 2015)</p>
                   </div>
                 </div>
                 {/* <div className="col-12">
@@ -215,7 +214,6 @@ const FamilyOffice = () => {
         <div className="container">
           <div className="desktop-row">
             <div className="row">
-              
               <div className="col-lg-4">
                 <div className="why-us-div">
                   <NavLink to="/">
@@ -235,19 +233,19 @@ const FamilyOffice = () => {
 
                       <h4 className="why-content-title">Research Process</h4>
                       <p className="para why-para justify-para">
-                        We have a very strong on-ground research presence which
-                        is required to be successful in an Emerging Market like
+                        We have a very strong on-ground research presence, which
+                        is essential for success in an Emerging Market like
                         India. Our research team understands local nuances while
                         engaging with investee company management and their
                         stakeholders. We have built deep and meaningful networks
                         across industries that allow us to assess investment
-                        opportunities in depth. This allows us to understand
-                        long term trends as we build our investment thesis. We
-                        have built a blue chip reputation as an asset manager
-                        over three decades that provides us market access of the
-                        kind that is not available to new fund managers. Our
-                        fund management team has a combined experience of almost
-                        100 years making it one of the most experienced teams in
+                        opportunities in depth. This enables us to understand
+                        long-term trends as we build our investment thesis. We
+                        have built a blue-chip reputation as an asset manager
+                        over three decades which provides us with market access
+                        that is not available to new fund managers. Our fund
+                        management team has a combined experience of almost 100
+                        years, making it one of the most experienced teams in
                         the country.
                       </p>
                     </div>
@@ -275,13 +273,13 @@ const FamilyOffice = () => {
                         Focus on risk-adjusted returns
                       </h4>
                       <p className="para why-para justify-para">
-                        We focus not only on returns but also the systemic and
-                        non-systemic risks while building our model portfolio.
-                        We have built strict guard rails of risk metrics that
-                        have helped us deliver steady long-term returns. Our
-                        Portfolio Management Process is devoid of human biases
-                        due to highly objective decision making processes that
-                        we have developed over three decades.
+                        We focus not only on returns but also on the systemic
+                        and non-systemic risks while building our model
+                        portfolio. We have built strict guardrails of risk
+                        metrics that have helped us deliver steady, long-term
+                        returns. Our portfolio management process is devoid of
+                        human biases due to highly objective decision-making
+                        processes that we have developed over three decades.
                       </p>
                     </div>
                   </NavLink>
@@ -309,12 +307,12 @@ const FamilyOffice = () => {
                       </h4>
                       <p className="para why-para justify-para">
                         We love to communicate with our investors on a regular
-                        basis. While the regulatory compliance requires us to
-                        send standard portfolio and valuation reports to our
-                        investors we go beyond that. Through monthly, quarterly
-                        and annual investor letters and regular webinars we
-                        share our portfolio strategy and market outlook on a
-                        regular basis with our investors.
+                        basis. While regulatory compliance requires us to send
+                        standard portfolio and valuation reports to our
+                        investors, we go beyond that. Through monthly,
+                        quarterly, and annual investor letters, as well as
+                        regular webinars we share our portfolio strategy and
+                        market outlook on a regular basis with our investors.
                       </p>
                     </div>
                   </NavLink>
@@ -351,19 +349,19 @@ const FamilyOffice = () => {
                       </h6>
                       <h4 className="why-content-title">Research Process</h4>
                       <p className="para why-para justify-para">
-                        We have a very strong on-ground research presence which
-                        is required to be successful in an Emerging Market like
+                        We have a very strong on-ground research presence, which
+                        is essential for success in an Emerging Market like
                         India. Our research team understands local nuances while
                         engaging with investee company management and their
                         stakeholders. We have built deep and meaningful networks
                         across industries that allow us to assess investment
-                        opportunities in depth. This allows us to understand
-                        long term trends as we build our investment thesis. We
-                        have built a blue chip reputation as an asset manager
-                        over three decades that provides us market access of the
-                        kind that is not available to new fund managers. Our
-                        fund management team has a combined experience of almost
-                        100 years making it one of the most experienced teams in
+                        opportunities in depth. This enables us to understand
+                        long-term trends as we build our investment thesis. We
+                        have built a blue-chip reputation as an asset manager
+                        over three decades which provides us with market access
+                        that is not available to new fund managers. Our fund
+                        management team has a combined experience of almost 100
+                        years, making it one of the most experienced teams in
                         the country.
                       </p>
                     </div>
@@ -383,7 +381,7 @@ const FamilyOffice = () => {
               </div>
 
               {/* Accordion Item 2 */}
-              
+
               <div
                 className={`accordion-item ${
                   openAccordion === 0 ? "bordered" : ""
@@ -412,13 +410,13 @@ const FamilyOffice = () => {
                         Focus on risk-adjusted returns
                       </h4>
                       <p className="para why-para justify-para">
-                        We focus not only on returns but also the systemic and
-                        non-systemic risks while building our model portfolio.
-                        We have built strict guard rails of risk metrics that
-                        have helped us deliver steady long-term returns. Our
-                        Portfolio Management Process is devoid of human biases
-                        due to highly objective decision making processes that
-                        we have developed over three decades.
+                        We focus not only on returns but also on the systemic
+                        and non-systemic risks while building our model
+                        portfolio. We have built strict guardrails of risk
+                        metrics that have helped us deliver steady, long-term
+                        returns. Our portfolio management process is devoid of
+                        human biases due to highly objective decision-making
+                        processes that we have developed over three decades.
                       </p>
                     </div>
                   </div>
@@ -466,12 +464,12 @@ const FamilyOffice = () => {
                       </h4>
                       <p className="para why-para justify-para">
                         We love to communicate with our investors on a regular
-                        basis. While the regulatory compliance requires us to
-                        send standard portfolio and valuation reports to our
-                        investors we go beyond that. Through monthly, quarterly
-                        and annual investor letters and regular webinars we
-                        share our portfolio strategy and market outlook on a
-                        regular basis with our investors.
+                        basis. While regulatory compliance requires us to send
+                        standard portfolio and valuation reports to our
+                        investors, we go beyond that. Through monthly,
+                        quarterly, and annual investor letters, as well as
+                        regular webinars we share our portfolio strategy and
+                        market outlook on a regular basis with our investors.
                       </p>
                     </div>
                   </div>
@@ -508,11 +506,12 @@ const FamilyOffice = () => {
               <div className="col-lg-9">
                 <p className="para small-para justify-para">
                   Our onshore PMS offers a structured investment approach for
-                  both corporate and Indian investors seeking long-term wealth
-                  creation. Designed for transparency and disciplined portfolio
-                  management, our PMS strategy optimizes returns with expert
-                  guidance. Our team is available to assist investors in making
-                  informed investment decisions.
+                  both corporate and individual Indian investors seeking
+                  long-term wealth creation. Designed for transparency and
+                  disciplined portfolio management, our PMS strategy aims to
+                  optimize returns with expert guidance. Our team is always
+                  available to assist investors in making informed investment
+                  decisions.
                 </p>
               </div>
               {/* <div className="col-lg-3">
@@ -598,8 +597,8 @@ const FamilyOffice = () => {
                   Get in touch
                 </h2>
                 <p className="para contact-para">
-                  To discuss investment opportunities and funds, or for more
-                  information, please contact us and a member of the team will
+                  To discuss investment opportunities and funds or for more
+                  information, please contact us and a member of our team will
                   be in touch.
                 </p>
 

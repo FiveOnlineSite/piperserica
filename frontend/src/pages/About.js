@@ -184,26 +184,26 @@ const About = () => {
           </h6>
 
           <p className="para justify-para">
-            Piper Serica is a long-only active equity asset manager that
-            traverses various strategies of equity investment in India. We
-            manage multiple funds that invest in Indian listed companies for
-            domestic and foreign individuals and institutions. We also manage a
-            fund that invests in Indian startups that are building business
-            models based on deep tech. We have been investing in Indian
-            companies for over 30 years and have a very solid understanding of
-            how to succeed while investing in India navigating through various
-            risks, most of them unique to India as an emerging market.
+            Piper Serica is a long-only active equity asset manager that employs
+            various equity investment strategies in India. We manage multiple
+            funds that invest in Indian listed companies for domestic and
+            foreign individuals and institutions. We also manage a fund that
+            invests in Indian startups that are building business models based
+            on deep tech. We have been investing in Indian companies for over 30
+            years and have a very solid understanding of how to succeed while
+            investing in India navigating through various risks, most of them
+            unique to India as an emerging market.
           </p>
           <p className="para justify-para">
-            The funds that we manage cater to different risk and return profiles
-            and objectives of our investors. We have an edge over our peers due
-            to our deep research and disciplined approach to investing. Our
+            The funds that we manage cater to different risk-return profiles and
+            objectives of our investors. We have an edge over our peers due to
+            our deep research and disciplined approach to investing. Our
             research team is extensively trained in our proprietary research
-            processes that we have developed and mostly automated. To ensure
-            full skin in the game our fund management team makes all their
-            public and private investments through the funds managed by Piper
-            Serica. We are a fund management company owned by its management
-            team. Our management company is majority owned by women.
+            processes which we have developed and largely automated. To ensure
+            skin in the game, our fund management team makes all their public
+            and private investments through the funds managed by Piper Serica.
+            We are a fund management company owned by our management team, with
+            a majority stake held by women.
           </p>
           {/* <div className="row align-items-start"> */}
           {/* <div className="col-lg-5">
@@ -559,9 +559,8 @@ const About = () => {
                           </h2>
                           <p className="para why-para justify-para">
                             To be a highly respected long-only equity asset
-                            management company, offering multiple strategies
-                            that cater to the diverse objectives of our
-                            investors.
+                            management company offering multiple strategies that
+                            cater to the diverse objectives of our investors.
                           </p>
                         </div>
                       </NavLink>
@@ -632,7 +631,7 @@ const About = () => {
                       <h4 className="why-content-title">Vision</h4>
                       <p className="para why-para justify-para">
                         To be a highly respected long-only equity asset
-                        management company, offering multiple strategies that
+                        management company offering multiple strategies that
                         cater to the diverse objectives of our investors.
                       </p>
                     </div>
@@ -714,26 +713,26 @@ const About = () => {
           <div className="row image-row align-items-center">
             <div className="col-lg-12 order-lg-1 order-2">
               <h2 className="para mt-lg-0 justify-para">
-                Our core philosophy is to benefit from long term investment
+                Our core philosophy is to benefit from long-term investment
                 opportunities while ignoring market cycles. We like to identify
                 and invest in companies that are leaders in emerging spaces led
-                by a change in consumer behavior, technology changes and product
-                innovations. Once we identify such companies we like to stay
-                invested as they create shareholder value while moving from
-                small cap to mid cap and ultimately large cap. We believe that
-                companies like these, with great management, good corporate
-                governance, financially disciplined and shareholder friendly are
-                quite rare and should not be looked at the same valuation prism
-                as the rest of the market. We like to interact with the
-                management of our portfolio companies regularly to stay abreast
-                of the trends shaping their industry and explore other
-                investment opportunities. We believe that long term investing
-                requires deep knowledge and good temperament. Our team members
-                are always curious to learn more at the same time tune out
-                noise. We see market volatility as an opportunity to increase
-                our equity allocations rather than reduce them. We believe that
-                conviction comes only from deep research and understanding of
-                our portfolio companies.
+                by a change in consumer behaviour, technology changes, and
+                product innovations. Once we identify such companies, we like to
+                stay invested as they create shareholder value while moving from
+                small-cap to mid-cap and ultimately large-cap. We believe that
+                companies like these—with great management, good corporate
+                governance, financial discipline, and a shareholder-friendly
+                approach—are quite rare and should not be looked at through the
+                same valuation prism as the rest of the market. We like to
+                interact with the management of our portfolio companies
+                regularly to stay abreast of the trends shaping their industry
+                and explore other investment opportunities. We believe that
+                long-term investing requires deep knowledge and good
+                temperament. Our team members are always curious to learn more,
+                while at the same time tuning out noise. We see market
+                volatility as an opportunity to increase our equity allocations
+                rather than reduce them. We believe that conviction comes only
+                from deep research and understanding of our portfolio companies.
               </h2>
             </div>
             {/* <div className="col-lg-6 order-lg-2 order-1">

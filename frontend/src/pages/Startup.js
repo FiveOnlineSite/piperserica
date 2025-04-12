@@ -53,13 +53,13 @@ const Startup = () => {
     {
       title: "Focus on Early-Stage Startups",
       content:
-        "Piper Serica Angel Fund is a strategic investment partner dedicated to empowering early-stage startups with proprietary deep technologies and robust intellectual property. The fund focuses on ventures that have advanced beyond pure research, targeting companies with demonstrated commercial potential through initial revenue or sophisticated product development. By identifying startups at the critical intersection of innovation and market viability, Piper Serica supports entrepreneurs transforming groundbreaking scientific advances into scalable business models. The fund's approach bridges the complex gap between technological breakthrough and market success, carefully selecting ventures with the potential to convert innovative concepts into tangible, market-ready solutions.",
+        "Piper Serica Angel Fund is a strategic investment partner dedicated to empowering early-stage startups with proprietary deep technologies and robust intellectual property. The fund focuses on ventures that have advanced beyond pure research, targeting companies with demonstrated commercial potential through initial revenue or sophisticated product development. By identifying startups at the critical intersection of innovation and market viability, Piper Serica supports entrepreneurs in transforming groundbreaking scientific advances into scalable business models. The fund’s approach bridges the complex gap between technological breakthrough and market success, carefully selecting ventures with the potential to convert innovative concepts into tangible, market-ready solutions.",
       extrapara: "",
     },
     {
       title: "Sector-Agnostic with Key Focus Areas",
       content:
-        "The Fund strategically navigates the technological frontier by concentrating investments in sectors at the forefront of global innovation. While maintaining flexibility across industries, the fund deliberately targets high-impact domains that are fundamentally transforming technological landscapes: fintech - revolutionary financial technologies, spacetech – from upstream to downstream, advanced electronics, next-generation computational solutions, cybersecurity's critical infrastructures, electric vehicles' sustainable transportation technologies, and semiconductor design.",
+        "Piper Serica Angel Fund strategically navigates the technological frontier by concentrating investments in sectors at the forefront of global innovation. While maintaining flexibility across industries, the fund deliberately targets high-impact domains that are fundamentally transforming technological landscapes: fintech - revolutionary financial technologies, spacetech – from upstream to downstream, advanced electronics, next-generation computational solutions, cybersecurity's critical infrastructures, electric vehicles' sustainable transportation technologies, and semiconductor design.",
       extrapara: "",
     },
     {
@@ -71,7 +71,7 @@ const Startup = () => {
     {
       title: "Flexible Investment Strategy",
       content:
-        "The Fund demonstrates investment flexibility, positioning itself as both a collaborative partner and a potential lead investor. The fund's approach is deeply rooted in alignment with founders' strategic visions, allowing for nuanced investment structures that best serve each unique startup's growth trajectory. Whether joining forces with established lead investors or taking a lead role, Piper Serica evaluates opportunities through a comprehensive lens that prioritizes technological potential, market impact, and entrepreneurial excellence.",
+        "Piper Serica Angel Fund demonstrates investment flexibility, positioning itself as both a collaborative partner and a potential lead investor. The fund's approach is deeply rooted in alignment with founders' strategic visions, allowing for nuanced investment structures that best serve each unique startup's growth trajectory. Whether joining forces with established lead investors or taking a lead role, Piper Serica evaluates opportunities through a comprehensive lens that prioritizes technological potential, market impact, and entrepreneurial excellence.",
       extrapara: "",
     },
     {
@@ -189,18 +189,18 @@ const Startup = () => {
             <h5 className="section-subtitle mb-4">What we do</h5>
 
             <p className="para">
-              The Fund invests in early-stage companies that have developed a
-              proprietary deep IP / deep tech and is in the early stage of
-              commercialization. We are sector agnostic though our focus areas
-              are Spacetech, AI, advanced electronics, semicon design and
-              fintech. We like to invest in startups that are bringing a
-              significant degree of value to their customers. We need to see
-              some product market fit, even if early. Our ticket size is ₹10
-              crore. While we are happy to co-invest with another lead investor
-              there are instances where we are the lead or the sole investor.
-              Our decision-making process is fairly quick. We have a very
-              collaborative approach to investing and prefer to work with
-              multiple co-investors bringing different value to the startup.
+              The Fund invests in early-stage companies that have developed
+              proprietary deep IP or deep tech and are in the early stages of
+              commercialization. We are sector-agnostic, though our focus areas
+              include spacetech, AI, advanced electronics, semiconductor design,
+              and fintech. We prefer to invest in startups that deliver
+              significant value to their customers. We look for some level of
+              product-market fit, even if early. Our typical ticket size is ₹10
+              crore. While we are happy to co-invest with another lead investor,
+              there are instances where we act as the lead or sole investor. Our
+              decision-making process is fairly quick. We take a collaborative
+              approach to investing and prefer to work with multiple
+              co-investors who bring diverse value to the startup.
             </p>
 
             {/* <div className="col-lg-4">
@@ -281,11 +281,10 @@ const Startup = () => {
                         Value added partners
                       </h4>
                       <p className="para why-para">
-                        Our founders look at us as value added partners beyond
-                        the financial capital that we bring. We work with the
-                        founders to scale up the company by helping build the
-                        organization, acquire customers and help with further
-                        fund raises.
+                        Our founders see us as value-added partners beyond the
+                        financial capital we bring. We work closely with them to
+                        scale the company by helping build the organization,
+                        acquire customers, and raise further funding.
                       </p>
                     </div>
                   </NavLink>
@@ -310,11 +309,11 @@ const Startup = () => {
 
                       <h4 className="why-content-title">Network</h4>
                       <p className="para why-para">
-                        We believe that the biggest help we bring to the
-                        founders is our extensive network that spans many
-                        industries and skill sets. We have a very varied set of
-                        LPs and through our public market funds we are connected
-                        with some of the largest companies in the country.
+                        We believe the greatest value we bring to founders is
+                        our extensive network, which spans multiple industries
+                        and skill sets. We have a highly diverse set of LPs, and
+                        through our public market funds, we are connected with
+                        some of the largest companies in the country.
                       </p>
                     </div>
                   </NavLink>
@@ -341,10 +340,10 @@ const Startup = () => {
                         Founder first approach
                       </h4>
                       <p className="para why-para">
-                        We love to get in the trenches with the founders and
-                        help the founders ride through the tough times. Every
-                        start up faces tough challenges. Our Founders always
-                        find us by their side as they meet these challenges.
+                        We love getting in the trenches with founders and
+                        helping them navigate tough times. Every startup faces
+                        significant challenges, and our founders always find us
+                        by their side as they work through them.
                       </p>
                     </div>
                   </NavLink>
@@ -383,11 +382,10 @@ const Startup = () => {
                         Value added partners:
                       </h4>
                       <p className="para why-para">
-                        Our founders look at us as value added partners beyond
-                        the financial capital that we bring. We work with the
-                        founders to scale up the company by helping build the
-                        organization, acquire customers and help with further
-                        fund raises.
+                        Our founders see us as value-added partners beyond the
+                        financial capital we bring. We work closely with them to
+                        scale the company by helping build the organization,
+                        acquire customers, and raise further funding.
                       </p>
                     </div>
                   </div>
@@ -432,11 +430,11 @@ const Startup = () => {
                       </h6>
                       <h4 className="why-content-title">Network:</h4>
                       <p className="para why-para">
-                        We believe that the biggest help we bring to the
-                        founders is our extensive network that spans many
-                        industries and skill sets. We have a very varied set of
-                        LPs and through our public market funds we are connected
-                        with some of the largest companies in the country.
+                        We believe the greatest value we bring to founders is
+                        our extensive network, which spans multiple industries
+                        and skill sets. We have a highly diverse set of LPs, and
+                        through our public market funds, we are connected with
+                        some of the largest companies in the country.
                       </p>
                     </div>
                   </div>
@@ -483,10 +481,10 @@ const Startup = () => {
                         Founder first approach:
                       </h4>
                       <p className="para why-para">
-                        We love to get in the trenches with the founders and
-                        help the founders ride through the tough times. Every
-                        start up faces tough challenges. Our Founders always
-                        find us by their side as they meet these challenges.
+                        We love getting in the trenches with founders and
+                        helping them navigate tough times. Every startup faces
+                        significant challenges, and our founders always find us
+                        by their side as they work through them.
                       </p>
                     </div>
                   </div>
