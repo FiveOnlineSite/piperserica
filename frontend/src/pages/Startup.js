@@ -7,6 +7,7 @@ import NewsSection from "../components/NewsSection";
 import CompanyPortfolio from "../components/CompanyPortfolio";
 import CompanySlider from "../components/CompanySlider";
 import SubscribeLetter from "../components/SubscribeLetter";
+import TestimonialVideoSection from "../components/TestimonialVideo";
 const Startup = () => {
   const investorItem = [
     {
@@ -252,6 +253,8 @@ const Startup = () => {
           </div>
         </div>
       </section>
+
+      <TestimonialVideoSection />
 
       <section className="why-us-section startup-why-section">
         <div className="container">

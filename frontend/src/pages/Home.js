@@ -30,6 +30,8 @@ const Home = () => {
               muted
               autoPlay
               className="w-100"
+              playsInline
+              preload="auto"
             ></video>
 
             <div className="home-banner-content">

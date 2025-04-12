@@ -50,7 +50,7 @@ const TestimonialVideoSection = () => {
   return (
     <section className="testimonial-video-section" ref={sectionRef}>
       <div className="row align-items-center justify-content-center">
-        <div className="col-lg-8">
+        <div className="col-lg-10">
           <div className="row align-items-center justify-content-center">
             <div id="testimonial-video-iframe" />
           </div>
