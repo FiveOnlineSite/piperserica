@@ -540,11 +540,10 @@ const About = () => {
           <div className="desktop-row">
             <div className="row justify-content-center">
               <div className="col-lg-10">
-                <div className="row align-items-center">
+                <div className="row">
                   <div className="col-lg-6">
                     <div className="why-us-div vision-mission-div vision-mission-div-one ">
-                      <NavLink to="/">
-                        {/* <div className="why-us-content">
+                      {/* <div className="why-us-content">
                           <h2 className="banner-title why-content-main-title">
                             Vision
                           </h2>
@@ -553,24 +552,22 @@ const About = () => {
                           </h6>
                         </div> */}
 
-                        <div className="why-content-para vision-mission-para why-content-para-one">
-                          <h2 className="banner-title why-content-main-title">
-                            Vision
-                          </h2>
-                          <p className="para why-para justify-para">
-                            To be a highly respected long-only equity asset
-                            management company offering multiple strategies that
-                            cater to the diverse objectives of our investors.
-                          </p>
-                        </div>
-                      </NavLink>
+                      <div className="why-content-para vision-mission-para why-content-para-one">
+                        <h2 className="banner-title why-content-main-title">
+                          Vision
+                        </h2>
+                        <p className="para why-para justify-para">
+                          To be a highly respected long-only equity asset
+                          management company offering multiple strategies that
+                          cater to the diverse objectives of our investors.
+                        </p>
+                      </div>
                     </div>
                   </div>
 
                   <div className="col-lg-6">
                     <div className="why-us-div vision-mission-div vision-mission-div-one">
-                      <NavLink to="/">
-                        {/* <div className="why-us-content">
+                      {/* <div className="why-us-content">
                           <h2 className="banner-title why-content-main-title">
                             Mission
                           </h2>
@@ -579,25 +576,24 @@ const About = () => {
                           </h6>
                         </div> */}
 
-                        <div className="why-content-para vision-mission-para why-content-para-one">
-                          <h2 className="banner-title why-content-main-title">
-                            Mission
-                          </h2>
-                          <p className="para why-para justify-para">
-                            At Piper Serica, we empower investors to achieve
-                            their financial goals through a diverse portfolio of
-                            actively managed strategies. Committed to
-                            transparency, rigorous analysis, and strategic asset
-                            allocation, we balance growth and risk to deliver
-                            consistent returns. Our mission extends beyond
-                            wealth creation—we strive to foster financial
-                            literacy, ensure long-term stability, and drive
-                            sustainable economic progress. Through innovation
-                            and discipline, we create enduring value for our
-                            investors and the broader ecosystem.
-                          </p>
-                        </div>
-                      </NavLink>
+                      <div className="why-content-para vision-mission-para why-content-para-one">
+                        <h2 className="banner-title why-content-main-title">
+                          Mission
+                        </h2>
+                        <p className="para why-para justify-para">
+                          At Piper Serica, we empower investors to achieve their
+                          financial goals through a diverse portfolio of
+                          actively managed strategies. Committed to
+                          transparency, rigorous analysis, and strategic asset
+                          allocation, we balance growth and risk to deliver
+                          consistent returns. Our mission extends beyond wealth
+                          creation—we strive to foster financial literacy,
+                          ensure long-term stability, and drive sustainable
+                          economic progress. Through innovation and discipline,
+                          we create enduring value for our investors and the
+                          broader ecosystem.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>

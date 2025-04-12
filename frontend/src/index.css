@@ -635,7 +635,7 @@ body {
   min-height: 400px;
 }
 .vision-mission-div-one {
-  min-height: 445px;
+  min-height: 500px;
 }
 
 /* .why-us-section .col-lg-6:hover .vision-mission-para, */
@@ -2262,6 +2262,10 @@ form .form-label span {
 
 .testimonial-video-section {
   padding: 50px 0 70px 0;
+}
+
+.testimonial-video-section iframe {
+  height: 500px;
 }
 
 @media screen and (max-width: 1300px) {
