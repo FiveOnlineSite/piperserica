@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout";
 import { NavLink } from "react-router-dom";
-import StickyContact from "../components/StickyContact";
-import FactsheetModal from "../components/FactsheetModal";
+import StickyContact from "../../components/StickyContact";
+import FactsheetModal from "../../components/FactsheetModal";
 
 const PublicFund = () => {
   const handleFilterChange = (e) => {

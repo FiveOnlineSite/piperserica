@@ -1,6 +1,7 @@
 const express = require("express");
 const dotenv = require("dotenv");
 const connectDb = require("./config/db");
+const Route = require("./routes/index");
 
 const app = express();
 app.use(express.json());
@@ -12,6 +13,8 @@ const PORT = process.env.PORT || 8000;
 app.get("/api", (req, res) => {
   res.send("This is backend");
 });
+
+app.use("/api/auth", Route.authRoute);
 
 connectDb();
 

@@ -1,7 +1,7 @@
 import React from "react";
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout";
 import { Link, NavLink } from "react-router-dom";
-import NewsSection from "../components/NewsSection";
+import NewsSection from "../../components/NewsSection";
 
 const BlogDetails = () => {
   return (

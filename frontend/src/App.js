@@ -1,27 +1,27 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import Home from "./pages/Home";
-import About from "./pages/About";
-import Investor from "./pages/Investor";
-import MarketFunds from "./pages/MarketFunds";
-import Funds from "./pages/Funds";
-import InvestorLetter from "./pages/InvestorLetter";
-import OurImpact from "./pages/OurImpact";
-import Insights from "./pages/Insights";
-import PublicFund from "./pages/PublicFund";
-import NewsArticle from "./pages/NewsArticle";
-import Contact from "./pages/Contact";
-import BlogDetails from "./pages/BlogDetails";
-import Disclaimer from "./pages/Disclaimer";
-import PrivateMarket from "./pages/PrivateMarket";
-import Disclosure from "./pages/Disclosure";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import Career from "./pages/Career";
-import Startup from "./pages/Startup";
-import NRIInvestor from "./pages/NRIInvestor";
-import FamilyOffice from "./pages/FamilyOffice";
-import LeaderPortfolio from "./pages/LeaderPortfolio";
-import Videos from "./pages/Videos";
+import Home from "./pages/user/Home";
+import About from "./pages/user/About";
+import Investor from "./pages/user/Investor";
+import MarketFunds from "./pages/user/MarketFunds";
+import Funds from "./pages/user/Funds";
+import InvestorLetter from "./pages/user/InvestorLetter";
+import OurImpact from "./pages/user/OurImpact";
+import Insights from "./pages/user/Insights";
+import PublicFund from "./pages/user/PublicFund";
+import NewsArticle from "./pages/user/NewsArticle";
+import Contact from "./pages/user/Contact";
+import BlogDetails from "./pages/user/BlogDetails";
+import Disclaimer from "./pages/user/Disclaimer";
+import PrivateMarket from "./pages/user/PrivateMarket";
+import Disclosure from "./pages/user/Disclosure";
+import PrivacyPolicy from "./pages/user/PrivacyPolicy";
+import Career from "./pages/user/Career";
+import Startup from "./pages/user/Startup";
+import NRIInvestor from "./pages/user/NRIInvestor";
+import FamilyOffice from "./pages/user/FamilyOffice";
+import LeaderPortfolio from "./pages/user/LeaderPortfolio";
+import Videos from "./pages/user/Videos";
 
 function App() {
   return (

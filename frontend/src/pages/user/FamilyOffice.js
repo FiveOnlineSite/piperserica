@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout";
 import Slider from "react-slick";
 import { NavLink } from "react-router-dom";
-import OfferingsSlider from "../components/OfferingsSlider";
-import NewsSection from "../components/NewsSection";
-import SubscribeLetter from "../components/SubscribeLetter";
+import OfferingsSlider from "../../components/OfferingsSlider";
+import NewsSection from "../../components/NewsSection";
+import SubscribeLetter from "../../components/SubscribeLetter";
 
 const FamilyOffice = () => {
   const investorItem = [

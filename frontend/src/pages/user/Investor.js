@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import Slider from "react-slick";
-import Layout from "../components/Layout";
-import NewsSection from "../components/NewsSection";
-import SubscribeLetter from "../components/SubscribeLetter";
+import Layout from "../../components/Layout";
+import NewsSection from "../../components/NewsSection";
+import SubscribeLetter from "../../components/SubscribeLetter";
 
 const Investor = () => {
   const investorItem = [

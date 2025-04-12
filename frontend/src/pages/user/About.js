@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout";
 import { NavLink, useLocation } from "react-router-dom";
 
 const About = () => {

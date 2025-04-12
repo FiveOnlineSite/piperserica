@@ -1,42 +1,44 @@
 import React, { useState } from "react";
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout";
 import { Link, NavLink } from "react-router-dom";
 
 const Disclosure = () => {
-    const [activeTab, setActiveTab] = useState("life");
-  
-    // Handle tab click
-    const handleTabClick = (tab, event) => {
-      event.preventDefault(); // Prevent the default anchor link behavior
-      setActiveTab(tab);
-    };
-  const letters = [
+  const [activeTab, setActiveTab] = useState("life");
 
+  // Handle tab click
+  const handleTabClick = (tab, event) => {
+    event.preventDefault(); // Prevent the default anchor link behavior
+    setActiveTab(tab);
+  };
+  const letters = [
     {
       date: "January 2023-24",
-      filepath:"https://drive.google.com/file/d/16R9qiAgRj_BMRQphkocJI6mk97rsLsZf/view?usp=sharing",
+      filepath:
+        "https://drive.google.com/file/d/16R9qiAgRj_BMRQphkocJI6mk97rsLsZf/view?usp=sharing",
       filter_type: "Annual Return",
-       title: "Annual Report 2023-24"
+      title: "Annual Report 2023-24",
     },
 
     {
       date: "January 2022-23",
-      filepath: "https://drive.google.com/file/d/15zpNfoWsuCc1wbBppoom1I_69IZPHKPN/view?usp=sharing",
+      filepath:
+        "https://drive.google.com/file/d/15zpNfoWsuCc1wbBppoom1I_69IZPHKPN/view?usp=sharing",
       filter_type: "Annual Return",
-       title: "Annual Report 2022-23"
+      title: "Annual Report 2022-23",
     },
     {
       date: "January 2021-22",
-      filepath: "https://drive.google.com/file/d/1dhGqX7vImHu4Y4SeCo-c44Zf5d7Bphio/view?usp=sharing",
+      filepath:
+        "https://drive.google.com/file/d/1dhGqX7vImHu4Y4SeCo-c44Zf5d7Bphio/view?usp=sharing",
       filter_type: "Annual Return",
-       title: "Annual Report 2021-22"
+      title: "Annual Report 2021-22",
     },
 
     {
       date: "January 2025",
       filepath: "/docs/pms-disclosure-document.pdf",
       filter_type: "PMS Disclosure",
-       title: "PMS Disclosure Document"
+      title: "PMS Disclosure Document",
     },
     // {
     //   date: "January 2023",
@@ -54,13 +56,14 @@ const Disclosure = () => {
       date: "January 2025",
       filepath: "/docs/management-fee-tool-piper-serica-final.xlsx",
       filter_type: "PMS Disclosure",
-       title: "Management Fee Tool"
+      title: "Management Fee Tool",
     },
     {
       date: "January 2025",
-      filepath: "https://docs.google.com/spreadsheets/d/1KIUfrHnsPYNmeHY24egrHyK2bavtDonn9Jfz932sMa4/edit?usp=sharing",
+      filepath:
+        "https://docs.google.com/spreadsheets/d/1KIUfrHnsPYNmeHY24egrHyK2bavtDonn9Jfz932sMa4/edit?usp=sharing",
       filter_type: "PMS Disclosure",
-       title: "Investor Complaint Report"
+      title: "Investor Complaint Report",
     },
   ];
 
@@ -110,8 +113,6 @@ const Disclosure = () => {
         <div className="container">
           <div className="row align-items-center">
             <div className="col-lg-8">
-
-
               <div className="our-commitment-tabs">
                 <Link
                   href="#"
@@ -137,7 +138,6 @@ const Disclosure = () => {
               </div>
 
               <div className="tab-content">
-            
                 <div
                   className={`tab-pane fade ${
                     activeTab === "life" ? "show active" : ""
@@ -152,17 +152,27 @@ const Disclosure = () => {
                     </h6> */}
                     <div className="commitment-content">
                       <p className="para small-para">
-                      <p className="para small-para">Name of the PMS: Piper Serica Portfolio Management Service</p>
-<p className="para small-para">SEBI Registration No.: INP000006749</p>
-<p className="para small-para">Investment Manager: Piper Serica Advisor Private Limited</p>
-<p className="para small-para">Address: A Wing, 905/906, Marathon Innova Nextgen, Ganpatrao Kadam Marg, Opp-Peninsula Corporate Park, Lower Parel, Mumbai – 400013</p>
-
+                        <p className="para small-para">
+                          Name of the PMS: Piper Serica Portfolio Management
+                          Service
+                        </p>
+                        <p className="para small-para">
+                          SEBI Registration No.: INP000006749
+                        </p>
+                        <p className="para small-para">
+                          Investment Manager: Piper Serica Advisor Private
+                          Limited
+                        </p>
+                        <p className="para small-para">
+                          Address: A Wing, 905/906, Marathon Innova Nextgen,
+                          Ganpatrao Kadam Marg, Opp-Peninsula Corporate Park,
+                          Lower Parel, Mumbai – 400013
+                        </p>
                       </p>
                     </div>
                   </div>
                 </div>
 
-                
                 <div
                   className={`tab-pane fade ${
                     activeTab === "smes" ? "show active" : ""
@@ -176,17 +186,35 @@ const Disclosure = () => {
                       facilities.
                     </h6> */}
                     <div className="commitment-content">
-                      <p className="para small-para">Name of The Fund: Piper Serica Angel Fund</p>
-                      <p className="para small-para">Category: Category I AIF - Venture Capital Fund - Angel Fund</p>
-                      <p className="para small-para">Address: A Wing, 905/906, Marathon Innova Nextgen, Ganpatrao Kadam Marg, Opp-Peninsula Corporate Park, Lower Parel, Mumbai – 400013</p>
-                      <p className="para small-para">Registration Number: IN/AIF1/21-22/1028</p>
-                      <p className="para small-para">Name of the investment manager: Piper Serica Advisors Private Limited</p>
-                      <p className="para small-para">Address of the investment manager: A Wing, 905/906, Marathon Innova Nextgen, Ganpatrao Kadam Marg, Opp-Peninsula Corporate Park, Lower Parel, Mumbai – 400013</p>
+                      <p className="para small-para">
+                        Name of The Fund: Piper Serica Angel Fund
+                      </p>
+                      <p className="para small-para">
+                        Category: Category I AIF - Venture Capital Fund - Angel
+                        Fund
+                      </p>
+                      <p className="para small-para">
+                        Address: A Wing, 905/906, Marathon Innova Nextgen,
+                        Ganpatrao Kadam Marg, Opp-Peninsula Corporate Park,
+                        Lower Parel, Mumbai – 400013
+                      </p>
+                      <p className="para small-para">
+                        Registration Number: IN/AIF1/21-22/1028
+                      </p>
+                      <p className="para small-para">
+                        Name of the investment manager: Piper Serica Advisors
+                        Private Limited
+                      </p>
+                      <p className="para small-para">
+                        Address of the investment manager: A Wing, 905/906,
+                        Marathon Innova Nextgen, Ganpatrao Kadam Marg,
+                        Opp-Peninsula Corporate Park, Lower Parel, Mumbai –
+                        400013
+                      </p>
                     </div>
                   </div>
                 </div>
 
-             
                 {/* <div
                   className={`tab-pane fade ${
                     activeTab === "early" ? "show active" : ""
@@ -270,10 +298,22 @@ const Disclosure = () => {
               </div>
             ))}
             <div className="col-12 mt-3">
-<p>If you are not satisfied with the resolution provided, you can lodge your complaint online at:</p>
-<p>SCORES : <Link to='https://scores.sebi.gov.in/'>https://scores.sebi.gov.in/</Link></p>
-<p>SMART ODR : <Link to='https://smartodr.in/login'>https://smartodr.in/login</Link></p>
-
+              <p>
+                If you are not satisfied with the resolution provided, you can
+                lodge your complaint online at:
+              </p>
+              <p>
+                SCORES :{" "}
+                <Link to="https://scores.sebi.gov.in/">
+                  https://scores.sebi.gov.in/
+                </Link>
+              </p>
+              <p>
+                SMART ODR :{" "}
+                <Link to="https://smartodr.in/login">
+                  https://smartodr.in/login
+                </Link>
+              </p>
             </div>
           </div>
         </div>

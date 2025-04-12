@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import Layout from "../components/Layout";
-import NewsSection from "../components/NewsSection";
+import Layout from "../../components/Layout";
+import NewsSection from "../../components/NewsSection";
 import { Link } from "react-router-dom";
 
 const OurImpact = () => {
@@ -306,12 +306,12 @@ const OurImpact = () => {
                     <span></span>
                   </div>
                   <p className="para"> */}
-                    {/* The Fund invests in early-stage companies that have
+              {/* The Fund invests in early-stage companies that have
                     developed a proprietary deep IP / deep tech and are in the
                     early stage of commercialization. We are sector agnostic
                     though our focus areas are Spacetech, AI, advanced
                     electronics, semicon design and fintech. */}
-                    {/* <strong>The Piper Serica Impact: </strong>
+              {/* <strong>The Piper Serica Impact: </strong>
                     At Piper Serica Advisors, our investment philosophy centers
                     on creating sustainable value through companies that drive
                     positive societal change. Our approach delivers measurable
@@ -319,18 +319,18 @@ const OurImpact = () => {
                   </p>
                 </div> */}
 
-                {/* <div className="single-feature">
+              {/* <div className="single-feature">
                   <div>
                     <span></span>
                   </div>
                   <p className="para"> */}
-                    {/* We like to invest in startups that are bringing a
+              {/* We like to invest in startups that are bringing a
                     significant degree of value to their customers. We need to
                     see some product market fit, even if early. Our ticket size
                     is Rs. 10 crore. While we are happy to co-invest with
                     another lead investor there are instances where we are the
                     lead or the sole investor. */}
-                    {/* <strong>Economic Impact: </strong>Our portfolio companies
+              {/* <strong>Economic Impact: </strong>Our portfolio companies
                     employed 277,000+ individuals in FY24, generating
                     significant economic value through job creation, skill
                     development, and improved livelihoods across diverse sectors
@@ -342,10 +342,10 @@ const OurImpact = () => {
                     <span></span>
                   </div>
                   <p className="para"> */}
-                    {/* We have a very collaborative approach to investing and
+              {/* We have a very collaborative approach to investing and
                     prefer to work with multiple co-investors bringing different
                     value to the startup. */}
-                    {/* <strong>Social Responsibility:</strong> With CSR
+              {/* <strong>Social Responsibility:</strong> With CSR
                     contributions exceeding ₹320 crore annually, our portfolio
                     actively addresses critical societal needs through strategic
                     initiatives in:
@@ -416,9 +416,12 @@ const OurImpact = () => {
                   </p>
                 </div>
               </div> */}
-                  
+
               <p className="para">
-              At Piper Serica Advisors, our investment philosophy centers on creating sustainable value through companies that drive positive societal change. Our approach delivers measurable impact across multiple dimensions:
+                At Piper Serica Advisors, our investment philosophy centers on
+                creating sustainable value through companies that drive positive
+                societal change. Our approach delivers measurable impact across
+                multiple dimensions:
               </p>
 
               <div className="our-commitment-tabs">
@@ -446,7 +449,6 @@ const OurImpact = () => {
               </div>
 
               <div className="tab-content">
-            
                 <div
                   className={`tab-pane fade ${
                     activeTab === "life" ? "show active" : ""
@@ -461,13 +463,15 @@ const OurImpact = () => {
                     </h6> */}
                     <div className="commitment-content">
                       <p className="para small-para">
-                      Our portfolio companies employed 277,000+ individuals in FY24, generating significant economic value through job creation, skill development, and improved livelihoods across diverse sectors and geographies.
+                        Our portfolio companies employed 277,000+ individuals in
+                        FY24, generating significant economic value through job
+                        creation, skill development, and improved livelihoods
+                        across diverse sectors and geographies.
                       </p>
                     </div>
                   </div>
                 </div>
 
-                
                 <div
                   className={`tab-pane fade ${
                     activeTab === "smes" ? "show active" : ""
@@ -487,17 +491,17 @@ const OurImpact = () => {
                             {/* We have a very collaborative approach to investing and
                             prefer to work with multiple co-investors bringing different
                             value to the startup. */}
-                            Social Responsibility With CSR
-                            contributions exceeding ₹320 crore annually, our portfolio
-                            actively addresses critical societal needs through strategic
-                            initiatives in:
+                            Social Responsibility With CSR contributions
+                            exceeding ₹320 crore annually, our portfolio
+                            actively addresses critical societal needs through
+                            strategic initiatives in:
                             <div className="single-feature single-subfeature mt-3 mb-0">
-                                <div>
-                                  <span className="small-pointer"></span>
-                                </div>
-                                <p className="para small-para">
-                                  Educational advancement programs
-                                </p>
+                              <div>
+                                <span className="small-pointer"></span>
+                              </div>
+                              <p className="para small-para">
+                                Educational advancement programs
+                              </p>
                             </div>
                             <div className="single-feature single-subfeature mt-2 mb-0">
                               <div>
@@ -526,12 +530,10 @@ const OurImpact = () => {
                           </p>
                         </div>
                       </div>
-                    
                     </div>
                   </div>
                 </div>
 
-             
                 <div
                   className={`tab-pane fade ${
                     activeTab === "early" ? "show active" : ""
@@ -546,7 +548,19 @@ const OurImpact = () => {
                     </h6> */}
                     <div className="commitment-content">
                       <p className="para small-para">
-                      Piper Serica Angel Fund evaluates investments through a comprehensive framework that measures both financial returns and societal value. The fund screens potential portfolio companies for their ability to generate sustainable profits while addressing critical challenges in technology, environment, and social development. By prioritizing startups that demonstrate a clear balance between economic performance and meaningful impact, the fund supports businesses that create value beyond traditional financial metrics. This approach aims to drive systemic change through strategic capital allocation that promotes innovation, sustainability, and long-term social progress.
+                        Piper Serica Angel Fund evaluates investments through a
+                        comprehensive framework that measures both financial
+                        returns and societal value. The fund screens potential
+                        portfolio companies for their ability to generate
+                        sustainable profits while addressing critical challenges
+                        in technology, environment, and social development. By
+                        prioritizing startups that demonstrate a clear balance
+                        between economic performance and meaningful impact, the
+                        fund supports businesses that create value beyond
+                        traditional financial metrics. This approach aims to
+                        drive systemic change through strategic capital
+                        allocation that promotes innovation, sustainability, and
+                        long-term social progress.
                       </p>
                     </div>
                   </div>

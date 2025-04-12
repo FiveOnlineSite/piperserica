@@ -1,5 +1,5 @@
 import React, { useState, useRef } from "react";
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout";
 import { NavLink } from "react-router-dom";
 import emailjs from "@emailjs/browser";
 import { Modal } from "react-bootstrap";

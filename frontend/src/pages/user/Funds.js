@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout";
 import { NavLink } from "react-router-dom";
-import StickyContact from "../components/StickyContact";
-import CompanyPortfolio from "../components/CompanyPortfolio";
-import ArticleSection from "../components/ArticleSection";
+import StickyContact from "../../components/StickyContact";
+import CompanyPortfolio from "../../components/CompanyPortfolio";
+import ArticleSection from "../../components/ArticleSection";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import TestimonialVideoSection from "../components/TestimonialVideo";
+import TestimonialVideoSection from "../../components/TestimonialVideo";
 
 const Funds = () => {
   const [openIndex, setOpenIndex] = useState(null);

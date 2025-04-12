@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout";
 import { NavLink } from "react-router-dom";
 import { Modal } from "react-bootstrap";
-import StickyContact from "../components/StickyContact";
-import FactsheetModal from "../components/FactsheetModal";
+import StickyContact from "../../components/StickyContact";
+import FactsheetModal from "../../components/FactsheetModal";
 
 const LeaderPortfolio = () => {
   const handleFilterChange = (e) => {

@@ -1,8 +1,8 @@
 import React, { useRef, useState } from "react";
-import Layout from "../components/Layout";
+import Layout from "../../components/Layout";
 import Slider from "react-slick";
 import { NavLink } from "react-router-dom";
-import TestimonialSlider from "../components/TestimonialSlider";
+import TestimonialSlider from "../../components/TestimonialSlider";
 import emailjs from "@emailjs/browser";
 import { Modal } from "react-bootstrap";
 
