@@ -2858,6 +2858,10 @@ form .form-label span {
     bottom: 3%;
   }
 
+  .banner-contents .content-div {
+    height: 80px;
+  }
+
   /* .investor-banner-content,
   .banner-content-div {
     top: 15%;
