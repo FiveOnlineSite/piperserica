@@ -5,15 +5,23 @@ const TestimonialVideoSection = () => {
   const playerRef = useRef(null);
 
   useEffect(() => {
-    // Load YouTube IFrame API
-    const tag = document.createElement("script");
-    tag.src = "https://www.youtube.com/iframe_api";
-    document.body.appendChild(tag);
+    const loadYouTubeAPI = () => {
+      if (window.YT && window.YT.Player) {
+        createPlayer(); // YT already loaded
+      } else {
+        const tag = document.createElement("script");
+        tag.src = "https://www.youtube.com/iframe_api";
+        document.body.appendChild(tag);
 
-    // Define player when API is ready
-    window.onYouTubeIframeAPIReady = () => {
+        window.onYouTubeIframeAPIReady = createPlayer;
+      }
+    };
+
+    const createPlayer = () => {
+      if (playerRef.current) return;
+
       playerRef.current = new window.YT.Player("testimonial-video-iframe", {
-        videoId: "7mD8Lpce8x4", // Your YouTube video ID
+        videoId: "7mD8Lpce8x4",
         playerVars: {
           autoplay: 0,
           mute: 1,
@@ -28,16 +36,17 @@ const TestimonialVideoSection = () => {
       });
     };
 
-    // Use IntersectionObserver to play/pause video
+    loadYouTubeAPI();
+
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && playerRef.current) {
+        if (entry.isIntersecting && playerRef.current?.playVideo) {
           playerRef.current.playVideo();
-        } else if (playerRef.current) {
+        } else if (playerRef.current?.pauseVideo) {
           playerRef.current.pauseVideo();
         }
       },
-      { threshold: 0.6 } // Adjust visibility threshold
+      { threshold: 0.6 }
     );
 
     if (sectionRef.current) observer.observe(sectionRef.current);
