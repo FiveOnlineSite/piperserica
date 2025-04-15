@@ -38,8 +38,8 @@ function App() {
         />
         <Route path="/startup-founder-entrepreneur" element={<Startup />} />
         <Route path="/careers" element={<Career />}></Route>
-        <Route path="/public-market" element={<MarketFunds />}></Route>
-        <Route path="/private-market" element={<PrivateMarket />}></Route>
+        <Route path="/public-market-funds" element={<MarketFunds />}></Route>
+        <Route path="/private-market-funds" element={<PrivateMarket />}></Route>
         {/* <Route path="/private-market" element={<MarketFunds />}></Route> */}
         <Route path="/investor-letters" element={<InvestorLetter />}></Route>
         <Route path="/our-impact" element={<OurImpact />}></Route>
