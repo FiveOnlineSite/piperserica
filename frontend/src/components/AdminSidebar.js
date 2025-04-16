@@ -50,7 +50,7 @@ const AdminSidebar = () => {
           <li>
             <NavLink to="/admin/factsheet-presentation" title="Services">
               <span className="las la-hands-helping"></span>{" "}
-              <span>Factsheet & Presentation</span>
+              <span>Factsheet / Presentation</span>
             </NavLink>
           </li>
 

@@ -137,14 +137,21 @@ const About = () => {
     setActiveTab(tab);
 
     // Reload all GIFs by appending a timestamp
-    setGifSources((prevSources) => {
-      const updatedSources = {};
-      Object.keys(prevSources).forEach((key) => {
-        updatedSources[key] = `${prevSources[key]}?t=${Date.now()}`;
-      });
-      return updatedSources;
-    });
+    // setGifSources((prevSources) => {
+    //   const updatedSources = {};
+    //   Object.keys(prevSources).forEach((key) => {
+    //     updatedSources[key] = `${prevSources[key]}?t=${Date.now()}`;
+    //   });
+    //   return updatedSources;
+    // });
   };
+
+  useEffect(() => {
+    Object.values(gifSources).forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
 
   return (
     <Layout>
@@ -210,11 +217,11 @@ const About = () => {
           {/* <div className="row align-items-start"> */}
           {/* <div className="col-lg-5">
               <h2 className="section-title mt-5 journey-text">
-                <i class="fa-solid fa-quote-left journey-left-quote"></i>
+                <i className="fa-solid fa-quote-left journey-left-quote"></i>
                 We commit to being the <strong>lighthouse</strong> for our
                 investors and clients across asset management, wealth
                 management, and founder ecosystems.
-                <i class="fa-solid fa-quote-right journey-right-quote"></i>
+                <i className="fa-solid fa-quote-right journey-right-quote"></i>
               </h2>
             </div> */}
           {/* <div className="col-lg-7"> */}
@@ -394,7 +401,13 @@ const About = () => {
                           width="100%"
                           height="100%"
                           version="1.1"
-                          style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+                          style={{
+                            shapeRendering: "geometricPrecision",
+                            textRendering: "geometricPrecision",
+                            imageRendering: "optimizeQuality",
+                            fillRule: "evenodd",
+                            clipRule: "evenodd",
+                          }}
                           viewBox="0 0 29700 21000"
                           xmlnsXlink="http://www.w3.org/1999/xlink"
                           xmlnsXodm="http://www.corel.com/coreldraw/odm/2003"
@@ -403,499 +416,499 @@ const About = () => {
                           <g id="Layer_x0020_1">
                             <metadata id="CorelCorpID_0Corel-Layer"></metadata>
                             <polyline
-                              class="fil0 str0 svg-elem-1"
+                              className="fil0 str0 svg-elem-1"
                               points="16574.88,11567.42 13349.56,11567.42 13349.56,15921.18 -0.53,15921.18 "
                             ></polyline>
                             <polygon
-                              class="fil0 str0 svg-elem-2"
+                              className="fil0 str0 svg-elem-2"
                               points="12891.93,11251.86 16574.88,11251.86 16574.88,11567.42 13176.47,11567.42 "
                             ></polygon>
                             <line
-                              class="fil0 str0 svg-elem-3"
+                              className="fil0 str0 svg-elem-3"
                               x1="16574.88"
                               y1="10238.79"
                               x2="16569.81"
                               y2="15915.73"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-4"
+                              className="fil0 str0 svg-elem-4"
                               x1="22276.59"
                               y1="10231.32"
                               x2="22271.52"
                               y2="15908.26"
                             ></line>
                             <polygon
-                              class="fil0 str0 svg-elem-5"
+                              className="fil0 str0 svg-elem-5"
                               points="25962.45,11251.86 22279.5,11251.86 22279.5,11567.42 25677.91,11567.42 "
                             ></polygon>
                             <polyline
-                              class="fil0 str0 svg-elem-6"
+                              className="fil0 str0 svg-elem-6"
                               points="15808.31,15921.18 15808.31,12312.48 14048.56,12312.48 14048.56,15921.18 "
                             ></polyline>
                             <path
-                              class="fil0 str0 svg-elem-7"
+                              className="fil0 str0 svg-elem-7"
                               d="M15499.09 15921.18l0 -2622.32c-149.08,-904.04 -1032.47,-857.65 -1141.31,0l0 2622.32"
                             ></path>
                             <polyline
-                              class="fil0 str0 svg-elem-8"
+                              className="fil0 str0 svg-elem-8"
                               points="22994.49,15921.18 22994.49,12312.48 24754.24,12312.48 24754.24,15921.18 "
                             ></polyline>
                             <path
-                              class="fil0 str0 svg-elem-9"
+                              className="fil0 str0 svg-elem-9"
                               d="M23303.71 15921.18l0 -2622.32c108.84,-857.65 992.23,-904.04 1141.31,0l0 2622.32"
                             ></path>
                             <line
-                              class="fil0 str0 svg-elem-10"
+                              className="fil0 str0 svg-elem-10"
                               x1="13349.56"
                               y1="12013.09"
                               x2="16573.28"
                               y2="12013.09"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-11"
+                              className="fil0 str0 svg-elem-11"
                               x1="13700.24"
                               y1="11567.42"
                               x2="13700.24"
                               y2="12001.8"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-12"
+                              className="fil0 str0 svg-elem-12"
                               x1="14071.52"
                               y1="11567.42"
                               x2="14071.52"
                               y2="12001.8"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-13"
+                              className="fil0 str0 svg-elem-13"
                               x1="14442.8"
                               y1="11567.42"
                               x2="14442.8"
                               y2="12001.8"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-14"
+                              className="fil0 str0 svg-elem-14"
                               x1="14814.08"
                               y1="11567.42"
                               x2="14814.08"
                               y2="12001.8"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-15"
+                              className="fil0 str0 svg-elem-15"
                               x1="15185.36"
                               y1="11567.42"
                               x2="15185.36"
                               y2="12001.8"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-16"
+                              className="fil0 str0 svg-elem-16"
                               x1="15556.64"
                               y1="11567.42"
                               x2="15556.64"
                               y2="12001.8"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-17"
+                              className="fil0 str0 svg-elem-17"
                               x1="15927.92"
                               y1="11567.42"
                               x2="15927.92"
                               y2="12001.8"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-18"
+                              className="fil0 str0 svg-elem-18"
                               x1="16299.2"
                               y1="11567.42"
                               x2="16299.2"
                               y2="12001.8"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-19"
+                              className="fil0 str0 svg-elem-19"
                               x1="25498.71"
                               y1="12013.09"
                               x2="22274.99"
                               y2="12013.09"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-20"
+                              className="fil0 str0 svg-elem-20"
                               x1="25148.03"
                               y1="11567.42"
                               x2="25148.03"
                               y2="12001.8"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-21"
+                              className="fil0 str0 svg-elem-21"
                               x1="24776.75"
                               y1="11567.42"
                               x2="24776.75"
                               y2="12001.8"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-22"
+                              className="fil0 str0 svg-elem-22"
                               x1="24405.47"
                               y1="11567.42"
                               x2="24405.47"
                               y2="12001.8"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-23"
+                              className="fil0 str0 svg-elem-23"
                               x1="24034.19"
                               y1="11567.42"
                               x2="24034.19"
                               y2="12001.8"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-24"
+                              className="fil0 str0 svg-elem-24"
                               x1="23662.91"
                               y1="11567.42"
                               x2="23662.91"
                               y2="12001.8"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-25"
+                              className="fil0 str0 svg-elem-25"
                               x1="23291.63"
                               y1="11567.42"
                               x2="23291.63"
                               y2="12001.8"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-26"
+                              className="fil0 str0 svg-elem-26"
                               x1="22920.35"
                               y1="11567.42"
                               x2="22920.35"
                               y2="12001.8"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-27"
+                              className="fil0 str0 svg-elem-27"
                               x1="22549.07"
                               y1="11567.42"
                               x2="22549.07"
                               y2="12001.8"
                             ></line>
                             <polyline
-                              class="fil0 str0 svg-elem-28"
+                              className="fil0 str0 svg-elem-28"
                               points="29699.47,15921.18 25509.63,15921.17 25509.63,11567.42 "
                             ></polyline>
                             <line
-                              class="fil0 str0 svg-elem-29"
+                              className="fil0 str0 svg-elem-29"
                               x1="17819.23"
                               y1="11421.96"
                               x2="17814.16"
                               y2="15915.73"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-30"
+                              className="fil0 str0 svg-elem-30"
                               x1="17818.65"
                               y1="11931.68"
                               x2="16573.36"
                               y2="11931.68"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-31"
+                              className="fil0 str0 svg-elem-31"
                               x1="17817.9"
                               y1="12774.78"
                               x2="16572.61"
                               y2="12774.78"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-32"
+                              className="fil0 str0 svg-elem-32"
                               x1="17817.15"
                               y1="13617.88"
                               x2="16571.86"
                               y2="13617.88"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-33"
+                              className="fil0 str0 svg-elem-33"
                               x1="17816.4"
                               y1="14460.98"
                               x2="16571.11"
                               y2="14460.98"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-34"
+                              className="fil0 str0 svg-elem-34"
                               x1="17815.65"
                               y1="15304.08"
                               x2="16570.36"
                               y2="15304.08"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-35"
+                              className="fil0 str0 svg-elem-35"
                               x1="21026.19"
                               y1="11421.96"
                               x2="21031.26"
                               y2="15915.73"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-36"
+                              className="fil0 str0 svg-elem-36"
                               x1="22272.06"
                               y1="11931.68"
                               x2="21026.77"
                               y2="11931.68"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-37"
+                              className="fil0 str0 svg-elem-37"
                               x1="22272.81"
                               y1="12774.78"
                               x2="21027.52"
                               y2="12774.78"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-38"
+                              className="fil0 str0 svg-elem-38"
                               x1="22273.56"
                               y1="13617.88"
                               x2="21028.27"
                               y2="13617.88"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-39"
+                              className="fil0 str0 svg-elem-39"
                               x1="22274.31"
                               y1="14460.98"
                               x2="21029.02"
                               y2="14460.98"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-40"
+                              className="fil0 str0 svg-elem-40"
                               x1="22275.06"
                               y1="15304.08"
                               x2="21029.77"
                               y2="15304.08"
                             ></line>
                             <path
-                              class="fil0 str0 svg-elem-41"
+                              className="fil0 str0 svg-elem-41"
                               d="M20669.82 15921.18l0 -2541.11c-223.22,-2087.05 -2237.69,-2126.5 -2494.22,0l0 2541.11"
                             ></path>
                             <circle
-                              class="fil0 str0 svg-elem-42"
+                              className="fil0 str0 svg-elem-42"
                               cx="18182.81"
                               cy="11842.32"
                               r="111.51"
                             ></circle>
                             <circle
-                              class="fil0 str0 svg-elem-43"
+                              className="fil0 str0 svg-elem-43"
                               cx="20666.35"
                               cy="11842.32"
                               r="111.51"
                             ></circle>
                             <line
-                              class="fil0 str0 svg-elem-44"
+                              className="fil0 str0 svg-elem-44"
                               x1="16574.88"
                               y1="11421.96"
                               x2="22279.5"
                               y2="11421.96"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-45"
+                              className="fil0 str0 svg-elem-45"
                               x1="16574.88"
                               y1="11248.92"
                               x2="22279.5"
                               y2="11248.92"
                             ></line>
                             <path
-                              class="fil0 str0 svg-elem-46"
+                              className="fil0 str0 svg-elem-46"
                               d="M16763.95 10536.2l727.63 0 0 -2821.54c-58.3,-807.58 -664.98,-792.14 -727.63,0l0 2821.54z"
                             ></path>
                             <line
-                              class="fil0 str0 svg-elem-47"
+                              className="fil0 str0 svg-elem-47"
                               x1="16763.95"
                               y1="7714.66"
                               x2="17491.58"
                               y2="7714.66"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-48"
+                              className="fil0 str0 svg-elem-48"
                               x1="17128.91"
                               y1="7114.77"
                               x2="17128.91"
                               y2="6845.57"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-49"
+                              className="fil0 str0 svg-elem-49"
                               x1="16763.95"
                               y1="8859.04"
                               x2="22091.78"
                               y2="8859.04"
                             ></line>
                             <path
-                              class="fil0 str0 svg-elem-50"
+                              className="fil0 str0 svg-elem-50"
                               d="M16965.67 8859.04l323.87 0 0 -737.78c-17.04,-253.63 -309.36,-251.04 -323.87,0l0 737.78z"
                             ></path>
                             <path
-                              class="fil0 str0 svg-elem-51"
+                              className="fil0 str0 svg-elem-51"
                               d="M21364.15 10536.2l727.63 0 0 -2821.54c-58.3,-807.58 -664.98,-792.14 -727.63,0l0 2821.54z"
                             ></path>
                             <line
-                              class="fil0 str0 svg-elem-52"
+                              className="fil0 str0 svg-elem-52"
                               x1="21364.15"
                               y1="7714.66"
                               x2="22091.78"
                               y2="7714.66"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-53"
+                              className="fil0 str0 svg-elem-53"
                               x1="21729.11"
                               y1="7114.77"
                               x2="21729.11"
                               y2="6845.57"
                             ></line>
                             <path
-                              class="fil0 str0 svg-elem-54"
+                              className="fil0 str0 svg-elem-54"
                               d="M21565.87 8859.04l323.87 0 0 -737.78c-17.04,-253.63 -309.36,-251.04 -323.87,0l0 737.78z"
                             ></path>
                             <line
-                              class="fil0 str0 svg-elem-55"
+                              className="fil0 str0 svg-elem-55"
                               x1="17491.58"
                               y1="8356.43"
                               x2="21364.15"
                               y2="8356.43"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-56"
+                              className="fil0 str0 svg-elem-56"
                               x1="17814.27"
                               y1="8356.43"
                               x2="17814.27"
                               y2="8859.04"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-57"
+                              className="fil0 str0 svg-elem-57"
                               x1="18136.98"
                               y1="8356.43"
                               x2="18136.98"
                               y2="8859.04"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-58"
+                              className="fil0 str0 svg-elem-58"
                               x1="18459.69"
                               y1="8356.43"
                               x2="18459.69"
                               y2="8859.04"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-59"
+                              className="fil0 str0 svg-elem-59"
                               x1="18782.4"
                               y1="8356.43"
                               x2="18782.4"
                               y2="8859.04"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-60"
+                              className="fil0 str0 svg-elem-60"
                               x1="19105.11"
                               y1="8356.43"
                               x2="19105.11"
                               y2="8859.04"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-61"
+                              className="fil0 str0 svg-elem-61"
                               x1="19427.82"
                               y1="8356.43"
                               x2="19427.82"
                               y2="8859.04"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-62"
+                              className="fil0 str0 svg-elem-62"
                               x1="19750.53"
                               y1="8356.43"
                               x2="19750.53"
                               y2="8859.04"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-63"
+                              className="fil0 str0 svg-elem-63"
                               x1="20073.24"
                               y1="8356.43"
                               x2="20073.24"
                               y2="8859.04"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-64"
+                              className="fil0 str0 svg-elem-64"
                               x1="20395.95"
                               y1="8356.43"
                               x2="20395.95"
                               y2="8859.04"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-65"
+                              className="fil0 str0 svg-elem-65"
                               x1="20718.66"
                               y1="8356.43"
                               x2="20718.66"
                               y2="8859.04"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-66"
+                              className="fil0 str0 svg-elem-66"
                               x1="21041.37"
                               y1="8356.43"
                               x2="21041.37"
                               y2="8859.04"
                             ></line>
                             <polyline
-                              class="fil0 str0 svg-elem-67"
+                              className="fil0 str0 svg-elem-67"
                               points="13349.56,11251.85 13349.56,10238.79 16763.95,10238.79 "
                             ></polyline>
                             <line
-                              class="fil0 str0 svg-elem-68"
+                              className="fil0 str0 svg-elem-68"
                               x1="17491.58"
                               y1="10238.79"
                               x2="21364.15"
                               y2="10238.79"
                             ></line>
                             <polyline
-                              class="fil0 str0 svg-elem-69"
+                              className="fil0 str0 svg-elem-69"
                               points="25509.63,11251.85 25509.63,10238.79 22091.78,10238.79 "
                             ></polyline>
                             <line
-                              class="fil0 str0 svg-elem-70"
+                              className="fil0 str0 svg-elem-70"
                               x1="25509.62"
                               y1="10536.2"
                               x2="13349.56"
                               y2="10536.2"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-71"
+                              className="fil0 str0 svg-elem-71"
                               x1="17950.32"
                               y1="10536.2"
                               x2="17950.32"
                               y2="11248.92"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-72"
+                              className="fil0 str0 svg-elem-72"
                               x1="18293.26"
                               y1="10536.2"
                               x2="18293.26"
                               y2="11248.92"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-73"
+                              className="fil0 str0 svg-elem-73"
                               x1="18842.05"
                               y1="10536.2"
                               x2="18842.05"
                               y2="11248.92"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-74"
+                              className="fil0 str0 svg-elem-74"
                               x1="19184.99"
                               y1="10536.2"
                               x2="19184.99"
                               y2="11248.92"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-75"
+                              className="fil0 str0 svg-elem-75"
                               x1="19740.62"
                               y1="10536.2"
                               x2="19740.62"
                               y2="11248.92"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-76"
+                              className="fil0 str0 svg-elem-76"
                               x1="20083.56"
                               y1="10536.2"
                               x2="20083.56"
                               y2="11248.92"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-77"
+                              className="fil0 str0 svg-elem-77"
                               x1="20632.35"
                               y1="10536.2"
                               x2="20632.35"
                               y2="11248.92"
                             ></line>
                             <line
-                              class="fil0 str0 svg-elem-78"
+                              className="fil0 str0 svg-elem-78"
                               x1="20975.29"
                               y1="10536.2"
                               x2="20975.29"
@@ -1040,6 +1053,7 @@ const About = () => {
                           className="w-100"
                           alt="history-img"
                           loading="lazy"
+                          rel="preload"
                         />
                       </div>
                     </div>
@@ -1122,7 +1136,7 @@ const About = () => {
               <div
                 className={`accordion-item ${
                   openAccordion === 0 ? "bordered" : ""
-                }`} // Conditionally apply the 'bordered' class
+                }`} // Conditionally apply the 'bordered' className
               >
                 <h2
                   className={`accordion-header ${
@@ -1167,7 +1181,7 @@ const About = () => {
               <div
                 className={`accordion-item ${
                   openAccordion === 1 ? "bordered" : ""
-                }`} // Conditionally apply the 'bordered' class
+                }`} // Conditionally apply the 'bordered' className
               >
                 <h2
                   className={`accordion-header ${
@@ -1318,10 +1332,10 @@ const About = () => {
             <h6 className="section-subtitle pb-4">Founder’s note</h6>
             <div className="col-lg-11">
               {/* <h2 className="banner-title offerings-title founders-text px-5">
-                <i class="fa-solid fa-quote-left founders-left-quote"></i>
+                <i className="fa-solid fa-quote-left founders-left-quote"></i>
                 Our courage to go beyond conventions and constantly explore new
                 possibilities has been one of our core strengths.
-                <i class="fa-solid fa-quote-right founders-right-quote"></i>
+                <i className="fa-solid fa-quote-right founders-right-quote"></i>
               </h2> */}
             </div>
           </div>
@@ -1402,7 +1416,7 @@ const About = () => {
                   <div className="team-title-div">
                     <h3 className="section-title team-name">Abhay Agarwal</h3>
                     <NavLink to="https://www.linkedin.com/in/abhay-agarwal-piper/">
-                      <i class="fa-brands fa-linkedin"></i>
+                      <i className="fa-brands fa-linkedin"></i>
                     </NavLink>
                   </div>
 
@@ -1422,7 +1436,7 @@ const About = () => {
                   <div className="team-title-div">
                     <h3 className="section-title team-name">Rajni Agarwal</h3>
                     <NavLink to="https://www.linkedin.com/in/rajni-agarwal-99352218b/">
-                      <i class="fa-brands fa-linkedin"></i>
+                      <i className="fa-brands fa-linkedin"></i>
                     </NavLink>
                   </div>
                   <h5 className="team-designation">Director, Research</h5>
@@ -1441,7 +1455,7 @@ const About = () => {
                   <div className="team-title-div">
                     <h3 className="section-title team-name">Ajay Modi</h3>
                     <NavLink to="https://www.linkedin.com/in/ajmodi/">
-                      <i class="fa-brands fa-linkedin"></i>
+                      <i className="fa-brands fa-linkedin"></i>
                     </NavLink>
                   </div>
                   <h5 className="team-designation">Director, Investments</h5>
@@ -1463,7 +1477,7 @@ const About = () => {
                     <div className="team-title-div">
                       <h3 className="section-title team-name">{team.name}</h3>
                       <NavLink to={team.linkedin_url} target="_blank">
-                        <i class="fa-brands fa-linkedin"></i>
+                        <i className="fa-brands fa-linkedin"></i>
                       </NavLink>
                     </div>
 

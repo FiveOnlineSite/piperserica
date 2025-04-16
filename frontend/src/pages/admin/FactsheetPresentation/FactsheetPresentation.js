@@ -63,10 +63,10 @@ const FactsheetPresentation = () => {
     <AdminLayout>
       <div className="pages-headers ">
         <h2>
-          Service FactsheetPresentation
+          Factsheet / Presentation
           <NavLink to="/admin/add/factsheet-presentation" className="theme-cta">
             <i class="las la-plus-circle"></i>
-            Add Service FactsheetPresentation
+            Add Factsheet / Presentation
           </NavLink>
         </h2>
       </div>
@@ -77,9 +77,9 @@ const FactsheetPresentation = () => {
               <table id="example" className="table nowrap">
                 <thead>
                   <tr>
-                    <th>Service</th>
-                    <th className="text-center">Factsheet Presentation Name</th>
-                    <th className="text-center">Media</th>
+                    <th>Fund Name</th>
+                    <th className="text-center">Factsheet / Presentation</th>
+                    <th className="text-center">File</th>
                     <th className="text-center">Edit</th>
                     <th className="text-center">Delete</th>
                   </tr>
