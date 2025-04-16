@@ -123,31 +123,62 @@ const About = () => {
     }
   };
 
+  // const [activeTab, setActiveTab] = useState("twenty-two");
+  // const [gifSources, setGifSources] = useState({
+  //   fourteen: "/images/history/Getway-of-India-2004-GIF (2).gif",
+  //   fifteen: "/images/history/Target-2015-GIF.gif",
+  //   nineteen: "/images/history/UpArrow-2019-GIF (1).gif",
+  //   twenty: "/images/history/Dollar-2020-GIF (2).gif",
+  //   "twenty-two": "/images/history/Rocket-2024-GIF.gif",
+  // });
+
+  // const handleTabClick = (tab, event) => {
+  //   event.preventDefault();
+  //   setActiveTab(tab);
+
+  //   // Reload all GIFs by appending a timestamp
+  //   // setGifSources((prevSources) => {
+  //   //   const updatedSources = {};
+  //   //   Object.keys(prevSources).forEach((key) => {
+  //   //     updatedSources[key] = `${prevSources[key]}?t=${Date.now()}`;
+  //   //   });
+  //   //   return updatedSources;
+  //   // });
+  // };
+
+  // useEffect(() => {
+  //   Object.values(gifSources).forEach((src) => {
+  //     const img = new Image();
+  //     img.src = src;
+  //   });
+  // }, []);
+
   const [activeTab, setActiveTab] = useState("twenty-two");
-  const [gifSources, setGifSources] = useState({
+  const baseGifSources = {
     fourteen: "/images/history/Getway-of-India-2004-GIF (2).gif",
     fifteen: "/images/history/Target-2015-GIF.gif",
     nineteen: "/images/history/UpArrow-2019-GIF (1).gif",
     twenty: "/images/history/Dollar-2020-GIF (2).gif",
     "twenty-two": "/images/history/Rocket-2024-GIF.gif",
-  });
+  };
+
+  // This will contain the actual gif sources with updated timestamps
+  const [gifSources, setGifSources] = useState(baseGifSources);
 
   const handleTabClick = (tab, event) => {
     event.preventDefault();
     setActiveTab(tab);
 
-    // Reload all GIFs by appending a timestamp
-    // setGifSources((prevSources) => {
-    //   const updatedSources = {};
-    //   Object.keys(prevSources).forEach((key) => {
-    //     updatedSources[key] = `${prevSources[key]}?t=${Date.now()}`;
-    //   });
-    //   return updatedSources;
-    // });
+    // Only update the currently selected tab’s image with a new timestamp
+    setGifSources((prev) => ({
+      ...prev,
+      [tab]: `${baseGifSources[tab]}?t=${Date.now()}`,
+    }));
   };
 
   useEffect(() => {
-    Object.values(gifSources).forEach((src) => {
+    // Preload all original sources
+    Object.values(baseGifSources).forEach((src) => {
       const img = new Image();
       img.src = src;
     });
