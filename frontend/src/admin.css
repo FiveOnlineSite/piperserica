@@ -43,13 +43,13 @@ a:hover {
 .sidebar-brand {
   height: 90px;
   padding: 1rem 0rem 1rem 2rem;
-  color: var(--title-color);
-  font-family: var(--primary-font);
+  color: var(--title-color) !important;
   text-transform: uppercase;
 }
 .sidebar-brand span {
   display: inline-block;
   padding-right: 1rem;
+  color: var(--title-color);
 }
 .sidebar-menu {
   margin-top: 1rem;
@@ -68,7 +68,7 @@ a:hover {
 }
 
 .admin-logo {
-  height: 20px;
+  height: 30px;
 }
 .sidebar-menu a {
   padding-left: 0;

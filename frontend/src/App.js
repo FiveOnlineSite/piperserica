@@ -22,6 +22,9 @@ import NRIInvestor from "./pages/user/NRIInvestor";
 import FamilyOffice from "./pages/user/FamilyOffice";
 import LeaderPortfolio from "./pages/user/LeaderPortfolio";
 import Videos from "./pages/user/Videos";
+import Login from "./pages/admin/Login";
+import AdminRoutes from "./routes/AdminRoutes";
+import DashBoard from "./pages/admin/Dashboard";
 
 function App() {
   return (
@@ -64,6 +67,11 @@ function App() {
           path="/private-market/piper-serica-angel-fund"
           element={<Funds />}
         ></Route>
+
+        <Route path="/login" element={<Login />}></Route>
+        <Route path="/admin" element={<AdminRoutes />}>
+          <Route path="dashboard" element={<DashBoard />} />
+        </Route>
       </Routes>
     </Router>
   );

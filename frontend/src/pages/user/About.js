@@ -157,6 +157,8 @@ const About = () => {
               autoPlay
               loop
               alt="banner-img"
+              playsInline
+              preload="auto"
             />
 
             <div className="banner-content-div">
@@ -390,6 +392,7 @@ const About = () => {
                           src={gifSources.fourteen}
                           className="w-100"
                           alt="history-img"
+                          loading="lazy"
                         />
                       </div>
                     </div>
@@ -424,6 +427,7 @@ const About = () => {
                           src={gifSources.fifteen}
                           className="w-100"
                           alt="history-img"
+                          loading="lazy"
                         />
                       </div>
                     </div>
@@ -458,6 +462,7 @@ const About = () => {
                           src={gifSources.nineteen}
                           className="w-100"
                           alt="history-img"
+                          loading="lazy"
                         />
                       </div>
                     </div>
@@ -491,6 +496,7 @@ const About = () => {
                           src={gifSources.twenty}
                           className="w-100"
                           alt="history-img"
+                          loading="lazy"
                         />
                       </div>
                     </div>
@@ -524,6 +530,7 @@ const About = () => {
                           src={gifSources["twenty-two"]}
                           className="w-100"
                           alt="history-img"
+                          loading="lazy"
                         />
                       </div>
                     </div>
