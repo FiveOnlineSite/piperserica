@@ -125,9 +125,9 @@ const About = () => {
 
   const [activeTab, setActiveTab] = useState("twenty-two");
   const [gifSources, setGifSources] = useState({
-    fourteen: "/images/history/Getway-of-India-2004-GIF.gif",
+    fourteen: "/images/history/Getway-of-India-2004-GIF (2).gif",
     fifteen: "/images/history/Target-2015-GIF.gif",
-    nineteen: "/images/history/UpArrow-2019-GIF.gif",
+    nineteen: "/images/history/UpArrow-2019-GIF (1).gif",
     twenty: "/images/history/Dollar-2020-GIF (2).gif",
     "twenty-two": "/images/history/Rocket-2024-GIF.gif",
   });
