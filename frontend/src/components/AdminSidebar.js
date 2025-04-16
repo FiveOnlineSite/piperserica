@@ -48,16 +48,9 @@ const AdminSidebar = () => {
           </li>
 
           <li>
-            <NavLink to="/admin/services" title="Services">
+            <NavLink to="/admin/factsheet-presentation" title="Services">
               <span className="las la-hands-helping"></span>{" "}
-              <span>Factsheet</span>
-            </NavLink>
-          </li>
-
-          <li>
-            <NavLink to="/admin/gallery" title="Gallery">
-              <span className="las la-photo-video"></span>{" "}
-              <span>Presentation</span>
+              <span>Factsheet & Presentation</span>
             </NavLink>
           </li>
 

@@ -64,7 +64,7 @@ const FactsheetPresentation = () => {
       <div className="pages-headers ">
         <h2>
           Service FactsheetPresentation
-          <NavLink to="/admin/add/FactsheetPresentation" className="theme-cta">
+          <NavLink to="/admin/add/factsheet-presentation" className="theme-cta">
             <i class="las la-plus-circle"></i>
             Add Service FactsheetPresentation
           </NavLink>
@@ -78,7 +78,7 @@ const FactsheetPresentation = () => {
                 <thead>
                   <tr>
                     <th>Service</th>
-                    <th className="text-center">FactsheetPresentation Name</th>
+                    <th className="text-center">Factsheet Presentation Name</th>
                     <th className="text-center">Media</th>
                     <th className="text-center">Edit</th>
                     <th className="text-center">Delete</th>
