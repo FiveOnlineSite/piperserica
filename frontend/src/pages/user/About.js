@@ -128,7 +128,7 @@ const About = () => {
     fourteen: "/images/history/Getway-of-India-2004-GIF.gif",
     fifteen: "/images/history/Target-2015-GIF.gif",
     nineteen: "/images/history/UpArrow-2019-GIF.gif",
-    twenty: "/images/history/Dollar-2020-GIF.gif",
+    twenty: "/images/history/Dollar-2020-GIF (2).gif",
     "twenty-two": "/images/history/Rocket-2024-GIF.gif",
   });
 
