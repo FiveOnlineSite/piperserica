@@ -154,34 +154,38 @@ const About = () => {
   // }, []);
 
   const [activeTab, setActiveTab] = useState("twenty-two");
+
   const baseGifSources = {
-    fourteen: "/images/history/Getway-of-India-2004-GIF2-ezgif.com-resize.gif",
-    fifteen: "/images/history/Target-2015-GIF-ezgif.com-resize.gif",
-    nineteen: "/images/history/UpArrow-2019-GIF1-ezgif.com-resize.gif",
-    twenty: "/images/history/Dollar-2020-GIF-ezgif.com-resize (1).gif",
+    fourteen: "/images/history/Getway-of-India-2004-GIF (2).gif",
+    fifteen: "/images/history/Target-2015-GIF.gif",
+    nineteen: "/images/history/UpArrow-2019-GIF (1).gif",
+    twenty: "/images/history/Dollar-2020-GIF (2).gif",
     "twenty-two": "/images/history/Rocket-2024-GIF (1) (1).gif",
   };
 
-  // This will contain the actual gif sources with updated timestamps
-  const [gifSources, setGifSources] = useState(baseGifSources);
+  // ✅ Initialize gifSources with timestamp only for the initial activeTab
+  const [gifSources, setGifSources] = useState(() => {
+    const sourcesWithTimestamp = { ...baseGifSources };
+    sourcesWithTimestamp[activeTab] = `${
+      baseGifSources[activeTab]
+    }?t=${Date.now()}`;
+    return sourcesWithTimestamp;
+  });
 
+  // ✅ On tab click, only update GIF if tab is different
   const handleTabClick = (tab, event) => {
     event.preventDefault();
-
-    // Only proceed if the tab is changing
     if (tab === activeTab) return;
 
     setActiveTab(tab);
-
-    // Update only the newly selected tab’s GIF src with timestamp
     setGifSources((prev) => ({
       ...prev,
       [tab]: `${baseGifSources[tab]}?t=${Date.now()}`,
     }));
   };
 
+  // ✅ Preload all base GIFs once on mount
   useEffect(() => {
-    // Preload all original sources
     Object.values(baseGifSources).forEach((src) => {
       const img = new Image();
       img.src = src;
