@@ -167,9 +167,13 @@ const About = () => {
 
   const handleTabClick = (tab, event) => {
     event.preventDefault();
+
+    // Only proceed if the tab is changing
+    if (tab === activeTab) return;
+
     setActiveTab(tab);
 
-    // Only update the currently selected tab’s image with a new timestamp
+    // Update only the newly selected tab’s GIF src with timestamp
     setGifSources((prev) => ({
       ...prev,
       [tab]: `${baseGifSources[tab]}?t=${Date.now()}`,
