@@ -3,7 +3,7 @@ import AdminLayout from "../../../components/AdminLayout";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const AddFactsheet = () => {
+const AddFactsheetPresentation = () => {
   const [selectedService, setSelectedService] = useState("");
   const [selectedGallery, setSelectedGallery] = useState("");
   const [galleryNames, setGalleryNames] = useState([]);
@@ -93,7 +93,7 @@ const AddFactsheet = () => {
   return (
     <AdminLayout>
       <div className="theme-form-header">
-        <h2>Add Service Gallery</h2>
+        <h2>Add Factsheet</h2>
       </div>
       <div className="form-white-bg">
         <form onSubmit={handleSubmit}>
@@ -184,4 +184,4 @@ const AddFactsheet = () => {
   );
 };
 
-export default AddFactsheet;
+export default AddFactsheetPresentation;

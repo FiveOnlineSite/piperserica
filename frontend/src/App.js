@@ -25,6 +25,8 @@ import Videos from "./pages/user/Videos";
 import Login from "./pages/admin/Login";
 import AdminRoutes from "./routes/AdminRoutes";
 import DashBoard from "./pages/admin/Dashboard";
+import AddFactsheetPresentation from "./pages/admin/FactsheetPresentation/AddFactsheetPresentation";
+import FactsheetPresentation from "./pages/admin/FactsheetPresentation/FactsheetPresentation";
 
 function App() {
   return (
@@ -71,6 +73,18 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/admin" element={<AdminRoutes />}>
           <Route path="dashboard" element={<DashBoard />} />
+          <Route
+            path="add/factsheet-presentation"
+            element={<AddFactsheetPresentation />}
+          />
+          <Route
+            path="edit/factsheet-presentation"
+            element={<AddFactsheetPresentation />}
+          />
+          <Route
+            path="factsheet-presentation"
+            element={<FactsheetPresentation />}
+          />
         </Route>
       </Routes>
     </Router>
