@@ -55,13 +55,13 @@ const AdminSidebar = () => {
           </li>
 
           <li>
-            <NavLink to="/admin/gallery_name" title="Gallery Name">
+            <NavLink to="/admin/fund-number" title="Gallery Name">
               <span className="las la-images"></span> <span>Fund Numbers</span>
             </NavLink>
           </li>
 
           <li>
-            <NavLink to="/admin/project" title="Project">
+            <NavLink to="/admin/company" title="Project">
               <span className="las la-briefcase"></span>{" "}
               <span>Company Portfolio</span>
             </NavLink>

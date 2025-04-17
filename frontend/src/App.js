@@ -27,6 +27,10 @@ import AdminRoutes from "./routes/AdminRoutes";
 import DashBoard from "./pages/admin/Dashboard";
 import AddFactsheetPresentation from "./pages/admin/FactsheetPresentation/AddFactsheetPresentation";
 import FactsheetPresentation from "./pages/admin/FactsheetPresentation/FactsheetPresentation";
+import FundNumber from "./pages/admin/FundNumber/FundNumber";
+import AddFundNumber from "./pages/admin/FundNumber/AddFundNumber";
+import EditFundNumber from "./pages/admin/FundNumber/EditFundNumber";
+import FundCompanyPortfolio from "./pages/admin/FundCompanyPortfolio/FundCompanyPortfolio";
 
 function App() {
   return (
@@ -85,6 +89,14 @@ function App() {
             path="factsheet-presentation"
             element={<FactsheetPresentation />}
           />
+
+          <Route path="fund-number" element={<FundNumber />} />
+          <Route path="add/fund-number" element={<AddFundNumber />} />
+          <Route path="edit/fund-number" element={<EditFundNumber />} />
+
+          <Route path="company" element={<FundCompanyPortfolio />} />
+          <Route path="add/company" element={<AddFundNumber />} />
+          <Route path="edit/company" element={<EditFundNumber />} />
         </Route>
       </Routes>
     </Router>

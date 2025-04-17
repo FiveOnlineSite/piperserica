@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from "react";
-import AdminLayout from "../../../components/AdminLayout";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
+import AdminLayout from "../../../components/AdminLayout";
 
-const AddFactsheetPresentation = () => {
+const AddFundNumber = () => {
   const [selectedService, setSelectedService] = useState("");
   const [selectedGallery, setSelectedGallery] = useState("");
   const [galleryNames, setGalleryNames] = useState([]);
@@ -93,14 +93,14 @@ const AddFactsheetPresentation = () => {
   return (
     <AdminLayout>
       <div className="theme-form-header">
-        <h2>Add Factsheet / Presentation</h2>
+        <h2>Add Fund Number</h2>
       </div>
       <div className="form-white-bg">
         <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="theme-form">
-                <label>Fund Name</label>
+                <label>Fund / Investor Name</label>
                 <select
                   value={selectedService}
                   required
@@ -109,47 +109,85 @@ const AddFactsheetPresentation = () => {
                     fetchGalleryNames();
                   }}
                 >
-                  <option value="">Select a Fund</option>
+                  <option value="">Select a Fund / Investor</option>
                   <option value="PMS">PMS</option>
                   <option value="FPI">FPI</option>
+                  <option value="AIF">AIF</option>
+                  <option value="AIF">Foreign Investor</option>
+                  <option value="AIF">NRI Investor</option>
+                  <option value="AIF">Family Office & Indian Investor</option>
+                  <option value="AIF">Startup Founder & Enterpreneur</option>
                 </select>
               </div>
             </div>
 
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="theme-form">
-                <label>Factsheet / Presentation</label>
-                <select
-                  value={selectedService}
-                  required
-                  onChange={(e) => {
-                    setSelectedService(e.target.value);
-                    fetchGalleryNames();
-                  }}
-                >
-                  <option value="">Select a option</option>
-                  <option value="Factsheet">Factsheet</option>
-                  <option value="Presentation">Presentation</option>
-                </select>
+                <label>Fund Figures</label>
+                <input type="text" name="title" required />
               </div>
             </div>
 
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="theme-form">
-                <label>File Upload</label>
+                <label>Fund Number 1</label>
+                <input type="text" name="title" required />
+              </div>
+            </div>
 
-                <input
-                  type="file"
-                  name="media"
-                  accept=".pdf"
-                  onChange={(e) =>
-                    setMedia({
-                      ...media,
-                      file: e.target.files[0],
-                      iframe: "",
-                    })
-                  }
-                />
+            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+              <div className="theme-form">
+                <label>Fund Number 2</label>
+                <input type="text" name="title" required />
+              </div>
+            </div>
+
+            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+              <div className="theme-form">
+                <label>Fund Number 3</label>
+                <input type="text" name="title" required />
+              </div>
+            </div>
+
+            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+              <div className="theme-form">
+                <label>Fund Title 1</label>
+                <input type="text" name="title" required />
+              </div>
+            </div>
+
+            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+              <div className="theme-form">
+                <label>Fund Title 2</label>
+                <input type="text" name="title" required />
+              </div>
+            </div>
+
+            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+              <div className="theme-form">
+                <label>Fund Title 3</label>
+                <input type="text" name="title" required />
+              </div>
+            </div>
+
+            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+              <div className="theme-form">
+                <label>Fund Subtitle 1</label>
+                <input type="text" name="title" />
+              </div>
+            </div>
+
+            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+              <div className="theme-form">
+                <label>Fund Subtitle 2</label>
+                <input type="text" name="title" />
+              </div>
+            </div>
+
+            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+              <div className="theme-form">
+                <label>Fund Subtitle 3</label>
+                <input type="text" name="title" />
               </div>
             </div>
 
@@ -171,4 +209,4 @@ const AddFactsheetPresentation = () => {
   );
 };
 
-export default AddFactsheetPresentation;
+export default AddFundNumber;
