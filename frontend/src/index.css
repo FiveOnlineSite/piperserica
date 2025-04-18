@@ -2867,13 +2867,13 @@ form .form-label span {
 
   .home-banner-content .section-title {
     margin-bottom: 10%;
-    font-size: 15px;
-    line-height: 25px;
+    font-size: 20px;
+    line-height: 30px;
   }
 
   .content-div h2 {
-    font-size: 5px;
-    line-height: 15px;
+    font-size: 15px;
+    line-height: 25px;
   }
 
   .home-banner-content {
@@ -2881,7 +2881,7 @@ form .form-label span {
   }
 
   .banner-contents .content-div {
-    height: 40px;
+    height: 50px;
   }
 
   .content-div-title i {
@@ -2892,8 +2892,8 @@ form .form-label span {
 @media screen and (max-width: 380px) {
   .home-banner-content .section-title {
     margin-bottom: 10%;
-    font-size: 15px;
-    line-height: 25px;
+    font-size: 12px;
+    line-height: 22px;
   }
 
   .im-a-content-div {
