@@ -2896,8 +2896,8 @@ form .form-label span {
 
 @media screen and (max-width: 340px) {
   .home-banner-content .section-title {
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 15px;
+    line-height: 25px;
   }
 }
 
