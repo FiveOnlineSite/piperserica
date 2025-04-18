@@ -2883,11 +2883,11 @@ form .form-label span {
   }
 
   .home-banner-content {
-    bottom: 3%;
+    bottom: 0%;
   }
 
   .banner-contents .content-div {
-    height: 80px;
+    height: 60px;
   }
 
   /* .investor-banner-content,
