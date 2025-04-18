@@ -2869,8 +2869,6 @@ form .form-label span {
 @media screen and (max-width: 380px) {
   .home-banner-content .section-title {
     margin-bottom: 10%;
-    font-size: 20px;
-    line-height: 30px;
   }
 
   .im-a-content-div {
@@ -2883,7 +2881,7 @@ form .form-label span {
   }
 
   .home-banner-content {
-    bottom: 0%;
+    bottom: 3%;
   }
 
   .banner-contents .content-div {
@@ -2894,6 +2892,13 @@ form .form-label span {
   .banner-content-div {
     top: 15%;
   } */
+}
+
+@media screen and (max-width: 340px) {
+  .home-banner-content .section-title {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 @import url(./admin.css);
