@@ -198,7 +198,7 @@ const About = () => {
         <div className="row">
           <div className="banner-img-div">
             <video
-              src={`${process.env.PUBLIC_URL}/videos/AboutPageVideo.mp4`}
+              src={`${process.env.PUBLIC_URL}/videos/AboutPageVideo 2.mp4`}
               muted
               autoPlay
               loop

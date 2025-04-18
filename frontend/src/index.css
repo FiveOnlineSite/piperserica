@@ -2864,6 +2864,29 @@ form .form-label span {
   .im-a-content-div {
     width: 28%;
   }
+
+  .home-banner-content .section-title {
+    margin-bottom: 10%;
+    font-size: 15px;
+    line-height: 25px;
+  }
+
+  .content-div h2 {
+    font-size: 5px;
+    line-height: 15px;
+  }
+
+  .home-banner-content {
+    bottom: 3%;
+  }
+
+  .banner-contents .content-div {
+    height: 40px;
+  }
+
+  .content-div-title i {
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 380px) {
