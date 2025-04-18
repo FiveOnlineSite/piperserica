@@ -2876,8 +2876,8 @@ form .form-label span {
   }
 
   .content-div h2 {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 22px;
   }
 
   .home-banner-content {
@@ -2885,7 +2885,11 @@ form .form-label span {
   }
 
   .banner-contents .content-div {
-    height: 60px;
+    height: 55px;
+  }
+
+  .content-div-title i {
+    font-size: 12px;
   }
 
   /* .investor-banner-content,
