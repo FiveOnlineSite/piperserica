@@ -74,7 +74,7 @@ const AdminSidebar = () => {
           </li>
 
           <li>
-            <NavLink to="/admin/password" title="Passwords">
+            <NavLink to="/admin/news" title="Passwords">
               <span className="las la-lock"></span> <span>News & More</span>
             </NavLink>
           </li>

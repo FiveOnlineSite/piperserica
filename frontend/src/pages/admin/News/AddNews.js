@@ -3,7 +3,7 @@ import AdminLayout from "../../../components/AdminLayout";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const AddFundCompanyPortfolio = () => {
+const AddNews = () => {
   const [selectedService, setSelectedService] = useState("");
   const [selectedGallery, setSelectedGallery] = useState("");
   const [galleryNames, setGalleryNames] = useState([]);
@@ -93,14 +93,14 @@ const AddFundCompanyPortfolio = () => {
   return (
     <AdminLayout>
       <div className="theme-form-header">
-        <h2>Add Company</h2>
+        <h2>Add News</h2>
       </div>
       <div className="form-white-bg">
         <form onSubmit={handleSubmit}>
           <div className="row">
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="theme-form">
-                <label>Company Logo</label>
+                <label>Thumbnail</label>
                 <input
                   type="file"
                   name="media"
@@ -120,7 +120,23 @@ const AddFundCompanyPortfolio = () => {
 
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="theme-form">
-                <label>Industry</label>
+                <label>Title</label>
+                <input type="text" name="title" required />
+              </div>
+            </div>
+
+            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+              <div className="theme-form">
+                <label>Date</label>
+
+                <input type="date" name="title" required />
+              </div>
+            </div>
+
+            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+              <div className="theme-form">
+                <label>News Category</label>
+
                 <select
                   value={selectedService}
                   required
@@ -146,25 +162,9 @@ const AddFundCompanyPortfolio = () => {
 
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="theme-form">
-                <label>Company Name</label>
+                <label>URL</label>
 
                 <input type="text" name="title" required />
-              </div>
-            </div>
-
-            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
-              <div className="theme-form">
-                <label>Website Link</label>
-
-                <input type="text" name="title" required />
-              </div>
-            </div>
-
-            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
-              <div className="theme-form">
-                <label>Description</label>
-
-                <textarea rows="3" name="title" required></textarea>
               </div>
             </div>
 
@@ -186,4 +186,4 @@ const AddFundCompanyPortfolio = () => {
   );
 };
 
-export default AddFundCompanyPortfolio;
+export default AddNews;

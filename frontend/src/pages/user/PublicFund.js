@@ -105,7 +105,7 @@ const PublicFund = () => {
               <h6 className="section-subtitle mb-4">
                 Investment Gateway to India's High-Growth Market
               </h6>
-              <p className="para">
+              <p className="para justify-para">
                 Piper Serica Numero Uno India Fund offers global investors a
                 sophisticated platform to India's vibrant equity landscape
                 through an offshore fund structure. The fund maintains alignment
@@ -169,7 +169,7 @@ const PublicFund = () => {
                 <div>
                   <span></span>
                 </div>
-                <p className="para">
+                <p className="para justify-para">
                   <strong>Multi-Cap Investment Approach: </strong> Our multi-cap
                   strategy targets quality businesses across market
                   capitalizations, balancing established large-caps with
@@ -182,7 +182,7 @@ const PublicFund = () => {
                 <div>
                   <span></span>
                 </div>
-                <p className="para">
+                <p className="para justify-para">
                   <strong>Valuation Discipline: </strong> We employ a rigorous
                   valuation methodology identifying fundamentally sound
                   enterprises at attractive valuations relative to intrinsic
@@ -195,7 +195,7 @@ const PublicFund = () => {
                 <div>
                   <span></span>
                 </div>
-                <p className="para">
+                <p className="para justify-para">
                   <strong>Proprietary Research Process: </strong> Our investment
                   decisions are supported by comprehensive research including
                   management engagement, financial analysis focused on cash flow
@@ -207,7 +207,7 @@ const PublicFund = () => {
                 <div>
                   <span></span>
                 </div>
-                <p className="para">
+                <p className="para justify-para">
                   <strong>Risk Management Framework: </strong> Our disciplined
                   risk controls include 6% maximum per security allocation, 25%
                   sector concentration limits, seven-day liquidity requirements,
@@ -218,7 +218,7 @@ const PublicFund = () => {
                 <div>
                   <span></span>
                 </div>
-                <p className="para">
+                <p className="para justify-para">
                   <strong>Dynamic Portfolio Rebalancing: </strong>We implement
                   systematic rebalancing based on valuation parameters and
                   evolving risk profiles, enabling tactical adjustments while
@@ -303,7 +303,7 @@ const PublicFund = () => {
                     long-term wealth creation for investors.
                   </p>
                 </div> */}
-                <p className="para">
+                <p className="para justify-para">
                   We focus on generating consistent returns by capitalizing on
                   India's structural growth opportunities while maintaining
                   prudent risk parameters. This balanced approach provides

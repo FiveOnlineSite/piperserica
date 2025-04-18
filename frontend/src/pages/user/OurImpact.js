@@ -51,7 +51,7 @@ const OurImpact = () => {
               </div>
             </div>
             <div className="col-lg-8">
-              <p className="para">
+              <p className="para justify-para">
                 At Piper Serica, we are deeply committed to responsible
                 investing across both listed companies and startups. We
                 integrate Environmental, Social, and Governance (ESG) criteria
@@ -59,7 +59,7 @@ const OurImpact = () => {
                 support align with sustainable and ethical practices.
               </p>
 
-              <p className="para">
+              <p className="para justify-para">
                 Our approach goes beyond financial growth—we actively seek
                 innovative companies that drive positive social and
                 environmental impact while delivering strong returns. We engage
@@ -194,7 +194,7 @@ const OurImpact = () => {
               </div>
             </div>
             <div className="col-lg-8">
-              <p className="para">
+              <p className="para justify-para">
                 At Piper Serica Advisors, we believe in investing with
                 purpose—driving sustainable outcomes for our investors while
                 fostering positive societal impact. Our approach extends beyond
@@ -202,7 +202,7 @@ const OurImpact = () => {
                 listed companies and startups that champion innovation,
                 sustainability, and inclusive economic development.
               </p>
-              <p className="para mb-5">
+              <p className="para mb-5 justify-para">
                 By backing businesses that uphold strong governance,
                 environmental responsibility, and social impact, we empower
                 entrepreneurs to scale their ventures while contributing to
@@ -417,7 +417,7 @@ const OurImpact = () => {
                 </div>
               </div> */}
 
-              <p className="para">
+              <p className="para justify-para">
                 At Piper Serica Advisors, our investment philosophy centers on
                 creating sustainable value through companies that drive positive
                 societal change. Our approach delivers measurable impact across
@@ -462,7 +462,7 @@ const OurImpact = () => {
                       of sustainable spaces.
                     </h6> */}
                     <div className="commitment-content">
-                      <p className="para small-para">
+                      <p className="para small-para justify-para">
                         Our portfolio companies employed 277,000+ individuals in
                         FY24, generating significant economic value through job
                         creation, skill development, and improved livelihoods
@@ -487,7 +487,7 @@ const OurImpact = () => {
                     <div className="commitment-content">
                       <div className="features-content-div">
                         <div className="single-feature">
-                          <p className="para small-para">
+                          <p className="para small-para justify-para">
                             {/* We have a very collaborative approach to investing and
                             prefer to work with multiple co-investors bringing different
                             value to the startup. */}
@@ -547,7 +547,7 @@ const OurImpact = () => {
                       investments
                     </h6> */}
                     <div className="commitment-content">
-                      <p className="para small-para">
+                      <p className="para small-para justify-para">
                         Piper Serica Angel Fund evaluates investments through a
                         comprehensive framework that measures both financial
                         returns and societal value. The fund screens potential

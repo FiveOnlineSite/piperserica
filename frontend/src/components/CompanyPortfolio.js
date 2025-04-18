@@ -218,7 +218,7 @@ const CompanyPortfolio = () => {
     {
       id: 24,
       src: "/images/industries/Contineu AI.jpg",
-      label: "FINTECH",
+      label: "AI & SAAS",
       name: "ContineuAI",
       description:
         "ContineuAI has developed a next-generation solution designed specifically for the construction industry, with artificial intelligence at its core using Computer Vision and Large Language Models (LLMs) to automate data collection, consolidation, and analysis. ",
@@ -227,8 +227,8 @@ const CompanyPortfolio = () => {
     {
       id: 25,
       src: "/images/industries/tws.jpg",
-      label: "Thrust Work Dynetics",
-      name: "ContineuAI",
+      label: "SPACETECH",
+      name: "Thrust Work Dynetics",
       description:
         "Thrust work Dynetics designs and develops innovative propulsion systems for commercialization, with their initial focus on a reusable 3D printed 20 kN Kerolox rocket engine under Project One. Alongside delivering complete rocket engines, they provide critical propulsion subsystems to the industry. The company aims to fill the gap in propulsion technology R&D, including high-thrust, high-Isp engines and microcombustors.",
       link: "https://www.thrustworksdynetics.in/",
@@ -236,7 +236,7 @@ const CompanyPortfolio = () => {
     {
       id: 26,
       src: "/images/industries/inbound.png",
-      label: "Inbound Aerospace",
+      label: "SPACETECH",
       name: "ContineuAI",
       description:
         "Inbound Aerospace is focused on providing a spacecraft platform that utilises the unique microgravity environment to assist the Pharmaceutical & Semiconductor industry. Their recoverable spacecraft platform enables customers to conduct in-orbit technology demonstrations and microgravity experiments, accelerating product development timelines.",
@@ -367,7 +367,9 @@ const CompanyPortfolio = () => {
               />
             </div>
 
-            <p className="para small-para">{selectedImage.description}</p>
+            <p className="para small-para justify-para">
+              {selectedImage.description}
+            </p>
             <NavLink
               className="company-link"
               to={selectedImage.link}

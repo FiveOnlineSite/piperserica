@@ -108,14 +108,14 @@ const LeaderPortfolio = () => {
               <h6 className="section-subtitle mb-4">
                 About Piper Serica Leader Portfolio
               </h6>
-              <p className="para">
+              <p className="para justify-para">
                 A multi-cap portfolio capturing India's structural growth
                 opportunities through on-ground, fundamental research across
                 market capitalizations. Our approach synthesizes growth and
                 value principles, utilizing proprietary frameworks to identify
                 quality businesses at rational valuations.
               </p>
-              <p className="para">
+              <p className="para justify-para">
                 Our investment framework integrates comprehensive financial
                 analysis, management quality assessment, and competitive
                 positioning evaluation. The portfolio employs sophisticated risk
@@ -123,7 +123,7 @@ const LeaderPortfolio = () => {
                 parameters, preserving capital while positioning for
                 appreciation.
               </p>
-              <p className="para">
+              <p className="para justify-para">
                 Designed for sophisticated investors seeking superior
                 risk-adjusted returns across market cycles through disciplined
                 execution and consistent alpha generation.
@@ -203,7 +203,7 @@ const LeaderPortfolio = () => {
                 <div>
                   <span></span>
                 </div>
-                <p className="para">
+                <p className="para justify-para">
                   <strong>Multi-Cap Investment Approach: </strong> Our multi-cap
                   strategy targets quality businesses across market
                   capitalizations, balancing established large-caps with
@@ -216,7 +216,7 @@ const LeaderPortfolio = () => {
                 <div>
                   <span></span>
                 </div>
-                <p className="para">
+                <p className="para justify-para">
                   <strong>Valuation Discipline: </strong> We employ a rigorous
                   valuation methodology identifying fundamentally sound
                   enterprises at attractive valuations relative to intrinsic
@@ -229,7 +229,7 @@ const LeaderPortfolio = () => {
                 <div>
                   <span></span>
                 </div>
-                <p className="para">
+                <p className="para justify-para">
                   <strong>Proprietary Research Process: </strong> Our investment
                   decisions are supported by comprehensive research including
                   management engagement, financial analysis focused on cash flow
@@ -241,7 +241,7 @@ const LeaderPortfolio = () => {
                 <div>
                   <span></span>
                 </div>
-                <p className="para">
+                <p className="para justify-para">
                   <strong>Risk Management Framework: </strong> Our disciplined
                   risk controls include 6% maximum per security allocation, 25%
                   sector concentration limits, seven-day liquidity requirements,
@@ -252,7 +252,7 @@ const LeaderPortfolio = () => {
                 <div>
                   <span></span>
                 </div>
-                <p className="para">
+                <p className="para justify-para">
                   <strong>Dynamic Portfolio Rebalancing: </strong> We implement
                   systematic rebalancing based on valuation parameters and
                   evolving risk profiles, enabling tactical adjustments while
@@ -278,7 +278,7 @@ const LeaderPortfolio = () => {
             </div>
             <div className="col-lg-7 mt-lg-0 mt-4">
               <div className="features-content-div">
-                <p className="para">
+                <p className="para justify-para">
                   We focus on generating consistent returns by capitalizing on
                   India's structural growth opportunities while maintaining
                   prudent risk parameters. This balanced approach provides

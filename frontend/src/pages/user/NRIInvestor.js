@@ -62,7 +62,7 @@ const NRIInvestor = () => {
 
   const offeringsItems = [
     {
-      strategy_title: "Public Market",
+      strategy_title: "Public Market Funds",
       funds_list: [
         //  Add a key for the array
         {
@@ -130,10 +130,10 @@ const NRIInvestor = () => {
                         for.{" "}
                       </p> */}
 
-                <NavLink to="#offerings" className="banner-btn">
+                {/* <NavLink to="#offerings" className="banner-btn">
                   Read More
                   <i className="fa-solid fa-arrow-right"></i>
-                </NavLink>
+                </NavLink> */}
               </div>
             </div>
           </div>
@@ -222,107 +222,98 @@ const NRIInvestor = () => {
             <div className="row">
               <div className="col-lg-4">
                 <div className="why-us-div">
-                  <NavLink to="/">
-                    <div className="why-us-content">
-                      <h2 className="banner-title why-content-main-title">
-                        Research Process
-                      </h2>
-                      <h6 className="read-more">
-                        Read More <i className="fa-solid fa-plus"></i>
-                      </h6>
-                    </div>
+                  <div className="why-us-content">
+                    <h2 className="banner-title why-content-main-title">
+                      Research Process
+                    </h2>
+                    <h6 className="read-more">
+                      Read More <i className="fa-solid fa-plus"></i>
+                    </h6>
+                  </div>
 
-                    <div className="why-content-para">
-                      <h6 className="section-subtitle why-content-subtitle">
-                        Why us
-                      </h6>
+                  <div className="why-content-para">
+                    <h6 className="section-subtitle why-content-subtitle">
+                      Why us
+                    </h6>
 
-                      <h4 className="why-content-title">Research Process</h4>
-                      <p className="para why-para">
-                        We have a very strong on-ground research presence, which
-                        is essential for success in an Emerging Market like
-                        India. Our research team understands local nuances while
-                        engaging with investee company management and their
-                        stakeholders. We have built deep and meaningful networks
-                        across industries that allow us to assess investment
-                        opportunities in depth. This enables us to understand
-                        long-term trends as we build our investment thesis. We
-                        have built a blue-chip reputation as an asset manager
-                        over three decades which provides us with market access
-                        that is not available to new fund managers. Our fund
-                        management team has a combined experience of almost 100
-                        years, making it one of the most experienced teams in
-                        the country.
-                      </p>
-                    </div>
-                  </NavLink>
+                    <h4 className="why-content-title">Research Process</h4>
+                    <p className="para why-para">
+                      We have a very strong on-ground research presence, which
+                      is essential for success in an Emerging Market like India.
+                      Our research team understands local nuances while engaging
+                      with investee company management and their stakeholders.
+                      We have built deep and meaningful networks across
+                      industries that allow us to assess investment
+                      opportunities in depth. This enables us to understand
+                      long-term trends as we build our investment thesis. We
+                      have built a blue-chip reputation as an asset manager over
+                      three decades which provides us with market access that is
+                      not available to new fund managers. Our fund management
+                      team has a combined experience of almost 100 years, making
+                      it one of the most experienced teams in the country.
+                    </p>
+                  </div>
                 </div>
               </div>
               <div className="col-lg-4">
                 <div className="why-us-div ">
-                  <NavLink to="/">
-                    <div className="why-us-content">
-                      <h2 className="banner-title why-content-main-title">
-                        Focus on risk-adjusted returns
-                      </h2>
-                      <h6 className="read-more">
-                        Read More <i className="fa-solid fa-plus"></i>
-                      </h6>
-                    </div>
+                  <div className="why-us-content">
+                    <h2 className="banner-title why-content-main-title">
+                      Focus on risk-adjusted returns
+                    </h2>
+                    <h6 className="read-more">
+                      Read More <i className="fa-solid fa-plus"></i>
+                    </h6>
+                  </div>
 
-                    <div className="why-content-para">
-                      <h6 className="section-subtitle why-content-subtitle">
-                        Why us
-                      </h6>
+                  <div className="why-content-para">
+                    <h6 className="section-subtitle why-content-subtitle">
+                      Why us
+                    </h6>
 
-                      <h4 className="why-content-title">
-                        Focus on risk-adjusted returns
-                      </h4>
-                      <p className="para why-para">
-                        We focus not only on returns but also on the systemic
-                        and non-systemic risks while building our model
-                        portfolio. We have built strict guardrails of risk
-                        metrics that have helped us deliver steady, long-term
-                        returns. Our portfolio management process is devoid of
-                        human biases due to highly objective decision-making
-                        processes that we have developed over three decades.
-                      </p>
-                    </div>
-                  </NavLink>
+                    <h4 className="why-content-title">
+                      Focus on risk-adjusted returns
+                    </h4>
+                    <p className="para why-para">
+                      We focus not only on returns but also on the systemic and
+                      non-systemic risks while building our model portfolio. We
+                      have built strict guardrails of risk metrics that have
+                      helped us deliver steady, long-term returns. Our portfolio
+                      management process is devoid of human biases due to highly
+                      objective decision-making processes that we have developed
+                      over three decades.
+                    </p>
+                  </div>
                 </div>
               </div>
 
               <div className="col-lg-4">
                 <div className="why-us-div">
-                  <NavLink to="/">
-                    <div className="why-us-content">
-                      <h2 className="banner-title why-content-main-title">
-                        Investor Friendliness
-                      </h2>
-                      <h6 className="read-more">
-                        Read More <i className="fa-solid fa-plus"></i>
-                      </h6>
-                    </div>
+                  <div className="why-us-content">
+                    <h2 className="banner-title why-content-main-title">
+                      Investor Friendliness
+                    </h2>
+                    <h6 className="read-more">
+                      Read More <i className="fa-solid fa-plus"></i>
+                    </h6>
+                  </div>
 
-                    <div className="why-content-para">
-                      <h6 className="section-subtitle why-content-subtitle">
-                        Why us
-                      </h6>
+                  <div className="why-content-para">
+                    <h6 className="section-subtitle why-content-subtitle">
+                      Why us
+                    </h6>
 
-                      <h4 className="why-content-title">
-                        Investor Friendliness
-                      </h4>
-                      <p className="para why-para">
-                        We love to communicate with our investors on a regular
-                        basis. While regulatory compliance requires us to send
-                        standard portfolio and valuation reports to our
-                        investors, we go beyond that. Through monthly,
-                        quarterly, and annual investor letters, as well as
-                        regular webinars we share our portfolio strategy and
-                        market outlook on a regular basis with our investors.
-                      </p>
-                    </div>
-                  </NavLink>
+                    <h4 className="why-content-title">Investor Friendliness</h4>
+                    <p className="para why-para">
+                      We love to communicate with our investors on a regular
+                      basis. While regulatory compliance requires us to send
+                      standard portfolio and valuation reports to our investors,
+                      we go beyond that. Through monthly, quarterly, and annual
+                      investor letters, as well as regular webinars we share our
+                      portfolio strategy and market outlook on a regular basis
+                      with our investors.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -331,77 +322,12 @@ const NRIInvestor = () => {
             <div className="accordion" id="accordionExample">
               {/* Accordion Item 1 */}
               <div
-                className={`accordion-item ${
-                  openAccordion === 1 ? "bordered" : ""
-                }`} // Conditionally apply the 'bordered' class
-              >
-                <h2
-                  className={`accordion-header ${
-                    openAccordion === 1 ? "d-none" : ""
-                  }`}
-                >
-                  Research Process
-                </h2>
-                <div
-                  id="collapseTwo"
-                  className={`accordion-collapse collapse ${
-                    openAccordion === 1 ? "show" : ""
-                  }`}
-                  data-bs-parent="#accordionExample"
-                >
-                  <div className="accordion-body">
-                    <div className="why-content-para">
-                      <h6 className="section-subtitle why-content-subtitle">
-                        Why us
-                      </h6>
-                      <h4 className="why-content-title">Research Process</h4>
-                      <p className="para why-para">
-                        We have a very strong on-ground research presence, which
-                        is essential for success in an Emerging Market like
-                        India. Our research team understands local nuances while
-                        engaging with investee company management and their
-                        stakeholders. We have built deep and meaningful networks
-                        across industries that allow us to assess investment
-                        opportunities in depth. This enables us to understand
-                        long-term trends as we build our investment thesis. We
-                        have built a blue-chip reputation as an asset manager
-                        over three decades which provides us with market access
-                        that is not available to new fund managers. Our fund
-                        management team has a combined experience of almost 100
-                        years, making it one of the most experienced teams in
-                        the country.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <button
-                  className={`accordion-button ${
-                    openAccordion === 1 ? "" : "collapsed"
-                  }`}
-                  type="button"
-                  onClick={() => toggleAccordion(1)}
-                  aria-expanded={openAccordion === 1 ? "true" : "false"}
-                  aria-controls="collapseTwo"
-                >
-                  {openAccordion === 1 ? "Read Less" : "Read More"}
-                </button>
-              </div>
-
-              {/* Accordion Item 2 */}
-              <div
-                className={`accordion-item ${
+                className={`accordion-item why-accordion-item ${
                   openAccordion === 0 ? "bordered" : ""
                 }`} // Conditionally apply the 'bordered' class
               >
-                <h2
-                  className={`accordion-header ${
-                    openAccordion === 0 ? "d-none" : ""
-                  }`}
-                >
-                  Focus on risk-adjusted returns
-                </h2>
                 <div
-                  id="collapseOne"
+                  id="collapseTwo"
                   className={`accordion-collapse collapse ${
                     openAccordion === 0 ? "show" : ""
                   }`}
@@ -412,6 +338,64 @@ const NRIInvestor = () => {
                       <h6 className="section-subtitle why-content-subtitle">
                         Why us
                       </h6>
+                      <h4 className="why-content-title">Research Process</h4>
+                      <p className="para why-para">
+                        We have a very strong on-ground research presence, which
+                        is essential for success in an Emerging Market like
+                        India. Our research team understands local nuances while
+                        engaging with investee company management and their
+                        stakeholders. We have built deep and meaningful networks
+                        across industries that allow us to assess investment
+                        opportunities in depth. This enables us to understand
+                        long-term trends as we build our investment thesis. We
+                        have built a blue-chip reputation as an asset manager
+                        over three decades which provides us with market access
+                        that is not available to new fund managers. Our fund
+                        management team has a combined experience of almost 100
+                        years, making it one of the most experienced teams in
+                        the country.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  className={`accordion-button why-accordion-button ${
+                    openAccordion === 0 ? "" : "collapsed"
+                  }`}
+                  type="button"
+                  onClick={() => toggleAccordion(0)}
+                  aria-expanded={openAccordion === 0 ? "true" : "false"}
+                  aria-controls="collapseTwo"
+                >
+                  <h2
+                    className={`accordion-header ${
+                      openAccordion === 0 ? "d-none" : ""
+                    }`}
+                  >
+                    Research Process
+                  </h2>
+                  {openAccordion === 0 ? "Read Less" : "Read More"}
+                </button>
+              </div>
+
+              {/* Accordion Item 2 */}
+              <div
+                className={`accordion-item why-accordion-item ${
+                  openAccordion === 1 ? "bordered" : ""
+                }`} // Conditionally apply the 'bordered' class
+              >
+                <div
+                  id="collapseOne"
+                  className={`accordion-collapse collapse ${
+                    openAccordion === 1 ? "show" : ""
+                  }`}
+                  data-bs-parent="#accordionExample"
+                >
+                  <div className="accordion-body">
+                    <div className="why-content-para">
+                      <h6 className="section-subtitle why-content-subtitle">
+                        Why us
+                      </h6>
                       <h4 className="why-content-title">
                         Focus on risk-adjusted returns
                       </h4>
@@ -428,31 +412,32 @@ const NRIInvestor = () => {
                   </div>
                 </div>
                 <button
-                  className={`accordion-button ${
-                    openAccordion === 0 ? "" : "collapsed"
+                  className={`accordion-button why-accordion-button ${
+                    openAccordion === 1 ? "" : "collapsed"
                   }`}
                   type="button"
-                  onClick={() => toggleAccordion(0)}
-                  aria-expanded={openAccordion === 0 ? "true" : "false"}
+                  onClick={() => toggleAccordion(1)}
+                  aria-expanded={openAccordion === 1 ? "true" : "false"}
                   aria-controls="collapseOne"
                 >
-                  {openAccordion === 0 ? "Read Less" : "Read More"}
+                  {" "}
+                  <h2
+                    className={`accordion-header ${
+                      openAccordion === 1 ? "d-none" : ""
+                    }`}
+                  >
+                    Focus on risk-adjusted returns
+                  </h2>
+                  {openAccordion === 1 ? "Read Less" : "Read More"}
                 </button>
               </div>
 
               {/* Accordion Item 3 */}
               <div
-                className={`accordion-item ${
+                className={`accordion-item why-accordion-item ${
                   openAccordion === 2 ? "bordered" : ""
                 }`} // Conditionally apply the 'bordered' class
               >
-                <h2
-                  className={`accordion-header ${
-                    openAccordion === 2 ? "d-none" : ""
-                  }`}
-                >
-                  Investor Friendliness
-                </h2>
                 <div
                   id="collapseThree"
                   className={`accordion-collapse collapse ${
@@ -481,7 +466,7 @@ const NRIInvestor = () => {
                   </div>
                 </div>
                 <button
-                  className={`accordion-button ${
+                  className={`accordion-button why-accordion-button ${
                     openAccordion === 2 ? "" : "collapsed"
                   }`}
                   type="button"
@@ -489,6 +474,13 @@ const NRIInvestor = () => {
                   aria-expanded={openAccordion === 2 ? "true" : "false"}
                   aria-controls="collapseThree"
                 >
+                  <h2
+                    className={`accordion-header ${
+                      openAccordion === 2 ? "d-none" : ""
+                    }`}
+                  >
+                    Investor Friendliness
+                  </h2>
                   {openAccordion === 2 ? "Read Less" : "Read More"}
                 </button>
               </div>

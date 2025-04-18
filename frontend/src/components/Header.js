@@ -738,14 +738,48 @@ const Header = () => {
                   Contact
                 </NavLink>
               </li>
-              <li className="nav-item login-btn">
-                <NavLink
-                  className="nav-link"
-                  to="https://portal.piperserica.vc/"
-                  target="_blank"
+              <li className="nav-item dropdown login-btn">
+                <a
+                  className="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
                 >
                   Login
-                </NavLink>
+                </a>
+                <ul className="dropdown-menu">
+                  <li>
+                    <a
+                      className="dropdown-item"
+                      href="https://faconnect.kotak.com/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      PMS Kotak
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="dropdown-item"
+                      href="https://eclientreporting.nuvamaassetservices.com/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      PMS Nuvama
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      className="dropdown-item"
+                      href="https://portal.piperserica.vc/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Angel Fund
+                    </a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
@@ -934,16 +968,13 @@ const Header = () => {
                       </NavLink>
                     </li> */}
                     <li>
-                      <NavLink
-                        className="dropdown-item"
-                        to="/news-article-and-videos"
-                      >
-                        News Article
+                      <NavLink className="dropdown-item" to="/investor-letters">
+                        Investor Letters
                       </NavLink>
                     </li>
                     <li>
-                      <NavLink className="dropdown-item" to="/videos">
-                        Videos
+                      <NavLink className="dropdown-item" to="/news-and-more">
+                        News & More
                       </NavLink>
                     </li>
                   </ul>
@@ -966,14 +997,48 @@ const Header = () => {
                     Contact
                   </NavLink>
                 </li>
-                <li className="nav-item login-btn">
-                  <NavLink
-                    className="nav-link"
-                    to="https://piperserica.com/"
-                    target="_blank"
+                <li className="nav-item dropdown login-btn">
+                  <a
+                    className="nav-link dropdown-toggle"
+                    href="#"
+                    role="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
                   >
                     Login
-                  </NavLink>
+                  </a>
+                  <ul className="dropdown-menu">
+                    <li>
+                      <a
+                        className="dropdown-item"
+                        href="https://faconnect.kotak.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        PMS Kotak
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="dropdown-item"
+                        href="https://eclientreporting.nuvamaassetservices.com/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        PMS Nuvama
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        className="dropdown-item"
+                        href="https://portal.piperserica.vc/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        Angel Fund
+                      </a>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </div>

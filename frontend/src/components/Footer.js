@@ -12,7 +12,7 @@ const Footer = () => {
     <div className="footer">
       <div className="container">
         <div className="row align-items-center">
-          <div className="col-lg-3 col-md-2 col-12">
+          <div className="col-lg-2 col-md-2 col-12">
             <div className="d-flex flex-column align-items-lg-center align-items-start ps-lg-0 ps-2">
               <NavLink className="navbar-brand" to="/">
                 <img
@@ -24,7 +24,7 @@ const Footer = () => {
               </NavLink>
             </div>
           </div>
-          <div className="col-lg-9 col-md-10 col-12 d-flex justify-content-lg-end justify-content-md-end justify-content-start mt-lg-0 mt-5">
+          <div className="col-lg-10 col-md-10 col-12 d-flex justify-content-lg-end justify-content-md-end justify-content-start mt-lg-0 mt-5">
             <div className="row">
               <div className="footer-links">
                 <ul className="d-lg-flex d-md-flex d-block ps-0">
@@ -34,8 +34,13 @@ const Footer = () => {
                     </NavLink>
                   </li>
                   <li className="nav-item mt-lg-0 mt-md-0 mt-3">
-                    <NavLink className="nav-link" to="/public-market">
-                      Our Services
+                    <NavLink className="nav-link" to="/public-market-funds">
+                      Public Market Funds
+                    </NavLink>
+                  </li>
+                  <li className="nav-item mt-lg-0 mt-md-0 mt-3">
+                    <NavLink className="nav-link" to="/private-market-funds">
+                      Private Market Funds
                     </NavLink>
                   </li>
                   <li className="nav-item mt-lg-0 mt-md-0 mt-3">
@@ -66,7 +71,7 @@ const Footer = () => {
         </div>
 
         <div className="row align-items-lg-center align-items-start">
-          <div className="col-lg-3 d-flex align-items-lg-center justify-content-lg-center">
+          <div className="col-lg-3 d-flex align-items-lg-center justify-content-lg-start">
             <div className="social-icons-div ps-lg-0 ps-2 mt-lg-0 mt-2">
               <NavLink
                 to="https://www.linkedin.com/company/piper-serica-advisors-pvt-ltd/"

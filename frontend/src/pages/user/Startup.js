@@ -109,7 +109,7 @@ const Startup = () => {
 
   const offeringsItems = [
     {
-      strategy_title: "Private Market",
+      strategy_title: "Private Market Funds",
       funds_list: [
         //  Add a key for the array
         {
@@ -173,10 +173,10 @@ const Startup = () => {
                               for.{" "}
                             </p> */}
 
-                <NavLink to="#offerings" className="banner-btn">
+                {/* <NavLink to="#offerings" className="banner-btn">
                   Read More
                   <i className="fa-solid fa-arrow-right"></i>
-                </NavLink>
+                </NavLink> */}
               </div>
             </div>
           </div>
@@ -262,91 +262,83 @@ const Startup = () => {
             <div className="row">
               <div className="col-lg-4">
                 <div className="why-us-div why-us-div-one">
-                  <NavLink to="/">
-                    <div className="why-us-content">
-                      <h2 className="banner-title why-content-main-title">
-                        Value added partners
-                      </h2>
-                      <h6 className="read-more">
-                        Read More <i className="fa-solid fa-plus"></i>
-                      </h6>
-                    </div>
+                  <div className="why-us-content">
+                    <h2 className="banner-title why-content-main-title">
+                      Value added partners
+                    </h2>
+                    <h6 className="read-more">
+                      Read More <i className="fa-solid fa-plus"></i>
+                    </h6>
+                  </div>
 
-                    <div className="why-content-para">
-                      <h6 className="section-subtitle why-content-subtitle">
-                        Why us
-                      </h6>
+                  <div className="why-content-para">
+                    <h6 className="section-subtitle why-content-subtitle">
+                      Why us
+                    </h6>
 
-                      <h4 className="why-content-title">
-                        Value added partners
-                      </h4>
-                      <p className="para why-para">
-                        Our founders see us as value-added partners beyond the
-                        financial capital we bring. We work closely with them to
-                        scale the company by helping build the organization,
-                        acquire customers, and raise further funding.
-                      </p>
-                    </div>
-                  </NavLink>
+                    <h4 className="why-content-title">Value added partners</h4>
+                    <p className="para why-para">
+                      Our founders see us as value-added partners beyond the
+                      financial capital we bring. We work closely with them to
+                      scale the company by helping build the organization,
+                      acquire customers, and raise further funding.
+                    </p>
+                  </div>
                 </div>
               </div>
               <div className="col-lg-4">
                 <div className="why-us-div why-us-div-one">
-                  <NavLink to="/">
-                    <div className="why-us-content">
-                      <h2 className="banner-title why-content-main-title">
-                        Network
-                      </h2>
-                      <h6 className="read-more">
-                        Read More <i className="fa-solid fa-plus"></i>
-                      </h6>
-                    </div>
+                  <div className="why-us-content">
+                    <h2 className="banner-title why-content-main-title">
+                      Network
+                    </h2>
+                    <h6 className="read-more">
+                      Read More <i className="fa-solid fa-plus"></i>
+                    </h6>
+                  </div>
 
-                    <div className="why-content-para">
-                      <h6 className="section-subtitle why-content-subtitle">
-                        Why us
-                      </h6>
+                  <div className="why-content-para">
+                    <h6 className="section-subtitle why-content-subtitle">
+                      Why us
+                    </h6>
 
-                      <h4 className="why-content-title">Network</h4>
-                      <p className="para why-para">
-                        We believe the greatest value we bring to founders is
-                        our extensive network, which spans multiple industries
-                        and skill sets. We have a highly diverse set of LPs, and
-                        through our public market funds, we are connected with
-                        some of the largest companies in the country.
-                      </p>
-                    </div>
-                  </NavLink>
+                    <h4 className="why-content-title">Network</h4>
+                    <p className="para why-para">
+                      We believe the greatest value we bring to founders is our
+                      extensive network, which spans multiple industries and
+                      skill sets. We have a highly diverse set of LPs, and
+                      through our public market funds, we are connected with
+                      some of the largest companies in the country.
+                    </p>
+                  </div>
                 </div>
               </div>
               <div className="col-lg-4">
                 <div className="why-us-div why-us-div-one">
-                  <NavLink to="/">
-                    <div className="why-us-content">
-                      <h2 className="banner-title why-content-main-title">
-                        Founder first approach
-                      </h2>
-                      <h6 className="read-more">
-                        Read More <i className="fa-solid fa-plus"></i>
-                      </h6>
-                    </div>
+                  <div className="why-us-content">
+                    <h2 className="banner-title why-content-main-title">
+                      Founder first approach
+                    </h2>
+                    <h6 className="read-more">
+                      Read More <i className="fa-solid fa-plus"></i>
+                    </h6>
+                  </div>
 
-                    <div className="why-content-para">
-                      <h6 className="section-subtitle why-content-subtitle">
-                        Why us
-                      </h6>
+                  <div className="why-content-para">
+                    <h6 className="section-subtitle why-content-subtitle">
+                      Why us
+                    </h6>
 
-                      <h4 className="why-content-title">
-                        Founder first approach
-                      </h4>
-                      <p className="para why-para">
-                        We love getting in the trenches with founders and
-                        helping them navigate tough times. Every startup faces
-                        significant challenges, and our founders always find us
-                        by their side as they work through them.
-                      </p>
-                    </div>
-                  </NavLink>
+                    <h4 className="why-content-title">
+                      Founder first approach
+                    </h4>
+                    <p className="para why-para">
+                      We love getting in the trenches with founders and helping
+                      them navigate tough times. Every startup faces significant
+                      challenges, and our founders always find us by their side
+                      as they work through them.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -355,17 +347,10 @@ const Startup = () => {
             <div className="accordion" id="accordionExample">
               {/* Accordion Item 1 */}
               <div
-                className={`accordion-item ${
+                className={`accordion-item why-accordion-item ${
                   openAccordion === 0 ? "bordered" : ""
                 }`} // Conditionally apply the 'bordered' class
               >
-                <h2
-                  className={`accordion-header ${
-                    openAccordion === 0 ? "d-none" : ""
-                  }`}
-                >
-                  Value added partners:
-                </h2>
                 <div
                   id="collapseOne"
                   className={`accordion-collapse collapse ${
@@ -379,7 +364,7 @@ const Startup = () => {
                         Why us
                       </h6>
                       <h4 className="why-content-title">
-                        Value added partners:
+                        Value added partners
                       </h4>
                       <p className="para why-para">
                         Our founders see us as value-added partners beyond the
@@ -391,7 +376,7 @@ const Startup = () => {
                   </div>
                 </div>
                 <button
-                  className={`accordion-button ${
+                  className={`accordion-button why-accordion-button ${
                     openAccordion === 0 ? "" : "collapsed"
                   }`}
                   type="button"
@@ -399,23 +384,24 @@ const Startup = () => {
                   aria-expanded={openAccordion === 0 ? "true" : "false"}
                   aria-controls="collapseOne"
                 >
+                  {" "}
+                  <h2
+                    className={`accordion-header ${
+                      openAccordion === 0 ? "d-none" : ""
+                    }`}
+                  >
+                    Value added partners
+                  </h2>
                   {openAccordion === 0 ? "Read Less" : "Read More"}
                 </button>
               </div>
 
               {/* Accordion Item 2 */}
               <div
-                className={`accordion-item ${
+                className={`accordion-item why-accordion-item ${
                   openAccordion === 1 ? "bordered" : ""
                 }`} // Conditionally apply the 'bordered' class
               >
-                <h2
-                  className={`accordion-header ${
-                    openAccordion === 1 ? "d-none" : ""
-                  }`}
-                >
-                  Network:
-                </h2>
                 <div
                   id="collapseTwo"
                   className={`accordion-collapse collapse ${
@@ -428,7 +414,7 @@ const Startup = () => {
                       <h6 className="section-subtitle why-content-subtitle">
                         Why us
                       </h6>
-                      <h4 className="why-content-title">Network:</h4>
+                      <h4 className="why-content-title">Network</h4>
                       <p className="para why-para">
                         We believe the greatest value we bring to founders is
                         our extensive network, which spans multiple industries
@@ -440,7 +426,7 @@ const Startup = () => {
                   </div>
                 </div>
                 <button
-                  className={`accordion-button ${
+                  className={`accordion-button why-accordion-button ${
                     openAccordion === 1 ? "" : "collapsed"
                   }`}
                   type="button"
@@ -448,23 +434,24 @@ const Startup = () => {
                   aria-expanded={openAccordion === 1 ? "true" : "false"}
                   aria-controls="collapseTwo"
                 >
+                  {" "}
+                  <h2
+                    className={`accordion-header ${
+                      openAccordion === 1 ? "d-none" : ""
+                    }`}
+                  >
+                    Network
+                  </h2>
                   {openAccordion === 1 ? "Read Less" : "Read More"}
                 </button>
               </div>
 
               {/* Accordion Item 3 */}
               <div
-                className={`accordion-item ${
+                className={`accordion-item why-accordion-item ${
                   openAccordion === 2 ? "bordered" : ""
                 }`} // Conditionally apply the 'bordered' class
               >
-                <h2
-                  className={`accordion-header ${
-                    openAccordion === 2 ? "d-none" : ""
-                  }`}
-                >
-                  Founder first approach:
-                </h2>
                 <div
                   id="collapseThree"
                   className={`accordion-collapse collapse ${
@@ -478,7 +465,7 @@ const Startup = () => {
                         Why us
                       </h6>
                       <h4 className="why-content-title">
-                        Founder first approach:
+                        Founder first approach
                       </h4>
                       <p className="para why-para">
                         We love getting in the trenches with founders and
@@ -490,7 +477,7 @@ const Startup = () => {
                   </div>
                 </div>
                 <button
-                  className={`accordion-button ${
+                  className={`accordion-button why-accordion-button ${
                     openAccordion === 2 ? "" : "collapsed"
                   }`}
                   type="button"
@@ -498,6 +485,14 @@ const Startup = () => {
                   aria-expanded={openAccordion === 2 ? "true" : "false"}
                   aria-controls="collapseThree"
                 >
+                  {" "}
+                  <h2
+                    className={`accordion-header ${
+                      openAccordion === 2 ? "d-none" : ""
+                    }`}
+                  >
+                    Founder first approach
+                  </h2>
                   {openAccordion === 2 ? "Read Less" : "Read More"}
                 </button>
               </div>

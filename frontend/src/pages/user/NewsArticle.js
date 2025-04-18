@@ -104,7 +104,7 @@ const NewsArticle = () => {
       content_type: "Angel Fund",
       news_title:
         "EV leasing firm Alt Mobility raises $6 million to scale up operations",
-      date: "April 02, 2025",
+      date: "January 18, 2024",
       link: "https://www.business-standard.com/industry/news/ev-leasing-firm-alt-mobility-raises-6-million-to-scale-up-operations-124011800160_1.html",
     },
     {
@@ -158,7 +158,7 @@ const NewsArticle = () => {
       content_type: "Angel Fund",
       news_title:
         "Rupeeflo raised $1 million in pre-seed round led by Piper Serica Angel Fund",
-      date: "January 30, 2025",
+      date: "February 10, 2025",
       link: "https://economictimes.indiatimes.com/tech/funding/rupeeflo-raised-1-million-in-pre-seed-round-led-by-piper-serica-angel-fund/articleshow/118119714.cms",
     },
     {

@@ -31,6 +31,12 @@ import FundNumber from "./pages/admin/FundNumber/FundNumber";
 import AddFundNumber from "./pages/admin/FundNumber/AddFundNumber";
 import EditFundNumber from "./pages/admin/FundNumber/EditFundNumber";
 import FundCompanyPortfolio from "./pages/admin/FundCompanyPortfolio/FundCompanyPortfolio";
+import SvgComponent from "./pages/user/svgcomponent";
+import AddFundCompanyPortfolio from "./pages/admin/FundCompanyPortfolio/AddFundCompanyPortfolio";
+import EditFundCompanyPortfolio from "./pages/admin/FundCompanyPortfolio/EditFundCompanyPortfolio";
+import News from "./pages/admin/News/News";
+import AddNews from "./pages/admin/News/AddNews";
+import EditNews from "./pages/admin/News/EditNews";
 
 function App() {
   return (
@@ -74,6 +80,8 @@ function App() {
           element={<Funds />}
         ></Route>
 
+        <Route path="/svg" element={<SvgComponent />} />
+
         <Route path="/login" element={<Login />}></Route>
         <Route path="/admin" element={<AdminRoutes />}>
           <Route path="dashboard" element={<DashBoard />} />
@@ -95,8 +103,12 @@ function App() {
           <Route path="edit/fund-number" element={<EditFundNumber />} />
 
           <Route path="company" element={<FundCompanyPortfolio />} />
-          <Route path="add/company" element={<AddFundNumber />} />
-          <Route path="edit/company" element={<EditFundNumber />} />
+          <Route path="add/company" element={<AddFundCompanyPortfolio />} />
+          <Route path="edit/company" element={<EditFundCompanyPortfolio />} />
+
+          <Route path="news" element={<News />} />
+          <Route path="add/news" element={<AddNews />} />
+          <Route path="edit/news" element={<EditNews />} />
         </Route>
       </Routes>
     </Router>

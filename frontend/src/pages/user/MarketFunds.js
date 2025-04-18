@@ -46,7 +46,7 @@ const MarketFunds = () => {
                   within Asia.
                 </p> */}
                 <NavLink to="/investor-letters" className="banner-btn">
-                  Investor Letter
+                  Investor Letters
                   <i className="fa-solid fa-arrow-right"></i>
                 </NavLink>
               </div>
@@ -85,7 +85,7 @@ const MarketFunds = () => {
 
               <div className="tabs-content-div p-lg-5 p-md-5 p-4 pb-5">
                 {/* <h3>Tailored and optimized portfolio allocation</h3> */}
-                <p className="para small-para">
+                <p className="para small-para justify-para">
                   Piper Serica Numero Uno India Fund is an offshore fund,
                   offering global investors access to India’s high-growth equity
                   markets. With a multi-cap strategy, disciplined risk
@@ -135,7 +135,7 @@ const MarketFunds = () => {
 
               <div className="tabs-content-div p-lg-5 p-md-5 p-4">
                 {/* <h3>Finding the best fit for your requirements</h3> */}
-                <p className="para small-para">
+                <p className="para small-para justify-para">
                   Piper Serica Leader Portfolio is a multi-cap PMS strategy
                   designed to capitalize on India’s growth story. With a focus
                   on growth at reasonable price, rigorous research, and

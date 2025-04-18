@@ -60,7 +60,7 @@ const Home = () => {
                                 <h5>Foreign Investor</h5>
                                 <i className="fa-solid fa-arrow-right"></i>
                               </div>
-                              <p>
+                              <p className="justify-para">
                                 Our offshore fund provides foreign investors
                                 access to high-growth Indian companies,
                                 leveraging on-ground expertise and a focused
@@ -81,7 +81,7 @@ const Home = () => {
                                 <h5>NRI Investor</h5>
                                 <i className="fa-solid fa-arrow-right"></i>
                               </div>
-                              <p>
+                              <p className="justify-para">
                                 Invest in India with an experienced on-ground
                                 manager delivering strong risk-adjusted returns.
                                 Choose INR or USD investments for strategic
@@ -105,7 +105,7 @@ const Home = () => {
                                 <h5>Family Office & Indian Investor</h5>
                                 <i className="fa-solid fa-arrow-right"></i>
                               </div>
-                              <p>
+                              <p className="justify-para">
                                 Our onshore PMS provides corporate and Indian
                                 investors a transparent, disciplined strategy
                                 for sustainable wealth growth, maximizing
@@ -130,7 +130,7 @@ const Home = () => {
                                 <h5>Startup Founder & Entrepreneur</h5>
                                 <i className="fa-solid fa-arrow-right"></i>
                               </div>
-                              <p>
+                              <p className="justify-para">
                                 As a founder-led company, we deeply understand
                                 innovation, scaling, and the challenges startups
                                 navigate today. Beyond capital, we provide

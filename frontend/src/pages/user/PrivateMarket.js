@@ -61,7 +61,7 @@ const PrivateMarket = () => {
 
               <div className="tabs-content-div p-lg-5 p-md-5 p-4">
                 {/* <h3>Piper Serica Angel Fund</h3> */}
-                <p className="para small-para">
+                <p className="para small-para justify-para">
                   We invest in early-stage deep tech startups with proprietary
                   IP in Spacetech, AI, electronics, semiconductors, and fintech.
                   We require early product-market fit, offer ₹10 crore tickets,

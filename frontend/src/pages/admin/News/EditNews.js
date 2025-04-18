@@ -3,7 +3,7 @@ import AdminLayout from "../../../components/AdminLayout";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
 
-const EditFundCompanyPortfolio = () => {
+const EditNews = () => {
   const { id } = useParams();
   const [gallery, setGallery] = useState(null);
   const [galleryNames, setGalleryNames] = useState([]);
@@ -180,84 +180,86 @@ const EditFundCompanyPortfolio = () => {
   return (
     <AdminLayout>
       <div className="theme-form-header">
-        <h2>Edit Company</h2>
+        <h2>Edit News</h2>
       </div>
       <div className="form-white-bg">
-        <form onSubmit={handleSubmit}>
-          <div className="row">
-            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
-              <div className="theme-form">
-                <label>Company Logo</label>
-                <input type="file" name="media" accept=".webp" />
+        <div className="form-white-bg">
+          <form onSubmit={handleSubmit}>
+            <div className="row">
+              <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+                <div className="theme-form">
+                  <label>Thumbnail</label>
+                  <input type="file" name="media" accept=".webp" />
+                </div>
+              </div>
+
+              <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+                <div className="theme-form">
+                  <label>Title</label>
+                  <input type="text" name="title" required />
+                </div>
+              </div>
+
+              <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+                <div className="theme-form">
+                  <label>Date</label>
+
+                  <input type="date" name="title" required />
+                </div>
+              </div>
+
+              <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+                <div className="theme-form">
+                  <label>News Category</label>
+
+                  <select
+                    value={selectedService}
+                    required
+                    onChange={(e) => {
+                      setSelectedService(e.target.value);
+                      fetchGalleryNames();
+                    }}
+                  >
+                    <option value="">Select a Industry</option>
+                    <option value="Factsheet">Advance Electronic</option>
+                    <option value="Presentation">AI & SAAS</option>
+                    <option value="Presentation">Consumer Tech</option>
+                    <option value="Presentation">
+                      Cyber Security & Chip Design
+                    </option>
+                    <option value="Presentation">Electric Vehicle</option>
+                    <option value="Presentation">Fintech</option>
+                    <option value="Presentation">Spacetech</option>
+                    <option value="Presentation">Supply Chain Tech</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="col-lg-6 col-md-6 col-sm-12 col-12">
+                <div className="theme-form">
+                  <label>URL</label>
+
+                  <input type="text" name="title" required />
+                </div>
+              </div>
+
+              {errorMessage && (
+                <div className="error-message text-danger mt-2">
+                  {errorMessage}
+                </div>
+              )}
+
+              <div className="col-12">
+                <div className="theme-form">
+                  <button type="submit">Save</button>
+                </div>
               </div>
             </div>
-
-            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
-              <div className="theme-form">
-                <label>Industry</label>
-                <select
-                  value={selectedService}
-                  required
-                  onChange={(e) => {
-                    setSelectedService(e.target.value);
-                    fetchGalleryNames();
-                  }}
-                >
-                  <option value="">Select a Industry</option>
-                  <option value="Factsheet">Advance Electronic</option>
-                  <option value="Presentation">AI & SAAS</option>
-                  <option value="Presentation">Consumer Tech</option>
-                  <option value="Presentation">
-                    Cyber Security & Chip Design
-                  </option>
-                  <option value="Presentation">Electric Vehicle</option>
-                  <option value="Presentation">Fintech</option>
-                  <option value="Presentation">Spacetech</option>
-                  <option value="Presentation">Supply Chain Tech</option>
-                </select>
-              </div>
-            </div>
-
-            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
-              <div className="theme-form">
-                <label>Company Name</label>
-
-                <input type="text" name="title" required />
-              </div>
-            </div>
-
-            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
-              <div className="theme-form">
-                <label>Website Link</label>
-
-                <input type="text" name="title" required />
-              </div>
-            </div>
-
-            <div className="col-lg-6 col-md-6 col-sm-12 col-12">
-              <div className="theme-form">
-                <label>Description</label>
-
-                <textarea rows="3" name="title" required></textarea>
-              </div>
-            </div>
-
-            {errorMessage && (
-              <div className="error-message text-danger mt-2">
-                {errorMessage}
-              </div>
-            )}
-
-            <div className="col-12">
-              <div className="theme-form">
-                <button type="submit">Save</button>
-              </div>
-            </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </AdminLayout>
   );
 };
 
-export default EditFundCompanyPortfolio;
+export default EditNews;
