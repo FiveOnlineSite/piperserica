@@ -452,10 +452,10 @@ const FactsheetModal = () => {
 
     try {
       await emailjs.send(
-        process.env.REACT_APP_FACTSHEET_SERVICE_ID,
-        process.env.REACT_APP_FACTSHEET_TEMPLATE_ID,
+        process.env.REACT_APP_PRESENTATION_SERVICE_ID,
+        process.env.REACT_APP_PRESENTATION_TEMPLATE_ID,
         emailParams,
-        process.env.REACT_APP_EMAILJS_FACTSHEET_PUBLIC_KEY
+        process.env.REACT_APP_EMAILJS_PRESENTATION_PUBLIC_KEY
       );
 
       const downloadURL = isPresentation

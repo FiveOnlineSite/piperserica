@@ -68,7 +68,7 @@ const AdminSidebar = () => {
           </li>
 
           <li>
-            <NavLink to="/admin/project_detail" title="Project Detail">
+            <NavLink to="/admin/news-category" title="Project Detail">
               <span className="las la-tasks"></span> <span>News Category</span>
             </NavLink>
           </li>
@@ -80,7 +80,7 @@ const AdminSidebar = () => {
           </li>
 
           <li>
-            <NavLink to="/admin/edit/about" title="About Us">
+            <NavLink to="/admin/investor-letter" title="About Us">
               <span className="las la-user-friends"></span>{" "}
               <span>Investor Letter</span>
             </NavLink>

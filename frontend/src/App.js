@@ -37,6 +37,12 @@ import EditFundCompanyPortfolio from "./pages/admin/FundCompanyPortfolio/EditFun
 import News from "./pages/admin/News/News";
 import AddNews from "./pages/admin/News/AddNews";
 import EditNews from "./pages/admin/News/EditNews";
+import NewsCategory from "./pages/admin/NewsCategory/NewsCategory";
+import AddNewsCategory from "./pages/admin/NewsCategory/AddNewsCategory";
+import EditNewsCategory from "./pages/admin/NewsCategory/EditNewsCategory";
+import InvestorLett from "./pages/admin/InvestorLett/InvestorLett";
+import AddInvestorLett from "./pages/admin/InvestorLett/AddInvestorLett";
+import EditInvestorLett from "./pages/admin/InvestorLett/EditInvestorLett";
 
 function App() {
   return (
@@ -109,6 +115,14 @@ function App() {
           <Route path="news" element={<News />} />
           <Route path="add/news" element={<AddNews />} />
           <Route path="edit/news" element={<EditNews />} />
+
+          <Route path="news-category" element={<NewsCategory />} />
+          <Route path="add/news-category" element={<AddNewsCategory />} />
+          <Route path="edit/news-category" element={<EditNewsCategory />} />
+
+          <Route path="investor-letter" element={<InvestorLett />} />
+          <Route path="add/investor-letter" element={<AddInvestorLett />} />
+          <Route path="edit/investor-letter" element={<EditInvestorLett />} />
         </Route>
       </Routes>
     </Router>
