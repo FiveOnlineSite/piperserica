@@ -151,14 +151,38 @@ const Career = () => {
     setFormData({ ...formData, [name]: value });
   };
 
+  const [uploading, setUploading] = useState(false);
+  const [uploadError, setUploadError] = useState("");
+  const [resume, setResume] = useState(null);
+
   // Handle file input
   const handleFileChange = async (e) => {
-    const resume = e.target.files[0];
-    if (resume) {
+    const file = e.target.files[0];
+
+    // Check if the file is a PDF
+    if (file && file.type === "application/pdf") {
+      // Check if the file size is less than 500 KB (500 * 1024 bytes)
+      if (file.size > 500 * 1024) {
+        setUploadError("File size must be less than 500 KB.");
+        setResume(null); // Reset the resume file if the size is too large
+        return; // Stop the upload process
+      } else {
+        setUploadError(""); // Clear any previous error
+        setResume(file); // Set the valid resume
+      }
+    } else {
+      setUploadError("Only PDF files are allowed.");
+      setResume(null); // Reset the resume if the file is not a PDF
+    }
+
+    if (file) {
       const fileData = new FormData();
-      fileData.append("file", resume);
+      fileData.append("file", file);
       fileData.append("upload_preset", process.env.REACT_APP_PRESET_NAME);
       fileData.append("resource_type", "raw");
+
+      setUploading(true); // Set uploading to true when the upload starts
+      setUploadError(""); // Clear any previous error
 
       try {
         const response = await fetch(process.env.REACT_APP_CLOUDINARY_URL, {
@@ -166,22 +190,33 @@ const Career = () => {
           body: fileData,
         });
         const data = await response.json();
-        setFormData((prevData) => ({
-          ...prevData,
-          resume: data.secure_url, // Store uploaded file URL
-        }));
+
+        if (data.secure_url) {
+          console.log("Resume uploaded successfully: ", data.secure_url);
+          setFormData((prevData) => {
+            const updatedData = { ...prevData, resume: data.secure_url };
+            console.log("Updated form data with resume: ", updatedData);
+            return updatedData;
+          });
+        } else {
+          throw new Error("Invalid Cloudinary response");
+        }
       } catch (error) {
         console.error("Resume upload failed", error);
+        setUploadError("Failed to upload resume. Please try again.");
+      } finally {
+        setUploading(false); // Set uploading to false once upload finishes
       }
     }
   };
 
-  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (phoneError) {
-      return;
+    console.log("Resume data being passed:", resume);
+
+    if (phoneError || !resume) {
+      return; // Prevent submission if resume isn't uploaded yet
     }
 
     const emailParams = {
@@ -207,9 +242,6 @@ const Career = () => {
             response.text
           );
           setSuccessModal(true);
-          console.log("Success modal should be set to true");
-
-          // Clear success message after 5 seconds
           setTimeout(() => {
             setSuccessModal(false);
           }, 5000);
@@ -219,14 +251,32 @@ const Career = () => {
             email: "",
             phone: "",
             message: "",
-            resume: null,
+            resume: null, // Reset resume after successful form submission
           });
+          setResume(null);
           formRef.current.reset();
         },
         (err) => {
           console.error("Failed to send email:", err);
         }
       );
+  };
+
+  const handleResumeDisplay = () => {
+    // Only show resume link if resume URL exists
+    if (formData.resume) {
+      return <p>Resume uploaded successfully</p>;
+    }
+
+    if (uploading) {
+      return <p>Uploading...</p>; // Show "Uploading..." if file is being uploaded
+    }
+
+    if (uploadError) {
+      return <p style={{ color: "red" }}>{uploadError}</p>; // Show any upload error
+    }
+
+    return null;
   };
 
   return (
@@ -281,194 +331,9 @@ const Career = () => {
               teamwork, and work-life balance, ensuring that every team member
               feels inspired to contribute to our collective vision.
             </p>
-            {/* <div className="col-lg-5">
-              <div className="top-bottom-shadow"></div>
-              <Slider {...settings} className="vertical-slider">
-                {careerSlide.map((slide, index) => (
-                  <div key={index} className="career-slide-container">
-                    <img
-                      src={`${process.env.PUBLIC_URL}${slide.image}`}
-                      alt={index}
-                      className="w-100"
-                    />
-                  </div>
-                ))}
-              </Slider>
-            </div> */}
-            {/* <div className="col-lg-6 offset-lg-1">
-              <div className="life-content-div">
-                <h6 className="section-subtitle">Life at Piper Serica</h6>
-                <h3 className="section-title mt-3 mt-lg-3">
-                  Grow in a culture of innovation, collaboration, and excellence
-                </h3>
-
-                <p className="para medium-para mt-lg-4 mt-4">
-                  At Piper Serica, we foster a dynamic and collaborative work
-                  environment where innovation, integrity, and passion drive our
-                  success. Our team thrives on intellectual curiosity,
-                  analytical rigor, and a shared commitment to creating lasting
-                  value for investors. We believe in continuous learning,
-                  empowering our people with opportunities to grow, lead, and
-                  make an impact. Whether it’s exploring new investment
-                  frontiers, engaging with visionary entrepreneurs, or shaping
-                  market-leading strategies, life at Piper Serica is both
-                  challenging and rewarding. We cultivate an inclusive culture
-                  that values diverse perspectives, teamwork, and work-life
-                  balance, ensuring that every team member feels inspired to
-                  contribute to our collective vision.
-                </p>
-
-                <NavLink
-                  to="/"
-                  className="banner-btn blue-btn subscribe-blog-btn"
-                >
-                  join the team
-                  <i className="fa-solid fa-arrow-right"></i>
-                </NavLink>
-              </div>
-            </div> */}
           </div>
         </div>
       </section>
-
-      {/* <section className="employee-speak-section">
-        <div className="container">
-          <div className="employee-speak-div">
-            <h3 className="banner-title">Employees speak</h3>
-            <p className="banner-para">
-              We are an equal opportunity employer that celebrates and values
-              the diversity and uniqueness that each of us brings to the team.
-              We offer professionals the platform to grow in a collaborative
-              environment and drive impact from day one. At Lighthouse Canton,
-              we provide opportunities and challenges to every member of our
-              team to Perform, Learn, and Grow!
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="testimonial-section">
-        <div className="container">
-          <TestimonialSlider
-            settings={testimonialSettings}
-            item={testimonialItems}
-          />
-        </div>
-      </section>
-
-      <section className="culture-values-section">
-        <div className="container">
-          <div className="row align-items-lg-end align-items-center">
-            <div className="col-lg-5">
-              <h5 className="section-subtitle">Our Culture & Values</h5>
-              <h2 className="section-title">Values that inspire & define us</h2>
-            </div>
-            <div className="col-lg-6 offset-lg-1">
-              <p className="para medium-para values-para">
-                Our Values define us and are rooted in our culture. They act as
-                guiding principles for how we service our clients, treat each
-                other, and strengthen and synergize our purpose in every
-                decision we make.
-              </p>
-            </div>
-          </div>
-
-          <div className="row values-row mt-5">
-            <div className="col-lg col-md-4 col-12">
-              <div className="values-div">
-                <img
-                  src={`${process.env.PUBLIC_URL}/images/values/621488deae0f89f7ef0f9d57_Excellence.png`}
-                  alt="values"
-                />
-                <h6>Excellence</h6>
-                <span></span>
-                <p className="para medium-para values-para text-center my-3">
-                  <em>Become Better Every Day</em>
-                </p>
-              </div>
-            </div>
-            <div className="col-lg col-md-4 col-12">
-              <div className="values-div">
-                <img
-                  src={`${process.env.PUBLIC_URL}/images/values/621488deae0f89f7ef0f9d57_Excellence.png`}
-                  alt="values"
-                />
-                <h6>Excellence</h6>
-                <span></span>
-                <p className="para medium-para values-para text-center my-3">
-                  <em>Become Better Every Day</em>
-                </p>
-              </div>
-            </div>
-            <div className="col-lg col-md-4 col-12">
-              <div className="values-div">
-                <img
-                  src={`${process.env.PUBLIC_URL}/images/values/621488deae0f89f7ef0f9d57_Excellence.png`}
-                  alt="values"
-                />
-                <h6>Excellence</h6>
-                <span></span>
-                <p className="para medium-para values-para text-center my-3">
-                  <em>Become Better Every Day</em>
-                </p>
-              </div>
-            </div>
-            <div className="col-lg col-md-4 col-12">
-              <div className="values-div">
-                <img
-                  src={`${process.env.PUBLIC_URL}/images/values/621488deae0f89f7ef0f9d57_Excellence.png`}
-                  alt="values"
-                />
-                <h6>Excellence</h6>
-                <span></span>
-                <p className="para medium-para values-para text-center my-3">
-                  <em>Become Better Every Day</em>
-                </p>
-              </div>
-            </div>
-            <div className="col-lg col-md-4 col-12">
-              <div className="values-div">
-                <img
-                  src={`${process.env.PUBLIC_URL}/images/values/621488deae0f89f7ef0f9d57_Excellence.png`}
-                  alt="values"
-                />
-                <h6>Excellence</h6>
-                <span></span>
-                <p className="para medium-para values-para text-center my-3">
-                  <em>Become Better Every Day</em>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="openings-section">
-        <div className="container">
-          <div className="row">
-            <div className="col-lg-5">
-              <h6 className="section-subtitle">Openings</h6>
-
-              <h3 className="section-title">
-                Always on the lookout for exceptional talent
-              </h3>
-            </div>
-            <div className="col-lg-6 offset-lg-1 offset-0 mb-4">
-              <div className="send-cv-div">
-                <h5 className="section-title cv-title">Send us your CV</h5>
-
-                <NavLink
-                  to="/contact"
-                  className="cv-contact-btn"
-                  target="_blank"
-                >
-                  Contact us <i className="fa-solid fa-arrow-right"></i>
-                </NavLink>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
 
       <section className="resume-form-section">
         <div className="container">
@@ -548,8 +413,11 @@ const Career = () => {
                         onChange={handleFileChange}
                         accept=".pdf"
                       />
+
+                      {handleResumeDisplay()}
                     </div>
                   </div>
+
                   <div className="col-lg-12">
                     <div className="mb-3">
                       <label htmlFor="message" className="form-label">
