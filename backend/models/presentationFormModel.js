@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const FactsheetFormSchema = new mongoose.Schema(
+const PresentationFormSchema = new mongoose.Schema(
   {
     name: {
       type: String,
@@ -17,9 +17,9 @@ const FactsheetFormSchema = new mongoose.Schema(
   }
 );
 
-const FactsheetFormModel = mongoose.model(
-  "FactSheet Form",
-  FactsheetFormSchema
+const PresentationFormModel = mongoose.model(
+  "Presentation Form",
+  PresentationFormSchema
 );
 
-module.exports = FactsheetFormModel;
+module.exports = PresentationFormModel;

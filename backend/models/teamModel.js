@@ -4,12 +4,23 @@ const Schema = mongoose.Schema;
 const TeamSchema = new mongoose.Schema({
   name: {
     type: String,
+    required: true,
   },
   designation: {
     type: String,
+    required: true,
   },
+  department: {
+    type: String,
+    required: true,
+  },
+
   linkedin_url: {
     type: String,
+    required: true,
+  },
+  order: {
+    type: Number,
   },
 });
 

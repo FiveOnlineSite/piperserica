@@ -434,15 +434,15 @@ const About = () => {
                         </div>
                       </div>
                       <div className="history-line-chart">
-                        {/* <img
+                        <img
                           src={gifSources["fourteen"]}
                           className="w-100"
                           alt="history-img"
                           loading="lazy"
                           rel="preload"
-                        /> */}
+                        />
 
-                        <svg
+                        {/* <svg
                           xmlns="http://www.w3.org/2000/svg"
                           xmlSpace="preserve"
                           width="100%"
@@ -964,7 +964,7 @@ const About = () => {
                               ></line>
                             </g>
                           </g>
-                        </svg>
+                        </svg> */}
                       </div>
                     </div>
                   </div>

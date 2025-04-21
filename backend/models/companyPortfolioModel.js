@@ -12,14 +12,21 @@ const CompanyPortfolioSchema = new mongoose.Schema({
       required: true,
     },
   },
+  industry: {
+    type: String,
+    required: true,
+  },
   company_name: {
     type: String,
+    required: true,
   },
   company_description: {
     type: String,
+    required: true,
   },
   company_url: {
     type: String,
+    required: true,
   },
 });
 

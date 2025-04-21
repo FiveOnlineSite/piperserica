@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import AdminLayout from "../../../components/AdminLayout";
+import AdminLayout from "../../components/AdminLayout";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const News = () => {
+const PresentationForm = () => {
   const [galleries, setGalleries] = useState([]);
 
   const navigate = useNavigate();
@@ -62,13 +62,7 @@ const News = () => {
   return (
     <AdminLayout>
       <div className="pages-headers ">
-        <h2>
-          News & More
-          <NavLink to="/admin/add/news" className="theme-cta">
-            <i class="las la-plus-circle"></i>
-            Add News
-          </NavLink>
-        </h2>
+        <h2>Presentation Form</h2>
       </div>
       <div className="row mobilerows">
         <div className="col-md-12">
@@ -77,12 +71,10 @@ const News = () => {
               <table id="example" className="table nowrap">
                 <thead>
                   <tr>
-                    <th>Thumbnail</th>
-                    <th className="text-center">Title</th>
-                    <th className="text-center">Date</th>
-                    <th className="text-center">News Category</th>
-
-                    <th className="text-center">URL</th>
+                    <th>Name</th>
+                    <th className="text-center">Email</th>
+                    <th className="text-center">Fund Name</th>
+                    <th className="text-center">Date & Time</th>
                     <th className="text-center">Edit</th>
                     <th className="text-center">Delete</th>
                   </tr>
@@ -137,4 +129,4 @@ const News = () => {
   );
 };
 
-export default News;
+export default PresentationForm;

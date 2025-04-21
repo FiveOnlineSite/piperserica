@@ -43,6 +43,12 @@ import EditNewsCategory from "./pages/admin/NewsCategory/EditNewsCategory";
 import InvestorLett from "./pages/admin/InvestorLett/InvestorLett";
 import AddInvestorLett from "./pages/admin/InvestorLett/AddInvestorLett";
 import EditInvestorLett from "./pages/admin/InvestorLett/EditInvestorLett";
+import Team from "./pages/admin/Team/Team";
+import AddTeam from "./pages/admin/Team/AddTeam";
+import EditTeam from "./pages/admin/Team/EditTeam";
+import ContactUs from "./pages/admin/ContactUs";
+import FactSheetForm from "./pages/admin/FactSheetForm";
+import PresentationForm from "./pages/admin/PresentationForm";
 
 function App() {
   return (
@@ -123,6 +129,16 @@ function App() {
           <Route path="investor-letter" element={<InvestorLett />} />
           <Route path="add/investor-letter" element={<AddInvestorLett />} />
           <Route path="edit/investor-letter" element={<EditInvestorLett />} />
+
+          <Route path="team" element={<Team />} />
+          <Route path="add/team" element={<AddTeam />} />
+          <Route path="edit/team" element={<EditTeam />} />
+
+          <Route path="contact-us" element={<ContactUs />} />
+
+          <Route path="factsheet" element={<FactSheetForm />} />
+
+          <Route path="presentation" element={<PresentationForm />} />
         </Route>
       </Routes>
     </Router>

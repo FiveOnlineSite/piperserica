@@ -93,20 +93,20 @@ const AdminSidebar = () => {
           </li>
 
           <li>
-            <NavLink to="/admin/edit/career" title="Career">
+            <NavLink to="/admin/contact-us" title="Career">
               <span className="las la-user-tie"></span> <span>Contact</span>
             </NavLink>
           </li>
 
           <li>
-            <NavLink to="/admin/opportunities" title="Opportunities">
+            <NavLink to="/admin/factsheet" title="Opportunities">
               <span className="las la-rocket"></span>{" "}
               <span>Factsheet Form</span>
             </NavLink>
           </li>
 
           <li>
-            <NavLink to="/admin/applications" title="Applications">
+            <NavLink to="/admin/presentation" title="Applications">
               <span className="las la-book"></span>{" "}
               <span>Presentation Form</span>
             </NavLink>

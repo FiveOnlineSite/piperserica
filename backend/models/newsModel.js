@@ -14,14 +14,20 @@ const NewsSchema = new mongoose.Schema({
   },
   title: {
     type: String,
+    required: true,
   },
   date: {
     type: String,
+    required: true,
   },
-  tag: {
+  news_category_id: {
+    type: mongoose.Types.ObjectId,
+    ref: "News Category",
+    required: true,
+  },
+  news_url: {
     type: String,
-    enum: ["", "videos", "angel fund"],
-    default: "",
+    required: true,
   },
 });
 
