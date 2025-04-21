@@ -378,7 +378,8 @@ const FactsheetModal = () => {
       return `${process.env.PUBLIC_URL}/docs/${factsheetMap[matchedPath]}`;
     }
 
-    return `${process.env.PUBLIC_URL}/docs/PMS-Factsheet-Feb-2025.pdf`;
+    // return `${process.env.PUBLIC_URL}/docs/PMS-Factsheet-Feb-2025.pdf`;
+    return null;
   };
 
   const getPresentationUrl = () => {
@@ -390,15 +391,16 @@ const FactsheetModal = () => {
         "FPI Presentation - Mar 2025.pdf",
     };
 
-    const matchedPath = Object.keys(presentationMap).find((key) =>
-      path.includes(key)
+    const matchedPath = Object.keys(presentationMap).find(
+      (key) => key.toLowerCase() === path
     );
 
     if (matchedPath) {
       return `${process.env.PUBLIC_URL}/docs/${presentationMap[matchedPath]}`;
     }
 
-    return `${process.env.PUBLIC_URL}/docs/PMS-Factsheet-Feb-2025.pdf`;
+    // return `${process.env.PUBLIC_URL}/docs/PMS-Factsheet-Feb-2025.pdf`;
+    return null;
   };
 
   const handleFactsheetSubmit = async (e, isPresentation = false) => {
@@ -414,9 +416,7 @@ const FactsheetModal = () => {
         process.env.REACT_APP_EMAILJS_FACTSHEET_PUBLIC_KEY
       );
 
-      const downloadURL = isPresentation
-        ? `${process.env.PUBLIC_URL}/docs/PMS Factsheet - Mar 2025.pdf`
-        : getFactsheetURL();
+      const downloadURL = getFactsheetURL();
 
       // Force download using blob
       const response = await fetch(downloadURL);
@@ -458,9 +458,7 @@ const FactsheetModal = () => {
         process.env.REACT_APP_EMAILJS_PRESENTATION_PUBLIC_KEY
       );
 
-      const downloadURL = isPresentation
-        ? `${process.env.PUBLIC_URL}/docs/PMS Presentation - Mar 2025.pdf`
-        : getPresentationUrl();
+      const downloadURL = getPresentationUrl();
 
       // Force download using blob
       const response = await fetch(downloadURL);
@@ -514,7 +512,11 @@ const FactsheetModal = () => {
       </section>
 
       <Modal show={showFactsheetModal} onHide={closeFactsheetModal} centered>
-        <Modal.Header closeButton />
+        <Modal.Header closeButton>
+          <Modal.Title>
+            <h4>Factsheet Form</h4>
+          </Modal.Title>
+        </Modal.Header>
         <Modal.Body>
           <form ref={formRef} onSubmit={(e) => handleFactsheetSubmit(e, false)}>
             <div className="row">
@@ -583,7 +585,11 @@ const FactsheetModal = () => {
         onHide={closePresentationModal}
         centered
       >
-        <Modal.Header closeButton />
+        <Modal.Header closeButton>
+          <Modal.Title>
+            <h4>Presentation Form</h4>
+          </Modal.Title>
+        </Modal.Header>
         <Modal.Body>
           <form
             ref={formRefPresentation}
