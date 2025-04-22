@@ -2290,6 +2290,13 @@ form .form-label span {
   height: 500px;
 }
 
+.history-line-chart {
+  /* height: auto;
+  overflow: visible; */
+  max-width: 100%;
+  overflow: hidden;
+}
+
 @media screen and (max-width: 1300px) {
   .news-content-div h3 {
     min-height: 150px;

@@ -1,7 +1,7 @@
-import React, { useRef, useEffect, useState } from "react";
-import "../../../src/svg.css";
+import React, { useEffect } from "react";
+import "../../src/svg.css";
 
-const SvgComponent = () => {
+const GatewaySvg = () => {
   useEffect(() => {
     // This will run after the component is mounted
     const svgElement = document.querySelector("svg");
@@ -19,6 +19,7 @@ const SvgComponent = () => {
         height="100%"
         overflow="visible"
         version="1.1"
+        className="history-svg active"
         style={{
           shapeRendering: "geometricPrecision",
           textRendering: "geometricPrecision",
@@ -539,4 +540,4 @@ const SvgComponent = () => {
   );
 };
 
-export default SvgComponent;
+export default GatewaySvg;

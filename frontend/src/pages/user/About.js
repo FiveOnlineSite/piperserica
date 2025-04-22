@@ -2,6 +2,12 @@ import React, { useEffect, useState } from "react";
 import Layout from "../../components/Layout";
 import { NavLink, useLocation } from "react-router-dom";
 import "../../../src/svg.css";
+import "../../../src/target.css";
+import "../../../src/arrows.css";
+import "../../../src/rocket.css";
+import "../../../src/dollar.css";
+import GatewaySvg from "../../components/GatewaySvg";
+
 const About = () => {
   const [openAccordion, setOpenAccordion] = useState(0);
 
@@ -123,40 +129,24 @@ const About = () => {
     }
   };
 
-  // const [activeTab, setActiveTab] = useState("twenty-two");
-  // const [gifSources, setGifSources] = useState({
-  //   fourteen: "/images/history/Getway-of-India-2004-GIF (2).gif",
-  //   fifteen: "/images/history/Target-2015-GIF.gif",
-  //   nineteen: "/images/history/UpArrow-2019-GIF (1).gif",
-  //   twenty: "/images/history/Dollar-2020-GIF (2).gif",
-  //   "twenty-two": "/images/history/Rocket-2024-GIF.gif",
-  // });
+  const [activeTab, setActiveTab] = useState("four");
+  const [gifSources, setGifSources] = useState({
+    four: "/images/history/Getway-of-India-2004-GIF (2).gif",
+    fifteen: "/images/history/Target-2015-GIF.gif",
+    nineteen: "/images/history/UpArrow-2019-GIF (1).gif",
+    twenty: "/images/history/Dollar-2020-GIF (2).gif",
+    "twenty-two": "/images/history/Rocket-2024-GIF.gif",
+  });
 
-  // const handleTabClick = (tab, event) => {
-  //   event.preventDefault();
-  //   setActiveTab(tab);
-
-  //   // Reload all GIFs by appending a timestamp
-  //   // setGifSources((prevSources) => {
-  //   //   const updatedSources = {};
-  //   //   Object.keys(prevSources).forEach((key) => {
-  //   //     updatedSources[key] = `${prevSources[key]}?t=${Date.now()}`;
-  //   //   });
-  //   //   return updatedSources;
-  //   // });
-  // };
-
-  // useEffect(() => {
-  //   Object.values(gifSources).forEach((src) => {
-  //     const img = new Image();
-  //     img.src = src;
-  //   });
-  // }, []);
-
-  const [activeTab, setActiveTab] = useState("fourteen");
+  useEffect(() => {
+    Object.values(gifSources).forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  }, []);
 
   const baseGifSources = {
-    fourteen: "/images/history/Getway-of-India-2004-GIF (2).gif",
+    four: "/images/history/Getway-of-India-2004-GIF (2).gif",
     fifteen: "/images/history/Target-2015-GIF.gif",
     nineteen: "/images/history/UpArrow-2019-GIF (1).gif",
     twenty: "/images/history/Dollar-2020-GIF (2).gif",
@@ -164,13 +154,13 @@ const About = () => {
   };
 
   // ✅ Initialize gifSources with timestamp only for the initial activeTab
-  const [gifSources, setGifSources] = useState(() => {
-    const sourcesWithTimestamp = { ...baseGifSources };
-    sourcesWithTimestamp[activeTab] = `${
-      baseGifSources[activeTab]
-    }?t=${Date.now()}`;
-    return sourcesWithTimestamp;
-  });
+  // const [gifSources, setGifSources] = useState(() => {
+  //   const sourcesWithTimestamp = { ...baseGifSources };
+  //   sourcesWithTimestamp[activeTab] = `${
+  //     baseGifSources[activeTab]
+  //   }?t=${Date.now()}`;
+  //   return sourcesWithTimestamp;
+  // });
 
   // ✅ On tab click, only update GIF if tab is different
   const handleTabClick = (tab, event) => {
@@ -349,8 +339,8 @@ const About = () => {
               <div className="year-tab-links">
                 <a
                   href="#"
-                  onClick={(event) => handleTabClick("fourteen", event)}
-                  className={activeTab === "fourteen" ? "active" : ""}
+                  onClick={(event) => handleTabClick("four", event)}
+                  className={activeTab === "four" ? "active" : ""}
                 >
                   <div>
                     <div className="d-flex w-100 align-items-center">
@@ -416,9 +406,9 @@ const About = () => {
                 <div className="tab-content">
                   <div
                     className={`tab-pane fade ${
-                      activeTab === "fourteen" ? "show active" : ""
+                      activeTab === "four" ? "show active" : ""
                     }`}
-                    id="fourteen"
+                    id="four"
                   >
                     <div className="history-content-div">
                       <h2 className="history-title">2004</h2>
@@ -434,527 +424,16 @@ const About = () => {
                         </div>
                       </div>
                       <div className="history-line-chart">
-                        {/* <img
-                          src={gifSources["fourteen"]}
+                        <img
+                          src={gifSources["four"]}
                           className="w-100"
                           alt="history-img"
                           loading="lazy"
                           rel="preload"
-                        /> */}
-
-                        <svg
-                          id="Layer_1"
-                          data-name="Layer 1"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 0 1052.5 323.36"
-                        >
-                          <defs>
-                            <style></style>
-                          </defs>
-                          <g id="Layer_1-2" data-name="Layer_1">
-                            <g id="_1518520271600" data-name=" 1518520271600">
-                              <polyline
-                                class="cls-1"
-                                points="587.25 168.19 473.22 168.19 473.22 322.11 1.25 322.11"
-                              />
-                              <polyline
-                                class="cls-1"
-                                points="1051.25 322.11 903.12 322.11 903.12 168.19"
-                              />
-                              <polygon
-                                class="cls-1"
-                                points="457.04 157.03 587.25 157.03 587.25 168.19 467.1 168.19 457.04 157.03"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="587.25"
-                                y1="121.21"
-                                x2="587.07"
-                                y2="321.91"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="788.82"
-                                y1="120.95"
-                                x2="788.65"
-                                y2="321.65"
-                              />
-                              <polygon
-                                class="cls-1"
-                                points="919.13 157.03 788.93 157.03 788.93 168.19 909.07 168.19 919.13 157.03"
-                              />
-                              <polyline
-                                class="cls-1"
-                                points="560.15 322.11 560.15 194.53 497.94 194.53 497.94 322.11"
-                              />
-                              <path
-                                class="cls-1"
-                                d="M549.22,322.11v-92.71c-5.27-31.96-36.51-30.32-40.35,0v92.71"
-                              />
-                              <polyline
-                                class="cls-1"
-                                points="814.21 322.11 814.21 194.53 876.42 194.53 876.42 322.11"
-                              />
-                              <path
-                                class="cls-1"
-                                d="M825.14,322.11v-92.71c3.85-30.32,35.08-31.96,40.35,0v92.71"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="473.22"
-                                y1="183.94"
-                                x2="587.19"
-                                y2="183.94"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="485.62"
-                                y1="168.19"
-                                x2="485.62"
-                                y2="183.54"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="498.75"
-                                y1="168.19"
-                                x2="498.75"
-                                y2="183.54"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="511.87"
-                                y1="168.19"
-                                x2="511.87"
-                                y2="183.54"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="525"
-                                y1="168.19"
-                                x2="525"
-                                y2="183.54"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="538.12"
-                                y1="168.19"
-                                x2="538.12"
-                                y2="183.54"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="551.25"
-                                y1="168.19"
-                                x2="551.25"
-                                y2="183.54"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="564.38"
-                                y1="168.19"
-                                x2="564.38"
-                                y2="183.54"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="577.5"
-                                y1="168.19"
-                                x2="577.5"
-                                y2="183.54"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="902.74"
-                                y1="183.94"
-                                x2="788.77"
-                                y2="183.94"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="890.34"
-                                y1="168.19"
-                                x2="890.34"
-                                y2="183.54"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="877.21"
-                                y1="168.19"
-                                x2="877.21"
-                                y2="183.54"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="864.09"
-                                y1="168.19"
-                                x2="864.09"
-                                y2="183.54"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="850.96"
-                                y1="168.19"
-                                x2="850.96"
-                                y2="183.54"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="837.84"
-                                y1="168.19"
-                                x2="837.84"
-                                y2="183.54"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="824.71"
-                                y1="168.19"
-                                x2="824.71"
-                                y2="183.54"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="811.58"
-                                y1="168.19"
-                                x2="811.58"
-                                y2="183.54"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="798.46"
-                                y1="168.19"
-                                x2="798.46"
-                                y2="183.54"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="631.24"
-                                y1="163.04"
-                                x2="631.06"
-                                y2="321.91"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="631.22"
-                                y1="181.06"
-                                x2="587.2"
-                                y2="181.06"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="631.19"
-                                y1="210.87"
-                                x2="587.17"
-                                y2="210.87"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="631.17"
-                                y1="240.68"
-                                x2="587.14"
-                                y2="240.68"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="631.14"
-                                y1="270.48"
-                                x2="587.12"
-                                y2="270.48"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="631.12"
-                                y1="300.29"
-                                x2="587.09"
-                                y2="300.29"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="744.62"
-                                y1="163.04"
-                                x2="744.8"
-                                y2="321.91"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="788.66"
-                                y1="181.06"
-                                x2="744.64"
-                                y2="181.06"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="788.69"
-                                y1="210.87"
-                                x2="744.67"
-                                y2="210.87"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="788.72"
-                                y1="240.68"
-                                x2="744.69"
-                                y2="240.68"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="788.74"
-                                y1="270.48"
-                                x2="744.72"
-                                y2="270.48"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="788.77"
-                                y1="300.29"
-                                x2="744.75"
-                                y2="300.29"
-                              />
-                              <path
-                                class="cls-1"
-                                d="M732.02,322.11v-89.84c-7.89-73.78-79.11-75.18-88.18,0v89.84"
-                              />
-                              <circle
-                                class="cls-1"
-                                cx="644.1"
-                                cy="177.9"
-                                r="3.94"
-                              />
-                              <circle
-                                class="cls-1"
-                                cx="731.9"
-                                cy="177.9"
-                                r="3.94"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="587.25"
-                                y1="163.04"
-                                x2="788.93"
-                                y2="163.04"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="587.25"
-                                y1="156.93"
-                                x2="788.93"
-                                y2="156.93"
-                              />
-                              <polyline
-                                class="cls-1"
-                                points="473.22 157.03 473.22 121.21 593.93 121.21"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="619.66"
-                                y1="121.21"
-                                x2="756.57"
-                                y2="121.21"
-                              />
-                              <polyline
-                                class="cls-1"
-                                points="903.12 157.03 903.12 121.21 782.29 121.21"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="903.12"
-                                y1="131.73"
-                                x2="473.22"
-                                y2="131.73"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="635.88"
-                                y1="131.73"
-                                x2="635.88"
-                                y2="156.93"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="648"
-                                y1="131.73"
-                                x2="648"
-                                y2="156.93"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="667.4"
-                                y1="131.73"
-                                x2="667.4"
-                                y2="156.93"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="679.53"
-                                y1="131.73"
-                                x2="679.53"
-                                y2="156.93"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="699.17"
-                                y1="131.73"
-                                x2="699.17"
-                                y2="156.93"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="711.29"
-                                y1="131.73"
-                                x2="711.29"
-                                y2="156.93"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="730.7"
-                                y1="131.73"
-                                x2="730.7"
-                                y2="156.93"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="742.82"
-                                y1="131.73"
-                                x2="742.82"
-                                y2="156.93"
-                              />
-                              <path
-                                class="cls-1"
-                                d="M593.93,131.73h25.73V31.98c-2.06-28.55-23.51-28.01-25.73,0v99.75Z"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="593.93"
-                                y1="31.98"
-                                x2="619.66"
-                                y2="31.98"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="606.84"
-                                y1="10.77"
-                                x2="606.84"
-                                y2="1.25"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="593.93"
-                                y1="72.44"
-                                x2="782.29"
-                                y2="72.44"
-                              />
-                              <path
-                                class="cls-1"
-                                d="M601.06,72.44h11.46v-26.09c-.61-8.96-10.94-8.87-11.46,0v26.09Z"
-                              />
-                              <path
-                                class="cls-1"
-                                d="M756.57,131.73h25.72V31.98c-2.06-28.55-23.51-28.01-25.72,0v99.75Z"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="756.57"
-                                y1="31.98"
-                                x2="782.29"
-                                y2="31.98"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="769.47"
-                                y1="10.77"
-                                x2="769.47"
-                                y2="1.25"
-                              />
-                              <path
-                                class="cls-1"
-                                d="M763.7,72.44h11.45v-26.09c-.6-8.96-10.94-8.87-11.45,0v26.09Z"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="619.66"
-                                y1="54.67"
-                                x2="756.57"
-                                y2="54.67"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="631.07"
-                                y1="54.67"
-                                x2="631.07"
-                                y2="72.44"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="642.48"
-                                y1="54.67"
-                                x2="642.48"
-                                y2="72.44"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="653.88"
-                                y1="54.67"
-                                x2="653.88"
-                                y2="72.44"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="665.29"
-                                y1="54.67"
-                                x2="665.29"
-                                y2="72.44"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="676.7"
-                                y1="54.67"
-                                x2="676.7"
-                                y2="72.44"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="688.11"
-                                y1="54.67"
-                                x2="688.11"
-                                y2="72.44"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="699.52"
-                                y1="54.67"
-                                x2="699.52"
-                                y2="72.44"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="710.93"
-                                y1="54.67"
-                                x2="710.93"
-                                y2="72.44"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="722.34"
-                                y1="54.67"
-                                x2="722.34"
-                                y2="72.44"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="733.75"
-                                y1="54.67"
-                                x2="733.75"
-                                y2="72.44"
-                              />
-                              <line
-                                class="cls-1"
-                                x1="745.16"
-                                y1="54.67"
-                                x2="745.16"
-                                y2="72.44"
-                              />
-                            </g>
-                          </g>
-                        </svg>
+                        />
+                        {/* {activeTab === "four" && ( */}
+                        <GatewaySvg />
+                        {/* )} */}
                       </div>
                     </div>
                   </div>
@@ -983,14 +462,96 @@ const About = () => {
                           </p>
                         </div>
                       </div>
-                      <div className="history-line-chart">
-                        <img
-                          src={gifSources.fifteen}
-                          className="w-100"
-                          alt="history-img"
-                          loading="lazy"
-                        />
-                      </div>
+                      {activeTab === "fifteen" && (
+                        <div className="history-line-chart">
+                          <img
+                            src={gifSources.fifteen}
+                            className="w-100"
+                            alt="history-img"
+                            loading="lazy"
+                          />
+                          {/* {activeTab === "fifteen" && ( */}
+                          {/* <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            xmlSpace="preserve"
+                            width="100%"
+                            height="100%"
+                            version="1.1"
+                            key={activeTab}
+                            className="active"
+                            style={{
+                              shapeRendering: "geometricPrecision",
+                              textRendering: "geometricPrecision",
+                              imageRendering: "optimizeQuality",
+                              fillRule: "evenodd",
+                              clipRule: "evenodd",
+                            }}
+                            viewBox="0 0 1080 350"
+                            xmlnsXlink="http://www.w3.org/1999/xlink"
+                            xmlnsXodm="http://www.corel.com/coreldraw/odm/2003"
+                          >
+                            <g id="Layer_x0020_1">
+                              <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                              <g id="_1440503328656">
+                                <line
+                                  class="fil0 str0 target-elem-1"
+                                  x1="551.42"
+                                  y1="322.24"
+                                  x2="15"
+                                  y2="322.24"
+                                ></line>
+                                <path
+                                  class="fil0 str0 target-elem-2"
+                                  d="M743.18 322.24c40.53,-29.69 64.53,-78.53 64.53,-128.59 0,-88.57 -71.8,-160.37 -160.37,-160.37 -88.57,0 -160.37,71.8 -160.37,160.37 0,52.49 25.22,99.08 64.19,128.34"
+                                ></path>
+                                <line
+                                  class="fil0 str0 target-elem-3"
+                                  x1="1065"
+                                  y1="322.24"
+                                  x2="743.18"
+                                  y2="322.24"
+                                ></line>
+                                <g>
+                                  <circle
+                                    class="fil0 str0 target-elem-4"
+                                    cx="647.34"
+                                    cy="193.65"
+                                    r="108.65"
+                                  ></circle>
+                                  <circle
+                                    class="fil0 str0 target-elem-5"
+                                    cx="647.34"
+                                    cy="193.65"
+                                    r="63.6"
+                                  ></circle>
+                                </g>
+                                <line
+                                  class="fil0 str0 target-elem-6"
+                                  x1="904.96"
+                                  y1="44.92"
+                                  x2="647.34"
+                                  y2="193.65"
+                                ></line>
+                                <g>
+                                  <polyline
+                                    class="fil0 str0 target-elem-7"
+                                    points="664.51,197.87 647.34,193.65 651.56,176.49 "
+                                  ></polyline>
+                                  <polyline
+                                    class="fil0 str0 target-elem-8"
+                                    points="905.52,58.72 888.36,54.5 892.58,37.34 "
+                                  ></polyline>
+                                  <polyline
+                                    class="fil0 str0 target-elem-9"
+                                    points="922.12,49.14 904.96,44.92 909.18,27.75 "
+                                  ></polyline>
+                                </g>
+                              </g>
+                            </g>
+                          </svg> */}
+                          {/* )}*/}
+                        </div>
+                      )}
                     </div>
                   </div>
 
@@ -1025,6 +586,33 @@ const About = () => {
                           alt="history-img"
                           loading="lazy"
                         />
+                        {/* <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlSpace="preserve"
+                          width="100%"
+                          height="100%"
+                          version="1.1"
+                          className="active"
+                          style={{
+                            shapeRendering: "geometricPrecision",
+                            textRendering: "geometricPrecision",
+                            imageRendering: "optimizeQuality",
+                            fillRule: "evenodd",
+                            clipRule: "evenodd",
+                          }}
+                          viewBox="0 0 1080 350"
+                          xmlnsXlink="http://www.w3.org/1999/xlink"
+                          xmlnsXodm="http://www.corel.com/coreldraw/odm/2003"
+                        >
+                          <defs></defs>
+                          <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <polyline
+                              class="fil0 str0 arrow-elem-1"
+                              points="1065,343.56 916.87,343.56 916.87,59.47 929.25,59.47 890.36,6.44 851.47,59.47 863.84,59.47 863.84,331.44 822.66,331.44 822.66,122.53 835.59,122.53 796.7,69.5 757.81,122.4 769.63,122.4 769.63,331.44 728.44,331.44 728.44,185.15 742.93,185.15 701.92,132.12 663.03,185.15 675.41,185.15 675.41,331.44 634.4,331.44 634.4,247.72 645.68,247.72 606.79,194.69 567.9,247.91 581.19,247.91 581.19,331.44 540,331.44 540,310.66 552.38,310.66 513.49,257.63 474.6,310.66 486.97,310.66 486.97,343.56 15,343.56 "
+                            ></polyline>
+                          </g>
+                        </svg> */}
                       </div>
                     </div>
                   </div>
@@ -1059,6 +647,33 @@ const About = () => {
                           alt="history-img"
                           loading="lazy"
                         />
+                        {/* <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlSpace="preserve"
+                          width="100%"
+                          height="100%"
+                          version="1.1"
+                          key={activeTab}
+                          className="active"
+                          style={{
+                            shapeRendering: "geometricPrecision",
+                            textRendering: "geometricPrecision",
+                            imageRendering: "optimizeQuality",
+                            fillRule: "evenodd",
+                            clipRule: "evenodd",
+                          }}
+                          viewBox="0 0 1080 350"
+                          xmlnsXlink="http://www.w3.org/1999/xlink"
+                          xmlnsXodm="http://www.corel.com/coreldraw/odm/2003"
+                        >
+                          <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <path
+                              class="fil0 str0 dollar-elem-1"
+                              d="M1065 339.89l-290.73 0c6.59,-3.72 12.58,-8.01 18.09,-13.2 20.68,-19.5 30.98,-42.62 30.98,-69.38 0,-17.05 -4.82,-32.47 -14.45,-46.26 -9.71,-13.86 -21.58,-23.86 -35.66,-30.02 -14.08,-6.22 -36.25,-12.45 -66.49,-18.67 -18.16,-3.78 -29.72,-8.08 -34.91,-12.98 -5.12,-4.89 -7.71,-10.89 -7.71,-18.01 0,-17.79 13.79,-26.68 41.36,-26.68 25.8,0 42.7,11.71 50.7,35.13l59.15 -19.71c-14.16,-39.49 -43.31,-62.17 -87.48,-68.1l0 -41.9 -47.03 0 0 41.83c-22.64,3.27 -41.32,11.8 -55.98,25.62 -19.2,18.08 -28.77,40.32 -28.77,66.64 0,26.09 8.01,45.88 24.09,59.37 16.09,13.56 43,24.16 80.8,31.95 20.24,4.22 33.95,8.67 40.99,13.41 7.12,4.82 10.67,11.49 10.67,20.24 0,8.52 -3.92,15.86 -11.71,22.01 -7.78,6.16 -19.64,9.2 -35.58,9.2 -32.98,0 -53.07,-13.79 -60.33,-41.37l-64.49 14.53c6.82,27.28 20.9,47.81 42.25,61.67 2.44,1.58 4.93,3.07 7.49,4.46l-615.25 0.22"
+                            ></path>
+                          </g>
+                        </svg> */}
                       </div>
                     </div>
                   </div>
@@ -1092,8 +707,144 @@ const About = () => {
                           className="w-100"
                           alt="history-img"
                           loading="lazy"
-                          rel="preload"
                         />
+                        {/* <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          xmlSpace="preserve"
+                          width="100%"
+                          height="100%"
+                          version="1.1"
+                          key={activeTab}
+                          className="active"
+                          style={{
+                            shapeRendering: "geometricPrecision",
+                            textRendering: "geometricPrecision",
+                            imageRendering: "optimizeQuality",
+                            fillRule: "evenodd",
+                            clipRule: "evenodd",
+                          }}
+                          viewBox="0 0 1080 350"
+                          xmlnsXlink="http://www.w3.org/1999/xlink"
+                          xmlnsXodm="http://www.corel.com/coreldraw/odm/2003"
+                        >
+                          <g id="Layer_x0020_1">
+                            <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+                            <g id="_1440508436688">
+                              <line
+                                class="fil0 str0 rocket-elem-1"
+                                x1="644.91"
+                                y1="319.36"
+                                x2="15"
+                                y2="319.36"
+                              ></line>
+                              <line
+                                class="fil0 str0 rocket-elem-2"
+                                x1="1065"
+                                y1="319.36"
+                                x2="757.71"
+                                y2="319.36"
+                              ></line>
+                              <polygon
+                                class="fil0 str0 rocket-elem-3"
+                                points="674.02,176.25 732.16,176.25 732.16,191.23 674.02,191.23 "
+                              ></polygon>
+                              <path
+                                class="fil0 str0 rocket-elem-4"
+                                d="M702.99 -0.14c-43.23,45.61 -46.32,116.08 -28.97,176.39l58.14 0c16.3,-56.12 12.33,-131.07 -29.17,-176.39z"
+                              ></path>
+                              <path
+                                class="fil0 str0 rocket-elem-5"
+                                d="M674.02 191.23l-23.47 39.91 0 -61.08c1.36,-11.61 6.77,-20.64 16.21,-27.09"
+                              ></path>
+                              <path
+                                class="fil0 str0 rocket-elem-6"
+                                d="M732.16 191.23l23.46 39.91 0 -61.08c-1.36,-11.61 -6.77,-20.64 -16.21,-27.09"
+                              ></path>
+                              <path
+                                class="fil0 str0 rocket-elem-7"
+                                d="M723.07 29.31c-13.68,3.14 -27.36,3.3 -41.04,0"
+                              ></path>
+                              <path
+                                class="fil0 str0 rocket-elem-8"
+                                d="M678.21 37.22c17.15,3.49 33.28,3.32 48.53,0"
+                              ></path>
+                              <g>
+                                <circle
+                                  class="fil0 str0 rocket-elem-9"
+                                  cx="702.62"
+                                  cy="80.07"
+                                  r="19.07"
+                                ></circle>
+                                <circle
+                                  class="fil0 str0 rocket-elem-10"
+                                  cx="702.62"
+                                  cy="80.07"
+                                  r="12.69"
+                                ></circle>
+                              </g>
+                              <g>
+                                <line
+                                  class="fil0 str0 rocket-elem-11"
+                                  x1="702.62"
+                                  y1="123.84"
+                                  x2="702.62"
+                                  y2="113.12"
+                                ></line>
+                                <line
+                                  class="fil0 str0 rocket-elem-12"
+                                  x1="702.62"
+                                  y1="134.01"
+                                  x2="702.62"
+                                  y2="126.67"
+                                ></line>
+                                <line
+                                  class="fil0 str0 rocket-elem-13"
+                                  x1="702.62"
+                                  y1="145.4"
+                                  x2="702.62"
+                                  y2="138.06"
+                                ></line>
+                                <line
+                                  class="fil0 str0 rocket-elem-14"
+                                  x1="702.62"
+                                  y1="164.14"
+                                  x2="702.62"
+                                  y2="148.26"
+                                ></line>
+                              </g>
+                              <g>
+                                <line
+                                  class="fil0 str0 rocket-elem-15"
+                                  x1="689.71"
+                                  y1="319.36"
+                                  x2="689.71"
+                                  y2="191.23"
+                                ></line>
+                                <line
+                                  class="fil0 str0 rocket-elem-16"
+                                  x1="716.81"
+                                  y1="319.36"
+                                  x2="716.81"
+                                  y2="191.23"
+                                ></line>
+                                <line
+                                  class="fil0 str0 rocket-elem-17"
+                                  x1="698.44"
+                                  y1="350.14"
+                                  x2="698.44"
+                                  y2="200.97"
+                                ></line>
+                                <line
+                                  class="fil0 str0 rocket-elem-18"
+                                  x1="706.8"
+                                  y1="310.8"
+                                  x2="706.8"
+                                  y2="200.97"
+                                ></line>
+                              </g>
+                            </g>
+                          </g>
+                        </svg> */}
                       </div>
                     </div>
                   </div>
