@@ -49,6 +49,7 @@ import EditTeam from "./pages/admin/Team/EditTeam";
 import ContactUs from "./pages/admin/ContactUs";
 import FactSheetForm from "./pages/admin/FactSheetForm";
 import PresentationForm from "./pages/admin/PresentationForm";
+import GatewaySvg from "./components/GatewaySvg";
 
 function App() {
   return (
@@ -94,6 +95,7 @@ function App() {
 
         <Route path="/svg" element={<SvgComponent />} />
 
+        <Route path="/gateway" element={<GatewaySvg />} />
         <Route path="/login" element={<Login />}></Route>
         <Route path="/admin" element={<AdminRoutes />}>
           <Route path="dashboard" element={<DashBoard />} />
