@@ -1,14 +1,9 @@
 import React, { useRef, useEffect, useState } from "react";
+import { useSvgAnimation } from "../hook/useSvgAnimation";
 import "../../src/target.css";
 
-const TargetSvg = () => {
-  useEffect(() => {
-    // This will run after the component is mounted
-    const svgElement = document.querySelector("svg");
-    if (svgElement) {
-      svgElement.classList.add("active");
-    }
-  }, []); // Empty dependency array to run only once after mount
+const TargetSvg = ({ animateTrigger }) => {
+  useSvgAnimation(".target-svg", animateTrigger);
 
   return (
     <div>

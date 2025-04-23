@@ -24,3 +24,25 @@ svg .arrow-elem-1 {
 svg.active .arrow-elem-1 {
   stroke-dashoffset: 6117.64404296875px;
 }
+
+.dollar-svg path,
+.dollar-svg line,
+.dollar-svg polyline,
+.dollar-svg circle {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 2s ease forwards;
+}
+
+.dollar-svg.active path,
+.dollar-svg.active line,
+.dollar-svg.active polyline,
+.dollar-svg.active circle {
+  stroke-dashoffset: 0;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

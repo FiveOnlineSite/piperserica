@@ -177,3 +177,25 @@ svg .rocket-elem-18 {
 svg.active .rocket-elem-18 {
   stroke-dashoffset: 223.65997314453125px;
 }
+
+.dollar-svg path,
+.dollar-svg line,
+.dollar-svg polyline,
+.dollar-svg circle {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 2s ease forwards;
+}
+
+.dollar-svg.active path,
+.dollar-svg.active line,
+.dollar-svg.active polyline,
+.dollar-svg.active circle {
+  stroke-dashoffset: 0;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}

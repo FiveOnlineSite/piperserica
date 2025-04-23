@@ -1,14 +1,9 @@
 import React, { useEffect } from "react";
+import { useSvgAnimation } from "../hook/useSvgAnimation";
 import "../../src/rocket.css";
 
-const RocketSvg = () => {
-  useEffect(() => {
-    // This will run after the component is mounted
-    const svgElement = document.querySelector("svg");
-    if (svgElement) {
-      svgElement.classList.add("active");
-    }
-  }, []); // Empty dependency array to run only once after mount
+const RocketSvg = ({ animateTrigger }) => {
+  useSvgAnimation(".rocket-svg", animateTrigger);
 
   return (
     <div>
@@ -18,7 +13,7 @@ const RocketSvg = () => {
         width="100%"
         height="100%"
         version="1.1"
-        className="active"
+        className="rocket-svg active"
         style={{
           shapeRendering: "geometricPrecision",
           textRendering: "geometricPrecision",
