@@ -439,8 +439,8 @@ const About = () => {
                         /> */}
 
                           <GatewaySvg
+                            key={activeTab + "-svg"}
                             animateTrigger={activeTab}
-                            key={activeTab}
                           />
                         </div>
                       )}
@@ -480,8 +480,8 @@ const About = () => {
                             loading="lazy"
                           /> */}
                           <TargetSvg
+                            key={activeTab + "-svg"}
                             animateTrigger={activeTab}
-                            key={activeTab}
                           />
                         </div>
                       )}
@@ -522,8 +522,8 @@ const About = () => {
                         /> */}
 
                           <UpArrowSvg
+                            key={activeTab + "-svg"}
                             animateTrigger={activeTab}
-                            key={activeTab}
                           />
                         </div>
                       )}
@@ -563,8 +563,8 @@ const About = () => {
                         /> */}
 
                           <DollarSvg
+                            key={activeTab + "-svg"}
                             animateTrigger={activeTab}
-                            key={activeTab}
                           />
                         </div>
                       )}
@@ -604,8 +604,8 @@ const About = () => {
                         /> */}
 
                           <RocketSvg
+                            key={activeTab + "-svg"}
                             animateTrigger={activeTab}
-                            key={activeTab}
                           />
                         </div>
                       )}
