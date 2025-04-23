@@ -134,7 +134,7 @@ const About = () => {
     }
   };
 
-  const [activeTab, setActiveTab] = useState("fifteen");
+  const [activeTab, setActiveTab] = useState("four");
   // const [gifSources, setGifSources] = useState({
   //   four: "/images/history/Getway-of-India-2004-GIF (2).gif",
   //   fifteen: "/images/history/Target-2015-GIF.gif",
