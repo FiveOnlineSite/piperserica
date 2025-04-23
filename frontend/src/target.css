@@ -1,4 +1,4 @@
-/* .str0 {
+.str0 {
   stroke: #1da1f2;
   stroke-width: 2.5;
   stroke-linecap: round;
@@ -13,13 +13,11 @@ svg {
   display: inline-block;
   vertical-align: middle;
   height: 60vh;
-  opacity: 0;
   transform: translateY(10px);
   transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .svg.active {
-  opacity: 1;
   transform: translateY(0);
 }
 
@@ -103,4 +101,4 @@ svg .target-elem-9 {
 }
 svg.active .target-elem-9 {
   stroke-dashoffset: 74.70446014404297px;
-} */
+}

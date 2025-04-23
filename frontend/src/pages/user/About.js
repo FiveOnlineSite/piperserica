@@ -8,6 +8,10 @@ import "../../../src/rocket.css";
 import "../../../src/dollar.css";
 import GatewaySvg from "../../components/GatewaySvg";
 import SvgComponent from "./svgcomponent";
+import TargetSvg from "../../components/TargetSvg";
+import UpArrowSvg from "../../components/UpArrowSvg";
+import DollarSvg from "../../components/DollarSvg";
+import RocketSvg from "../../components/RocketSvg";
 
 const About = () => {
   const [openAccordion, setOpenAccordion] = useState(0);
@@ -138,7 +142,7 @@ const About = () => {
     }
   }, []); // Empty dependency array to run only once after mount
 
-  const [activeTab, setActiveTab] = useState("four");
+  const [activeTab, setActiveTab] = useState("fifteen");
   // const [gifSources, setGifSources] = useState({
   //   four: "/images/history/Getway-of-India-2004-GIF (2).gif",
   //   fifteen: "/images/history/Target-2015-GIF.gif",
@@ -441,7 +445,7 @@ const About = () => {
                           rel="preload"
                         /> */}
                         {/* {activeTab === "four" && ( */}
-                        <svg
+                        {/* <svg
                           xmlns="http://www.w3.org/2000/svg"
                           xmlSpace="preserve"
                           width="100%"
@@ -962,8 +966,11 @@ const About = () => {
                               ></line>
                             </g>
                           </g>
-                        </svg>
+                        </svg> */}
+
                         {/* )} */}
+
+                        <SvgComponent />
                       </div>
                     </div>
                   </div>
@@ -1080,6 +1087,7 @@ const About = () => {
                             </g>
                           </svg> */}
                           {/* )}*/}
+                          <TargetSvg />
                         </div>
                       )}
                     </div>
@@ -1143,6 +1151,7 @@ const About = () => {
                             ></polyline>
                           </g>
                         </svg> */}
+                        <UpArrowSvg />
                       </div>
                     </div>
                   </div>
@@ -1204,6 +1213,7 @@ const About = () => {
                             ></path>
                           </g>
                         </svg> */}
+                        <DollarSvg />
                       </div>
                     </div>
                   </div>
@@ -1376,6 +1386,8 @@ const About = () => {
                             </g>
                           </g>
                         </svg> */}
+
+                        <RocketSvg />
                       </div>
                     </div>
                   </div>
