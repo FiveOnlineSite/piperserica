@@ -1575,6 +1575,11 @@ body {
   margin-bottom: 0;
 }
 
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+  background-color: transparent !important;
+}
+
 .history-row {
   position: relative;
   padding-bottom: 30px;
@@ -2508,6 +2513,10 @@ form .form-label span {
 
   .year-tab-links a {
     padding: 15px;
+  }
+
+  .year-tab-links .nav {
+    flex-wrap: initial;
   }
 
   .history-content {

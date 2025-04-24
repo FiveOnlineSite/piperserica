@@ -12,6 +12,8 @@ import TargetSvg from "../../components/TargetSvg";
 import UpArrowSvg from "../../components/UpArrowSvg";
 import DollarSvg from "../../components/DollarSvg";
 import RocketSvg from "../../components/RocketSvg";
+import GatewayAnimation from "../../components/atoms/GatewayAnimation";
+import VerticalTabs from "../../components/templates/VerticalTabs";
 
 const About = () => {
   const [openAccordion, setOpenAccordion] = useState(0);
@@ -64,12 +66,12 @@ const About = () => {
       linkedin_url: "https://www.linkedin.com/in/preet-malde-4a37991ba/",
       designation: "Analyst",
     },
-    {
-      image: "/images/team/Ajay-modi-560x560.jpeg",
-      name: "Mukund Agarwal",
-      linkedin_url: "https://www.linkedin.com/in/mukundagarwal3/",
-      designation: "Analyst",
-    },
+    // {
+    //   image: "/images/team/Ajay-modi-560x560.jpeg",
+    //   name: "Mukund Agarwal",
+    //   linkedin_url: "https://www.linkedin.com/in/mukundagarwal3/",
+    //   designation: "Analyst",
+    // },
     {
       image: "/images/team/Ajay-modi-560x560.jpeg",
       name: "Akshay Kadam",
@@ -134,7 +136,7 @@ const About = () => {
     }
   };
 
-  const [activeTab, setActiveTab] = useState("four");
+  const [activeTab, setActiveTab] = useState("fifteen");
   // const [gifSources, setGifSources] = useState({
   //   four: "/images/history/Getway-of-India-2004-GIF (2).gif",
   //   fifteen: "/images/history/Target-2015-GIF.gif",
@@ -278,345 +280,11 @@ const About = () => {
         </div>
       </section>
       <div id="history-section"></div>
-      <section className="history-section">
-        <div className="container">
-          <h6 className="section-subtitle">History</h6>
-          <div className="row align-items-start">
-            {/* <div className="col-lg-3"> */}
-            {/* <h2 className="section-title mt-lg-3 mt-4">We've come so far!</h2> */}
-            {/* </div> */}
-            {/* <div className="col-lg-8 offset-lg-1 offset-0 mt-lg-0 mt-5">
-              <div className="fund-content-div">
-                <div className="single-fund">
-                  <div>
-                    <span></span>
-                  </div>
-                  <p className="para">
-                    Piper Serica started operations in 2004.
-                  </p>
-                </div>
 
-                <div className="single-fund">
-                  <div>
-                    <span></span>
-                  </div>
-                  <p className="para">
-                    In 2015, Piper Serica received its first registration from
-                    the Securities and Exchange Board of India (SEBI) as a
-                    Registered Investment Advisor.
-                  </p>
-                </div>
+      {/* HISTORY TABS SECTION START */}
+      <VerticalTabs />
+      {/* HISTORY TABS SECTION CLOSE */}
 
-                <div className="single-fund">
-                  <div>
-                    <span></span>
-                  </div>
-                  <p className="para">
-                    In 2019, we received the registration from the Securities
-                    and Exchange Board of India (SEBI) for launching Portfolio
-                    Management Service (PMS).
-                  </p>
-                </div>
-                <div className="single-fund">
-                  <div>
-                    <span></span>
-                  </div>
-                  <p className="para">
-                    In 2020, Piper Serica launched its Foreign Portfolio
-                    Investor (FPI) Fund based in Mauritius.
-                  </p>
-                </div>
-                <div className="single-fund">
-                  <div>
-                    <span></span>
-                  </div>
-                  <p className="para">
-                    In 2022, launched Piper Serica Angel Fund, an early-stage VC
-                    fund registered with SEBI as a Category 1 AIF.
-                  </p>
-                </div>
-              </div>
-            </div> */}
-          </div>
-
-          <div className="row mt-4 history-row">
-            <div className="col-lg-2">
-              <div className="year-tab-links">
-                <a
-                  href="#"
-                  onClick={(event) => handleTabClick("four", event)}
-                  className={activeTab === "four" ? "active" : ""}
-                >
-                  <div>
-                    <div className="d-flex w-100 align-items-center">
-                      <span></span>
-                      <h4>2004</h4>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="#"
-                  onClick={(event) => handleTabClick("fifteen", event)}
-                  className={activeTab === "fifteen" ? "active" : ""}
-                >
-                  <div>
-                    <div className="d-flex w-100 align-items-center">
-                      <span></span>
-                      <h4>2015</h4>
-                    </div>
-                  </div>
-                </a>
-
-                <a
-                  href="#"
-                  onClick={(event) => handleTabClick("nineteen", event)}
-                  className={activeTab === "nineteen" ? "active" : ""}
-                >
-                  <div>
-                    <div className="d-flex w-100 align-items-center">
-                      <span></span>
-                      <h4>2019</h4>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="#"
-                  onClick={(event) => handleTabClick("twenty", event)}
-                  className={activeTab === "twenty" ? "active" : ""}
-                >
-                  <div>
-                    <div className="d-flex w-100 align-items-center">
-                      <span></span>
-                      <h4>2020</h4>
-                    </div>
-                  </div>
-                </a>
-                <a
-                  href="#"
-                  onClick={(event) => handleTabClick("twenty-two", event)}
-                  className={activeTab === "twenty-two" ? "active" : ""}
-                >
-                  <div>
-                    <div className="d-flex w-100 align-items-center">
-                      <span></span>
-                      <h4>2022</h4>
-                    </div>
-                  </div>
-                </a>
-              </div>
-            </div>
-
-            <div className="col-lg-10">
-              <div className="history-tab-content">
-                <div className="tab-content">
-                  <div
-                    className={`tab-pane fade ${
-                      activeTab === "four" ? "show active" : ""
-                    }`}
-                    id="four"
-                  >
-                    <div className="history-content-div">
-                      <h2 className="history-title">2004</h2>
-                      <div className="history-content">
-                        <div className="single-history">
-                          <div>
-                            <span></span>
-                          </div>
-                          <p className="para history-para">
-                            Piper Serica started{" "}
-                            <strong>operations in 2004</strong>
-                          </p>
-                        </div>
-                      </div>
-                      {activeTab === "four" && (
-                        <div className="history-line-chart">
-                          {/* <img
-                          src={gifSources["four"]}
-                          className="w-100"
-                          alt="history-img"
-                          loading="lazy"
-                          rel="preload"
-                        /> */}
-
-                          <GatewaySvg
-                            key={activeTab + "-svg"}
-                            animateTrigger={activeTab}
-                          />
-                        </div>
-                      )}
-                    </div>
-                  </div>
-
-                  <div
-                    className={`tab-pane fade ${
-                      activeTab === "fifteen" ? "show active" : ""
-                    }`}
-                    id="fifteen"
-                  >
-                    <div className="history-content-div">
-                      <h2 className="history-title">2015</h2>
-                      <div className="history-content">
-                        <div className="single-history">
-                          <div>
-                            <span></span>
-                          </div>
-                          <p className="para history-para">
-                            Piper Serica received its first registration from
-                            the{" "}
-                            <strong>
-                              {" "}
-                              Securities and Exchange Board of India (SEBI) as a
-                              Registered Investment Advisor
-                            </strong>
-                          </p>
-                        </div>
-                      </div>
-                      {activeTab === "fifteen" && (
-                        <div className="history-line-chart">
-                          {/* <img
-                            src={gifSources.fifteen}
-                            className="w-100"
-                            alt="history-img"
-                            loading="lazy"
-                          /> */}
-                          <TargetSvg
-                            key={activeTab + "-svg"}
-                            animateTrigger={activeTab}
-                          />
-                        </div>
-                      )}
-                    </div>
-                  </div>
-
-                  <div
-                    className={`tab-pane fade ${
-                      activeTab === "nineteen" ? "show active" : ""
-                    }`}
-                    id="nineteen"
-                  >
-                    <div className="history-content-div">
-                      <h2 className="history-title">2019</h2>
-                      <div className="history-content">
-                        <div className="single-history">
-                          <div>
-                            <span></span>
-                          </div>
-                          <p className="para history-para">
-                            {" "}
-                            Piper Serica received the registration from the
-                            <strong>
-                              {" "}
-                              Securities and Exchange Board of India (SEBI) for
-                              launching Portfolio Management Service (PMS).
-                            </strong>
-                          </p>
-                        </div>
-                      </div>
-                      {activeTab === "nineteen" && (
-                        <div className="history-line-chart">
-                          {/* <img
-                          src={gifSources.nineteen}
-                          className="w-100"
-                          alt="history-img"
-                          loading="lazy"
-                        /> */}
-
-                          <UpArrowSvg
-                            key={activeTab + "-svg"}
-                            animateTrigger={activeTab}
-                          />
-                        </div>
-                      )}
-                    </div>
-                  </div>
-
-                  <div
-                    className={`tab-pane fade ${
-                      activeTab === "twenty" ? "show active" : ""
-                    }`}
-                    id="twenty"
-                  >
-                    <div className="history-content-div">
-                      <h2 className="history-title">2020</h2>
-                      <div className="history-content">
-                        <div className="single-history">
-                          <div>
-                            <span></span>
-                          </div>
-                          <p className="para history-para">
-                            Piper Serica launched its
-                            <strong>
-                              {" "}
-                              Foreign Portfolio Investor (FPI) Fund based in
-                              Mauritius.
-                            </strong>{" "}
-                          </p>
-                        </div>
-                      </div>
-                      {activeTab === "twenty" && (
-                        <div className="history-line-chart">
-                          {/* <img
-                          src={gifSources.twenty}
-                          className="w-100"
-                          alt="history-img"
-                          loading="lazy"
-                        /> */}
-
-                          <DollarSvg
-                            key={activeTab + "-svg"}
-                            animateTrigger={activeTab}
-                          />
-                        </div>
-                      )}
-                    </div>
-                  </div>
-
-                  <div
-                    className={`tab-pane fade ${
-                      activeTab === "twenty-two" ? "show active" : ""
-                    }`}
-                    id="twenty-two"
-                  >
-                    <div className="history-content-div">
-                      <h2 className="history-title">2022</h2>
-                      <div className="history-content">
-                        <div className="single-history">
-                          <div>
-                            <span></span>
-                          </div>
-                          <p className="para history-para">
-                            Piper Serica Launched
-                            <strong>
-                              {" "}
-                              Piper Serica Angel Fund, an early-stage VC fund
-                              registered with SEBI as a Category 1 AIF.
-                            </strong>{" "}
-                          </p>
-                        </div>
-                      </div>
-                      {activeTab === "twenty-two" && (
-                        <div className="history-line-chart">
-                          {/* <img
-                          src={gifSources["twenty-two"]}
-                          className="w-100"
-                          alt="history-img"
-                          loading="lazy"
-                        /> */}
-
-                          <RocketSvg
-                            key={activeTab + "-svg"}
-                            animateTrigger={activeTab}
-                          />
-                        </div>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       <div id="purpose-section"></div>
       <section className="why-us-section vision-mission-section">
         <div className="container">
