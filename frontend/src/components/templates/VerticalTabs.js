@@ -6,7 +6,7 @@ import DollarAnimation from "../atoms/DollarAnimation";
 import RocketAnimation from "../atoms/RocketAnimation";
 
 const VerticalTabs = () => {
-  const [activeTabIndex, setActiveTabIndex] = useState(0);
+  const [activeTabIndex, setActiveTabIndex] = useState(4);
 
   return (
     <>
@@ -25,14 +25,14 @@ const VerticalTabs = () => {
                 >
                   <li class="nav-item" role="presentation">
                     <a
-                      class="nav-link text-primary fw-semibold active position-relative"
+                      class="nav-link text-primary fw-semibold position-relative"
                       id="pills-gateway-tab"
                       data-bs-toggle="pill"
                       data-bs-target="#pills-gateway"
                       type="button"
                       role="tab"
                       aria-controls="pills-gateway"
-                      aria-selected="true"
+                      aria-selected="false"
                       onClick={() => setActiveTabIndex(0)}
                     >
                       <div>
@@ -105,14 +105,14 @@ const VerticalTabs = () => {
                   </li>
                   <li class="nav-item" role="presentation">
                     <a
-                      class="nav-link text-primary fw-semibold position-relative"
+                      class="nav-link text-primary fw-semibold active position-relative"
                       id="pills-rocket-tab"
                       data-bs-toggle="pill"
                       data-bs-target="#pills-rocket"
                       type="button"
                       role="tab"
                       aria-controls="pills-rocket"
-                      aria-selected="false"
+                      aria-selected="true"
                       onClick={() => setActiveTabIndex(4)}
                     >
                       <div>
@@ -133,7 +133,7 @@ const VerticalTabs = () => {
                     style={{
                       display: activeTabIndex === 0 ? "block" : "none",
                     }}
-                    class="tab-pane fade show active"
+                    class="tab-pane fade"
                     id="pills-gateway"
                     role="tabpanel"
                     aria-labelledby="pills-gateway-tab"
@@ -251,7 +251,7 @@ const VerticalTabs = () => {
                     style={{
                       display: activeTabIndex === 4 ? "block" : "none",
                     }}
-                    class="tab-pane fade"
+                    class="tab-pane fade show active"
                     id="pills-rocket"
                     role="tabpanel"
                     aria-labelledby="pills-rocket-tab"
