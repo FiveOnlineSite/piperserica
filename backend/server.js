@@ -34,6 +34,9 @@ app.get("/api", (req, res) => {
 app.use("/api/auth", Route.authRoute);
 app.use("/api/factsheet-presentation", Route.factsheetPresentationRoute);
 app.use("/api/investor-letter", Route.investorLetterRoute);
+app.use("/api/team", Route.teamRoute);
+app.use("/api/fund-number", Route.fundNumberRoute);
+app.use("/api/company-portfolio", Route.companyPortfolioRoute);
 
 connectDb();
 

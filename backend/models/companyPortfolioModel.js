@@ -4,13 +4,7 @@ const Schema = mongoose.Schema;
 const CompanyPortfolioSchema = new mongoose.Schema({
   logo: {
     type: Array,
-    filename: {
-      type: String,
-    },
-    filepath: {
-      type: String,
-      required: true,
-    },
+    required: true,
   },
   industry: {
     type: String,
@@ -31,7 +25,7 @@ const CompanyPortfolioSchema = new mongoose.Schema({
 });
 
 const CompanyPortfolioModel = mongoose.model(
-  "CompanyPortfolio",
+  "Company Portfolio",
   CompanyPortfolioSchema
 );
 

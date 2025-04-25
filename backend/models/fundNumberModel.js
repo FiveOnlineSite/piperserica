@@ -10,19 +10,55 @@ const FundNumberSchema = new Schema({
     type: String,
     required: false,
   },
-  fund_numbers: [
+  fund_number1: [
     {
       type: String,
       required: true,
     },
   ],
-  fund_titles: [
+  fund_title1: [
     {
       type: String,
       required: true,
     },
   ],
-  fund_subtitles: [
+  fund_subtitle1: [
+    {
+      type: String,
+      required: false,
+    },
+  ],
+  fund_number2: [
+    {
+      type: String,
+      required: false,
+    },
+  ],
+  fund_title2: [
+    {
+      type: String,
+      required: false,
+    },
+  ],
+  fund_subtitle2: [
+    {
+      type: String,
+      required: false,
+    },
+  ],
+  fund_number3: [
+    {
+      type: String,
+      required: false,
+    },
+  ],
+  fund_title3: [
+    {
+      type: String,
+      required: false,
+    },
+  ],
+  fund_subtitle3: [
     {
       type: String,
       required: false,

@@ -11,7 +11,6 @@ const ArticleSection = () => {
     infinite: true,
     arrows: true,
     responsive: [
-    
       {
         breakpoint: 1200,
         settings: {
@@ -84,7 +83,8 @@ const ArticleSection = () => {
       // insight_type: "Investments Insights",
       news_img: "/images/news/one-funding.jpg",
       content_type: "Angel Fund",
-      news_title:"Swara Fincare Secures Rs 19.4 Cr Series-A Funding In Partnership With UC Impower Fund, Piper Serica Angel Fund",
+      news_title:
+        "Swara Fincare Secures Rs 19.4 Cr Series-A Funding In Partnership With UC Impower Fund, Piper Serica Angel Fund",
       date: "October 09, 2024",
       link: "https://www.bwdisrupt.com/article/swara-fincare-secures-rs-194-cr-series-a-funding-in-partnership-with-uc-impower-fund-piper-serica-angel-fund-535701",
     },
@@ -92,7 +92,7 @@ const ArticleSection = () => {
       // insight_type: "Investments Insights",
       news_img: "/images/news/Six-Sense.webp",
       content_type: "Angel Fund",
-      news_title:"Piper Serica invests in Six Sense Mobility",
+      news_title: "Piper Serica invests in Six Sense Mobility",
       date: "August 14, 2024",
       link: "https://entrackr.com/2024/08/piper-serica-invests-in-six-sense-mobility/",
     },
@@ -100,7 +100,7 @@ const ArticleSection = () => {
       // insight_type: "Investments Insights",
       news_img: "/images/news/OTPless.webp",
       content_type: "Angel Fund",
-      news_title:"Bhavik Koladiya-led OTPless raises $3.5 Mn led by SIDBI",
+      news_title: "Bhavik Koladiya-led OTPless raises $3.5 Mn led by SIDBI",
       date: "May 16, 2024",
       link: "https://entrackr.com/2024/05/bhavik-koladiya-led-otpless-raises-3-5-mn-led-by-sidbi/",
     },
@@ -108,7 +108,7 @@ const ArticleSection = () => {
       // insight_type: "Investments Insights",
       news_img: "/images/news/freed.webp",
       content_type: "Angel Fund",
-      news_title:"Debt relief platform FREED raises $7.5 Mn in Series A",
+      news_title: "Debt relief platform FREED raises $7.5 Mn in Series A",
       date: "March 14, 2024",
       link: "https://entrackr.com/2024/03/debt-relief-platform-freed-raises-7-5-mn-in-series-a/",
     },
@@ -116,7 +116,8 @@ const ArticleSection = () => {
       // insight_type: "Investments Insights",
       news_img: "/images/news/fintech-startup-funding.webp",
       content_type: "Angel Fund",
-      news_title:"FlashAid raises $2.5 million in funding round led by Piper Serica Angel Fund, SOSV",
+      news_title:
+        "FlashAid raises $2.5 million in funding round led by Piper Serica Angel Fund, SOSV",
       date: "April 25, 2024",
       link: "https://economictimes.indiatimes.com/tech/funding/flashaid-raises-2-5-million-in-funding-round-led-by-piper-serica-angel-fund-sosv/articleshow/109588758.cms",
     },
@@ -124,7 +125,7 @@ const ArticleSection = () => {
       // insight_type: "Investments Insights",
       news_img: "/images/news/Cleartrust.webp",
       content_type: "Angel Fund",
-      news_title:"ClearTrust raises $1.9 Mn in pre-Series A round",
+      news_title: "ClearTrust raises $1.9 Mn in pre-Series A round",
       date: "January 29, 2024",
       link: "https://entrackr.com/2024/01/cleartrust-raises-1-9-mn-in-pre-series-a-round/",
     },
@@ -132,7 +133,7 @@ const ArticleSection = () => {
       // insight_type: "Investments Insights",
       news_img: "/images/news/optimizer.jpg",
       content_type: "Angel Fund",
-      news_title:"EVIFY Raises $1.3 Million From Piper Serica Angel Fund",
+      news_title: "EVIFY Raises $1.3 Million From Piper Serica Angel Fund",
       date: "January 11, 2024",
       link: "https://www.saurenergy.com/ev-storage/evify-raises-1-3-million-from-piper-serica-angel-fund",
     },
@@ -140,7 +141,7 @@ const ArticleSection = () => {
       // insight_type: "Investments Insights",
       news_img: "/images/news/KiVi.webp",
       content_type: "Angel Fund",
-      news_title:"Agri fintech startup KiVi closes seed round",
+      news_title: "Agri fintech startup KiVi closes seed round",
       date: "Octomber 12, 2023",
       link: "https://entrackr.com/2023/10/agri-fintech-startup-kivi-closes-seed-round/",
     },
@@ -148,7 +149,8 @@ const ArticleSection = () => {
       // insight_type: "Investments Insights",
       news_img: "/images/news/barandbench.avif",
       content_type: "Angel Fund",
-      news_title:"Saga Legal assists Floworks.ai in its latest round of funding",
+      news_title:
+        "Saga Legal assists Floworks.ai in its latest round of funding",
       date: "July 28, 2023",
       link: "https://www.barandbench.com/law-firms/dealstreet/saga-legal-assists-floworksai-in-its-latest-round-of-funding",
     },
@@ -156,7 +158,8 @@ const ArticleSection = () => {
       // insight_type: "Investments Insights",
       news_img: "/images/news/Castler_Founders.jpg",
       content_type: "Angel Fund",
-      news_title:"Capital 2B, IIFL Fintech Fund Lead $5 M Round For Zerodha-backed Castler",
+      news_title:
+        "Capital 2B, IIFL Fintech Fund Lead $5 M Round For Zerodha-backed Castler",
       date: "May 10, 2023",
       link: "https://www.bwdisrupt.com/article/capital-2b-iifl-fintech-fund-lead-5-m-round-for-zerodha-backed-castler-476051",
     },
@@ -164,7 +167,8 @@ const ArticleSection = () => {
       // insight_type: "Investments Insights",
       news_img: "/images/news/funds.webp",
       content_type: "Angel Fund",
-      news_title:"DesignX raises pre-series A funding from Piper Serica Angel Fund",
+      news_title:
+        "DesignX raises pre-series A funding from Piper Serica Angel Fund",
       date: "November 12, 2024",
       link: "https://economictimes.indiatimes.com/tech/funding/designx-raises-pre-series-a-funding-from-piper-serica-angel-fund/articleshow/115209145.cms?from=mdr",
     },
@@ -172,7 +176,8 @@ const ArticleSection = () => {
       // insight_type: "Investments Insights",
       news_img: "/images/news/ev.webp",
       content_type: "Angel Fund",
-      news_title:"EV leasing firm Alt Mobility raises $6 million to scale up operations",
+      news_title:
+        "EV leasing firm Alt Mobility raises $6 million to scale up operations",
       date: "April 02, 2025",
       link: "https://www.business-standard.com/industry/news/ev-leasing-firm-alt-mobility-raises-6-million-to-scale-up-operations-124011800160_1.html",
     },
@@ -371,15 +376,16 @@ const ArticleSection = () => {
     // },
   ];
 
-   // Sort the newsItems by date in descending order (latest first)
-   const sortedNewsItems = [...articleItems].sort((a, b) => new Date(b.date) - new Date(a.date));
+  // Sort the newsItems by date in descending order (latest first)
+  const sortedNewsItems = [...articleItems].sort(
+    (a, b) => new Date(b.date) - new Date(a.date)
+  );
 
-   // Slice to get the top 6 latest news
-   const newsItemsOne = sortedNewsItems.slice(0, 6);
-  
+  // Slice to get the top 6 latest news
+  const newsItemsOne = sortedNewsItems.slice(0, 6);
 
   return (
-    <div className="news-insights-section">
+    <div className="news-insights-section pb-5">
       <div className="container">
         <div className="row align-items-center">
           <h5 className="section-subtitle">News & Articles</h5>

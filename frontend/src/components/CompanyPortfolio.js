@@ -237,7 +237,7 @@ const CompanyPortfolio = () => {
       id: 26,
       src: "/images/industries/inbound.png",
       label: "SPACETECH",
-      name: "ContineuAI",
+      name: "Inbound Aerospace",
       description:
         "Inbound Aerospace is focused on providing a spacecraft platform that utilises the unique microgravity environment to assist the Pharmaceutical & Semiconductor industry. Their recoverable spacecraft platform enables customers to conduct in-orbit technology demonstrations and microgravity experiments, accelerating product development timelines.",
       link: "https://inboundaerospace.com/ ",

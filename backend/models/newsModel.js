@@ -4,13 +4,7 @@ const Schema = mongoose.Schema;
 const NewsSchema = new mongoose.Schema({
   thumbnail: {
     type: Array,
-    filename: {
-      type: String,
-    },
-    filepath: {
-      type: String,
-      required: true,
-    },
+    required: true,
   },
   title: {
     type: String,

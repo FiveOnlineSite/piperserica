@@ -642,7 +642,9 @@ const Startup = () => {
         <CompanyPortfolio />
       </section>
 
-      <NewsSection />
+      <section className="py-5 mb-5">
+        <NewsSection />
+      </section>
 
       <SubscribeLetter />
 
