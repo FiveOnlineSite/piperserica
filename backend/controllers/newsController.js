@@ -32,41 +32,38 @@ const createNews = async (req, res) => {
       };
     }
 
-    const newCompany = new CompanyPortfolioModel({
-      industry,
-      company_name,
-      company_description,
-      company_url,
-      logo: mediaData,
+    const newNews = new NewsModel({
+      thumbnail: mediaData,
+      title,
+      date,
+      news_category_id,
+      news_url,
     });
 
-    await newCompany.save();
+    await newNews.save();
 
     res.status(200).json({
-      message: "Added company data successfully",
-      newCompany,
+      message: "Added news data successfully",
+      newNews,
     });
   } catch (error) {
     return res.status(500).json({
-      message: `Error in adding company data: ${error.message}`,
+      message: `Error in adding news data: ${error.message}`,
     });
   }
 };
 
-const updateCompany = async (req, res) => {
+const updateNews = async (req, res) => {
   try {
-    const { logo, industry, company_name, company_description, company_url } =
-      req.body;
+    const { thumbnail, title, date, news_category_id, news_url } = req.body;
 
-    const existingCompany = await CompanyPortfolioModel.findById(
-      req.params._id
-    );
+    const existingNews = await NewsModel.findById(req.params._id);
 
-    if (!existingCompany) {
-      return res.status(404).json({ message: "Company data not found." });
+    if (!existingNews) {
+      return res.status(404).json({ message: "News data not found." });
     }
 
-    let mediaData = existingCompany.logo;
+    let mediaData = existingNews.thumbnail;
     const file = req.file;
     {
       if (file) {
@@ -87,96 +84,94 @@ const updateCompany = async (req, res) => {
 
     // Create object with updated fields
     const updatedFields = {
-      ...(industry && { industry }),
-      ...(company_name && { company_name }),
-      ...(company_description && { company_description }),
-      ...(company_url && { company_url }),
-      ...(file && { logo: mediaData }),
+      ...(title && { title }),
+      ...(date && { date }),
+      ...(news_category_id && { news_category_id }),
+      ...(news_url && { news_url }),
+      ...(file && { thumbnail: mediaData }),
     };
 
-    const updatedCompany = await CompanyPortfolioModel.findByIdAndUpdate(
+    const updatedNews = await NewsModel.findByIdAndUpdate(
       req.params._id,
       updatedFields,
       { new: true }
     );
 
     res.status(200).json({
-      message: "Updated company data successfully",
-      updatedCompany,
+      message: "Updated news data successfully",
+      updatedNews,
     });
   } catch (error) {
     return res.status(500).json({
-      message: `Error in updating company data: ${error.message}`,
+      message: `Error in updating news data: ${error.message}`,
     });
   }
 };
 
-const getCompany = async (req, res) => {
+const getNews = async (req, res) => {
   try {
-    const company = await CompanyPortfolioModel.findById(req.params._id);
+    const news = await NewsModel.findById(req.params._id);
 
-    if (company.length === 0) {
+    if (news.length === 0) {
       return res.status(400).json({
-        message: "No company is created with this id.",
+        message: "No news is created with this id.",
       });
     }
     return res.status(200).json({
-      message: "Company fetched successfully.",
-      company,
+      message: "News fetched successfully.",
+      news,
     });
   } catch (error) {
     return res.status(500).json({
-      message: `Error in fetching company due to ${error}.`,
+      message: `Error in fetching news due to ${error}.`,
     });
   }
 };
 
-const getAllCompany = async (req, res) => {
+const getAllNews = async (req, res) => {
   try {
-    const company = await CompanyPortfolioModel.find();
+    const news = await NewsModel.find();
 
-    if (company.length === 0) {
+    if (news.length === 0) {
       return res.status(400).json({
-        message: "No company is created. Kindly create one.",
+        message: "No news is created. Kindly create one.",
       });
     }
     return res.status(200).json({
-      message: "All company fetched successfully.",
-      company,
+      message: "All news fetched successfully.",
+      news,
     });
   } catch (error) {
     return res.status(500).json({
-      message: `Error in fetching all company due to ${error}.`,
+      message: `Error in fetching all news due to ${error}.`,
     });
   }
 };
 
-const deleteCompany = async (req, res) => {
+const deleteNews = async (req, res) => {
   try {
-    const company = await CompanyPortfolioModel.findByIdAndDelete(
-      req.params._id
-    );
+    const news = await NewsModel.findByIdAndDelete(req.params._id);
 
-    if (company.length === 0) {
+    if (news.length === 0) {
       return res.status(400).json({
-        message: "No company is created. Kindly create one.",
+        message: "No news is created. Kindly create one.",
       });
     }
     return res.status(200).json({
-      message: "Deleted company successfully.",
-      company,
+      message: "Deleted news successfully.",
+      news,
     });
   } catch (error) {
     return res.status(500).json({
-      message: `Error in deleting company due to ${error}.`,
+      message: `Error in deleting news due to ${error}.`,
     });
   }
 };
 
 module.exports = {
-  createCompany,
-  updateCompany,
-  getCompany,
-  getAllCompany,
-  deleteCompany,
+  createNews,
+  updateNews,
+  getNews,
+  getAllNews,
+  deleteNews,
 };

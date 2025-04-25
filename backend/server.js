@@ -37,6 +37,8 @@ app.use("/api/investor-letter", Route.investorLetterRoute);
 app.use("/api/team", Route.teamRoute);
 app.use("/api/fund-number", Route.fundNumberRoute);
 app.use("/api/company-portfolio", Route.companyPortfolioRoute);
+app.use("/api/news", Route.newsRoute);
+app.use("/api/news-category", Route.newsCategoryRoute);
 
 connectDb();
 

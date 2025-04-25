@@ -4,6 +4,8 @@ const investorLetterRoute = require("./investorLetterRoute");
 const teamRoute = require("./teamRoute");
 const fundNumberRoute = require("./fundNumberRoute");
 const companyPortfolioRoute = require("./companyPortfolioRoute");
+const newsRoute = require("./newsRoute");
+const newsCategoryRoute = require("./newsCategoryRoute");
 
 module.exports = {
   authRoute,
@@ -12,4 +14,6 @@ module.exports = {
   teamRoute,
   fundNumberRoute,
   companyPortfolioRoute,
+  newsRoute,
+  newsCategoryRoute,
 };
