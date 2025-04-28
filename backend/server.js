@@ -29,8 +29,8 @@ dotenv.config();
 
 const PORT = process.env.PORT || 8000;
 
-// Handle the static files
-app.use(express.static(path.resolve(__dirname, "build")));
+// Serve the static files from the React app
+app.use(express.static(path.join(__dirname, "frontend/build")));
 
 app.use(cors());
 
@@ -68,26 +68,9 @@ app.get("/sitemap.xml", (req, res) => {
   res.sendFile(path.join(__dirname, "public/sitemap.xml"));
 });
 
+// All other requests will be handled by React
 app.get("*", (req, res) => {
-  const context = {};
-
-  const jsx = React.createElement(AppServer, { location: req.url, context }); // 👈 NO JSX directly here
-  const html = ReactDOMServer.renderToString(jsx);
-
-  res.send(`
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>SSR with React and Express</title>
-      </head>
-      <body>
-        <div id="root">${html}</div>
-        <script src="/static/js/main.js"></script> 
-      </body>
-    </html>
-  `);
+  res.sendFile(path.join(__dirname, "frontend/build", "index.html"));
 });
 
 connectDb();
