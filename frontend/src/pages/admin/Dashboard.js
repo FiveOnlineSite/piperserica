@@ -4,17 +4,17 @@ import axios from "axios";
 import AdminLayout from "../../components/AdminLayout";
 
 const DashBoard = () => {
-  const [usersCount, setUsersCount] = useState("0");
-  const [serviceCount, setServiceCount] = useState("0");
-  const [projectCount, setProjectCount] = useState("0");
-  const [projectDetailCount, setProjectDetailCount] = useState("0");
-  const [passwordCount, setPasswordCount] = useState("0");
-  const [opportunityCount, setOpportunityCount] = useState("0");
-  const [applicationCount, setApplicationCount] = useState("0");
-  const [galleryCount, setGalleryCount] = useState("0");
-  const [galleryNameCount, setGalleryNameCount] = useState("0");
+  const [factsheetPresentationCount, setFactsheetPresentationCount] =
+    useState("0");
+  const [fundNumberCount, setFundNumberCount] = useState("0");
+  const [companyCount, setCompanyCount] = useState("0");
+  const [newsCategoryCount, setNewsCategoryCount] = useState("0");
+  const [newsCount, setNewsCount] = useState("0");
+  const [investorLetterCount, setInvestorLetterCount] = useState("0");
+  const [teamCount, setTeamCount] = useState("0");
+  const [factsheetFormCount, setFactsheetFormCount] = useState("0");
+  const [presentationFormCount, setPresentationFormCount] = useState("0");
   const [contactCount, setContactCount] = useState("0");
-  const [careerCount, setCareerCount] = useState("0");
 
   useEffect(() => {
     // Fetch service count
@@ -22,103 +22,107 @@ const DashBoard = () => {
     const apiUrl = process.env.REACT_APP_API_URL;
 
     axios
-      .get(`${apiUrl}/api/service`)
+      .get(`${apiUrl}/api/fund-number`)
       .then((response) => {
         const count = response.data.count;
-        console.log(response.data.count);
-        setServiceCount(count); // Update serviceCount state with count
+        console.log("Fund no count", response.data.count);
+        setFundNumberCount(count); // Update fundNumberCount state with count
       })
-      .catch((error) => console.error("Error fetching service count:", error));
+      .catch((error) =>
+        console.error("Error fetching fund number count:", error)
+      );
+
+    axios
+      .get(`${apiUrl}/api/factsheet-presentation`)
+      .then((response) => {
+        const count = response.data.count;
+        setFactsheetPresentationCount(count); // Update fundNumberCount state with count
+      })
+      .catch((error) =>
+        console.error("Error fetching factsheet presentation count:", error)
+      );
+
+    axios
+      .get(`${apiUrl}/api/company-portfolio`)
+      .then((response) => {
+        const count = response.data.count;
+
+        setCompanyCount(count); // Update fundNumberCount state with count
+      })
+      .catch((error) =>
+        console.error("Error fetching company portfolio count:", error)
+      );
+
+    axios
+      .get(`${apiUrl}/api/news-category`)
+      .then((response) => {
+        const count = response.data.count;
+
+        setNewsCategoryCount(count); // Update fundNumberCount state with count
+      })
+      .catch((error) =>
+        console.error("Error fetching news category  count:", error)
+      );
+
+    axios
+      .get(`${apiUrl}/api/news`)
+      .then((response) => {
+        const count = response.data.count;
+
+        setNewsCount(count); // Update fundNumberCount state with count
+      })
+      .catch((error) => console.error("Error fetching news count:", error));
+
+    axios
+      .get(`${apiUrl}/api/investor-letter`)
+      .then((response) => {
+        const count = response.data.count;
+
+        setInvestorLetterCount(count); // Update fundNumberCount state with count
+      })
+      .catch((error) =>
+        console.error("Error fetching investor letter count:", error)
+      );
 
     axios
       .get(`${apiUrl}/api/team`)
       .then((response) => {
         const count = response.data.count;
-        console.log(response.data.count);
-        setUsersCount(count); // Update serviceCount state with count
+
+        setTeamCount(count); // Update fundNumberCount state with count
       })
-      .catch((error) => console.error("Error fetching service count:", error));
+      .catch((error) => console.error("Error fetching team count:", error));
 
     axios
-      .get(`${apiUrl}/api/project`)
+      .get(`${apiUrl}/api/presentation-form`)
       .then((response) => {
         const count = response.data.count;
-        console.log(response.data.count);
-        setProjectCount(count); // Update serviceCount state with count
+
+        setPresentationFormCount(count); // Update fundNumberCount state with count
       })
-      .catch((error) => console.error("Error fetching service count:", error));
+      .catch((error) =>
+        console.error("Error fetching presentation form count:", error)
+      );
 
     axios
-      .get(`${apiUrl}/api/project_detail`)
+      .get(`${apiUrl}/api/factsheet-form`)
       .then((response) => {
         const count = response.data.count;
-        console.log(response.data.count);
-        setProjectDetailCount(count); // Update serviceCount state with count
-      })
-      .catch((error) => console.error("Error fetching service count:", error));
 
-    axios
-      .get(`${apiUrl}/api/email`)
-      .then((response) => {
-        const count = response.data.count;
-        console.log(response.data.count);
-        setPasswordCount(count); // Update serviceCount state with count
+        setFactsheetFormCount(count); // Update fundNumberCount state with count
       })
-      .catch((error) => console.error("Error fetching service count:", error));
-
-    axios
-      .get(`${apiUrl}/api/opportunity`)
-      .then((response) => {
-        const count = response.data.count;
-        console.log(response.data.count);
-        setOpportunityCount(count); // Update serviceCount state with count
-      })
-      .catch((error) => console.error("Error fetching service count:", error));
-
-    axios
-      .get(`${apiUrl}/api/jobapplication`)
-      .then((response) => {
-        const count = response.data.count;
-        console.log(response.data.count);
-        setApplicationCount(count); // Update serviceCount state with count
-      })
-      .catch((error) => console.error("Error fetching service count:", error));
-
-    axios
-      .get(`${apiUrl}/api/gallery_name`)
-      .then((response) => {
-        const count = response.data.count;
-        console.log(response.data.count);
-        setGalleryNameCount(count); // Update serviceCount state with count
-      })
-      .catch((error) => console.error("Error fetching service count:", error));
-
-    axios
-      .get(`${apiUrl}/api/gallery`)
-      .then((response) => {
-        const count = response.data.count;
-        console.log(response.data.count);
-        setGalleryCount(count); // Update serviceCount state with count
-      })
-      .catch((error) => console.error("Error fetching service count:", error));
+      .catch((error) =>
+        console.error("Error fetching factsheet form count:", error)
+      );
 
     axios
       .get(`${apiUrl}/api/contact`)
       .then((response) => {
         const count = response.data.count;
-        console.log(response.data.count);
-        setContactCount(count); // Update serviceCount state with count
-      })
-      .catch((error) => console.error("Error fetching service count:", error));
 
-    axios
-      .get(`${apiUrl}/api/career`)
-      .then((response) => {
-        const count = response.data.count;
-        console.log(response.data.count);
-        setCareerCount(count); // Update serviceCount state with count
+        setContactCount(count); // Update fundNumberCount state with count
       })
-      .catch((error) => console.error("Error fetching service count:", error));
+      .catch((error) => console.error("Error fetching contact count:", error));
   }, []);
 
   return (
@@ -126,88 +130,91 @@ const DashBoard = () => {
       <div className="container">
         <div className="row">
           <div className="col-md-3">
-            <NavLink to="/admin/services" title="View Services">
+            <NavLink
+              to="/admin/factsheet-presentation"
+              title="View Factsheet / Presentation"
+            >
               <div className="dashboardcard">
                 <h2>
-                  {serviceCount}
+                  {factsheetPresentationCount}
                   <span>
                     <i className="fa fa-eye" aria-hidden="true"></i>
                   </span>
                 </h2>
-                <h6>Total Services</h6>
+                <h6>Total Factsheet / Presentation</h6>
               </div>
             </NavLink>
           </div>
 
           <div className="col-md-3">
-            <NavLink to="/admin/gallery" title="View Service Gallery">
+            <NavLink to="/admin/fund-number" title="View Fund Numbers">
               <div className="dashboardcard">
                 <h2>
-                  {galleryCount}
+                  {fundNumberCount}
                   <span>
                     <i className="fa fa-eye" aria-hidden="true"></i>
                   </span>
                 </h2>
-                <h6>Total Service Galleries</h6>
+                <h6>Total Fund Numbers</h6>
               </div>
             </NavLink>
           </div>
 
           <div className="col-md-3">
             <NavLink
-              to="/admin/gallery_name"
-              title="View Service Gallery Names"
+              to="/admin/company-portfolio"
+              title="View Company Portfolio"
             >
               <div className="dashboardcard">
                 <h2>
-                  {galleryNameCount}
+                  {companyCount}
                   <span>
                     <i className="fa fa-eye" aria-hidden="true"></i>
                   </span>
                 </h2>
-                <h6>Total Service Gallery Names</h6>
+                <h6>Total Company Portfolio</h6>
               </div>
             </NavLink>
           </div>
 
           <div className="col-md-3">
-            <NavLink to="/admin/project" title="View Projects">
+            <NavLink to="/admin/news-category" title="View News Category">
               <div className="dashboardcard">
                 <h2>
-                  {projectCount}
+                  {newsCategoryCount}
                   <span>
                     <i className="fa fa-eye" aria-hidden="true"></i>
                   </span>
                 </h2>
-                <h6>Total Projects</h6>
+                <h6>Total News Category</h6>
               </div>
             </NavLink>
           </div>
 
           <div className="col-md-3">
-            <NavLink to="/admin/project_detail" title="View Projects">
+            <NavLink to="/admin/news" title="View News & More">
               <div className="dashboardcard">
                 <h2>
-                  {projectDetailCount}
+                  {newsCount}
                   <span>
                     <i className="fa fa-eye" aria-hidden="true"></i>
                   </span>
                 </h2>
-                <h6>Total Projects Details</h6>
+                <h6>Total News & More</h6>
               </div>
             </NavLink>
           </div>
 
           <div className="col-md-3">
-            <NavLink to="/admin/password" title="View Passwords">
+            <NavLink to="/admin/investor-letter" title="View Investor Letter">
               <div className="dashboardcard">
                 <h2>
-                  {passwordCount}
+                  {investorLetterCount}
                   <span>
                     <i className="fa fa-eye" aria-hidden="true"></i>
                   </span>
                 </h2>
-                <h6>Total Passwords</h6>
+                <h6>Total Investor Letter</h6>
               </div>
             </NavLink>
           </div>
@@ -216,7 +223,7 @@ const DashBoard = () => {
             <NavLink to="/admin/team" title="View Team Members">
               <div className="dashboardcard">
                 <h2>
-                  {usersCount}
+                  {teamCount}
                   <span>
                     <i className="fa fa-eye" aria-hidden="true"></i>
                   </span>
@@ -227,35 +234,7 @@ const DashBoard = () => {
           </div>
 
           <div className="col-md-3">
-            <NavLink to="/admin/opportunities" title="View Opportunities">
-              <div className="dashboardcard">
-                <h2>
-                  {opportunityCount}
-                  <span>
-                    <i className="fa fa-eye" aria-hidden="true"></i>
-                  </span>
-                </h2>
-                <h6>Total Opportunities</h6>
-              </div>
-            </NavLink>
-          </div>
-
-          <div className="col-md-3">
-            <NavLink to="/admin/applications" title="View Appllications">
-              <div className="dashboardcard">
-                <h2>
-                  {applicationCount}
-                  <span>
-                    <i className="fa fa-eye" aria-hidden="true"></i>
-                  </span>
-                </h2>
-                <h6>Total Applications</h6>
-              </div>
-            </NavLink>
-          </div>
-
-          <div className="col-md-3">
-            <NavLink to="/admin/contact" title="View Contacts">
+            <NavLink to="/admin/contact-us" title="View Contacts">
               <div className="dashboardcard">
                 <h2>
                   {contactCount}
@@ -268,19 +247,36 @@ const DashBoard = () => {
             </NavLink>
           </div>
 
-          {/* <div className="col-md-3">
-            <NavLink to="/admin/career" title="View Careers">
+          <div className="col-md-3">
+            <NavLink to="/admin/factsheet-form" title="View Factsheet Forms">
               <div className="dashboardcard">
                 <h2>
-                  {careerCount}
+                  {factsheetFormCount}
                   <span>
                     <i className="fa fa-eye" aria-hidden="true"></i>
                   </span>
                 </h2>
-                <h6>Total Careers</h6>
+                <h6>Total Factsheet Forms</h6>
               </div>
             </NavLink>
-          </div> */}
+          </div>
+
+          <div className="col-md-3">
+            <NavLink
+              to="/admin/presentation-form"
+              title="View Presentation Forms"
+            >
+              <div className="dashboardcard">
+                <h2>
+                  {presentationFormCount}
+                  <span>
+                    <i className="fa fa-eye" aria-hidden="true"></i>
+                  </span>
+                </h2>
+                <h6>Total Presentation Forms</h6>
+              </div>
+            </NavLink>
+          </div>
         </div>
       </div>
       {/* </div> */}

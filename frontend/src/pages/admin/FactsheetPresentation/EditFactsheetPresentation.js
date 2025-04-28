@@ -5,84 +5,73 @@ import axios from "axios";
 
 const EditFactsheetPresentation = () => {
   const { id } = useParams();
-  const [gallery, setGallery] = useState(null);
-  const [galleryNames, setGalleryNames] = useState([]);
-  const [selectedService, setSelectedService] = useState("");
-  const [selectedGallery, setSelectedGallery] = useState("");
-  const [serviceChanged, setServiceChanged] = useState(false); // Track if service name has been changed
-  // const [media, setMedia] = useState({ iframe: "", file: null });
-  // const [isPublic, setIsPublic] = useState(true);
+  const [factsheetPresentation, setFactsheetPresentation] = useState(null);
+  const [selectedFactsheetPresentation, setSelectedFactsheetPresentation] =
+    useState("");
+  const [selectedFundName, setSelectedFundName] = useState("");
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState("");
 
   const [formData, setFormData] = useState({
-    service_name: "",
-    gallery_name: "",
-    media: {
-      file: null,
-      iframe: "",
+    fund_name: "",
+    option: "",
+    file_upload: {
+      filename: "",
       filepath: "",
     },
   });
 
   useEffect(() => {
-    const fetchGallery = async () => {
+    const fetchFactsheetPresentation = async () => {
       const apiUrl = process.env.REACT_APP_API_URL;
 
       try {
         const response = await axios({
           method: "GET",
           baseURL: `${apiUrl}/api/`,
-          url: `gallery/${id}`,
+          url: `factsheet-presentation/${id}`,
         });
-        const galleryData = response.data.gallery;
-        setGallery(galleryData);
-        setSelectedService(galleryData.service_name);
-        setSelectedGallery(galleryData.gallery_name);
-
-        // Set media state from galleryData
-        // setMedia(galleryData.media);
+        const factsheetPresentationData = response.data.factsheetPresentation;
+        setFactsheetPresentation(factsheetPresentationData);
+        setSelectedFundName(factsheetPresentation.fund_name);
+        setSelectedFactsheetPresentation(factsheetPresentation.option);
+        // Set media state from factsheetPresentationData
+        // setMedia(factsheetPresentationData.media);
 
         // Set formData based on gallery media type
         setFormData({
-          service_name: galleryData.service_name,
-          gallery_name: galleryData.gallery_name,
-          media: {
-            file: null,
-            iframe: galleryData.media.iframe || "",
-            filepath: galleryData.media.filepath || "",
+          fund_name: factsheetPresentationData.fund_name,
+          option: factsheetPresentationData.option,
+          file_upload: {
+            filename: factsheetPresentationData.file_upload[0]?.filename || "",
+            filepath: factsheetPresentationData.file_upload[0]?.filepath || "",
           },
-          isPublic: galleryData.isPublic,
         });
-
-        // Fetch gallery names based on the selected service
-        fetchGalleryNames(galleryData.service_name);
       } catch (error) {
-        console.error("Error fetching gallery:", error);
+        console.error("Error fetching factsheet / presentation:", error);
       }
     };
 
-    fetchGallery();
+    fetchFactsheetPresentation();
   }, [id]);
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
-    if (name === "media") {
+    if (name === "file_upload") {
       if (files && files.length > 0) {
         setFormData({
           ...formData,
-          media: {
+          file_upload: {
             file: files[0],
             filename: files[0].name,
             filepath: URL.createObjectURL(files[0]),
-            iframe: "",
           },
         });
       } else {
         setFormData({
           ...formData,
-          media: {
-            ...formData.media,
+          file_upload: {
+            ...formData.file_upload,
             iframe: value,
           },
         });
@@ -95,43 +84,9 @@ const EditFactsheetPresentation = () => {
     }
   };
 
-  const fetchGalleryNames = async (service_name) => {
-    try {
-      const apiUrl = process.env.REACT_APP_API_URL;
-
-      const response = await axios.get(
-        `${apiUrl}/api/gallery_name/gallerynames?service_name=${service_name}`
-      );
-
-      setGalleryNames(response.data.galleryNames);
-      // setSelectedGallery(""); // Reset selected gallery when service changes
-    } catch (error) {
-      console.error("Error fetching gallery names:", error);
-    }
-  };
-
   useEffect(() => {
-    if (serviceChanged) {
-      fetchGalleryNames(selectedService);
-    }
-  }, [selectedService, serviceChanged]);
-
-  const handleServiceChange = (e) => {
-    setSelectedService(e.target.value);
-    setServiceChanged(true); // Mark that the service name has been changed
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      service_name: e.target.value,
-    }));
-  };
-
-  const handleGalleryChange = (e) => {
-    setSelectedGallery(e.target.value);
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      gallery_name: e.target.value,
-    }));
-  };
+    setFactsheetPresentation(selectedFactsheetPresentation);
+  }, [selectedFactsheetPresentation]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -139,14 +94,12 @@ const EditFactsheetPresentation = () => {
     try {
       const formDataToSend = new FormData();
 
-      formDataToSend.append("service_name", selectedService);
+      formDataToSend.append("option", selectedFactsheetPresentation);
 
-      formDataToSend.append("gallery_name", selectedGallery);
+      formDataToSend.append("fund_name", selectedFundName);
 
-      if (formData.media.file) {
-        formDataToSend.append("media", formData.media.file);
-      } else if (formData.media.iframe.trim()) {
-        formDataToSend.append("media", formData.media.iframe.trim());
+      if (formData.file_upload.file) {
+        formDataToSend.append("file_upload", formData.file_upload.file);
       }
 
       const access_token = localStorage.getItem("access_token");
@@ -188,7 +141,10 @@ const EditFactsheetPresentation = () => {
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="theme-form">
                 <label>Fund Name</label>
-                <select value={selectedService} onChange={handleServiceChange}>
+                <select
+                  value={formData.fund_name}
+                  // onChange={handleServiceChange}
+                >
                   <option value="">Select a Fund</option>
                   <option value="PMS">PMS</option>
                   <option value="FPI">FPI</option>
@@ -199,7 +155,10 @@ const EditFactsheetPresentation = () => {
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="theme-form">
                 <label>Factsheet / Presentation</label>
-                <select value={selectedService} onChange={handleServiceChange}>
+                <select
+                  value={formData.option}
+                  // onChange={handleServiceChange}
+                >
                   <option value="">Select a option</option>
                   <option value="Factsheet">Factsheet</option>
                   <option value="Presentation">Presentation</option>
@@ -211,16 +170,7 @@ const EditFactsheetPresentation = () => {
               <div className="theme-form">
                 <label>File Upload</label>
 
-                <input type="file" name="media" onChange={handleChange} />
-
-                {formData.media.filepath && (
-                  <img
-                    className="form-profile"
-                    src={`${process.env.REACT_APP_API_URL}/${formData.media.filepath}`}
-                    alt={`${formData.media.filename}`}
-                    loading="lazy"
-                  />
-                )}
+                <input type="file" name="file_upload" />
               </div>
             </div>
 

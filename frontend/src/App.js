@@ -50,6 +50,7 @@ import ContactUs from "./pages/admin/ContactUs";
 import FactSheetForm from "./pages/admin/FactSheetForm";
 import PresentationForm from "./pages/admin/PresentationForm";
 import GatewaySvg from "./components/GatewaySvg";
+import EditFactsheetPresentation from "./pages/admin/FactsheetPresentation/EditFactsheetPresentation";
 
 function App() {
   return (
@@ -104,8 +105,8 @@ function App() {
             element={<AddFactsheetPresentation />}
           />
           <Route
-            path="edit/factsheet-presentation"
-            element={<AddFactsheetPresentation />}
+            path="edit/factsheet-presentation/:id"
+            element={<EditFactsheetPresentation />}
           />
           <Route
             path="factsheet-presentation"
@@ -138,9 +139,9 @@ function App() {
 
           <Route path="contact-us" element={<ContactUs />} />
 
-          <Route path="factsheet" element={<FactSheetForm />} />
+          <Route path="factsheet-form" element={<FactSheetForm />} />
 
-          <Route path="presentation" element={<PresentationForm />} />
+          <Route path="presentation-form" element={<PresentationForm />} />
         </Route>
       </Routes>
     </Router>

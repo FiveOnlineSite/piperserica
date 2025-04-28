@@ -4,12 +4,12 @@ import { NavLink, Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const FactsheetPresentation = () => {
-  const [galleries, setGalleries] = useState([]);
+  const [factsheetPresentation, setFactsheetPresentation] = useState([]);
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchGalleries = async () => {
+    const fetchFactsheetPresentation = async () => {
       try {
         const apiUrl = process.env.REACT_APP_API_URL;
 
@@ -17,16 +17,16 @@ const FactsheetPresentation = () => {
         const response = await axios({
           method: "GET",
           baseURL: `${apiUrl}/api/`,
-          url: "FactsheetPresentation",
+          url: "factsheet-presentation",
         });
-        console.log(response.data.galleries);
-        setGalleries(response.data.galleries);
+        console.log(response.data.factsheetPresentation);
+        setFactsheetPresentation(response.data.factsheetPresentation);
       } catch (error) {
-        console.error("Error fetching users:", error);
+        console.error("Error fetching factsheet / presentation:", error);
       }
     };
 
-    fetchGalleries();
+    fetchFactsheetPresentation();
   }, []);
 
   const handleDelete = async (id) => {
@@ -37,26 +37,26 @@ const FactsheetPresentation = () => {
       const response = await axios({
         method: "DELETE",
         baseURL: `${apiUrl}/api/`,
-        url: `FactsheetPresentation/${id}`,
+        url: `factsheet-presentation/${id}`,
         headers: {
           Authorization: `Bearer ${access_token}`,
         },
       });
-      setGalleries(null); // Update user state to null after deletion
+      setFactsheetPresentation(null); // Update user state to null after deletion
       // setTimeout(() => {
       //   navigate("/admin/FactsheetPresentation");
       // }, 2000);
       console.log(response.data);
-      setGalleries(
-        galleries.filter(
-          (FactsheetPresentation) => FactsheetPresentation._id !== id
+      setFactsheetPresentation(
+        factsheetPresentation.filter(
+          (factsheetPresentation) => factsheetPresentation._id !== id
         )
       );
       setTimeout(() => {
         navigate("/admin/FactsheetPresentation");
       }, 3000);
     } catch (error) {
-      console.error("Error deleting FactsheetPresentation:", error);
+      console.error("Error deleting Factsheet Presentation:", error);
     }
   };
   return (
@@ -65,7 +65,7 @@ const FactsheetPresentation = () => {
         <h2>
           Factsheet / Presentation
           <NavLink to="/admin/add/factsheet-presentation" className="theme-cta">
-            <i class="las la-plus-circle"></i>
+            <i className="las la-plus-circle"></i>
             Add Factsheet / Presentation
           </NavLink>
         </h2>
@@ -85,41 +85,38 @@ const FactsheetPresentation = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {galleries &&
-                    galleries.map((FactsheetPresentation) => (
-                      <tr key={FactsheetPresentation._id}>
-                        <td>{FactsheetPresentation.service_name}</td>
+                  {factsheetPresentation &&
+                    factsheetPresentation.map((factsheetPresentation) => (
+                      <tr key={factsheetPresentation._id}>
+                        <td>{factsheetPresentation.fund_name}</td>
                         <td className="text-center">
-                          {FactsheetPresentation.FactsheetPresentation_name}
+                          {factsheetPresentation.option}
                         </td>
                         <td className="table-profile-img text-center">
-                          {FactsheetPresentation.type === "image" ? (
-                            <img
-                              src={`${process.env.REACT_APP_API_URL}/${FactsheetPresentation.media.filepath}`} // Assuming filepath contains the path to the image
-                              alt={`${FactsheetPresentation.media.filename}`}
-                              style={{ width: "50px", height: "50px" }}
-                              loading="lazy"
-                            />
-                          ) : (
-                            <span>{FactsheetPresentation.media.iframe}</span>
-                          )}
+                          <a
+                            href={factsheetPresentation.file_upload[0].filepath}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {factsheetPresentation.file_upload[0].filename}
+                          </a>
                         </td>
                         <td className="text-center">
                           <Link
-                            to={`/admin/edit/FactsheetPresentation/${FactsheetPresentation._id}`}
+                            to={`/admin/edit/factsheet-presentation/${factsheetPresentation._id}`}
                             title="Edit"
                           >
-                            <i class="las la-pencil-alt"></i>
+                            <i className="las la-pencil-alt"></i>
                           </Link>
                         </td>
                         <td className="text-center">
                           <button
                             className="delete-btn"
                             onClick={() =>
-                              handleDelete(FactsheetPresentation._id)
+                              handleDelete(factsheetPresentation._id)
                             }
                           >
-                            <i class="las la-trash"></i>{" "}
+                            <i className="las la-trash"></i>{" "}
                           </button>
                         </td>
                       </tr>
