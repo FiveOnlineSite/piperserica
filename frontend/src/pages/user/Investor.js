@@ -538,7 +538,11 @@ const Investor = () => {
                         {item.funds_list?.map((fund, fundIndex) => (
                           <div className="funds-container" key={fundIndex}>
                             {/* Add key here */}
-                            <NavLink to={fund.link} className="mt-2">
+                            <NavLink
+                              to={fund.link}
+                              className="mt-2"
+                              id="offshore-fund"
+                            >
                               <div className="funds-div">
                                 <h5>{fund.funds}</h5>
                                 <i className="fa-solid fa-arrow-right"></i>
@@ -571,6 +575,7 @@ const Investor = () => {
                   <NavLink
                     to="/investor-letters"
                     className="banner-btn blue-btn mt-0"
+                    id="investor-letters"
                   >
                     Discover all
                   </NavLink>

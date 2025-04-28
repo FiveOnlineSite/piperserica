@@ -45,7 +45,11 @@ const MarketFunds = () => {
                   and infrastructure, resulting in a broader progressive impact
                   within Asia.
                 </p> */}
-                <NavLink to="/investor-letters" className="banner-btn">
+                <NavLink
+                  to="/investor-letters"
+                  className="banner-btn"
+                  id="investor-letters"
+                >
                   Investor Letters
                   <i className="fa-solid fa-arrow-right"></i>
                 </NavLink>
@@ -146,6 +150,7 @@ const MarketFunds = () => {
                 <NavLink
                   to="/public-market/piper-serica-leader-portfolio"
                   className="banner-btn blue-btn tabs-btn mt-0"
+                  id="pms-fund"
                 >
                   View Fund
                   <i className="fa-solid fa-arrow-right"></i>

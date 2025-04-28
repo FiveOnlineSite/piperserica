@@ -68,10 +68,12 @@ const NRIInvestor = () => {
         {
           funds: "Piper Serica Numero Uno India Fund (Offshore Fund)",
           link: "/public-market/piper-serica-nemero-uno-india-fund",
+          btn_id: "offshore-fund",
         },
         {
           funds: "Piper Serica Leader Portfolio (PMS)",
           link: "/public-market/piper-serica-leader-portfolio",
+          btn_id: "pms-fund",
         },
       ],
     },
@@ -535,7 +537,11 @@ const NRIInvestor = () => {
                         {item.funds_list?.map((fund, fundIndex) => (
                           <div className="funds-container" key={fundIndex}>
                             {/* Add key here */}
-                            <NavLink to={fund.link} className="mt-2">
+                            <NavLink
+                              to={fund.link}
+                              className="mt-2"
+                              id={fund.btn_id}
+                            >
                               <div className="funds-div">
                                 <h5>{fund.funds}</h5>
                                 <i className="fa-solid fa-arrow-right"></i>
@@ -568,6 +574,7 @@ const NRIInvestor = () => {
                   <NavLink
                     to="/investor-letters"
                     className="banner-btn blue-btn mt-0"
+                    id="investor-letters"
                   >
                     Discover all
                   </NavLink>

@@ -99,10 +99,18 @@ const TopBar = ({ closeOffcanvas }) => {
             <option value="" disabled>
               Select a investor type
             </option>
-            <option value="foreign">Foreign Investor</option>
-            <option value="nri">NRI Investor</option>
-            <option value="family">Family Office & Indian Investor</option>
-            <option value="startup">Startup Founder & Entrepreneur</option>
+            <option value="foreign" id="foreign-investor">
+              Foreign Investor
+            </option>
+            <option value="nri" id="nri-investor">
+              NRI Investor
+            </option>
+            <option value="family" id="indian-investor">
+              Family Office & Indian Investor
+            </option>
+            <option value="startup" id="startup-founder">
+              Startup Founder & Entrepreneur
+            </option>
           </select>
         </div>
       </div>

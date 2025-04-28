@@ -72,6 +72,7 @@ const PrivateMarket = () => {
                 <NavLink
                   to="/private-market/piper-serica-angel-fund"
                   className="banner-btn blue-btn tabs-btn mt-0"
+                  id="cat1-angel-fund"
                 >
                   View Fund
                   <i className="fa-solid fa-arrow-right"></i>

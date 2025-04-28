@@ -50,6 +50,7 @@ const Home = () => {
                           <NavLink
                             to="/foreign-investor"
                             className="content-div"
+                            id="foreign-investor"
                           >
                             <div className="content-div-title">
                               <h2>Foreign Investor</h2>
@@ -71,7 +72,11 @@ const Home = () => {
                           </NavLink>
                         </div>
                         <div className="col-lg-3">
-                          <NavLink to="/nri-investor" className="content-div">
+                          <NavLink
+                            to="/nri-investor"
+                            className="content-div"
+                            id="nri-investor"
+                          >
                             <div className="content-div-title">
                               <h2>NRI Investor</h2>
                               <i className="fa-solid fa-arrow-right"></i>
@@ -95,6 +100,7 @@ const Home = () => {
                           <NavLink
                             to="/family-office-and-indian-investor"
                             className="content-div"
+                            id="indian-investor"
                           >
                             <div className="content-div-title">
                               <h2>Family Office & Indian Investor</h2>
@@ -120,6 +126,7 @@ const Home = () => {
                           <NavLink
                             to="/startup-founder-entrepreneur"
                             className="content-div"
+                            id="startup-founder"
                           >
                             <div className="content-div-title">
                               <h2>Startup Founder & Entrepreneur</h2>

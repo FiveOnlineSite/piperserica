@@ -712,7 +712,11 @@ const Header = () => {
                     </NavLink>
                   </li> */}
                   <li>
-                    <NavLink className="dropdown-item" to="/investor-letters">
+                    <NavLink
+                      className="dropdown-item"
+                      to="/investor-letters"
+                      id="investor-letters"
+                    >
                       Investor Letters
                     </NavLink>
                   </li>
@@ -729,7 +733,7 @@ const Header = () => {
                 </ul>
               </li>
               <li className="nav-item">
-                <NavLink className="nav-link" to="/careers">
+                <NavLink className="nav-link" to="/careers" id="careers">
                   Career
                 </NavLink>
               </li>
@@ -968,7 +972,11 @@ const Header = () => {
                       </NavLink>
                     </li> */}
                     <li>
-                      <NavLink className="dropdown-item" to="/investor-letters">
+                      <NavLink
+                        className="dropdown-item"
+                        to="/investor-letters"
+                        id="investor-letters"
+                      >
                         Investor Letters
                       </NavLink>
                     </li>
@@ -983,6 +991,7 @@ const Header = () => {
                   <NavLink
                     className="nav-link"
                     to="/careers"
+                    id="careers"
                     // onClick={closeOffcanvas}
                   >
                     Career
