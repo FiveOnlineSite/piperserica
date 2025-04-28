@@ -108,6 +108,7 @@ const getFundNumber = async (req, res) => {
     }
     return res.status(200).json({
       message: "Fund number data fetched successfully.",
+      count: fundNumber.length,
       fundNumber,
     });
   } catch (error) {

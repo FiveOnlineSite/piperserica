@@ -11,6 +11,12 @@ const PresentationFormSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    fund_name: {
+      type: String,
+      enum: ["", "PMS", "FPI"],
+      default: "",
+      required: true,
+    },
   },
   {
     timestamps: true,

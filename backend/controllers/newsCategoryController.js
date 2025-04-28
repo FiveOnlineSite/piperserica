@@ -68,7 +68,7 @@ const updateNewsCategory = async (req, res) => {
 const getNewsCategory = async (req, res) => {
   try {
     const newsCategory = await NewsCategoryModel.findById(req.params._id);
-    console.log(req.params._id);
+
     if (!newsCategory) {
       return res.status(400).json({
         message: "No news category is created with this id.",
@@ -99,6 +99,7 @@ const getAllNewsCategory = async (req, res) => {
 
     return res.status(200).json({
       message: "All news categories fetched successfully.",
+      count: newsCategory.length,
       newsCategory,
     });
   } catch (error) {

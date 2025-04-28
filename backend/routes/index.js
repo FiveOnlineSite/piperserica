@@ -6,6 +6,9 @@ const fundNumberRoute = require("./fundNumberRoute");
 const companyPortfolioRoute = require("./companyPortfolioRoute");
 const newsRoute = require("./newsRoute");
 const newsCategoryRoute = require("./newsCategoryRoute");
+const contactRoute = require("./contactRoute");
+const factsheetFormRoute = require("./factsheetFormRoute");
+const presentationFormRoute = require("./presentationFormRoute");
 
 module.exports = {
   authRoute,
@@ -16,4 +19,7 @@ module.exports = {
   companyPortfolioRoute,
   newsRoute,
   newsCategoryRoute,
+  contactRoute,
+  factsheetFormRoute,
+  presentationFormRoute,
 };

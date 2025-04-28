@@ -55,7 +55,7 @@ const createNews = async (req, res) => {
 
 const updateNews = async (req, res) => {
   try {
-    const { thumbnail, title, date, news_category_id, news_url } = req.body;
+    const { title, date, news_category_id, news_url } = req.body;
 
     const existingNews = await NewsModel.findById(req.params._id);
 
@@ -63,33 +63,37 @@ const updateNews = async (req, res) => {
       return res.status(404).json({ message: "News data not found." });
     }
 
-    let mediaData = existingNews.thumbnail;
+    // let mediaData = existingNews.thumbnail;
+
+    let updatedFields = {};
     const file = req.file;
-    {
-      if (file) {
-        const fileExtensionName = path.extname(file.originalname).toLowerCase();
+    if (file) {
+      const fileExtensionName = path.extname(file.originalname).toLowerCase();
 
-        if (fileExtensionName !== ".webp") {
-          return res.status(400).json({
-            message: "Unsupported image type. Please upload a webp image.",
-          });
-        }
-
-        fileData = {
-          filename: req.file.originalname,
-          filepath: req.file.path,
-        };
+      if (fileExtensionName !== ".webp") {
+        return res.status(400).json({
+          message: "Unsupported image type. Please upload a webp image.",
+        });
       }
+
+      fileData = {
+        filename: req.file.originalname,
+        filepath: req.file.path,
+      };
+
+      updatedFields.thumbnail = [fileData];
     }
 
-    // Create object with updated fields
-    const updatedFields = {
-      ...(title && { title }),
-      ...(date && { date }),
-      ...(news_category_id && { news_category_id }),
-      ...(news_url && { news_url }),
-      ...(file && { thumbnail: mediaData }),
-    };
+    // Handle text fields
+    if (title) updatedFields.title = title;
+    if (date) updatedFields.date = date;
+    if (news_category_id) updatedFields.news_category_id = news_category_id;
+    if (news_url) updatedFields.news_url = news_url;
+
+    // If no new thumbnail uploaded, preserve old one
+    if (!file) {
+      updatedFields.thumbnail = existingNews.thumbnail;
+    }
 
     const updatedNews = await NewsModel.findByIdAndUpdate(
       req.params._id,
@@ -139,6 +143,7 @@ const getAllNews = async (req, res) => {
     }
     return res.status(200).json({
       message: "All news fetched successfully.",
+      count: news.length,
       news,
     });
   } catch (error) {

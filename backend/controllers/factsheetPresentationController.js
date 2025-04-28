@@ -142,6 +142,7 @@ const getAllFactsheetPresentation = async (req, res) => {
     }
     return res.status(200).json({
       message: "All Factsheet / Presentation fetched successfully.",
+      count: factsheetPresentation.length,
       factsheetPresentation,
     });
   } catch (error) {

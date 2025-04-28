@@ -56,7 +56,7 @@ const createCompany = async (req, res) => {
 
 const updateCompany = async (req, res) => {
   try {
-    const { logo, industry, company_name, company_description, company_url } =
+    const { industry, company_name, company_description, company_url } =
       req.body;
 
     const existingCompany = await CompanyPortfolioModel.findById(
@@ -67,33 +67,38 @@ const updateCompany = async (req, res) => {
       return res.status(404).json({ message: "Company data not found." });
     }
 
-    let mediaData = existingCompany.logo;
+    // let mediaData = existingCompany.logo;
+    let updatedFields = {};
     const file = req.file;
-    {
-      if (file) {
-        const fileExtensionName = path.extname(file.originalname).toLowerCase();
 
-        if (fileExtensionName !== ".webp") {
-          return res.status(400).json({
-            message: "Unsupported image type. Please upload a webp image.",
-          });
-        }
+    if (file) {
+      const fileExtensionName = path.extname(file.originalname).toLowerCase();
 
-        fileData = {
-          filename: req.file.originalname,
-          filepath: req.file.path,
-        };
+      if (fileExtensionName !== ".webp") {
+        return res.status(400).json({
+          message: "Unsupported image type. Please upload a webp image.",
+        });
       }
+
+      fileData = {
+        filename: req.file.originalname,
+        filepath: req.file.path,
+      };
+
+      updatedFields.logo = [fileData];
     }
 
-    // Create object with updated fields
-    const updatedFields = {
-      ...(industry && { industry }),
-      ...(company_name && { company_name }),
-      ...(company_description && { company_description }),
-      ...(company_url && { company_url }),
-      ...(file && { logo: mediaData }),
-    };
+    // Handle text fields
+    if (industry) updatedFields.industry = industry;
+    if (company_name) updatedFields.company_name = company_name;
+    if (company_description)
+      updatedFields.company_description = company_description;
+    if (company_url) updatedFields.company_url = company_url;
+
+    // If no new logo uploaded, preserve old one
+    if (!file) {
+      updatedFields.logo = existingNews.logo;
+    }
 
     const updatedCompany = await CompanyPortfolioModel.findByIdAndUpdate(
       req.params._id,
@@ -143,6 +148,7 @@ const getAllCompany = async (req, res) => {
     }
     return res.status(200).json({
       message: "All company fetched successfully.",
+      count: company.length,
       company,
     });
   } catch (error) {

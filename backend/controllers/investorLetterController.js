@@ -138,6 +138,7 @@ const getAllInvestorLetter = async (req, res) => {
     }
     return res.status(200).json({
       message: "All Investor Letter fetched successfully.",
+      count: investorLetter.length,
       investorLetter,
     });
   } catch (error) {
