@@ -1,3 +1,15 @@
+require.extensions[".css"] = function () {};
+require.extensions[".scss"] = function () {};
+require.extensions[".svg"] = function () {};
+require.extensions[".png"] = function () {};
+require.extensions[".jpg"] = function () {};
+require.extensions[".jpeg"] = function () {};
+
+require("@babel/register")({
+  ignore: [/node_modules/],
+  presets: ["@babel/preset-env", "@babel/preset-react"],
+});
+
 const express = require("express");
 const dotenv = require("dotenv");
 const connectDb = require("./config/db");
@@ -6,14 +18,9 @@ const cors = require("cors");
 const path = require("path");
 const React = require("react");
 const ReactDOMServer = require("react-dom/server");
-const { StaticRouter } = require("react-router-dom");
-const App = require("../frontend/src/App");
-const { generateSitemap } = require("./generate-sitemap");
+const AppServer = require("./appserver").default; // 👈 import your server-side App component
 
-require("babel-register")({
-  ignore: [/node_modules/],
-  presets: ["@babel/preset-env", "@babel/preset-react"],
-});
+const { generateSitemap } = require("./generate-sitemap");
 
 const app = express();
 app.use(express.json());
@@ -40,37 +47,6 @@ app.use((req, res, next) => {
 // app.use(express.static(path.join(__dirname, "../frontend/build")));
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-// SSR route
-app.get("*", (req, res) => {
-  // Create the context for React Router
-  const context = {};
-
-  // Render the React App to an HTML string
-  const jsx = (
-    <StaticRouter location={req.url} context={context}>
-      <App />
-    </StaticRouter>
-  );
-
-  const html = ReactDOMServer.renderToString(jsx);
-
-  // Send the rendered HTML along with the full page
-  res.send(`
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>SSR with React and Express</title>
-      </head>
-      <body>
-        <div id="root">${html}</div>
-        <script src="/static/js/main.js"></script> <!-- Your React bundle -->
-      </body>
-    </html>
-  `);
-});
-
 app.get("/api", (req, res) => {
   res.send("This is backend");
 });
@@ -90,6 +66,28 @@ app.use("/api/presentation-form", Route.presentationFormRoute);
 // Serve the sitemap at /sitemap.xml
 app.get("/sitemap.xml", (req, res) => {
   res.sendFile(path.join(__dirname, "public/sitemap.xml"));
+});
+
+app.get("*", (req, res) => {
+  const context = {};
+
+  const jsx = React.createElement(AppServer, { location: req.url, context }); // 👈 NO JSX directly here
+  const html = ReactDOMServer.renderToString(jsx);
+
+  res.send(`
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SSR with React and Express</title>
+      </head>
+      <body>
+        <div id="root">${html}</div>
+        <script src="/static/js/main.js"></script> 
+      </body>
+    </html>
+  `);
 });
 
 connectDb();

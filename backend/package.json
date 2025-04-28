@@ -7,12 +7,15 @@
   "type": "commonjs",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js",
+   "start": "nodemon",
     "build": "npm install"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/preset-env": "^7.26.9",
+    "@babel/preset-react": "^7.26.3",
+    "@babel/register": "^7.25.9",
     "bcrypt": "^5.1.1",
     "cloudinary": "^2.6.0",
     "cors": "^2.8.5",
