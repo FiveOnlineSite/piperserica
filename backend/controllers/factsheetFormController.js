@@ -1,4 +1,4 @@
-const FactsheetFormModel = require("../models/FactsheetFormModel");
+const FactsheetFormModel = require("../models/factsheetFormModel");
 
 const createFactsheetForm = async (req, res) => {
   try {
