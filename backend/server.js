@@ -69,9 +69,9 @@ app.get("/sitemap.xml", (req, res) => {
 });
 
 // All other requests will be handled by React
-app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "frontend/build", "index.html"));
-});
+// app.get("*", (req, res) => {
+//   res.sendFile(path.join(__dirname, "frontend/build", "index.html"));
+// });
 
 connectDb();
 
