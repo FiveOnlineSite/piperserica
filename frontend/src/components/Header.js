@@ -836,7 +836,10 @@ const Header = () => {
                 className={`mobile-top-bar 
                ${location.pathname === "/" ? "d-none" : "d-block"}`}
               >
-                <TopBar />
+                <TopBar
+                  className={`mobile-top-bar 
+               ${location.pathname === "/" ? "d-none" : "d-block"}`}
+                />
               </div>
 
               <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">

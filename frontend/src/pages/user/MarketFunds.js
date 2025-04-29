@@ -100,6 +100,7 @@ const MarketFunds = () => {
                 <NavLink
                   to="/public-market/piper-serica-nemero-uno-india-fund"
                   className="banner-btn blue-btn tabs-btn mt-0"
+                  id="offshore-fund"
                 >
                   View Fund
                   <i className="fa-solid fa-arrow-right"></i>

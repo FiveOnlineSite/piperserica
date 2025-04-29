@@ -81,7 +81,7 @@ const TopBar = ({ closeOffcanvas }) => {
       className={`topbar-section ${
         location.pathname === "/"
           ? "absolute-topbar"
-          : isFixed
+          : isFixed && window.innerWidth > 992
           ? "fixed-topbar"
           : ""
       }`}
