@@ -1,14 +1,14 @@
-require.extensions[".css"] = function () {};
-require.extensions[".scss"] = function () {};
-require.extensions[".svg"] = function () {};
-require.extensions[".png"] = function () {};
-require.extensions[".jpg"] = function () {};
-require.extensions[".jpeg"] = function () {};
+// require.extensions[".css"] = function () {};
+// require.extensions[".scss"] = function () {};
+// require.extensions[".svg"] = function () {};
+// require.extensions[".png"] = function () {};
+// require.extensions[".jpg"] = function () {};
+// require.extensions[".jpeg"] = function () {};
 
-require("@babel/register")({
-  ignore: [/node_modules/],
-  presets: ["@babel/preset-env", "@babel/preset-react"],
-});
+// require("@babel/register")({
+//   ignore: [/node_modules/],
+//   presets: ["@babel/preset-env", "@babel/preset-react"],
+// });
 
 const express = require("express");
 const dotenv = require("dotenv");
@@ -16,11 +16,11 @@ const connectDb = require("./config/db");
 const Route = require("./routes/index");
 const cors = require("cors");
 const path = require("path");
-const React = require("react");
-const ReactDOMServer = require("react-dom/server");
-const AppServer = require("./appserver").default; // 👈 import your server-side App component
+// const React = require("react");
+// const ReactDOMServer = require("react-dom/server");
+// const AppServer = require("./appserver").default; // 👈 import your server-side App component
 
-const { generateSitemap } = require("./generate-sitemap");
+// const { generateSitemap } = require("./generate-sitemap");
 
 const app = express();
 app.use(express.json());
@@ -75,7 +75,7 @@ app.get("/sitemap.xml", (req, res) => {
 
 connectDb();
 
-generateSitemap();
+// generateSitemap();
 
 app.listen(PORT, "0.0.0.0", (error) => {
   if (error) {

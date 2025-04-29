@@ -53,15 +53,15 @@ const Home = () => {
                             id="foreign-investor"
                           >
                             <div className="content-div-title">
-                              <h2>Foreign Investor</h2>
+                              <h2 id="foreign-investor">Foreign Investor</h2>
                               <i className="fa-solid fa-arrow-right"></i>
                             </div>
                             <div className="content-para">
                               <div className="content-title">
-                                <h5>Foreign Investor</h5>
+                                <h5 id="foreign-investor">Foreign Investor</h5>
                                 <i className="fa-solid fa-arrow-right"></i>
                               </div>
-                              <p className="justify-para">
+                              <p className="justify-para" id="foreign-investor">
                                 Our offshore fund provides foreign investors
                                 access to high-growth Indian companies,
                                 leveraging on-ground expertise and a focused

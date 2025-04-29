@@ -32,6 +32,7 @@ const EditFactsheetPresentation = () => {
           url: `factsheet-presentation/${id}`,
         });
         const factsheetPresentationData = response.data.factsheetPresentation;
+        console.log("Factsheetpresentation", factsheetPresentationData);
         setFactsheetPresentation(factsheetPresentationData);
         setSelectedFundName(factsheetPresentation.fund_name);
         setSelectedFactsheetPresentation(factsheetPresentation.option);
