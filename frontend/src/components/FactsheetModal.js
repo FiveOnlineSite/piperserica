@@ -403,6 +403,24 @@ const FactsheetModal = () => {
     return null;
   };
 
+  const path = window.location.pathname.toLowerCase();
+
+  const factsheetBtnId = path.includes(
+    "/public-market/piper-serica-nemero-uno-india-fund"
+  )
+    ? "fpi-factsheet"
+    : path.includes("/public-market/piper-serica-leader-portfolio")
+    ? "pms-factsheet"
+    : "factsheet-btn";
+
+  const presentationBtnId = path.includes(
+    "/public-market/piper-serica-nemero-uno-india-fund"
+  )
+    ? "fpi-presentation"
+    : path.includes("/public-market/piper-serica-leader-portfolio")
+    ? "pms-presentation"
+    : "presentation-btn";
+
   const handleFactsheetSubmit = async (e, isPresentation = false) => {
     e.preventDefault();
 
@@ -495,6 +513,7 @@ const FactsheetModal = () => {
             type="button"
             className="banner-btn blue-btn tabs-btn mt-lg-4 mt-md-4 mt-4 me-lg-4 me-md-4 me-4"
             onClick={() => setShowFactsheetModal(true)}
+            id={factsheetBtnId}
           >
             Factsheet
           </button>
@@ -505,6 +524,7 @@ const FactsheetModal = () => {
             type="button"
             className="banner-btn blue-btn tabs-btn mt-lg-4 mt-md-4 mt-4"
             onClick={openPresentationModal}
+            id={presentationBtnId}
           >
             Presentation
           </button>

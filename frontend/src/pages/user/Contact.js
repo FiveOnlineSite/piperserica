@@ -236,6 +236,7 @@ const Contact = () => {
                           <button
                             className="banner-btn blue-btn mt-0 mb-3"
                             type="submit"
+                            id="contact-form"
                           >
                             Send Enquiry
                           </button>
