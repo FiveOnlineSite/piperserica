@@ -78,15 +78,15 @@ const Home = () => {
                             id="nri-investor"
                           >
                             <div className="content-div-title">
-                              <h2>NRI Investor</h2>
+                              <h2 id="nri-investor">NRI Investor</h2>
                               <i className="fa-solid fa-arrow-right"></i>
                             </div>
                             <div className="content-para">
                               <div className="content-title">
-                                <h5>NRI Investor</h5>
+                                <h5 id="nri-investor">NRI Investor</h5>
                                 <i className="fa-solid fa-arrow-right"></i>
                               </div>
-                              <p className="justify-para">
+                              <p className="justify-para" id="nri-investor">
                                 Invest in India with an experienced on-ground
                                 manager delivering strong risk-adjusted returns.
                                 Choose INR or USD investments for strategic
@@ -103,15 +103,19 @@ const Home = () => {
                             id="indian-investor"
                           >
                             <div className="content-div-title">
-                              <h2>Family Office & Indian Investor</h2>
+                              <h2 id="indian-investor">
+                                Family Office & Indian Investor
+                              </h2>
                               <i className="fa-solid fa-arrow-right"></i>
                             </div>
                             <div className="content-para">
                               <div className="content-title">
-                                <h5>Family Office & Indian Investor</h5>
+                                <h5 id="indian-investor">
+                                  Family Office & Indian Investor
+                                </h5>
                                 <i className="fa-solid fa-arrow-right"></i>
                               </div>
-                              <p className="justify-para">
+                              <p className="justify-para" id="indian-investor">
                                 Our onshore PMS provides corporate and Indian
                                 investors a transparent, disciplined strategy
                                 for sustainable wealth growth, maximizing
@@ -129,15 +133,19 @@ const Home = () => {
                             id="startup-founder"
                           >
                             <div className="content-div-title">
-                              <h2>Startup Founder & Entrepreneur</h2>
+                              <h2 id="startup-founder">
+                                Startup Founder & Entrepreneur
+                              </h2>
                               <i className="fa-solid fa-arrow-right"></i>
                             </div>
                             <div className="content-para">
                               <div className="content-title">
-                                <h5>Startup Founder & Entrepreneur</h5>
+                                <h5 id="startup-founder">
+                                  Startup Founder & Entrepreneur
+                                </h5>
                                 <i className="fa-solid fa-arrow-right"></i>
                               </div>
-                              <p className="justify-para">
+                              <p className="justify-para" id="startup-founder">
                                 As a founder-led company, we deeply understand
                                 innovation, scaling, and the challenges startups
                                 navigate today. Beyond capital, we provide
