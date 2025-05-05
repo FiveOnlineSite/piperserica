@@ -344,6 +344,7 @@ const NewsArticle = () => {
                   <option value="">All</option>
                   <option value="Angel Fund">Angel Fund</option>
                   <option value="Videos">Videos</option>
+                  <option value="Market Talks">Market Talks</option>
                 </select>
               </div>
             </div>
