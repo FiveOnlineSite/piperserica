@@ -41,34 +41,53 @@ const updateTeam = async (req, res) => {
   try {
     const { name, designation, department, linkedin_url, order } = req.body;
 
-    const team = await TeamModel.findById(req.params._id);
+    const existingTeam = await TeamModel.findById(req.params._id);
 
-    if (!team) {
+    if (!existingTeam) {
       return res.status(400).json({
         message: "No team member found with this id to update.",
       });
     }
 
-    const oldOrder = team.order;
+    // Step 3: Handle sequence updates
+    if (order && order !== existingTeam.order) {
+      const team = await TeamModel.find().sort({ order: 1 });
 
-    // Adjust the sequence numbers of other team members if necessary
-    if (oldOrder !== order) {
-      if (oldOrder > order) {
-        await TeamModel.updateMany(
-          {
-            _id: { $ne: req.params._id },
-            order: { $gte: order, $lt: oldOrder },
-          },
-          { $inc: { order: 1 } }
-        );
-      } else {
-        await TeamModel.updateMany(
-          {
-            _id: { $ne: req.params._id },
-            order: { $gt: oldOrder, $lte: order },
-          },
-          { $inc: { order: -1 } }
-        );
+      let updateOperations = [];
+      let maxOrder = team.length;
+
+      if (order > maxOrder) {
+        return res.status(400).json({
+          message: `Invalid order. The order cannot be greater than ${maxOrder}.`,
+        });
+      }
+
+      team.forEach((team) => {
+        if (team._id.toString() !== existingTeam._id.toString()) {
+          if (team.order >= order && team.order < existingTeam.order) {
+            updateOperations.push({
+              updateOne: {
+                filter: { _id: team._id },
+                update: { $inc: { order: 1 } },
+              },
+            });
+          } else if (team.order > existingTeam.order && team.order <= order) {
+            updateOperations.push({
+              updateOne: {
+                filter: { _id: team._id },
+                update: { $inc: { order: -1 } },
+              },
+            });
+          }
+        }
+      });
+
+      if (updateOperations.length > 0) {
+        await TeamModel.bulkWrite(updateOperations);
+      }
+
+      if (order && order !== team.order) {
+        await TeamModel.findByIdAndUpdate(req.params._id, { order });
       }
     }
 
@@ -100,7 +119,6 @@ const updateTeam = async (req, res) => {
 const getTeam = async (req, res) => {
   try {
     const team = await TeamModel.findById(req.params._id);
-    console.log(req.params._id);
     if (!team) {
       return res.status(400).json({
         message: "No team member is created with this id.",

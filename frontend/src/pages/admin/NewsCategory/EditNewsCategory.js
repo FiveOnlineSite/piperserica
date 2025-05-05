@@ -5,132 +5,50 @@ import { useNavigate, useParams } from "react-router-dom";
 
 const EditNewsCategory = () => {
   const { id } = useParams();
-  const [gallery, setGallery] = useState(null);
-  const [galleryNames, setGalleryNames] = useState([]);
-  const [selectedService, setSelectedService] = useState("");
-  const [selectedGallery, setSelectedGallery] = useState("");
-  const [serviceChanged, setServiceChanged] = useState(false); // Track if service name has been changed
+  const [newsCategory, setNewsCategory] = useState("");
   // const [media, setMedia] = useState({ iframe: "", file: null });
   // const [isPublic, setIsPublic] = useState(true);
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState("");
 
   const [formData, setFormData] = useState({
-    service_name: "",
-    gallery_name: "",
-    media: {
-      file: null,
-      iframe: "",
-      filepath: "",
-    },
+    news_category: "",
   });
 
   useEffect(() => {
-    const fetchGallery = async () => {
+    const fetchNewsCategory = async () => {
       const apiUrl = process.env.REACT_APP_API_URL;
 
       try {
         const response = await axios({
           method: "GET",
           baseURL: `${apiUrl}/api/`,
-          url: `gallery/${id}`,
+          url: `news-category/${id}`,
         });
-        const galleryData = response.data.gallery;
-        setGallery(galleryData);
-        setSelectedService(galleryData.service_name);
-        setSelectedGallery(galleryData.gallery_name);
-
+        const newsCategoryData = response.data.newsCategory;
+        setNewsCategory(newsCategoryData);
         // Set media state from galleryData
         // setMedia(galleryData.media);
 
         // Set formData based on gallery media type
         setFormData({
-          service_name: galleryData.service_name,
-          gallery_name: galleryData.gallery_name,
-          media: {
-            file: null,
-            iframe: galleryData.media.iframe || "",
-            filepath: galleryData.media.filepath || "",
-          },
-          isPublic: galleryData.isPublic,
+          news_category: newsCategoryData.news_category,
         });
-
-        // Fetch gallery names based on the selected service
-        fetchGalleryNames(galleryData.service_name);
       } catch (error) {
-        console.error("Error fetching gallery:", error);
+        console.error("Error fetching news category data:", error);
       }
     };
 
-    fetchGallery();
+    fetchNewsCategory();
   }, [id]);
 
   const handleChange = (e) => {
-    const { name, value, files } = e.target;
-    if (name === "media") {
-      if (files && files.length > 0) {
-        setFormData({
-          ...formData,
-          media: {
-            file: files[0],
-            filename: files[0].name,
-            filepath: URL.createObjectURL(files[0]),
-            iframe: "",
-          },
-        });
-      } else {
-        setFormData({
-          ...formData,
-          media: {
-            ...formData.media,
-            iframe: value,
-          },
-        });
-      }
-    } else {
-      setFormData({
-        ...formData,
-        [name]: value,
-      });
-    }
-  };
+    const { name, value } = e.target;
 
-  const fetchGalleryNames = async (service_name) => {
-    try {
-      const apiUrl = process.env.REACT_APP_API_URL;
-
-      const response = await axios.get(
-        `${apiUrl}/api/gallery_name/gallerynames?service_name=${service_name}`
-      );
-
-      setGalleryNames(response.data.galleryNames);
-      // setSelectedGallery(""); // Reset selected gallery when service changes
-    } catch (error) {
-      console.error("Error fetching gallery names:", error);
-    }
-  };
-
-  useEffect(() => {
-    if (serviceChanged) {
-      fetchGalleryNames(selectedService);
-    }
-  }, [selectedService, serviceChanged]);
-
-  const handleServiceChange = (e) => {
-    setSelectedService(e.target.value);
-    setServiceChanged(true); // Mark that the service name has been changed
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      service_name: e.target.value,
-    }));
-  };
-
-  const handleGalleryChange = (e) => {
-    setSelectedGallery(e.target.value);
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      gallery_name: e.target.value,
-    }));
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
   };
 
   const handleSubmit = async (e) => {
@@ -139,15 +57,7 @@ const EditNewsCategory = () => {
     try {
       const formDataToSend = new FormData();
 
-      formDataToSend.append("service_name", selectedService);
-
-      formDataToSend.append("gallery_name", selectedGallery);
-
-      if (formData.media.file) {
-        formDataToSend.append("media", formData.media.file);
-      } else if (formData.media.iframe.trim()) {
-        formDataToSend.append("media", formData.media.iframe.trim());
-      }
+      formDataToSend.append("news_category", formData.news_category);
 
       const access_token = localStorage.getItem("access_token");
       const apiUrl = process.env.REACT_APP_API_URL;
@@ -155,22 +65,22 @@ const EditNewsCategory = () => {
       const response = await axios({
         method: "PATCH",
         baseURL: `${apiUrl}/api/`,
-        url: `gallery/${id}`,
+        url: `news-category/${id}`,
         data: formDataToSend, // Pass form data directly
         headers: {
-          "Content-Type": "multipart/form-data",
+          "Content-Type": "application/json",
           Authorization: `Bearer ${access_token}`,
         },
       });
       // setGallery(response.data.updatedGallery);
-      console.log("Gallery updated:", response.data.updatedGallery);
+      console.log("News Category updated:", response.data.updatedNewsCategory);
       // setTimeout(() => {
       //   navigate("/admin/gallery");
       // }, 2000);
 
-      navigate("/admin/gallery");
+      navigate("/admin/news-category");
     } catch (error) {
-      console.error("Error updating gallery:", error);
+      console.error("Error updating News Category:", error);
       setErrorMessage(
         `${error.response?.data?.message}` || "An error occurred"
       );
@@ -189,7 +99,13 @@ const EditNewsCategory = () => {
               <div className="col-lg-6 col-md-6 col-sm-12 col-12">
                 <div className="theme-form">
                   <label>News Category</label>
-                  <input type="text" name="title" required />
+                  <input
+                    type="text"
+                    name="news_category"
+                    required
+                    value={formData.news_category}
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
 

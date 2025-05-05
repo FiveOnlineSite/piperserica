@@ -5,85 +5,71 @@ import { useNavigate, useParams } from "react-router-dom";
 
 const EditFundCompanyPortfolio = () => {
   const { id } = useParams();
-  const [gallery, setGallery] = useState(null);
-  const [galleryNames, setGalleryNames] = useState([]);
-  const [selectedService, setSelectedService] = useState("");
-  const [selectedGallery, setSelectedGallery] = useState("");
-  const [serviceChanged, setServiceChanged] = useState(false); // Track if service name has been changed
-  // const [media, setMedia] = useState({ iframe: "", file: null });
-  // const [isPublic, setIsPublic] = useState(true);
+  const [company, setCompany] = useState("");
+  const [selectedIndustry, setSelectedIndustry] = useState("");
+
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState("");
 
   const [formData, setFormData] = useState({
-    service_name: "",
-    gallery_name: "",
-    media: {
-      file: null,
-      iframe: "",
+    industry: "",
+    company_name: "",
+    company_description: "",
+    company_url: "",
+    logo: {
+      filename: "",
       filepath: "",
     },
   });
 
   useEffect(() => {
-    const fetchGallery = async () => {
+    const fetchCompany = async () => {
       const apiUrl = process.env.REACT_APP_API_URL;
 
       try {
         const response = await axios({
           method: "GET",
           baseURL: `${apiUrl}/api/`,
-          url: `gallery/${id}`,
+          url: `company-portfolio/${id}`,
         });
-        const galleryData = response.data.gallery;
-        setGallery(galleryData);
-        setSelectedService(galleryData.service_name);
-        setSelectedGallery(galleryData.gallery_name);
+        const companyData = response.data.company;
+        setCompany(companyData);
+        console.log(companyData);
+
+        // setSelectedIndustry(companyData.industry || "");
 
         // Set media state from galleryData
         // setMedia(galleryData.media);
 
         // Set formData based on gallery media type
         setFormData({
-          service_name: galleryData.service_name,
-          gallery_name: galleryData.gallery_name,
-          media: {
-            file: null,
-            iframe: galleryData.media.iframe || "",
-            filepath: galleryData.media.filepath || "",
+          industry: companyData.industry || "",
+          company_name: companyData.company_name || "",
+          company_description: companyData.company_description || "",
+          company_url: companyData.company_url || "",
+          logo: {
+            filename: companyData.logo?.[0]?.filename || "",
+            filepath: companyData.logo?.[0]?.filepath || "",
           },
-          isPublic: galleryData.isPublic,
         });
-
-        // Fetch gallery names based on the selected service
-        fetchGalleryNames(galleryData.service_name);
       } catch (error) {
-        console.error("Error fetching gallery:", error);
+        console.error("Error fetching company:", error);
       }
     };
 
-    fetchGallery();
+    fetchCompany();
   }, [id]);
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
-    if (name === "media") {
+    if (name === "logo") {
       if (files && files.length > 0) {
         setFormData({
           ...formData,
-          media: {
+          logo: {
             file: files[0],
             filename: files[0].name,
             filepath: URL.createObjectURL(files[0]),
-            iframe: "",
-          },
-        });
-      } else {
-        setFormData({
-          ...formData,
-          media: {
-            ...formData.media,
-            iframe: value,
           },
         });
       }
@@ -95,43 +81,9 @@ const EditFundCompanyPortfolio = () => {
     }
   };
 
-  const fetchGalleryNames = async (service_name) => {
-    try {
-      const apiUrl = process.env.REACT_APP_API_URL;
-
-      const response = await axios.get(
-        `${apiUrl}/api/gallery_name/gallerynames?service_name=${service_name}`
-      );
-
-      setGalleryNames(response.data.galleryNames);
-      // setSelectedGallery(""); // Reset selected gallery when service changes
-    } catch (error) {
-      console.error("Error fetching gallery names:", error);
-    }
-  };
-
   useEffect(() => {
-    if (serviceChanged) {
-      fetchGalleryNames(selectedService);
-    }
-  }, [selectedService, serviceChanged]);
-
-  const handleServiceChange = (e) => {
-    setSelectedService(e.target.value);
-    setServiceChanged(true); // Mark that the service name has been changed
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      service_name: e.target.value,
-    }));
-  };
-
-  const handleGalleryChange = (e) => {
-    setSelectedGallery(e.target.value);
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      gallery_name: e.target.value,
-    }));
-  };
+    setCompany(selectedIndustry);
+  }, [selectedIndustry]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -139,14 +91,17 @@ const EditFundCompanyPortfolio = () => {
     try {
       const formDataToSend = new FormData();
 
-      formDataToSend.append("service_name", selectedService);
+      formDataToSend.append("industry", formData.industry);
 
-      formDataToSend.append("gallery_name", selectedGallery);
+      formDataToSend.append("company_name", formData.company_name);
+      formDataToSend.append(
+        "company_description",
+        formData.company_description
+      );
+      formDataToSend.append("company_url", formData.company_url);
 
-      if (formData.media.file) {
-        formDataToSend.append("media", formData.media.file);
-      } else if (formData.media.iframe.trim()) {
-        formDataToSend.append("media", formData.media.iframe.trim());
+      if (formData.logo.file) {
+        formDataToSend.append("logo", formData.logo.file);
       }
 
       const access_token = localStorage.getItem("access_token");
@@ -155,7 +110,7 @@ const EditFundCompanyPortfolio = () => {
       const response = await axios({
         method: "PATCH",
         baseURL: `${apiUrl}/api/`,
-        url: `gallery/${id}`,
+        url: `company-portfolio/${id}`,
         data: formDataToSend, // Pass form data directly
         headers: {
           "Content-Type": "multipart/form-data",
@@ -163,14 +118,14 @@ const EditFundCompanyPortfolio = () => {
         },
       });
       // setGallery(response.data.updatedGallery);
-      console.log("Gallery updated:", response.data.updatedGallery);
+      console.log("Company portfolio updated:", response.data.updatedCompany);
       // setTimeout(() => {
       //   navigate("/admin/gallery");
       // }, 2000);
 
-      navigate("/admin/gallery");
+      navigate("/admin/company");
     } catch (error) {
-      console.error("Error updating gallery:", error);
+      console.error("Error updating company portfolio:", error);
       setErrorMessage(
         `${error.response?.data?.message}` || "An error occurred"
       );
@@ -188,7 +143,22 @@ const EditFundCompanyPortfolio = () => {
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="theme-form">
                 <label>Company Logo</label>
-                <input type="file" name="media" accept=".webp" />
+                <input
+                  type="file"
+                  name="logo"
+                  accept=".webp"
+                  onChange={handleChange}
+                />
+                <img
+                  className="form-profile"
+                  src={
+                    formData.logo.file
+                      ? formData.logo.filepath // local preview URL
+                      : `${process.env.REACT_APP_API_URL}/${formData.logo.filepath}` // server path
+                  }
+                  alt={formData.logo.filename}
+                  loading="lazy"
+                />
               </div>
             </div>
 
@@ -196,24 +166,22 @@ const EditFundCompanyPortfolio = () => {
               <div className="theme-form">
                 <label>Industry</label>
                 <select
-                  value={selectedService}
+                  value={formData.industry}
                   required
-                  onChange={(e) => {
-                    setSelectedService(e.target.value);
-                    fetchGalleryNames();
-                  }}
+                  name="industry"
+                  onChange={handleChange}
                 >
                   <option value="">Select a Industry</option>
-                  <option value="Factsheet">Advance Electronic</option>
-                  <option value="Presentation">AI & SAAS</option>
-                  <option value="Presentation">Consumer Tech</option>
-                  <option value="Presentation">
+                  <option value="Advance Electronic">Advance Electronic</option>
+                  <option value="AI & SAAS">AI & SAAS</option>
+                  <option value="Consumer Tech">Consumer Tech</option>
+                  <option value="Cyber Security & Chip Design">
                     Cyber Security & Chip Design
                   </option>
-                  <option value="Presentation">Electric Vehicle</option>
-                  <option value="Presentation">Fintech</option>
-                  <option value="Presentation">Spacetech</option>
-                  <option value="Presentation">Supply Chain Tech</option>
+                  <option value="Electric Vehicle">Electric Vehicle</option>
+                  <option value="Fintech">Fintech</option>
+                  <option value="Spacetech">Spacetech</option>
+                  <option value="Supply Chain Tech">Supply Chain Tech</option>
                 </select>
               </div>
             </div>
@@ -222,7 +190,13 @@ const EditFundCompanyPortfolio = () => {
               <div className="theme-form">
                 <label>Company Name</label>
 
-                <input type="text" name="title" required />
+                <input
+                  type="text"
+                  name="company_name"
+                  value={formData.company_name}
+                  required
+                  onChange={handleChange}
+                />
               </div>
             </div>
 
@@ -230,7 +204,13 @@ const EditFundCompanyPortfolio = () => {
               <div className="theme-form">
                 <label>Website Link</label>
 
-                <input type="text" name="title" required />
+                <input
+                  type="text"
+                  name="company_url"
+                  required
+                  value={formData.company_url}
+                  onChange={handleChange}
+                />
               </div>
             </div>
 
@@ -238,7 +218,13 @@ const EditFundCompanyPortfolio = () => {
               <div className="theme-form">
                 <label>Description</label>
 
-                <textarea rows="3" name="title" required></textarea>
+                <textarea
+                  rows="3"
+                  name="company_description"
+                  value={formData.company_description}
+                  required
+                  onChange={handleChange}
+                ></textarea>
               </div>
             </div>
 

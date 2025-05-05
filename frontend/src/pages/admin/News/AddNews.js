@@ -4,86 +4,67 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const AddNews = () => {
-  const [selectedService, setSelectedService] = useState("");
-  const [selectedGallery, setSelectedGallery] = useState("");
-  const [galleryNames, setGalleryNames] = useState([]);
-  const [media, setMedia] = useState({ iframe: "", file: null });
-  const [isPublic, setIsPublic] = useState(true);
+  const [selectedNewsCategory, setSelectedNewsCategory] = useState("");
+  const [newsCategory, setNewsCategory] = useState([]);
+  const [thumbnail, setThumbnail] = useState({ file: null });
+  const [title, setTitle] = useState("");
+  const [date, setDate] = useState("");
+  const [newsURL, setNewsURL] = useState("");
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState("");
 
-  const fetchGalleryNames = async () => {
+  const fetchNewsCategory = async () => {
     try {
       const apiUrl = process.env.REACT_APP_API_URL;
       const response = await axios({
         method: "GET",
-        baseURL: `${apiUrl}/api`,
-        url: `gallery_name/gallerynames?service_name=${selectedService}`,
+        baseURL: `${apiUrl}/api/`,
+        url: `news-category`,
       });
 
-      console.log("Gallery names response:", response);
-      console.log("Gallery names:", galleryNames);
-
-      // setGalleryNames(
-      //   response.data.galleryNames.map((gallery) => gallery.name)
-      // );
-      setGalleryNames(response.data.galleryNames);
+      setNewsCategory(response.data.newsCategory);
     } catch (error) {
-      console.error("Error fetching gallery names:", error);
+      console.error("Error fetching news category:", error);
     }
   };
 
   useEffect(() => {
-    // fetchGalleryNames();
-    if (selectedService) {
-      fetchGalleryNames();
-    }
-  }, [selectedService]);
+    fetchNewsCategory();
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      // Set isPublic to false if the checkbox is unchecked
-      if (!isPublic) {
-        setIsPublic(false);
-      }
-
       const formData = new FormData();
-      formData.append("gallery_name", selectedGallery);
-      formData.append("service_name", selectedService);
-      formData.append("isPublic", isPublic); // Include isPublic in the form data
+      formData.append("title", title);
+      formData.append("date", date);
+      formData.append("news_url", newsURL);
+      formData.append("news_category_id", selectedNewsCategory);
 
-      // Check if either an iFrame URL or a file is provided for the media field
-      if (media.iframe && media.iframe.trim()) {
-        formData.append("media", media.iframe.trim());
-      } else if (media.file) {
-        formData.append("media", media.file);
-      } else {
-        throw new Error(
-          "Either a file or a valid URL is required for the media field."
-        );
+      if (thumbnail?.file) {
+        formData.append("thumbnail", thumbnail.file);
       }
 
       const access_token = localStorage.getItem("access_token");
 
       const apiUrl = process.env.REACT_APP_API_URL;
 
-      const response = await axios.post(`${apiUrl}/api/gallery`, formData, {
+      const response = await axios.post(`${apiUrl}/api/news`, formData, {
         headers: {
           "Content-Type": "multipart/form-data",
           Authorization: `Bearer ${access_token}`,
         },
       });
 
-      console.log(response.data.newGallery);
+      console.log(response.data.newNews);
       // setTimeout(() => {
       //   navigate("/admin/gallery");
       // }, 2000);
 
-      navigate("/admin/gallery");
+      navigate("/admin/news");
     } catch (error) {
-      console.error("Error creating gallery:", error);
+      console.error("Error creating news:", error);
       setErrorMessage(
         `${error.response?.data?.message}` || "An error occurred"
       );
@@ -103,15 +84,12 @@ const AddNews = () => {
                 <label>Thumbnail</label>
                 <input
                   type="file"
-                  name="media"
+                  name="thumbnail"
                   accept=".webp"
                   onChange={(e) =>
-                    setMedia({
-                      ...media,
+                    setThumbnail({
+                      ...thumbnail,
                       file: e.target.files[0],
-                      // filename: e.target.files[0],
-                      // filepath: e.target.files[0],
-                      iframe: "",
                     })
                   }
                 />
@@ -121,7 +99,15 @@ const AddNews = () => {
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="theme-form">
                 <label>Title</label>
-                <input type="text" name="title" required />
+                <input
+                  type="text"
+                  name="title"
+                  required
+                  value={title}
+                  onChange={(e) => {
+                    setTitle(e.target.value);
+                  }}
+                />
               </div>
             </div>
 
@@ -129,7 +115,15 @@ const AddNews = () => {
               <div className="theme-form">
                 <label>Date</label>
 
-                <input type="date" name="title" required />
+                <input
+                  type="date"
+                  name="date"
+                  required
+                  value={date}
+                  onChange={(e) => {
+                    setDate(e.target.value);
+                  }}
+                />
               </div>
             </div>
 
@@ -138,25 +132,38 @@ const AddNews = () => {
                 <label>News Category</label>
 
                 <select
-                  value={selectedService}
+                  value={selectedNewsCategory}
                   required
+                  name="news_category_id"
+                  onChange={(e) => setSelectedNewsCategory(e.target.value)}
+                >
+                  <option value="">Select a News Category</option>
+                  {newsCategory.map((news_category) => (
+                    <option key={news_category._id} value={news_category._id}>
+                      {news_category.news_category}
+                    </option>
+                  ))}
+                </select>
+                {/* <select
+                  value={seletedNewsCategory}
+                  required
+                  name="news_category_id"
                   onChange={(e) => {
-                    setSelectedService(e.target.value);
-                    fetchGalleryNames();
+                    setSelectedNewsCategory(e.target.value);
                   }}
                 >
                   <option value="">Select a Industry</option>
-                  <option value="Factsheet">Advance Electronic</option>
-                  <option value="Presentation">AI & SAAS</option>
-                  <option value="Presentation">Consumer Tech</option>
-                  <option value="Presentation">
+                  <option value="Advance Electronic">Advance Electronic</option>
+                  <option value="AI & SAAS">AI & SAAS</option>
+                  <option value="Consumer Tech">Consumer Tech</option>
+                  <option value="Cyber Security & Chip Design">
                     Cyber Security & Chip Design
                   </option>
-                  <option value="Presentation">Electric Vehicle</option>
-                  <option value="Presentation">Fintech</option>
-                  <option value="Presentation">Spacetech</option>
-                  <option value="Presentation">Supply Chain Tech</option>
-                </select>
+                  <option value="Electric Vehicle">Electric Vehicle</option>
+                  <option value="Fintech">Fintech</option>
+                  <option value="Spacetech">Spacetech</option>
+                  <option value="Supply Chain Tech">Supply Chain Tech</option>
+                </select> */}
               </div>
             </div>
 
@@ -164,7 +171,13 @@ const AddNews = () => {
               <div className="theme-form">
                 <label>URL</label>
 
-                <input type="text" name="title" required />
+                <input
+                  type="text"
+                  name="news_url"
+                  required
+                  value={newsURL}
+                  onChange={(e) => setNewsURL(e.target.value)}
+                />
               </div>
             </div>
 

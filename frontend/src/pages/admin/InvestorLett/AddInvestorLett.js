@@ -4,86 +4,48 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const AddInvestorLett = () => {
-  const [selectedService, setSelectedService] = useState("");
-  const [selectedGallery, setSelectedGallery] = useState("");
-  const [galleryNames, setGalleryNames] = useState([]);
-  const [media, setMedia] = useState({ iframe: "", file: null });
-  const [isPublic, setIsPublic] = useState(true);
+  const [title, setTitle] = useState("");
+  const [monthYear, setMonthYear] = useState("");
+  const [fileUpload, setFileUpload] = useState("");
+
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState("");
-
-  const fetchGalleryNames = async () => {
-    try {
-      const apiUrl = process.env.REACT_APP_API_URL;
-      const response = await axios({
-        method: "GET",
-        baseURL: `${apiUrl}/api`,
-        url: `gallery_name/gallerynames?service_name=${selectedService}`,
-      });
-
-      console.log("Gallery names response:", response);
-      console.log("Gallery names:", galleryNames);
-
-      // setGalleryNames(
-      //   response.data.galleryNames.map((gallery) => gallery.name)
-      // );
-      setGalleryNames(response.data.galleryNames);
-    } catch (error) {
-      console.error("Error fetching gallery names:", error);
-    }
-  };
-
-  useEffect(() => {
-    // fetchGalleryNames();
-    if (selectedService) {
-      fetchGalleryNames();
-    }
-  }, [selectedService]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      // Set isPublic to false if the checkbox is unchecked
-      if (!isPublic) {
-        setIsPublic(false);
-      }
-
       const formData = new FormData();
-      formData.append("gallery_name", selectedGallery);
-      formData.append("service_name", selectedService);
-      formData.append("isPublic", isPublic); // Include isPublic in the form data
+      formData.append("title", title);
+      formData.append("month_year", monthYear);
 
-      // Check if either an iFrame URL or a file is provided for the media field
-      if (media.iframe && media.iframe.trim()) {
-        formData.append("media", media.iframe.trim());
-      } else if (media.file) {
-        formData.append("media", media.file);
-      } else {
-        throw new Error(
-          "Either a file or a valid URL is required for the media field."
-        );
+      if (fileUpload?.file) {
+        formData.append("file_upload", fileUpload.file);
       }
 
       const access_token = localStorage.getItem("access_token");
 
       const apiUrl = process.env.REACT_APP_API_URL;
 
-      const response = await axios.post(`${apiUrl}/api/gallery`, formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-          Authorization: `Bearer ${access_token}`,
-        },
-      });
+      const response = await axios.post(
+        `${apiUrl}/api/investor-letter`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+            Authorization: `Bearer ${access_token}`,
+          },
+        }
+      );
 
-      console.log(response.data.newGallery);
+      console.log(response.data.newInvestorLetter);
       // setTimeout(() => {
       //   navigate("/admin/gallery");
       // }, 2000);
 
-      navigate("/admin/gallery");
+      navigate("/admin/investor-letter");
     } catch (error) {
-      console.error("Error creating gallery:", error);
+      console.error("Error creating investor letter:", error);
       setErrorMessage(
         `${error.response?.data?.message}` || "An error occurred"
       );
@@ -101,7 +63,13 @@ const AddInvestorLett = () => {
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="theme-form">
                 <label>Title</label>
-                <input type="text" name="title" required />
+                <input
+                  type="text"
+                  name="title"
+                  required
+                  value={title}
+                  onChange={(e) => setTitle(e.target.value)}
+                />
               </div>
             </div>
 
@@ -109,7 +77,13 @@ const AddInvestorLett = () => {
               <div className="theme-form">
                 <label>Month/Year</label>
 
-                <input type="text" name="title" required />
+                <input
+                  type="text"
+                  name="month_year"
+                  required
+                  value={monthYear}
+                  onChange={(e) => setMonthYear(e.target.value)}
+                />
               </div>
             </div>
 
@@ -118,13 +92,12 @@ const AddInvestorLett = () => {
                 <label>Document</label>
                 <input
                   type="file"
-                  name="media"
+                  name="file_upload"
                   accept=".pdf"
                   onChange={(e) =>
-                    setMedia({
-                      ...media,
+                    setFileUpload({
+                      ...fileUpload,
                       file: e.target.files[0],
-                      iframe: "",
                     })
                   }
                 />

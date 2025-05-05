@@ -4,86 +4,52 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const AddFundCompanyPortfolio = () => {
-  const [selectedService, setSelectedService] = useState("");
-  const [selectedGallery, setSelectedGallery] = useState("");
-  const [galleryNames, setGalleryNames] = useState([]);
-  const [media, setMedia] = useState({ iframe: "", file: null });
-  const [isPublic, setIsPublic] = useState(true);
+  const [selectedIndustry, setSelectedIndustry] = useState("");
+  const [logo, setLogo] = useState({ file: null });
+  const [companyName, setCompanyName] = useState([]);
+  const [companyDescription, setCompanyDescription] = useState("");
+  const [companyURL, setCompanyURL] = useState("");
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState("");
-
-  const fetchGalleryNames = async () => {
-    try {
-      const apiUrl = process.env.REACT_APP_API_URL;
-      const response = await axios({
-        method: "GET",
-        baseURL: `${apiUrl}/api`,
-        url: `gallery_name/gallerynames?service_name=${selectedService}`,
-      });
-
-      console.log("Gallery names response:", response);
-      console.log("Gallery names:", galleryNames);
-
-      // setGalleryNames(
-      //   response.data.galleryNames.map((gallery) => gallery.name)
-      // );
-      setGalleryNames(response.data.galleryNames);
-    } catch (error) {
-      console.error("Error fetching gallery names:", error);
-    }
-  };
-
-  useEffect(() => {
-    // fetchGalleryNames();
-    if (selectedService) {
-      fetchGalleryNames();
-    }
-  }, [selectedService]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       // Set isPublic to false if the checkbox is unchecked
-      if (!isPublic) {
-        setIsPublic(false);
-      }
 
       const formData = new FormData();
-      formData.append("gallery_name", selectedGallery);
-      formData.append("service_name", selectedService);
-      formData.append("isPublic", isPublic); // Include isPublic in the form data
-
-      // Check if either an iFrame URL or a file is provided for the media field
-      if (media.iframe && media.iframe.trim()) {
-        formData.append("media", media.iframe.trim());
-      } else if (media.file) {
-        formData.append("media", media.file);
-      } else {
-        throw new Error(
-          "Either a file or a valid URL is required for the media field."
-        );
+      formData.append("industry", selectedIndustry);
+      formData.append("company_name", companyName);
+      formData.append("company_description", companyDescription);
+      formData.append("company_url", companyURL);
+      if (logo?.file) {
+        formData.append("logo", logo.file);
       }
 
       const access_token = localStorage.getItem("access_token");
 
       const apiUrl = process.env.REACT_APP_API_URL;
 
-      const response = await axios.post(`${apiUrl}/api/gallery`, formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-          Authorization: `Bearer ${access_token}`,
-        },
-      });
+      const response = await axios.post(
+        `${apiUrl}/api/company-portfolio`,
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data",
+            Authorization: `Bearer ${access_token}`,
+          },
+        }
+      );
 
-      console.log(response.data.newGallery);
+      console.log(response.data.newCompany);
       // setTimeout(() => {
       //   navigate("/admin/gallery");
       // }, 2000);
 
-      navigate("/admin/gallery");
+      navigate("/admin/company");
     } catch (error) {
-      console.error("Error creating gallery:", error);
+      console.error("Error creating company:", error);
       setErrorMessage(
         `${error.response?.data?.message}` || "An error occurred"
       );
@@ -103,15 +69,12 @@ const AddFundCompanyPortfolio = () => {
                 <label>Company Logo</label>
                 <input
                   type="file"
-                  name="media"
+                  name="logo"
                   accept=".webp"
                   onChange={(e) =>
-                    setMedia({
-                      ...media,
+                    setLogo({
+                      ...logo,
                       file: e.target.files[0],
-                      // filename: e.target.files[0],
-                      // filepath: e.target.files[0],
-                      iframe: "",
                     })
                   }
                 />
@@ -122,24 +85,24 @@ const AddFundCompanyPortfolio = () => {
               <div className="theme-form">
                 <label>Industry</label>
                 <select
-                  value={selectedService}
+                  name="industry"
+                  value={selectedIndustry}
                   required
                   onChange={(e) => {
-                    setSelectedService(e.target.value);
-                    fetchGalleryNames();
+                    setSelectedIndustry(e.target.value);
                   }}
                 >
                   <option value="">Select a Industry</option>
-                  <option value="Factsheet">Advance Electronic</option>
-                  <option value="Presentation">AI & SAAS</option>
-                  <option value="Presentation">Consumer Tech</option>
-                  <option value="Presentation">
+                  <option value="Advance Electronic">Advance Electronic</option>
+                  <option value="AI & SAAS">AI & SAAS</option>
+                  <option value="Consumer Tech">Consumer Tech</option>
+                  <option value="Cyber Security & Chip Design">
                     Cyber Security & Chip Design
                   </option>
-                  <option value="Presentation">Electric Vehicle</option>
-                  <option value="Presentation">Fintech</option>
-                  <option value="Presentation">Spacetech</option>
-                  <option value="Presentation">Supply Chain Tech</option>
+                  <option value="Electric Vehicle">Electric Vehicle</option>
+                  <option value="Fintech">Fintech</option>
+                  <option value="Spacetech">Spacetech</option>
+                  <option value="Supply Chain Tech">Supply Chain Tech</option>
                 </select>
               </div>
             </div>
@@ -148,7 +111,13 @@ const AddFundCompanyPortfolio = () => {
               <div className="theme-form">
                 <label>Company Name</label>
 
-                <input type="text" name="title" required />
+                <input
+                  type="text"
+                  name="company_name"
+                  required
+                  value={companyName}
+                  onChange={(e) => setCompanyName(e.target.value)}
+                />
               </div>
             </div>
 
@@ -156,7 +125,13 @@ const AddFundCompanyPortfolio = () => {
               <div className="theme-form">
                 <label>Website Link</label>
 
-                <input type="text" name="title" required />
+                <input
+                  type="text"
+                  required
+                  name="company_url"
+                  value={companyURL}
+                  onChange={(e) => setCompanyURL(e.target.value)}
+                />
               </div>
             </div>
 
@@ -164,7 +139,13 @@ const AddFundCompanyPortfolio = () => {
               <div className="theme-form">
                 <label>Description</label>
 
-                <textarea rows="3" name="title" required></textarea>
+                <textarea
+                  rows="3"
+                  required
+                  name="company_description"
+                  value={companyDescription}
+                  onChange={(e) => setCompanyDescription(e.target.value)}
+                ></textarea>
               </div>
             </div>
 

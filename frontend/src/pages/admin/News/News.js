@@ -4,12 +4,12 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const News = () => {
-  const [galleries, setGalleries] = useState([]);
+  const [news, setNews] = useState([]);
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchGalleries = async () => {
+    const fetchNews = async () => {
       try {
         const apiUrl = process.env.REACT_APP_API_URL;
 
@@ -17,16 +17,16 @@ const News = () => {
         const response = await axios({
           method: "GET",
           baseURL: `${apiUrl}/api/`,
-          url: "FactsheetPresentation",
+          url: "news",
         });
-        console.log(response.data.galleries);
-        setGalleries(response.data.galleries);
+        console.log(response.data.news);
+        setNews(response.data.news);
       } catch (error) {
-        console.error("Error fetching users:", error);
+        console.error("Error fetching news:", error);
       }
     };
 
-    fetchGalleries();
+    fetchNews();
   }, []);
 
   const handleDelete = async (id) => {
@@ -37,26 +37,22 @@ const News = () => {
       const response = await axios({
         method: "DELETE",
         baseURL: `${apiUrl}/api/`,
-        url: `FactsheetPresentation/${id}`,
+        url: `news/${id}`,
         headers: {
           Authorization: `Bearer ${access_token}`,
         },
       });
-      setGalleries(null); // Update user state to null after deletion
+      setNews(null); // Update user state to null after deletion
       // setTimeout(() => {
       //   navigate("/admin/FactsheetPresentation");
       // }, 2000);
       console.log(response.data);
-      setGalleries(
-        galleries.filter(
-          (FactsheetPresentation) => FactsheetPresentation._id !== id
-        )
-      );
+      setNews(news.filter((news) => news._id !== id));
       setTimeout(() => {
-        navigate("/admin/FactsheetPresentation");
+        navigate("/admin/news");
       }, 3000);
     } catch (error) {
-      console.error("Error deleting FactsheetPresentation:", error);
+      console.error("Error deleting news:", error);
     }
   };
   return (
@@ -88,28 +84,31 @@ const News = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {galleries &&
-                    galleries.map((FactsheetPresentation) => (
-                      <tr key={FactsheetPresentation._id}>
-                        <td>{FactsheetPresentation.service_name}</td>
+                  {news &&
+                    news.map((news) => (
+                      <tr key={news._id}>
+                        <td className="table-profile-img">
+                          <img
+                            src={`${
+                              process.env.REACT_APP_API_URL
+                            }/${news.thumbnail[0].filepath.replace(
+                              /\\/g,
+                              "/"
+                            )}`} // Assuming filepath contains the path to the image
+                            alt={`${news.thumbnail[0].filename}`}
+                            style={{ width: "50px", height: "50px" }}
+                            loading="lazy"
+                          />
+                        </td>
+                        <td className="text-center">{news.title}</td>
+                        <td className="text-center">{news.date}</td>
                         <td className="text-center">
-                          {FactsheetPresentation.FactsheetPresentation_name}
+                          {news.news_category_id?.news_category}
                         </td>
-                        <td className="table-profile-img text-center">
-                          {FactsheetPresentation.type === "image" ? (
-                            <img
-                              src={`${process.env.REACT_APP_API_URL}/${FactsheetPresentation.media.filepath}`} // Assuming filepath contains the path to the image
-                              alt={`${FactsheetPresentation.media.filename}`}
-                              style={{ width: "50px", height: "50px" }}
-                              loading="lazy"
-                            />
-                          ) : (
-                            <span>{FactsheetPresentation.media.iframe}</span>
-                          )}
-                        </td>
+                        <td className="text-center">{news.news_url}</td>
                         <td className="text-center">
                           <Link
-                            to={`/admin/edit/FactsheetPresentation/${FactsheetPresentation._id}`}
+                            to={`/admin/edit/news/${news._id}`}
                             title="Edit"
                           >
                             <i class="las la-pencil-alt"></i>
@@ -118,9 +117,7 @@ const News = () => {
                         <td className="text-center">
                           <button
                             className="delete-btn"
-                            onClick={() =>
-                              handleDelete(FactsheetPresentation._id)
-                            }
+                            onClick={() => handleDelete(news._id)}
                           >
                             <i class="las la-trash"></i>{" "}
                           </button>

@@ -1,6 +1,8 @@
 const NewsCategoryModel = require("../models/newsCategoryModel");
 
 const createNewsCategory = async (req, res) => {
+  console.log("Received req.body:", req.body);
+
   try {
     const { news_category } = req.body;
 

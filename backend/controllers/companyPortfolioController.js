@@ -26,7 +26,6 @@ const createCompany = async (req, res) => {
         });
       }
 
-      fileType = "webp";
       mediaData = {
         filename: req.file.originalname,
         filepath: req.file.path,
@@ -80,7 +79,7 @@ const updateCompany = async (req, res) => {
         });
       }
 
-      fileData = {
+      let fileData = {
         filename: req.file.originalname,
         filepath: req.file.path,
       };
@@ -97,7 +96,7 @@ const updateCompany = async (req, res) => {
 
     // If no new logo uploaded, preserve old one
     if (!file) {
-      updatedFields.logo = existingNews.logo;
+      updatedFields.logo = existingCompany.logo;
     }
 
     const updatedCompany = await CompanyPortfolioModel.findByIdAndUpdate(

@@ -4,12 +4,12 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const NewsCategory = () => {
-  const [galleries, setGalleries] = useState([]);
+  const [newsCategory, setNewsCategory] = useState([]);
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchGalleries = async () => {
+    const fetchNewsCategory = async () => {
       try {
         const apiUrl = process.env.REACT_APP_API_URL;
 
@@ -17,16 +17,16 @@ const NewsCategory = () => {
         const response = await axios({
           method: "GET",
           baseURL: `${apiUrl}/api/`,
-          url: "FactsheetPresentation",
+          url: "news-category",
         });
-        console.log(response.data.galleries);
-        setGalleries(response.data.galleries);
+        console.log(response.data.newsCategory);
+        setNewsCategory(response.data.newsCategory);
       } catch (error) {
-        console.error("Error fetching users:", error);
+        console.error("Error fetching news category:", error);
       }
     };
 
-    fetchGalleries();
+    fetchNewsCategory();
   }, []);
 
   const handleDelete = async (id) => {
@@ -37,26 +37,24 @@ const NewsCategory = () => {
       const response = await axios({
         method: "DELETE",
         baseURL: `${apiUrl}/api/`,
-        url: `FactsheetPresentation/${id}`,
+        url: `news-category/${id}`,
         headers: {
           Authorization: `Bearer ${access_token}`,
         },
       });
-      setGalleries(null); // Update user state to null after deletion
+      setNewsCategory(null); // Update user state to null after deletion
       // setTimeout(() => {
       //   navigate("/admin/FactsheetPresentation");
       // }, 2000);
       console.log(response.data);
-      setGalleries(
-        galleries.filter(
-          (FactsheetPresentation) => FactsheetPresentation._id !== id
-        )
+      setNewsCategory(
+        newsCategory.filter((newsCategory) => newsCategory._id !== id)
       );
       setTimeout(() => {
-        navigate("/admin/FactsheetPresentation");
+        navigate("/admin/news-category");
       }, 3000);
     } catch (error) {
-      console.error("Error deleting FactsheetPresentation:", error);
+      console.error("Error deleting news category:", error);
     }
   };
   return (
@@ -84,28 +82,14 @@ const NewsCategory = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {galleries &&
-                    galleries.map((FactsheetPresentation) => (
-                      <tr key={FactsheetPresentation._id}>
-                        <td>{FactsheetPresentation.service_name}</td>
-                        <td className="text-center">
-                          {FactsheetPresentation.FactsheetPresentation_name}
-                        </td>
-                        <td className="table-profile-img text-center">
-                          {FactsheetPresentation.type === "image" ? (
-                            <img
-                              src={`${process.env.REACT_APP_API_URL}/${FactsheetPresentation.media.filepath}`} // Assuming filepath contains the path to the image
-                              alt={`${FactsheetPresentation.media.filename}`}
-                              style={{ width: "50px", height: "50px" }}
-                              loading="lazy"
-                            />
-                          ) : (
-                            <span>{FactsheetPresentation.media.iframe}</span>
-                          )}
-                        </td>
+                  {newsCategory &&
+                    newsCategory.map((newsCategory) => (
+                      <tr key={newsCategory._id}>
+                        <td>{newsCategory.news_category}</td>
+
                         <td className="text-center">
                           <Link
-                            to={`/admin/edit/FactsheetPresentation/${FactsheetPresentation._id}`}
+                            to={`/admin/edit/news-category/${newsCategory._id}`}
                             title="Edit"
                           >
                             <i class="las la-pencil-alt"></i>
@@ -114,9 +98,7 @@ const NewsCategory = () => {
                         <td className="text-center">
                           <button
                             className="delete-btn"
-                            onClick={() =>
-                              handleDelete(FactsheetPresentation._id)
-                            }
+                            onClick={() => handleDelete(newsCategory._id)}
                           >
                             <i class="las la-trash"></i>{" "}
                           </button>

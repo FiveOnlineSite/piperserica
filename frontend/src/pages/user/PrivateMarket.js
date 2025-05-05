@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Layout from "../../components/Layout";
+import axios from "axios";
 
 const PrivateMarket = () => {
   return (

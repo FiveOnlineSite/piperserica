@@ -4,12 +4,12 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const FactSheetForm = () => {
-  const [galleries, setGalleries] = useState([]);
+  const [factsheetForm, setFactsheetForm] = useState([]);
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchGalleries = async () => {
+    const fetchFactsheetForm = async () => {
       try {
         const apiUrl = process.env.REACT_APP_API_URL;
 
@@ -17,16 +17,16 @@ const FactSheetForm = () => {
         const response = await axios({
           method: "GET",
           baseURL: `${apiUrl}/api/`,
-          url: "FactsheetPresentation",
+          url: "factsheet-form",
         });
-        console.log(response.data.galleries);
-        setGalleries(response.data.galleries);
+        console.log(response.data.factsheetform);
+        setFactsheetForm(response.data.factsheetform);
       } catch (error) {
-        console.error("Error fetching users:", error);
+        console.error("Error fetching factsheet form:", error);
       }
     };
 
-    fetchGalleries();
+    fetchFactsheetForm();
   }, []);
 
   const handleDelete = async (id) => {
@@ -37,26 +37,24 @@ const FactSheetForm = () => {
       const response = await axios({
         method: "DELETE",
         baseURL: `${apiUrl}/api/`,
-        url: `FactsheetPresentation/${id}`,
+        url: `factsheet-form/${id}`,
         headers: {
           Authorization: `Bearer ${access_token}`,
         },
       });
-      setGalleries(null); // Update user state to null after deletion
+      setFactsheetForm(null); // Update user state to null after deletion
       // setTimeout(() => {
       //   navigate("/admin/FactsheetPresentation");
       // }, 2000);
       console.log(response.data);
-      setGalleries(
-        galleries.filter(
-          (FactsheetPresentation) => FactsheetPresentation._id !== id
-        )
+      setFactsheetForm(
+        factsheetForm.filter((factsheetForm) => factsheetForm._id !== id)
       );
       setTimeout(() => {
-        navigate("/admin/FactsheetPresentation");
+        navigate("/admin/factsheet-form");
       }, 3000);
     } catch (error) {
-      console.error("Error deleting FactsheetPresentation:", error);
+      console.error("Error deleting factsheet form:", error);
     }
   };
   return (
@@ -75,44 +73,27 @@ const FactSheetForm = () => {
                     <th className="text-center">Email</th>
                     <th className="text-center">Fund Name</th>
                     <th className="text-center">Date & Time</th>
-                    <th className="text-center">Edit</th>
+
                     <th className="text-center">Delete</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {galleries &&
-                    galleries.map((FactsheetPresentation) => (
-                      <tr key={FactsheetPresentation._id}>
-                        <td>{FactsheetPresentation.service_name}</td>
+                  {factsheetForm &&
+                    factsheetForm.map((factsheetForm) => (
+                      <tr key={factsheetForm._id}>
+                        <td>{factsheetForm.name}</td>
+                        <td className="text-center">{factsheetForm.email}</td>
+
                         <td className="text-center">
-                          {FactsheetPresentation.FactsheetPresentation_name}
-                        </td>
-                        <td className="table-profile-img text-center">
-                          {FactsheetPresentation.type === "image" ? (
-                            <img
-                              src={`${process.env.REACT_APP_API_URL}/${FactsheetPresentation.media.filepath}`} // Assuming filepath contains the path to the image
-                              alt={`${FactsheetPresentation.media.filename}`}
-                              style={{ width: "50px", height: "50px" }}
-                              loading="lazy"
-                            />
-                          ) : (
-                            <span>{FactsheetPresentation.media.iframe}</span>
-                          )}
+                          {factsheetForm.fund_name}
                         </td>
                         <td className="text-center">
-                          <Link
-                            to={`/admin/edit/FactsheetPresentation/${FactsheetPresentation._id}`}
-                            title="Edit"
-                          >
-                            <i class="las la-pencil-alt"></i>
-                          </Link>
+                          {factsheetForm.createdAt}
                         </td>
                         <td className="text-center">
                           <button
                             className="delete-btn"
-                            onClick={() =>
-                              handleDelete(FactsheetPresentation._id)
-                            }
+                            onClick={() => handleDelete(factsheetForm._id)}
                           >
                             <i class="las la-trash"></i>{" "}
                           </button>

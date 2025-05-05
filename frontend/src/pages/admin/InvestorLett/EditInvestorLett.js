@@ -5,85 +5,61 @@ import axios from "axios";
 
 const EditInvestorLett = () => {
   const { id } = useParams();
-  const [gallery, setGallery] = useState(null);
-  const [galleryNames, setGalleryNames] = useState([]);
-  const [selectedService, setSelectedService] = useState("");
-  const [selectedGallery, setSelectedGallery] = useState("");
-  const [serviceChanged, setServiceChanged] = useState(false); // Track if service name has been changed
-  const [media, setMedia] = useState({ iframe: "", file: null });
-  // const [isPublic, setIsPublic] = useState(true);
+  const [investorLetter, setInvestorLetter] = useState("");
+
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState("");
 
   const [formData, setFormData] = useState({
-    service_name: "",
-    gallery_name: "",
-    media: {
-      file: null,
-      iframe: "",
+    title: "",
+    month_year: "",
+    file_upload: {
+      filename: "",
       filepath: "",
     },
   });
 
   useEffect(() => {
-    const fetchGallery = async () => {
+    const fetchInvestorLetter = async () => {
       const apiUrl = process.env.REACT_APP_API_URL;
 
       try {
         const response = await axios({
           method: "GET",
           baseURL: `${apiUrl}/api/`,
-          url: `gallery/${id}`,
+          url: `investor-letter/${id}`,
         });
-        const galleryData = response.data.gallery;
-        setGallery(galleryData);
-        setSelectedService(galleryData.service_name);
-        setSelectedGallery(galleryData.gallery_name);
 
-        // Set media state from galleryData
-        // setMedia(galleryData.media);
+        const data = response.data.investorLetter;
+        console.log("Investor letter", data);
 
-        // Set formData based on gallery media type
+        // Set the form data directly
         setFormData({
-          service_name: galleryData.service_name,
-          gallery_name: galleryData.gallery_name,
-          media: {
-            file: null,
-            iframe: galleryData.media.iframe || "",
-            filepath: galleryData.media.filepath || "",
+          title: data.title || "",
+          month_year: data.month_year || "",
+          file_upload: {
+            filename: data.file_upload?.[0]?.filename || "",
+            filepath: data.file_upload?.[0]?.filepath || "",
           },
-          isPublic: galleryData.isPublic,
         });
-
-        // Fetch gallery names based on the selected service
-        fetchGalleryNames(galleryData.service_name);
       } catch (error) {
-        console.error("Error fetching gallery:", error);
+        console.error("Error fetching factsheet/presentation:", error);
       }
     };
 
-    fetchGallery();
+    fetchInvestorLetter();
   }, [id]);
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
-    if (name === "media") {
+    if (name === "file_upload") {
       if (files && files.length > 0) {
         setFormData({
           ...formData,
-          media: {
+          file_upload: {
             file: files[0],
             filename: files[0].name,
             filepath: URL.createObjectURL(files[0]),
-            iframe: "",
-          },
-        });
-      } else {
-        setFormData({
-          ...formData,
-          media: {
-            ...formData.media,
-            iframe: value,
           },
         });
       }
@@ -95,58 +71,18 @@ const EditInvestorLett = () => {
     }
   };
 
-  const fetchGalleryNames = async (service_name) => {
-    try {
-      const apiUrl = process.env.REACT_APP_API_URL;
-
-      const response = await axios.get(
-        `${apiUrl}/api/gallery_name/gallerynames?service_name=${service_name}`
-      );
-
-      setGalleryNames(response.data.galleryNames);
-      // setSelectedGallery(""); // Reset selected gallery when service changes
-    } catch (error) {
-      console.error("Error fetching gallery names:", error);
-    }
-  };
-
-  useEffect(() => {
-    if (serviceChanged) {
-      fetchGalleryNames(selectedService);
-    }
-  }, [selectedService, serviceChanged]);
-
-  const handleServiceChange = (e) => {
-    setSelectedService(e.target.value);
-    setServiceChanged(true); // Mark that the service name has been changed
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      service_name: e.target.value,
-    }));
-  };
-
-  const handleGalleryChange = (e) => {
-    setSelectedGallery(e.target.value);
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      gallery_name: e.target.value,
-    }));
-  };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       const formDataToSend = new FormData();
 
-      formDataToSend.append("service_name", selectedService);
+      formDataToSend.append("title", formData.title);
 
-      formDataToSend.append("gallery_name", selectedGallery);
+      formDataToSend.append("month_year", formData.month_year);
 
-      if (formData.media.file) {
-        formDataToSend.append("media", formData.media.file);
-      } else if (formData.media.iframe.trim()) {
-        formDataToSend.append("media", formData.media.iframe.trim());
+      if (formData.file_upload.file) {
+        formDataToSend.append("file_upload", formData.file_upload.file);
       }
 
       const access_token = localStorage.getItem("access_token");
@@ -155,7 +91,7 @@ const EditInvestorLett = () => {
       const response = await axios({
         method: "PATCH",
         baseURL: `${apiUrl}/api/`,
-        url: `gallery/${id}`,
+        url: `investor-letter/${id}`,
         data: formDataToSend, // Pass form data directly
         headers: {
           "Content-Type": "multipart/form-data",
@@ -163,14 +99,14 @@ const EditInvestorLett = () => {
         },
       });
       // setGallery(response.data.updatedGallery);
-      console.log("Gallery updated:", response.data.updatedGallery);
+      console.log("Investor letter updated:", response.data.updatedGallery);
       // setTimeout(() => {
       //   navigate("/admin/gallery");
       // }, 2000);
 
-      navigate("/admin/gallery");
+      navigate("/admin/investor-letter");
     } catch (error) {
-      console.error("Error updating gallery:", error);
+      console.error("Error updating investor letter:", error);
       setErrorMessage(
         `${error.response?.data?.message}` || "An error occurred"
       );
@@ -188,7 +124,13 @@ const EditInvestorLett = () => {
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="theme-form">
                 <label>Title</label>
-                <input type="text" name="title" required />
+                <input
+                  type="text"
+                  name="title"
+                  required
+                  value={formData.title}
+                  onChange={handleChange}
+                />
               </div>
             </div>
 
@@ -196,7 +138,13 @@ const EditInvestorLett = () => {
               <div className="theme-form">
                 <label>Month/Year</label>
 
-                <input type="text" name="title" required />
+                <input
+                  type="text"
+                  name="month_year"
+                  required
+                  value={formData.month_year}
+                  onChange={handleChange}
+                />
               </div>
             </div>
 
@@ -205,16 +153,16 @@ const EditInvestorLett = () => {
                 <label>Document</label>
                 <input
                   type="file"
-                  name="media"
+                  name="file_upload"
                   accept=".pdf"
-                  onChange={(e) =>
-                    setMedia({
-                      ...media,
-                      file: e.target.files[0],
-                      iframe: "",
-                    })
-                  }
-                />
+                  onChange={handleChange}
+                />{" "}
+                {formData.file_upload.filename && (
+                  <div className="mt-2">
+                    <strong>Selected File:</strong>{" "}
+                    {formData.file_upload.filename}
+                  </div>
+                )}
               </div>
             </div>
 

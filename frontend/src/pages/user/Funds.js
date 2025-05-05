@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../../components/Layout";
 import { NavLink } from "react-router-dom";
 import StickyContact from "../../components/StickyContact";
@@ -7,6 +7,7 @@ import ArticleSection from "../../components/ArticleSection";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import TestimonialVideoSection from "../../components/TestimonialVideo";
+import axios from "axios";
 
 const Funds = () => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -54,6 +55,32 @@ const Funds = () => {
         "This structured and disciplined approach enables Piper Serica Angel Fund to invest in exceptional early-stage startups, driving innovation and growth across key industries.",
     },
   ];
+
+  const [fundNumbers, setFundNumbers] = useState([]);
+
+  useEffect(() => {
+    const fetchFundNumbers = async () => {
+      try {
+        const apiUrl = process.env.REACT_APP_API_URL;
+
+        const fundName = "aif";
+
+        // const response = await axios.get("/api/user/allUsers");
+        const response = await axios({
+          method: "GET",
+          baseURL: `${apiUrl}/api/`,
+          url: `fund-number/by-name/${fundName}`,
+        });
+        console.log("Factsheet", response.data.fundNumbers);
+        setFundNumbers(response.data.fundNumbers);
+      } catch (error) {
+        console.error("Error fetching fund numbers form:", error);
+      }
+    };
+
+    fetchFundNumbers();
+  }, []);
+
   return (
     <Layout>
       <section className="banner-section">
@@ -115,28 +142,84 @@ const Funds = () => {
                     <h6 className="para">Fund Size</h6>
                   </div>
                 </div> */}
-                <div className="col-lg-4 mt-lg-0 mt-4">
+                {/* {fundNumbers &&
+                  fundNumbers.map((fundNumbers) => (
+                    <>
+                      <div className="col-lg-4" key={fundNumbers._id}>
+                        <div className="facts-div">
+                          <h2 className="facts-title">
+                            {fundNumbers.fund_number1}
+                          </h2>
+                          <h6 className="para">
+                            {fundNumbers.fund_title1}
+                            <i> (as of 30 June 2024)</i>
+                          </h6>
+                        </div>
+                      </div>
+                      <div className="col-lg-4 mt-lg-0 mt-4">
+                        <div className="facts-div">
+                          <h2 className="facts-title">
+                            {fundNumbers.fund_number2}
+                          </h2>
+                          <h6 className="para">
+                            {fundNumbers.fund_title2}
+                           <i> (as of 30 June 2024)</i>
+                          </h6>
+
+                          <p className="facts-small">
+                            {fundNumbers.fund_subtitle2}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="col-lg-4 mt-lg-0 mt-4">
+                        <div className="facts-div">
+                          <h2 className="facts-title">
+                            {fundNumbers.fund_number3}
+                          </h2>
+                          <h6 className="para">
+                            {fundNumbers.fund_title3}
+                          <i> (as of 30 June 2024)</i>
+                          </h6>
+                        </div>
+                      </div>
+                      <div className="col-12">
+                        <p className="para-txt mt-2 facts-small">
+                          {fundNumbers.fund_figures}
+                        </p>
+                      </div>
+                    </>
+                  ))} */}
+
+                <div className="col-lg-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">26</h2>
-                    <h6 className="para">companies</h6>
+                    <h2 className="facts-title">INR 1500 Cr+</h2>
+                    <h6 className="para">
+                      AUM
+                      {/* <i> (as of 30 June 2024)</i> */}
+                    </h6>
                   </div>
                 </div>
                 <div className="col-lg-4 mt-lg-0 mt-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">INR 300 Cr</h2>
-                    <h6 className="para">Fund Size</h6>
+                    <h2 className="facts-title">1200+</h2>
+                    <h6 className="para">Investor Families</h6>
                   </div>
                 </div>
                 <div className="col-lg-4 mt-lg-0 mt-4">
                   <div className="facts-div">
-                    <h2 className="facts-title">1.8x</h2>
-                    <h6 className="para">MOIC</h6>
+                    <h2 className="facts-title">19%+</h2>
+                    <h6 className="para">CAGR</h6>
+                    <p className="facts-small">(Since Feb 2015)</p>
                   </div>
+                </div>
+                <div className="col-12">
+                  <p className="para-txt mt-2 facts-small">
+                    Figures as of 28 Feb 2025
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-          <p className="para-txt mt-2">Figures as of 28 Feb 2025.</p>
         </div>
       </section>
 

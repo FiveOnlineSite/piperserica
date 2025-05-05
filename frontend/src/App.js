@@ -115,27 +115,33 @@ function App() {
 
           <Route path="fund-number" element={<FundNumber />} />
           <Route path="add/fund-number" element={<AddFundNumber />} />
-          <Route path="edit/fund-number" element={<EditFundNumber />} />
+          <Route path="edit/fund-number/:id" element={<EditFundNumber />} />
 
           <Route path="company" element={<FundCompanyPortfolio />} />
           <Route path="add/company" element={<AddFundCompanyPortfolio />} />
-          <Route path="edit/company" element={<EditFundCompanyPortfolio />} />
+          <Route
+            path="edit/company/:id"
+            element={<EditFundCompanyPortfolio />}
+          />
 
           <Route path="news" element={<News />} />
           <Route path="add/news" element={<AddNews />} />
-          <Route path="edit/news" element={<EditNews />} />
+          <Route path="edit/news/:id" element={<EditNews />} />
 
           <Route path="news-category" element={<NewsCategory />} />
           <Route path="add/news-category" element={<AddNewsCategory />} />
-          <Route path="edit/news-category" element={<EditNewsCategory />} />
+          <Route path="edit/news-category/:id" element={<EditNewsCategory />} />
 
           <Route path="investor-letter" element={<InvestorLett />} />
           <Route path="add/investor-letter" element={<AddInvestorLett />} />
-          <Route path="edit/investor-letter" element={<EditInvestorLett />} />
+          <Route
+            path="edit/investor-letter/:id"
+            element={<EditInvestorLett />}
+          />
 
           <Route path="team" element={<Team />} />
           <Route path="add/team" element={<AddTeam />} />
-          <Route path="edit/team" element={<EditTeam />} />
+          <Route path="edit/team/:id" element={<EditTeam />} />
 
           <Route path="contact-us" element={<ContactUs />} />
 

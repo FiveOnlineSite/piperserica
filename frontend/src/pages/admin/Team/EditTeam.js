@@ -5,149 +5,80 @@ import { useNavigate, useParams } from "react-router-dom";
 
 const EditTeam = () => {
   const { id } = useParams();
-  const [gallery, setGallery] = useState(null);
-  const [galleryNames, setGalleryNames] = useState([]);
-  const [selectedService, setSelectedService] = useState("");
-  const [selectedGallery, setSelectedGallery] = useState("");
-  const [serviceChanged, setServiceChanged] = useState(false); // Track if service name has been changed
-  // const [media, setMedia] = useState({ iframe: "", file: null });
-  // const [isPublic, setIsPublic] = useState(true);
+  const [team, setTeam] = useState("");
+  const [totalTeams, setTotalTeam] = useState(0);
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState("");
 
   const [formData, setFormData] = useState({
-    service_name: "",
-    gallery_name: "",
-    media: {
-      file: null,
-      iframe: "",
-      filepath: "",
-    },
+    name: "",
+    designation: "",
+    department: "",
+    linkedin_url: "",
   });
 
   useEffect(() => {
-    const fetchGallery = async () => {
+    const fetchTeam = async () => {
       const apiUrl = process.env.REACT_APP_API_URL;
 
       try {
         const response = await axios({
           method: "GET",
           baseURL: `${apiUrl}/api/`,
-          url: `gallery/${id}`,
+          url: `team/${id}`,
         });
-        const galleryData = response.data.gallery;
-        setGallery(galleryData);
-        setSelectedService(galleryData.service_name);
-        setSelectedGallery(galleryData.gallery_name);
-
+        const teamData = response.data.team;
+        setTeam(teamData);
         // Set media state from galleryData
         // setMedia(galleryData.media);
 
         // Set formData based on gallery media type
         setFormData({
-          service_name: galleryData.service_name,
-          gallery_name: galleryData.gallery_name,
-          media: {
-            file: null,
-            iframe: galleryData.media.iframe || "",
-            filepath: galleryData.media.filepath || "",
-          },
-          isPublic: galleryData.isPublic,
+          name: teamData.name,
+          department: teamData.department,
+          designation: teamData.designation,
+          linkedin_url: teamData.linkedin_url,
+          order: teamData.order,
         });
 
-        // Fetch gallery names based on the selected service
-        fetchGalleryNames(galleryData.service_name);
+        const totalDetailsResponse = await axios.get(`${apiUrl}/api/team`);
+        const totalCount = totalDetailsResponse.data.count;
+        setTotalTeam(totalCount);
+        console.log("Count", totalCount);
       } catch (error) {
-        console.error("Error fetching gallery:", error);
+        console.error("Error fetching team:", error);
       }
     };
 
-    fetchGallery();
+    fetchTeam();
   }, [id]);
 
   const handleChange = (e) => {
-    const { name, value, files } = e.target;
-    if (name === "media") {
-      if (files && files.length > 0) {
-        setFormData({
-          ...formData,
-          media: {
-            file: files[0],
-            filename: files[0].name,
-            filepath: URL.createObjectURL(files[0]),
-            iframe: "",
-          },
-        });
-      } else {
-        setFormData({
-          ...formData,
-          media: {
-            ...formData.media,
-            iframe: value,
-          },
-        });
-      }
-    } else {
-      setFormData({
-        ...formData,
-        [name]: value,
-      });
-    }
-  };
+    const { name, value } = e.target;
 
-  const fetchGalleryNames = async (service_name) => {
-    try {
-      const apiUrl = process.env.REACT_APP_API_URL;
-
-      const response = await axios.get(
-        `${apiUrl}/api/gallery_name/gallerynames?service_name=${service_name}`
-      );
-
-      setGalleryNames(response.data.galleryNames);
-      // setSelectedGallery(""); // Reset selected gallery when service changes
-    } catch (error) {
-      console.error("Error fetching gallery names:", error);
-    }
-  };
-
-  useEffect(() => {
-    if (serviceChanged) {
-      fetchGalleryNames(selectedService);
-    }
-  }, [selectedService, serviceChanged]);
-
-  const handleServiceChange = (e) => {
-    setSelectedService(e.target.value);
-    setServiceChanged(true); // Mark that the service name has been changed
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      service_name: e.target.value,
-    }));
-  };
-
-  const handleGalleryChange = (e) => {
-    setSelectedGallery(e.target.value);
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      gallery_name: e.target.value,
-    }));
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    if (formData.order > totalTeams) {
+      setErrorMessage(
+        `Total entries are ${totalTeams}. Order number cannot be greater than ${totalTeams}`
+      );
+      return;
+    }
+
     try {
       const formDataToSend = new FormData();
-
-      formDataToSend.append("service_name", selectedService);
-
-      formDataToSend.append("gallery_name", selectedGallery);
-
-      if (formData.media.file) {
-        formDataToSend.append("media", formData.media.file);
-      } else if (formData.media.iframe.trim()) {
-        formDataToSend.append("media", formData.media.iframe.trim());
-      }
+      formDataToSend.append("name", formData.name);
+      formDataToSend.append("designation", formData.designation);
+      formDataToSend.append("department", formData.department);
+      formDataToSend.append("linkedin_url", formData.linkedin_url);
+      formDataToSend.append("order", formData.order);
 
       const access_token = localStorage.getItem("access_token");
       const apiUrl = process.env.REACT_APP_API_URL;
@@ -155,22 +86,18 @@ const EditTeam = () => {
       const response = await axios({
         method: "PATCH",
         baseURL: `${apiUrl}/api/`,
-        url: `gallery/${id}`,
-        data: formDataToSend, // Pass form data directly
+        url: `/team/${id}`,
+        data: formDataToSend,
         headers: {
-          "Content-Type": "multipart/form-data",
+          "Content-Type": "application/json",
           Authorization: `Bearer ${access_token}`,
         },
       });
-      // setGallery(response.data.updatedGallery);
-      console.log("Gallery updated:", response.data.updatedGallery);
-      // setTimeout(() => {
-      //   navigate("/admin/gallery");
-      // }, 2000);
 
-      navigate("/admin/gallery");
+      navigate("/admin/team");
+      console.log(response.data.team);
     } catch (error) {
-      console.error("Error updating gallery:", error);
+      console.error("Error updating team:", error);
       setErrorMessage(
         `${error.response?.data?.message}` || "An error occurred"
       );
@@ -189,21 +116,39 @@ const EditTeam = () => {
               <div className="col-lg-6 col-md-6 col-sm-12 col-12">
                 <div className="theme-form">
                   <label>Name</label>
-                  <input type="text" name="title" required />
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    value={formData.name}
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
 
               <div className="col-lg-6 col-md-6 col-sm-12 col-12">
                 <div className="theme-form">
                   <label>Designation</label>
-                  <input type="text" name="title" required />
+                  <input
+                    type="text"
+                    name="designation"
+                    required
+                    value={formData.designation}
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
 
               <div className="col-lg-6 col-md-6 col-sm-12 col-12">
                 <div className="theme-form">
                   <label>Department</label>
-                  <input type="text" name="title" required />
+                  <input
+                    type="text"
+                    name="department"
+                    required
+                    value={formData.department}
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
 
@@ -211,7 +156,13 @@ const EditTeam = () => {
                 <div className="theme-form">
                   <label>LinkedIn Profile URL</label>
 
-                  <input type="text" name="title" required />
+                  <input
+                    type="text"
+                    name="linkedin_url"
+                    required
+                    value={formData.linkedin_url}
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
 
@@ -219,7 +170,13 @@ const EditTeam = () => {
                 <div className="theme-form">
                   <label>Order</label>
 
-                  <input type="text" name="title" required />
+                  <input
+                    type="text"
+                    name="order"
+                    required
+                    value={formData.order}
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
 

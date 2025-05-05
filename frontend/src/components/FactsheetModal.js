@@ -681,3 +681,397 @@ const FactsheetModal = () => {
 };
 
 export default FactsheetModal;
+
+// import React, { useEffect, useRef, useState } from "react";
+// import { Modal } from "react-bootstrap";
+// import { NavLink, useLocation } from "react-router-dom";
+// import emailjs from "@emailjs/browser";
+// import axios from "axios";
+
+// const FactsheetModal = () => {
+//   const [showFactsheetModal, setShowFactsheetModal] = useState(false);
+//   const [showPresentationModal, setShowPresentationModal] = useState(false);
+
+//   const [factsheetPresentation, setFactsheetPresentation] = useState([]);
+
+//   const [factsheetName, setFactsheetName] = useState("");
+//   const [factsheetEmail, setFactsheetEmail] = useState("");
+
+//   const [presentationName, setPresentationName] = useState("");
+//   const [presentationEmail, setPresentationEmail] = useState("");
+
+//   const [successModal, setSuccessModal] = useState(false);
+
+//   const formRef = useRef();
+//   const formRefPresentation = useRef();
+
+//   const openFactsheetModal = (e) => {
+//     console.log("Opening Factsheet modal");
+//     setShowFactsheetModal(true);
+//   };
+
+//   const openPresentationModal = () => {
+//     setShowPresentationModal(true);
+//   };
+
+//   const closeFactsheetModal = () => setShowFactsheetModal(false);
+//   const closePresentationModal = () => setShowPresentationModal(false);
+
+//   const location = useLocation();
+//   const pathname = location.pathname; // e.g., "/uno-fund"
+//   const fundName = pathname.includes(
+//     "/public-market/piper-serica-nemero-uno-india-fund"
+//   )
+//     ? "FPI"
+//     : pathname.includes("/public-market/piper-serica-leader-portfolio")
+//     ? "PMS"
+//     : "";
+
+//   const factsheetBtnId = pathname.includes(
+//     "/public-market/piper-serica-nemero-uno-india-fund"
+//   )
+//     ? "fpi-factsheet"
+//     : pathname.includes("/public-market/piper-serica-leader-portfolio")
+//     ? "pms-factsheet"
+//     : "factsheet-btn";
+
+//   const presentationBtnId = pathname.includes(
+//     "/public-market/piper-serica-nemero-uno-india-fund"
+//   )
+//     ? "fpi-presentation"
+//     : pathname.includes("/public-market/piper-serica-leader-portfolio")
+//     ? "pms-presentation"
+//     : "presentation-btn";
+
+//   useEffect(() => {
+//     const fetchFactsheetPresentation = async () => {
+//       try {
+//         const apiUrl = process.env.REACT_APP_API_URL;
+
+//         // const response = await axios.get("/api/user/allUsers");
+//         const response = await axios({
+//           method: "GET",
+//           baseURL: `${apiUrl}/api/`,
+//           url: "factsheet-presentation",
+//         });
+//         console.log("Factsheet", response.data.factsheetPresentation);
+//         setFactsheetPresentation(response.data.factsheetPresentation);
+//       } catch (error) {
+//         console.error("Error fetching factsheet form:", error);
+//       }
+//     };
+
+//     fetchFactsheetPresentation();
+//   }, []);
+
+//   const getFactsheetURL = () => {
+//     const item = factsheetPresentation.find(
+//       (entry) => entry.option === "Factsheet" && entry.fund_name === fundName
+//     );
+//     if (item && item.file_upload?.[0]?.filepath) {
+//       return item.file_upload[0].filename;
+//     }
+//     return null;
+//   };
+
+//   const getPresentationUrl = () => {
+//     const item = factsheetPresentation.find(
+//       (entry) => entry.option === "Presentation" && entry.fund_name === fundName
+//     );
+//     if (item && item.file_upload?.[0]?.filepath) {
+//       return item.file_upload[0].filename;
+//     }
+//     return null;
+//   };
+
+//   const handleFactsheetSubmit = async (e, isPresentation = false) => {
+//     e.preventDefault();
+
+//     try {
+//       const formData = new FormData();
+//       formData.append("name", factsheetName);
+//       formData.append("email", factsheetEmail);
+//       formData.append("fund_name", fundName);
+//       const access_token = localStorage.getItem("access_token");
+
+//       const apiUrl = process.env.REACT_APP_API_URL;
+
+//       const response = await axios.post(
+//         `${apiUrl}/api/factsheet-form`,
+//         formData,
+//         {
+//           headers: {
+//             "Content-Type": "application/json",
+//             Authorization: `Bearer ${access_token}`,
+//           },
+//         }
+//       );
+
+//       console.log(response.data.newFactsheetform);
+
+//       const downloadURL = getFactsheetURL();
+//       if (!downloadURL) {
+//         alert("Factsheet file not available for download.");
+//         return;
+//       }
+
+//       // Force download using blob
+//       const download = await fetch(downloadURL);
+//       const blob = await download.blob();
+//       const blobUrl = window.URL.createObjectURL(blob);
+
+//       const anchor = document.createElement("a");
+//       anchor.href = blobUrl;
+//       anchor.download = downloadURL.split("/").pop();
+//       document.body.appendChild(anchor);
+//       anchor.click();
+//       document.body.removeChild(anchor);
+//       window.URL.revokeObjectURL(blobUrl);
+
+//       setFactsheetName("");
+//       setFactsheetEmail("");
+//       formRef.current.reset();
+//       closeFactsheetModal();
+//     } catch (error) {
+//       console.error("Email send failed:", error);
+//     }
+//   };
+
+//   const handlePresentationSubmit = async (e, isPresentation = false) => {
+//     e.preventDefault();
+
+//     try {
+//       const formData = new FormData();
+//       formData.append("name", presentationName);
+//       formData.append("email", presentationEmail);
+//       formData.append("fund_name", fundName);
+
+//       const access_token = localStorage.getItem("access_token");
+
+//       const apiUrl = process.env.REACT_APP_API_URL;
+
+//       const response = await axios.post(
+//         `${apiUrl}/api/presentation-form`,
+//         formData,
+//         {
+//           headers: {
+//             "Content-Type": "application/json",
+//             Authorization: `Bearer ${access_token}`,
+//           },
+//         }
+//       );
+
+//       console.log(response.data.newFactsheetform);
+
+//       const downloadURL = getPresentationUrl();
+
+//       // Force download using blob
+//       const download = await fetch(downloadURL);
+//       const blob = await download.blob();
+//       const blobUrl = window.URL.createObjectURL(blob);
+
+//       const anchor = document.createElement("a");
+//       anchor.href = blobUrl;
+//       anchor.download = downloadURL.split("/").pop();
+//       document.body.appendChild(anchor);
+//       anchor.click();
+//       document.body.removeChild(anchor);
+//       window.URL.revokeObjectURL(blobUrl);
+
+//       setSuccessModal(true);
+//       console.log("Success modal should be set to true");
+
+//       // Clear success message after 5 seconds
+//       setTimeout(() => {
+//         setSuccessModal(false);
+//       }, 5000);
+
+//       setPresentationName("");
+//       setPresentationEmail("");
+//       closePresentationModal();
+//       formRefPresentation.current.reset();
+//     } catch (error) {
+//       console.error("Email send failed:", error);
+//     }
+//   };
+
+//   return (
+//     <>
+//       <section>
+//         <div>
+//           <button
+//             type="button"
+//             className="banner-btn blue-btn tabs-btn mt-lg-4 mt-md-4 mt-4 me-lg-4 me-md-4 me-4"
+//             onClick={() => setShowFactsheetModal(true)}
+//             id={factsheetBtnId}
+//           >
+//             Factsheet
+//           </button>
+//         </div>
+
+//         <div>
+//           <button
+//             type="button"
+//             className="banner-btn blue-btn tabs-btn mt-lg-4 mt-md-4 mt-4"
+//             onClick={openPresentationModal}
+//             id={presentationBtnId}
+//           >
+//             Presentation
+//           </button>
+//         </div>
+//       </section>
+
+//       <Modal show={showFactsheetModal} onHide={closeFactsheetModal} centered>
+//         <Modal.Header closeButton>
+//           <Modal.Title>
+//             <h4>Factsheet Form</h4>
+//           </Modal.Title>
+//         </Modal.Header>
+//         <Modal.Body>
+//           <form ref={formRef} onSubmit={(e) => handleFactsheetSubmit(e, false)}>
+//             <div className="row">
+//               <div className="col-lg-6">
+//                 <div className="mb-3">
+//                   <label htmlFor="name" className="form-label">
+//                     Name*
+//                   </label>
+//                   <input
+//                     type="text"
+//                     className="form-control"
+//                     id="name"
+//                     name="name"
+//                     required
+//                     value={factsheetName}
+//                     onChange={(e) => setFactsheetName(e.target.value)}
+//                   />
+//                 </div>
+//               </div>
+//               <div className="col-lg-6">
+//                 <div className="mb-3">
+//                   <label htmlFor="email" className="form-label">
+//                     Email*
+//                   </label>
+//                   <input
+//                     type="email"
+//                     name="email"
+//                     className="form-control"
+//                     id="email"
+//                     required
+//                     value={factsheetEmail}
+//                     onChange={(e) => setFactsheetEmail(e.target.value)}
+//                   />
+//                 </div>
+//               </div>
+
+//               <div className="col-lg-12">
+//                 <div className="row">
+//                   <div className="col-lg-3 d-flex justify-content-start">
+//                     <button
+//                       className="banner-btn blue-btn mt-0 mb-3"
+//                       type="submit"
+//                     >
+//                       Submit
+//                     </button>
+//                   </div>
+//                   <div className="col-lg-9">
+//                     <p className="para subscribe-para mb-0">
+//                       <i>
+//                         *By submitting the contact form, you consent to all data
+//                         in the form being used in accordance with
+//                         <NavLink to="/privacy-policy">
+//                           {" "}
+//                           Piper Serics's data privacy policy
+//                         </NavLink>
+//                       </i>
+//                     </p>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//           </form>
+//         </Modal.Body>
+//       </Modal>
+
+//       <Modal
+//         show={showPresentationModal}
+//         onHide={closePresentationModal}
+//         centered
+//       >
+//         <Modal.Header closeButton>
+//           <Modal.Title>
+//             <h4>Presentation Form</h4>
+//           </Modal.Title>
+//         </Modal.Header>
+//         <Modal.Body>
+//           <form
+//             ref={formRefPresentation}
+//             onSubmit={(e) => handlePresentationSubmit(e, true)}
+//           >
+//             <div className="row">
+//               <div className="col-lg-6">
+//                 <div className="mb-3">
+//                   <label htmlFor="name" className="form-label">
+//                     Name*
+//                   </label>
+//                   <input
+//                     type="text"
+//                     className="form-control"
+//                     id="name"
+//                     name="name"
+//                     required
+//                     value={presentationName}
+//                     onChange={(e) => setPresentationName(e.target.value)}
+//                   />
+//                 </div>
+//               </div>
+
+//               <div className="col-lg-6">
+//                 <div className="mb-3">
+//                   <label htmlFor="email" className="form-label">
+//                     Email*
+//                   </label>
+//                   <input
+//                     type="email"
+//                     name="email"
+//                     className="form-control"
+//                     id="email"
+//                     required
+//                     value={presentationEmail}
+//                     onChange={(e) => setPresentationEmail(e.target.value)}
+//                   />
+//                 </div>
+//               </div>
+
+//               <div className="col-lg-12">
+//                 <div className="row">
+//                   <div className="col-lg-3 d-flex justify-content-start">
+//                     <button
+//                       className="banner-btn blue-btn mt-0 mb-3"
+//                       type="submit"
+//                     >
+//                       Submit
+//                     </button>
+//                   </div>
+//                   <div className="col-lg-9">
+//                     <p className="para subscribe-para mb-0">
+//                       <i>
+//                         *By submitting the contact form, you consent to all data
+//                         in the form being used in accordance with
+//                         <NavLink to="/privacy-policy">
+//                           {" "}
+//                           Piper Serics's data privacy policy
+//                         </NavLink>
+//                       </i>
+//                     </p>
+//                   </div>
+//                 </div>
+//               </div>
+//             </div>
+//           </form>
+//         </Modal.Body>
+//       </Modal>
+//     </>
+//   );
+// };
+
+// export default FactsheetModal;

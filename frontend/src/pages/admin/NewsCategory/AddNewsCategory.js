@@ -4,86 +4,40 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const AddNewsCategory = () => {
-  const [selectedService, setSelectedService] = useState("");
-  const [selectedGallery, setSelectedGallery] = useState("");
-  const [galleryNames, setGalleryNames] = useState([]);
-  const [media, setMedia] = useState({ iframe: "", file: null });
-  const [isPublic, setIsPublic] = useState(true);
+  const [newsCategory, setNewsCategory] = useState("");
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState("");
-
-  const fetchGalleryNames = async () => {
-    try {
-      const apiUrl = process.env.REACT_APP_API_URL;
-      const response = await axios({
-        method: "GET",
-        baseURL: `${apiUrl}/api`,
-        url: `gallery_name/gallerynames?service_name=${selectedService}`,
-      });
-
-      console.log("Gallery names response:", response);
-      console.log("Gallery names:", galleryNames);
-
-      // setGalleryNames(
-      //   response.data.galleryNames.map((gallery) => gallery.name)
-      // );
-      setGalleryNames(response.data.galleryNames);
-    } catch (error) {
-      console.error("Error fetching gallery names:", error);
-    }
-  };
-
-  useEffect(() => {
-    // fetchGalleryNames();
-    if (selectedService) {
-      fetchGalleryNames();
-    }
-  }, [selectedService]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      // Set isPublic to false if the checkbox is unchecked
-      if (!isPublic) {
-        setIsPublic(false);
-      }
-
       const formData = new FormData();
-      formData.append("gallery_name", selectedGallery);
-      formData.append("service_name", selectedService);
-      formData.append("isPublic", isPublic); // Include isPublic in the form data
-
-      // Check if either an iFrame URL or a file is provided for the media field
-      if (media.iframe && media.iframe.trim()) {
-        formData.append("media", media.iframe.trim());
-      } else if (media.file) {
-        formData.append("media", media.file);
-      } else {
-        throw new Error(
-          "Either a file or a valid URL is required for the media field."
-        );
-      }
+      formData.append("news_category", newsCategory);
 
       const access_token = localStorage.getItem("access_token");
 
       const apiUrl = process.env.REACT_APP_API_URL;
 
-      const response = await axios.post(`${apiUrl}/api/gallery`, formData, {
-        headers: {
-          "Content-Type": "multipart/form-data",
-          Authorization: `Bearer ${access_token}`,
-        },
-      });
+      const response = await axios.post(
+        `${apiUrl}/api/news-category`,
+        { news_category: newsCategory },
+        {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${access_token}`,
+          },
+        }
+      );
 
-      console.log(response.data.newGallery);
+      console.log(response.data.newNewsCategory);
       // setTimeout(() => {
       //   navigate("/admin/gallery");
       // }, 2000);
 
-      navigate("/admin/gallery");
+      navigate("/admin/news-category");
     } catch (error) {
-      console.error("Error creating gallery:", error);
+      console.error("Error creating news categoryllery:", error);
       setErrorMessage(
         `${error.response?.data?.message}` || "An error occurred"
       );
@@ -101,7 +55,13 @@ const AddNewsCategory = () => {
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="theme-form">
                 <label>News Category</label>
-                <input type="text" name="title" required />
+                <input
+                  type="text"
+                  name="news_category"
+                  required
+                  value={newsCategory}
+                  onChange={(e) => setNewsCategory(e.target.value)}
+                />
               </div>
             </div>
 

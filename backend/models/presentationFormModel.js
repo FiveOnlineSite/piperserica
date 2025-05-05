@@ -15,7 +15,6 @@ const PresentationFormSchema = new mongoose.Schema(
       type: String,
       enum: ["", "PMS", "FPI"],
       default: "",
-      required: true,
     },
   },
   {

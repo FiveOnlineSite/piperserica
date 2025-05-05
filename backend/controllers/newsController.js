@@ -3,7 +3,7 @@ const path = require("path");
 
 const createNews = async (req, res) => {
   try {
-    const { thumbnail, title, date, news_category_id, news_url } = req.body;
+    const { title, date, news_category_id, news_url } = req.body;
     let mediaData = {};
     {
       const file = req.file;
@@ -25,7 +25,6 @@ const createNews = async (req, res) => {
         });
       }
 
-      fileType = "webp";
       mediaData = {
         filename: req.file.originalname,
         filepath: req.file.path,
@@ -76,7 +75,7 @@ const updateNews = async (req, res) => {
         });
       }
 
-      fileData = {
+      let fileData = {
         filename: req.file.originalname,
         filepath: req.file.path,
       };
@@ -134,7 +133,9 @@ const getNews = async (req, res) => {
 
 const getAllNews = async (req, res) => {
   try {
-    const news = await NewsModel.find();
+    const news = await NewsModel.find()
+      .populate("news_category_id")
+      .sort({ date: -1 });
 
     if (news.length === 0) {
       return res.status(400).json({

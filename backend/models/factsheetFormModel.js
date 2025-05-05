@@ -15,7 +15,6 @@ const FactsheetFormSchema = new mongoose.Schema(
       type: String,
       enum: ["", "PMS", "FPI"],
       default: "",
-      required: true,
     },
   },
   {

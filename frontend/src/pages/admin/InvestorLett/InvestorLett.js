@@ -5,12 +5,12 @@ import axios from "axios";
 import InvestorLetter from "../../user/InvestorLetter";
 
 const InvestorLett = () => {
-  const [galleries, setGalleries] = useState([]);
+  const [investorLetter, setInvestorLetter] = useState([]);
 
   const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchGalleries = async () => {
+    const fetchInvestorLetter = async () => {
       try {
         const apiUrl = process.env.REACT_APP_API_URL;
 
@@ -18,16 +18,16 @@ const InvestorLett = () => {
         const response = await axios({
           method: "GET",
           baseURL: `${apiUrl}/api/`,
-          url: "FactsheetPresentation",
+          url: "investor-letter",
         });
-        console.log(response.data.galleries);
-        setGalleries(response.data.galleries);
+        console.log(response.data.investorLetter);
+        setInvestorLetter(response.data.investorLetter);
       } catch (error) {
-        console.error("Error fetching users:", error);
+        console.error("Error fetching investor letter:", error);
       }
     };
 
-    fetchGalleries();
+    fetchInvestorLetter();
   }, []);
 
   const handleDelete = async (id) => {
@@ -38,26 +38,24 @@ const InvestorLett = () => {
       const response = await axios({
         method: "DELETE",
         baseURL: `${apiUrl}/api/`,
-        url: `FactsheetPresentation/${id}`,
+        url: `investor-letter/${id}`,
         headers: {
           Authorization: `Bearer ${access_token}`,
         },
       });
-      setGalleries(null); // Update user state to null after deletion
+      setInvestorLetter(null); // Update user state to null after deletion
       // setTimeout(() => {
       //   navigate("/admin/FactsheetPresentation");
       // }, 2000);
       console.log(response.data);
-      setGalleries(
-        galleries.filter(
-          (FactsheetPresentation) => FactsheetPresentation._id !== id
-        )
+      setInvestorLetter(
+        investorLetter.filter((investorLetter) => investorLetter._id !== id)
       );
       setTimeout(() => {
-        navigate("/admin/FactsheetPresentation");
+        navigate("/admin/investor-letter");
       }, 3000);
     } catch (error) {
-      console.error("Error deleting FactsheetPresentation:", error);
+      console.error("Error deleting investor letter:", error);
     }
   };
   return (
@@ -86,28 +84,26 @@ const InvestorLett = () => {
                   </tr>
                 </thead>
                 <tbody>
-                  {galleries &&
-                    galleries.map((FactsheetPresentation) => (
-                      <tr key={FactsheetPresentation._id}>
-                        <td>{FactsheetPresentation.service_name}</td>
+                  {investorLetter &&
+                    investorLetter.map((investorLetter) => (
+                      <tr key={investorLetter._id}>
+                        {" "}
+                        <td>{investorLetter.title}</td>
                         <td className="text-center">
-                          {FactsheetPresentation.FactsheetPresentation_name}
+                          {investorLetter.month_year}
                         </td>
                         <td className="table-profile-img text-center">
-                          {FactsheetPresentation.type === "image" ? (
-                            <img
-                              src={`${process.env.REACT_APP_API_URL}/${FactsheetPresentation.media.filepath}`} // Assuming filepath contains the path to the image
-                              alt={`${FactsheetPresentation.media.filename}`}
-                              style={{ width: "50px", height: "50px" }}
-                              loading="lazy"
-                            />
-                          ) : (
-                            <span>{FactsheetPresentation.media.iframe}</span>
-                          )}
+                          <a
+                            href={investorLetter.file_upload[0].filepath}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {investorLetter.file_upload[0].filename}
+                          </a>
                         </td>
                         <td className="text-center">
                           <Link
-                            to={`/admin/edit/FactsheetPresentation/${FactsheetPresentation._id}`}
+                            to={`/admin/edit/investor-letter/${investorLetter._id}`}
                             title="Edit"
                           >
                             <i class="las la-pencil-alt"></i>
@@ -116,9 +112,7 @@ const InvestorLett = () => {
                         <td className="text-center">
                           <button
                             className="delete-btn"
-                            onClick={() =>
-                              handleDelete(FactsheetPresentation._id)
-                            }
+                            onClick={() => handleDelete(investorLetter._id)}
                           >
                             <i class="las la-trash"></i>{" "}
                           </button>

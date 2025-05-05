@@ -5,172 +5,97 @@ import { useNavigate, useParams } from "react-router-dom";
 
 const EditFundNumber = () => {
   const { id } = useParams();
-  const [gallery, setGallery] = useState(null);
-  const [galleryNames, setGalleryNames] = useState([]);
-  const [selectedService, setSelectedService] = useState("");
-  const [selectedGallery, setSelectedGallery] = useState("");
-  const [serviceChanged, setServiceChanged] = useState(false); // Track if service name has been changed
-  // const [media, setMedia] = useState({ iframe: "", file: null });
-  // const [isPublic, setIsPublic] = useState(true);
+  const [selectedFundName, setSelectedFundName] = useState("");
+  const [fundNumber, setFundNumber] = useState("");
   const navigate = useNavigate();
   const [errorMessage, setErrorMessage] = useState("");
 
   const [formData, setFormData] = useState({
-    service_name: "",
-    gallery_name: "",
-    media: {
-      file: null,
-      iframe: "",
-      filepath: "",
-    },
+    fund_name: "",
+    fund_number1: "",
+    fund_number2: "",
+    fund_number3: "",
+    fund_title1: "",
+    fund_title2: "",
+    fund_title3: "",
+    fund_subtitle1: "",
+    fund_subtitle2: "",
+    fund_subtitle3: "",
+    fund_figures: "",
   });
 
   useEffect(() => {
-    const fetchGallery = async () => {
+    const fetchFundNumber = async () => {
       const apiUrl = process.env.REACT_APP_API_URL;
 
       try {
         const response = await axios({
           method: "GET",
           baseURL: `${apiUrl}/api/`,
-          url: `gallery/${id}`,
+          url: `fund-number/by-id/${id}`,
         });
-        const galleryData = response.data.gallery;
-        setGallery(galleryData);
-        setSelectedService(galleryData.service_name);
-        setSelectedGallery(galleryData.gallery_name);
-
+        if (response.data && response.data.fundNumber) {
+          const fundNumberData = response.data.fundNumber;
+          console.log(fundNumberData);
+          // Set the form data directly
+          setFormData({
+            fund_name: fundNumberData.fund_name || "",
+            fund_number1: fundNumberData.fund_number1 || "",
+            fund_number2: fundNumberData.fund_number2 || "",
+            fund_number3: fundNumberData.fund_number3 || "",
+            fund_title1: fundNumberData.fund_title1 || "",
+            fund_title2: fundNumberData.fund_title2 || "",
+            fund_title3: fundNumberData.fund_title3 || "",
+            fund_subtitle1: fundNumberData.fund_subtitle1 || "",
+            fund_subtitle2: fundNumberData.fund_subtitle2 || "",
+            fund_subtitle3: fundNumberData.fund_subtitle3 || "",
+            fund_figures: fundNumberData.fund_figures || "",
+          });
+        }
         // Set media state from galleryData
         // setMedia(galleryData.media);
-
-        // Set formData based on gallery media type
-        setFormData({
-          service_name: galleryData.service_name,
-          gallery_name: galleryData.gallery_name,
-          media: {
-            file: null,
-            iframe: galleryData.media.iframe || "",
-            filepath: galleryData.media.filepath || "",
-          },
-          isPublic: galleryData.isPublic,
-        });
-
-        // Fetch gallery names based on the selected service
-        fetchGalleryNames(galleryData.service_name);
       } catch (error) {
-        console.error("Error fetching gallery:", error);
+        console.error("Error fetching fund number:", error);
       }
     };
 
-    fetchGallery();
+    fetchFundNumber();
   }, [id]);
 
   const handleChange = (e) => {
-    const { name, value, files } = e.target;
-    if (name === "media") {
-      if (files && files.length > 0) {
-        setFormData({
-          ...formData,
-          media: {
-            file: files[0],
-            filename: files[0].name,
-            filepath: URL.createObjectURL(files[0]),
-            iframe: "",
-          },
-        });
-      } else {
-        setFormData({
-          ...formData,
-          media: {
-            ...formData.media,
-            iframe: value,
-          },
-        });
-      }
-    } else {
-      setFormData({
-        ...formData,
-        [name]: value,
-      });
-    }
-  };
-
-  const fetchGalleryNames = async (service_name) => {
-    try {
-      const apiUrl = process.env.REACT_APP_API_URL;
-
-      const response = await axios.get(
-        `${apiUrl}/api/gallery_name/gallerynames?service_name=${service_name}`
-      );
-
-      setGalleryNames(response.data.galleryNames);
-      // setSelectedGallery(""); // Reset selected gallery when service changes
-    } catch (error) {
-      console.error("Error fetching gallery names:", error);
-    }
-  };
-
-  useEffect(() => {
-    if (serviceChanged) {
-      fetchGalleryNames(selectedService);
-    }
-  }, [selectedService, serviceChanged]);
-
-  const handleServiceChange = (e) => {
-    setSelectedService(e.target.value);
-    setServiceChanged(true); // Mark that the service name has been changed
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      service_name: e.target.value,
-    }));
-  };
-
-  const handleGalleryChange = (e) => {
-    setSelectedGallery(e.target.value);
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      gallery_name: e.target.value,
-    }));
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const formDataToSend = new FormData();
-
-      formDataToSend.append("service_name", selectedService);
-
-      formDataToSend.append("gallery_name", selectedGallery);
-
-      if (formData.media.file) {
-        formDataToSend.append("media", formData.media.file);
-      } else if (formData.media.iframe.trim()) {
-        formDataToSend.append("media", formData.media.iframe.trim());
-      }
-
       const access_token = localStorage.getItem("access_token");
       const apiUrl = process.env.REACT_APP_API_URL;
 
       const response = await axios({
         method: "PATCH",
         baseURL: `${apiUrl}/api/`,
-        url: `gallery/${id}`,
-        data: formDataToSend, // Pass form data directly
+        url: `fund-number/${id}`,
+        data: formData, // Pass form data directly
         headers: {
-          "Content-Type": "multipart/form-data",
+          "Content-Type": "application/json",
           Authorization: `Bearer ${access_token}`,
         },
       });
       // setGallery(response.data.updatedGallery);
-      console.log("Gallery updated:", response.data.updatedGallery);
+      console.log("Fund number updated:", response.data.updatedFundNumber);
       // setTimeout(() => {
       //   navigate("/admin/gallery");
       // }, 2000);
 
-      navigate("/admin/gallery");
+      navigate("/admin/fund-number");
     } catch (error) {
-      console.error("Error updating gallery:", error);
+      console.error("Error updating fund number:", error);
       setErrorMessage(
         `${error.response?.data?.message}` || "An error occurred"
       );
@@ -180,7 +105,7 @@ const EditFundNumber = () => {
   return (
     <AdminLayout>
       <div className="theme-form-header">
-        <h2>Add Fund Number</h2>
+        <h2>Edit Fund Number</h2>
       </div>
       <div className="form-white-bg">
         <form onSubmit={handleSubmit}>
@@ -189,21 +114,23 @@ const EditFundNumber = () => {
               <div className="theme-form">
                 <label>Fund / Investor Name</label>
                 <select
-                  value={selectedService}
                   required
-                  onChange={(e) => {
-                    setSelectedService(e.target.value);
-                    fetchGalleryNames();
-                  }}
+                  name="fund_name"
+                  value={formData.fund_name}
+                  onChange={handleChange}
                 >
                   <option value="">Select a Fund / Investor</option>
                   <option value="PMS">PMS</option>
                   <option value="FPI">FPI</option>
                   <option value="AIF">AIF</option>
-                  <option value="AIF">Foreign Investor</option>
-                  <option value="AIF">NRI Investor</option>
-                  <option value="AIF">Family Office & Indian Investor</option>
-                  <option value="AIF">Startup Founder & Enterpreneur</option>
+                  <option value="Foreign Investor">Foreign Investor</option>
+                  <option value="NRI Investor">NRI Investor</option>
+                  <option value="Family Office & Indian Investor">
+                    Family Office & Indian Investor
+                  </option>
+                  <option value="Startup Founder & Enterpreneur">
+                    Startup Founder & Enterpreneur
+                  </option>
                 </select>
               </div>
             </div>
@@ -211,70 +138,121 @@ const EditFundNumber = () => {
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="theme-form">
                 <label>Fund Figures</label>
-                <input type="text" name="title" required />
+                <input
+                  type="text"
+                  name="fund_figures"
+                  value={formData.fund_figures}
+                  onChange={handleChange}
+                />
               </div>
             </div>
 
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="theme-form">
                 <label>Fund Number 1</label>
-                <input type="text" name="title" required />
+                <input
+                  type="text"
+                  name="fund_number1"
+                  required
+                  value={formData.fund_number1}
+                  onChange={handleChange}
+                />
               </div>
             </div>
 
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="theme-form">
                 <label>Fund Number 2</label>
-                <input type="text" name="title" required />
+                <input
+                  type="text"
+                  name="fund_number2"
+                  value={formData.fund_number2}
+                  onChange={handleChange}
+                />
               </div>
             </div>
 
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="theme-form">
                 <label>Fund Number 3</label>
-                <input type="text" name="title" required />
+                <input
+                  type="text"
+                  name="fund_number3"
+                  value={formData.fund_number3}
+                  onChange={handleChange}
+                />
               </div>
             </div>
 
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="theme-form">
                 <label>Fund Title 1</label>
-                <input type="text" name="title" required />
+                <input
+                  type="text"
+                  name="fund_title1"
+                  value={formData.fund_title1}
+                  onChange={handleChange}
+                />
               </div>
             </div>
 
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="theme-form">
                 <label>Fund Title 2</label>
-                <input type="text" name="title" required />
+                <input
+                  type="text"
+                  name="fund_title2"
+                  value={formData.fund_title2}
+                  onChange={handleChange}
+                />
               </div>
             </div>
 
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="theme-form">
                 <label>Fund Title 3</label>
-                <input type="text" name="title" required />
+                <input
+                  type="text"
+                  name="fund_title3"
+                  value={formData.fund_title3}
+                  onChange={handleChange}
+                />
               </div>
             </div>
 
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="theme-form">
                 <label>Fund Subtitle 1</label>
-                <input type="text" name="title" />
+                <input
+                  type="text"
+                  name="fund_subtitle1"
+                  value={formData.fund_subtitle1}
+                  onChange={handleChange}
+                />
               </div>
             </div>
 
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="theme-form">
                 <label>Fund Subtitle 2</label>
-                <input type="text" name="title" />
+                <input
+                  type="text"
+                  name="fund_subtitle2"
+                  value={formData.fund_subtitle2}
+                  onChange={handleChange}
+                />
               </div>
             </div>
 
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="theme-form">
                 <label>Fund Subtitle 3</label>
-                <input type="text" name="title" />
+                <input
+                  type="text"
+                  name="fund_subtitle3"
+                  value={formData.fund_subtitle3}
+                  onChange={handleChange}
+                />
               </div>
             </div>
 

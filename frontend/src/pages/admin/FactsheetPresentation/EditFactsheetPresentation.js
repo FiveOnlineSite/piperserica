@@ -5,12 +5,12 @@ import axios from "axios";
 
 const EditFactsheetPresentation = () => {
   const { id } = useParams();
+
+  const navigate = useNavigate();
+  const [errorMessage, setErrorMessage] = useState("");
   const [factsheetPresentation, setFactsheetPresentation] = useState(null);
   const [selectedFactsheetPresentation, setSelectedFactsheetPresentation] =
     useState("");
-  const [selectedFundName, setSelectedFundName] = useState("");
-  const navigate = useNavigate();
-  const [errorMessage, setErrorMessage] = useState("");
 
   const [formData, setFormData] = useState({
     fund_name: "",
@@ -31,25 +31,21 @@ const EditFactsheetPresentation = () => {
           baseURL: `${apiUrl}/api/`,
           url: `factsheet-presentation/${id}`,
         });
-        const factsheetPresentationData = response.data.factsheetPresentation;
-        console.log("Factsheetpresentation", factsheetPresentationData);
-        setFactsheetPresentation(factsheetPresentationData);
-        setSelectedFundName(factsheetPresentation.fund_name);
-        setSelectedFactsheetPresentation(factsheetPresentation.option);
-        // Set media state from factsheetPresentationData
-        // setMedia(factsheetPresentationData.media);
 
-        // Set formData based on gallery media type
+        const data = response.data.factsheetPresentation;
+        console.log("Factsheetpresentation", data);
+
+        // Set the form data directly
         setFormData({
-          fund_name: factsheetPresentationData.fund_name,
-          option: factsheetPresentationData.option,
+          fund_name: data.fund_name || "",
+          option: data.option || "",
           file_upload: {
-            filename: factsheetPresentationData.file_upload[0]?.filename || "",
-            filepath: factsheetPresentationData.file_upload[0]?.filepath || "",
+            filename: data.file_upload?.[0]?.filename || "",
+            filepath: data.file_upload?.[0]?.filepath || "",
           },
         });
       } catch (error) {
-        console.error("Error fetching factsheet / presentation:", error);
+        console.error("Error fetching factsheet/presentation:", error);
       }
     };
 
@@ -66,14 +62,6 @@ const EditFactsheetPresentation = () => {
             file: files[0],
             filename: files[0].name,
             filepath: URL.createObjectURL(files[0]),
-          },
-        });
-      } else {
-        setFormData({
-          ...formData,
-          file_upload: {
-            ...formData.file_upload,
-            iframe: value,
           },
         });
       }
@@ -95,9 +83,8 @@ const EditFactsheetPresentation = () => {
     try {
       const formDataToSend = new FormData();
 
-      formDataToSend.append("option", selectedFactsheetPresentation);
-
-      formDataToSend.append("fund_name", selectedFundName);
+      formDataToSend.append("fund_name", formData.fund_name);
+      formDataToSend.append("option", formData.option);
 
       if (formData.file_upload.file) {
         formDataToSend.append("file_upload", formData.file_upload.file);
@@ -109,7 +96,7 @@ const EditFactsheetPresentation = () => {
       const response = await axios({
         method: "PATCH",
         baseURL: `${apiUrl}/api/`,
-        url: `gallery/${id}`,
+        url: `factsheet-presentation/${id}`,
         data: formDataToSend, // Pass form data directly
         headers: {
           "Content-Type": "multipart/form-data",
@@ -117,14 +104,17 @@ const EditFactsheetPresentation = () => {
         },
       });
       // setGallery(response.data.updatedGallery);
-      console.log("Gallery updated:", response.data.updatedGallery);
+      console.log(
+        "Factsheet / Presentation updated:",
+        response.data.updatedFactsheetPresentation
+      );
       // setTimeout(() => {
       //   navigate("/admin/gallery");
       // }, 2000);
 
-      navigate("/admin/gallery");
+      navigate("/admin/factsheet-presentation");
     } catch (error) {
-      console.error("Error updating gallery:", error);
+      console.error("Error updating Factsheet / Presentation:", error);
       setErrorMessage(
         `${error.response?.data?.message}` || "An error occurred"
       );
@@ -143,8 +133,9 @@ const EditFactsheetPresentation = () => {
               <div className="theme-form">
                 <label>Fund Name</label>
                 <select
+                  name="fund_name"
                   value={formData.fund_name}
-                  // onChange={handleServiceChange}
+                  onChange={handleChange}
                 >
                   <option value="">Select a Fund</option>
                   <option value="PMS">PMS</option>
@@ -157,8 +148,9 @@ const EditFactsheetPresentation = () => {
               <div className="theme-form">
                 <label>Factsheet / Presentation</label>
                 <select
+                  name="option"
                   value={formData.option}
-                  // onChange={handleServiceChange}
+                  onChange={handleChange}
                 >
                   <option value="">Select a option</option>
                   <option value="Factsheet">Factsheet</option>
@@ -170,8 +162,18 @@ const EditFactsheetPresentation = () => {
             <div className="col-lg-6 col-md-6 col-sm-12 col-12">
               <div className="theme-form">
                 <label>File Upload</label>
-
-                <input type="file" name="file_upload" />
+                <input
+                  type="file"
+                  name="file_upload"
+                  accept=".pdf"
+                  onChange={handleChange}
+                />{" "}
+                {formData.file_upload.filename && (
+                  <div className="mt-2">
+                    <strong>Selected File:</strong>{" "}
+                    {formData.file_upload.filename}
+                  </div>
+                )}
               </div>
             </div>
 

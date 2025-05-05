@@ -5,85 +5,93 @@ import { useNavigate, useParams } from "react-router-dom";
 
 const EditNews = () => {
   const { id } = useParams();
-  const [gallery, setGallery] = useState(null);
-  const [galleryNames, setGalleryNames] = useState([]);
-  const [selectedService, setSelectedService] = useState("");
-  const [selectedGallery, setSelectedGallery] = useState("");
-  const [serviceChanged, setServiceChanged] = useState(false); // Track if service name has been changed
-  // const [media, setMedia] = useState({ iframe: "", file: null });
-  // const [isPublic, setIsPublic] = useState(true);
+  const [newsCategory, setNewsCategory] = useState([]);
+  const [selectedNewsCategory, setSelectedNewsCategory] = useState("");
+  const [news, setNews] = useState("");
+
   const navigate = useNavigate();
+
   const [errorMessage, setErrorMessage] = useState("");
 
   const [formData, setFormData] = useState({
-    service_name: "",
-    gallery_name: "",
-    media: {
-      file: null,
-      iframe: "",
+    title: "",
+    date: "",
+    news_category_id: "",
+    news_url: "",
+    thumbnail: {
+      filename: "",
       filepath: "",
     },
   });
 
+  const fetchNewsCategory = async () => {
+    try {
+      const apiUrl = process.env.REACT_APP_API_URL;
+      const response = await axios({
+        method: "GET",
+        baseURL: `${apiUrl}/api/`,
+        url: `news-category`,
+      });
+
+      setNewsCategory(response.data.newsCategory);
+    } catch (error) {
+      console.error("Error fetching news category:", error);
+    }
+  };
+
   useEffect(() => {
-    const fetchGallery = async () => {
+    fetchNewsCategory();
+  }, []);
+
+  useEffect(() => {
+    const fetchNews = async () => {
       const apiUrl = process.env.REACT_APP_API_URL;
 
       try {
         const response = await axios({
           method: "GET",
           baseURL: `${apiUrl}/api/`,
-          url: `gallery/${id}`,
+          url: `news/${id}`,
         });
-        const galleryData = response.data.gallery;
-        setGallery(galleryData);
-        setSelectedService(galleryData.service_name);
-        setSelectedGallery(galleryData.gallery_name);
+        const newsData = response.data.news;
+        setNews(newsData);
+        console.log(newsData);
+
+        // setSelectedIndustry(companyData.industry || "");
 
         // Set media state from galleryData
         // setMedia(galleryData.media);
 
         // Set formData based on gallery media type
         setFormData({
-          service_name: galleryData.service_name,
-          gallery_name: galleryData.gallery_name,
-          media: {
-            file: null,
-            iframe: galleryData.media.iframe || "",
-            filepath: galleryData.media.filepath || "",
+          title: newsData.title || "",
+          news_category_id: newsData.news_category_id || "",
+          date: newsData.date || "",
+          news_url: newsData.news_url || "",
+          thumbnail: {
+            filename: newsData.thumbnail?.[0]?.filename || "",
+            filepath: newsData.thumbnail?.[0]?.filepath || "",
           },
-          isPublic: galleryData.isPublic,
         });
-
-        // Fetch gallery names based on the selected service
-        fetchGalleryNames(galleryData.service_name);
+        setSelectedNewsCategory(newsData.news_category_id || "");
       } catch (error) {
-        console.error("Error fetching gallery:", error);
+        console.error("Error fetching news:", error);
       }
     };
 
-    fetchGallery();
+    fetchNews();
   }, [id]);
 
   const handleChange = (e) => {
     const { name, value, files } = e.target;
-    if (name === "media") {
+    if (name === "thumbnail") {
       if (files && files.length > 0) {
         setFormData({
           ...formData,
-          media: {
+          thumbnail: {
             file: files[0],
             filename: files[0].name,
             filepath: URL.createObjectURL(files[0]),
-            iframe: "",
-          },
-        });
-      } else {
-        setFormData({
-          ...formData,
-          media: {
-            ...formData.media,
-            iframe: value,
           },
         });
       }
@@ -95,43 +103,9 @@ const EditNews = () => {
     }
   };
 
-  const fetchGalleryNames = async (service_name) => {
-    try {
-      const apiUrl = process.env.REACT_APP_API_URL;
-
-      const response = await axios.get(
-        `${apiUrl}/api/gallery_name/gallerynames?service_name=${service_name}`
-      );
-
-      setGalleryNames(response.data.galleryNames);
-      // setSelectedGallery(""); // Reset selected gallery when service changes
-    } catch (error) {
-      console.error("Error fetching gallery names:", error);
-    }
-  };
-
   useEffect(() => {
-    if (serviceChanged) {
-      fetchGalleryNames(selectedService);
-    }
-  }, [selectedService, serviceChanged]);
-
-  const handleServiceChange = (e) => {
-    setSelectedService(e.target.value);
-    setServiceChanged(true); // Mark that the service name has been changed
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      service_name: e.target.value,
-    }));
-  };
-
-  const handleGalleryChange = (e) => {
-    setSelectedGallery(e.target.value);
-    setFormData((prevFormData) => ({
-      ...prevFormData,
-      gallery_name: e.target.value,
-    }));
-  };
+    setNews(selectedNewsCategory);
+  }, [selectedNewsCategory]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -139,14 +113,14 @@ const EditNews = () => {
     try {
       const formDataToSend = new FormData();
 
-      formDataToSend.append("service_name", selectedService);
+      formDataToSend.append("news_category_id", formData.news_category_id);
 
-      formDataToSend.append("gallery_name", selectedGallery);
+      formDataToSend.append("title", formData.title);
+      formDataToSend.append("date", formData.date);
+      formDataToSend.append("news_url", formData.news_url);
 
-      if (formData.media.file) {
-        formDataToSend.append("media", formData.media.file);
-      } else if (formData.media.iframe.trim()) {
-        formDataToSend.append("media", formData.media.iframe.trim());
+      if (formData.thumbnail.file) {
+        formDataToSend.append("thumbnail", formData.thumbnail.file);
       }
 
       const access_token = localStorage.getItem("access_token");
@@ -155,7 +129,7 @@ const EditNews = () => {
       const response = await axios({
         method: "PATCH",
         baseURL: `${apiUrl}/api/`,
-        url: `gallery/${id}`,
+        url: `news/${id}`,
         data: formDataToSend, // Pass form data directly
         headers: {
           "Content-Type": "multipart/form-data",
@@ -163,14 +137,14 @@ const EditNews = () => {
         },
       });
       // setGallery(response.data.updatedGallery);
-      console.log("Gallery updated:", response.data.updatedGallery);
+      console.log("News updated:", response.data.updatedNews);
       // setTimeout(() => {
       //   navigate("/admin/gallery");
       // }, 2000);
 
-      navigate("/admin/gallery");
+      navigate("/admin/news");
     } catch (error) {
-      console.error("Error updating gallery:", error);
+      console.error("Error updating news:", error);
       setErrorMessage(
         `${error.response?.data?.message}` || "An error occurred"
       );
@@ -189,14 +163,35 @@ const EditNews = () => {
               <div className="col-lg-6 col-md-6 col-sm-12 col-12">
                 <div className="theme-form">
                   <label>Thumbnail</label>
-                  <input type="file" name="media" accept=".webp" />
+                  <input
+                    type="file"
+                    name="thumbnail"
+                    accept=".webp"
+                    onChange={handleChange}
+                  />
+                  <img
+                    className="form-profile"
+                    src={
+                      formData.thumbnail.file
+                        ? formData.thumbnail.filepath // local preview URL
+                        : `${process.env.REACT_APP_API_URL}/${formData.thumbnail.filepath}` // server path
+                    }
+                    alt={formData.thumbnail.filename}
+                    loading="lazy"
+                  />
                 </div>
               </div>
 
               <div className="col-lg-6 col-md-6 col-sm-12 col-12">
                 <div className="theme-form">
                   <label>Title</label>
-                  <input type="text" name="title" required />
+                  <input
+                    type="text"
+                    name="title"
+                    required
+                    value={formData.title}
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
 
@@ -204,7 +199,13 @@ const EditNews = () => {
                 <div className="theme-form">
                   <label>Date</label>
 
-                  <input type="date" name="title" required />
+                  <input
+                    type="date"
+                    name="date"
+                    required
+                    value={formData.date}
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
 
@@ -213,24 +214,24 @@ const EditNews = () => {
                   <label>News Category</label>
 
                   <select
-                    value={selectedService}
+                    value={selectedNewsCategory}
                     required
-                    onChange={(e) => {
-                      setSelectedService(e.target.value);
-                      fetchGalleryNames();
-                    }}
+                    name="news_category_id"
+                    onChange={(e) =>
+                      setSelectedNewsCategory(
+                        setFormData((prev) => ({
+                          ...prev,
+                          news_category_id: e.target.value,
+                        }))
+                      )
+                    }
                   >
-                    <option value="">Select a Industry</option>
-                    <option value="Factsheet">Advance Electronic</option>
-                    <option value="Presentation">AI & SAAS</option>
-                    <option value="Presentation">Consumer Tech</option>
-                    <option value="Presentation">
-                      Cyber Security & Chip Design
-                    </option>
-                    <option value="Presentation">Electric Vehicle</option>
-                    <option value="Presentation">Fintech</option>
-                    <option value="Presentation">Spacetech</option>
-                    <option value="Presentation">Supply Chain Tech</option>
+                    <option value="">Select a News Category</option>
+                    {newsCategory.map((news_category) => (
+                      <option key={news_category._id} value={news_category._id}>
+                        {news_category.news_category}
+                      </option>
+                    ))}
                   </select>
                 </div>
               </div>
@@ -239,7 +240,13 @@ const EditNews = () => {
                 <div className="theme-form">
                   <label>URL</label>
 
-                  <input type="text" name="title" required />
+                  <input
+                    type="text"
+                    name="news_url"
+                    required
+                    value={formData.news_url}
+                    onChange={handleChange}
+                  />
                 </div>
               </div>
 

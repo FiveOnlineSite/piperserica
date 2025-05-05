@@ -14,6 +14,7 @@ const NewsSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+
   news_category_id: {
     type: mongoose.Types.ObjectId,
     ref: "News Category",

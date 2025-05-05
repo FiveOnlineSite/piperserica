@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../../components/Layout";
 import { NavLink } from "react-router-dom";
 import StickyContact from "../../components/StickyContact";
 import FactsheetModal from "../../components/FactsheetModal";
+import axios from "axios";
 
 const PublicFund = () => {
   const handleFilterChange = (e) => {
@@ -77,6 +78,31 @@ const PublicFund = () => {
     },
   ];
 
+  const [fundNumbers, setFundNumbers] = useState([]);
+
+  useEffect(() => {
+    const fetchFundNumbers = async () => {
+      try {
+        const apiUrl = process.env.REACT_APP_API_URL;
+
+        const fundName = "fpi";
+
+        // const response = await axios.get("/api/user/allUsers");
+        const response = await axios({
+          method: "GET",
+          baseURL: `${apiUrl}/api/`,
+          url: `fund-number/by-name/${fundName}`,
+        });
+        console.log("Factsheet", response.data.fundNumbers);
+        setFundNumbers(response.data.fundNumbers);
+      } catch (error) {
+        console.error("Error fetching fund numbers form:", error);
+      }
+    };
+
+    fetchFundNumbers();
+  }, []);
+
   return (
     <Layout>
       <section className="banner-section">
@@ -125,29 +151,54 @@ const PublicFund = () => {
           <div className="row justify-content-center">
             <div className="col-lg-12">
               <div className="row">
-                <div className="col-lg-4">
-                  <div className="facts-div">
-                    <h2 className="facts-title">USD 25 Million+</h2>
-                    <h6 className="para">Assets</h6>
-                  </div>
-                </div>
-                <div className="col-lg-4 mt-lg-0 mt-4">
-                  <div className="facts-div">
-                    <h2 className="facts-title">15%+</h2>
-                    <h6 className="para">CAGR</h6>
-                    <p className="facts-small">(Since Inception May 2020)</p>
-                  </div>
-                </div>
-                <div className="col-lg-4 mt-lg-0 mt-4">
-                  <div className="facts-div">
-                    <h2 className="facts-title">20-22</h2>
-                    <h6 className="para">Stocks</h6>
-                    {/* <p className="para">Figures as of 30th June 2024.</p> */}
-                  </div>
-                </div>
-              </div>
+                {fundNumbers &&
+                  fundNumbers.map((fundNumbers) => (
+                    <>
+                      <div className="col-lg-4" key={fundNumbers._id}>
+                        <div className="facts-div">
+                          <h2 className="facts-title">
+                            {fundNumbers.fund_number1}
+                          </h2>
+                          <h6 className="para">
+                            {fundNumbers.fund_title1}
+                            {/* <i> (as of 30 June 2024)</i> */}
+                          </h6>
+                        </div>
+                      </div>
+                      <div className="col-lg-4 mt-lg-0 mt-4">
+                        <div className="facts-div">
+                          <h2 className="facts-title">
+                            {fundNumbers.fund_number2}
+                          </h2>
+                          <h6 className="para">
+                            {fundNumbers.fund_title2}
+                            {/* <i> (as of 30 June 2024)</i> */}
+                          </h6>
 
-              <h5>Figures as of 28 Feb 2025.</h5>
+                          <p className="facts-small">
+                            {fundNumbers.fund_subtitle2}
+                          </p>
+                        </div>
+                      </div>
+                      <div className="col-lg-4 mt-lg-0 mt-4">
+                        <div className="facts-div">
+                          <h2 className="facts-title">
+                            {fundNumbers.fund_number3}
+                          </h2>
+                          <h6 className="para">
+                            {fundNumbers.fund_title3}
+                            {/* <i> (as of 30 June 2024)</i> */}
+                          </h6>
+                        </div>
+                      </div>
+                      <div className="col-12">
+                        <p className="para-txt mt-2 facts-small">
+                          {fundNumbers.fund_figures}
+                        </p>
+                      </div>
+                    </>
+                  ))}
+              </div>
             </div>
           </div>
         </div>
