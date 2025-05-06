@@ -187,7 +187,7 @@ const LeaderPortfolio = () => {
           <div className="row justify-content-center">
             <div className="col-lg-12">
               <div className="row">
-                {fundNumbers &&
+                {/* {fundNumbers &&
                   fundNumbers.map((fundNumbers) => (
                     <>
                       <div className="col-lg-4" key={fundNumbers._id}>
@@ -197,7 +197,7 @@ const LeaderPortfolio = () => {
                           </h2>
                           <h6 className="para">
                             {fundNumbers.fund_title1}
-                            {/* <i> (as of 30 June 2024)</i> */}
+                             <i> (as of 30 June 2024)</i>
                           </h6>
                         </div>
                       </div>
@@ -208,7 +208,7 @@ const LeaderPortfolio = () => {
                           </h2>
                           <h6 className="para">
                             {fundNumbers.fund_title2}
-                            {/* <i> (as of 30 June 2024)</i> */}
+                            <i> (as of 30 June 2024)</i> 
                           </h6>
 
                           <p className="facts-small">
@@ -223,7 +223,7 @@ const LeaderPortfolio = () => {
                           </h2>
                           <h6 className="para">
                             {fundNumbers.fund_title3}
-                            {/* <i> (as of 30 June 2024)</i> */}
+                             <i> (as of 30 June 2024)</i>
                           </h6>
                         </div>
                       </div>
@@ -233,7 +233,32 @@ const LeaderPortfolio = () => {
                         </p>
                       </div>
                     </>
-                  ))}
+                  ))} */}
+
+                <div className="col-lg-4 mt-lg-0 mt-4">
+                  <div className="facts-div">
+                    <h2 className="facts-title">INR 800 Cr+ </h2>
+                    <h6 className="para">Assets </h6>
+                  </div>
+                </div>
+                <div className="col-lg-4 mt-lg-0 mt-4">
+                  <div className="facts-div">
+                    <h2 className="facts-title">17%</h2>
+                    <h6 className="para">CAGR</h6>
+                    <p className="facts-small">(Since Inception May 2020)</p>
+                  </div>
+                </div>
+                <div className="col-lg-4">
+                  <div className="facts-div">
+                    <h2 className="facts-title">20-22 </h2>
+                    <h6 className="para">Stocks</h6>
+                  </div>
+                </div>
+                <div className="col-12">
+                  <p className="para-txt mt-2 facts-small">
+                    Figures as of 28 Feb 2025
+                  </p>
+                </div>
               </div>
             </div>
           </div>
