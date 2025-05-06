@@ -5,6 +5,11 @@ import { NavLink } from "react-router-dom";
 const InvestorLetter = () => {
   const letters = [
     {
+      date: "April 2025",
+      filepath: "/docs/Piper-Serica-Investor-Letter-April-2025.pdf",
+    },
+
+    {
       date: "January 2025",
       filepath: "/docs/Piper-Serica-Investor-Letter-January-2025-new.pdf",
     },

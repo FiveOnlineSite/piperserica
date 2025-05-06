@@ -365,9 +365,9 @@ const FactsheetModal = () => {
     const path = window.location.pathname.toLowerCase();
     const factsheetMap = {
       "/public-market/piper-serica-leader-portfolio":
-        "PMS Factsheet - Mar 2025.pdf",
+        "Piper Serica - PMS Factsheet - Apr 2025.pdf",
       "/public-market/piper-serica-nemero-uno-india-fund":
-        "FPI Factsheet - March 2025.pdf",
+        "Piper Serica - FPI Tearsheet - Apr 2025.pdf",
     };
 
     const matchedPath = Object.keys(factsheetMap).find((key) =>
@@ -386,9 +386,9 @@ const FactsheetModal = () => {
     const path = window.location.pathname.toLowerCase();
     const presentationMap = {
       "/public-market/piper-serica-leader-portfolio":
-        "PMS Presentation - Mar 2025.pdf",
+        "Piper Serica - PMS PPT - May 2025.pdf",
       "/public-market/piper-serica-nemero-uno-india-fund":
-        "FPI Presentation - Mar 2025.pdf",
+        "Piper Serica - FPI PPT - May 2025.pdf",
     };
 
     const matchedPath = Object.keys(presentationMap).find(
