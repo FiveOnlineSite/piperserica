@@ -715,12 +715,16 @@ const Startup = () => {
       </section>
 
       <section className="startup-news-section">
-        <ArticleSection />
+        <CompanyPortfolio />
       </section>
 
       <section className="py-5 mb-5">
-        <NewsSection />
+        <ArticleSection />
       </section>
+
+      {/* <section className="py-5 mb-5">
+        <NewsSection />
+      </section> */}
 
       <SubscribeLetter />
 
