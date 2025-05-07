@@ -55,18 +55,18 @@ import MetaTags from "./components/MetaTags";
 import { useEffect } from "react";
 
 function App() {
-  useEffect(() => {
-    if (window.location.hostname === "piperserica.onrender.com") {
-      window.location.replace(
-        "https://piperserica.com" + window.location.pathname
-      );
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (window.location.hostname === "piperserica.onrender.com") {
+  //     window.location.replace(
+  //       "https://piperserica.com" + window.location.pathname
+  //     );
+  //   }
+  // }, []);
 
   return (
     // <Router basename="/piperserica-frontend">
     <Router>
-      <MetaTags />
+      {/* <MetaTags /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
