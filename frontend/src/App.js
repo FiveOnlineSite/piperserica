@@ -51,11 +51,22 @@ import FactSheetForm from "./pages/admin/FactSheetForm";
 import PresentationForm from "./pages/admin/PresentationForm";
 import GatewaySvg from "./components/GatewaySvg";
 import EditFactsheetPresentation from "./pages/admin/FactsheetPresentation/EditFactsheetPresentation";
+import MetaTags from "./components/MetaTags";
+import { useEffect } from "react";
 
 function App() {
+  useEffect(() => {
+    if (window.location.hostname === "piperserica.onrender.com") {
+      window.location.replace(
+        "https://piperserica.com" + window.location.pathname
+      );
+    }
+  }, []);
+
   return (
     // <Router basename="/piperserica-frontend">
     <Router>
+      <MetaTags />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
